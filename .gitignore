@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# C# build output
+bin/
+obj/
+.vs/
+
+# Editor backups
+*.old
