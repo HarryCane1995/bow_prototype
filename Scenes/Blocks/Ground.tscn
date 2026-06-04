@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dxetmkfr5kv8"]
+
+[ext_resource type="Material" path="res://Assets/Materials/DarkDevGroundTriplanarMaterial.tres" id="1_rl7pu"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
+size = Vector2(24, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(24, 0.2, 12)
+
+[node name="Ground" type="StaticBody3D" unique_id=465419652]
+
+[node name="GroundMesh" type="MeshInstance3D" parent="." unique_id=183827046]
+mesh = SubResource("PlaneMesh_ground")
+surface_material_override/0 = ExtResource("1_rl7pu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1824589398]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_ground")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" uid="uid://dxetmkfr5kv8" path="res://Scenes/Blocks/Ground.tscn" id="1_ground"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_1x1x1.tscn" id="2_block_1x1x1"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x1x1.tscn" id="3_block_2x1x1"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x2x2.tscn" id="4_block_2x2x2"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_3x3x3.tscn" id="5_block_3x3x3"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_4x2x2.tscn" id="6_block_4x2x2"]
+
+[sub_resource type="Environment" id="Environment_world"]
+background_mode = 1
+background_color = Color(0.52, 0.64, 0.76, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85, 0.9, 0.95, 1)
+ambient_light_energy = 0.55
+
+[node name="BlockTestScene" type="Node3D"]
+
+[node name="Ground" parent="." instance=ExtResource("1_ground")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-50, 35, 0)
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_world")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0.5, 7, 14)
+rotation_degrees = Vector3(-28, 3, 0)
+current = true
+fov = 55.0
+
+[node name="Block_1x1x1" parent="." instance=ExtResource("2_block_1x1x1")]
+position = Vector3(-8, 0.5, -2)
+
+[node name="Block_2x1x1" parent="." instance=ExtResource("3_block_2x1x1")]
+position = Vector3(-5.5, 0.5, 1.5)
+
+[node name="Block_2x2x2" parent="." instance=ExtResource("4_block_2x2x2")]
+position = Vector3(-2.5, 1, -1.2)
+
+[node name="Block_3x3x3" parent="." instance=ExtResource("5_block_3x3x3")]
+position = Vector3(1.5, 1.5, 1.2)
+
+[node name="Block_4x2x2" parent="." instance=ExtResource("6_block_4x2x2")]
+position = Vector3(6.5, 1, -1)
