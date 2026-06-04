@@ -179,6 +179,7 @@ current = true
 
 [node name="ShootPoint" type="Marker3D" parent="Player/CameraPivot/Camera3D" unique_id=1804440151]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45)
+gizmo_extents = 1.22
 
 [node name="BowViewModelHolder" type="Node3D" parent="Player/CameraPivot/Camera3D" unique_id=1638180470]
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
@@ -191,16 +192,25 @@ target_position = Vector3(0, -0.45, 0)
 
 [node name="PlayerMovementModule" type="Node" parent="Player" unique_id=1865948467]
 script = ExtResource("2_movement")
+MoveSpeed = 12.0
+Acceleration = 30.0
+AirControlMultiplier = 0.5
 
 [node name="PlayerJumpModule" type="Node" parent="Player" unique_id=2070475899]
 script = ExtResource("3_jump")
+JumpVelocity = 10.0
+GravityMultiplier = 5.0
 
 [node name="PlayerLookModule" type="Node" parent="Player" unique_id=532200321]
 script = ExtResource("4_look")
+MouseSensitivity = 0.001
 
 [node name="PlayerBowShootModule" type="Node" parent="Player" unique_id=223452070]
 script = ExtResource("5_shoot")
 ArrowProjectileScene = ExtResource("6_arrow_scene")
+LightShotSpeed = 50.0
+ChargedShotSpeed = 100.0
+ChargeTime = 0.4
 
 [node name="PlayerBowVisualModule" type="Node" parent="Player" unique_id=586647605]
 script = ExtResource("9_visual")
@@ -209,6 +219,13 @@ script = ExtResource("9_visual")
 
 [node name="CrosshairUI" type="Control" parent="CanvasLayer" unique_id=2084862070]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.00024414063
+offset_right = -1151.9998
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("7_crosshair")
 CrosshairColor = Color(1, 1, 1, 0.9)
