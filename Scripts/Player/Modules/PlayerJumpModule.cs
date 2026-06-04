@@ -4,10 +4,10 @@ public partial class PlayerJumpModule : Node
 {
     [Export] public float JumpVelocity { get; set; } = 5.0f;
     [Export] public float GravityMultiplier { get; set; } = 1.0f;
+    [Export] public string JumpAction { get; set; } = "jump";
 
     private PlayerController _player;
     private float _gravity;
-    private bool _spaceWasPressed;
 
     public void Initialize(PlayerController player)
     {
@@ -31,11 +31,7 @@ public partial class PlayerJumpModule : Node
             velocity.Y -= _gravity * GravityMultiplier * (float)delta;
         }
 
-        bool spacePressed = Input.IsKeyPressed(Key.Space);
-        bool jumpRequested = spacePressed && !_spaceWasPressed;
-        _spaceWasPressed = spacePressed;
-
-        if (jumpRequested && _player.IsGrounded)
+        if (Input.IsActionJustPressed(JumpAction) && _player.IsGrounded)
         {
             velocity.Y = JumpVelocity;
         }

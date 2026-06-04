@@ -5,6 +5,10 @@ public partial class PlayerMovementModule : Node
     [Export] public float MoveSpeed { get; set; } = 6.0f;
     [Export] public float Acceleration { get; set; } = 18.0f;
     [Export(PropertyHint.Range, "0,1,0.05")] public float AirControlMultiplier { get; set; } = 0.35f;
+    [Export] public string MoveForwardAction { get; set; } = "move_forward";
+    [Export] public string MoveBackAction { get; set; } = "move_back";
+    [Export] public string MoveLeftAction { get; set; } = "move_left";
+    [Export] public string MoveRightAction { get; set; } = "move_right";
 
     private PlayerController _player;
 
@@ -29,29 +33,12 @@ public partial class PlayerMovementModule : Node
         _player.Velocity = velocity;
     }
 
-    private static Vector2 GetMovementInput()
+    private Vector2 GetMovementInput()
     {
-        Vector2 input = Vector2.Zero;
-
-        if (Input.IsKeyPressed(Key.A))
-        {
-            input.X -= 1.0f;
-        }
-
-        if (Input.IsKeyPressed(Key.D))
-        {
-            input.X += 1.0f;
-        }
-
-        if (Input.IsKeyPressed(Key.W))
-        {
-            input.Y += 1.0f;
-        }
-
-        if (Input.IsKeyPressed(Key.S))
-        {
-            input.Y -= 1.0f;
-        }
+        Vector2 input = new(
+            Input.GetActionStrength(MoveRightAction) - Input.GetActionStrength(MoveLeftAction),
+            Input.GetActionStrength(MoveForwardAction) - Input.GetActionStrength(MoveBackAction)
+        );
 
         return input.LengthSquared() > 1.0f ? input.Normalized() : input;
     }

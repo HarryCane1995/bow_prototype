@@ -42,7 +42,15 @@ public partial class ArrowProjectile : Area3D
             return;
         }
 
-        GlobalPosition += _direction * Speed * deltaTime;
+        Vector3 startPosition = GlobalPosition;
+        Vector3 nextPosition = startPosition + _direction * Speed * deltaTime;
+
+        if (TrySweepHit(startPosition, nextPosition))
+        {
+            return;
+        }
+
+        GlobalPosition = nextPosition;
         _lifetimeRemaining -= deltaTime;
 
         if (AlignToVelocity)
@@ -73,16 +81,44 @@ public partial class ArrowProjectile : Area3D
 
     private void OnBodyEntered(Node3D body)
     {
-        HandleHit();
+        HandleHit(body);
     }
 
     private void OnAreaEntered(Area3D area)
     {
-        HandleHit();
+        HandleHit(area);
     }
 
-    private void HandleHit()
+    private bool TrySweepHit(Vector3 from, Vector3 to)
     {
+        PhysicsRayQueryParameters3D query = PhysicsRayQueryParameters3D.Create(from, to);
+        query.CollideWithAreas = true;
+        query.CollideWithBodies = true;
+        query.CollisionMask = CollisionMask;
+        query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
+
+        Godot.Collections.Dictionary hit = GetWorld3D().DirectSpaceState.IntersectRay(query);
+        if (hit.Count == 0)
+        {
+            return false;
+        }
+
+        GlobalPosition = hit["position"].AsVector3();
+        Node hitNode = hit["collider"].AsGodotObject() as Node;
+        HandleHit(hitNode);
+        return true;
+    }
+
+    private void HandleHit(Node hitNode)
+    {
+        if (_isStopped)
+        {
+            return;
+        }
+
+        TargetHitbox targetHitbox = FindTargetHitbox(hitNode);
+        targetHitbox?.OnHit(Damage);
+
         if (DestroyOnHit)
         {
             QueueFree();
@@ -93,6 +129,22 @@ public partial class ArrowProjectile : Area3D
         Monitoring = false;
         Monitorable = false;
         _stickTimeRemaining = HitStickTime;
+    }
+
+    private static TargetHitbox FindTargetHitbox(Node node)
+    {
+        Node current = node;
+        while (current != null)
+        {
+            if (current is TargetHitbox targetHitbox)
+            {
+                return targetHitbox;
+            }
+
+            current = current.GetParent();
+        }
+
+        return null;
     }
 
     private void AlignWithDirection()

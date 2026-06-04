@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerLookModule.cs" id="4_look"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerBowShootModule.cs" id="5_shoot"]
 [ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="6_arrow_scene"]
+[ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="7_visual"]
+[ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="8_bow_model"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -27,6 +29,11 @@ fov = 75.0
 
 [node name="ShootPoint" type="Marker3D" parent="CameraPivot/Camera3D"]
 position = Vector3(0, 0, -0.45)
+
+[node name="BowViewModelHolder" type="Node3D" parent="CameraPivot/Camera3D"]
+position = Vector3(0.35, -0.35, -0.85)
+
+[node name="Bow_ViewModel" parent="CameraPivot/Camera3D/BowViewModelHolder" instance=ExtResource("8_bow_model")]
 
 [node name="GroundCheck" type="RayCast3D" parent="."]
 position = Vector3(0, 0.2, 0)
@@ -64,3 +71,14 @@ ChargeTime = 0.8
 FireCooldown = 0.2
 ProjectileLifetime = 5.0
 SpawnForwardOffset = 0.35
+
+[node name="PlayerBowVisualModule" type="Node" parent="."]
+script = ExtResource("7_visual")
+AnimationPlayerPath = NodePath("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
+DrawAnimationName = "Draw"
+ReleaseAnimationName = "Release"
+UseReleaseAnimation = false
+ArrowVisualPath = NodePath("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+HideArrowOnShot = true
+ArrowShowDelay = 0.15
+DrawResetSpeed = 12.0

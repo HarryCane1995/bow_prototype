@@ -17,6 +17,7 @@ public partial class PlayerBowShootModule : Node
     private PlayerController _player;
     private Camera3D _camera;
     private Node3D _shootPoint;
+    private PlayerBowVisualModule _bowVisualModule;
     private bool _isHoldingFire;
     private float _holdTime;
     private float _cooldownRemaining;
@@ -26,6 +27,7 @@ public partial class PlayerBowShootModule : Node
         _player = player;
         _camera = GetNodeOrNull<Camera3D>(CameraPath) ?? _player.Camera;
         _shootPoint = GetNodeOrNull<Node3D>(ShootPointPath) ?? _camera;
+        _bowVisualModule = _player.BowVisualModule;
     }
 
     public override void _Process(double delta)
@@ -42,21 +44,33 @@ public partial class PlayerBowShootModule : Node
         if (_isHoldingFire && Input.IsActionPressed("fire"))
         {
             _holdTime += deltaTime;
+            float chargeDuration = Mathf.Max(0.001f, ChargeTime);
+            float drawAmount = Mathf.Clamp(_holdTime / chargeDuration, 0.0f, 1.0f);
+            _bowVisualModule?.SetDrawAmount(drawAmount);
         }
 
         if (_isHoldingFire && Input.IsActionJustReleased("fire"))
         {
-            Fire(_holdTime >= ChargeTime);
+            bool shotFired = Fire(_holdTime >= ChargeTime);
+            if (shotFired)
+            {
+                _bowVisualModule?.HandleShotVisual();
+            }
+            else
+            {
+                _bowVisualModule?.ResetDraw();
+            }
+
             _isHoldingFire = false;
             _holdTime = 0.0f;
         }
     }
 
-    private void Fire(bool chargedShot)
+    private bool Fire(bool chargedShot)
     {
         if (_cooldownRemaining > 0.0f || ArrowProjectileScene == null || _camera == null)
         {
-            return;
+            return false;
         }
 
         ArrowProjectile projectile = ArrowProjectileScene.Instantiate<ArrowProjectile>();
@@ -73,5 +87,6 @@ public partial class PlayerBowShootModule : Node
         );
 
         _cooldownRemaining = FireCooldown;
+        return true;
     }
 }
