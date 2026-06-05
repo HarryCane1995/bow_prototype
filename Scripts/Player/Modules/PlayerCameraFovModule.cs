@@ -9,9 +9,9 @@ public partial class PlayerCameraFovModule : Node
     [Export] public NodePath CameraPath { get; set; } = new("../CameraPivot/Camera3D");
 
     /// <summary>
-    /// Обычный FOV камеры в градусах. Увеличение расширяет обзор; уменьшение приближает картинку даже вне precision shot.
+    /// Базовый угол обзора игрока в градусах. Увеличение расширяет обзор; уменьшение приближает картинку и служит точкой возврата после precision shot.
     /// </summary>
-    [Export(PropertyHint.Range, "30,100,0.5,suffix:deg")] public float DefaultFov { get; set; } = 75.0f;
+    [Export(PropertyHint.Range, "50,110,1,suffix:°")] public float PlayerFov { get; set; } = 75.0f;
 
     /// <summary>
     /// FOV камеры при precision aiming в градусах. Меньшее значение сильнее приближает; большее значение делает sniper-эффект мягче.
@@ -32,11 +32,11 @@ public partial class PlayerCameraFovModule : Node
     public void Initialize(PlayerController player)
     {
         _camera = GetNodeOrNull<Camera3D>(CameraPath) ?? player.Camera;
-        _targetFov = DefaultFov;
+        _targetFov = PlayerFov;
 
         if (_camera != null)
         {
-            _camera.Fov = DefaultFov;
+            _camera.Fov = PlayerFov;
         }
     }
 
@@ -55,6 +55,6 @@ public partial class PlayerCameraFovModule : Node
     /// </summary>
     public void SetPrecisionAiming(bool isPrecisionAiming)
     {
-        _targetFov = isPrecisionAiming ? PrecisionFov : DefaultFov;
+        _targetFov = isPrecisionAiming ? PrecisionFov : PlayerFov;
     }
 }

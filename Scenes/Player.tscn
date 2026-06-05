@@ -57,7 +57,7 @@ MaxPitch = 80.0
 
 [node name="PlayerCameraFovModule" type="Node" parent="."]
 script = ExtResource("10_camera_fov")
-DefaultFov = 75.0
+PlayerFov = 75.0
 PrecisionFov = 45.0
 FovTransitionSpeed = 90.0
 

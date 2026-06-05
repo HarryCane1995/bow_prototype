@@ -212,6 +212,8 @@ MouseSensitivity = 0.001
 
 [node name="PlayerCameraFovModule" type="Node" parent="Player" unique_id=914384419]
 script = ExtResource("17_camera_fov")
+PlayerFov = 100.0
+FovTransitionSpeed = 240.0
 
 [node name="PlayerBowShootModule" type="Node" parent="Player" unique_id=223452070]
 script = ExtResource("5_shoot")

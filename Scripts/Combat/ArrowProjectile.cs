@@ -133,6 +133,8 @@ public partial class ArrowProjectile : Area3D
         FlightMode = flightMode;
         ArmorPiercing = armorPiercing;
         _lifetimeRemaining = lifetime;
+
+        // Do not inherit shooter/player velocity: aim direction must fully define the initial projectile velocity.
         _velocity = direction.Normalized() * speed;
         _wasInitialized = true;
 

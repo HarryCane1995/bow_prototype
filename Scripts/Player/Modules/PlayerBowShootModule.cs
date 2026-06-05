@@ -233,13 +233,15 @@ public partial class PlayerBowShootModule : Node
         }
 
         ArrowProjectile projectile = ArrowProjectileScene.Instantiate<ArrowProjectile>();
-        Vector3 direction = -_camera.GlobalTransform.Basis.Z.Normalized();
-        Vector3 origin = (_shootPoint ?? _camera).GlobalPosition + direction * SpawnForwardOffset;
+        Vector3 shootDirection = -_camera.GlobalTransform.Basis.Z.Normalized();
+        Vector3 origin = (_shootPoint ?? _camera).GlobalPosition + shootDirection * SpawnForwardOffset;
 
         GetTree().CurrentScene.AddChild(projectile);
         projectile.GlobalPosition = origin;
+
+        // Gameplay rule: arrows use only aim direction and shot speed, never player velocity.
         projectile.Initialize(
-            direction,
+            shootDirection,
             shotConfig.Speed,
             shotConfig.Damage,
             ProjectileLifetime,

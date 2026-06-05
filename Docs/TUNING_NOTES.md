@@ -18,10 +18,17 @@
 
 - `PlayerJumpModule.JumpVelocity = 10.0`
 - `PlayerJumpModule.GravityMultiplier = 5.0`
+- `PlayerJumpModule.EnableDoubleJump = true`
+- `PlayerJumpModule.MaxJumpCount = 2`
+- `PlayerJumpModule.DoubleJumpVelocityMultiplier = 1.0`
+- `PlayerJumpModule.EnableDoubleJumpRedirect = true`
+- `PlayerJumpModule.DoubleJumpRedirectSpeed = 8.0`
+- `PlayerJumpModule.DoubleJumpRedirectKeepsVerticalVelocity = false`
+- `PlayerJumpModule.DoubleJumpRedirectMinInput = 0.1`
 - `PlayerJumpModule.GroundedVerticalVelocity = -3.2`
 - `PlayerJumpModule.FloorSnapLength = 1.0`
 
-Ощущение: высокий, быстрый и довольно аркадный прыжок с сильным падением.
+Ощущение: высокий, быстрый и довольно аркадный прыжок с сильным падением; один дополнительный air jump восстанавливается после приземления. Второй прыжок может резко заменить горизонтальную скорость направлением текущего WASD-ввода относительно камеры.
 
 ### Look
 
@@ -53,7 +60,7 @@
 ### Viewmodel
 
 - `ViewModelCamera3D.Fov = 65.0`
-- `PlayerCameraFovModule.DefaultFov = 75.0`
+- `PlayerCameraFovModule.PlayerFov = 75.0`
 - `PlayerCameraFovModule.PrecisionFov = 45.0`
 - `PlayerCameraFovModule.FovTransitionSpeed = 90.0`
 - `ViewModelLightRig/MainLight.light_energy = 1.8`
