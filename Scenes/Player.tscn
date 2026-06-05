@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=12 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="6_arrow_scene"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="7_visual"]
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="8_bow_model"]
+[ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="9_viewmodel_render"]
+[ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="10_camera_fov"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -29,11 +31,6 @@ fov = 75.0
 
 [node name="ShootPoint" type="Marker3D" parent="CameraPivot/Camera3D"]
 position = Vector3(0, 0, -0.45)
-
-[node name="BowViewModelHolder" type="Node3D" parent="CameraPivot/Camera3D"]
-position = Vector3(0.35, -0.35, -0.85)
-
-[node name="Bow_ViewModel" parent="CameraPivot/Camera3D/BowViewModelHolder" instance=ExtResource("8_bow_model")]
 
 [node name="GroundCheck" type="RayCast3D" parent="."]
 position = Vector3(0, 0.2, 0)
@@ -58,13 +55,19 @@ MouseSensitivity = 0.003
 MinPitch = -80.0
 MaxPitch = 80.0
 
+[node name="PlayerCameraFovModule" type="Node" parent="."]
+script = ExtResource("10_camera_fov")
+DefaultFov = 75.0
+PrecisionFov = 45.0
+FovTransitionSpeed = 90.0
+
 [node name="PlayerBowShootModule" type="Node" parent="."]
 script = ExtResource("5_shoot")
 ArrowProjectileScene = ExtResource("6_arrow_scene")
 CameraPath = NodePath("../CameraPivot/Camera3D")
 ShootPointPath = NodePath("../CameraPivot/Camera3D/ShootPoint")
-LightShotSpeed = 24.0
-ChargedShotSpeed = 46.0
+LightShotSpeed = 50.0
+ChargedShotSpeed = 100.0
 LightShotDamage = 8.0
 ChargedShotDamage = 24.0
 ChargeTime = 0.8
@@ -74,11 +77,60 @@ SpawnForwardOffset = 0.35
 
 [node name="PlayerBowVisualModule" type="Node" parent="."]
 script = ExtResource("7_visual")
-AnimationPlayerPath = NodePath("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
+AnimationPlayerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
+BowViewModelHolderPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder")
 DrawAnimationName = "Draw"
 ReleaseAnimationName = "Release"
 UseReleaseAnimation = false
-ArrowVisualPath = NodePath("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
 HideArrowOnShot = true
 ArrowShowDelay = 0.15
 DrawResetSpeed = 12.0
+
+[node name="PlayerViewModelRenderModule" type="Node" parent="."]
+script = ExtResource("9_viewmodel_render")
+ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
+ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot")
+
+[node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="."]
+
+[node name="ViewModelSubViewportContainer" type="SubViewportContainer" parent="CanvasLayer_ViewModel"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="ViewModelSubViewport" type="SubViewport" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer"]
+transparent_bg = true
+size = Vector2i(1152, 648)
+
+[node name="ViewModelRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport"]
+
+[node name="ViewModelCamera3D" type="Camera3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
+cull_mask = 524288
+current = true
+fov = 65.0
+
+[node name="ViewModelLightRig" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
+
+[node name="MainLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
+transform = Transform3D(0.86602527, 0.3535535, -0.35355335, 0, 0.70710653, 0.707107, 0.50000024, -0.61237264, 0.6123723, 0, 0, 0)
+layers = 524288
+light_energy = 1.8
+shadow_enabled = false
+
+[node name="FillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.25, 1.25)
+layers = 524288
+light_energy = 0.45
+omni_range = 4.0
+shadow_enabled = false
+
+[node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
+position = Vector3(0.35, -0.35, -0.85)
+
+[node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder" instance=ExtResource("8_bow_model")]

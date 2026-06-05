@@ -9,6 +9,11 @@ public partial class PlayerBowVisualModule : Node
     [Export] public NodePath AnimationPlayerPath { get; set; } = new("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/AnimationPlayer");
 
     /// <summary>
+    /// Путь к holder-узлу bow viewmodel. Этот узел поворачивается для precision aiming; неверный путь отключит вертикальный поворот лука.
+    /// </summary>
+    [Export] public NodePath BowViewModelHolderPath { get; set; } = new("../CameraPivot/Camera3D/BowViewModelHolder");
+
+    /// <summary>
     /// Имя анимации натяжения лука. Смена имени позволяет использовать другую Draw-анимацию; неверное имя отключит визуальное натяжение.
     /// </summary>
     [Export] public string DrawAnimationName { get; set; } = "Draw";
@@ -45,12 +50,31 @@ public partial class PlayerBowVisualModule : Node
     [ExportGroup("Возврат натяжения")]
     [Export(PropertyHint.Range, "0,30,0.1,suffix:/s")] public float DrawResetSpeed { get; set; } = 12.0f;
 
+    /// <summary>
+    /// Дополнительный поворот holder-узла лука в precision aiming. Увеличение по нужной оси сильнее ставит лук вертикально; уменьшение делает позу ближе к обычной.
+    /// </summary>
+    [ExportGroup("Precision Visual")]
+    [Export] public Vector3 PrecisionBowRotationDegrees { get; set; } = new(0.0f, 0.0f, -65.0f);
+
+    /// <summary>
+    /// Скорость входа лука в precision-поворот в градусах в секунду. Увеличение делает переход резче; уменьшение делает его плавнее.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,720,1,suffix:deg/s")] public float PrecisionBowRotateSpeed { get; set; } = 220.0f;
+
+    /// <summary>
+    /// Скорость возврата лука из precision-поворота в градусах в секунду. Увеличение быстрее возвращает лук после выстрела; уменьшение делает возврат мягче.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,720,1,suffix:deg/s")] public float PrecisionReturnSpeed { get; set; } = 260.0f;
+
     private PlayerController _player;
     private AnimationPlayer _animationPlayer;
+    private Node3D _bowViewModelHolder;
+    private Vector3 _baseBowHolderRotationDegrees;
     private Node3D _arrowVisual;
     private float _drawAmount;
     private float _arrowShowTimer;
     private bool _isResettingDraw;
+    private bool _isPrecisionAiming;
     private bool _warnedMissingAnimationPlayer;
     private bool _warnedMissingDrawAnimation;
     private bool _warnedMissingReleaseAnimation;
@@ -59,7 +83,9 @@ public partial class PlayerBowVisualModule : Node
     {
         _player = player;
         _animationPlayer = GetNodeOrNull<AnimationPlayer>(AnimationPlayerPath) ?? FindFirstDescendant<AnimationPlayer>(_player.Camera);
+        _bowViewModelHolder = GetNodeOrNull<Node3D>(BowViewModelHolderPath) ?? _animationPlayer?.GetParent()?.GetParent() as Node3D;
         _arrowVisual = GetNodeOrNull<Node3D>(ArrowVisualPath) ?? FindNode3DByName(_player.Camera, "Arrow_Visual");
+        _baseBowHolderRotationDegrees = _bowViewModelHolder?.RotationDegrees ?? Vector3.Zero;
 
         if (_animationPlayer == null)
         {
@@ -72,6 +98,7 @@ public partial class PlayerBowVisualModule : Node
     {
         UpdateArrowVisibility((float)delta);
         UpdateDrawReset((float)delta);
+        UpdatePrecisionBowRotation((float)delta);
     }
 
     public void SetDrawAmount(float amount)
@@ -99,6 +126,7 @@ public partial class PlayerBowVisualModule : Node
 
     public void HandleShotVisual()
     {
+        SetPrecisionAiming(false);
         HideArrowVisualTemporarily();
 
         if (UseReleaseAnimation && CanUseReleaseAnimation())
@@ -115,6 +143,27 @@ public partial class PlayerBowVisualModule : Node
     public void ResetDraw()
     {
         _isResettingDraw = true;
+        SetPrecisionAiming(false);
+    }
+
+    /// <summary>
+    /// Включает или выключает precision-позу лука. При включении holder плавно поворачивается вертикальнее, при выключении возвращается к исходной позе.
+    /// </summary>
+    public void SetPrecisionAiming(bool isPrecisionAiming)
+    {
+        _isPrecisionAiming = isPrecisionAiming;
+    }
+
+    private void UpdatePrecisionBowRotation(float delta)
+    {
+        if (_bowViewModelHolder == null)
+        {
+            return;
+        }
+
+        Vector3 targetRotation = _baseBowHolderRotationDegrees + (_isPrecisionAiming ? PrecisionBowRotationDegrees : Vector3.Zero);
+        float speed = _isPrecisionAiming ? PrecisionBowRotateSpeed : PrecisionReturnSpeed;
+        _bowViewModelHolder.RotationDegrees = _bowViewModelHolder.RotationDegrees.MoveToward(targetRotation, speed * delta);
     }
 
     private void UpdateArrowVisibility(float delta)

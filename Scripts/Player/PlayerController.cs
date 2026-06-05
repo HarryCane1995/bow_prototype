@@ -35,6 +35,11 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath LookModulePath { get; set; } = new("PlayerLookModule");
 
     /// <summary>
+    /// Путь к модулю FOV камеры. Смена пути подключает другой FOV-модуль; неверный путь отключит zoom для precision shot.
+    /// </summary>
+    [Export] public NodePath CameraFovModulePath { get; set; } = new("PlayerCameraFovModule");
+
+    /// <summary>
     /// Путь к модулю игровой стрельбы из лука. Смена пути подключает другой shoot-модуль; неверный путь отключит создание projectile-стрел.
     /// </summary>
     [Export] public NodePath BowShootModulePath { get; set; } = new("PlayerBowShootModule");
@@ -44,14 +49,21 @@ public partial class PlayerController : CharacterBody3D
     /// </summary>
     [Export] public NodePath BowVisualModulePath { get; set; } = new("PlayerBowVisualModule");
 
+    /// <summary>
+    /// Путь к модулю отдельного рендера FPS viewmodel. Смена пути подключает другой render-модуль; неверный путь отключит настройку SubViewport/cull mask для лука.
+    /// </summary>
+    [Export] public NodePath ViewModelRenderModulePath { get; set; } = new("PlayerViewModelRenderModule");
+
     public Node3D CameraPivot { get; private set; }
     public Camera3D Camera { get; private set; }
     public RayCast3D GroundCheck { get; private set; }
     public PlayerMovementModule MovementModule { get; private set; }
     public PlayerJumpModule JumpModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
+    public PlayerCameraFovModule CameraFovModule { get; private set; }
     public PlayerBowShootModule BowShootModule { get; private set; }
     public PlayerBowVisualModule BowVisualModule { get; private set; }
+    public PlayerViewModelRenderModule ViewModelRenderModule { get; private set; }
 
     public bool IsGrounded => IsOnFloor() || (Velocity.Y <= 0.0f && GroundCheck?.IsColliding() == true);
 
@@ -63,12 +75,16 @@ public partial class PlayerController : CharacterBody3D
         MovementModule = GetNode<PlayerMovementModule>(MovementModulePath);
         JumpModule = GetNode<PlayerJumpModule>(JumpModulePath);
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
+        CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
         BowVisualModule = GetNode<PlayerBowVisualModule>(BowVisualModulePath);
+        ViewModelRenderModule = GetNode<PlayerViewModelRenderModule>(ViewModelRenderModulePath);
 
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
         LookModule.Initialize(this);
+        CameraFovModule.Initialize(this);
+        ViewModelRenderModule.Initialize(this);
         BowVisualModule.Initialize(this);
         BowShootModule.Initialize(this);
     }

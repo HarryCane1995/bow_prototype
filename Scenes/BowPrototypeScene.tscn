@@ -11,15 +11,16 @@
 [ext_resource type="Script" uid="uid://cdvyn2f1188fq" path="res://Scripts/Combat/TargetHitbox.cs" id="8_hitbox"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="9_visual"]
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="10_bow_model"]
+[ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="11_viewmodel_render"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_1x1x1.tscn" id="12_ve050"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x1x1.tscn" id="13_q0fdd"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x2x2.tscn" id="14_wiglu"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_3x3x3.tscn" id="15_tt6ua"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_4x2x2.tscn" id="16_xj1ry"]
+[ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="17_camera_fov"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
-background_color = Color(0.55, 0.68, 0.82, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.8, 0.86, 0.92, 1)
 ambient_light_energy = 0.45
@@ -188,42 +189,90 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45)
 gizmo_extents = 1.22
 
-[node name="BowViewModelHolder" type="Node3D" parent="Player/CameraPivot/Camera3D" unique_id=1638180470]
-transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
-
-[node name="Bow_ViewModel" parent="Player/CameraPivot/Camera3D/BowViewModelHolder" unique_id=94202277 instance=ExtResource("10_bow_model")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
-
 [node name="GroundCheck" type="RayCast3D" parent="Player" unique_id=552026547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 target_position = Vector3(0, -0.45, 0)
 
 [node name="PlayerMovementModule" type="Node" parent="Player" unique_id=1865948467]
 script = ExtResource("2_movement")
-MoveSpeed = 12.0
-Acceleration = 30.0
+MoveSpeed = 10.0
+Acceleration = 60.0
 AirControlMultiplier = 0.5
 
 [node name="PlayerJumpModule" type="Node" parent="Player" unique_id=2070475899]
 script = ExtResource("3_jump")
 JumpVelocity = 10.0
 GravityMultiplier = 5.0
+GroundedVerticalVelocity = -3.2
+FloorSnapLength = 1.0
 
 [node name="PlayerLookModule" type="Node" parent="Player" unique_id=532200321]
 script = ExtResource("4_look")
 MouseSensitivity = 0.001
 
+[node name="PlayerCameraFovModule" type="Node" parent="Player" unique_id=914384419]
+script = ExtResource("17_camera_fov")
+
 [node name="PlayerBowShootModule" type="Node" parent="Player" unique_id=223452070]
 script = ExtResource("5_shoot")
 ArrowProjectileScene = ExtResource("6_arrow_scene")
-LightShotSpeed = 2.5
-ChargedShotSpeed = 100.0
 ChargeTime = 0.4
+PrecisionChargeTime = 1.3
 
 [node name="PlayerBowVisualModule" type="Node" parent="Player" unique_id=586647605]
 script = ExtResource("9_visual")
+AnimationPlayerPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
+BowViewModelHolderPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder")
+ArrowVisualPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+
+[node name="PlayerViewModelRenderModule" type="Node" parent="Player" unique_id=1949662572]
+script = ExtResource("11_viewmodel_render")
+
+[node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="." unique_id=866929049]
+
+[node name="ViewModelSubViewportContainer" type="SubViewportContainer" parent="CanvasLayer_ViewModel" unique_id=628157509]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+stretch = true
+
+[node name="ViewModelSubViewport" type="SubViewport" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer" unique_id=1338998234]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="ViewModelRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport" unique_id=728195149]
+
+[node name="ViewModelCamera3D" type="Camera3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=261030663]
+cull_mask = 524288
+current = true
+fov = 65.0
+
+[node name="ViewModelLightRig" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=1111968662]
+
+[node name="MainLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=841386691]
+transform = Transform3D(0.86602527, 0.3535535, -0.35355335, 0, 0.70710653, 0.707107, 0.50000024, -0.61237264, 0.6123723, 0, 0, 0)
+layers = 524288
+light_energy = 1.8
+
+[node name="FillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=376092333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.25, 1.25)
+layers = 524288
+light_energy = 0.45
+omni_range = 4.0
+
+[node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=1623099216]
+transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
+
+[node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder" unique_id=94202277 instance=ExtResource("10_bow_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740547688]
+layer = 2
 
 [node name="CrosshairUI" type="Control" parent="CanvasLayer" unique_id=2084862070]
 layout_mode = 3

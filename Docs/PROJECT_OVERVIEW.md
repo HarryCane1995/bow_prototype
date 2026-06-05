@@ -23,3 +23,4 @@
 
 `res://Scenes/BowPrototypeScene.tscn`
 
+Текущие удачные Inspector-настройки фиксируются в `Docs/TUNING_NOTES.md`.

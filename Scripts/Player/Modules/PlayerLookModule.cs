@@ -18,18 +18,40 @@ public partial class PlayerLookModule : Node
     /// </summary>
     [Export(PropertyHint.Range, "0,89,1,suffix:deg")] public float MaxPitch { get; set; } = 80.0f;
 
+    /// <summary>
+    /// Имя Input Map action для освобождения курсора. Esc делает курсор видимым; смена имени требует соответствующей настройки InputMap.
+    /// </summary>
+    private const string ReleaseMouseAction = "ui_cancel";
+
+    /// <summary>
+    /// Имя Input Map action для dev-перезапуска текущей сцены. F1 перезагружает сцену; смена имени требует соответствующей настройки InputMap.
+    /// </summary>
+    private const string ReloadSceneAction = "reload_scene";
+
     private PlayerController _player;
     private float _pitch;
 
+    /// <summary>
+    /// Инициализирует модуль обзора, добавляет dev actions при необходимости и сразу захватывает мышь для FPS-управления.
+    /// </summary>
     public void Initialize(PlayerController player)
     {
         _player = player;
         _pitch = _player.CameraPivot.Rotation.X;
-        Input.MouseMode = Input.MouseModeEnum.Captured;
+        EnsureDevInputActions();
+        CaptureMouse();
     }
 
+    /// <summary>
+    /// Обрабатывает dev hotkeys и mouse look. Esc освобождает курсор, ЛКМ захватывает его обратно, F1 перезапускает текущую сцену.
+    /// </summary>
     public void HandleInput(InputEvent @event)
     {
+        if (HandleDevInput(@event) || Input.MouseMode != Input.MouseModeEnum.Captured)
+        {
+            return;
+        }
+
         if (@event is not InputEventMouseMotion mouseMotion)
         {
             return;
@@ -46,5 +68,79 @@ public partial class PlayerLookModule : Node
         pivotRotation.Y = 0.0f;
         pivotRotation.Z = 0.0f;
         _player.CameraPivot.Rotation = pivotRotation;
+    }
+
+    /// <summary>
+    /// Обрабатывает служебные действия для play mode: release/capture мыши и быстрый перезапуск текущей сцены.
+    /// </summary>
+    private bool HandleDevInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed(ReloadSceneAction))
+        {
+            GetTree().ReloadCurrentScene();
+            return true;
+        }
+
+        if (@event.IsActionPressed(ReleaseMouseAction))
+        {
+            ReleaseMouse();
+            return true;
+        }
+
+        if (Input.MouseMode != Input.MouseModeEnum.Captured
+            && @event is InputEventMouseButton { ButtonIndex: MouseButton.Left, Pressed: true })
+        {
+            CaptureMouse();
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Захватывает курсор мыши для FPS-управления. После вызова mouse motion снова вращает игрока и камеру.
+    /// </summary>
+    private static void CaptureMouse()
+    {
+        Input.MouseMode = Input.MouseModeEnum.Captured;
+    }
+
+    /// <summary>
+    /// Освобождает курсор мыши для работы с окном и редактором. Пока курсор видим, mouse look не обрабатывается.
+    /// </summary>
+    private static void ReleaseMouse()
+    {
+        Input.MouseMode = Input.MouseModeEnum.Visible;
+    }
+
+    /// <summary>
+    /// Гарантирует наличие dev actions в InputMap, чтобы Esc и F1 работали в play mode даже без ручной настройки проекта.
+    /// </summary>
+    private static void EnsureDevInputActions()
+    {
+        EnsureKeyAction(ReleaseMouseAction, Key.Escape);
+        EnsureKeyAction(ReloadSceneAction, Key.F1);
+    }
+
+    /// <summary>
+    /// Добавляет InputMap action и клавишу, если такой action или такая привязка ещё отсутствуют.
+    /// </summary>
+    private static void EnsureKeyAction(string actionName, Key key)
+    {
+        if (!InputMap.HasAction(actionName))
+        {
+            InputMap.AddAction(actionName);
+        }
+
+        InputEventKey keyEvent = new()
+        {
+            Keycode = key,
+            PhysicalKeycode = key
+        };
+
+        if (!InputMap.ActionHasEvent(actionName, keyEvent))
+        {
+            InputMap.ActionAddEvent(actionName, keyEvent);
+        }
     }
 }

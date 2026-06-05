@@ -7,10 +7,12 @@
 - `PlayerController` - центральный координатор игрока. Собирает ссылки на модули, передаёт им нужные вызовы и связывает системы между собой.
 - `PlayerMovementModule` - отвечает за горизонтальное движение игрока.
 - `PlayerJumpModule` - отвечает за прыжок.
-- `PlayerLookModule` - отвечает за mouse look и поворот камеры/игрока.
+- `PlayerLookModule` - отвечает за mouse look, поворот камеры/игрока, mouse capture и dev hotkeys.
+- `PlayerCameraFovModule` - отвечает за плавное изменение FOV основной камеры, включая precision aiming.
 - `PlayerBowShootModule` - отвечает за игровую логику выстрела, натяжения и создание projectile-стрелы.
-- `PlayerBowVisualModule` - отвечает за визуальное состояние bow viewmodel и Draw-анимацию.
-- `ArrowProjectile` - отвечает за поведение выпущенной стрелы как отдельного projectile-объекта.
+- `PlayerBowVisualModule` - отвечает за визуальное состояние bow viewmodel, Draw-анимацию и precision-поворот лука.
+- `PlayerViewModelRenderModule` - отвечает за отдельный SubViewport-рендер FPS viewmodel, cull mask камер, visual layer лука и FOV viewmodel-камеры.
+- `ArrowProjectile` - отвечает за поведение выпущенной стрелы как отдельного projectile-объекта, включая ручную математическую баллистику без `RigidBody3D`.
 - `TargetHitbox` - отвечает за обработку попаданий по мишеням.
 - `CrosshairUI` - отвечает за отображение и состояние прицела.
 
@@ -18,6 +20,7 @@
 
 - `PlayerController` не должен превращаться в монолит и не должен содержать детальную логику отдельных систем.
 - Каждый модуль отвечает за одну область поведения.
+- Precision shot не должен превращать `PlayerBowShootModule` в монолит: FOV остаётся в `PlayerCameraFovModule`, viewmodel-поза остаётся в `PlayerBowVisualModule`, полёт остаётся в `ArrowProjectile`.
 - Новые игровые настройки должны быть доступны через Inspector с помощью `[Export]`.
 - Связи между системами должны оставаться явными и простыми для проверки в сцене.
 - При добавлении новой системы предпочтительно создать отдельный модуль или отдельный компонент, а не расширять существующий класс несвязанной логикой.
