@@ -1,0 +1,25 @@
+# Project Overview
+
+`bow_prototype` - это FPS-прототип стрельбы из лука на Godot 4 C#.
+
+Цель проекта - добиться приятного ощущения лука, движения и стрельбы: чтобы перемещение, наведение, натяжение тетивы, выстрел и попадание ощущались отзывчиво и понятно.
+
+## Текущий статус
+
+- Есть FPS-персонаж.
+- Есть WASD movement.
+- Есть jump.
+- Есть mouse look.
+- Есть crosshair.
+- Есть projectile arrows.
+- Есть light shot и charged shot.
+- Есть bow viewmodel с Draw-анимацией.
+- Есть target hitboxes.
+- Есть modular blockout blocks.
+
+## Главная сцена
+
+Главная сцена проекта:
+
+`res://Scenes/BowPrototypeScene.tscn`
+
