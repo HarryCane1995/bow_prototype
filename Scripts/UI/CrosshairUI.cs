@@ -2,10 +2,30 @@ using Godot;
 
 public partial class CrosshairUI : Control
 {
-    [Export] public float LineLength { get; set; } = 12.0f;
-    [Export] public float LineThickness { get; set; } = 2.0f;
-    [Export] public float Gap { get; set; } = 5.0f;
+    /// <summary>
+    /// Длина каждого луча прицела в пикселях. Увеличение делает прицел крупнее; уменьшение делает линии короче и менее заметными.
+    /// </summary>
+    [ExportGroup("Прицел")]
+    [Export(PropertyHint.Range, "0,64,1,suffix:px")] public float LineLength { get; set; } = 12.0f;
+
+    /// <summary>
+    /// Толщина линий прицела в пикселях. Увеличение делает прицел жирнее; уменьшение делает его тоньше.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,16,1,suffix:px")] public float LineThickness { get; set; } = 2.0f;
+
+    /// <summary>
+    /// Отступ между центром экрана и линиями прицела в пикселях. Увеличение расширяет прицел; уменьшение собирает линии ближе к центру.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,64,1,suffix:px")] public float Gap { get; set; } = 5.0f;
+
+    /// <summary>
+    /// Цвет линий прицела. Более контрастный цвет улучшает читаемость на dev-texture/grid; более мягкий цвет меньше отвлекает.
+    /// </summary>
     [Export] public Color CrosshairColor { get; set; } = Colors.White;
+
+    /// <summary>
+    /// Показывать прицел на экране. Если выключить, UI-прицел будет скрыт без удаления нод линий.
+    /// </summary>
     [Export] public bool ShowCrosshair { get; set; } = true;
 
     private ColorRect _horizontalLineLeft;

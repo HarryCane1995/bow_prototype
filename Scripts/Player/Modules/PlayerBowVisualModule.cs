@@ -2,14 +2,48 @@ using Godot;
 
 public partial class PlayerBowVisualModule : Node
 {
+    /// <summary>
+    /// Путь к AnimationPlayer внутри bow viewmodel. Смена пути выбирает другой источник анимаций; неверный путь заставит модуль искать AnimationPlayer в потомках камеры.
+    /// </summary>
+    [ExportGroup("Анимации лука")]
     [Export] public NodePath AnimationPlayerPath { get; set; } = new("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/AnimationPlayer");
+
+    /// <summary>
+    /// Имя анимации натяжения лука. Смена имени позволяет использовать другую Draw-анимацию; неверное имя отключит визуальное натяжение.
+    /// </summary>
     [Export] public string DrawAnimationName { get; set; } = "Draw";
+
+    /// <summary>
+    /// Имя анимации отпускания тетивы. Смена имени позволяет использовать отдельную Release-анимацию; неверное имя отключит release playback.
+    /// </summary>
     [Export] public string ReleaseAnimationName { get; set; } = "Release";
+
+    /// <summary>
+    /// Включает проигрывание Release-анимации после выстрела. Если выключить, визуал лука просто плавно вернётся из Draw-состояния.
+    /// </summary>
     [Export] public bool UseReleaseAnimation { get; set; } = false;
+
+    /// <summary>
+    /// Путь к визуальной стреле в bow viewmodel. Смена пути выбирает другую декоративную стрелу; неверный путь заставит модуль искать узел Arrow_Visual.
+    /// </summary>
+    [ExportGroup("Визуальная стрела")]
     [Export] public NodePath ArrowVisualPath { get; set; } = new("../CameraPivot/Camera3D/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual");
+
+    /// <summary>
+    /// Скрывает визуальную стрелу сразу после выстрела. Если выключить, стрела в луке останется видимой даже во время создания projectile-стрелы.
+    /// </summary>
     [Export] public bool HideArrowOnShot { get; set; } = true;
-    [Export] public float ArrowShowDelay { get; set; } = 0.15f;
-    [Export] public float DrawResetSpeed { get; set; } = 12.0f;
+
+    /// <summary>
+    /// Задержка перед повторным показом визуальной стрелы после выстрела. Увеличение дольше скрывает стрелу; уменьшение быстрее возвращает её в лук.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float ArrowShowDelay { get; set; } = 0.15f;
+
+    /// <summary>
+    /// Скорость плавного возврата Draw-анимации к ненатянутому состоянию. Увеличение быстрее сбрасывает лук; уменьшение делает возврат мягче и медленнее.
+    /// </summary>
+    [ExportGroup("Возврат натяжения")]
+    [Export(PropertyHint.Range, "0,30,0.1,suffix:/s")] public float DrawResetSpeed { get; set; } = 12.0f;
 
     private PlayerController _player;
     private AnimationPlayer _animationPlayer;

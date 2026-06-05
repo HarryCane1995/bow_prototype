@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dt8abtwc18mmd"]
 
 [ext_resource type="Script" uid="uid://irxrmpaujw0v" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
+[ext_resource type="PackedScene" uid="uid://dxetmkfr5kv8" path="res://Scenes/Blocks/Ground.tscn" id="1_gn7mj"]
 [ext_resource type="Script" uid="uid://b714wpxnxkv31" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
 [ext_resource type="Script" uid="uid://c76se1d6uoayd" path="res://Scripts/Player/Modules/PlayerJumpModule.cs" id="3_jump"]
 [ext_resource type="Script" uid="uid://dmf8qn8obn58i" path="res://Scripts/Player/Modules/PlayerLookModule.cs" id="4_look"]
@@ -10,16 +11,11 @@
 [ext_resource type="Script" uid="uid://cdvyn2f1188fq" path="res://Scripts/Combat/TargetHitbox.cs" id="8_hitbox"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="9_visual"]
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="10_bow_model"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ground"]
-size = Vector2(80, 80)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ground"]
-albedo_color = Color(0.25, 0.36, 0.27, 1)
-roughness = 0.9
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
-size = Vector3(80, 0.2, 80)
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_1x1x1.tscn" id="12_ve050"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x1x1.tscn" id="13_q0fdd"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x2x2.tscn" id="14_wiglu"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_3x3x3.tscn" id="15_tt6ua"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_4x2x2.tscn" id="16_xj1ry"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
@@ -62,23 +58,34 @@ height = 1.8
 
 [node name="BowPrototypeScene" type="Node3D" unique_id=1633690768]
 
-[node name="Ground" type="StaticBody3D" parent="." unique_id=496798663]
-
-[node name="GroundMesh" type="MeshInstance3D" parent="Ground" unique_id=1852975088]
-mesh = SubResource("PlaneMesh_ground")
-surface_material_override/0 = SubResource("StandardMaterial3D_ground")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1565841245]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
-shape = SubResource("BoxShape3D_ground")
+[node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
+transform = Transform3D(2.1689029, 0, 0, 0, 1, 0, 0, 0, 6.0164275, 2.165, 0, -3.356)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
-light_energy = 2.5
+light_energy = 1.873
+light_indirect_energy = 1.235
+light_volumetric_fog_energy = 0.0
+light_angular_distance = 10.0
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1825141203]
 environment = SubResource("Environment_world")
+
+[node name="Block_1x1x1" parent="." unique_id=1423532735 instance=ExtResource("12_ve050")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -2)
+
+[node name="Block_2x1x1" parent="." unique_id=115327308 instance=ExtResource("13_q0fdd")]
+transform = Transform3D(3.9, 0, 0, 0, 1, 0, 0, 0, 2, -5.5, 0.5, 1.5)
+
+[node name="Block_2x2x2" parent="." unique_id=1723503734 instance=ExtResource("14_wiglu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, -1.2)
+
+[node name="Block_3x3x3" parent="." unique_id=208567403 instance=ExtResource("15_tt6ua")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0019038, 1.5, -0.45099807)
+
+[node name="Block_4x2x2" parent="." unique_id=1033379595 instance=ExtResource("16_xj1ry")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1, -1)
 
 [node name="Targets" type="Node3D" parent="." unique_id=1886714089]
 
@@ -185,6 +192,7 @@ gizmo_extents = 1.22
 transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
 
 [node name="Bow_ViewModel" parent="Player/CameraPivot/Camera3D/BowViewModelHolder" unique_id=94202277 instance=ExtResource("10_bow_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
 
 [node name="GroundCheck" type="RayCast3D" parent="Player" unique_id=552026547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
@@ -208,7 +216,7 @@ MouseSensitivity = 0.001
 [node name="PlayerBowShootModule" type="Node" parent="Player" unique_id=223452070]
 script = ExtResource("5_shoot")
 ArrowProjectileScene = ExtResource("6_arrow_scene")
-LightShotSpeed = 50.0
+LightShotSpeed = 2.5
 ChargedShotSpeed = 100.0
 ChargeTime = 0.4
 

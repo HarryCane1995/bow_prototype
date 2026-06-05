@@ -2,9 +2,21 @@ using Godot;
 
 public partial class PlayerLookModule : Node
 {
-    [Export] public float MouseSensitivity { get; set; } = 0.003f;
-    [Export] public float MinPitch { get; set; } = -80.0f;
-    [Export] public float MaxPitch { get; set; } = 80.0f;
+    /// <summary>
+    /// Чувствительность обзора мышью. Увеличение ускоряет поворот камеры и игрока; уменьшение делает наведение медленнее и точнее.
+    /// </summary>
+    [ExportGroup("Обзор")]
+    [Export(PropertyHint.Range, "0.0001,0.02,0.0001")] public float MouseSensitivity { get; set; } = 0.003f;
+
+    /// <summary>
+    /// Нижний предел вертикального угла камеры в градусах. Более отрицательное значение позволяет сильнее смотреть вниз; значение ближе к 0 ограничивает наклон вниз.
+    /// </summary>
+    [Export(PropertyHint.Range, "-89,0,1,suffix:deg")] public float MinPitch { get; set; } = -80.0f;
+
+    /// <summary>
+    /// Верхний предел вертикального угла камеры в градусах. Большее значение позволяет выше смотреть вверх; значение ближе к 0 ограничивает наклон вверх.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,89,1,suffix:deg")] public float MaxPitch { get; set; } = 80.0f;
 
     private PlayerController _player;
     private float _pitch;

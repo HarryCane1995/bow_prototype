@@ -2,12 +2,38 @@ using Godot;
 
 public partial class ArrowProjectile : Area3D
 {
-    [Export] public float Speed { get; set; } = 24.0f;
-    [Export] public float Damage { get; set; } = 8.0f;
-    [Export] public float Lifetime { get; set; } = 5.0f;
-    [Export] public bool DestroyOnHit { get; set; } = true;
-    [Export] public float HitStickTime { get; set; } = 0.3f;
+    /// <summary>
+    /// Скорость полёта стрелы по направлению движения. Увеличение делает стрелу быстрее и прямее по ощущению; уменьшение делает полёт медленнее.
+    /// </summary>
+    [ExportGroup("Полёт")]
+    [Export(PropertyHint.Range, "0,120,0.5,suffix:m/s")] public float Speed { get; set; } = 24.0f;
+
+    /// <summary>
+    /// Поворачивать визуал стрелы по направлению полёта. Если выключить, стрела будет лететь без автоматического выравнивания ориентации.
+    /// </summary>
     [Export] public bool AlignToVelocity { get; set; } = true;
+
+    /// <summary>
+    /// Удалять стрелу сразу при попадании. Если выключить, стрела остановится и проживёт HitStickTime перед удалением.
+    /// </summary>
+    [ExportGroup("Попадание")]
+    [Export] public bool DestroyOnHit { get; set; } = true;
+
+    /// <summary>
+    /// Сколько секунд остановленная стрела остаётся на месте после попадания, если DestroyOnHit выключен. Увеличение дольше показывает попадание; уменьшение быстрее удаляет стрелу.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.1,suffix:s")] public float HitStickTime { get; set; } = 0.3f;
+
+    /// <summary>
+    /// Урон, передаваемый TargetHitbox при попадании. Увеличение усиливает стрелу; уменьшение делает попадание слабее.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,200,1")] public float Damage { get; set; } = 8.0f;
+
+    /// <summary>
+    /// Максимальное время жизни стрелы до автоудаления. Увеличение позволяет стреле существовать дольше; уменьшение быстрее очищает сцену.
+    /// </summary>
+    [ExportGroup("Жизненный цикл")]
+    [Export(PropertyHint.Range, "0.1,30,0.1,suffix:s")] public float Lifetime { get; set; } = 5.0f;
 
     private Vector3 _direction = Vector3.Forward;
     private bool _isStopped;

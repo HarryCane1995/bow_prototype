@@ -2,17 +2,65 @@ using Godot;
 
 public partial class PlayerBowShootModule : Node
 {
+    /// <summary>
+    /// Сцена projectile-стрелы, создаваемая при выстреле. Если не назначить сцену, модуль не сможет выпустить стрелу.
+    /// </summary>
+    [ExportGroup("Ссылки")]
     [Export] public PackedScene ArrowProjectileScene { get; set; }
+
+    /// <summary>
+    /// Путь к камере, задающей направление выстрела. Смена пути меняет источник направления; неверный путь заставит модуль использовать камеру игрока как fallback.
+    /// </summary>
     [Export] public NodePath CameraPath { get; set; } = new("../CameraPivot/Camera3D");
+
+    /// <summary>
+    /// Путь к точке появления projectile-стрелы. Смена пути меняет место спавна; неверный путь заставит модуль использовать камеру.
+    /// </summary>
     [Export] public NodePath ShootPointPath { get; set; } = new("../CameraPivot/Camera3D/ShootPoint");
-    [Export] public float LightShotSpeed { get; set; } = 24.0f;
-    [Export] public float ChargedShotSpeed { get; set; } = 46.0f;
-    [Export] public float LightShotDamage { get; set; } = 8.0f;
-    [Export] public float ChargedShotDamage { get; set; } = 24.0f;
-    [Export] public float ChargeTime { get; set; } = 0.8f;
-    [Export] public float FireCooldown { get; set; } = 0.2f;
-    [Export] public float ProjectileLifetime { get; set; } = 5.0f;
-    [Export] public float SpawnForwardOffset { get; set; } = 0.35f;
+
+    /// <summary>
+    /// Скорость лёгкого выстрела без полного натяжения. Увеличение делает быструю стрелу быстрее и прямее; уменьшение делает её медленнее.
+    /// </summary>
+    [ExportGroup("Лёгкий выстрел")]
+    [Export(PropertyHint.Range, "0,100,0.5,suffix:m/s")] public float LightShotSpeed { get; set; } = 24.0f;
+
+    /// <summary>
+    /// Урон лёгкого выстрела. Увеличение усиливает быстрый выстрел; уменьшение делает его слабее относительно заряженного.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,100,1")] public float LightShotDamage { get; set; } = 8.0f;
+
+    /// <summary>
+    /// Скорость полностью заряженного выстрела. Увеличение делает charged shot быстрее и мощнее по ощущению; уменьшение сближает его с лёгким выстрелом.
+    /// </summary>
+    [ExportGroup("Заряженный выстрел")]
+    [Export(PropertyHint.Range, "0,120,0.5,suffix:m/s")] public float ChargedShotSpeed { get; set; } = 46.0f;
+
+    /// <summary>
+    /// Урон полностью заряженного выстрела. Увеличение сильнее награждает полное натяжение; уменьшение снижает разницу между типами выстрела.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,200,1")] public float ChargedShotDamage { get; set; } = 24.0f;
+
+    /// <summary>
+    /// Время до полного натяжения лука. Увеличение делает зарядку дольше; уменьшение быстрее переводит выстрел в charged shot.
+    /// </summary>
+    [ExportGroup("Тайминги")]
+    [Export(PropertyHint.Range, "0.05,5,0.01,suffix:s")] public float ChargeTime { get; set; } = 0.8f;
+
+    /// <summary>
+    /// Минимальная пауза между выстрелами. Увеличение снижает скорострельность; уменьшение позволяет стрелять чаще.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float FireCooldown { get; set; } = 0.2f;
+
+    /// <summary>
+    /// Время жизни созданной projectile-стрелы. Увеличение позволяет стреле лететь дольше; уменьшение быстрее удаляет её из сцены.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,30,0.1,suffix:s")] public float ProjectileLifetime { get; set; } = 5.0f;
+
+    /// <summary>
+    /// Смещение точки появления стрелы вперёд по направлению выстрела. Увеличение отодвигает спавн от камеры; уменьшение приближает его к ShootPoint.
+    /// </summary>
+    [ExportGroup("Спавн projectile")]
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:m")] public float SpawnForwardOffset { get; set; } = 0.35f;
 
     private PlayerController _player;
     private Camera3D _camera;

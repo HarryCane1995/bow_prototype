@@ -2,10 +2,26 @@ using Godot;
 
 public partial class TargetHitbox : Area3D
 {
+    /// <summary>
+    /// Путь к MeshInstance3D мишени, материал которого будет мигать при попадании. Неверный путь отключит визуальный flash feedback.
+    /// </summary>
+    [ExportGroup("Визуальный feedback")]
     [Export] public NodePath TargetMeshPath { get; set; } = new("");
+
+    /// <summary>
+    /// Включает вспышку цвета при попадании. Если выключить, попадание будет обработано без визуального изменения материала.
+    /// </summary>
     [Export] public bool FlashOnHit { get; set; } = true;
+
+    /// <summary>
+    /// Цвет вспышки мишени при попадании. Более яркий цвет делает feedback заметнее; более спокойный цвет делает реакцию мягче.
+    /// </summary>
     [Export] public Color HitColor { get; set; } = new(1.0f, 0.85f, 0.15f, 1.0f);
-    [Export] public float FlashDuration { get; set; } = 0.12f;
+
+    /// <summary>
+    /// Длительность вспышки после попадания. Увеличение делает feedback дольше; уменьшение делает реакцию короче и резче.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float FlashDuration { get; set; } = 0.12f;
 
     private MeshInstance3D _targetMesh;
     private StandardMaterial3D _runtimeMaterial;
