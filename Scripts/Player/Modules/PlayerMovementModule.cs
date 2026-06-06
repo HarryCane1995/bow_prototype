@@ -11,12 +11,54 @@ public partial class PlayerMovementModule : Node
     /// <summary>
     /// Скорость разгона горизонтального вектора движения. Увеличение даёт более резкий старт и смену направления; уменьшение делает разгон плавнее.
     /// </summary>
+    [ExportSubgroup("Legacy")]
     [Export(PropertyHint.Range, "0,80,0.1,suffix:m/s^2")] public float Acceleration { get; set; } = 18.0f;
 
     /// <summary>
     /// Доля управления движением в воздухе. Увеличение позволяет сильнее менять траекторию в прыжке; уменьшение делает полёт более инерционным.
     /// </summary>
     [Export(PropertyHint.Range, "0,1,0.05")] public float AirControlMultiplier { get; set; } = 0.35f;
+
+    /// <summary>
+    /// Обычный разгон по земле, когда игрок нажимает WASD без резкой смены направления. Увеличение делает старт движения быстрее; уменьшение оставляет больше инерции.
+    /// </summary>
+    [ExportGroup("Movement Response")]
+    [Export(PropertyHint.Range, "0,120,0.5,suffix:m/s^2")] public float GroundAcceleration { get; set; } = 24.0f;
+
+    /// <summary>
+    /// Торможение по земле, когда игрок не держит WASD. Увеличение быстрее гасит скорость; уменьшение делает остановку более скользкой.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,120,0.5,suffix:m/s^2")] public float GroundDeceleration { get; set; } = 28.0f;
+
+    /// <summary>
+    /// Ускорение при резкой смене направления по земле. Увеличение делает D->A и W->S отзывчивее; уменьшение оставляет больше старой инерции.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,160,0.5,suffix:m/s^2")] public float GroundDirectionChangeAcceleration { get; set; } = 55.0f;
+
+    /// <summary>
+    /// Дополнительный множитель для почти противоположного направления ввода. Увеличение сильнее ускоряет counter-strafe; уменьшение делает разворот мягче.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,3,0.05")] public float CounterStrafeBoost { get; set; } = 1.25f;
+
+    /// <summary>
+    /// Порог dot product для определения резкой смены направления. Увеличение чаще включает direction-change acceleration; уменьшение требует более противоположного ввода.
+    /// </summary>
+    [Export(PropertyHint.Range, "-1,1,0.05")] public float DirectionChangeDotThreshold { get; set; } = 0.35f;
+
+    /// <summary>
+    /// Разгон в воздухе при удержании WASD. Увеличение даёт больше air control; уменьшение сохраняет траекторию более инерционной.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,60,0.5,suffix:m/s^2")] public float AirAcceleration { get; set; } = 8.0f;
+
+    /// <summary>
+    /// Торможение в воздухе без WASD-ввода. Увеличение быстрее гасит горизонтальную скорость в прыжке; уменьшение почти не трогает полёт.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,30,0.5,suffix:m/s^2")] public float AirDeceleration { get; set; } = 2.0f;
+
+    /// <summary>
+    /// Ускорение смены направления в воздухе. Увеличение делает air strafe отзывчивее; уменьшение помогает double jump redirect оставаться отдельной сильной механикой.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,80,0.5,suffix:m/s^2")] public float AirDirectionChangeAcceleration { get; set; } = 12.0f;
 
     /// <summary>
     /// Имя Input Map action для движения вперёд. Смена значения привязывает движение вперёд к другому действию; неверное имя отключит ввод вперёд.
@@ -48,14 +90,21 @@ public partial class PlayerMovementModule : Node
 
     public void UpdateHorizontalVelocity(double delta)
     {
+        if (_player.CrouchSlideModule?.IsSliding == true)
+        {
+            return;
+        }
+
         Vector2 input = GetMovementInput();
+        bool hasInput = input.LengthSquared() > 0.0f;
         Vector3 direction = GetMovementDirection(input);
         Vector3 velocity = _player.Velocity;
 
-        Vector3 targetHorizontalVelocity = direction * MoveSpeed;
+        float speedMultiplier = _player.CrouchSlideModule?.CurrentSpeedMultiplier ?? 1.0f;
+        Vector3 targetHorizontalVelocity = hasInput ? direction * MoveSpeed * speedMultiplier : Vector3.Zero;
         Vector3 currentHorizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
-        float control = _player.IsGrounded ? 1.0f : AirControlMultiplier;
-        float step = Acceleration * control * (float)delta;
+        float selectedAcceleration = SelectMovementResponse(currentHorizontalVelocity, direction, hasInput);
+        float step = selectedAcceleration * (float)delta;
 
         // Keep acceleration aligned with the intended horizontal movement vector.
         Vector3 newHorizontalVelocity = currentHorizontalVelocity.MoveToward(targetHorizontalVelocity, step);
@@ -64,6 +113,35 @@ public partial class PlayerMovementModule : Node
         velocity.Z = newHorizontalVelocity.Z;
 
         _player.Velocity = velocity;
+    }
+
+    private float SelectMovementResponse(Vector3 currentHorizontalVelocity, Vector3 desiredDirection, bool hasInput)
+    {
+        bool isGrounded = _player.IsGrounded;
+
+        if (!hasInput)
+        {
+            return isGrounded ? GroundDeceleration : AirDeceleration;
+        }
+
+        float selectedAcceleration = isGrounded ? GroundAcceleration : AirAcceleration;
+        if (currentHorizontalVelocity.LengthSquared() <= 0.0025f)
+        {
+            return selectedAcceleration;
+        }
+
+        float dot = currentHorizontalVelocity.Normalized().Dot(desiredDirection);
+        if (dot < DirectionChangeDotThreshold)
+        {
+            selectedAcceleration = isGrounded ? GroundDirectionChangeAcceleration : AirDirectionChangeAcceleration;
+        }
+
+        if (dot < 0.0f)
+        {
+            selectedAcceleration *= CounterStrafeBoost;
+        }
+
+        return selectedAcceleration;
     }
 
     private Vector2 GetMovementInput()

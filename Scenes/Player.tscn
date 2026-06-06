@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="8_bow_model"]
 [ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="9_viewmodel_render"]
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="10_camera_fov"]
+[ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="11_crouch_slide"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -48,6 +49,9 @@ AirControlMultiplier = 0.35
 script = ExtResource("3_jump")
 JumpVelocity = 5.0
 GravityMultiplier = 1.0
+
+[node name="PlayerCrouchSlideModule" type="Node" parent="."]
+script = ExtResource("11_crouch_slide")
 
 [node name="PlayerLookModule" type="Node" parent="."]
 script = ExtResource("4_look")

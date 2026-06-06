@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmf8qn8obn58i" path="res://Scripts/Player/Modules/PlayerLookModule.cs" id="4_look"]
 [ext_resource type="Script" uid="uid://co4hqb6i16q5i" path="res://Scripts/Player/Modules/PlayerBowShootModule.cs" id="5_shoot"]
 [ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="6_arrow_scene"]
+[ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="6_crouch_slide"]
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="7_crosshair"]
 [ext_resource type="Script" uid="uid://cdvyn2f1188fq" path="res://Scripts/Combat/TargetHitbox.cs" id="8_hitbox"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="9_visual"]
@@ -61,6 +62,9 @@ height = 1.8
 
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
 transform = Transform3D(2.1689029, 0, 0, 0, 1, 0, 0, 0, 6.0164275, 2.165, 0, -3.356)
+
+[node name="Ground" parent="Ground" unique_id=229555460 instance=ExtResource("1_gn7mj")]
+transform = Transform3D(1.0844513, 0.86602545, 0, -1.8783251, 0.49999997, 0, 0, 0, 6.0164275, 25.007946, -22.573208, -3.356)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
@@ -195,9 +199,10 @@ target_position = Vector3(0, -0.45, 0)
 
 [node name="PlayerMovementModule" type="Node" parent="Player" unique_id=1865948467]
 script = ExtResource("2_movement")
-MoveSpeed = 10.0
+MoveSpeed = 15.0
 Acceleration = 60.0
 AirControlMultiplier = 0.5
+CounterStrafeBoost = 1.75
 
 [node name="PlayerJumpModule" type="Node" parent="Player" unique_id=2070475899]
 script = ExtResource("3_jump")
@@ -206,9 +211,13 @@ GravityMultiplier = 5.0
 GroundedVerticalVelocity = -3.2
 FloorSnapLength = 1.0
 
+[node name="PlayerCrouchSlideModule" type="Node" parent="Player" unique_id=706487331]
+script = ExtResource("6_crouch_slide")
+SlideInitialSpeed = 20.0
+
 [node name="PlayerLookModule" type="Node" parent="Player" unique_id=532200321]
 script = ExtResource("4_look")
-MouseSensitivity = 0.001
+MouseSensitivity = 0.0005
 
 [node name="PlayerCameraFovModule" type="Node" parent="Player" unique_id=914384419]
 script = ExtResource("17_camera_fov")

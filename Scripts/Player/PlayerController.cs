@@ -30,6 +30,11 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath JumpModulePath { get; set; } = new("PlayerJumpModule");
 
     /// <summary>
+    /// Путь к модулю приседа и подката. Смена пути подключает другой crouch/slide-модуль; неверный путь отключит присед, подкат и изменение высоты коллайдера.
+    /// </summary>
+    [Export] public NodePath CrouchSlideModulePath { get; set; } = new("PlayerCrouchSlideModule");
+
+    /// <summary>
     /// Путь к модулю обзора мышью. Смена пути подключает другой look-модуль; неверный путь отключит поворот камеры и игрока.
     /// </summary>
     [Export] public NodePath LookModulePath { get; set; } = new("PlayerLookModule");
@@ -59,6 +64,7 @@ public partial class PlayerController : CharacterBody3D
     public RayCast3D GroundCheck { get; private set; }
     public PlayerMovementModule MovementModule { get; private set; }
     public PlayerJumpModule JumpModule { get; private set; }
+    public PlayerCrouchSlideModule CrouchSlideModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
     public PlayerCameraFovModule CameraFovModule { get; private set; }
     public PlayerBowShootModule BowShootModule { get; private set; }
@@ -74,6 +80,7 @@ public partial class PlayerController : CharacterBody3D
         GroundCheck = GetNode<RayCast3D>(GroundCheckPath);
         MovementModule = GetNode<PlayerMovementModule>(MovementModulePath);
         JumpModule = GetNode<PlayerJumpModule>(JumpModulePath);
+        CrouchSlideModule = GetNode<PlayerCrouchSlideModule>(CrouchSlideModulePath);
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
         CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
@@ -82,6 +89,7 @@ public partial class PlayerController : CharacterBody3D
 
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
+        CrouchSlideModule.Initialize(this);
         LookModule.Initialize(this);
         CameraFovModule.Initialize(this);
         ViewModelRenderModule.Initialize(this);
@@ -92,6 +100,9 @@ public partial class PlayerController : CharacterBody3D
     public override void _PhysicsProcess(double delta)
     {
         JumpModule.UpdateVerticalVelocity(delta);
+        Vector3 velocity = Velocity;
+        CrouchSlideModule.ProcessCrouchSlide(delta, ref velocity);
+        Velocity = velocity;
         MovementModule.UpdateHorizontalVelocity(delta);
         MoveAndSlide();
     }

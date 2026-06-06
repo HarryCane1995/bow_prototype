@@ -9,10 +9,16 @@
 ### Movement
 
 - `PlayerMovementModule.MoveSpeed = 10.0`
-- `PlayerMovementModule.Acceleration = 60.0`
-- `PlayerMovementModule.AirControlMultiplier = 0.5`
+- `PlayerMovementModule.GroundAcceleration = 24.0`
+- `PlayerMovementModule.GroundDeceleration = 28.0`
+- `PlayerMovementModule.GroundDirectionChangeAcceleration = 55.0`
+- `PlayerMovementModule.CounterStrafeBoost = 1.25`
+- `PlayerMovementModule.DirectionChangeDotThreshold = 0.35`
+- `PlayerMovementModule.AirAcceleration = 8.0`
+- `PlayerMovementModule.AirDeceleration = 2.0`
+- `PlayerMovementModule.AirDirectionChangeAcceleration = 12.0`
 
-Ощущение: быстрый FPS movement с резким стартом/сменой направления.
+Ощущение: быстрый FPS movement с инерцией, но более отзывчивым counter-strafe при D -> A и W -> S. В воздухе управление мягче, чтобы double jump redirect оставался отдельным сильным действием.
 
 ### Jump
 
@@ -29,6 +35,18 @@
 - `PlayerJumpModule.FloorSnapLength = 1.0`
 
 Ощущение: высокий, быстрый и довольно аркадный прыжок с сильным падением; один дополнительный air jump восстанавливается после приземления. Второй прыжок может резко заменить горизонтальную скорость направлением текущего WASD-ввода относительно камеры.
+
+### Crouch / Slide
+
+- `PlayerCrouchSlideModule.CrouchSpeedMultiplier = 0.55`
+- `PlayerCrouchSlideModule.SlideMinStartSpeed = 5.0`
+- `PlayerCrouchSlideModule.SlideInitialSpeed = 11.0`
+- `PlayerCrouchSlideModule.SlideDuration = 0.55`
+- `PlayerCrouchSlideModule.SlideCooldown = 0.35`
+- `PlayerCrouchSlideModule.SlideFriction = 14.0`
+- `PlayerCrouchSlideModule.SlideSteeringStrength = 0.25`
+
+Ощущение: Ctrl/C на месте даёт плавный crouch, а на скорости запускает короткий резкий slide с быстрым затуханием и лёгкой коррекцией направления.
 
 ### Look
 

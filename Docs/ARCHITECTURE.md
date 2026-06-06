@@ -7,6 +7,7 @@
 - `PlayerController` - центральный координатор игрока. Собирает ссылки на модули, передаёт им нужные вызовы и связывает системы между собой.
 - `PlayerMovementModule` - отвечает за горизонтальное движение игрока.
 - `PlayerJumpModule` - отвечает за прыжок, coyote time, ground snap, simple double jump и redirect горизонтального движения на втором прыжке.
+- `PlayerCrouchSlideModule` - отвечает за crouch/slide state, высоту коллайдера, высоту камеры, проверку потолка и горизонтальную скорость во время подката.
 - `PlayerLookModule` - отвечает за mouse look, поворот камеры/игрока, mouse capture и dev hotkeys.
 - `PlayerCameraFovModule` - отвечает за плавное изменение FOV основной камеры, включая precision aiming.
 - `PlayerBowShootModule` - отвечает за игровую логику выстрела, натяжения и создание projectile-стрелы.
@@ -20,6 +21,7 @@
 
 - `PlayerController` не должен превращаться в монолит и не должен содержать детальную логику отдельных систем.
 - Каждый модуль отвечает за одну область поведения.
+- Crouch и Slide живут в `PlayerCrouchSlideModule`; `PlayerMovementModule` только учитывает `CurrentSpeedMultiplier` и не перезаписывает X/Z velocity во время `IsSliding`.
 - Double jump хранится в `PlayerJumpModule` как простой счётчик прыжков до приземления; не переносить эту логику в `PlayerController`.
 - Double Jump Redirect применяется только на втором прыжке: если игрок держит WASD, `PlayerJumpModule` заменяет горизонтальную скорость направлением относительно камеры, а если ввода нет - оставляет текущий горизонтальный вектор.
 - Precision shot не должен превращать `PlayerBowShootModule` в монолит: FOV остаётся в `PlayerCameraFovModule`, viewmodel-поза остаётся в `PlayerBowVisualModule`, полёт остаётся в `ArrowProjectile`.
