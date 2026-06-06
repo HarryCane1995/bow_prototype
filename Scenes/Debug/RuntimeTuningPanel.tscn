@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Debug/RuntimeTuningPanel.cs" id="1_runtime_tuning_panel"]
+[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="2_default_tuning_profile"]
+
+[node name="RuntimeTuningPanel" type="Window"]
+title = "Bow Prototype Runtime Tuning"
+initial_position = 1
+size = Vector2i(520, 760)
+min_size = Vector2i(420, 480)
+visible = false
+script = ExtResource("1_runtime_tuning_panel")
+TuningProfile = ExtResource("2_default_tuning_profile")

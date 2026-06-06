@@ -25,18 +25,21 @@ public partial class PlayerCameraFovModule : Node
 
     private Camera3D _camera;
     private float _targetFov;
+    private PlayerController _player;
+    private bool _isPrecisionAiming;
 
     /// <summary>
     /// Инициализирует модуль и выставляет обычный FOV как текущую цель камеры.
     /// </summary>
     public void Initialize(PlayerController player)
     {
+        _player = player;
         _camera = GetNodeOrNull<Camera3D>(CameraPath) ?? player.Camera;
-        _targetFov = PlayerFov;
+        _targetFov = CurrentPlayerFov;
 
         if (_camera != null)
         {
-            _camera.Fov = PlayerFov;
+            _camera.Fov = CurrentPlayerFov;
         }
     }
 
@@ -47,7 +50,8 @@ public partial class PlayerCameraFovModule : Node
             return;
         }
 
-        _camera.Fov = Mathf.MoveToward(_camera.Fov, _targetFov, FovTransitionSpeed * (float)delta);
+        _targetFov = _isPrecisionAiming ? CurrentPrecisionFov : CurrentPlayerFov;
+        _camera.Fov = Mathf.MoveToward(_camera.Fov, _targetFov, CurrentFovTransitionSpeed * (float)delta);
     }
 
     /// <summary>
@@ -55,6 +59,12 @@ public partial class PlayerCameraFovModule : Node
     /// </summary>
     public void SetPrecisionAiming(bool isPrecisionAiming)
     {
-        _targetFov = isPrecisionAiming ? PrecisionFov : PlayerFov;
+        _isPrecisionAiming = isPrecisionAiming;
+        _targetFov = isPrecisionAiming ? CurrentPrecisionFov : CurrentPlayerFov;
     }
+
+    private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;
+    private float CurrentPlayerFov => TuningProfile?.PlayerFov ?? PlayerFov;
+    private float CurrentPrecisionFov => TuningProfile?.PrecisionFov ?? PrecisionFov;
+    private float CurrentFovTransitionSpeed => TuningProfile?.FovTransitionSpeed ?? FovTransitionSpeed;
 }

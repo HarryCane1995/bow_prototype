@@ -3,6 +3,17 @@ using Godot;
 public partial class PlayerController : CharacterBody3D
 {
     /// <summary>
+    /// Data-only профиль runtime-настроек игрока и оружия. Если назначен и UseTuningProfile включён, модули читают значения из него в Play.
+    /// </summary>
+    [ExportGroup("Runtime Tuning")]
+    [Export] public PlayerTuningProfile TuningProfile { get; set; }
+
+    /// <summary>
+    /// Включает чтение значений из TuningProfile. Если выключить или оставить профиль пустым, модули используют свои локальные Export-поля как fallback.
+    /// </summary>
+    [Export] public bool UseTuningProfile { get; set; } = true;
+
+    /// <summary>
     /// Путь к узлу-пивоту камеры. Если указать другой узел, mouse look будет наклонять камеру вокруг него; неверный путь сломает инициализацию игрока.
     /// </summary>
     [ExportGroup("Связи игрока")]
@@ -35,6 +46,11 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath CrouchSlideModulePath { get; set; } = new("PlayerCrouchSlideModule");
 
     /// <summary>
+    /// Путь к модулю slingshot grapple. Смена пути подключает другой модуль внешнего управления velocity; неверный путь отключит зацепы-рогатки.
+    /// </summary>
+    [Export] public NodePath SlingshotGrappleModulePath { get; set; } = new("PlayerSlingshotGrappleModule");
+
+    /// <summary>
     /// Путь к модулю обзора мышью. Смена пути подключает другой look-модуль; неверный путь отключит поворот камеры и игрока.
     /// </summary>
     [Export] public NodePath LookModulePath { get; set; } = new("PlayerLookModule");
@@ -65,6 +81,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerMovementModule MovementModule { get; private set; }
     public PlayerJumpModule JumpModule { get; private set; }
     public PlayerCrouchSlideModule CrouchSlideModule { get; private set; }
+    public PlayerSlingshotGrappleModule SlingshotGrappleModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
     public PlayerCameraFovModule CameraFovModule { get; private set; }
     public PlayerBowShootModule BowShootModule { get; private set; }
@@ -72,6 +89,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerViewModelRenderModule ViewModelRenderModule { get; private set; }
 
     public bool IsGrounded => IsOnFloor() || (Velocity.Y <= 0.0f && GroundCheck?.IsColliding() == true);
+    public PlayerTuningProfile ActiveTuningProfile => UseTuningProfile ? TuningProfile : null;
 
     public override void _Ready()
     {
@@ -81,6 +99,7 @@ public partial class PlayerController : CharacterBody3D
         MovementModule = GetNode<PlayerMovementModule>(MovementModulePath);
         JumpModule = GetNode<PlayerJumpModule>(JumpModulePath);
         CrouchSlideModule = GetNode<PlayerCrouchSlideModule>(CrouchSlideModulePath);
+        SlingshotGrappleModule = GetNode<PlayerSlingshotGrappleModule>(SlingshotGrappleModulePath);
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
         CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
@@ -90,6 +109,7 @@ public partial class PlayerController : CharacterBody3D
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
         CrouchSlideModule.Initialize(this);
+        SlingshotGrappleModule.Initialize(this);
         LookModule.Initialize(this);
         CameraFovModule.Initialize(this);
         ViewModelRenderModule.Initialize(this);
@@ -99,10 +119,17 @@ public partial class PlayerController : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
-        JumpModule.UpdateVerticalVelocity(delta);
+        SlingshotGrappleModule.ProcessSlingshotInput();
+
+        if (!SlingshotGrappleModule.BlocksJump)
+        {
+            JumpModule.UpdateVerticalVelocity(delta);
+        }
+
         Vector3 velocity = Velocity;
         CrouchSlideModule.ProcessCrouchSlide(delta, ref velocity);
         Velocity = velocity;
+        SlingshotGrappleModule.UpdateSlingshot(delta);
         MovementModule.UpdateHorizontalVelocity(delta);
         MoveAndSlide();
     }

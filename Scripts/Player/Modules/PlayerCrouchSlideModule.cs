@@ -121,7 +121,7 @@ public partial class PlayerCrouchSlideModule : Node
 
     public bool IsCrouching => _state is CrouchSlideState.Crouching or CrouchSlideState.Sliding;
     public bool IsSliding => _state == CrouchSlideState.Sliding;
-    public float CurrentSpeedMultiplier => IsCrouching ? CrouchSpeedMultiplier : 1.0f;
+    public float CurrentSpeedMultiplier => IsCrouching ? CurrentCrouchSpeedMultiplier : 1.0f;
 
     private PlayerController _player;
     private CollisionShape3D _collisionShape;
@@ -165,6 +165,14 @@ public partial class PlayerCrouchSlideModule : Node
     {
         float deltaFloat = (float)delta;
         _slideCooldownTimer = Mathf.Max(0.0f, _slideCooldownTimer - deltaFloat);
+
+        if (_player.SlingshotGrappleModule?.BlocksSlide == true)
+        {
+            CancelSlide();
+            UpdateCrouchState(false);
+            UpdateHeight(deltaFloat);
+            return;
+        }
 
         bool isPressed = Input.IsActionPressed(CrouchSlideAction);
         bool justPressed = Input.IsActionJustPressed(CrouchSlideAction);
@@ -217,10 +225,10 @@ public partial class PlayerCrouchSlideModule : Node
         }
 
         _state = CrouchSlideState.Sliding;
-        _slideTimer = SlideDuration;
-        _slideCooldownTimer = SlideCooldown;
+        _slideTimer = CurrentSlideDuration;
+        _slideCooldownTimer = CurrentSlideCooldown;
         _slideDirection = direction;
-        _slideSpeed = Mathf.Max(SlideInitialSpeed, horizontalVelocity.Length());
+        _slideSpeed = Mathf.Max(CurrentSlideInitialSpeed, horizontalVelocity.Length());
 
         velocity.X = _slideDirection.X * _slideSpeed;
         velocity.Z = _slideDirection.Z * _slideSpeed;
@@ -239,14 +247,14 @@ public partial class PlayerCrouchSlideModule : Node
 
         if (TryGetCameraRelativeInputDirection(out Vector3 steeringDirection))
         {
-            _slideDirection = _slideDirection.MoveToward(steeringDirection, SlideSteeringStrength * delta).Normalized();
+            _slideDirection = _slideDirection.MoveToward(steeringDirection, CurrentSlideSteeringStrength * delta).Normalized();
         }
 
-        _slideSpeed = Mathf.Max(0.0f, _slideSpeed - SlideFriction * delta);
+        _slideSpeed = Mathf.Max(0.0f, _slideSpeed - CurrentSlideFriction * delta);
         velocity.X = _slideDirection.X * _slideSpeed;
         velocity.Z = _slideDirection.Z * _slideSpeed;
 
-        if (_slideTimer <= 0.0f || _slideSpeed <= CrouchSpeedMultiplier)
+        if (_slideTimer <= 0.0f || _slideSpeed <= CurrentCrouchSpeedMultiplier)
         {
             StopSlide(holdCrouch);
         }
@@ -261,6 +269,16 @@ public partial class PlayerCrouchSlideModule : Node
         }
 
         _state = CrouchSlideState.Standing;
+    }
+
+    /// <summary>
+    /// Принудительно завершает текущий slide и возвращает модуль в crouch/standing состояние без изменения текущей velocity.
+    /// </summary>
+    public void CancelSlide()
+    {
+        StopSlide(false);
+        _slideTimer = 0.0f;
+        _slideSpeed = 0.0f;
     }
 
     private void UpdateHeight(float delta)
@@ -385,6 +403,14 @@ public partial class PlayerCrouchSlideModule : Node
 
         return axis.LengthSquared() > 0.0f ? axis.Normalized() : Vector3.Zero;
     }
+
+    private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;
+    private float CurrentCrouchSpeedMultiplier => TuningProfile?.CrouchSpeedMultiplier ?? CrouchSpeedMultiplier;
+    private float CurrentSlideInitialSpeed => TuningProfile?.SlideInitialSpeed ?? SlideInitialSpeed;
+    private float CurrentSlideDuration => TuningProfile?.SlideDuration ?? SlideDuration;
+    private float CurrentSlideCooldown => TuningProfile?.SlideCooldown ?? SlideCooldown;
+    private float CurrentSlideFriction => TuningProfile?.SlideFriction ?? SlideFriction;
+    private float CurrentSlideSteeringStrength => TuningProfile?.SlideSteeringStrength ?? SlideSteeringStrength;
 
     private void EnsureInputAction()
     {

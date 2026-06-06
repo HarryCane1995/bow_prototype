@@ -97,6 +97,12 @@ public partial class PlayerBowShootModule : Node
     [ExportGroup("Спавн projectile")]
     [Export(PropertyHint.Range, "0,2,0.01,suffix:m")] public float SpawnForwardOffset { get; set; } = 0.35f;
 
+    /// <summary>
+    /// Гравитация созданной ballistic projectile-стрелы. Если активен TuningProfile, значение берётся из профиля; без профиля это локальный fallback.
+    /// </summary>
+    [ExportGroup("Projectile Tuning")]
+    [Export(PropertyHint.Range, "0,80,0.5,suffix:m/s^2")] public float ProjectileGravity { get; set; } = 18.0f;
+
     private PlayerController _player;
     private Camera3D _camera;
     private Node3D _shootPoint;
@@ -214,15 +220,15 @@ public partial class PlayerBowShootModule : Node
     {
         if (precisionShot)
         {
-            return new ShotConfig(PrecisionShotSpeed, PrecisionShotDamage, ArrowFlightMode.Straight, PrecisionShotArmorPiercing);
+            return new ShotConfig(CurrentPrecisionShotSpeed, PrecisionShotDamage, ArrowFlightMode.Straight, PrecisionShotArmorPiercing);
         }
 
         if (chargedShot)
         {
-            return new ShotConfig(ChargedShotSpeed, ChargedShotDamage, ArrowFlightMode.Ballistic, false);
+            return new ShotConfig(CurrentChargedShotSpeed, ChargedShotDamage, ArrowFlightMode.Ballistic, false);
         }
 
-        return new ShotConfig(LightShotSpeed, LightShotDamage, ArrowFlightMode.Ballistic, false);
+        return new ShotConfig(CurrentLightShotSpeed, LightShotDamage, ArrowFlightMode.Ballistic, false);
     }
 
     private bool Fire(ShotConfig shotConfig)
@@ -235,6 +241,7 @@ public partial class PlayerBowShootModule : Node
         ArrowProjectile projectile = ArrowProjectileScene.Instantiate<ArrowProjectile>();
         Vector3 shootDirection = -_camera.GlobalTransform.Basis.Z.Normalized();
         Vector3 origin = (_shootPoint ?? _camera).GlobalPosition + shootDirection * SpawnForwardOffset;
+        projectile.ProjectileGravity = CurrentProjectileGravity;
 
         GetTree().CurrentScene.AddChild(projectile);
         projectile.GlobalPosition = origin;
@@ -261,6 +268,12 @@ public partial class PlayerBowShootModule : Node
         _cameraFovModule?.SetPrecisionAiming(false);
         _bowVisualModule?.SetPrecisionAiming(false);
     }
+
+    private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;
+    private float CurrentLightShotSpeed => TuningProfile?.LightShotSpeed ?? LightShotSpeed;
+    private float CurrentChargedShotSpeed => TuningProfile?.ChargedShotSpeed ?? ChargedShotSpeed;
+    private float CurrentPrecisionShotSpeed => TuningProfile?.PrecisionShotSpeed ?? PrecisionShotSpeed;
+    private float CurrentProjectileGravity => TuningProfile?.ProjectileGravity ?? ProjectileGravity;
 
     private readonly struct ShotConfig
     {

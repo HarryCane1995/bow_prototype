@@ -101,6 +101,11 @@ public partial class PlayerJumpModule : Node
 
     public void UpdateVerticalVelocity(double delta)
     {
+        if (_player.SlingshotGrappleModule?.BlocksJump == true)
+        {
+            return;
+        }
+
         Vector3 velocity = _player.Velocity;
         bool isGrounded = _player.IsGrounded;
 
@@ -144,26 +149,26 @@ public partial class PlayerJumpModule : Node
         bool canGroundJump = isGrounded || (UseCoyoteTime && _coyoteTimer > 0.0f);
         if (canGroundJump)
         {
-            velocity.Y = JumpVelocity;
+            velocity.Y = CurrentJumpVelocity;
             _jumpsUsed = 1;
             _coyoteTimer = 0.0f;
             return;
         }
 
-        int maxJumpCount = EnableDoubleJump ? Mathf.Max(1, MaxJumpCount) : 1;
+        int maxJumpCount = CurrentEnableDoubleJump ? Mathf.Max(1, MaxJumpCount) : 1;
         if (_jumpsUsed >= maxJumpCount)
         {
             return;
         }
 
         bool isSecondJump = _jumpsUsed == 1;
-        float doubleJumpVelocity = JumpVelocity * DoubleJumpVelocityMultiplier;
+        float doubleJumpVelocity = CurrentJumpVelocity * CurrentDoubleJumpVelocityMultiplier;
         velocity.Y = DoubleJumpRedirectKeepsVerticalVelocity ? Mathf.Max(velocity.Y, doubleJumpVelocity) : doubleJumpVelocity;
 
         if (isSecondJump && TryGetDoubleJumpRedirectDirection(out Vector3 redirectDirection))
         {
-            velocity.X = redirectDirection.X * DoubleJumpRedirectSpeed;
-            velocity.Z = redirectDirection.Z * DoubleJumpRedirectSpeed;
+            velocity.X = redirectDirection.X * CurrentDoubleJumpRedirectSpeed;
+            velocity.Z = redirectDirection.Z * CurrentDoubleJumpRedirectSpeed;
         }
 
         _jumpsUsed++;
@@ -174,7 +179,7 @@ public partial class PlayerJumpModule : Node
     {
         direction = Vector3.Zero;
 
-        if (!EnableDoubleJumpRedirect)
+        if (!CurrentEnableDoubleJumpRedirect)
         {
             return false;
         }
@@ -226,4 +231,11 @@ public partial class PlayerJumpModule : Node
 
         return input.LengthSquared() > 1.0f ? input.Normalized() : input;
     }
+
+    private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;
+    private float CurrentJumpVelocity => TuningProfile?.JumpVelocity ?? JumpVelocity;
+    private bool CurrentEnableDoubleJump => TuningProfile?.EnableDoubleJump ?? EnableDoubleJump;
+    private float CurrentDoubleJumpVelocityMultiplier => TuningProfile?.DoubleJumpVelocityMultiplier ?? DoubleJumpVelocityMultiplier;
+    private bool CurrentEnableDoubleJumpRedirect => TuningProfile?.EnableDoubleJumpRedirect ?? EnableDoubleJumpRedirect;
+    private float CurrentDoubleJumpRedirectSpeed => TuningProfile?.DoubleJumpRedirectSpeed ?? DoubleJumpRedirectSpeed;
 }

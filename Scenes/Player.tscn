@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="9_viewmodel_render"]
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="10_camera_fov"]
 [ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="11_crouch_slide"]
+[ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="12_slingshot_grapple"]
+[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -18,6 +20,7 @@ height = 1.8
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_controller")
+TuningProfile = ExtResource("13_player_tuning_profile")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 position = Vector3(0, 0.9, 0)
@@ -52,6 +55,9 @@ GravityMultiplier = 1.0
 
 [node name="PlayerCrouchSlideModule" type="Node" parent="."]
 script = ExtResource("11_crouch_slide")
+
+[node name="PlayerSlingshotGrappleModule" type="Node" parent="."]
+script = ExtResource("12_slingshot_grapple")
 
 [node name="PlayerLookModule" type="Node" parent="."]
 script = ExtResource("4_look")

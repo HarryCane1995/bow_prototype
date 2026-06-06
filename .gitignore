@@ -9,3 +9,9 @@ obj/
 
 # Editor backups
 *.old
+
+# Local HDRI skyboxes
+Art/Skyboxes/*.hdr
+Art/Skyboxes/*.hdr.import
+Art/Skyboxes/*.exr
+Art/Skyboxes/*.exr.import

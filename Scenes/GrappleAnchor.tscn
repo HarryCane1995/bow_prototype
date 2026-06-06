@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Combat/GrappleAnchor.cs" id="1_grapple_anchor"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_detection"]
+radius = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_debug"]
+transparency = 1
+albedo_color = Color(0.1, 0.85, 1, 0.9)
+emission_enabled = true
+emission = Color(0.1, 0.85, 1, 1)
+roughness = 0.35
+
+[sub_resource type="SphereMesh" id="SphereMesh_debug"]
+material = SubResource("StandardMaterial3D_debug")
+radius = 0.25
+height = 0.5
+radial_segments = 16
+rings = 8
+
+[node name="GrappleAnchor" type="Area3D" groups=["grapple_anchor"]]
+script = ExtResource("1_grapple_anchor")
+
+[node name="DetectionShape" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_detection")
+
+[node name="DebugVisual" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+mesh = SubResource("SphereMesh_debug")

@@ -90,6 +90,11 @@ public partial class PlayerMovementModule : Node
 
     public void UpdateHorizontalVelocity(double delta)
     {
+        if (_player.SlingshotGrappleModule?.IsNormalMovementBlocked == true)
+        {
+            return;
+        }
+
         if (_player.CrouchSlideModule?.IsSliding == true)
         {
             return;
@@ -101,7 +106,7 @@ public partial class PlayerMovementModule : Node
         Vector3 velocity = _player.Velocity;
 
         float speedMultiplier = _player.CrouchSlideModule?.CurrentSpeedMultiplier ?? 1.0f;
-        Vector3 targetHorizontalVelocity = hasInput ? direction * MoveSpeed * speedMultiplier : Vector3.Zero;
+        Vector3 targetHorizontalVelocity = hasInput ? direction * CurrentMoveSpeed * speedMultiplier : Vector3.Zero;
         Vector3 currentHorizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
         float selectedAcceleration = SelectMovementResponse(currentHorizontalVelocity, direction, hasInput);
         float step = selectedAcceleration * (float)delta;
@@ -121,10 +126,10 @@ public partial class PlayerMovementModule : Node
 
         if (!hasInput)
         {
-            return isGrounded ? GroundDeceleration : AirDeceleration;
+            return isGrounded ? CurrentGroundDeceleration : AirDeceleration;
         }
 
-        float selectedAcceleration = isGrounded ? GroundAcceleration : AirAcceleration;
+        float selectedAcceleration = isGrounded ? CurrentGroundAcceleration : AirAcceleration;
         if (currentHorizontalVelocity.LengthSquared() <= 0.0025f)
         {
             return selectedAcceleration;
@@ -133,16 +138,23 @@ public partial class PlayerMovementModule : Node
         float dot = currentHorizontalVelocity.Normalized().Dot(desiredDirection);
         if (dot < DirectionChangeDotThreshold)
         {
-            selectedAcceleration = isGrounded ? GroundDirectionChangeAcceleration : AirDirectionChangeAcceleration;
+            selectedAcceleration = isGrounded ? CurrentGroundDirectionChangeAcceleration : AirDirectionChangeAcceleration;
         }
 
         if (dot < 0.0f)
         {
-            selectedAcceleration *= CounterStrafeBoost;
+            selectedAcceleration *= CurrentCounterStrafeBoost;
         }
 
         return selectedAcceleration;
     }
+
+    private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;
+    private float CurrentMoveSpeed => TuningProfile?.MoveSpeed ?? MoveSpeed;
+    private float CurrentGroundAcceleration => TuningProfile?.GroundAcceleration ?? GroundAcceleration;
+    private float CurrentGroundDeceleration => TuningProfile?.GroundDeceleration ?? GroundDeceleration;
+    private float CurrentGroundDirectionChangeAcceleration => TuningProfile?.GroundDirectionChangeAcceleration ?? GroundDirectionChangeAcceleration;
+    private float CurrentCounterStrafeBoost => TuningProfile?.CounterStrafeBoost ?? CounterStrafeBoost;
 
     private Vector2 GetMovementInput()
     {

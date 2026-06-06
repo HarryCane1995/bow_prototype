@@ -19,12 +19,27 @@
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_3x3x3.tscn" id="15_tt6ua"]
 [ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_4x2x2.tscn" id="16_xj1ry"]
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="17_camera_fov"]
+[ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
+[ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
+[ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
+[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 1
-ambient_light_source = 2
-ambient_light_color = Color(0.8, 0.86, 0.92, 1)
-ambient_light_energy = 0.45
+background_energy_multiplier = 2.66
+ambient_light_source = 3
+ambient_light_color = Color(0.59893155, 0.5245708, 0.64546496, 1)
+ambient_light_energy = 3.68
+reflected_light_source = 2
+ssao_enabled = true
+ssao_radius = 1.99
+ssao_intensity = 9.54
+ssao_power = 1.9118418
+ssao_detail = 1.08
+ssao_horizon = 0.03
+ssao_sharpness = 0.95
+ssao_light_affect = 0.05
 
 [sub_resource type="BoxMesh" id="BoxMesh_target_base"]
 size = Vector3(1.4, 0.2, 0.7)
@@ -63,9 +78,6 @@ height = 1.8
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
 transform = Transform3D(2.1689029, 0, 0, 0, 1, 0, 0, 0, 6.0164275, 2.165, 0, -3.356)
 
-[node name="Ground" parent="Ground" unique_id=229555460 instance=ExtResource("1_gn7mj")]
-transform = Transform3D(1.0844513, 0.86602545, 0, -1.8783251, 0.49999997, 0, 0, 0, 6.0164275, 25.007946, -22.573208, -3.356)
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
 light_energy = 1.873
@@ -76,6 +88,25 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1825141203]
 environment = SubResource("Environment_world")
+script = ExtResource("18_skybox_environment")
+BackgroundEnergy = 2.66
+SkyEnergy = 1.2
+AmbientLightEnergy = 3.68
+GaussianBlurEnabled = true
+GaussianBlurSigma = 8.9
+
+[node name="GrappleAnchors" type="Node3D" parent="." unique_id=1113233226]
+
+[node name="GrappleAnchor_LowArc" parent="GrappleAnchors" unique_id=1782356064 instance=ExtResource("20_grapple_anchor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 4.25, -8)
+
+[node name="GrappleAnchor_CenterHigh" parent="GrappleAnchors" unique_id=1316752277 instance=ExtResource("20_grapple_anchor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, -14)
+
+[node name="GrappleAnchor_RightArc" parent="GrappleAnchors" unique_id=702798717 instance=ExtResource("20_grapple_anchor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, -20)
+
+[node name="RuntimeTuningPanel" parent="." unique_id=262541560 instance=ExtResource("22_runtime_tuning_panel")]
 
 [node name="Block_1x1x1" parent="." unique_id=1423532735 instance=ExtResource("12_ve050")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -2)
@@ -178,6 +209,7 @@ shape = SubResource("CylinderShape3D_target_hitbox")
 [node name="Player" type="CharacterBody3D" parent="." unique_id=785653356]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 8)
 script = ExtResource("1_controller")
+TuningProfile = ExtResource("21_player_tuning_profile")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=277109004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -214,6 +246,10 @@ FloorSnapLength = 1.0
 [node name="PlayerCrouchSlideModule" type="Node" parent="Player" unique_id=706487331]
 script = ExtResource("6_crouch_slide")
 SlideInitialSpeed = 20.0
+
+[node name="PlayerSlingshotGrappleModule" type="Node" parent="Player" unique_id=874427995]
+script = ExtResource("19_slingshot_grapple")
+DebugPrintStateChanges = true
 
 [node name="PlayerLookModule" type="Node" parent="Player" unique_id=532200321]
 script = ExtResource("4_look")
