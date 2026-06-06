@@ -153,4 +153,45 @@ public partial class PlayerTuningProfile : Resource
     /// Скорость плавного перехода FOV.
     /// </summary>
     [Export(PropertyHint.Range, "1,300,1,suffix:deg/s")] public float FovTransitionSpeed { get; set; } = 240.0f;
+
+    /// <summary>
+    /// Включает расширение FOV от скорости движения игрока.
+    /// </summary>
+    [ExportGroup("Camera / Speed FOV")]
+    [Export] public bool EnableSpeedFov { get; set; } = true;
+
+    /// <summary>
+    /// Главная сила speed FOV: насколько скорость сверх MinSpeedForFov расширяет FOV.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.05")] public float SpeedFovMultiplier { get; set; } = 0.45f;
+
+    /// <summary>
+    /// Скорость, ниже которой FOV не расширяется от движения.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float MinSpeedForFov { get; set; } = 5.0f;
+
+    /// <summary>
+    /// Максимальный FOV-бонус от скорости.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,40,1,suffix:deg")] public float MaxSpeedFovBonus { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Скорость плавного расширения FOV при разгоне.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,25,0.1")] public float SpeedFovSmoothUp { get; set; } = 8.0f;
+
+    /// <summary>
+    /// Скорость плавного возврата FOV при замедлении.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,25,0.1")] public float SpeedFovSmoothDown { get; set; } = 6.0f;
+
+    /// <summary>
+    /// Если включено, speed FOV учитывает полную скорость Vector3, включая вертикальный slingshot launch.
+    /// </summary>
+    [Export] public bool UseFullVelocityForSpeedFov { get; set; } = true;
+
+    /// <summary>
+    /// Если включено, speed FOV не применяется во время precision aiming.
+    /// </summary>
+    [Export] public bool DisableSpeedFovDuringPrecisionAim { get; set; } = true;
 }

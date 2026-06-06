@@ -29,6 +29,11 @@ public partial class PlayerCameraFovModule : Node
     private bool _isPrecisionAiming;
 
     /// <summary>
+    /// Текущее состояние precision aiming, по которому speed FOV решает, можно ли добавлять бонус от скорости.
+    /// </summary>
+    public bool IsPrecisionAiming => _isPrecisionAiming;
+
+    /// <summary>
     /// Инициализирует модуль и выставляет обычный FOV как текущую цель камеры.
     /// </summary>
     public void Initialize(PlayerController player)
@@ -50,7 +55,9 @@ public partial class PlayerCameraFovModule : Node
             return;
         }
 
-        _targetFov = _isPrecisionAiming ? CurrentPrecisionFov : CurrentPlayerFov;
+        float baseTargetFov = _isPrecisionAiming ? CurrentPrecisionFov : CurrentPlayerFov;
+        float speedFovBonus = _player.SpeedFovModule?.UpdateSpeedFovBonus(delta, _isPrecisionAiming) ?? 0.0f;
+        _targetFov = Mathf.Min(baseTargetFov + speedFovBonus, 140.0f);
         _camera.Fov = Mathf.MoveToward(_camera.Fov, _targetFov, CurrentFovTransitionSpeed * (float)delta);
     }
 

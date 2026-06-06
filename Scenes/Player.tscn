@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="11_crouch_slide"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="12_slingshot_grapple"]
 [ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
+[ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="14_speed_fov"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -70,6 +71,9 @@ script = ExtResource("10_camera_fov")
 PlayerFov = 75.0
 PrecisionFov = 45.0
 FovTransitionSpeed = 90.0
+
+[node name="PlayerSpeedFovModule" type="Node" parent="."]
+script = ExtResource("14_speed_fov")
 
 [node name="PlayerBowShootModule" type="Node" parent="."]
 script = ExtResource("5_shoot")

@@ -61,6 +61,11 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath CameraFovModulePath { get; set; } = new("PlayerCameraFovModule");
 
     /// <summary>
+    /// Путь к модулю speed-based FOV. Если модуль отсутствует, базовый и precision FOV продолжают работать без бонуса от скорости.
+    /// </summary>
+    [Export] public NodePath SpeedFovModulePath { get; set; } = new("PlayerSpeedFovModule");
+
+    /// <summary>
     /// Путь к модулю игровой стрельбы из лука. Смена пути подключает другой shoot-модуль; неверный путь отключит создание projectile-стрел.
     /// </summary>
     [Export] public NodePath BowShootModulePath { get; set; } = new("PlayerBowShootModule");
@@ -84,6 +89,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerSlingshotGrappleModule SlingshotGrappleModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
     public PlayerCameraFovModule CameraFovModule { get; private set; }
+    public PlayerSpeedFovModule SpeedFovModule { get; private set; }
     public PlayerBowShootModule BowShootModule { get; private set; }
     public PlayerBowVisualModule BowVisualModule { get; private set; }
     public PlayerViewModelRenderModule ViewModelRenderModule { get; private set; }
@@ -106,6 +112,11 @@ public partial class PlayerController : CharacterBody3D
         }
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
         CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
+        SpeedFovModule = GetNodeOrNull<PlayerSpeedFovModule>(SpeedFovModulePath);
+        if (SpeedFovModule == null)
+        {
+            GD.PushWarning($"PlayerSpeedFovModule was not found at path: {SpeedFovModulePath}. Speed-based FOV bonus is disabled for this player.");
+        }
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
         BowVisualModule = GetNode<PlayerBowVisualModule>(BowVisualModulePath);
         ViewModelRenderModule = GetNode<PlayerViewModelRenderModule>(ViewModelRenderModulePath);
@@ -116,6 +127,7 @@ public partial class PlayerController : CharacterBody3D
         SlingshotGrappleModule?.Initialize(this);
         LookModule.Initialize(this);
         CameraFovModule.Initialize(this);
+        SpeedFovModule?.Initialize(this);
         ViewModelRenderModule.Initialize(this);
         BowVisualModule.Initialize(this);
         BowShootModule.Initialize(this);

@@ -17,7 +17,8 @@ Default-профиль лежит здесь:
 - `PlayerCrouchSlideModule` - crouch/slide;
 - `PlayerSlingshotGrappleModule` - slingshot grapple;
 - `PlayerBowShootModule` - скорости выстрелов и projectile gravity;
-- `PlayerCameraFovModule` - FOV.
+- `PlayerCameraFovModule` - базовый FOV, precision FOV и скорость перехода;
+- `PlayerSpeedFovModule` - speed-based FOV bonus.
 
 Если профиль не назначен или `UseTuningProfile` выключен, модули используют свои локальные `[Export]`-поля как fallback.
 
@@ -41,6 +42,9 @@ Default-профиль лежит здесь:
 - `Slingshot Grapple`;
 - `Bow / Projectiles`;
 - `Camera`.
+- `Camera / Speed FOV`.
+
+`Camera / Speed FOV` содержит главный ползунок силы эффекта `SpeedFovMultiplier`, порог `MinSpeedForFov`, ограничитель `MaxSpeedFovBonus`, smoothing для расширения/возврата и флаги `UseFullVelocityForSpeedFov` и `DisableSpeedFovDuringPrecisionAim`.
 
 Изменение slider/spinbox сразу меняет значения в `PlayerTuningProfile`. Модули читают профиль во время расчёта поведения, поэтому изменения применяются live.
 

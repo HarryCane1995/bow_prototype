@@ -22,11 +22,12 @@
 [ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
-[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="Resource" uid="uid://r3jpmm1mhxv8" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
+[ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="23_speed_fov"]
 
 [sub_resource type="Environment" id="Environment_world"]
-background_mode = 1
+background_mode = 2
 background_energy_multiplier = 2.66
 ambient_light_source = 3
 ambient_light_color = Color(0.59893155, 0.5245708, 0.64546496, 1)
@@ -76,7 +77,7 @@ height = 1.8
 [node name="BowPrototypeScene" type="Node3D" unique_id=1633690768]
 
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
-transform = Transform3D(2.1689029, 0, 0, 0, 1, 0, 0, 0, 6.0164275, 2.165, 0, -3.356)
+transform = Transform3D(6.552583, 0, 0, 0, 1, 0, 0, 0, 11.397175, 2.165, 0, -3.356)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
@@ -235,6 +236,8 @@ MoveSpeed = 15.0
 Acceleration = 60.0
 AirControlMultiplier = 0.5
 CounterStrafeBoost = 1.75
+AirAcceleration = 20.5
+AirDeceleration = 10.0
 
 [node name="PlayerJumpModule" type="Node" parent="Player" unique_id=2070475899]
 script = ExtResource("3_jump")
@@ -259,6 +262,9 @@ MouseSensitivity = 0.0005
 script = ExtResource("17_camera_fov")
 PlayerFov = 100.0
 FovTransitionSpeed = 240.0
+
+[node name="PlayerSpeedFovModule" type="Node" parent="Player" unique_id=1855649460]
+script = ExtResource("23_speed_fov")
 
 [node name="PlayerBowShootModule" type="Node" parent="Player" unique_id=223452070]
 script = ExtResource("5_shoot")

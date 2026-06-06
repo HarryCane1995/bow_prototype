@@ -1,35 +1,28 @@
-[gd_resource type="Resource" script_class="PlayerTuningProfile" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="PlayerTuningProfile" format=3 uid="uid://r3jpmm1mhxv8"]
 
-[ext_resource type="Script" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
+[ext_resource type="Script" uid="uid://bxgpsdu6uk7g2" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
 
 [resource]
 script = ExtResource("1_player_tuning_profile")
-MoveSpeed = 15.0
-GroundAcceleration = 24.0
-GroundDeceleration = 28.0
-GroundDirectionChangeAcceleration = 55.0
-CounterStrafeBoost = 1.75
-JumpVelocity = 10.0
-EnableDoubleJump = true
-DoubleJumpVelocityMultiplier = 1.0
-EnableDoubleJumpRedirect = true
-DoubleJumpRedirectSpeed = 8.0
-CrouchSpeedMultiplier = 0.55
-SlideInitialSpeed = 20.0
-SlideDuration = 0.55
-SlideCooldown = 0.35
-SlideFriction = 14.0
-SlideSteeringStrength = 0.25
-MaxGrappleDistance = 25.0
-PullAcceleration = 45.0
-MaxPullSpeed = 24.0
-LaunchSpeed = 28.0
-InheritPullVelocityFactor = 0.65
-MaxLaunchVelocity = 36.0
-LightShotSpeed = 50.0
-ChargedShotSpeed = 100.0
-PrecisionShotSpeed = 180.0
-ProjectileGravity = 18.0
-PlayerFov = 100.0
-PrecisionFov = 45.0
-FovTransitionSpeed = 240.0
+GroundAcceleration = 50.0
+GroundDeceleration = 100.0
+GroundDirectionChangeAcceleration = 100.0
+CounterStrafeBoost = 2.5
+JumpVelocity = 12.4
+DoubleJumpVelocityMultiplier = 1.45
+DoubleJumpRedirectSpeed = 13.8
+CrouchSpeedMultiplier = 0.6
+SlideDuration = 1.0
+SlideSteeringStrength = 0.3
+MaxGrappleDistance = 35.5
+PullAcceleration = 77.0
+MaxPullSpeed = 49.5
+LaunchSpeed = 99.5
+MaxLaunchVelocity = 60.5
+LightShotSpeed = 50.5
+PrecisionShotSpeed = 177.0
+PrecisionFov = 31.0
+SpeedFovMultiplier = 1.35
+MaxSpeedFovBonus = 33.0
+SpeedFovSmoothUp = 14.3
+SpeedFovSmoothDown = 17.8

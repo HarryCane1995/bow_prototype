@@ -100,6 +100,7 @@ public partial class RuntimeTuningPanel : Window
         AddSlingshotGrappleSection();
         AddBowSection();
         AddCameraSection();
+        AddSpeedFovSection();
     }
 
     private void AddToolbar()
@@ -197,6 +198,19 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Player FOV", 50.0, 120.0, 1.0, () => TuningProfile.PlayerFov, value => TuningProfile.PlayerFov = value);
         AddFloatControl("Precision FOV", 20.0, 100.0, 0.5, () => TuningProfile.PrecisionFov, value => TuningProfile.PrecisionFov = value);
         AddFloatControl("FOV Transition Speed", 1.0, 300.0, 1.0, () => TuningProfile.FovTransitionSpeed, value => TuningProfile.FovTransitionSpeed = value);
+    }
+
+    private void AddSpeedFovSection()
+    {
+        AddSection("Camera / Speed FOV");
+        AddBoolControl("Enable Speed FOV", () => TuningProfile.EnableSpeedFov, value => TuningProfile.EnableSpeedFov = value);
+        AddFloatControl("Speed FOV Multiplier", 0.0, 2.0, 0.05, () => TuningProfile.SpeedFovMultiplier, value => TuningProfile.SpeedFovMultiplier = value);
+        AddFloatControl("Min Speed For FOV", 0.0, 25.0, 0.5, () => TuningProfile.MinSpeedForFov, value => TuningProfile.MinSpeedForFov = value);
+        AddFloatControl("Max Speed FOV Bonus", 0.0, 40.0, 1.0, () => TuningProfile.MaxSpeedFovBonus, value => TuningProfile.MaxSpeedFovBonus = value);
+        AddFloatControl("Speed FOV Smooth Up", 0.1, 25.0, 0.1, () => TuningProfile.SpeedFovSmoothUp, value => TuningProfile.SpeedFovSmoothUp = value);
+        AddFloatControl("Speed FOV Smooth Down", 0.1, 25.0, 0.1, () => TuningProfile.SpeedFovSmoothDown, value => TuningProfile.SpeedFovSmoothDown = value);
+        AddBoolControl("Use Full Velocity", () => TuningProfile.UseFullVelocityForSpeedFov, value => TuningProfile.UseFullVelocityForSpeedFov = value);
+        AddBoolControl("Disable During Precision Aim", () => TuningProfile.DisableSpeedFovDuringPrecisionAim, value => TuningProfile.DisableSpeedFovDuringPrecisionAim = value);
     }
 
     private void AddSection(string title)
@@ -375,7 +389,15 @@ public partial class RuntimeTuningPanel : Window
             ["ProjectileGravity"] = profile.ProjectileGravity,
             ["PlayerFov"] = profile.PlayerFov,
             ["PrecisionFov"] = profile.PrecisionFov,
-            ["FovTransitionSpeed"] = profile.FovTransitionSpeed
+            ["FovTransitionSpeed"] = profile.FovTransitionSpeed,
+            ["EnableSpeedFov"] = profile.EnableSpeedFov,
+            ["SpeedFovMultiplier"] = profile.SpeedFovMultiplier,
+            ["MinSpeedForFov"] = profile.MinSpeedForFov,
+            ["MaxSpeedFovBonus"] = profile.MaxSpeedFovBonus,
+            ["SpeedFovSmoothUp"] = profile.SpeedFovSmoothUp,
+            ["SpeedFovSmoothDown"] = profile.SpeedFovSmoothDown,
+            ["UseFullVelocityForSpeedFov"] = profile.UseFullVelocityForSpeedFov,
+            ["DisableSpeedFovDuringPrecisionAim"] = profile.DisableSpeedFovDuringPrecisionAim
         };
     }
 
@@ -415,6 +437,14 @@ public partial class RuntimeTuningPanel : Window
         profile.PlayerFov = GetFloat(values, "PlayerFov", profile.PlayerFov);
         profile.PrecisionFov = GetFloat(values, "PrecisionFov", profile.PrecisionFov);
         profile.FovTransitionSpeed = GetFloat(values, "FovTransitionSpeed", profile.FovTransitionSpeed);
+        profile.EnableSpeedFov = GetBool(values, "EnableSpeedFov", profile.EnableSpeedFov);
+        profile.SpeedFovMultiplier = GetFloat(values, "SpeedFovMultiplier", profile.SpeedFovMultiplier);
+        profile.MinSpeedForFov = GetFloat(values, "MinSpeedForFov", profile.MinSpeedForFov);
+        profile.MaxSpeedFovBonus = GetFloat(values, "MaxSpeedFovBonus", profile.MaxSpeedFovBonus);
+        profile.SpeedFovSmoothUp = GetFloat(values, "SpeedFovSmoothUp", profile.SpeedFovSmoothUp);
+        profile.SpeedFovSmoothDown = GetFloat(values, "SpeedFovSmoothDown", profile.SpeedFovSmoothDown);
+        profile.UseFullVelocityForSpeedFov = GetBool(values, "UseFullVelocityForSpeedFov", profile.UseFullVelocityForSpeedFov);
+        profile.DisableSpeedFovDuringPrecisionAim = GetBool(values, "DisableSpeedFovDuringPrecisionAim", profile.DisableSpeedFovDuringPrecisionAim);
     }
 
     private static void CopyProfile(PlayerTuningProfile source, PlayerTuningProfile target)
