@@ -3,21 +3,47 @@ using Godot;
 [Tool]
 public partial class TestSkyboxEnvironment : WorldEnvironment
 {
+    /// <summary>
+    /// Путь к equirectangular 2:1 skybox-панораме в проекте. Для HDRI обычно используется локальный .hdr или .exr файл в res://Art/Skyboxes/.
+    /// </summary>
     [Export(PropertyHint.File, "*.hdr,*.exr,*.png,*.jpg,*.jpeg")]
     public string SkyTexturePath = "res://Art/Skyboxes/ferndale_studio_10_4k.exr";
 
+    /// <summary>
+    /// Яркость фона WorldEnvironment. Увеличение делает skybox визуально ярче как background.
+    /// </summary>
     [Export] public float BackgroundEnergy = 2.39f;
+
+    /// <summary>
+    /// Множитель энергии PanoramaSkyMaterial. Увеличение усиливает вклад самой sky material.
+    /// </summary>
     [Export] public float SkyEnergy = 1.0f;
+
+    /// <summary>
+    /// Энергия ambient light от sky. Увеличение сильнее подсвечивает сцену окружением.
+    /// </summary>
     [Export] public float AmbientLightEnergy = 3.62f;
 
+    /// <summary>
+    /// Включает CPU Gaussian blur для sky texture перед назначением в PanoramaSkyMaterial. Для больших HDRI использовать осторожно вместе с GaussianBlurMaxSize.
+    /// </summary>
     [Export] public bool GaussianBlurEnabled = false;
 
+    /// <summary>
+    /// Радиус Gaussian blur в пикселях. Значение 0 отключает blur; если GaussianBlurEnabled включён при радиусе 0, скрипт выводит warning.
+    /// </summary>
     [Export(PropertyHint.Range, "0,32,1")]
     public int GaussianBlurRadius = 0;
 
+    /// <summary>
+    /// Sigma для Gaussian blur. Большее значение делает размытие мягче и шире при том же радиусе.
+    /// </summary>
     [Export(PropertyHint.Range, "0.1,32.0,0.1")]
     public float GaussianBlurSigma = 4.0f;
 
+    /// <summary>
+    /// Максимальный размер стороны временной картинки для blur. Ограничивает стоимость CPU-обработки больших HDRI.
+    /// </summary>
     [Export(PropertyHint.Range, "256,4096,1")]
     public int GaussianBlurMaxSize = 2048;
 
@@ -72,8 +98,14 @@ public partial class TestSkyboxEnvironment : WorldEnvironment
         var blurRadius = Mathf.Clamp(GaussianBlurRadius, 0, 32);
         var blurSigma = Mathf.Max(0.1f, GaussianBlurSigma);
 
-        if (!GaussianBlurEnabled || blurRadius <= 0)
+        if (!GaussianBlurEnabled)
         {
+            return sourceTexture;
+        }
+
+        if (blurRadius <= 0)
+        {
+            GD.PushWarning("GaussianBlurEnabled is true, but GaussianBlurRadius is 0. Skybox blur will not be applied.");
             return sourceTexture;
         }
 

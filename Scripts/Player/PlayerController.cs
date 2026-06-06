@@ -99,7 +99,11 @@ public partial class PlayerController : CharacterBody3D
         MovementModule = GetNode<PlayerMovementModule>(MovementModulePath);
         JumpModule = GetNode<PlayerJumpModule>(JumpModulePath);
         CrouchSlideModule = GetNode<PlayerCrouchSlideModule>(CrouchSlideModulePath);
-        SlingshotGrappleModule = GetNode<PlayerSlingshotGrappleModule>(SlingshotGrappleModulePath);
+        SlingshotGrappleModule = GetNodeOrNull<PlayerSlingshotGrappleModule>(SlingshotGrappleModulePath);
+        if (SlingshotGrappleModule == null)
+        {
+            GD.PushWarning($"PlayerSlingshotGrappleModule was not found at path: {SlingshotGrappleModulePath}. Slingshot grapple is disabled for this player.");
+        }
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
         CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
@@ -109,7 +113,7 @@ public partial class PlayerController : CharacterBody3D
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
         CrouchSlideModule.Initialize(this);
-        SlingshotGrappleModule.Initialize(this);
+        SlingshotGrappleModule?.Initialize(this);
         LookModule.Initialize(this);
         CameraFovModule.Initialize(this);
         ViewModelRenderModule.Initialize(this);
@@ -119,9 +123,9 @@ public partial class PlayerController : CharacterBody3D
 
     public override void _PhysicsProcess(double delta)
     {
-        SlingshotGrappleModule.ProcessSlingshotInput();
+        SlingshotGrappleModule?.ProcessSlingshotInput();
 
-        if (!SlingshotGrappleModule.BlocksJump)
+        if (SlingshotGrappleModule?.BlocksJump != true)
         {
             JumpModule.UpdateVerticalVelocity(delta);
         }
@@ -129,7 +133,7 @@ public partial class PlayerController : CharacterBody3D
         Vector3 velocity = Velocity;
         CrouchSlideModule.ProcessCrouchSlide(delta, ref velocity);
         Velocity = velocity;
-        SlingshotGrappleModule.UpdateSlingshot(delta);
+        SlingshotGrappleModule?.UpdateSlingshot(delta);
         MovementModule.UpdateHorizontalVelocity(delta);
         MoveAndSlide();
     }
