@@ -21,6 +21,8 @@
 - `MaxJumpCount = 2` означает один прыжок с земли и один дополнительный прыжок в воздухе.
 - `DoubleJumpVelocityMultiplier` меняет вертикальную силу второго прыжка относительно обычного `JumpVelocity`.
 - Третий прыжок невозможен, пока игрок снова не коснётся земли.
+- Если `RestoreDoubleJumpOnGrapple = true`, успешный Slingshot Grapple восстанавливает один air jump charge, даже если double jump уже был потрачен до зацепа.
+- Grapple reset не считается приземлением: он не сбрасывает весь jump state, не включает coyote time и не даёт ground jump из воздуха.
 
 ## Double Jump Redirect
 
@@ -53,14 +55,29 @@
 - Если есть WASD input и `SlideKeepsInputDirection = true`, направление slide считается относительно камеры.
 - Если input нет, slide использует текущую горизонтальную скорость игрока.
 - Во время slide `PlayerCrouchSlideModule` управляет X/Z velocity сам, а `PlayerMovementModule` не перезаписывает горизонтальную скорость.
-- Slide короткий: длится `SlideDuration`, затухает через `SlideFriction` и ограничивается `SlideCooldown`.
+- Slide длится не дольше `SlideDuration`, затухает через `SlideFriction` и ограничивается `SlideCooldown`.
+- Если `EnableSlideExitBySpeed = true`, slide завершается раньше, когда горизонтальная скорость падает ниже `SlideExitMinSpeed` после стартового окна `SlideExitMinSpeedGraceTime`.
+- При выходе из slide игрок остаётся в crouch, если `crouch_slide` всё ещё удерживается или сверху нет места для вставания; иначе возвращается в standing.
 - `SlideSteeringStrength` даёт лёгкую коррекцию направления, но не превращает slide в обычное свободное движение.
+
+## Airborne Slide Buffer
+
+- `EnableAirborneSlideEntry` разрешает удерживать `crouch_slide` в воздухе и войти в slide сразу после приземления.
+- Буфер ставится только в воздухе, если горизонтальная скорость не ниже `AirborneSlideMinSpeed`.
+- `AirborneSlideBufferTime` задаёт, сколько секунд запрос ждёт касания земли.
+- При приземлении slide стартует только если `crouch_slide` всё ещё удерживается, cooldown закончился и скорость всё ещё достаточная.
+- Если `AirborneSlideUseInputDirectionIfAny = true` и WASD input сильнее `AirborneSlideInputMin`, landing slide использует input-направление относительно камеры.
+- Если input-направление не выбрано и `AirborneSlideUseCurrentVelocityDirection = true`, landing slide идёт по текущей горизонтальной velocity.
+- Если горизонтальная velocity почти нулевая и input отсутствует, landing slide не стартует.
 
 ## Jump + Slide
 
 - Прыжок из crouch разрешён обычной логикой `PlayerJumpModule`.
-- Прыжок во время slide сейчас отменяет slide и выполняет обычный jump.
-- В коде оставлен TODO для будущего slide jump с отдельной настройкой импульса.
+- Прыжок во время slide выполняется как slide jump, если `EnableSlideJump = true`.
+- `PlayerCrouchSlideModule.TryConsumeSlideJumpBoost(ref velocity)` завершает slide и готовит горизонтальную velocity, а `PlayerJumpModule` остаётся владельцем вертикального `JumpVelocity` и счётчика прыжков.
+- Горизонтальная часть slide jump считается как текущая velocity * `SlideJumpVelocityCarryFactor` плюс boost `SlideJumpHorizontalBoost` по направлению движения.
+- `SlideJumpMaxHorizontalSpeed` ограничивает итоговую горизонтальную скорость, чтобы прыжок из slide не превращался в dash.
+- Если `SlideJumpRequiresStandUpSpace = true` и над игроком нет места для вставания, slide jump не выполняется и игрок остаётся в безопасном crouch-состоянии.
 - Double Jump Redirect не изменён: после прыжка из slide второй прыжок в воздухе работает по прежним правилам.
 
 ## Movement Response

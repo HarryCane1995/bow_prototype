@@ -56,6 +56,11 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float DoubleJumpRedirectSpeed { get; set; } = 8.0f;
 
     /// <summary>
+    /// Если включено, успешный Slingshot Grapple восстанавливает один air jump charge без ground reset.
+    /// </summary>
+    [Export] public bool RestoreDoubleJumpOnGrapple { get; set; } = true;
+
+    /// <summary>
     /// Множитель скорости обычного движения в crouch-состоянии.
     /// </summary>
     [ExportGroup("Crouch / Slide")]
@@ -85,6 +90,76 @@ public partial class PlayerTuningProfile : Resource
     /// Сила управления направлением во время slide.
     /// </summary>
     [Export(PropertyHint.Range, "0,3,0.05")] public float SlideSteeringStrength { get; set; } = 0.25f;
+
+    /// <summary>
+    /// Включает автоматический выход из slide при падении горизонтальной скорости ниже порога.
+    /// </summary>
+    [Export] public bool EnableSlideExitBySpeed { get; set; } = true;
+
+    /// <summary>
+    /// Минимальная горизонтальная скорость, ниже которой slide завершается после grace-времени.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.1,suffix:m/s")] public float SlideExitMinSpeed { get; set; } = 3.0f;
+
+    /// <summary>
+    /// Короткая задержка после старта slide перед проверкой выхода по скорости.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.5,0.01,suffix:s")] public float SlideExitMinSpeedGraceTime { get; set; } = 0.08f;
+
+    /// <summary>
+    /// Включает буфер подката в воздухе для автоматического входа в slide при приземлении.
+    /// </summary>
+    [Export] public bool EnableAirborneSlideEntry { get; set; } = true;
+
+    /// <summary>
+    /// Минимальная горизонтальная скорость в воздухе, при которой удержание crouch_slide буферит landing slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float AirborneSlideMinSpeed { get; set; } = 7.0f;
+
+    /// <summary>
+    /// Время жизни airborne-запроса на slide до следующего касания земли.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05,suffix:s")] public float AirborneSlideBufferTime { get; set; } = 0.25f;
+
+    /// <summary>
+    /// Разрешает landing slide брать направление из текущей горизонтальной velocity, если input-направление не выбрано.
+    /// </summary>
+    [Export] public bool AirborneSlideUseCurrentVelocityDirection { get; set; } = true;
+
+    /// <summary>
+    /// Если включено, WASD-ввод при приземлении может переопределить направление landing slide относительно камеры.
+    /// </summary>
+    [Export] public bool AirborneSlideUseInputDirectionIfAny { get; set; } = true;
+
+    /// <summary>
+    /// Минимальная сила WASD-ввода для выбора input-направления airborne landing slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05")] public float AirborneSlideInputMin { get; set; } = 0.1f;
+
+    /// <summary>
+    /// Включает прыжок из slide с сохранением части горизонтальной инерции.
+    /// </summary>
+    [Export] public bool EnableSlideJump { get; set; } = true;
+
+    /// <summary>
+    /// Дополнительный горизонтальный boost при прыжке из slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.25,suffix:m/s")] public float SlideJumpHorizontalBoost { get; set; } = 3.0f;
+
+    /// <summary>
+    /// Доля текущей горизонтальной velocity, сохраняемая при slide jump.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1.5,0.05")] public float SlideJumpVelocityCarryFactor { get; set; } = 0.75f;
+
+    /// <summary>
+    /// Максимальная горизонтальная скорость после slide jump.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,35,0.5,suffix:m/s")] public float SlideJumpMaxHorizontalSpeed { get; set; } = 16.0f;
+
+    /// <summary>
+    /// Если включено, slide jump требует свободное место для вставания.
+    /// </summary>
+    [Export] public bool SlideJumpRequiresStandUpSpace { get; set; } = true;
 
     /// <summary>
     /// Максимальная дистанция поиска grapple anchor из камеры.
@@ -194,4 +269,65 @@ public partial class PlayerTuningProfile : Resource
     /// Если включено, speed FOV не применяется во время precision aiming.
     /// </summary>
     [Export] public bool DisableSpeedFovDuringPrecisionAim { get; set; } = true;
+
+    /// <summary>
+    /// Включает viewmodel lag от движения мыши.
+    /// </summary>
+    [ExportGroup("ViewModel Sway")]
+    [Export] public bool EnableMouseLag { get; set; } = true;
+
+    /// <summary>
+    /// Сила позиционного сдвига лука от mouse look delta.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.08,0.001,suffix:m")] public float MouseLagPositionAmount { get; set; } = 0.015f;
+
+    /// <summary>
+    /// Сила поворота лука от mouse look delta.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,8,0.1,suffix:deg")] public float MouseLagRotationAmount { get; set; } = 1.5f;
+
+    /// <summary>
+    /// Включает инерцию viewmodel от ускорения игрока.
+    /// </summary>
+    [Export] public bool EnableMovementInertia { get; set; } = true;
+
+    /// <summary>
+    /// Сила позиционного сдвига viewmodel от ускорения игрока.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.03,0.001,suffix:m")] public float MovementInertiaPositionAmount { get; set; } = 0.004f;
+
+    /// <summary>
+    /// Сила поворота viewmodel от ускорения игрока.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,4,0.05,suffix:deg")] public float MovementInertiaRotationAmount { get; set; } = 0.35f;
+
+    /// <summary>
+    /// Включает краткую просадку viewmodel при приземлении.
+    /// </summary>
+    [Export] public bool EnableLandingSway { get; set; } = true;
+
+    /// <summary>
+    /// Сила позиционной просадки viewmodel при приземлении.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.1,0.001,suffix:m")] public float LandingPositionAmount { get; set; } = 0.025f;
+
+    /// <summary>
+    /// Сила поворота viewmodel при приземлении.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.1,suffix:deg")] public float LandingRotationAmount { get; set; } = 2.0f;
+
+    /// <summary>
+    /// Скорость следования viewmodel к активному sway offset.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,30,0.1")] public float SwayFollowSpeed { get; set; } = 12.0f;
+
+    /// <summary>
+    /// Скорость возврата viewmodel к базовому transform.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,30,0.1")] public float SwayReturnSpeed { get; set; } = 10.0f;
+
+    /// <summary>
+    /// Скорость затухания landing impulse.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,30,0.1")] public float ImpulseReturnSpeed { get; set; } = 14.0f;
 }

@@ -56,6 +56,11 @@ public partial class PlayerJumpModule : Node
     [Export(PropertyHint.Range, "0,1,0.01")] public float DoubleJumpRedirectMinInput { get; set; } = 0.1f;
 
     /// <summary>
+    /// Если включено, успешный Slingshot Grapple восстанавливает один воздушный прыжок без ground reset и coyote time.
+    /// </summary>
+    [Export] public bool RestoreDoubleJumpOnGrapple { get; set; } = true;
+
+    /// <summary>
     /// Вертикальная скорость, применяемая на земле при падении. Значение ближе к 0 уменьшает оседание после приземления; более отрицательное сильнее прижимает к земле.
     /// </summary>
     [ExportSubgroup("Контакт с землёй")]
@@ -87,6 +92,7 @@ public partial class PlayerJumpModule : Node
     private float _gravity;
     private float _coyoteTimer;
     private int _jumpsUsed;
+    private bool _forceNextJumpAsAirJumpFromGrapple;
 
     public void Initialize(PlayerController player)
     {
@@ -113,6 +119,7 @@ public partial class PlayerJumpModule : Node
         {
             _coyoteTimer = CoyoteTime;
             _jumpsUsed = 0;
+            _forceNextJumpAsAirJumpFromGrapple = false;
         }
         else
         {
@@ -144,11 +151,36 @@ public partial class PlayerJumpModule : Node
         _player.Velocity = velocity;
     }
 
+    /// <summary>
+    /// Восстанавливает возможность одного air jump после успешного grapple, не меняя grounded-состояние, coyote timer и velocity.
+    /// </summary>
+    public void RestoreAirJumpChargeFromGrapple()
+    {
+        if (!CurrentRestoreDoubleJumpOnGrapple || !CurrentEnableDoubleJump)
+        {
+            return;
+        }
+
+        int maxJumpCount = Mathf.Max(1, MaxJumpCount);
+        if (maxJumpCount <= 1)
+        {
+            return;
+        }
+
+        _jumpsUsed = maxJumpCount - 1;
+        _forceNextJumpAsAirJumpFromGrapple = true;
+    }
+
     private void TryJump(ref Vector3 velocity, bool isGrounded)
     {
-        bool canGroundJump = isGrounded || (UseCoyoteTime && _coyoteTimer > 0.0f);
+        bool canGroundJump = !_forceNextJumpAsAirJumpFromGrapple && (isGrounded || (UseCoyoteTime && _coyoteTimer > 0.0f));
         if (canGroundJump)
         {
+            if (_player.CrouchSlideModule?.IsSliding == true && !_player.CrouchSlideModule.TryConsumeSlideJumpBoost(ref velocity))
+            {
+                return;
+            }
+
             velocity.Y = CurrentJumpVelocity;
             _jumpsUsed = 1;
             _coyoteTimer = 0.0f;
@@ -173,6 +205,7 @@ public partial class PlayerJumpModule : Node
 
         _jumpsUsed++;
         _coyoteTimer = 0.0f;
+        _forceNextJumpAsAirJumpFromGrapple = false;
     }
 
     private bool TryGetDoubleJumpRedirectDirection(out Vector3 direction)
@@ -238,4 +271,5 @@ public partial class PlayerJumpModule : Node
     private float CurrentDoubleJumpVelocityMultiplier => TuningProfile?.DoubleJumpVelocityMultiplier ?? DoubleJumpVelocityMultiplier;
     private bool CurrentEnableDoubleJumpRedirect => TuningProfile?.EnableDoubleJumpRedirect ?? EnableDoubleJumpRedirect;
     private float CurrentDoubleJumpRedirectSpeed => TuningProfile?.DoubleJumpRedirectSpeed ?? DoubleJumpRedirectSpeed;
+    private bool CurrentRestoreDoubleJumpOnGrapple => TuningProfile?.RestoreDoubleJumpOnGrapple ?? RestoreDoubleJumpOnGrapple;
 }

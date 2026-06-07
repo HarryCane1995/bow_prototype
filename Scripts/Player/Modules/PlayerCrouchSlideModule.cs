@@ -99,9 +99,81 @@ public partial class PlayerCrouchSlideModule : Node
     [Export(PropertyHint.Range, "0,2,0.05")] public float SlideSteeringStrength { get; set; } = 0.25f;
 
     /// <summary>
+    /// Включает автоматический выход из slide, когда горизонтальная скорость падает ниже SlideExitMinSpeed.
+    /// </summary>
+    [Export] public bool EnableSlideExitBySpeed { get; set; } = true;
+
+    /// <summary>
+    /// Горизонтальная скорость, ниже которой slide завершается после grace-времени.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.1,suffix:m/s")] public float SlideExitMinSpeed { get; set; } = 3.0f;
+
+    /// <summary>
+    /// Короткая задержка после старта slide, во время которой выход по скорости игнорируется.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.5,0.01,suffix:s")] public float SlideExitMinSpeedGraceTime { get; set; } = 0.08f;
+
+    /// <summary>
     /// Использует текущий WASD-ввод для направления старта подката. Если выключить, slide всегда стартует по текущей горизонтальной скорости.
     /// </summary>
     [Export] public bool SlideKeepsInputDirection { get; set; } = true;
+
+    /// <summary>
+    /// Включает буфер подката в воздухе: удержание crouch_slide при высокой скорости запускает slide сразу после приземления.
+    /// </summary>
+    [ExportSubgroup("Airborne Slide Entry")]
+    [Export] public bool EnableAirborneSlideEntry { get; set; } = true;
+
+    /// <summary>
+    /// Минимальная горизонтальная скорость в воздухе, при которой удержание crouch_slide запоминает желание войти в slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float AirborneSlideMinSpeed { get; set; } = 7.0f;
+
+    /// <summary>
+    /// Сколько секунд после airborne-запроса модуль ждёт приземления для бесшовного входа в slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05,suffix:s")] public float AirborneSlideBufferTime { get; set; } = 0.25f;
+
+    /// <summary>
+    /// Разрешает брать направление landing slide из текущей горизонтальной velocity, если input-направление не используется.
+    /// </summary>
+    [Export] public bool AirborneSlideUseCurrentVelocityDirection { get; set; } = true;
+
+    /// <summary>
+    /// Если включено и игрок держит WASD при приземлении, landing slide стартует по input-направлению относительно камеры.
+    /// </summary>
+    [Export] public bool AirborneSlideUseInputDirectionIfAny { get; set; } = true;
+
+    /// <summary>
+    /// Минимальная сила WASD-ввода, при которой airborne landing slide выбирает input-направление.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05")] public float AirborneSlideInputMin { get; set; } = 0.1f;
+
+    /// <summary>
+    /// Включает прыжок из slide с сохранением части горизонтальной инерции и небольшим boost в направлении подката.
+    /// </summary>
+    [ExportSubgroup("Slide Jump")]
+    [Export] public bool EnableSlideJump { get; set; } = true;
+
+    /// <summary>
+    /// Дополнительная горизонтальная скорость, добавляемая при прыжке из slide в направлении текущего движения.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,10,0.25,suffix:m/s")] public float SlideJumpHorizontalBoost { get; set; } = 3.0f;
+
+    /// <summary>
+    /// Доля текущей горизонтальной velocity, которая сохраняется при прыжке из slide.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1.5,0.05")] public float SlideJumpVelocityCarryFactor { get; set; } = 0.75f;
+
+    /// <summary>
+    /// Максимальная горизонтальная скорость после slide jump, чтобы boost не превращался в большой dash.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,35,0.5,suffix:m/s")] public float SlideJumpMaxHorizontalSpeed { get; set; } = 16.0f;
+
+    /// <summary>
+    /// Если включено, slide jump требует свободное место для вставания, чтобы коллайдер не застревал в потолке.
+    /// </summary>
+    [Export] public bool SlideJumpRequiresStandUpSpace { get; set; } = true;
 
     /// <summary>
     /// Дополнительный зазор над стоячим коллайдером при проверке возможности встать. Увеличение делает проверку осторожнее; уменьшение допускает вставание ближе к потолку.
@@ -130,6 +202,8 @@ public partial class PlayerCrouchSlideModule : Node
     private CrouchSlideState _state = CrouchSlideState.Standing;
     private float _slideTimer;
     private float _slideCooldownTimer;
+    private float _slideExitSpeedGraceTimer;
+    private float _airborneSlideBufferTimer;
     private float _slideSpeed;
     private Vector3 _slideDirection = Vector3.Forward;
 
@@ -176,10 +250,15 @@ public partial class PlayerCrouchSlideModule : Node
 
         bool isPressed = Input.IsActionPressed(CrouchSlideAction);
         bool justPressed = Input.IsActionJustPressed(CrouchSlideAction);
+        UpdateAirborneSlideBuffer(deltaFloat, isPressed, velocity);
 
         if (IsSliding)
         {
             ProcessSlide(deltaFloat, isPressed, ref velocity);
+        }
+        else if (TryStartBufferedLandingSlide(isPressed, ref velocity))
+        {
+            // Landing slide started from the airborne buffer.
         }
         else if (justPressed && CanStartSlide(velocity))
         {
@@ -206,44 +285,20 @@ public partial class PlayerCrouchSlideModule : Node
 
     private bool CanStartSlide(Vector3 velocity)
     {
-        if (!EnableSlide || !_player.IsGrounded || _slideCooldownTimer > 0.0f)
-        {
-            return false;
-        }
-
-        Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
-        return horizontalVelocity.Length() >= SlideMinStartSpeed;
+        return CanStartSlide(velocity, SlideMinStartSpeed);
     }
 
     private void StartSlide(ref Vector3 velocity)
     {
         Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
         Vector3 direction = GetSlideStartDirection(horizontalVelocity);
-        if (direction == Vector3.Zero)
-        {
-            return;
-        }
-
-        _state = CrouchSlideState.Sliding;
-        _slideTimer = CurrentSlideDuration;
-        _slideCooldownTimer = CurrentSlideCooldown;
-        _slideDirection = direction;
-        _slideSpeed = Mathf.Max(CurrentSlideInitialSpeed, horizontalVelocity.Length());
-
-        velocity.X = _slideDirection.X * _slideSpeed;
-        velocity.Z = _slideDirection.Z * _slideSpeed;
+        StartSlide(ref velocity, direction);
     }
 
     private void ProcessSlide(float delta, bool holdCrouch, ref Vector3 velocity)
     {
-        // TODO: позже можно превратить отмену slide прыжком в полноценный slide jump с отдельной настройкой импульса.
-        if (Input.IsActionJustPressed(_player.JumpModule?.JumpAction ?? "jump"))
-        {
-            StopSlide(holdCrouch);
-            return;
-        }
-
         _slideTimer = Mathf.Max(0.0f, _slideTimer - delta);
+        _slideExitSpeedGraceTimer = Mathf.Max(0.0f, _slideExitSpeedGraceTimer - delta);
 
         if (TryGetCameraRelativeInputDirection(out Vector3 steeringDirection))
         {
@@ -254,7 +309,7 @@ public partial class PlayerCrouchSlideModule : Node
         velocity.X = _slideDirection.X * _slideSpeed;
         velocity.Z = _slideDirection.Z * _slideSpeed;
 
-        if (_slideTimer <= 0.0f || _slideSpeed <= CurrentCrouchSpeedMultiplier)
+        if (_slideTimer <= 0.0f || ShouldExitSlideBySpeed())
         {
             StopSlide(holdCrouch);
         }
@@ -278,7 +333,59 @@ public partial class PlayerCrouchSlideModule : Node
     {
         StopSlide(false);
         _slideTimer = 0.0f;
+        _slideExitSpeedGraceTimer = 0.0f;
         _slideSpeed = 0.0f;
+    }
+
+    /// <summary>
+    /// Если игрок сейчас скользит, завершает slide и применяет горизонтальный boost к velocity, когда slide jump включён.
+    /// </summary>
+    public bool TryConsumeSlideJumpBoost(ref Vector3 velocity)
+    {
+        if (!IsSliding)
+        {
+            return false;
+        }
+
+        if (!CurrentEnableSlideJump)
+        {
+            StopSlide(Input.IsActionPressed(CrouchSlideAction));
+            return true;
+        }
+
+        if (CurrentSlideJumpRequiresStandUpSpace && !CanStandUp())
+        {
+            StopSlide(true);
+            return false;
+        }
+
+        Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
+        if (horizontalVelocity.LengthSquared() <= 0.0001f)
+        {
+            horizontalVelocity = _slideDirection * _slideSpeed;
+        }
+
+        if (horizontalVelocity.LengthSquared() <= 0.0001f)
+        {
+            StopSlide(Input.IsActionPressed(CrouchSlideAction));
+            return false;
+        }
+
+        Vector3 direction = horizontalVelocity.Normalized();
+        Vector3 newHorizontalVelocity = horizontalVelocity * CurrentSlideJumpVelocityCarryFactor + direction * CurrentSlideJumpHorizontalBoost;
+        float maxHorizontalSpeed = Mathf.Max(0.0f, CurrentSlideJumpMaxHorizontalSpeed);
+        if (maxHorizontalSpeed > 0.0f && newHorizontalVelocity.Length() > maxHorizontalSpeed)
+        {
+            newHorizontalVelocity = newHorizontalVelocity.Normalized() * maxHorizontalSpeed;
+        }
+
+        velocity.X = newHorizontalVelocity.X;
+        velocity.Z = newHorizontalVelocity.Z;
+        _slideTimer = 0.0f;
+        _slideExitSpeedGraceTimer = 0.0f;
+        _slideSpeed = 0.0f;
+        _state = CrouchSlideState.Standing;
+        return true;
     }
 
     private void UpdateHeight(float delta)
@@ -352,12 +459,111 @@ public partial class PlayerCrouchSlideModule : Node
         return horizontalVelocity.LengthSquared() > 0.0f ? horizontalVelocity.Normalized() : Vector3.Zero;
     }
 
+    private void UpdateAirborneSlideBuffer(float delta, bool holdCrouch, Vector3 velocity)
+    {
+        if (_airborneSlideBufferTimer > 0.0f)
+        {
+            _airborneSlideBufferTimer = Mathf.Max(0.0f, _airborneSlideBufferTimer - delta);
+        }
+
+        if (!CurrentEnableAirborneSlideEntry || _player.IsGrounded || !holdCrouch)
+        {
+            return;
+        }
+
+        if (GetHorizontalVelocity(velocity).Length() >= CurrentAirborneSlideMinSpeed)
+        {
+            _airborneSlideBufferTimer = CurrentAirborneSlideBufferTime;
+        }
+    }
+
+    private bool TryStartBufferedLandingSlide(bool holdCrouch, ref Vector3 velocity)
+    {
+        if (!CurrentEnableAirborneSlideEntry || _airborneSlideBufferTimer <= 0.0f || !holdCrouch || !CanStartSlide(velocity, CurrentAirborneSlideMinSpeed))
+        {
+            return false;
+        }
+
+        Vector3 horizontalVelocity = GetHorizontalVelocity(velocity);
+        if (!TryGetAirborneSlideDirection(horizontalVelocity, out Vector3 direction))
+        {
+            return false;
+        }
+
+        StartSlide(ref velocity, direction);
+        _airborneSlideBufferTimer = 0.0f;
+        return true;
+    }
+
+    private bool CanStartSlide(Vector3 velocity, float minStartSpeed)
+    {
+        if (!EnableSlide || !_player.IsGrounded || _slideCooldownTimer > 0.0f)
+        {
+            return false;
+        }
+
+        return GetHorizontalVelocity(velocity).Length() >= minStartSpeed;
+    }
+
+    private void StartSlide(ref Vector3 velocity, Vector3 direction)
+    {
+        Vector3 horizontalVelocity = GetHorizontalVelocity(velocity);
+        if (direction == Vector3.Zero)
+        {
+            return;
+        }
+
+        _state = CrouchSlideState.Sliding;
+        _slideTimer = CurrentSlideDuration;
+        _slideCooldownTimer = CurrentSlideCooldown;
+        _slideExitSpeedGraceTimer = CurrentSlideExitMinSpeedGraceTime;
+        _slideDirection = direction;
+        _slideSpeed = Mathf.Max(CurrentSlideInitialSpeed, horizontalVelocity.Length());
+
+        velocity.X = _slideDirection.X * _slideSpeed;
+        velocity.Z = _slideDirection.Z * _slideSpeed;
+    }
+
+    private bool TryGetAirborneSlideDirection(Vector3 horizontalVelocity, out Vector3 direction)
+    {
+        direction = Vector3.Zero;
+
+        if (CurrentAirborneSlideUseInputDirectionIfAny && TryGetCameraRelativeInputDirection(CurrentAirborneSlideInputMin, out Vector3 inputDirection))
+        {
+            direction = inputDirection;
+            return true;
+        }
+
+        if (CurrentAirborneSlideUseCurrentVelocityDirection && horizontalVelocity.LengthSquared() > 0.0001f)
+        {
+            direction = horizontalVelocity.Normalized();
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool ShouldExitSlideBySpeed()
+    {
+        return CurrentEnableSlideExitBySpeed && _slideExitSpeedGraceTimer <= 0.0f && _slideSpeed < CurrentSlideExitMinSpeed;
+    }
+
+    private static Vector3 GetHorizontalVelocity(Vector3 velocity)
+    {
+        return new Vector3(velocity.X, 0.0f, velocity.Z);
+    }
+
     private bool TryGetCameraRelativeInputDirection(out Vector3 direction)
+    {
+        return TryGetCameraRelativeInputDirection(0.0f, out direction);
+    }
+
+    private bool TryGetCameraRelativeInputDirection(float minInput, out Vector3 direction)
     {
         direction = Vector3.Zero;
 
         Vector2 input = GetMovementInput();
-        if (input.LengthSquared() == 0.0f)
+        if (input.Length() < minInput || input.LengthSquared() == 0.0f)
         {
             return false;
         }
@@ -411,6 +617,20 @@ public partial class PlayerCrouchSlideModule : Node
     private float CurrentSlideCooldown => TuningProfile?.SlideCooldown ?? SlideCooldown;
     private float CurrentSlideFriction => TuningProfile?.SlideFriction ?? SlideFriction;
     private float CurrentSlideSteeringStrength => TuningProfile?.SlideSteeringStrength ?? SlideSteeringStrength;
+    private bool CurrentEnableSlideExitBySpeed => TuningProfile?.EnableSlideExitBySpeed ?? EnableSlideExitBySpeed;
+    private float CurrentSlideExitMinSpeed => TuningProfile?.SlideExitMinSpeed ?? SlideExitMinSpeed;
+    private float CurrentSlideExitMinSpeedGraceTime => TuningProfile?.SlideExitMinSpeedGraceTime ?? SlideExitMinSpeedGraceTime;
+    private bool CurrentEnableAirborneSlideEntry => TuningProfile?.EnableAirborneSlideEntry ?? EnableAirborneSlideEntry;
+    private float CurrentAirborneSlideMinSpeed => TuningProfile?.AirborneSlideMinSpeed ?? AirborneSlideMinSpeed;
+    private float CurrentAirborneSlideBufferTime => TuningProfile?.AirborneSlideBufferTime ?? AirborneSlideBufferTime;
+    private bool CurrentAirborneSlideUseCurrentVelocityDirection => TuningProfile?.AirborneSlideUseCurrentVelocityDirection ?? AirborneSlideUseCurrentVelocityDirection;
+    private bool CurrentAirborneSlideUseInputDirectionIfAny => TuningProfile?.AirborneSlideUseInputDirectionIfAny ?? AirborneSlideUseInputDirectionIfAny;
+    private float CurrentAirborneSlideInputMin => TuningProfile?.AirborneSlideInputMin ?? AirborneSlideInputMin;
+    private bool CurrentEnableSlideJump => TuningProfile?.EnableSlideJump ?? EnableSlideJump;
+    private float CurrentSlideJumpHorizontalBoost => TuningProfile?.SlideJumpHorizontalBoost ?? SlideJumpHorizontalBoost;
+    private float CurrentSlideJumpVelocityCarryFactor => TuningProfile?.SlideJumpVelocityCarryFactor ?? SlideJumpVelocityCarryFactor;
+    private float CurrentSlideJumpMaxHorizontalSpeed => TuningProfile?.SlideJumpMaxHorizontalSpeed ?? SlideJumpMaxHorizontalSpeed;
+    private bool CurrentSlideJumpRequiresStandUpSpace => TuningProfile?.SlideJumpRequiresStandUpSpace ?? SlideJumpRequiresStandUpSpace;
 
     private void EnsureInputAction()
     {

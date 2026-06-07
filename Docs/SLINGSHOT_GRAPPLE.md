@@ -49,6 +49,19 @@ Vector3 launchVelocity = storedLaunchDirection * LaunchSpeed + inheritedDirectio
 
 Итоговая скорость ограничивается `MinLaunchVelocity` и `MaxLaunchVelocity`, затем применяется к `player.Velocity`.
 
+## Grapple -> Air Jump Reset
+
+При успешном старте grapple, когда anchor уже найден и модуль переходит в `Pulling`, `PlayerSlingshotGrappleModule` просит `PlayerJumpModule` восстановить один air jump charge.
+
+Это не ground reset:
+
+- grounded-состояние не меняется;
+- coyote time не включается и не сбрасывается;
+- jump impulse не применяется в момент зацепа;
+- следующий прыжок в воздухе считается second jump / air jump.
+
+Если игрок уже потратил double jump до grapple, после slingshot launch он снова может сделать один air jump. Если double jump ещё не был потрачен, grapple не выдаёт два air jump подряд: доступен максимум один воздушный прыжок до следующего приземления или нового успешного grapple.
+
 ## Inspector
 
 Основные группы настроек:

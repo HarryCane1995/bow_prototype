@@ -32,6 +32,11 @@ public partial class PlayerLookModule : Node
     private float _pitch;
 
     /// <summary>
+    /// Накопленный mouse look delta с последнего чтения procedural viewmodel-эффектами.
+    /// </summary>
+    public Vector2 LastLookDelta { get; private set; }
+
+    /// <summary>
     /// Инициализирует модуль обзора, добавляет dev actions при необходимости и сразу захватывает мышь для FPS-управления.
     /// </summary>
     public void Initialize(PlayerController player)
@@ -57,6 +62,7 @@ public partial class PlayerLookModule : Node
             return;
         }
 
+        LastLookDelta += mouseMotion.Relative;
         _player.RotateY(-mouseMotion.Relative.X * MouseSensitivity);
 
         float minPitchRadians = Mathf.DegToRad(MinPitch);
@@ -68,6 +74,16 @@ public partial class PlayerLookModule : Node
         pivotRotation.Y = 0.0f;
         pivotRotation.Z = 0.0f;
         _player.CameraPivot.Rotation = pivotRotation;
+    }
+
+    /// <summary>
+    /// Возвращает накопленный mouse look delta и сбрасывает его, чтобы визуальные эффекты не держали старый input.
+    /// </summary>
+    public Vector2 ConsumeLookDelta()
+    {
+        Vector2 lookDelta = LastLookDelta;
+        LastLookDelta = Vector2.Zero;
+        return lookDelta;
     }
 
     /// <summary>

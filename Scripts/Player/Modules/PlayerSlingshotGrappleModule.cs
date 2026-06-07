@@ -219,6 +219,7 @@ public partial class PlayerSlingshotGrappleModule : Node
         _storedLaunchDirection = startToAnchor.Normalized();
 
         _player.CrouchSlideModule?.CancelSlide();
+        _player.JumpModule?.RestoreAirJumpChargeFromGrapple();
         SetState(SlingshotGrappleState.Pulling);
 
         if (DebugPrintStateChanges)

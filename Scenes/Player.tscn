@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=17 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="12_slingshot_grapple"]
 [ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="14_speed_fov"]
+[ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="15_viewmodel_sway"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -91,12 +92,12 @@ SpawnForwardOffset = 0.35
 
 [node name="PlayerBowVisualModule" type="Node" parent="."]
 script = ExtResource("7_visual")
-AnimationPlayerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
-BowViewModelHolderPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder")
+AnimationPlayerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
+BowViewModelHolderPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder")
 DrawAnimationName = "Draw"
 ReleaseAnimationName = "Release"
 UseReleaseAnimation = false
-ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
 HideArrowOnShot = true
 ArrowShowDelay = 0.15
 DrawResetSpeed = 12.0
@@ -105,6 +106,10 @@ DrawResetSpeed = 12.0
 script = ExtResource("9_viewmodel_render")
 ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
 ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot")
+
+[node name="PlayerViewModelSwayModule" type="Node" parent="."]
+script = ExtResource("15_viewmodel_sway")
+ViewModelSwayRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="."]
 
@@ -144,7 +149,9 @@ light_energy = 0.45
 omni_range = 4.0
 shadow_enabled = false
 
-[node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
+[node name="ViewModelSwayRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
+
+[node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot"]
 position = Vector3(0.35, -0.35, -0.85)
 
-[node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/BowViewModelHolder" instance=ExtResource("8_bow_model")]
+[node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" instance=ExtResource("8_bow_model")]

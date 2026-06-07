@@ -101,6 +101,7 @@ public partial class RuntimeTuningPanel : Window
         AddBowSection();
         AddCameraSection();
         AddSpeedFovSection();
+        AddViewModelSwaySection();
     }
 
     private void AddToolbar()
@@ -159,6 +160,7 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Double Jump Multiplier", 0.1, 3.0, 0.05, () => TuningProfile.DoubleJumpVelocityMultiplier, value => TuningProfile.DoubleJumpVelocityMultiplier = value);
         AddBoolControl("Enable Double Jump Redirect", () => TuningProfile.EnableDoubleJumpRedirect, value => TuningProfile.EnableDoubleJumpRedirect = value);
         AddFloatControl("Double Jump Redirect Speed", 0.0, 40.0, 0.1, () => TuningProfile.DoubleJumpRedirectSpeed, value => TuningProfile.DoubleJumpRedirectSpeed = value);
+        AddBoolControl("Restore Double Jump On Grapple", () => TuningProfile.RestoreDoubleJumpOnGrapple, value => TuningProfile.RestoreDoubleJumpOnGrapple = value);
     }
 
     private void AddCrouchSlideSection()
@@ -170,6 +172,20 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Slide Cooldown", 0.0, 3.0, 0.01, () => TuningProfile.SlideCooldown, value => TuningProfile.SlideCooldown = value);
         AddFloatControl("Slide Friction", 0.0, 60.0, 0.5, () => TuningProfile.SlideFriction, value => TuningProfile.SlideFriction = value);
         AddFloatControl("Slide Steering", 0.0, 3.0, 0.05, () => TuningProfile.SlideSteeringStrength, value => TuningProfile.SlideSteeringStrength = value);
+        AddBoolControl("Exit Slide By Speed", () => TuningProfile.EnableSlideExitBySpeed, value => TuningProfile.EnableSlideExitBySpeed = value);
+        AddFloatControl("Slide Exit Min Speed", 0.0, 10.0, 0.1, () => TuningProfile.SlideExitMinSpeed, value => TuningProfile.SlideExitMinSpeed = value);
+        AddFloatControl("Slide Exit Grace", 0.0, 0.5, 0.01, () => TuningProfile.SlideExitMinSpeedGraceTime, value => TuningProfile.SlideExitMinSpeedGraceTime = value);
+        AddBoolControl("Airborne Slide Entry", () => TuningProfile.EnableAirborneSlideEntry, value => TuningProfile.EnableAirborneSlideEntry = value);
+        AddFloatControl("Airborne Slide Min Speed", 0.0, 25.0, 0.5, () => TuningProfile.AirborneSlideMinSpeed, value => TuningProfile.AirborneSlideMinSpeed = value);
+        AddFloatControl("Airborne Slide Buffer", 0.0, 1.0, 0.05, () => TuningProfile.AirborneSlideBufferTime, value => TuningProfile.AirborneSlideBufferTime = value);
+        AddBoolControl("Airborne Uses Velocity", () => TuningProfile.AirborneSlideUseCurrentVelocityDirection, value => TuningProfile.AirborneSlideUseCurrentVelocityDirection = value);
+        AddBoolControl("Airborne Uses Input", () => TuningProfile.AirborneSlideUseInputDirectionIfAny, value => TuningProfile.AirborneSlideUseInputDirectionIfAny = value);
+        AddFloatControl("Airborne Input Min", 0.0, 1.0, 0.05, () => TuningProfile.AirborneSlideInputMin, value => TuningProfile.AirborneSlideInputMin = value);
+        AddBoolControl("Enable Slide Jump", () => TuningProfile.EnableSlideJump, value => TuningProfile.EnableSlideJump = value);
+        AddFloatControl("Slide Jump Boost", 0.0, 10.0, 0.25, () => TuningProfile.SlideJumpHorizontalBoost, value => TuningProfile.SlideJumpHorizontalBoost = value);
+        AddFloatControl("Slide Jump Carry", 0.0, 1.5, 0.05, () => TuningProfile.SlideJumpVelocityCarryFactor, value => TuningProfile.SlideJumpVelocityCarryFactor = value);
+        AddFloatControl("Slide Jump Max Speed", 0.0, 35.0, 0.5, () => TuningProfile.SlideJumpMaxHorizontalSpeed, value => TuningProfile.SlideJumpMaxHorizontalSpeed = value);
+        AddBoolControl("Slide Jump Needs Headroom", () => TuningProfile.SlideJumpRequiresStandUpSpace, value => TuningProfile.SlideJumpRequiresStandUpSpace = value);
     }
 
     private void AddSlingshotGrappleSection()
@@ -211,6 +227,23 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Speed FOV Smooth Down", 0.1, 25.0, 0.1, () => TuningProfile.SpeedFovSmoothDown, value => TuningProfile.SpeedFovSmoothDown = value);
         AddBoolControl("Use Full Velocity", () => TuningProfile.UseFullVelocityForSpeedFov, value => TuningProfile.UseFullVelocityForSpeedFov = value);
         AddBoolControl("Disable During Precision Aim", () => TuningProfile.DisableSpeedFovDuringPrecisionAim, value => TuningProfile.DisableSpeedFovDuringPrecisionAim = value);
+    }
+
+    private void AddViewModelSwaySection()
+    {
+        AddSection("ViewModel / Sway");
+        AddBoolControl("Enable Mouse Lag", () => TuningProfile.EnableMouseLag, value => TuningProfile.EnableMouseLag = value);
+        AddFloatControl("Mouse Lag Position", 0.0, 0.08, 0.001, () => TuningProfile.MouseLagPositionAmount, value => TuningProfile.MouseLagPositionAmount = value);
+        AddFloatControl("Mouse Lag Rotation", 0.0, 8.0, 0.1, () => TuningProfile.MouseLagRotationAmount, value => TuningProfile.MouseLagRotationAmount = value);
+        AddBoolControl("Enable Movement Inertia", () => TuningProfile.EnableMovementInertia, value => TuningProfile.EnableMovementInertia = value);
+        AddFloatControl("Movement Inertia Position", 0.0, 0.03, 0.001, () => TuningProfile.MovementInertiaPositionAmount, value => TuningProfile.MovementInertiaPositionAmount = value);
+        AddFloatControl("Movement Inertia Rotation", 0.0, 4.0, 0.05, () => TuningProfile.MovementInertiaRotationAmount, value => TuningProfile.MovementInertiaRotationAmount = value);
+        AddBoolControl("Enable Landing Sway", () => TuningProfile.EnableLandingSway, value => TuningProfile.EnableLandingSway = value);
+        AddFloatControl("Landing Position", 0.0, 0.10, 0.001, () => TuningProfile.LandingPositionAmount, value => TuningProfile.LandingPositionAmount = value);
+        AddFloatControl("Landing Rotation", 0.0, 10.0, 0.1, () => TuningProfile.LandingRotationAmount, value => TuningProfile.LandingRotationAmount = value);
+        AddFloatControl("Sway Follow Speed", 0.1, 30.0, 0.1, () => TuningProfile.SwayFollowSpeed, value => TuningProfile.SwayFollowSpeed = value);
+        AddFloatControl("Sway Return Speed", 0.1, 30.0, 0.1, () => TuningProfile.SwayReturnSpeed, value => TuningProfile.SwayReturnSpeed = value);
+        AddFloatControl("Impulse Return Speed", 0.1, 30.0, 0.1, () => TuningProfile.ImpulseReturnSpeed, value => TuningProfile.ImpulseReturnSpeed = value);
     }
 
     private void AddSection(string title)
@@ -371,12 +404,27 @@ public partial class RuntimeTuningPanel : Window
             ["DoubleJumpVelocityMultiplier"] = profile.DoubleJumpVelocityMultiplier,
             ["EnableDoubleJumpRedirect"] = profile.EnableDoubleJumpRedirect,
             ["DoubleJumpRedirectSpeed"] = profile.DoubleJumpRedirectSpeed,
+            ["RestoreDoubleJumpOnGrapple"] = profile.RestoreDoubleJumpOnGrapple,
             ["CrouchSpeedMultiplier"] = profile.CrouchSpeedMultiplier,
             ["SlideInitialSpeed"] = profile.SlideInitialSpeed,
             ["SlideDuration"] = profile.SlideDuration,
             ["SlideCooldown"] = profile.SlideCooldown,
             ["SlideFriction"] = profile.SlideFriction,
             ["SlideSteeringStrength"] = profile.SlideSteeringStrength,
+            ["EnableSlideExitBySpeed"] = profile.EnableSlideExitBySpeed,
+            ["SlideExitMinSpeed"] = profile.SlideExitMinSpeed,
+            ["SlideExitMinSpeedGraceTime"] = profile.SlideExitMinSpeedGraceTime,
+            ["EnableAirborneSlideEntry"] = profile.EnableAirborneSlideEntry,
+            ["AirborneSlideMinSpeed"] = profile.AirborneSlideMinSpeed,
+            ["AirborneSlideBufferTime"] = profile.AirborneSlideBufferTime,
+            ["AirborneSlideUseCurrentVelocityDirection"] = profile.AirborneSlideUseCurrentVelocityDirection,
+            ["AirborneSlideUseInputDirectionIfAny"] = profile.AirborneSlideUseInputDirectionIfAny,
+            ["AirborneSlideInputMin"] = profile.AirborneSlideInputMin,
+            ["EnableSlideJump"] = profile.EnableSlideJump,
+            ["SlideJumpHorizontalBoost"] = profile.SlideJumpHorizontalBoost,
+            ["SlideJumpVelocityCarryFactor"] = profile.SlideJumpVelocityCarryFactor,
+            ["SlideJumpMaxHorizontalSpeed"] = profile.SlideJumpMaxHorizontalSpeed,
+            ["SlideJumpRequiresStandUpSpace"] = profile.SlideJumpRequiresStandUpSpace,
             ["MaxGrappleDistance"] = profile.MaxGrappleDistance,
             ["PullAcceleration"] = profile.PullAcceleration,
             ["MaxPullSpeed"] = profile.MaxPullSpeed,
@@ -397,7 +445,19 @@ public partial class RuntimeTuningPanel : Window
             ["SpeedFovSmoothUp"] = profile.SpeedFovSmoothUp,
             ["SpeedFovSmoothDown"] = profile.SpeedFovSmoothDown,
             ["UseFullVelocityForSpeedFov"] = profile.UseFullVelocityForSpeedFov,
-            ["DisableSpeedFovDuringPrecisionAim"] = profile.DisableSpeedFovDuringPrecisionAim
+            ["DisableSpeedFovDuringPrecisionAim"] = profile.DisableSpeedFovDuringPrecisionAim,
+            ["EnableMouseLag"] = profile.EnableMouseLag,
+            ["MouseLagPositionAmount"] = profile.MouseLagPositionAmount,
+            ["MouseLagRotationAmount"] = profile.MouseLagRotationAmount,
+            ["EnableMovementInertia"] = profile.EnableMovementInertia,
+            ["MovementInertiaPositionAmount"] = profile.MovementInertiaPositionAmount,
+            ["MovementInertiaRotationAmount"] = profile.MovementInertiaRotationAmount,
+            ["EnableLandingSway"] = profile.EnableLandingSway,
+            ["LandingPositionAmount"] = profile.LandingPositionAmount,
+            ["LandingRotationAmount"] = profile.LandingRotationAmount,
+            ["SwayFollowSpeed"] = profile.SwayFollowSpeed,
+            ["SwayReturnSpeed"] = profile.SwayReturnSpeed,
+            ["ImpulseReturnSpeed"] = profile.ImpulseReturnSpeed
         };
     }
 
@@ -418,12 +478,27 @@ public partial class RuntimeTuningPanel : Window
         profile.DoubleJumpVelocityMultiplier = GetFloat(values, "DoubleJumpVelocityMultiplier", profile.DoubleJumpVelocityMultiplier);
         profile.EnableDoubleJumpRedirect = GetBool(values, "EnableDoubleJumpRedirect", profile.EnableDoubleJumpRedirect);
         profile.DoubleJumpRedirectSpeed = GetFloat(values, "DoubleJumpRedirectSpeed", profile.DoubleJumpRedirectSpeed);
+        profile.RestoreDoubleJumpOnGrapple = GetBool(values, "RestoreDoubleJumpOnGrapple", profile.RestoreDoubleJumpOnGrapple);
         profile.CrouchSpeedMultiplier = GetFloat(values, "CrouchSpeedMultiplier", profile.CrouchSpeedMultiplier);
         profile.SlideInitialSpeed = GetFloat(values, "SlideInitialSpeed", profile.SlideInitialSpeed);
         profile.SlideDuration = GetFloat(values, "SlideDuration", profile.SlideDuration);
         profile.SlideCooldown = GetFloat(values, "SlideCooldown", profile.SlideCooldown);
         profile.SlideFriction = GetFloat(values, "SlideFriction", profile.SlideFriction);
         profile.SlideSteeringStrength = GetFloat(values, "SlideSteeringStrength", profile.SlideSteeringStrength);
+        profile.EnableSlideExitBySpeed = GetBool(values, "EnableSlideExitBySpeed", profile.EnableSlideExitBySpeed);
+        profile.SlideExitMinSpeed = GetFloat(values, "SlideExitMinSpeed", profile.SlideExitMinSpeed);
+        profile.SlideExitMinSpeedGraceTime = GetFloat(values, "SlideExitMinSpeedGraceTime", profile.SlideExitMinSpeedGraceTime);
+        profile.EnableAirborneSlideEntry = GetBool(values, "EnableAirborneSlideEntry", profile.EnableAirborneSlideEntry);
+        profile.AirborneSlideMinSpeed = GetFloat(values, "AirborneSlideMinSpeed", profile.AirborneSlideMinSpeed);
+        profile.AirborneSlideBufferTime = GetFloat(values, "AirborneSlideBufferTime", profile.AirborneSlideBufferTime);
+        profile.AirborneSlideUseCurrentVelocityDirection = GetBool(values, "AirborneSlideUseCurrentVelocityDirection", profile.AirborneSlideUseCurrentVelocityDirection);
+        profile.AirborneSlideUseInputDirectionIfAny = GetBool(values, "AirborneSlideUseInputDirectionIfAny", profile.AirborneSlideUseInputDirectionIfAny);
+        profile.AirborneSlideInputMin = GetFloat(values, "AirborneSlideInputMin", profile.AirborneSlideInputMin);
+        profile.EnableSlideJump = GetBool(values, "EnableSlideJump", profile.EnableSlideJump);
+        profile.SlideJumpHorizontalBoost = GetFloat(values, "SlideJumpHorizontalBoost", profile.SlideJumpHorizontalBoost);
+        profile.SlideJumpVelocityCarryFactor = GetFloat(values, "SlideJumpVelocityCarryFactor", profile.SlideJumpVelocityCarryFactor);
+        profile.SlideJumpMaxHorizontalSpeed = GetFloat(values, "SlideJumpMaxHorizontalSpeed", profile.SlideJumpMaxHorizontalSpeed);
+        profile.SlideJumpRequiresStandUpSpace = GetBool(values, "SlideJumpRequiresStandUpSpace", profile.SlideJumpRequiresStandUpSpace);
         profile.MaxGrappleDistance = GetFloat(values, "MaxGrappleDistance", profile.MaxGrappleDistance);
         profile.PullAcceleration = GetFloat(values, "PullAcceleration", profile.PullAcceleration);
         profile.MaxPullSpeed = GetFloat(values, "MaxPullSpeed", profile.MaxPullSpeed);
@@ -445,6 +520,18 @@ public partial class RuntimeTuningPanel : Window
         profile.SpeedFovSmoothDown = GetFloat(values, "SpeedFovSmoothDown", profile.SpeedFovSmoothDown);
         profile.UseFullVelocityForSpeedFov = GetBool(values, "UseFullVelocityForSpeedFov", profile.UseFullVelocityForSpeedFov);
         profile.DisableSpeedFovDuringPrecisionAim = GetBool(values, "DisableSpeedFovDuringPrecisionAim", profile.DisableSpeedFovDuringPrecisionAim);
+        profile.EnableMouseLag = GetBool(values, "EnableMouseLag", profile.EnableMouseLag);
+        profile.MouseLagPositionAmount = GetFloat(values, "MouseLagPositionAmount", profile.MouseLagPositionAmount);
+        profile.MouseLagRotationAmount = GetFloat(values, "MouseLagRotationAmount", profile.MouseLagRotationAmount);
+        profile.EnableMovementInertia = GetBool(values, "EnableMovementInertia", profile.EnableMovementInertia);
+        profile.MovementInertiaPositionAmount = GetFloat(values, "MovementInertiaPositionAmount", profile.MovementInertiaPositionAmount);
+        profile.MovementInertiaRotationAmount = GetFloat(values, "MovementInertiaRotationAmount", profile.MovementInertiaRotationAmount);
+        profile.EnableLandingSway = GetBool(values, "EnableLandingSway", profile.EnableLandingSway);
+        profile.LandingPositionAmount = GetFloat(values, "LandingPositionAmount", profile.LandingPositionAmount);
+        profile.LandingRotationAmount = GetFloat(values, "LandingRotationAmount", profile.LandingRotationAmount);
+        profile.SwayFollowSpeed = GetFloat(values, "SwayFollowSpeed", profile.SwayFollowSpeed);
+        profile.SwayReturnSpeed = GetFloat(values, "SwayReturnSpeed", profile.SwayReturnSpeed);
+        profile.ImpulseReturnSpeed = GetFloat(values, "ImpulseReturnSpeed", profile.ImpulseReturnSpeed);
     }
 
     private static void CopyProfile(PlayerTuningProfile source, PlayerTuningProfile target)

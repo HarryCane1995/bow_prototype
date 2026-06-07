@@ -12,6 +12,12 @@ Viewmodel-камера (`ViewModelCamera3D`) находится внутри:
 
 Она рендерит только лук и накладывается поверх основной картинки через `CanvasLayer` и `SubViewportContainer`.
 
+Визуальная инерция лука применяется отдельным pivot-узлом:
+
+`CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot`
+
+`ViewModelSwayRoot` находится внутри SubViewport и двигает только viewmodel-лук. Он не меняет основную камеру, `ViewModelCamera3D`, `ShootPoint` или projectile direction.
+
 ## Viewmodel Light Rig
 
 Лук освещается отдельным `ViewModelLightRig` внутри `ViewModelSubViewport`.
@@ -44,5 +50,7 @@ Viewmodel-камера (`ViewModelCamera3D`) находится внутри:
 - light rig viewmodel, включая `MainLightEnergy`, `FillLightEnergy` и `LightRigEnabled`.
 
 `PlayerBowVisualModule` по-прежнему отвечает за Draw-анимацию, визуальную стрелу в луке и reset/release visual state.
+
+`PlayerViewModelSwayModule` отвечает только за procedural mouse lag, movement inertia и landing impulse на `ViewModelSwayRoot`.
 
 `PlayerBowShootModule` по-прежнему создаёт projectile-стрелы из основной сцены через `Camera3D/ShootPoint`. Projectile-стрелы не являются частью viewmodel viewport.

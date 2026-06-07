@@ -18,7 +18,8 @@ Default-профиль лежит здесь:
 - `PlayerSlingshotGrappleModule` - slingshot grapple;
 - `PlayerBowShootModule` - скорости выстрелов и projectile gravity;
 - `PlayerCameraFovModule` - базовый FOV, precision FOV и скорость перехода;
-- `PlayerSpeedFovModule` - speed-based FOV bonus.
+- `PlayerSpeedFovModule` - speed-based FOV bonus;
+- `PlayerViewModelSwayModule` - procedural sway/inertia viewmodel.
 
 Если профиль не назначен или `UseTuningProfile` выключен, модули используют свои локальные `[Export]`-поля как fallback.
 
@@ -43,8 +44,15 @@ Default-профиль лежит здесь:
 - `Bow / Projectiles`;
 - `Camera`.
 - `Camera / Speed FOV`.
+- `ViewModel / Sway`.
+
+`Crouch / Slide` содержит базовые параметры crouch/slide, выход из slide по скорости, airborne slide buffer и slide jump. Основные ручки: `SlideExitMinSpeed`, `AirborneSlideMinSpeed`, `AirborneSlideBufferTime`, `SlideJumpHorizontalBoost`, `SlideJumpVelocityCarryFactor` и `SlideJumpMaxHorizontalSpeed`.
+
+`Jump` содержит обычную силу прыжка, double jump, redirect и флаг `RestoreDoubleJumpOnGrapple`, который включает восстановление одного air jump charge после успешного Slingshot Grapple.
 
 `Camera / Speed FOV` содержит главный ползунок силы эффекта `SpeedFovMultiplier`, порог `MinSpeedForFov`, ограничитель `MaxSpeedFovBonus`, smoothing для расширения/возврата и флаги `UseFullVelocityForSpeedFov` и `DisableSpeedFovDuringPrecisionAim`.
+
+`ViewModel / Sway` содержит mouse lag, movement inertia, landing impulse и скорости сглаживания. Эти параметры меняют только визуальный `ViewModelSwayRoot` и не влияют на crosshair, gameplay camera или projectile direction.
 
 Изменение slider/spinbox сразу меняет значения в `PlayerTuningProfile`. Модули читают профиль во время расчёта поведения, поэтому изменения применяются live.
 

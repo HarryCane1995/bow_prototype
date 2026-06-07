@@ -80,6 +80,11 @@ public partial class PlayerController : CharacterBody3D
     /// </summary>
     [Export] public NodePath ViewModelRenderModulePath { get; set; } = new("PlayerViewModelRenderModule");
 
+    /// <summary>
+    /// Путь к модулю procedural sway для FPS viewmodel. Если модуль отсутствует, визуал лука остаётся статичным относительно viewmodel root.
+    /// </summary>
+    [Export] public NodePath ViewModelSwayModulePath { get; set; } = new("PlayerViewModelSwayModule");
+
     public Node3D CameraPivot { get; private set; }
     public Camera3D Camera { get; private set; }
     public RayCast3D GroundCheck { get; private set; }
@@ -93,6 +98,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerBowShootModule BowShootModule { get; private set; }
     public PlayerBowVisualModule BowVisualModule { get; private set; }
     public PlayerViewModelRenderModule ViewModelRenderModule { get; private set; }
+    public PlayerViewModelSwayModule ViewModelSwayModule { get; private set; }
 
     public bool IsGrounded => IsOnFloor() || (Velocity.Y <= 0.0f && GroundCheck?.IsColliding() == true);
     public PlayerTuningProfile ActiveTuningProfile => UseTuningProfile ? TuningProfile : null;
@@ -120,6 +126,11 @@ public partial class PlayerController : CharacterBody3D
         BowShootModule = GetNode<PlayerBowShootModule>(BowShootModulePath);
         BowVisualModule = GetNode<PlayerBowVisualModule>(BowVisualModulePath);
         ViewModelRenderModule = GetNode<PlayerViewModelRenderModule>(ViewModelRenderModulePath);
+        ViewModelSwayModule = GetNodeOrNull<PlayerViewModelSwayModule>(ViewModelSwayModulePath);
+        if (ViewModelSwayModule == null)
+        {
+            GD.PushWarning($"PlayerViewModelSwayModule was not found at path: {ViewModelSwayModulePath}. Procedural viewmodel sway is disabled for this player.");
+        }
 
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
@@ -129,6 +140,7 @@ public partial class PlayerController : CharacterBody3D
         CameraFovModule.Initialize(this);
         SpeedFovModule?.Initialize(this);
         ViewModelRenderModule.Initialize(this);
+        ViewModelSwayModule?.Initialize(this);
         BowVisualModule.Initialize(this);
         BowShootModule.Initialize(this);
     }
