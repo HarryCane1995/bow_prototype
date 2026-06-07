@@ -186,8 +186,16 @@ public partial class ArrowProjectile : Area3D
             return;
         }
 
-        TargetHitbox targetHitbox = FindTargetHitbox(hitNode);
-        targetHitbox?.OnHit(Damage);
+        IDamageable damageable = FindDamageable(hitNode);
+        if (damageable != null)
+        {
+            damageable.ApplyDamage(Mathf.Max(1, Mathf.RoundToInt(Damage)));
+        }
+        else
+        {
+            TargetHitbox targetHitbox = FindTargetHitbox(hitNode);
+            targetHitbox?.OnHit(Damage);
+        }
 
         if (DestroyOnHit)
         {
@@ -209,6 +217,22 @@ public partial class ArrowProjectile : Area3D
             if (current is TargetHitbox targetHitbox)
             {
                 return targetHitbox;
+            }
+
+            current = current.GetParent();
+        }
+
+        return null;
+    }
+
+    private static IDamageable FindDamageable(Node node)
+    {
+        Node current = node;
+        while (current != null)
+        {
+            if (current is IDamageable damageable)
+            {
+                return damageable;
             }
 
             current = current.GetParent();

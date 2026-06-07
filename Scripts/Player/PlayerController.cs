@@ -105,6 +105,8 @@ public partial class PlayerController : CharacterBody3D
 
     public override void _Ready()
     {
+        AddToGroup("player");
+
         CameraPivot = GetNode<Node3D>(CameraPivotPath);
         Camera = GetNode<Camera3D>(CameraPath);
         GroundCheck = GetNode<RayCast3D>(GroundCheckPath);

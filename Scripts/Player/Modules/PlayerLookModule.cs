@@ -30,6 +30,14 @@ public partial class PlayerLookModule : Node
 
     private PlayerController _player;
     private float _pitch;
+    private Vector3 _lookAssistTarget;
+    private float _lookAssistTimer;
+    private float _lookAssistDuration;
+    private float _lookAssistStrength = 1.0f;
+    private float _lookAssistSpeed = 18.0f;
+    private float _lookAssistMaxPitchRadians = Mathf.DegToRad(85.0f);
+    private bool _lockLookInputDuringAssist;
+    private bool _isTemporaryLookAssistActive;
 
     /// <summary>
     /// Накопленный mouse look delta с последнего чтения procedural viewmodel-эффектами.
@@ -47,6 +55,11 @@ public partial class PlayerLookModule : Node
         CaptureMouse();
     }
 
+    public override void _Process(double delta)
+    {
+        UpdateTemporaryLookAssist((float)delta);
+    }
+
     /// <summary>
     /// Обрабатывает dev hotkeys и mouse look. Esc освобождает курсор, ЛКМ захватывает его обратно, F1 перезапускает текущую сцену.
     /// </summary>
@@ -58,6 +71,11 @@ public partial class PlayerLookModule : Node
         }
 
         if (@event is not InputEventMouseMotion mouseMotion)
+        {
+            return;
+        }
+
+        if (_isTemporaryLookAssistActive && _lockLookInputDuringAssist)
         {
             return;
         }
@@ -74,6 +92,34 @@ public partial class PlayerLookModule : Node
         pivotRotation.Y = 0.0f;
         pivotRotation.Z = 0.0f;
         _player.CameraPivot.Rotation = pivotRotation;
+    }
+
+    /// <summary>
+    /// Запускает временную доводку взгляда к мировой точке. Увеличение duration/speed/strength делает assist дольше, быстрее или сильнее; после окончания обычный mouse look возвращается.
+    /// </summary>
+    public void RequestTemporaryLookAt(Vector3 worldTarget, float duration, float strength, float speed, bool lockPlayerInput, float maxPitchDegrees)
+    {
+        if (_player == null || duration <= 0.0f || strength <= 0.0f)
+        {
+            return;
+        }
+
+        _lookAssistTarget = worldTarget;
+        _lookAssistDuration = duration;
+        _lookAssistTimer = duration;
+        _lookAssistStrength = Mathf.Clamp(strength, 0.0f, 1.0f);
+        _lookAssistSpeed = Mathf.Max(0.01f, speed);
+        _lockLookInputDuringAssist = lockPlayerInput;
+        _lookAssistMaxPitchRadians = Mathf.DegToRad(Mathf.Clamp(maxPitchDegrees, 0.0f, 89.0f));
+        _isTemporaryLookAssistActive = true;
+    }
+
+    /// <summary>
+    /// Запускает короткую доводку взгляда к grapple anchor с параметрами, переданными slingshot grapple-модулем.
+    /// </summary>
+    public void RequestGrappleLookAssist(Vector3 worldTarget, float duration, float strength, float speed, bool lockPlayerInput, float maxPitchDegrees)
+    {
+        RequestTemporaryLookAt(worldTarget, duration, strength, speed, lockPlayerInput, maxPitchDegrees);
     }
 
     /// <summary>
@@ -111,6 +157,61 @@ public partial class PlayerLookModule : Node
         }
 
         return false;
+    }
+
+    private void UpdateTemporaryLookAssist(float delta)
+    {
+        if (!_isTemporaryLookAssistActive || _player == null)
+        {
+            return;
+        }
+
+        if (Input.MouseMode != Input.MouseModeEnum.Captured)
+        {
+            StopTemporaryLookAssist();
+            return;
+        }
+
+        _lookAssistTimer -= delta;
+
+        Vector3 lookOrigin = _player.CameraPivot?.GlobalPosition ?? _player.GlobalPosition;
+        Vector3 direction = _lookAssistTarget - lookOrigin;
+        if (direction.LengthSquared() <= 0.0001f)
+        {
+            StopTemporaryLookAssist();
+            return;
+        }
+
+        direction = direction.Normalized();
+        float targetYaw = Mathf.Atan2(-direction.X, -direction.Z);
+        float targetPitch = Mathf.Clamp(Mathf.Asin(direction.Y), -_lookAssistMaxPitchRadians, _lookAssistMaxPitchRadians);
+        float progress = _lookAssistDuration > 0.0f ? 1.0f - Mathf.Clamp(_lookAssistTimer / _lookAssistDuration, 0.0f, 1.0f) : 1.0f;
+        float strength = _lookAssistStrength * progress;
+        float t = (1.0f - Mathf.Exp(-_lookAssistSpeed * delta)) * strength;
+
+        Vector3 playerRotation = _player.Rotation;
+        playerRotation.Y = Mathf.LerpAngle(playerRotation.Y, targetYaw, t);
+        _player.Rotation = playerRotation;
+
+        _pitch = Mathf.Lerp(_pitch, targetPitch, t);
+        _pitch = Mathf.Clamp(_pitch, Mathf.DegToRad(MinPitch), Mathf.DegToRad(MaxPitch));
+
+        Vector3 pivotRotation = _player.CameraPivot.Rotation;
+        pivotRotation.X = _pitch;
+        pivotRotation.Y = 0.0f;
+        pivotRotation.Z = 0.0f;
+        _player.CameraPivot.Rotation = pivotRotation;
+
+        if (_lookAssistTimer <= 0.0f)
+        {
+            StopTemporaryLookAssist();
+        }
+    }
+
+    private void StopTemporaryLookAssist()
+    {
+        _lookAssistTimer = 0.0f;
+        _isTemporaryLookAssistActive = false;
     }
 
     /// <summary>

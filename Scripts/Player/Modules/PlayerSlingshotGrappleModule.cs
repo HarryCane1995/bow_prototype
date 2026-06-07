@@ -42,6 +42,73 @@ public partial class PlayerSlingshotGrappleModule : Node
     [Export(PropertyHint.Range, "0,35,0.5,suffix:deg")] public float FallbackConeAngleDegrees { get; set; } = 8.0f;
 
     /// <summary>
+    /// Включает screen-space aim assist для выбора GrappleAnchor рядом с центром экрана. Если выключить, останется старый direct raycast и fallback cone.
+    /// </summary>
+    [ExportGroup("Grapple Aim Assist")]
+    [Export] public bool EnableScreenSpaceGrappleAssist { get; set; } = true;
+
+    /// <summary>
+    /// Радиус помощи вокруг центра экрана в пикселях. Увеличение позволяет цепляться дальше от прицела; уменьшение требует точнее наводиться на anchor.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,240,4,suffix:px")] public float GrappleScreenAssistRadiusPixels { get; set; } = 96.0f;
+
+    /// <summary>
+    /// Если включено, точное попадание raycast в GrappleAnchor всегда выбирается раньше screen-space assist.
+    /// </summary>
+    [Export] public bool PreferDirectRaycastHit { get; set; } = true;
+
+    /// <summary>
+    /// Максимальный угол от направления камеры до anchor для screen-space assist. Увеличение разрешает цепляться к более боковым точкам; уменьшение сужает сектор.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,45,1,suffix:deg")] public float GrappleAssistMaxAngleDegrees { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Требует прямую видимость до anchor для screen-space assist. Если выключить, assist сможет выбирать точки за геометрией.
+    /// </summary>
+    [Export] public bool GrappleAssistRequireLineOfSight { get; set; } = true;
+
+    /// <summary>
+    /// Вес мировой дистанции в score выбора anchor. Увеличение сильнее предпочитает близкие точки; уменьшение делает важнее экранную близость к прицелу.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.05")] public float GrappleAssistDistanceWeight { get; set; } = 0.25f;
+
+    /// <summary>
+    /// Вес экранной дистанции в score выбора anchor. Увеличение сильнее предпочитает точки ближе к центру экрана; уменьшение даёт больше влияния мировой дистанции.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,3,0.05")] public float GrappleAssistScreenDistanceWeight { get; set; } = 1.0f;
+
+    /// <summary>
+    /// Включает короткий camera snap к выбранной точке после успешного старта grapple.
+    /// </summary>
+    [ExportGroup("Grapple Camera Assist")]
+    [Export] public bool EnableGrappleCameraSnap { get; set; } = true;
+
+    /// <summary>
+    /// Длительность camera snap в секундах. Увеличение дольше удерживает доводку камеры; уменьшение делает эффект короче.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.5,0.01,suffix:s")] public float GrappleCameraSnapDuration { get; set; } = 0.16f;
+
+    /// <summary>
+    /// Сила camera snap от 0 до 1. Увеличение доворачивает ближе к anchor; уменьшение оставляет больше текущего направления игрока.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05")] public float GrappleCameraSnapStrength { get; set; } = 1.0f;
+
+    /// <summary>
+    /// Скорость сглаживания camera snap. Увеличение делает доводку резче; уменьшение делает её мягче.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,40,0.5")] public float GrappleCameraSnapSpeed { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Если включено, mouse input временно игнорируется на время camera snap. Если выключить, игрок может перебивать доводку мышью.
+    /// </summary>
+    [Export] public bool LockLookInputDuringGrappleSnap { get; set; } = true;
+
+    /// <summary>
+    /// Максимальный pitch camera snap в градусах. Увеличение позволяет доворачивать выше/ниже; уменьшение сильнее ограничивает вертикальный snap.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,89,1,suffix:deg")] public float GrappleCameraSnapMaxPitchDegrees { get; set; } = 85.0f;
+
+    /// <summary>
     /// Ускорение, с которым игрок притягивается к выбранной точке зацепа во время Pulling.
     /// </summary>
     [ExportGroup("Pull")]
@@ -130,6 +197,17 @@ public partial class PlayerSlingshotGrappleModule : Node
     /// </summary>
     [Export] public bool DebugPrintStateChanges { get; set; } = false;
 
+    /// <summary>
+    /// Включает жёлтый debug-highlight у лучшего доступного GrappleAnchor. Если выключить, точки не подсвечиваются даже когда grapple готов.
+    /// </summary>
+    [ExportGroup("Grapple Debug Highlight")]
+    [Export] public bool EnableGrappleAvailableHighlight { get; set; } = true;
+
+    /// <summary>
+    /// Если включено, подсвечивается только лучший доступный anchor. Если выключить, текущая версия всё равно оставляет один лучший anchor, чтобы visual не шумел.
+    /// </summary>
+    [Export] public bool GrappleHighlightOnlyBestAnchor { get; set; } = true;
+
     public SlingshotGrappleState CurrentState { get; private set; } = SlingshotGrappleState.Idle;
     public bool IsSlingshotActive => CurrentState is SlingshotGrappleState.Pulling or SlingshotGrappleState.Launching;
     public bool BlocksJump => CurrentState == SlingshotGrappleState.Pulling;
@@ -145,6 +223,7 @@ public partial class PlayerSlingshotGrappleModule : Node
     private float _postLaunchControlTimer;
     private MeshInstance3D _debugMeshInstance;
     private StandardMaterial3D _debugMaterial;
+    private GrappleAnchor _currentHighlightedAnchor;
 
     /// <summary>
     /// Инициализирует модуль, сохраняет ссылку на игрока и гарантирует наличие input action для grapple.
@@ -200,6 +279,7 @@ public partial class PlayerSlingshotGrappleModule : Node
             SetState(SlingshotGrappleState.Idle);
         }
 
+        UpdateAvailableAnchorHighlight();
         UpdateDebugTrajectory();
     }
 
@@ -221,6 +301,8 @@ public partial class PlayerSlingshotGrappleModule : Node
         _player.CrouchSlideModule?.CancelSlide();
         _player.JumpModule?.RestoreAirJumpChargeFromGrapple();
         SetState(SlingshotGrappleState.Pulling);
+        ClearAvailableAnchorHighlight();
+        RequestGrappleCameraSnap(grapplePointPosition);
 
         if (DebugPrintStateChanges)
         {
@@ -241,6 +323,7 @@ public partial class PlayerSlingshotGrappleModule : Node
         }
 
         _cooldownTimer = Mathf.Max(_cooldownTimer, Cooldown);
+        ClearAvailableAnchorHighlight();
         SetState(SlingshotGrappleState.Cooldown);
     }
 
@@ -325,6 +408,23 @@ public partial class PlayerSlingshotGrappleModule : Node
 
         Vector3 rayOrigin = _player.Camera.GlobalPosition;
         Vector3 rayDirection = -_player.Camera.GlobalTransform.Basis.Z.Normalized();
+
+        if (CurrentPreferDirectRaycastHit && TryFindDirectRaycastAnchor(rayOrigin, rayDirection, out anchor))
+        {
+            return true;
+        }
+
+        if (CurrentEnableScreenSpaceGrappleAssist)
+        {
+            return TryFindAnchorInScreenSpace(rayOrigin, rayDirection, out anchor);
+        }
+
+        return TryFindAnchorInFallbackCone(rayOrigin, rayDirection, out anchor);
+    }
+
+    private bool TryFindDirectRaycastAnchor(Vector3 rayOrigin, Vector3 rayDirection, out Node3D anchor)
+    {
+        anchor = null;
         Vector3 rayEnd = rayOrigin + rayDirection * CurrentMaxGrappleDistance;
 
         PhysicsRayQueryParameters3D query = PhysicsRayQueryParameters3D.Create(rayOrigin, rayEnd);
@@ -334,12 +434,7 @@ public partial class PlayerSlingshotGrappleModule : Node
         query.Exclude = new Godot.Collections.Array<Rid> { _player.GetRid() };
 
         Godot.Collections.Dictionary result = _player.GetWorld3D().DirectSpaceState.IntersectRay(query);
-        if (result.Count > 0 && TryGetAnchorFromRayResult(result, out anchor))
-        {
-            return true;
-        }
-
-        return TryFindAnchorInFallbackCone(rayOrigin, rayDirection, out anchor);
+        return result.Count > 0 && TryGetAnchorFromRayResult(result, out anchor);
     }
 
     private bool TryGetAnchorFromRayResult(Godot.Collections.Dictionary result, out Node3D anchor)
@@ -400,6 +495,71 @@ public partial class PlayerSlingshotGrappleModule : Node
         return bestAnchor != null;
     }
 
+    private bool TryFindAnchorInScreenSpace(Vector3 rayOrigin, Vector3 rayDirection, out Node3D bestAnchor)
+    {
+        bestAnchor = null;
+
+        if (string.IsNullOrWhiteSpace(GrappleAnchorGroupName) || _player.Camera == null)
+        {
+            return false;
+        }
+
+        Viewport viewport = _player.Camera.GetViewport();
+        if (viewport == null)
+        {
+            return false;
+        }
+
+        Vector2 screenCenter = viewport.GetVisibleRect().Size * 0.5f;
+        float assistRadius = Mathf.Max(0.0f, CurrentGrappleScreenAssistRadiusPixels);
+        float minDot = Mathf.Cos(Mathf.DegToRad(CurrentGrappleAssistMaxAngleDegrees));
+        float bestScore = float.MaxValue;
+
+        foreach (Node node in GetTree().GetNodesInGroup(GrappleAnchorGroupName))
+        {
+            if (node is not Node3D candidate || _player.Camera.IsPositionBehind(candidate.GlobalPosition))
+            {
+                continue;
+            }
+
+            Vector3 toCandidate = candidate.GlobalPosition - rayOrigin;
+            float worldDistance = toCandidate.Length();
+            if (worldDistance <= 0.0f || worldDistance > CurrentMaxGrappleDistance)
+            {
+                continue;
+            }
+
+            float dot = rayDirection.Dot(toCandidate / worldDistance);
+            if (dot < minDot)
+            {
+                continue;
+            }
+
+            Vector2 screenPosition = _player.Camera.UnprojectPosition(candidate.GlobalPosition);
+            float screenDistance = screenPosition.DistanceTo(screenCenter);
+            if (screenDistance > assistRadius)
+            {
+                continue;
+            }
+
+            if (CurrentGrappleAssistRequireLineOfSight && !HasLineOfSightToAnchor(rayOrigin, candidate))
+            {
+                continue;
+            }
+
+            float score = screenDistance * CurrentGrappleAssistScreenDistanceWeight + worldDistance * CurrentGrappleAssistDistanceWeight;
+            if (score >= bestScore)
+            {
+                continue;
+            }
+
+            bestAnchor = candidate;
+            bestScore = score;
+        }
+
+        return bestAnchor != null;
+    }
+
     private bool HasLineOfSightToAnchor(Vector3 rayOrigin, Node3D candidate)
     {
         PhysicsRayQueryParameters3D query = PhysicsRayQueryParameters3D.Create(rayOrigin, candidate.GlobalPosition);
@@ -437,6 +597,23 @@ public partial class PlayerSlingshotGrappleModule : Node
         }
     }
 
+    private void RequestGrappleCameraSnap(Vector3 grapplePointPosition)
+    {
+        if (!CurrentEnableGrappleCameraSnap || _player?.LookModule == null || CurrentGrappleCameraSnapDuration <= 0.0f || CurrentGrappleCameraSnapStrength <= 0.0f)
+        {
+            return;
+        }
+
+        _player.LookModule.RequestTemporaryLookAt(
+            grapplePointPosition,
+            CurrentGrappleCameraSnapDuration,
+            CurrentGrappleCameraSnapStrength,
+            CurrentGrappleCameraSnapSpeed,
+            CurrentLockLookInputDuringGrappleSnap,
+            CurrentGrappleCameraSnapMaxPitchDegrees
+        );
+    }
+
     private void UpdateDebugTrajectory()
     {
         if (!DrawDebugTrajectory || _debugMeshInstance?.Mesh is not ImmediateMesh immediateMesh)
@@ -460,6 +637,71 @@ public partial class PlayerSlingshotGrappleModule : Node
         immediateMesh.SurfaceAddVertex(_grapplePointPosition);
         immediateMesh.SurfaceAddVertex(_grapplePointPosition + _storedLaunchDirection * 4.0f);
         immediateMesh.SurfaceEnd();
+    }
+
+    private void UpdateAvailableAnchorHighlight()
+    {
+        if (!CanShowAvailableAnchorHighlight())
+        {
+            ClearAvailableAnchorHighlight();
+            return;
+        }
+
+        if (!TryFindGrappleAnchor(out Node3D anchor))
+        {
+            ClearAvailableAnchorHighlight();
+            return;
+        }
+
+        SetHighlightedAnchor(FindGrappleAnchorComponent(anchor));
+    }
+
+    private bool CanShowAvailableAnchorHighlight()
+    {
+        return CurrentEnableGrappleAvailableHighlight
+            && EnableSlingshotGrapple
+            && _player != null
+            && _cooldownTimer <= 0.0f
+            && CurrentState == SlingshotGrappleState.Idle;
+    }
+
+    private void SetHighlightedAnchor(GrappleAnchor anchor)
+    {
+        if (_currentHighlightedAnchor == anchor)
+        {
+            return;
+        }
+
+        ClearAvailableAnchorHighlight();
+        _currentHighlightedAnchor = anchor;
+        _currentHighlightedAnchor?.SetGrappleAvailableHighlight(true);
+    }
+
+    private void ClearAvailableAnchorHighlight()
+    {
+        if (_currentHighlightedAnchor == null)
+        {
+            return;
+        }
+
+        _currentHighlightedAnchor.SetGrappleAvailableHighlight(false);
+        _currentHighlightedAnchor = null;
+    }
+
+    private static GrappleAnchor FindGrappleAnchorComponent(Node node)
+    {
+        Node current = node;
+        while (current != null)
+        {
+            if (current is GrappleAnchor grappleAnchor)
+            {
+                return grappleAnchor;
+            }
+
+            current = current.GetParent();
+        }
+
+        return null;
     }
 
     private void EnsureDebugMesh()
@@ -514,4 +756,18 @@ public partial class PlayerSlingshotGrappleModule : Node
     private float CurrentLaunchSpeed => TuningProfile?.LaunchSpeed ?? LaunchSpeed;
     private float CurrentInheritPullVelocityFactor => TuningProfile?.InheritPullVelocityFactor ?? InheritPullVelocityFactor;
     private float CurrentMaxLaunchVelocity => TuningProfile?.MaxLaunchVelocity ?? MaxLaunchVelocity;
+    private bool CurrentEnableScreenSpaceGrappleAssist => TuningProfile?.EnableScreenSpaceGrappleAssist ?? EnableScreenSpaceGrappleAssist;
+    private float CurrentGrappleScreenAssistRadiusPixels => TuningProfile?.GrappleScreenAssistRadiusPixels ?? GrappleScreenAssistRadiusPixels;
+    private bool CurrentPreferDirectRaycastHit => TuningProfile?.PreferDirectRaycastHit ?? PreferDirectRaycastHit;
+    private float CurrentGrappleAssistMaxAngleDegrees => TuningProfile?.GrappleAssistMaxAngleDegrees ?? GrappleAssistMaxAngleDegrees;
+    private bool CurrentGrappleAssistRequireLineOfSight => TuningProfile?.GrappleAssistRequireLineOfSight ?? GrappleAssistRequireLineOfSight;
+    private float CurrentGrappleAssistDistanceWeight => TuningProfile?.GrappleAssistDistanceWeight ?? GrappleAssistDistanceWeight;
+    private float CurrentGrappleAssistScreenDistanceWeight => TuningProfile?.GrappleAssistScreenDistanceWeight ?? GrappleAssistScreenDistanceWeight;
+    private bool CurrentEnableGrappleCameraSnap => TuningProfile?.EnableGrappleCameraSnap ?? EnableGrappleCameraSnap;
+    private float CurrentGrappleCameraSnapDuration => TuningProfile?.GrappleCameraSnapDuration ?? GrappleCameraSnapDuration;
+    private float CurrentGrappleCameraSnapStrength => TuningProfile?.GrappleCameraSnapStrength ?? GrappleCameraSnapStrength;
+    private float CurrentGrappleCameraSnapSpeed => TuningProfile?.GrappleCameraSnapSpeed ?? GrappleCameraSnapSpeed;
+    private bool CurrentLockLookInputDuringGrappleSnap => TuningProfile?.LockLookInputDuringGrappleSnap ?? LockLookInputDuringGrappleSnap;
+    private float CurrentGrappleCameraSnapMaxPitchDegrees => TuningProfile?.GrappleCameraSnapMaxPitchDegrees ?? GrappleCameraSnapMaxPitchDegrees;
+    private bool CurrentEnableGrappleAvailableHighlight => TuningProfile?.EnableGrappleAvailableHighlight ?? EnableGrappleAvailableHighlight;
 }

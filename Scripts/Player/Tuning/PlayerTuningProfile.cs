@@ -168,8 +168,87 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "1,100,0.5,suffix:m")] public float MaxGrappleDistance { get; set; } = 25.0f;
 
     /// <summary>
+    /// Включает screen-space помощь выбора grapple anchor около центра экрана.
+    /// </summary>
+    [ExportGroup("Slingshot Grapple / Aim Assist")]
+    [Export] public bool EnableScreenSpaceGrappleAssist { get; set; } = true;
+
+    /// <summary>
+    /// Радиус screen-space помощи в пикселях вокруг центра экрана.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,240,4,suffix:px")] public float GrappleScreenAssistRadiusPixels { get; set; } = 96.0f;
+
+    /// <summary>
+    /// Если включено, прямое попадание raycast в anchor имеет приоритет над screen-space выбором.
+    /// </summary>
+    [Export] public bool PreferDirectRaycastHit { get; set; } = true;
+
+    /// <summary>
+    /// Максимальный угол от направления камеры до anchor для screen-space assist.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,45,1,suffix:deg")] public float GrappleAssistMaxAngleDegrees { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Требует прямую видимость до anchor для screen-space assist.
+    /// </summary>
+    [Export] public bool GrappleAssistRequireLineOfSight { get; set; } = true;
+
+    /// <summary>
+    /// Вес мировой дистанции в score выбора anchor.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.05")] public float GrappleAssistDistanceWeight { get; set; } = 0.25f;
+
+    /// <summary>
+    /// Вес экранной дистанции от центра в score выбора anchor.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,3,0.05")] public float GrappleAssistScreenDistanceWeight { get; set; } = 1.0f;
+
+    /// <summary>
+    /// Включает короткий camera snap к выбранному anchor после успешного grapple.
+    /// </summary>
+    [ExportGroup("Slingshot Grapple / Camera Assist")]
+    [Export] public bool EnableGrappleCameraSnap { get; set; } = true;
+
+    /// <summary>
+    /// Длительность camera snap в секундах.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.5,0.01,suffix:s")] public float GrappleCameraSnapDuration { get; set; } = 0.16f;
+
+    /// <summary>
+    /// Сила доводки камеры к anchor.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.05")] public float GrappleCameraSnapStrength { get; set; } = 1.0f;
+
+    /// <summary>
+    /// Скорость сглаживания camera snap.
+    /// </summary>
+    [Export(PropertyHint.Range, "1,40,0.5")] public float GrappleCameraSnapSpeed { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Если включено, mouse look временно игнорируется во время camera snap.
+    /// </summary>
+    [Export] public bool LockLookInputDuringGrappleSnap { get; set; } = true;
+
+    /// <summary>
+    /// Максимальный pitch camera snap в градусах.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,89,1,suffix:deg")] public float GrappleCameraSnapMaxPitchDegrees { get; set; } = 85.0f;
+
+    /// <summary>
+    /// Включает жёлтый debug-highlight у лучшего GrappleAnchor, который прямо сейчас доступен для зацепа.
+    /// </summary>
+    [ExportGroup("Slingshot Grapple / Debug")]
+    [Export] public bool EnableGrappleAvailableHighlight { get; set; } = true;
+
+    /// <summary>
+    /// Если включено, подсвечивается только лучший доступный anchor. Выключение зарезервировано для будущего режима подсветки нескольких точек.
+    /// </summary>
+    [Export] public bool GrappleHighlightOnlyBestAnchor { get; set; } = true;
+
+    /// <summary>
     /// Ускорение притяжения к grapple anchor.
     /// </summary>
+    [ExportGroup("Slingshot Grapple")]
     [Export(PropertyHint.Range, "0,140,0.5,suffix:m/s^2")] public float PullAcceleration { get; set; } = 45.0f;
 
     /// <summary>
@@ -204,9 +283,24 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "0,240,0.5,suffix:m/s")] public float ChargedShotSpeed { get; set; } = 100.0f;
 
     /// <summary>
-    /// Скорость precision shot.
+    /// Включает мгновенный precision shot по Alt + ЛКМ. Если выключить, модификатор не создаёт straight projectile.
+    /// </summary>
+    [Export] public bool EnablePrecisionShot { get; set; } = true;
+
+    /// <summary>
+    /// Скорость мгновенного precision shot. Увеличение делает Alt + ЛКМ быстрее и прямее; уменьшение сближает его с charged shot.
     /// </summary>
     [Export(PropertyHint.Range, "0,320,1,suffix:m/s")] public float PrecisionShotSpeed { get; set; } = 180.0f;
+
+    /// <summary>
+    /// Урон мгновенного precision shot. Увеличение делает Alt + ЛКМ мощнее; уменьшение приближает его к charged shot.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,400,1")] public float PrecisionShotDamage { get; set; } = 60.0f;
+
+    /// <summary>
+    /// Помечает precision shot как бронебойный. Если выключить, projectile остаётся прямым, но без armor-piercing метки.
+    /// </summary>
+    [Export] public bool PrecisionShotArmorPiercing { get; set; } = true;
 
     /// <summary>
     /// Гравитация projectile-стрелы для ballistic shot.

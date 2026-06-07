@@ -14,8 +14,8 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - `PlayerMovementModule` - отвечает за горизонтальное движение игрока.
 - `PlayerJumpModule` - отвечает за прыжок, coyote time, ground snap, simple double jump и redirect горизонтального движения на втором прыжке.
 - `PlayerCrouchSlideModule` - отвечает за crouch/slide state, высоту коллайдера, высоту камеры, проверку потолка, горизонтальную скорость во время подката, airborne slide buffer и горизонтальную часть slide jump.
-- `PlayerSlingshotGrappleModule` - отвечает за slingshot grapple: выбор `GrappleAnchor`, внешнее управление `Velocity` во время Pulling и выстрел игрока по сохранённому направлению от стартовой позиции к точке.
-- `PlayerLookModule` - отвечает за mouse look, поворот камеры/игрока, mouse capture и dev hotkeys.
+- `PlayerSlingshotGrappleModule` - отвечает за slingshot grapple: выбор `GrappleAnchor`, screen-space aim assist, внешнее управление `Velocity` во время Pulling и выстрел игрока по сохранённому направлению от стартовой позиции к точке.
+- `PlayerLookModule` - отвечает за mouse look, поворот камеры/игрока, temporary look assist для grapple camera snap, mouse capture и dev hotkeys.
 - `PlayerCameraFovModule` - отвечает за плавное изменение FOV основной камеры, включая precision aiming; это единственный runtime-модуль, который пишет в `Camera3D.Fov`.
 - `PlayerSpeedFovModule` - считает speed-based FOV bonus по скорости игрока и отдаёт его `PlayerCameraFovModule`, но сам не владеет финальным FOV камеры.
 - `PlayerBowShootModule` - отвечает за игровую логику выстрела, натяжения и создание projectile-стрелы.
@@ -25,6 +25,8 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - `PlayerTuningProfile` - data-only `Resource` с live-настройками игрока и оружия; не содержит gameplay logic.
 - `RuntimeTuningPanel` - debug-окно для изменения `PlayerTuningProfile` во время Play.
 - `ArrowProjectile` - отвечает за поведение выпущенной стрелы как отдельного projectile-объекта, включая ручную математическую баллистику без `RigidBody3D`.
+- `BasicPatrolShooterEnemy` - простая временная combat-цель: сама владеет патрулём, стрельбой по игроку, здоровьем и смертью.
+- `EnemyProjectile` - отдельный projectile врага: сам летит прямо, обрабатывает попадание в игрока и перезагрузку сцены.
 - `GrappleAnchor` - специальная `Area3D`-точка в группе `grapple_anchor`, за которую разрешено цепляться slingshot grapple-модулю.
 - `TargetHitbox` - отвечает за обработку попаданий по мишеням.
 - `CrosshairUI` - отвечает за отображение и состояние прицела.
@@ -34,9 +36,13 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - `PlayerController` не должен превращаться в монолит и не должен содержать детальную логику отдельных систем.
 - Каждый модуль отвечает за одну область поведения.
 - Логика конкретных интерактивных объектов не должна жить в `PlayerController`: игрок выражает намерение, а объект сам реализует своё поведение через общий контракт взаимодействия.
+- Enemies own their own AI and shooting behavior; `PlayerController` does not know how enemies patrol, aim or fire.
+- `EnemyProjectile` owns its own hit behavior; player death in this prototype is a scene reload triggered by projectile contact with the `player` group.
 - Crouch и Slide живут в `PlayerCrouchSlideModule`; `PlayerMovementModule` только учитывает `CurrentSpeedMultiplier` и не перезаписывает X/Z velocity во время `IsSliding`.
 - Slide jump разделён по ответственности: `PlayerCrouchSlideModule` завершает slide и готовит горизонтальный boost, а `PlayerJumpModule` остаётся владельцем вертикального jump impulse, coyote time и double jump counters.
 - Slingshot grapple живёт в `PlayerSlingshotGrappleModule`; когда модуль активен, обычные movement/jump/slide-модули должны уважать его флаги блокировки и не перетирать внешнюю `Velocity`.
+- Slingshot grapple выбирает anchor и может запросить camera snap, но не поворачивает `Camera3D` напрямую. Все yaw/pitch изменения должны проходить через `PlayerLookModule`.
+- `PlayerSlingshotGrappleModule` определяет текущий доступный anchor, но визуал жёлтого available-highlight принадлежит `GrappleAnchor`.
 - Double jump хранится в `PlayerJumpModule` как простой счётчик прыжков до приземления; не переносить эту логику в `PlayerController`.
 - Double Jump Redirect применяется только на втором прыжке: если игрок держит WASD, `PlayerJumpModule` заменяет горизонтальную скорость направлением относительно камеры, а если ввода нет - оставляет текущий горизонтальный вектор.
 - Precision shot не должен превращать `PlayerBowShootModule` в монолит: FOV остаётся в `PlayerCameraFovModule`, viewmodel-поза остаётся в `PlayerBowVisualModule`, полёт остаётся в `ArrowProjectile`.
@@ -47,5 +53,15 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - Связи между системами должны оставаться явными и простыми для проверки в сцене.
 - При добавлении новой системы предпочтительно создать отдельный модуль или отдельный компонент, а не расширять существующий класс несвязанной логикой.
 - Подробные правила для дверей, сундуков, рычагов, терминалов и других interact-объектов описаны в `Docs/INTERACTION_ARCHITECTURE.md`.
+
+## Precision Shot Rule
+
+- Precision Shot активируется только как instant `Alt + ЛКМ press` через `PlayerBowShootModule`.
+- Удержание Alt включает Precision Ready: `PlayerBowVisualModule` ставит лук в вертикальную precision-позу, а `PlayerCameraFovModule` сужает FOV до `PrecisionFov`.
+- Долгое удержание ЛКМ не должно переводить лук в Precision Shot.
+- `precision_modifier` должен быть зажат до нового нажатия ЛКМ. Если игрок уже держит ЛКМ и потом нажимает Alt, текущий charged shot не меняет тип.
+- Precision projectile использует `ArrowFlightMode.Straight`, не применяет gravity и не наследует скорость игрока.
+- При Precision Ready итоговый FOV выбирает только `PlayerCameraFovModule`; `PlayerSpeedFovModule` может отключать speed bonus через `DisableSpeedFovDuringPrecisionAim`.
+- ПКМ остаётся свободным под будущий parry.
 
 Все новые `[Export]`-поля должны сопровождаться русским XML summary-комментарием, понятным названием, а при необходимости — `ExportGroup`, `Range` и suffix. В Godot C# XML summary не заполняет стандартный Inspector tooltip автоматически, поэтому читаемость Inspector достигается через названия, группы, диапазоны и единицы измерения. Inspector должен быть рабочим интерфейсом настройки, а не набором непонятных переменных.

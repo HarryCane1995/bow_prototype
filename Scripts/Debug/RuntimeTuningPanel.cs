@@ -192,6 +192,20 @@ public partial class RuntimeTuningPanel : Window
     {
         AddSection("Slingshot Grapple");
         AddFloatControl("Max Grapple Distance", 1.0, 100.0, 0.5, () => TuningProfile.MaxGrappleDistance, value => TuningProfile.MaxGrappleDistance = value);
+        AddBoolControl("Enable Screen Assist", () => TuningProfile.EnableScreenSpaceGrappleAssist, value => TuningProfile.EnableScreenSpaceGrappleAssist = value);
+        AddFloatControl("Screen Assist Radius", 0.0, 240.0, 4.0, () => TuningProfile.GrappleScreenAssistRadiusPixels, value => TuningProfile.GrappleScreenAssistRadiusPixels = value);
+        AddBoolControl("Prefer Direct Hit", () => TuningProfile.PreferDirectRaycastHit, value => TuningProfile.PreferDirectRaycastHit = value);
+        AddFloatControl("Assist Max Angle", 0.0, 45.0, 1.0, () => TuningProfile.GrappleAssistMaxAngleDegrees, value => TuningProfile.GrappleAssistMaxAngleDegrees = value);
+        AddBoolControl("Assist Line Of Sight", () => TuningProfile.GrappleAssistRequireLineOfSight, value => TuningProfile.GrappleAssistRequireLineOfSight = value);
+        AddFloatControl("Assist Distance Weight", 0.0, 2.0, 0.05, () => TuningProfile.GrappleAssistDistanceWeight, value => TuningProfile.GrappleAssistDistanceWeight = value);
+        AddFloatControl("Assist Screen Weight", 0.0, 3.0, 0.05, () => TuningProfile.GrappleAssistScreenDistanceWeight, value => TuningProfile.GrappleAssistScreenDistanceWeight = value);
+        AddBoolControl("Enable Camera Snap", () => TuningProfile.EnableGrappleCameraSnap, value => TuningProfile.EnableGrappleCameraSnap = value);
+        AddFloatControl("Camera Snap Duration", 0.0, 0.5, 0.01, () => TuningProfile.GrappleCameraSnapDuration, value => TuningProfile.GrappleCameraSnapDuration = value);
+        AddFloatControl("Camera Snap Strength", 0.0, 1.0, 0.05, () => TuningProfile.GrappleCameraSnapStrength, value => TuningProfile.GrappleCameraSnapStrength = value);
+        AddFloatControl("Camera Snap Speed", 1.0, 40.0, 0.5, () => TuningProfile.GrappleCameraSnapSpeed, value => TuningProfile.GrappleCameraSnapSpeed = value);
+        AddBoolControl("Lock Look During Snap", () => TuningProfile.LockLookInputDuringGrappleSnap, value => TuningProfile.LockLookInputDuringGrappleSnap = value);
+        AddFloatControl("Camera Snap Max Pitch", 0.0, 89.0, 1.0, () => TuningProfile.GrappleCameraSnapMaxPitchDegrees, value => TuningProfile.GrappleCameraSnapMaxPitchDegrees = value);
+        AddBoolControl("Enable Available Highlight", () => TuningProfile.EnableGrappleAvailableHighlight, value => TuningProfile.EnableGrappleAvailableHighlight = value);
         AddFloatControl("Pull Acceleration", 0.0, 140.0, 0.5, () => TuningProfile.PullAcceleration, value => TuningProfile.PullAcceleration = value);
         AddFloatControl("Max Pull Speed", 1.0, 100.0, 0.5, () => TuningProfile.MaxPullSpeed, value => TuningProfile.MaxPullSpeed = value);
         AddFloatControl("Launch Speed", 0.0, 100.0, 0.5, () => TuningProfile.LaunchSpeed, value => TuningProfile.LaunchSpeed = value);
@@ -204,7 +218,10 @@ public partial class RuntimeTuningPanel : Window
         AddSection("Bow / Projectiles");
         AddFloatControl("Light Shot Speed", 0.0, 220.0, 0.5, () => TuningProfile.LightShotSpeed, value => TuningProfile.LightShotSpeed = value);
         AddFloatControl("Charged Shot Speed", 0.0, 240.0, 0.5, () => TuningProfile.ChargedShotSpeed, value => TuningProfile.ChargedShotSpeed = value);
+        AddBoolControl("Enable Precision Shot", () => TuningProfile.EnablePrecisionShot, value => TuningProfile.EnablePrecisionShot = value);
         AddFloatControl("Precision Shot Speed", 0.0, 320.0, 1.0, () => TuningProfile.PrecisionShotSpeed, value => TuningProfile.PrecisionShotSpeed = value);
+        AddFloatControl("Precision Shot Damage", 0.0, 400.0, 1.0, () => TuningProfile.PrecisionShotDamage, value => TuningProfile.PrecisionShotDamage = value);
+        AddBoolControl("Precision Armor Piercing", () => TuningProfile.PrecisionShotArmorPiercing, value => TuningProfile.PrecisionShotArmorPiercing = value);
         AddFloatControl("Projectile Gravity", 0.0, 80.0, 0.5, () => TuningProfile.ProjectileGravity, value => TuningProfile.ProjectileGravity = value);
     }
 
@@ -426,6 +443,21 @@ public partial class RuntimeTuningPanel : Window
             ["SlideJumpMaxHorizontalSpeed"] = profile.SlideJumpMaxHorizontalSpeed,
             ["SlideJumpRequiresStandUpSpace"] = profile.SlideJumpRequiresStandUpSpace,
             ["MaxGrappleDistance"] = profile.MaxGrappleDistance,
+            ["EnableScreenSpaceGrappleAssist"] = profile.EnableScreenSpaceGrappleAssist,
+            ["GrappleScreenAssistRadiusPixels"] = profile.GrappleScreenAssistRadiusPixels,
+            ["PreferDirectRaycastHit"] = profile.PreferDirectRaycastHit,
+            ["GrappleAssistMaxAngleDegrees"] = profile.GrappleAssistMaxAngleDegrees,
+            ["GrappleAssistRequireLineOfSight"] = profile.GrappleAssistRequireLineOfSight,
+            ["GrappleAssistDistanceWeight"] = profile.GrappleAssistDistanceWeight,
+            ["GrappleAssistScreenDistanceWeight"] = profile.GrappleAssistScreenDistanceWeight,
+            ["EnableGrappleCameraSnap"] = profile.EnableGrappleCameraSnap,
+            ["GrappleCameraSnapDuration"] = profile.GrappleCameraSnapDuration,
+            ["GrappleCameraSnapStrength"] = profile.GrappleCameraSnapStrength,
+            ["GrappleCameraSnapSpeed"] = profile.GrappleCameraSnapSpeed,
+            ["LockLookInputDuringGrappleSnap"] = profile.LockLookInputDuringGrappleSnap,
+            ["GrappleCameraSnapMaxPitchDegrees"] = profile.GrappleCameraSnapMaxPitchDegrees,
+            ["EnableGrappleAvailableHighlight"] = profile.EnableGrappleAvailableHighlight,
+            ["GrappleHighlightOnlyBestAnchor"] = profile.GrappleHighlightOnlyBestAnchor,
             ["PullAcceleration"] = profile.PullAcceleration,
             ["MaxPullSpeed"] = profile.MaxPullSpeed,
             ["LaunchSpeed"] = profile.LaunchSpeed,
@@ -433,7 +465,10 @@ public partial class RuntimeTuningPanel : Window
             ["MaxLaunchVelocity"] = profile.MaxLaunchVelocity,
             ["LightShotSpeed"] = profile.LightShotSpeed,
             ["ChargedShotSpeed"] = profile.ChargedShotSpeed,
+            ["EnablePrecisionShot"] = profile.EnablePrecisionShot,
             ["PrecisionShotSpeed"] = profile.PrecisionShotSpeed,
+            ["PrecisionShotDamage"] = profile.PrecisionShotDamage,
+            ["PrecisionShotArmorPiercing"] = profile.PrecisionShotArmorPiercing,
             ["ProjectileGravity"] = profile.ProjectileGravity,
             ["PlayerFov"] = profile.PlayerFov,
             ["PrecisionFov"] = profile.PrecisionFov,
@@ -500,6 +535,21 @@ public partial class RuntimeTuningPanel : Window
         profile.SlideJumpMaxHorizontalSpeed = GetFloat(values, "SlideJumpMaxHorizontalSpeed", profile.SlideJumpMaxHorizontalSpeed);
         profile.SlideJumpRequiresStandUpSpace = GetBool(values, "SlideJumpRequiresStandUpSpace", profile.SlideJumpRequiresStandUpSpace);
         profile.MaxGrappleDistance = GetFloat(values, "MaxGrappleDistance", profile.MaxGrappleDistance);
+        profile.EnableScreenSpaceGrappleAssist = GetBool(values, "EnableScreenSpaceGrappleAssist", profile.EnableScreenSpaceGrappleAssist);
+        profile.GrappleScreenAssistRadiusPixels = GetFloat(values, "GrappleScreenAssistRadiusPixels", profile.GrappleScreenAssistRadiusPixels);
+        profile.PreferDirectRaycastHit = GetBool(values, "PreferDirectRaycastHit", profile.PreferDirectRaycastHit);
+        profile.GrappleAssistMaxAngleDegrees = GetFloat(values, "GrappleAssistMaxAngleDegrees", profile.GrappleAssistMaxAngleDegrees);
+        profile.GrappleAssistRequireLineOfSight = GetBool(values, "GrappleAssistRequireLineOfSight", profile.GrappleAssistRequireLineOfSight);
+        profile.GrappleAssistDistanceWeight = GetFloat(values, "GrappleAssistDistanceWeight", profile.GrappleAssistDistanceWeight);
+        profile.GrappleAssistScreenDistanceWeight = GetFloat(values, "GrappleAssistScreenDistanceWeight", profile.GrappleAssistScreenDistanceWeight);
+        profile.EnableGrappleCameraSnap = GetBool(values, "EnableGrappleCameraSnap", profile.EnableGrappleCameraSnap);
+        profile.GrappleCameraSnapDuration = GetFloat(values, "GrappleCameraSnapDuration", profile.GrappleCameraSnapDuration);
+        profile.GrappleCameraSnapStrength = GetFloat(values, "GrappleCameraSnapStrength", profile.GrappleCameraSnapStrength);
+        profile.GrappleCameraSnapSpeed = GetFloat(values, "GrappleCameraSnapSpeed", profile.GrappleCameraSnapSpeed);
+        profile.LockLookInputDuringGrappleSnap = GetBool(values, "LockLookInputDuringGrappleSnap", profile.LockLookInputDuringGrappleSnap);
+        profile.GrappleCameraSnapMaxPitchDegrees = GetFloat(values, "GrappleCameraSnapMaxPitchDegrees", profile.GrappleCameraSnapMaxPitchDegrees);
+        profile.EnableGrappleAvailableHighlight = GetBool(values, "EnableGrappleAvailableHighlight", profile.EnableGrappleAvailableHighlight);
+        profile.GrappleHighlightOnlyBestAnchor = GetBool(values, "GrappleHighlightOnlyBestAnchor", profile.GrappleHighlightOnlyBestAnchor);
         profile.PullAcceleration = GetFloat(values, "PullAcceleration", profile.PullAcceleration);
         profile.MaxPullSpeed = GetFloat(values, "MaxPullSpeed", profile.MaxPullSpeed);
         profile.LaunchSpeed = GetFloat(values, "LaunchSpeed", profile.LaunchSpeed);
@@ -507,7 +557,10 @@ public partial class RuntimeTuningPanel : Window
         profile.MaxLaunchVelocity = GetFloat(values, "MaxLaunchVelocity", profile.MaxLaunchVelocity);
         profile.LightShotSpeed = GetFloat(values, "LightShotSpeed", profile.LightShotSpeed);
         profile.ChargedShotSpeed = GetFloat(values, "ChargedShotSpeed", profile.ChargedShotSpeed);
+        profile.EnablePrecisionShot = GetBool(values, "EnablePrecisionShot", profile.EnablePrecisionShot);
         profile.PrecisionShotSpeed = GetFloat(values, "PrecisionShotSpeed", profile.PrecisionShotSpeed);
+        profile.PrecisionShotDamage = GetFloat(values, "PrecisionShotDamage", profile.PrecisionShotDamage);
+        profile.PrecisionShotArmorPiercing = GetBool(values, "PrecisionShotArmorPiercing", profile.PrecisionShotArmorPiercing);
         profile.ProjectileGravity = GetFloat(values, "ProjectileGravity", profile.ProjectileGravity);
         profile.PlayerFov = GetFloat(values, "PlayerFov", profile.PlayerFov);
         profile.PrecisionFov = GetFloat(values, "PrecisionFov", profile.PrecisionFov);

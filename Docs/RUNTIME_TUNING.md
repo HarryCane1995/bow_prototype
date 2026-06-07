@@ -50,9 +50,13 @@ Default-профиль лежит здесь:
 
 `Jump` содержит обычную силу прыжка, double jump, redirect и флаг `RestoreDoubleJumpOnGrapple`, который включает восстановление одного air jump charge после успешного Slingshot Grapple.
 
+`Slingshot Grapple` содержит базовые параметры дистанции, pull/launch, а также aim assist и camera assist. `GrappleScreenAssistRadiusPixels` отвечает за экранный радиус вокруг прицела, `GrappleAssistMaxAngleDegrees` ограничивает сектор перед камерой, веса `GrappleAssistDistanceWeight` и `GrappleAssistScreenDistanceWeight` выбирают лучший anchor. `EnableGrappleCameraSnap`, `GrappleCameraSnapDuration`, `GrappleCameraSnapStrength`, `GrappleCameraSnapSpeed` и `LockLookInputDuringGrappleSnap` настраивают короткую доводку камеры после успешного зацепа. `EnableGrappleAvailableHighlight` включает жёлтую debug-сферу только на anchor, который прямо сейчас доступен для grapple.
+
 `Camera / Speed FOV` содержит главный ползунок силы эффекта `SpeedFovMultiplier`, порог `MinSpeedForFov`, ограничитель `MaxSpeedFovBonus`, smoothing для расширения/возврата и флаги `UseFullVelocityForSpeedFov` и `DisableSpeedFovDuringPrecisionAim`.
 
 `ViewModel / Sway` содержит mouse lag, movement inertia, landing impulse и скорости сглаживания. Эти параметры меняют только визуальный `ViewModelSwayRoot` и не влияют на crosshair, gameplay camera или projectile direction.
+
+`Bow / Projectiles` содержит скорости light/charged/precision shot, `EnablePrecisionShot`, `PrecisionShotDamage`, `PrecisionShotArmorPiercing` и `ProjectileGravity`. Precision Ready включается удержанием Alt, а Precision Shot является мгновенным `Alt + ЛКМ press`; `PrecisionChargeTime` больше не участвует в активной логике и не должен появляться в runtime tuning UI.
 
 Изменение slider/spinbox сразу меняет значения в `PlayerTuningProfile`. Модули читают профиль во время расчёта поведения, поэтому изменения применяются live.
 

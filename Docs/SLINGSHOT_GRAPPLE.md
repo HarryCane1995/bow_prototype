@@ -14,12 +14,78 @@ launchDirection = (grapplePointPosition - initialPlayerPosition).Normalized();
 
 ## Выбор точки
 
-`PlayerSlingshotGrappleModule` при нажатии `slingshot_grapple` делает raycast из основной камеры на `MaxGrappleDistance`. Зацеп разрешён только по специальным объектам:
+`PlayerSlingshotGrappleModule` при нажатии `slingshot_grapple` выбирает специальную точку зацепа перед камерой. Зацеп разрешён только по специальным объектам:
 
 - `GrappleAnchor`;
 - или любой `Node3D` в группе `grapple_anchor`.
 
-Если прямой raycast не попал, модуль может найти ближайший anchor в небольшом конусе перед камерой. Это сделано для удобства прототипирования, но всё равно работает только со специальными anchor-точками, не с произвольной геометрией.
+Сначала, если `PreferDirectRaycastHit = true`, модуль делает прямой raycast из основной камеры на `MaxGrappleDistance`. Если луч точно попал в anchor, выбирается он.
+
+Если прямого попадания нет и `EnableScreenSpaceGrappleAssist = true`, включается screen-space aim assist:
+
+- модуль перебирает все узлы группы `grapple_anchor`;
+- отбрасывает точки дальше `MaxGrappleDistance`;
+- отбрасывает точки за камерой;
+- проверяет угол к точке через `GrappleAssistMaxAngleDegrees`;
+- проецирует anchor на экран через `Camera3D.UnprojectPosition`;
+- оставляет только точки в радиусе `GrappleScreenAssistRadiusPixels` от центра экрана;
+- если `GrappleAssistRequireLineOfSight = true`, дополнительно проверяет raycast до anchor.
+
+Лучший anchor выбирается по score:
+
+```csharp
+score = screenDistance * GrappleAssistScreenDistanceWeight
+    + worldDistance * GrappleAssistDistanceWeight;
+```
+
+`MaxGrappleDistance` - это мировая дистанция до точки. `GrappleScreenAssistRadiusPixels` - это экранный радиус вокруг прицела: насколько неточно игрок может навестись и всё равно зацепиться.
+
+Если screen-space assist выключен, остаётся старый fallback cone через `FallbackConeAngleDegrees`.
+
+## Camera Snap
+
+После успешного старта grapple модуль просит `PlayerLookModule` выполнить короткий temporary look assist к выбранной точке:
+
+```csharp
+PlayerLookModule.RequestTemporaryLookAt(anchorPosition, duration, strength, speed, lockInput, maxPitch);
+```
+
+`PlayerSlingshotGrappleModule` не поворачивает `Camera3D` напрямую. Он только выбирает anchor и управляет slingshot velocity. Владелец yaw/pitch и mouse input остаётся `PlayerLookModule`.
+
+Параметры:
+
+- `EnableGrappleCameraSnap` включает/выключает доводку камеры;
+- `GrappleCameraSnapDuration` задаёт длительность;
+- `GrappleCameraSnapStrength` задаёт силу доводки;
+- `GrappleCameraSnapSpeed` задаёт скорость сглаживания;
+- `LockLookInputDuringGrappleSnap` временно игнорирует mouse input;
+- `GrappleCameraSnapMaxPitchDegrees` ограничивает вертикальный угол.
+
+Snap происходит только после успешного выбора anchor и старта grapple. Неудачное нажатие не двигает камеру.
+
+## Available Anchor Highlight
+
+`GrappleAnchor` содержит отдельный debug-визуал `AvailableHighlightSphere`: жёлтую сферу без collision. Она скрыта по умолчанию и не участвует в raycast, projectile или gameplay collision.
+
+`PlayerSlingshotGrappleModule` каждый update проверяет лучший доступный anchor той же логикой, что и реальный grapple:
+
+- grapple включён;
+- состояние `Idle`;
+- cooldown закончился;
+- anchor в пределах `MaxGrappleDistance`;
+- anchor не позади камеры;
+- anchor внутри screen-space радиуса `GrappleScreenAssistRadiusPixels`;
+- anchor проходит angle/line of sight проверки.
+
+Если все условия выполнены, модуль вызывает `GrappleAnchor.SetGrappleAvailableHighlight(true)`. Если условия пропали или выбран другой anchor, старая подсветка выключается.
+
+Важно: жёлтая сфера означает “если нажать `slingshot_grapple` прямо сейчас, зацеп сработает”. Она не подсвечивает просто ближайшую или видимую точку. При успешном старте Pulling подсветка выключается, чтобы не путать debug-визуал с активным grapple.
+
+Параметры:
+
+- `EnableGrappleAvailableHighlight` включает/выключает подсветку;
+- `GrappleHighlightOnlyBestAnchor` закрепляет правило “подсвечивать только лучший anchor”;
+- `GrappleAnchor.EnableDebugHighlight`, `AvailableHighlightColor` и `HighlightScaleMultiplier` управляют локальным визуалом конкретной точки.
 
 ## Pulling
 
@@ -67,6 +133,9 @@ Vector3 launchVelocity = storedLaunchDirection * LaunchSpeed + inheritedDirectio
 Основные группы настроек:
 
 - `Grapple Detection`: включение механики, дистанция, группа anchor, physics mask, line of sight и fallback cone.
+- `Grapple Aim Assist`: screen-space радиус, приоритет direct raycast, угол, line of sight и веса score.
+- `Grapple Camera Assist`: короткая доводка камеры к выбранной точке через `PlayerLookModule`.
+- `Grapple Debug Highlight`: подсветка лучшего доступного anchor жёлтой сферой.
 - `Pull`: ускорение притяжения, максимум скорости, дистанция прибытия и проверка пролёта через точку.
 - `Launch`: скорость рогатки, множитель силы, наследование pull velocity и лимиты итоговой скорости.
 - `Control`: блокировка обычного movement/slide во время Pulling, задержка возврата air control и cooldown.

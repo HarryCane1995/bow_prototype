@@ -29,6 +29,30 @@ public partial class GrappleAnchor : Area3D
     [Export] public Color DebugVisualColor { get; set; } = new(0.1f, 0.85f, 1.0f, 0.9f);
 
     /// <summary>
+    /// Путь к жёлтой debug-сфере доступности grapple. Если путь пустой или неверный, anchor попробует найти узел AvailableHighlightSphere.
+    /// </summary>
+    [ExportGroup("Available Highlight")]
+    [Export] public NodePath HighlightSpherePath { get; set; } = new("AvailableHighlightSphere");
+
+    /// <summary>
+    /// Включает debug-highlight доступности anchor. Если выключить, SetGrappleAvailableHighlight не будет показывать сферу.
+    /// </summary>
+    [Export] public bool EnableDebugHighlight { get; set; } = true;
+
+    /// <summary>
+    /// Цвет сферы доступности. Более яркий цвет проще заметить; более тёмный меньше отвлекает от сцены.
+    /// </summary>
+    [Export] public Color AvailableHighlightColor { get; set; } = Colors.Yellow;
+
+    /// <summary>
+    /// Множитель масштаба сферы доступности относительно обычной debug-сферы. Увеличение делает highlight заметнее; уменьшение ближе к размеру anchor.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.5,4,0.05")] public float HighlightScaleMultiplier { get; set; } = 1.25f;
+
+    private MeshInstance3D _highlightSphere;
+    private StandardMaterial3D _highlightMaterial;
+
+    /// <summary>
     /// Гарантирует, что anchor состоит в группе, имеет Area3D-коллайдер и, при необходимости, видимую debug-сферу.
     /// </summary>
     public override void _Ready()
@@ -43,6 +67,45 @@ public partial class GrappleAnchor : Area3D
         if (CreateDebugVisual)
         {
             EnsureDebugVisual();
+        }
+
+        EnsureHighlightSphere();
+        SetGrappleAvailableHighlight(false);
+    }
+
+    /// <summary>
+    /// Показывает или скрывает debug-сферу доступности grapple. Видимость означает, что игрок прямо сейчас может зацепиться за этот anchor.
+    /// </summary>
+    public void SetGrappleAvailableHighlight(bool isVisible)
+    {
+        SetGrappleAvailableHighlight(isVisible, AvailableHighlightColor);
+    }
+
+    /// <summary>
+    /// Показывает или скрывает debug-сферу доступности grapple с указанным цветом. Цвет позволяет временно отличать разные состояния отладки.
+    /// </summary>
+    public void SetGrappleAvailableHighlight(bool isVisible, Color color)
+    {
+        if (!EnableDebugHighlight)
+        {
+            isVisible = false;
+        }
+
+        if (_highlightSphere == null)
+        {
+            EnsureHighlightSphere();
+        }
+
+        if (_highlightSphere == null)
+        {
+            return;
+        }
+
+        _highlightSphere.Visible = isVisible;
+        if (_highlightMaterial != null)
+        {
+            _highlightMaterial.AlbedoColor = color;
+            _highlightMaterial.Emission = color;
         }
     }
 
@@ -102,5 +165,48 @@ public partial class GrappleAnchor : Area3D
         };
 
         AddChild(debugVisual);
+    }
+
+    private void EnsureHighlightSphere()
+    {
+        _highlightSphere = GetNodeOrNull<MeshInstance3D>(HighlightSpherePath) ?? FindHighlightSphere();
+        if (_highlightSphere == null)
+        {
+            return;
+        }
+
+        _highlightSphere.Visible = false;
+        _highlightSphere.CastShadow = GeometryInstance3D.ShadowCastingSetting.Off;
+        _highlightSphere.Scale = Vector3.One * HighlightScaleMultiplier;
+
+        Material material = _highlightSphere.MaterialOverride ?? (_highlightSphere.Mesh?.SurfaceGetMaterial(0));
+        if (material is StandardMaterial3D standardMaterial)
+        {
+            _highlightMaterial = standardMaterial.Duplicate() as StandardMaterial3D;
+        }
+        else
+        {
+            _highlightMaterial = new StandardMaterial3D();
+        }
+
+        _highlightMaterial.ShadingMode = BaseMaterial3D.ShadingModeEnum.Unshaded;
+        _highlightMaterial.AlbedoColor = AvailableHighlightColor;
+        _highlightMaterial.EmissionEnabled = true;
+        _highlightMaterial.Emission = AvailableHighlightColor;
+        _highlightMaterial.Transparency = BaseMaterial3D.TransparencyEnum.Alpha;
+        _highlightSphere.MaterialOverride = _highlightMaterial;
+    }
+
+    private MeshInstance3D FindHighlightSphere()
+    {
+        foreach (Node child in GetChildren())
+        {
+            if (child is MeshInstance3D meshInstance && child.Name == "AvailableHighlightSphere")
+            {
+                return meshInstance;
+            }
+        }
+
+        return null;
     }
 }

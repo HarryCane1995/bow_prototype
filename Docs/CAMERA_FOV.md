@@ -38,6 +38,8 @@ Speed bonus сглаживается отдельно от общего движ
 
 Если `DisableSpeedFovDuringPrecisionAim = true`, speed bonus сбрасывается в `0`, и итоговая цель остаётся `PrecisionFov`. Если флаг выключить, precision aim получит `PrecisionFov + speedFovBonus`, но финальный FOV всё равно ограничивается сверху.
 
+Текущий Precision Ready включается удержанием Alt. Пока Alt зажат, `PlayerBowShootModule` вызывает `SetPrecisionAiming(true)`, и `PlayerCameraFovModule` плавно ведёт камеру к `PrecisionFov`. Сам Precision Shot остаётся мгновенным `Alt + ЛКМ press` и не использует старый таймер удержания ЛКМ.
+
 ## Runtime tuning
 
 Все параметры speed FOV доступны в `PlayerTuningProfile` и runtime panel в группе `Camera / Speed FOV`:
