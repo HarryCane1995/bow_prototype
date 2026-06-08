@@ -20,9 +20,19 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "0,160,0.5,suffix:m/s^2")] public float GroundDeceleration { get; set; } = 28.0f;
 
     /// <summary>
+    /// Включает отдельное ускорение при резкой смене направления; для диагностики jitter можно временно отключить.
+    /// </summary>
+    [Export] public bool EnableDirectionChangeAcceleration { get; set; } = true;
+
+    /// <summary>
     /// Ускорение при резкой смене направления на земле.
     /// </summary>
     [Export(PropertyHint.Range, "0,180,0.5,suffix:m/s^2")] public float GroundDirectionChangeAcceleration { get; set; } = 55.0f;
+
+    /// <summary>
+    /// Включает множитель counter-strafe acceleration; для диагностики jitter можно временно отключить.
+    /// </summary>
+    [Export] public bool EnableCounterStrafeBoost { get; set; } = true;
 
     /// <summary>
     /// Множитель ускорения при counter-strafe.
@@ -389,6 +399,14 @@ public partial class PlayerTuningProfile : Resource
     /// Включает viewmodel lag от движения мыши.
     /// </summary>
     [ExportGroup("ViewModel Sway")]
+    /// <summary>
+    /// Включает процедурный visual sway `ViewModelSwayRoot`; для диагностики jitter можно отключить без влияния на стрельбу.
+    /// </summary>
+    [Export] public bool EnableViewModelSway { get; set; } = true;
+
+    /// <summary>
+    /// Включает viewmodel lag от движения мыши.
+    /// </summary>
     [Export] public bool EnableMouseLag { get; set; } = true;
 
     /// <summary>
@@ -400,6 +418,21 @@ public partial class PlayerTuningProfile : Resource
     /// Сила поворота лука от mouse look delta.
     /// </summary>
     [Export(PropertyHint.Range, "0,8,0.1,suffix:deg")] public float MouseLagRotationAmount { get; set; } = 1.5f;
+
+    /// <summary>
+    /// Включает сглаживание mouse delta и итогового mouse lag offset, чтобы сильный mouse sway оставался плавным.
+    /// </summary>
+    [Export] public bool EnableMouseLagSmoothing { get; set; } = true;
+
+    /// <summary>
+    /// Скорость экспоненциального сглаживания входного mouse delta перед расчётом mouse lag.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,40,0.1")] public float MouseLagInputSmoothSpeed { get; set; } = 18.0f;
+
+    /// <summary>
+    /// Скорость экспоненциального сглаживания готового position/rotation offset от mouse lag.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,40,0.1")] public float MouseLagOutputSmoothSpeed { get; set; } = 12.0f;
 
     /// <summary>
     /// Включает инерцию viewmodel от ускорения игрока.
@@ -445,4 +478,50 @@ public partial class PlayerTuningProfile : Resource
     /// Скорость затухания landing impulse.
     /// </summary>
     [Export(PropertyHint.Range, "0.1,30,0.1")] public float ImpulseReturnSpeed { get; set; } = 14.0f;
+
+    /// <summary>
+    /// Включает отдельное экспоненциальное сглаживание итогового offset viewmodel.
+    /// </summary>
+    [Export] public bool EnableRotationSmoothing { get; set; } = true;
+
+    /// <summary>
+    /// Скорость экспоненциального сглаживания итогового поворота viewmodel.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,40,0.1")] public float RotationSmoothSpeed { get; set; } = 14.0f;
+
+    /// <summary>
+    /// Скорость экспоненциального сглаживания итогового позиционного offset viewmodel.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,40,0.1")] public float PositionSmoothSpeed { get; set; } = 14.0f;
+
+    /// <summary>
+    /// Включает визуальную стабилизацию наконечника стрелы около центра viewmodel-камеры без изменения gameplay aim.
+    /// </summary>
+    [ExportGroup("ViewModel Aim Stabilization")]
+    [Export] public bool EnableAimStabilization { get; set; } = true;
+
+    /// <summary>
+    /// Сила корректирующего поворота visual viewmodel к center ray.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,1,0.01")] public float AimStabilizationStrength { get; set; } = 0.65f;
+
+    /// <summary>
+    /// Скорость экспоненциального сглаживания visual aim-stabilization correction.
+    /// </summary>
+    [Export(PropertyHint.Range, "0.1,40,0.1")] public float AimStabilizationSmoothSpeed { get; set; } = 14.0f;
+
+    /// <summary>
+    /// Максимальный угол visual correction, чтобы лук не выворачивался при экстремальном sway.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,30,0.5,suffix:deg")] public float MaxAimCorrectionDegrees { get; set; } = 12.0f;
+
+    /// <summary>
+    /// Угловая dead zone в радианах, внутри которой correction плавно затухает.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,0.2,0.005")] public float AimStabilizationDeadZone { get; set; } = 0.02f;
+
+    /// <summary>
+    /// Если включено, visual aim stabilization работает только во время precision aiming.
+    /// </summary>
+    [Export] public bool StabilizeOnlyWhenAiming { get; set; } = false;
 }

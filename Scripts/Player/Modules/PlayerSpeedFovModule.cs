@@ -74,6 +74,21 @@ public partial class PlayerSpeedFovModule : Node
     /// </summary>
     public float CurrentTargetSpeedFovBonus { get; private set; }
 
+    /// <summary>
+    /// Последняя измеренная скорость игрока для диагностики jitter/FOV.
+    /// </summary>
+    public float CurrentSpeed { get; private set; }
+
+    /// <summary>
+    /// Последняя forward/back скорость относительно камеры для диагностики axis-based speed FOV.
+    /// </summary>
+    public float CurrentForwardSpeed { get; private set; }
+
+    /// <summary>
+    /// Последняя strafe скорость относительно камеры для диагностики axis-based speed FOV.
+    /// </summary>
+    public float CurrentStrafeSpeed { get; private set; }
+
     private PlayerController _player;
 
     /// <summary>
@@ -93,6 +108,7 @@ public partial class PlayerSpeedFovModule : Node
     {
         if (!CurrentEnableSpeedFov || (precisionAimActive && CurrentDisableSpeedFovDuringPrecisionAim))
         {
+            UpdateDebugSpeeds();
             CurrentTargetSpeedFovBonus = 0.0f;
             CurrentSpeedFovBonus = 0.0f;
             return CurrentSpeedFovBonus;
@@ -115,6 +131,8 @@ public partial class PlayerSpeedFovModule : Node
         {
             return 0.0f;
         }
+
+        UpdateDebugSpeeds();
 
         if (CurrentUseAxisBasedSpeedFov)
         {
@@ -152,6 +170,9 @@ public partial class PlayerSpeedFovModule : Node
             ? Mathf.Abs(signedForwardSpeed)
             : Mathf.Max(0.0f, signedForwardSpeed);
         float strafeSpeed = Mathf.Abs(horizontalVelocity.Dot(right));
+        CurrentSpeed = GetPlayerSpeed();
+        CurrentForwardSpeed = forwardSpeed;
+        CurrentStrafeSpeed = strafeSpeed;
 
         float forwardBonus = Mathf.Max(0.0f, forwardSpeed - CurrentMinSpeedForFov) * CurrentSpeedFovMultiplier;
         float strafeBonus = Mathf.Max(0.0f, strafeSpeed - CurrentMinStrafeSpeedForFov) * CurrentStrafeSpeedFovMultiplier;
@@ -179,6 +200,27 @@ public partial class PlayerSpeedFovModule : Node
         }
 
         return new Vector3(velocity.X, 0.0f, velocity.Z).Length();
+    }
+
+    private void UpdateDebugSpeeds()
+    {
+        if (_player == null)
+        {
+            CurrentSpeed = 0.0f;
+            CurrentForwardSpeed = 0.0f;
+            CurrentStrafeSpeed = 0.0f;
+            return;
+        }
+
+        Vector3 velocity = _player.Velocity;
+        Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
+        Basis basis = _player.Camera?.GlobalTransform.Basis ?? _player.GlobalTransform.Basis;
+        Vector3 forward = GetFlatDirection(-basis.Z);
+        Vector3 right = GetFlatDirection(basis.X);
+
+        CurrentSpeed = GetPlayerSpeed();
+        CurrentForwardSpeed = forward.IsZeroApprox() ? 0.0f : Mathf.Abs(horizontalVelocity.Dot(forward));
+        CurrentStrafeSpeed = right.IsZeroApprox() ? 0.0f : Mathf.Abs(horizontalVelocity.Dot(right));
     }
 
     private PlayerTuningProfile TuningProfile => _player?.ActiveTuningProfile;

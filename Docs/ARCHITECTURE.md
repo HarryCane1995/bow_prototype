@@ -57,6 +57,12 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - При добавлении новой системы предпочтительно создать отдельный модуль или отдельный компонент, а не расширять существующий класс несвязанной логикой.
 - Подробные правила для дверей, сундуков, рычагов, терминалов и других interact-объектов описаны в `Docs/INTERACTION_ARCHITECTURE.md`.
 
+## ViewModel Aim Stabilization Rule
+
+Aim-stabilized sway lives inside `PlayerViewModelSwayModule` and is only a visual correction for `ViewModelSwayRoot`. It may use `ViewModelCamera3D` and `ArrowTipMarker` to keep the visual arrow tip near the center ray, but it must not move gameplay `Camera3D`, `ViewModelCamera3D`, `ShootPoint`, crosshair, `PlayerBowShootModule`, `ArrowProjectile`, or projectile direction.
+
+`ArrowTipMarker` is a scene marker for visual alignment only. It is not an aiming source for gameplay code.
+
 ## Precision Shot Rule
 
 - Precision Shot активируется только как instant `Alt + ЛКМ press` через `PlayerBowShootModule`.

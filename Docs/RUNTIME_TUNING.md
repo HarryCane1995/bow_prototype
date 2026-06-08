@@ -62,6 +62,33 @@ Default-профиль лежит здесь:
 
 Изменение slider/spinbox сразу меняет значения в `PlayerTuningProfile`. Модули читают профиль во время расчёта поведения, поэтому изменения применяются live.
 
+## ViewModel Sway Smoothing
+
+В `ViewModel / Sway` есть отдельные настройки сглаживания mouse lag: `EnableMouseLagSmoothing`, `MouseLagInputSmoothSpeed` и `MouseLagOutputSmoothSpeed`. Input smoothing фильтрует сырой mouse delta, output smoothing фильтрует готовый offset от mouse lag.
+
+`EnableRotationSmoothing`, `RotationSmoothSpeed` и `PositionSmoothSpeed` сглаживают итоговые visual rotation/position offsets после mouse lag, movement inertia и landing sway. При высоком sway можно снижать smooth speed, чтобы сохранить сильный эффект без резкого дёрганья.
+
+Эти параметры влияют только на `ViewModelSwayRoot` и не меняют стрельбу, gameplay aim, crosshair или projectile direction.
+
+## ViewModel Aim Stabilization
+
+`ViewModel / Aim Stabilization` управляет визуальной стабилизацией наконечника стрелы около crosshair. Слой работает в `PlayerViewModelSwayModule`: он использует `ArrowTipMarker`, центральный луч `ViewModelCamera3D` и мягкий ограниченный поворот `ViewModelSwayRoot`.
+
+Параметры:
+
+- `EnableAimStabilization`;
+- `AimStabilizationStrength`;
+- `AimStabilizationSmoothSpeed`;
+- `MaxAimCorrectionDegrees`;
+- `AimStabilizationDeadZone`;
+- `StabilizeOnlyWhenAiming`.
+
+Стабилизация не меняет `PlayerBowShootModule`, `ArrowProjectile`, gameplay camera, `ShootPoint`, crosshair или projectile direction. Если `EnableAimStabilization` выключить, viewmodel возвращается к обычному sway.
+
+## Jitter Diagnostics
+
+Для A/D strafe jitter используйте `Docs/JITTER_DIAGNOSTICS.md`. Основной порядок: выключить `EnableViewModelSway`/`EnableAimStabilization`, затем `EnableSpeedFov`, затем `EnableDirectionChangeAcceleration`, затем `EnableCounterStrafeBoost`. В `Camera / Speed FOV` есть readout `Speed FOV Debug` с текущей speed/FOV диагностикой.
+
 ## Save / Load
 
 Кнопки панели:

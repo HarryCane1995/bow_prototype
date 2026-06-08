@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="PlayerTuningProfile" format=3]
+[gd_resource type="Resource" script_class="PlayerTuningProfile" format=3 uid="uid://bq0fvqf7tcneo"]
 
-[ext_resource type="Script" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
+[ext_resource type="Script" uid="uid://bxgpsdu6uk7g2" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
 
 [resource]
 script = ExtResource("1_player_tuning_profile")
@@ -8,8 +8,8 @@ MoveSpeed = 10.0
 GroundAcceleration = 50.0
 GroundDeceleration = 100.0
 GroundDirectionChangeAcceleration = 100.0
-CounterStrafeBoost = 2.5
-JumpVelocity = 12.3
+CounterStrafeBoost = 4.0
+JumpVelocity = 14.0
 DoubleJumpVelocityMultiplier = 1.5
 DoubleJumpRedirectSpeed = 13.8
 CrouchSpeedMultiplier = 0.6
@@ -21,7 +21,7 @@ SlideJumpHorizontalBoost = 2.75
 SlideJumpMaxHorizontalSpeed = 15.5
 MaxGrappleDistance = 35.5
 GrappleCameraSnapDuration = 0.25
-GrappleCameraSnapMaxPitchDegrees = 84.0
+GrappleCameraSnapMaxPitchDegrees = 89.0
 PullAcceleration = 140.0
 MaxPullSpeed = 20.0
 LaunchSpeed = 30.0
@@ -38,8 +38,8 @@ MouseLagPositionAmount = 0.056
 MouseLagRotationAmount = 5.6
 MovementInertiaPositionAmount = 0.026
 MovementInertiaRotationAmount = 3.45
-LandingPositionAmount = 0.092
-LandingRotationAmount = 0.1
-SwayFollowSpeed = 30.0
-SwayReturnSpeed = 14.9
-ImpulseReturnSpeed = 9.8
+LandingPositionAmount = 0.1
+LandingRotationAmount = 1.0
+SwayFollowSpeed = 11.8
+SwayReturnSpeed = 8.1
+ImpulseReturnSpeed = 10.4

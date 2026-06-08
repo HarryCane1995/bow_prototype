@@ -29,10 +29,23 @@ public partial class StartupWindowModeController : Node
     [Export] public bool ApplyDeferredOnReady { get; private set; } = true;
 
     /// <summary>
+    /// Включает dev-переопределение частоты physics ticks при старте сцены; по умолчанию выключено, чтобы не менять поведение проекта.
+    /// </summary>
+    [ExportGroup("Dev Physics")]
+    [Export] public bool EnablePhysicsTickOverride { get; private set; } = false;
+
+    /// <summary>
+    /// Частота physics ticks для ручного теста jitter/cadence, если EnablePhysicsTickOverride включён.
+    /// </summary>
+    [Export(PropertyHint.Range, "30,240,1,suffix:Hz")] public int PhysicsTicksPerSecondOverride { get; private set; } = 120;
+
+    /// <summary>
     /// Запускает применение настроек окна при входе контроллера в сцену.
     /// </summary>
     public override void _Ready()
     {
+        ApplyDevPhysicsSettings();
+
         if (!EnableStartupWindowMode)
         {
             return;
@@ -67,5 +80,18 @@ public partial class StartupWindowModeController : Node
             ? DisplayServer.WindowMode.ExclusiveFullscreen
             : DisplayServer.WindowMode.Fullscreen;
         DisplayServer.WindowSetMode(fullscreenMode);
+    }
+
+    /// <summary>
+    /// Применяет dev-настройки physics cadence для диагностики jitter, если они явно включены в Inspector.
+    /// </summary>
+    private void ApplyDevPhysicsSettings()
+    {
+        if (!EnablePhysicsTickOverride)
+        {
+            return;
+        }
+
+        Engine.PhysicsTicksPerSecond = Mathf.Max(1, PhysicsTicksPerSecondOverride);
     }
 }

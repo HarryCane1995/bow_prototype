@@ -114,6 +114,8 @@ ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportConta
 [node name="PlayerViewModelSwayModule" type="Node" parent="."]
 script = ExtResource("15_viewmodel_sway")
 ViewModelSwayRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot")
+ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
+ArrowTipMarkerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual/ArrowTipMarker")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="."]
 
@@ -159,3 +161,6 @@ shadow_enabled = false
 position = Vector3(0.35, -0.35, -0.85)
 
 [node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" instance=ExtResource("8_bow_model")]
+
+[node name="ArrowTipMarker" type="Marker3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual"]
+position = Vector3(0, 0, -0.45)

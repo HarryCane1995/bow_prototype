@@ -34,6 +34,16 @@ public partial class PlayerCameraFovModule : Node
     public bool IsPrecisionAiming => _isPrecisionAiming;
 
     /// <summary>
+    /// Последний итоговый target FOV после base/precision FOV и speed FOV bonus.
+    /// </summary>
+    public float FinalTargetFov => _targetFov;
+
+    /// <summary>
+    /// Текущий FOV основной камеры для runtime debug readout.
+    /// </summary>
+    public float CurrentCameraFov => _camera?.Fov ?? 0.0f;
+
+    /// <summary>
     /// Инициализирует модуль и выставляет обычный FOV как текущую цель камеры.
     /// </summary>
     public void Initialize(PlayerController player)

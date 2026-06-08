@@ -24,24 +24,24 @@
 [ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
-[ext_resource type="Resource" uid="uid://bbcdhfoexfwdc" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="23_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="24_viewmodel_sway"]
-[ext_resource type="Script" path="res://Scripts/System/StartupWindowModeController.cs" id="25_startup_window_mode"]
-[ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="26_ability_state"]
+[ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="25_startup_window_mode"]
+[ext_resource type="Script" uid="uid://dsig4854mc5hn" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="26_ability_state"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_y05sl"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ss23j"]
 panorama = ExtResource("2_f64f4")
 energy_multiplier = 1.2
 
-[sub_resource type="Sky" id="Sky_ru6d7"]
-sky_material = SubResource("PanoramaSkyMaterial_y05sl")
+[sub_resource type="Sky" id="Sky_dur7x"]
+sky_material = SubResource("PanoramaSkyMaterial_ss23j")
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 2
 background_energy_multiplier = 2.66
-sky = SubResource("Sky_ru6d7")
+sky = SubResource("Sky_dur7x")
 ambient_light_source = 3
 ambient_light_color = Color(0.59893155, 0.5245708, 0.64546496, 1)
 ambient_light_energy = 3.68
@@ -89,7 +89,7 @@ height = 1.8
 
 [node name="BowPrototypeScene" type="Node3D" unique_id=1633690768]
 
-[node name="StartupWindowModeController" type="Node" parent="."]
+[node name="StartupWindowModeController" type="Node" parent="." unique_id=822522326]
 script = ExtResource("25_startup_window_mode")
 
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
@@ -326,7 +326,7 @@ gizmo_extents = 1.22
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 target_position = Vector3(0, -0.45, 0)
 
-[node name="PlayerAbilityStateModule" type="Node" parent="Player"]
+[node name="PlayerAbilityStateModule" type="Node" parent="Player" unique_id=1035748816]
 script = ExtResource("26_ability_state")
 
 [node name="PlayerMovementModule" type="Node" parent="Player" unique_id=1865948467]
@@ -434,6 +434,9 @@ transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.
 
 [node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=94202277 instance=ExtResource("10_bow_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
+
+[node name="CanvasLayer_ViewModel_ViewModelSubViewportContainer_ViewModelSubViewport_ViewModelRoot_ViewModelSwayRoot_BowViewModelHolder_Bow_ViewModel_BowRig_NockPoint_Bone_Arrow_Bone_Arrow_Visual#ArrowTipMarker" type="Marker3D" parent="." unique_id=339129022]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740547688]
 layer = 2

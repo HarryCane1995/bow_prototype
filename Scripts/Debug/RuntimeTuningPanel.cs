@@ -25,6 +25,8 @@ public partial class RuntimeTuningPanel : Window
 
     private VBoxContainer _content;
     private bool _wasTogglePressed;
+    private PlayerController _player;
+    private readonly System.Collections.Generic.List<System.Action> _readoutUpdaters = new();
 
     public override void _Ready()
     {
@@ -47,17 +49,22 @@ public partial class RuntimeTuningPanel : Window
         }
 
         _wasTogglePressed = togglePressed;
+
+        foreach (System.Action updateReadout in _readoutUpdaters)
+        {
+            updateReadout();
+        }
     }
 
     private void ResolveTuningProfile()
     {
+        _player = GetNodeOrNull<PlayerController>(PlayerPath);
         if (TuningProfile != null)
         {
             return;
         }
 
-        PlayerController player = GetNodeOrNull<PlayerController>(PlayerPath);
-        TuningProfile = player?.TuningProfile;
+        TuningProfile = _player?.TuningProfile;
     }
 
     private void BuildUi()
@@ -101,7 +108,9 @@ public partial class RuntimeTuningPanel : Window
         AddBowSection();
         AddCameraSection();
         AddSpeedFovSection();
+        AddFramePhysicsDebugSection();
         AddViewModelSwaySection();
+        AddViewModelAimStabilizationSection();
     }
 
     private void AddToolbar()
@@ -148,7 +157,9 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Move Speed", 0.0, 30.0, 0.1, () => TuningProfile.MoveSpeed, value => TuningProfile.MoveSpeed = value);
         AddFloatControl("Ground Acceleration", 0.0, 160.0, 0.5, () => TuningProfile.GroundAcceleration, value => TuningProfile.GroundAcceleration = value);
         AddFloatControl("Ground Deceleration", 0.0, 160.0, 0.5, () => TuningProfile.GroundDeceleration, value => TuningProfile.GroundDeceleration = value);
+        AddBoolControl("Enable Direction Change Accel", () => TuningProfile.EnableDirectionChangeAcceleration, value => TuningProfile.EnableDirectionChangeAcceleration = value);
         AddFloatControl("Ground Direction Change", 0.0, 180.0, 0.5, () => TuningProfile.GroundDirectionChangeAcceleration, value => TuningProfile.GroundDirectionChangeAcceleration = value);
+        AddBoolControl("Enable Counter Strafe Boost", () => TuningProfile.EnableCounterStrafeBoost, value => TuningProfile.EnableCounterStrafeBoost = value);
         AddFloatControl("Counter Strafe Boost", 1.0, 4.0, 0.05, () => TuningProfile.CounterStrafeBoost, value => TuningProfile.CounterStrafeBoost = value);
     }
 
@@ -248,14 +259,25 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Strafe Speed FOV Multiplier", 0.0, 2.0, 0.05, () => TuningProfile.StrafeSpeedFovMultiplier, value => TuningProfile.StrafeSpeedFovMultiplier = value);
         AddFloatControl("Min Strafe Speed For FOV", 0.0, 25.0, 0.5, () => TuningProfile.MinStrafeSpeedForFov, value => TuningProfile.MinStrafeSpeedForFov = value);
         AddBoolControl("Include Backward Speed", () => TuningProfile.IncludeBackwardSpeedInForwardFov, value => TuningProfile.IncludeBackwardSpeedInForwardFov = value);
+        AddReadout("Speed FOV Debug", GetSpeedFovDebugText);
+    }
+
+    private void AddFramePhysicsDebugSection()
+    {
+        AddSection("Frame / Physics Debug");
+        AddReadout("Cadence Debug", GetFramePhysicsDebugText);
     }
 
     private void AddViewModelSwaySection()
     {
         AddSection("ViewModel / Sway");
+        AddBoolControl("Enable ViewModel Sway", () => TuningProfile.EnableViewModelSway, value => TuningProfile.EnableViewModelSway = value);
         AddBoolControl("Enable Mouse Lag", () => TuningProfile.EnableMouseLag, value => TuningProfile.EnableMouseLag = value);
         AddFloatControl("Mouse Lag Position", 0.0, 0.08, 0.001, () => TuningProfile.MouseLagPositionAmount, value => TuningProfile.MouseLagPositionAmount = value);
         AddFloatControl("Mouse Lag Rotation", 0.0, 8.0, 0.1, () => TuningProfile.MouseLagRotationAmount, value => TuningProfile.MouseLagRotationAmount = value);
+        AddBoolControl("Enable Mouse Lag Smoothing", () => TuningProfile.EnableMouseLagSmoothing, value => TuningProfile.EnableMouseLagSmoothing = value);
+        AddFloatControl("Mouse Lag Input Smooth", 0.1, 40.0, 0.1, () => TuningProfile.MouseLagInputSmoothSpeed, value => TuningProfile.MouseLagInputSmoothSpeed = value);
+        AddFloatControl("Mouse Lag Output Smooth", 0.1, 40.0, 0.1, () => TuningProfile.MouseLagOutputSmoothSpeed, value => TuningProfile.MouseLagOutputSmoothSpeed = value);
         AddBoolControl("Enable Movement Inertia", () => TuningProfile.EnableMovementInertia, value => TuningProfile.EnableMovementInertia = value);
         AddFloatControl("Movement Inertia Position", 0.0, 0.03, 0.001, () => TuningProfile.MovementInertiaPositionAmount, value => TuningProfile.MovementInertiaPositionAmount = value);
         AddFloatControl("Movement Inertia Rotation", 0.0, 4.0, 0.05, () => TuningProfile.MovementInertiaRotationAmount, value => TuningProfile.MovementInertiaRotationAmount = value);
@@ -265,6 +287,20 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Sway Follow Speed", 0.1, 30.0, 0.1, () => TuningProfile.SwayFollowSpeed, value => TuningProfile.SwayFollowSpeed = value);
         AddFloatControl("Sway Return Speed", 0.1, 30.0, 0.1, () => TuningProfile.SwayReturnSpeed, value => TuningProfile.SwayReturnSpeed = value);
         AddFloatControl("Impulse Return Speed", 0.1, 30.0, 0.1, () => TuningProfile.ImpulseReturnSpeed, value => TuningProfile.ImpulseReturnSpeed = value);
+        AddBoolControl("Enable Rotation Smoothing", () => TuningProfile.EnableRotationSmoothing, value => TuningProfile.EnableRotationSmoothing = value);
+        AddFloatControl("Rotation Smooth Speed", 0.1, 40.0, 0.1, () => TuningProfile.RotationSmoothSpeed, value => TuningProfile.RotationSmoothSpeed = value);
+        AddFloatControl("Position Smooth Speed", 0.1, 40.0, 0.1, () => TuningProfile.PositionSmoothSpeed, value => TuningProfile.PositionSmoothSpeed = value);
+    }
+
+    private void AddViewModelAimStabilizationSection()
+    {
+        AddSection("ViewModel / Aim Stabilization");
+        AddBoolControl("Enable Aim Stabilization", () => TuningProfile.EnableAimStabilization, value => TuningProfile.EnableAimStabilization = value);
+        AddFloatControl("Aim Stabilization Strength", 0.0, 1.0, 0.01, () => TuningProfile.AimStabilizationStrength, value => TuningProfile.AimStabilizationStrength = value);
+        AddFloatControl("Aim Stabilization Smooth", 0.1, 40.0, 0.1, () => TuningProfile.AimStabilizationSmoothSpeed, value => TuningProfile.AimStabilizationSmoothSpeed = value);
+        AddFloatControl("Max Aim Correction", 0.0, 30.0, 0.5, () => TuningProfile.MaxAimCorrectionDegrees, value => TuningProfile.MaxAimCorrectionDegrees = value);
+        AddFloatControl("Aim Stabilization Dead Zone", 0.0, 0.2, 0.005, () => TuningProfile.AimStabilizationDeadZone, value => TuningProfile.AimStabilizationDeadZone = value);
+        AddBoolControl("Only When Aiming", () => TuningProfile.StabilizeOnlyWhenAiming, value => TuningProfile.StabilizeOnlyWhenAiming = value);
     }
 
     private void AddSection(string title)
@@ -332,6 +368,54 @@ public partial class RuntimeTuningPanel : Window
 
         checkBox.Toggled += pressed => setter(pressed);
         _content.AddChild(checkBox);
+    }
+
+    private void AddReadout(string labelText, System.Func<string> getter)
+    {
+        Label label = new()
+        {
+            Text = $"{labelText}: {getter()}",
+            AutowrapMode = TextServer.AutowrapMode.WordSmart
+        };
+
+        _readoutUpdaters.Add(() => label.Text = $"{labelText}: {getter()}");
+        _content.AddChild(label);
+    }
+
+    private string GetSpeedFovDebugText()
+    {
+        PlayerSpeedFovModule speedFov = _player?.SpeedFovModule;
+        PlayerCameraFovModule cameraFov = _player?.CameraFovModule;
+        if (speedFov == null || cameraFov == null)
+        {
+            return "player modules unavailable";
+        }
+
+        return $"speed={speedFov.CurrentSpeed:0.00}, forward={speedFov.CurrentForwardSpeed:0.00}, strafe={speedFov.CurrentStrafeSpeed:0.00}, bonus={speedFov.CurrentSpeedFovBonus:0.00}/{speedFov.CurrentTargetSpeedFovBonus:0.00}, targetFov={cameraFov.FinalTargetFov:0.00}, cameraFov={cameraFov.CurrentCameraFov:0.00}";
+    }
+
+    private string GetFramePhysicsDebugText()
+    {
+        Vector3 velocity = _player?.Velocity ?? Vector3.Zero;
+        float horizontalSpeed = new Vector3(velocity.X, 0.0f, velocity.Z).Length();
+        PlayerSpeedFovModule speedFov = _player?.SpeedFovModule;
+        PlayerCameraFovModule cameraFov = _player?.CameraFovModule;
+        string physicsInterpolation = GetProjectSettingBoolText("physics/common/physics_interpolation");
+        bool speedFovEnabled = TuningProfile?.EnableSpeedFov ?? false;
+        float speedFovBonus = speedFov?.CurrentSpeedFovBonus ?? 0.0f;
+        float cameraFovValue = cameraFov?.CurrentCameraFov ?? _player?.Camera?.Fov ?? 0.0f;
+
+        return $"fps={Engine.GetFramesPerSecond():0}, physicsTicks={Engine.PhysicsTicksPerSecond}, physicsInterpolation={physicsInterpolation}, velocityXZ=({velocity.X:0.00}, {velocity.Z:0.00}), horizontalSpeed={horizontalSpeed:0.00}, cameraFov={cameraFovValue:0.00}, speedFovEnabled={speedFovEnabled}, speedFovBonus={speedFovBonus:0.00}";
+    }
+
+    private static string GetProjectSettingBoolText(string settingName)
+    {
+        if (!ProjectSettings.HasSetting(settingName))
+        {
+            return "unavailable";
+        }
+
+        return ProjectSettings.GetSetting(settingName).AsBool() ? "true" : "false";
     }
 
     private void ResetToDefaults()
@@ -402,6 +486,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void RebuildUi()
     {
+        _readoutUpdaters.Clear();
         foreach (Node child in GetChildren())
         {
             RemoveChild(child);
@@ -418,7 +503,9 @@ public partial class RuntimeTuningPanel : Window
             ["MoveSpeed"] = profile.MoveSpeed,
             ["GroundAcceleration"] = profile.GroundAcceleration,
             ["GroundDeceleration"] = profile.GroundDeceleration,
+            ["EnableDirectionChangeAcceleration"] = profile.EnableDirectionChangeAcceleration,
             ["GroundDirectionChangeAcceleration"] = profile.GroundDirectionChangeAcceleration,
+            ["EnableCounterStrafeBoost"] = profile.EnableCounterStrafeBoost,
             ["CounterStrafeBoost"] = profile.CounterStrafeBoost,
             ["JumpVelocity"] = profile.JumpVelocity,
             ["EnableDoubleJump"] = profile.EnableDoubleJump,
@@ -489,9 +576,13 @@ public partial class RuntimeTuningPanel : Window
             ["StrafeSpeedFovMultiplier"] = profile.StrafeSpeedFovMultiplier,
             ["MinStrafeSpeedForFov"] = profile.MinStrafeSpeedForFov,
             ["IncludeBackwardSpeedInForwardFov"] = profile.IncludeBackwardSpeedInForwardFov,
+            ["EnableViewModelSway"] = profile.EnableViewModelSway,
             ["EnableMouseLag"] = profile.EnableMouseLag,
             ["MouseLagPositionAmount"] = profile.MouseLagPositionAmount,
             ["MouseLagRotationAmount"] = profile.MouseLagRotationAmount,
+            ["EnableMouseLagSmoothing"] = profile.EnableMouseLagSmoothing,
+            ["MouseLagInputSmoothSpeed"] = profile.MouseLagInputSmoothSpeed,
+            ["MouseLagOutputSmoothSpeed"] = profile.MouseLagOutputSmoothSpeed,
             ["EnableMovementInertia"] = profile.EnableMovementInertia,
             ["MovementInertiaPositionAmount"] = profile.MovementInertiaPositionAmount,
             ["MovementInertiaRotationAmount"] = profile.MovementInertiaRotationAmount,
@@ -500,7 +591,16 @@ public partial class RuntimeTuningPanel : Window
             ["LandingRotationAmount"] = profile.LandingRotationAmount,
             ["SwayFollowSpeed"] = profile.SwayFollowSpeed,
             ["SwayReturnSpeed"] = profile.SwayReturnSpeed,
-            ["ImpulseReturnSpeed"] = profile.ImpulseReturnSpeed
+            ["ImpulseReturnSpeed"] = profile.ImpulseReturnSpeed,
+            ["EnableRotationSmoothing"] = profile.EnableRotationSmoothing,
+            ["RotationSmoothSpeed"] = profile.RotationSmoothSpeed,
+            ["PositionSmoothSpeed"] = profile.PositionSmoothSpeed,
+            ["EnableAimStabilization"] = profile.EnableAimStabilization,
+            ["AimStabilizationStrength"] = profile.AimStabilizationStrength,
+            ["AimStabilizationSmoothSpeed"] = profile.AimStabilizationSmoothSpeed,
+            ["MaxAimCorrectionDegrees"] = profile.MaxAimCorrectionDegrees,
+            ["AimStabilizationDeadZone"] = profile.AimStabilizationDeadZone,
+            ["StabilizeOnlyWhenAiming"] = profile.StabilizeOnlyWhenAiming
         };
     }
 
@@ -514,7 +614,9 @@ public partial class RuntimeTuningPanel : Window
         profile.MoveSpeed = GetFloat(values, "MoveSpeed", profile.MoveSpeed);
         profile.GroundAcceleration = GetFloat(values, "GroundAcceleration", profile.GroundAcceleration);
         profile.GroundDeceleration = GetFloat(values, "GroundDeceleration", profile.GroundDeceleration);
+        profile.EnableDirectionChangeAcceleration = GetBool(values, "EnableDirectionChangeAcceleration", profile.EnableDirectionChangeAcceleration);
         profile.GroundDirectionChangeAcceleration = GetFloat(values, "GroundDirectionChangeAcceleration", profile.GroundDirectionChangeAcceleration);
+        profile.EnableCounterStrafeBoost = GetBool(values, "EnableCounterStrafeBoost", profile.EnableCounterStrafeBoost);
         profile.CounterStrafeBoost = GetFloat(values, "CounterStrafeBoost", profile.CounterStrafeBoost);
         profile.JumpVelocity = GetFloat(values, "JumpVelocity", profile.JumpVelocity);
         profile.EnableDoubleJump = GetBool(values, "EnableDoubleJump", profile.EnableDoubleJump);
@@ -585,9 +687,13 @@ public partial class RuntimeTuningPanel : Window
         profile.StrafeSpeedFovMultiplier = GetFloat(values, "StrafeSpeedFovMultiplier", profile.StrafeSpeedFovMultiplier);
         profile.MinStrafeSpeedForFov = GetFloat(values, "MinStrafeSpeedForFov", profile.MinStrafeSpeedForFov);
         profile.IncludeBackwardSpeedInForwardFov = GetBool(values, "IncludeBackwardSpeedInForwardFov", profile.IncludeBackwardSpeedInForwardFov);
+        profile.EnableViewModelSway = GetBool(values, "EnableViewModelSway", profile.EnableViewModelSway);
         profile.EnableMouseLag = GetBool(values, "EnableMouseLag", profile.EnableMouseLag);
         profile.MouseLagPositionAmount = GetFloat(values, "MouseLagPositionAmount", profile.MouseLagPositionAmount);
         profile.MouseLagRotationAmount = GetFloat(values, "MouseLagRotationAmount", profile.MouseLagRotationAmount);
+        profile.EnableMouseLagSmoothing = GetBool(values, "EnableMouseLagSmoothing", profile.EnableMouseLagSmoothing);
+        profile.MouseLagInputSmoothSpeed = GetFloat(values, "MouseLagInputSmoothSpeed", profile.MouseLagInputSmoothSpeed);
+        profile.MouseLagOutputSmoothSpeed = GetFloat(values, "MouseLagOutputSmoothSpeed", profile.MouseLagOutputSmoothSpeed);
         profile.EnableMovementInertia = GetBool(values, "EnableMovementInertia", profile.EnableMovementInertia);
         profile.MovementInertiaPositionAmount = GetFloat(values, "MovementInertiaPositionAmount", profile.MovementInertiaPositionAmount);
         profile.MovementInertiaRotationAmount = GetFloat(values, "MovementInertiaRotationAmount", profile.MovementInertiaRotationAmount);
@@ -597,6 +703,15 @@ public partial class RuntimeTuningPanel : Window
         profile.SwayFollowSpeed = GetFloat(values, "SwayFollowSpeed", profile.SwayFollowSpeed);
         profile.SwayReturnSpeed = GetFloat(values, "SwayReturnSpeed", profile.SwayReturnSpeed);
         profile.ImpulseReturnSpeed = GetFloat(values, "ImpulseReturnSpeed", profile.ImpulseReturnSpeed);
+        profile.EnableRotationSmoothing = GetBool(values, "EnableRotationSmoothing", profile.EnableRotationSmoothing);
+        profile.RotationSmoothSpeed = GetFloat(values, "RotationSmoothSpeed", profile.RotationSmoothSpeed);
+        profile.PositionSmoothSpeed = GetFloat(values, "PositionSmoothSpeed", profile.PositionSmoothSpeed);
+        profile.EnableAimStabilization = GetBool(values, "EnableAimStabilization", profile.EnableAimStabilization);
+        profile.AimStabilizationStrength = GetFloat(values, "AimStabilizationStrength", profile.AimStabilizationStrength);
+        profile.AimStabilizationSmoothSpeed = GetFloat(values, "AimStabilizationSmoothSpeed", profile.AimStabilizationSmoothSpeed);
+        profile.MaxAimCorrectionDegrees = GetFloat(values, "MaxAimCorrectionDegrees", profile.MaxAimCorrectionDegrees);
+        profile.AimStabilizationDeadZone = GetFloat(values, "AimStabilizationDeadZone", profile.AimStabilizationDeadZone);
+        profile.StabilizeOnlyWhenAiming = GetBool(values, "StabilizeOnlyWhenAiming", profile.StabilizeOnlyWhenAiming);
     }
 
     private static void CopyProfile(PlayerTuningProfile source, PlayerTuningProfile target)

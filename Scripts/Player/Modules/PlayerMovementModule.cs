@@ -31,9 +31,19 @@ public partial class PlayerMovementModule : Node
     [Export(PropertyHint.Range, "0,120,0.5,suffix:m/s^2")] public float GroundDeceleration { get; set; } = 28.0f;
 
     /// <summary>
+    /// Включает отдельное ускорение при резкой смене направления; для диагностики jitter можно временно отключить.
+    /// </summary>
+    [Export] public bool EnableDirectionChangeAcceleration { get; set; } = true;
+
+    /// <summary>
     /// Ускорение при резкой смене направления по земле. Увеличение делает D->A и W->S отзывчивее; уменьшение оставляет больше старой инерции.
     /// </summary>
     [Export(PropertyHint.Range, "0,160,0.5,suffix:m/s^2")] public float GroundDirectionChangeAcceleration { get; set; } = 55.0f;
+
+    /// <summary>
+    /// Включает множитель counter-strafe acceleration; для диагностики jitter можно временно отключить.
+    /// </summary>
+    [Export] public bool EnableCounterStrafeBoost { get; set; } = true;
 
     /// <summary>
     /// Дополнительный множитель для почти противоположного направления ввода. Увеличение сильнее ускоряет counter-strafe; уменьшение делает разворот мягче.
@@ -142,12 +152,12 @@ public partial class PlayerMovementModule : Node
         }
 
         float dot = currentHorizontalVelocity.Normalized().Dot(desiredDirection);
-        if (dot < DirectionChangeDotThreshold)
+        if (CurrentEnableDirectionChangeAcceleration && dot < DirectionChangeDotThreshold)
         {
             selectedAcceleration = isGrounded ? CurrentGroundDirectionChangeAcceleration : AirDirectionChangeAcceleration;
         }
 
-        if (dot < 0.0f)
+        if (CurrentEnableCounterStrafeBoost && dot < 0.0f)
         {
             selectedAcceleration *= CurrentCounterStrafeBoost;
         }
@@ -159,7 +169,9 @@ public partial class PlayerMovementModule : Node
     private float CurrentMoveSpeed => TuningProfile?.MoveSpeed ?? MoveSpeed;
     private float CurrentGroundAcceleration => TuningProfile?.GroundAcceleration ?? GroundAcceleration;
     private float CurrentGroundDeceleration => TuningProfile?.GroundDeceleration ?? GroundDeceleration;
+    private bool CurrentEnableDirectionChangeAcceleration => TuningProfile?.EnableDirectionChangeAcceleration ?? EnableDirectionChangeAcceleration;
     private float CurrentGroundDirectionChangeAcceleration => TuningProfile?.GroundDirectionChangeAcceleration ?? GroundDirectionChangeAcceleration;
+    private bool CurrentEnableCounterStrafeBoost => TuningProfile?.EnableCounterStrafeBoost ?? EnableCounterStrafeBoost;
     private float CurrentCounterStrafeBoost => TuningProfile?.CounterStrafeBoost ?? CounterStrafeBoost;
 
     private Vector2 GetMovementInput()
