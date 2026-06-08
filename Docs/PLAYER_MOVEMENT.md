@@ -5,6 +5,7 @@
 ## Горизонтальное движение
 
 - `PlayerMovementModule` отвечает за WASD movement.
+- Перед записью X/Z velocity `PlayerMovementModule` спрашивает `PlayerAbilityStateModule.CanWrite(DefaultMovement, HorizontalVelocity)`. Если более приоритетная способность держит `HorizontalVelocity`, обычный movement не перетирает её velocity.
 - Направление движения считается относительно поворота игрока/камеры.
 - Горизонтальная скорость разгоняется как единый `Vector3`, чтобы старт движения не уходил в сторону мировой оси.
 - Обычный air control теперь настраивается через `AirAcceleration`, `AirDeceleration` и `AirDirectionChangeAcceleration`; старый `AirControlMultiplier` сохранён в коде только как legacy-поле для совместимости сцен.
@@ -51,10 +52,12 @@
 ## Slide
 
 - Slide стартует только на земле, только по нажатию `crouch_slide`, если горизонтальная скорость не ниже `SlideMinStartSpeed`.
+- Перед стартом slide модуль проверяет `CanStart(Slide | HorizontalVelocity)`. При успешном старте `Slide` регистрирует active request с priority `30` и lock `HorizontalVelocity`.
 - При старте игрок переходит в низкое состояние, как crouch.
 - Если есть WASD input и `SlideKeepsInputDirection = true`, направление slide считается относительно камеры.
 - Если input нет, slide использует текущую горизонтальную скорость игрока.
 - Во время slide `PlayerCrouchSlideModule` управляет X/Z velocity сам, а `PlayerMovementModule` не перезаписывает горизонтальную скорость.
+- При завершении slide, cancel или slide jump модуль снимает `Slide` request через `EndAbility`.
 - Slide длится не дольше `SlideDuration`, затухает через `SlideFriction` и ограничивается `SlideCooldown`.
 - Если `EnableSlideExitBySpeed = true`, slide завершается раньше, когда горизонтальная скорость падает ниже `SlideExitMinSpeed` после стартового окна `SlideExitMinSpeedGraceTime`.
 - При выходе из slide игрок остаётся в crouch, если `crouch_slide` всё ещё удерживается или сверху нет места для вставания; иначе возвращается в standing.

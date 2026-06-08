@@ -365,6 +365,27 @@ public partial class PlayerTuningProfile : Resource
     [Export] public bool DisableSpeedFovDuringPrecisionAim { get; set; } = true;
 
     /// <summary>
+    /// Если включено, speed FOV отдельно считает вклад forward/back и бокового strafe относительно камеры.
+    /// </summary>
+    [ExportGroup("Camera / Speed FOV / Axis Influence")]
+    [Export] public bool UseAxisBasedSpeedFov { get; set; } = true;
+
+    /// <summary>
+    /// Множитель влияния боковой скорости A/D на FOV. Значение 0 полностью отключает FOV-расширение от strafe.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.05")] public float StrafeSpeedFovMultiplier { get; set; } = 0.0f;
+
+    /// <summary>
+    /// Минимальная боковая скорость, ниже которой strafe не добавляет FOV-бонус.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float MinStrafeSpeedForFov { get; set; } = 5.0f;
+
+    /// <summary>
+    /// Если включено, движение назад S влияет на forward FOV так же, как движение вперёд W.
+    /// </summary>
+    [Export] public bool IncludeBackwardSpeedInForwardFov { get; set; } = true;
+
+    /// <summary>
     /// Включает viewmodel lag от движения мыши.
     /// </summary>
     [ExportGroup("ViewModel Sway")]

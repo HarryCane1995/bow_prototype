@@ -11,6 +11,7 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 ## Основные части
 
 - `PlayerController` - центральный координатор игрока. Собирает ссылки на модули, передаёт им нужные вызовы и связывает системы между собой.
+- `PlayerAbilityStateModule` - arbitration layer для ability/motor authority. Хранит active ability requests, priorities и lock-флаги, но не реализует slide, grapple, jump, shooting или другие механики.
 - `PlayerMovementModule` - отвечает за горизонтальное движение игрока.
 - `PlayerJumpModule` - отвечает за прыжок, coyote time, ground snap, simple double jump и redirect горизонтального движения на втором прыжке.
 - `PlayerCrouchSlideModule` - отвечает за crouch/slide state, высоту коллайдера, высоту камеры, проверку потолка, горизонтальную скорость во время подката, airborne slide buffer и горизонтальную часть slide jump.
@@ -34,7 +35,9 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 ## Правила архитектуры
 
 - `PlayerController` не должен превращаться в монолит и не должен содержать детальную логику отдельных систем.
+- `PlayerController` может хранить ссылку на `PlayerAbilityStateModule`, но не должен сам решать priority/lock rules или превращаться в God-object.
 - Каждый модуль отвечает за одну область поведения.
+- Новые механики должны запрашивать locks/authority через `PlayerAbilityStateModule`, а не напрямую ломать чужие состояния.
 - Логика конкретных интерактивных объектов не должна жить в `PlayerController`: игрок выражает намерение, а объект сам реализует своё поведение через общий контракт взаимодействия.
 - Enemies own their own AI and shooting behavior; `PlayerController` does not know how enemies patrol, aim or fire.
 - `EnemyProjectile` owns its own hit behavior; player death in this prototype is a scene reload triggered by projectile contact with the `player` group.

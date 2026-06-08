@@ -244,6 +244,10 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Speed FOV Smooth Down", 0.1, 25.0, 0.1, () => TuningProfile.SpeedFovSmoothDown, value => TuningProfile.SpeedFovSmoothDown = value);
         AddBoolControl("Use Full Velocity", () => TuningProfile.UseFullVelocityForSpeedFov, value => TuningProfile.UseFullVelocityForSpeedFov = value);
         AddBoolControl("Disable During Precision Aim", () => TuningProfile.DisableSpeedFovDuringPrecisionAim, value => TuningProfile.DisableSpeedFovDuringPrecisionAim = value);
+        AddBoolControl("Use Axis Based Speed FOV", () => TuningProfile.UseAxisBasedSpeedFov, value => TuningProfile.UseAxisBasedSpeedFov = value);
+        AddFloatControl("Strafe Speed FOV Multiplier", 0.0, 2.0, 0.05, () => TuningProfile.StrafeSpeedFovMultiplier, value => TuningProfile.StrafeSpeedFovMultiplier = value);
+        AddFloatControl("Min Strafe Speed For FOV", 0.0, 25.0, 0.5, () => TuningProfile.MinStrafeSpeedForFov, value => TuningProfile.MinStrafeSpeedForFov = value);
+        AddBoolControl("Include Backward Speed", () => TuningProfile.IncludeBackwardSpeedInForwardFov, value => TuningProfile.IncludeBackwardSpeedInForwardFov = value);
     }
 
     private void AddViewModelSwaySection()
@@ -481,6 +485,10 @@ public partial class RuntimeTuningPanel : Window
             ["SpeedFovSmoothDown"] = profile.SpeedFovSmoothDown,
             ["UseFullVelocityForSpeedFov"] = profile.UseFullVelocityForSpeedFov,
             ["DisableSpeedFovDuringPrecisionAim"] = profile.DisableSpeedFovDuringPrecisionAim,
+            ["UseAxisBasedSpeedFov"] = profile.UseAxisBasedSpeedFov,
+            ["StrafeSpeedFovMultiplier"] = profile.StrafeSpeedFovMultiplier,
+            ["MinStrafeSpeedForFov"] = profile.MinStrafeSpeedForFov,
+            ["IncludeBackwardSpeedInForwardFov"] = profile.IncludeBackwardSpeedInForwardFov,
             ["EnableMouseLag"] = profile.EnableMouseLag,
             ["MouseLagPositionAmount"] = profile.MouseLagPositionAmount,
             ["MouseLagRotationAmount"] = profile.MouseLagRotationAmount,
@@ -573,6 +581,10 @@ public partial class RuntimeTuningPanel : Window
         profile.SpeedFovSmoothDown = GetFloat(values, "SpeedFovSmoothDown", profile.SpeedFovSmoothDown);
         profile.UseFullVelocityForSpeedFov = GetBool(values, "UseFullVelocityForSpeedFov", profile.UseFullVelocityForSpeedFov);
         profile.DisableSpeedFovDuringPrecisionAim = GetBool(values, "DisableSpeedFovDuringPrecisionAim", profile.DisableSpeedFovDuringPrecisionAim);
+        profile.UseAxisBasedSpeedFov = GetBool(values, "UseAxisBasedSpeedFov", profile.UseAxisBasedSpeedFov);
+        profile.StrafeSpeedFovMultiplier = GetFloat(values, "StrafeSpeedFovMultiplier", profile.StrafeSpeedFovMultiplier);
+        profile.MinStrafeSpeedForFov = GetFloat(values, "MinStrafeSpeedForFov", profile.MinStrafeSpeedForFov);
+        profile.IncludeBackwardSpeedInForwardFov = GetBool(values, "IncludeBackwardSpeedInForwardFov", profile.IncludeBackwardSpeedInForwardFov);
         profile.EnableMouseLag = GetBool(values, "EnableMouseLag", profile.EnableMouseLag);
         profile.MouseLagPositionAmount = GetFloat(values, "MouseLagPositionAmount", profile.MouseLagPositionAmount);
         profile.MouseLagRotationAmount = GetFloat(values, "MouseLagRotationAmount", profile.MouseLagRotationAmount);

@@ -173,6 +173,11 @@ public partial class PlayerJumpModule : Node
 
     private void TryJump(ref Vector3 velocity, bool isGrounded)
     {
+        if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.Jump) == true)
+        {
+            return;
+        }
+
         bool canGroundJump = !_forceNextJumpAsAirJumpFromGrapple && (isGrounded || (UseCoyoteTime && _coyoteTimer > 0.0f));
         if (canGroundJump)
         {
@@ -189,6 +194,11 @@ public partial class PlayerJumpModule : Node
 
         int maxJumpCount = CurrentEnableDoubleJump ? Mathf.Max(1, MaxJumpCount) : 1;
         if (_jumpsUsed >= maxJumpCount)
+        {
+            return;
+        }
+
+        if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.DoubleJump) == true)
         {
             return;
         }

@@ -317,6 +317,8 @@ public partial class PlayerCrouchSlideModule : Node
 
     private void StopSlide(bool holdCrouch)
     {
+        EndSlideAbility();
+
         if ((EnableCrouch && holdCrouch) || !CanStandUp())
         {
             _state = CrouchSlideState.Crouching;
@@ -384,6 +386,7 @@ public partial class PlayerCrouchSlideModule : Node
         _slideTimer = 0.0f;
         _slideExitSpeedGraceTimer = 0.0f;
         _slideSpeed = 0.0f;
+        EndSlideAbility();
         _state = CrouchSlideState.Standing;
         return true;
     }
@@ -502,6 +505,12 @@ public partial class PlayerCrouchSlideModule : Node
             return false;
         }
 
+        if (_player.AbilityStateModule != null
+            && !_player.AbilityStateModule.CanStart(PlayerAbilityLock.Slide | PlayerAbilityLock.HorizontalVelocity))
+        {
+            return false;
+        }
+
         return GetHorizontalVelocity(velocity).Length() >= minStartSpeed;
     }
 
@@ -519,6 +528,7 @@ public partial class PlayerCrouchSlideModule : Node
         _slideExitSpeedGraceTimer = CurrentSlideExitMinSpeedGraceTime;
         _slideDirection = direction;
         _slideSpeed = Mathf.Max(CurrentSlideInitialSpeed, horizontalVelocity.Length());
+        BeginSlideAbility();
 
         velocity.X = _slideDirection.X * _slideSpeed;
         velocity.Z = _slideDirection.Z * _slideSpeed;
@@ -546,6 +556,21 @@ public partial class PlayerCrouchSlideModule : Node
     private bool ShouldExitSlideBySpeed()
     {
         return CurrentEnableSlideExitBySpeed && _slideExitSpeedGraceTimer <= 0.0f && _slideSpeed < CurrentSlideExitMinSpeed;
+    }
+
+    private void BeginSlideAbility()
+    {
+        _player.AbilityStateModule?.BeginAbility(
+            PlayerAbilityTag.Slide,
+            PlayerAbilityStateModule.PrioritySlide,
+            PlayerAbilityLock.HorizontalVelocity,
+            nameof(PlayerCrouchSlideModule)
+        );
+    }
+
+    private void EndSlideAbility()
+    {
+        _player.AbilityStateModule?.EndAbility(PlayerAbilityTag.Slide, nameof(PlayerCrouchSlideModule));
     }
 
     private static Vector3 GetHorizontalVelocity(Vector3 velocity)

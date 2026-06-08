@@ -100,6 +100,12 @@ public partial class PlayerMovementModule : Node
             return;
         }
 
+        if (_player.AbilityStateModule != null
+            && !_player.AbilityStateModule.CanWrite(PlayerAbilityTag.DefaultMovement, PlayerAbilityLock.HorizontalVelocity))
+        {
+            return;
+        }
+
         Vector2 input = GetMovementInput();
         bool hasInput = input.LengthSquared() > 0.0f;
         Vector3 direction = GetMovementDirection(input);

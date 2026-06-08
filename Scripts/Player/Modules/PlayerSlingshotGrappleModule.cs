@@ -250,6 +250,11 @@ public partial class PlayerSlingshotGrappleModule : Node
             return;
         }
 
+        if (_player.AbilityStateModule != null && !_player.AbilityStateModule.CanStart(PlayerAbilityLock.Grapple))
+        {
+            return;
+        }
+
         if (TryFindGrappleAnchor(out Node3D anchor))
         {
             TryStartGrappleAt(anchor.GlobalPosition);
@@ -279,6 +284,11 @@ public partial class PlayerSlingshotGrappleModule : Node
             SetState(SlingshotGrappleState.Idle);
         }
 
+        if (_postLaunchControlTimer <= 0.0f && CurrentState != SlingshotGrappleState.Pulling && CurrentState != SlingshotGrappleState.Launching)
+        {
+            EndGrappleLaunchAbility();
+        }
+
         UpdateAvailableAnchorHighlight();
         UpdateDebugTrajectory();
     }
@@ -290,6 +300,11 @@ public partial class PlayerSlingshotGrappleModule : Node
     {
         Vector3 startToAnchor = grapplePointPosition - _player.GlobalPosition;
         if (startToAnchor.Length() < MinimumGrappleVectorLength)
+        {
+            return false;
+        }
+
+        if (_player.AbilityStateModule != null && !_player.AbilityStateModule.CanStart(PlayerAbilityLock.Grapple))
         {
             return false;
         }
@@ -589,12 +604,86 @@ public partial class PlayerSlingshotGrappleModule : Node
 
     private void SetState(SlingshotGrappleState state)
     {
+        SlingshotGrappleState previousState = CurrentState;
         CurrentState = state;
 
         if (state == SlingshotGrappleState.Cooldown && _cooldownTimer <= 0.0f && _postLaunchControlTimer <= 0.0f)
         {
             CurrentState = SlingshotGrappleState.Idle;
         }
+
+        UpdateGrappleAbilityState(previousState, CurrentState);
+    }
+
+    private void UpdateGrappleAbilityState(SlingshotGrappleState previousState, SlingshotGrappleState currentState)
+    {
+        if (previousState == currentState)
+        {
+            return;
+        }
+
+        if (previousState == SlingshotGrappleState.Pulling)
+        {
+            EndGrapplePullAbility();
+        }
+
+        if (previousState == SlingshotGrappleState.Launching && currentState != SlingshotGrappleState.Cooldown)
+        {
+            EndGrappleLaunchAbility();
+        }
+
+        if (currentState == SlingshotGrappleState.Pulling)
+        {
+            BeginGrapplePullAbility();
+        }
+        else if (currentState == SlingshotGrappleState.Launching)
+        {
+            BeginGrappleLaunchAbility();
+        }
+        else if (currentState == SlingshotGrappleState.Idle)
+        {
+            EndGrappleAbilityStates();
+        }
+        else if (currentState == SlingshotGrappleState.Cooldown && _postLaunchControlTimer <= 0.0f)
+        {
+            EndGrappleAbilityStates();
+        }
+    }
+
+    private void BeginGrapplePullAbility()
+    {
+        _player.AbilityStateModule?.BeginAbility(
+            PlayerAbilityTag.SlingshotGrapplePull,
+            PlayerAbilityStateModule.PrioritySlingshotGrapplePull,
+            PlayerAbilityLock.MovementInput | PlayerAbilityLock.HorizontalVelocity | PlayerAbilityLock.VerticalVelocity | PlayerAbilityLock.Slide,
+            nameof(PlayerSlingshotGrappleModule)
+        );
+    }
+
+    private void BeginGrappleLaunchAbility()
+    {
+        _player.AbilityStateModule?.BeginAbility(
+            PlayerAbilityTag.SlingshotGrappleLaunch,
+            PlayerAbilityStateModule.PrioritySlingshotGrappleLaunch,
+            PlayerAbilityLock.MovementInput | PlayerAbilityLock.HorizontalVelocity | PlayerAbilityLock.VerticalVelocity | PlayerAbilityLock.Slide,
+            nameof(PlayerSlingshotGrappleModule)
+        );
+    }
+
+    private void EndGrapplePullAbility()
+    {
+        _player.AbilityStateModule?.EndAbility(PlayerAbilityTag.SlingshotGrapplePull, nameof(PlayerSlingshotGrappleModule));
+    }
+
+    private void EndGrappleLaunchAbility()
+    {
+        _player.AbilityStateModule?.EndAbility(PlayerAbilityTag.SlingshotGrappleLaunch, nameof(PlayerSlingshotGrappleModule));
+    }
+
+    private void EndGrappleAbilityStates()
+    {
+        EndGrapplePullAbility();
+        EndGrappleLaunchAbility();
     }
 
     private void RequestGrappleCameraSnap(Vector3 grapplePointPosition)

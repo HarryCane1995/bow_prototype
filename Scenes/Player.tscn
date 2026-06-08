@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3]
+[gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="14_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="15_viewmodel_sway"]
+[ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="16_ability_state"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -43,6 +44,9 @@ position = Vector3(0, 0.2, 0)
 target_position = Vector3(0, -0.45, 0)
 enabled = true
 exclude_parent = true
+
+[node name="PlayerAbilityStateModule" type="Node" parent="."]
+script = ExtResource("16_ability_state")
 
 [node name="PlayerMovementModule" type="Node" parent="."]
 script = ExtResource("2_movement")

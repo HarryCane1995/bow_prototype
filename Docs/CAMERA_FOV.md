@@ -25,6 +25,21 @@ FOV основной камеры собирается в одном месте:
 
 `SpeedFovMultiplier` - главная ручка силы эффекта. `MinSpeedForFov` отсекает обычную ходьбу, `MaxSpeedFovBonus` не даёт slide или slingshot launch раздуть FOV бесконечно.
 
+Если `UseAxisBasedSpeedFov = true`, модуль не берёт общую длину горизонтальной скорости. Он раскладывает `Velocity` относительно камеры на две оси:
+
+- forward/back: скорость вдоль направления взгляда на плоскости XZ;
+- strafe: боковая скорость A/D вдоль camera-right на плоскости XZ.
+
+Forward/back вклад считается через старый `SpeedFovMultiplier`, поэтому движение вперёд продолжает расширять FOV как раньше. Если `IncludeBackwardSpeedInForwardFov = true`, движение назад S использует тот же forward/back вклад; если false, отрицательная скорость назад игнорируется.
+
+Strafe вклад считается отдельно:
+
+`strafeBonus = max(0, strafeSpeedAbs - MinStrafeSpeedForFov) * StrafeSpeedFovMultiplier`
+
+`StrafeSpeedFovMultiplier = 0` полностью отключает вклад чистого A/D в расширение FOV. Это полезно, чтобы убрать укачивание от бокового стрейфа, но оставить ощущение скорости от движения вперёд, slide и slingshot, когда движение преимущественно направлено вперёд.
+
+Если `UseAxisBasedSpeedFov = false`, работает fallback по старой формуле через `velocity.Length()` или горизонтальную XZ-длину в зависимости от `UseFullVelocityForSpeedFov`.
+
 ## Smoothing
 
 Speed bonus сглаживается отдельно от общего движения камеры:
@@ -51,6 +66,12 @@ Speed bonus сглаживается отдельно от общего движ
 - `SpeedFovSmoothUp`;
 - `SpeedFovSmoothDown`;
 - `UseFullVelocityForSpeedFov`;
-- `DisableSpeedFovDuringPrecisionAim`.
+- `DisableSpeedFovDuringPrecisionAim`;
+- `UseAxisBasedSpeedFov`;
+- `StrafeSpeedFovMultiplier`;
+- `MinStrafeSpeedForFov`;
+- `IncludeBackwardSpeedInForwardFov`.
 
 Если `UseFullVelocityForSpeedFov = true`, учитывается вся `Vector3`-скорость, включая вертикальный slingshot launch. Если false, берётся только горизонтальная XZ-скорость.
+
+В axis-based режиме `UseFullVelocityForSpeedFov` не смешивает вертикальную скорость с боковым A/D: осевая модель работает с горизонтальными forward/strafe компонентами. При выключенном axis fallback сохраняет старое поведение этого флага.

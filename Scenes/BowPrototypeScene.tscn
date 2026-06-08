@@ -24,10 +24,12 @@
 [ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
-[ext_resource type="Resource" uid="uid://r3jpmm1mhxv8" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="Resource" uid="uid://bbcdhfoexfwdc" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="23_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="24_viewmodel_sway"]
+[ext_resource type="Script" path="res://Scripts/System/StartupWindowModeController.cs" id="25_startup_window_mode"]
+[ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="26_ability_state"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_y05sl"]
 panorama = ExtResource("2_f64f4")
@@ -86,6 +88,9 @@ radius = 0.45
 height = 1.8
 
 [node name="BowPrototypeScene" type="Node3D" unique_id=1633690768]
+
+[node name="StartupWindowModeController" type="Node" parent="."]
+script = ExtResource("25_startup_window_mode")
 
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
 transform = Transform3D(8.025744, 0, 0, 0, 1, 0, 0, 0, 17.039303, 2.165, 0, -3.356)
@@ -321,6 +326,9 @@ gizmo_extents = 1.22
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 target_position = Vector3(0, -0.45, 0)
 
+[node name="PlayerAbilityStateModule" type="Node" parent="Player"]
+script = ExtResource("26_ability_state")
+
 [node name="PlayerMovementModule" type="Node" parent="Player" unique_id=1865948467]
 script = ExtResource("2_movement")
 MoveSpeed = 15.0
@@ -344,6 +352,13 @@ SlideJumpHorizontalBoost = 6.0
 
 [node name="PlayerSlingshotGrappleModule" type="Node" parent="Player" unique_id=874427995]
 script = ExtResource("19_slingshot_grapple")
+PullAcceleration = 9.5
+MaxPullSpeed = 13.5
+GrappleArriveDistance = 2.0
+LaunchForce = 0.5
+InheritPullVelocityFactor = 0.15
+MaxLaunchVelocity = 9.5
+PostLaunchControlDelay = 0.73
 DebugPrintStateChanges = true
 
 [node name="PlayerLookModule" type="Node" parent="Player" unique_id=532200321]

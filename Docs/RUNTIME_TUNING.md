@@ -54,6 +54,8 @@ Default-профиль лежит здесь:
 
 `Camera / Speed FOV` содержит главный ползунок силы эффекта `SpeedFovMultiplier`, порог `MinSpeedForFov`, ограничитель `MaxSpeedFovBonus`, smoothing для расширения/возврата и флаги `UseFullVelocityForSpeedFov` и `DisableSpeedFovDuringPrecisionAim`.
 
+Для уменьшения укачивания от A/D там же есть осевые настройки speed FOV: `UseAxisBasedSpeedFov`, `StrafeSpeedFovMultiplier`, `MinStrafeSpeedForFov` и `IncludeBackwardSpeedInForwardFov`. При `StrafeSpeedFovMultiplier = 0` боковой strafe полностью перестаёт расширять FOV, а forward/back движение продолжает использовать `SpeedFovMultiplier`.
+
 `ViewModel / Sway` содержит mouse lag, movement inertia, landing impulse и скорости сглаживания. Эти параметры меняют только визуальный `ViewModelSwayRoot` и не влияют на crosshair, gameplay camera или projectile direction.
 
 `Bow / Projectiles` содержит скорости light/charged/precision shot, `EnablePrecisionShot`, `PrecisionShotDamage`, `PrecisionShotArmorPiercing` и `ProjectileGravity`. Precision Ready включается удержанием Alt, а Precision Shot является мгновенным `Alt + ЛКМ press`; `PrecisionChargeTime` больше не участвует в активной логике и не должен появляться в runtime tuning UI.

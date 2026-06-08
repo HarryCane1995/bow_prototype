@@ -44,6 +44,27 @@ public partial class PlayerSpeedFovModule : Node
     [Export] public bool DisableSpeedFovDuringPrecisionAim { get; set; } = true;
 
     /// <summary>
+    /// Если включено, speed FOV раскладывает горизонтальную скорость на forward/back и strafe относительно камеры.
+    /// </summary>
+    [ExportGroup("Speed FOV / Axis Influence")]
+    [Export] public bool UseAxisBasedSpeedFov { get; set; } = true;
+
+    /// <summary>
+    /// Множитель влияния боковой скорости A/D на FOV. Значение 0 полностью отключает вклад strafe.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,2,0.05")] public float StrafeSpeedFovMultiplier { get; set; } = 0.0f;
+
+    /// <summary>
+    /// Боковая скорость, ниже которой strafe не добавляет FOV-бонус.
+    /// </summary>
+    [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float MinStrafeSpeedForFov { get; set; } = 5.0f;
+
+    /// <summary>
+    /// Если включено, движение назад S влияет на forward FOV так же, как движение вперёд.
+    /// </summary>
+    [Export] public bool IncludeBackwardSpeedInForwardFov { get; set; } = true;
+
+    /// <summary>
     /// Текущий сглаженный FOV-бонус от скорости. Его читает PlayerCameraFovModule и прибавляет к своему базовому FOV.
     /// </summary>
     public float CurrentSpeedFovBonus { get; private set; }
@@ -95,8 +116,58 @@ public partial class PlayerSpeedFovModule : Node
             return 0.0f;
         }
 
+        if (CurrentUseAxisBasedSpeedFov)
+        {
+            return CalculateAxisBasedSpeedFovBonus();
+        }
+
         float speed = GetPlayerSpeed();
         return Mathf.Clamp((speed - CurrentMinSpeedForFov) * CurrentSpeedFovMultiplier, 0.0f, CurrentMaxSpeedFovBonus);
+    }
+
+    private float CalculateAxisBasedSpeedFovBonus()
+    {
+        Vector3 velocity = _player.Velocity;
+        Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
+        if (horizontalVelocity.IsZeroApprox())
+        {
+            return 0.0f;
+        }
+
+        Basis basis = _player.Camera?.GlobalTransform.Basis ?? _player.GlobalTransform.Basis;
+        Vector3 forward = GetFlatDirection(-basis.Z);
+        Vector3 right = GetFlatDirection(basis.X);
+        if (forward.IsZeroApprox())
+        {
+            forward = GetFlatDirection(-_player.GlobalTransform.Basis.Z);
+        }
+
+        if (right.IsZeroApprox())
+        {
+            right = GetFlatDirection(_player.GlobalTransform.Basis.X);
+        }
+
+        float signedForwardSpeed = horizontalVelocity.Dot(forward);
+        float forwardSpeed = CurrentIncludeBackwardSpeedInForwardFov
+            ? Mathf.Abs(signedForwardSpeed)
+            : Mathf.Max(0.0f, signedForwardSpeed);
+        float strafeSpeed = Mathf.Abs(horizontalVelocity.Dot(right));
+
+        float forwardBonus = Mathf.Max(0.0f, forwardSpeed - CurrentMinSpeedForFov) * CurrentSpeedFovMultiplier;
+        float strafeBonus = Mathf.Max(0.0f, strafeSpeed - CurrentMinStrafeSpeedForFov) * CurrentStrafeSpeedFovMultiplier;
+
+        return Mathf.Clamp(forwardBonus + strafeBonus, 0.0f, CurrentMaxSpeedFovBonus);
+    }
+
+    private static Vector3 GetFlatDirection(Vector3 direction)
+    {
+        direction.Y = 0.0f;
+        if (direction.IsZeroApprox())
+        {
+            return Vector3.Zero;
+        }
+
+        return direction.Normalized();
     }
 
     private float GetPlayerSpeed()
@@ -119,4 +190,8 @@ public partial class PlayerSpeedFovModule : Node
     private float CurrentSpeedFovSmoothDown => TuningProfile?.SpeedFovSmoothDown ?? SpeedFovSmoothDown;
     private bool CurrentUseFullVelocityForSpeedFov => TuningProfile?.UseFullVelocityForSpeedFov ?? UseFullVelocityForSpeedFov;
     private bool CurrentDisableSpeedFovDuringPrecisionAim => TuningProfile?.DisableSpeedFovDuringPrecisionAim ?? DisableSpeedFovDuringPrecisionAim;
+    private bool CurrentUseAxisBasedSpeedFov => TuningProfile?.UseAxisBasedSpeedFov ?? UseAxisBasedSpeedFov;
+    private float CurrentStrafeSpeedFovMultiplier => TuningProfile?.StrafeSpeedFovMultiplier ?? StrafeSpeedFovMultiplier;
+    private float CurrentMinStrafeSpeedForFov => TuningProfile?.MinStrafeSpeedForFov ?? MinStrafeSpeedForFov;
+    private bool CurrentIncludeBackwardSpeedInForwardFov => TuningProfile?.IncludeBackwardSpeedInForwardFov ?? IncludeBackwardSpeedInForwardFov;
 }

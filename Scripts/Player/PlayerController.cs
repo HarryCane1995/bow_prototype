@@ -29,10 +29,15 @@ public partial class PlayerController : CharacterBody3D
     /// </summary>
     [Export] public NodePath GroundCheckPath { get; set; } = new("GroundCheck");
 
-    /// <summary>
-    /// Путь к модулю горизонтального движения. Смена пути подключает другой movement-модуль; неверный путь не позволит игроку инициализировать движение.
-    /// </summary>
     [ExportGroup("Модули игрока")]
+    /// <summary>
+    /// Путь к модулю арбитража ability/motor authority. Если модуль отсутствует, существующие механики работают по старым локальным guard-флагам.
+    /// </summary>
+    [Export] public NodePath AbilityStateModulePath { get; set; } = new("PlayerAbilityStateModule");
+
+    /// <summary>
+    /// Путь к модулю горизонтального движения. Смена пути подключает другой movement-модуль; неверный путь ломает инициализацию движения.
+    /// </summary>
     [Export] public NodePath MovementModulePath { get; set; } = new("PlayerMovementModule");
 
     /// <summary>
@@ -88,6 +93,7 @@ public partial class PlayerController : CharacterBody3D
     public Node3D CameraPivot { get; private set; }
     public Camera3D Camera { get; private set; }
     public RayCast3D GroundCheck { get; private set; }
+    public PlayerAbilityStateModule AbilityStateModule { get; private set; }
     public PlayerMovementModule MovementModule { get; private set; }
     public PlayerJumpModule JumpModule { get; private set; }
     public PlayerCrouchSlideModule CrouchSlideModule { get; private set; }
@@ -110,6 +116,11 @@ public partial class PlayerController : CharacterBody3D
         CameraPivot = GetNode<Node3D>(CameraPivotPath);
         Camera = GetNode<Camera3D>(CameraPath);
         GroundCheck = GetNode<RayCast3D>(GroundCheckPath);
+        AbilityStateModule = GetNodeOrNull<PlayerAbilityStateModule>(AbilityStateModulePath);
+        if (AbilityStateModule == null)
+        {
+            GD.PushWarning($"PlayerAbilityStateModule was not found at path: {AbilityStateModulePath}. Ability/motor authority arbitration is disabled for this player.");
+        }
         MovementModule = GetNode<PlayerMovementModule>(MovementModulePath);
         JumpModule = GetNode<PlayerJumpModule>(JumpModulePath);
         CrouchSlideModule = GetNode<PlayerCrouchSlideModule>(CrouchSlideModulePath);
@@ -134,6 +145,7 @@ public partial class PlayerController : CharacterBody3D
             GD.PushWarning($"PlayerViewModelSwayModule was not found at path: {ViewModelSwayModulePath}. Procedural viewmodel sway is disabled for this player.");
         }
 
+        AbilityStateModule?.Initialize(this);
         MovementModule.Initialize(this);
         JumpModule.Initialize(this);
         CrouchSlideModule.Initialize(this);

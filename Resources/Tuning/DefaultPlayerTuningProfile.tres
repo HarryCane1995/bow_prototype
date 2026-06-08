@@ -1,27 +1,32 @@
-[gd_resource type="Resource" script_class="PlayerTuningProfile" format=3 uid="uid://r3jpmm1mhxv8"]
+[gd_resource type="Resource" script_class="PlayerTuningProfile" format=3]
 
-[ext_resource type="Script" uid="uid://bxgpsdu6uk7g2" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
+[ext_resource type="Script" path="res://Scripts/Player/Tuning/PlayerTuningProfile.cs" id="1_player_tuning_profile"]
 
 [resource]
 script = ExtResource("1_player_tuning_profile")
+MoveSpeed = 10.0
 GroundAcceleration = 50.0
 GroundDeceleration = 100.0
 GroundDirectionChangeAcceleration = 100.0
 CounterStrafeBoost = 2.5
-JumpVelocity = 12.4
-DoubleJumpVelocityMultiplier = 1.45
+JumpVelocity = 12.3
+DoubleJumpVelocityMultiplier = 1.5
 DoubleJumpRedirectSpeed = 13.8
 CrouchSpeedMultiplier = 0.6
-SlideDuration = 1.0
-SlideSteeringStrength = 0.3
-SlideExitMinSpeedGraceTime = 0.08
-AirborneSlideInputMin = 0.1
+SlideDuration = 0.98
+SlideSteeringStrength = 0.2
+SlideExitMinSpeedGraceTime = 0.07
+AirborneSlideMinSpeed = 7.5
+SlideJumpHorizontalBoost = 2.75
+SlideJumpMaxHorizontalSpeed = 15.5
 MaxGrappleDistance = 35.5
-GrappleCameraSnapDuration = 0.16
-PullAcceleration = 77.0
-MaxPullSpeed = 49.5
-LaunchSpeed = 99.5
-MaxLaunchVelocity = 60.5
+GrappleCameraSnapDuration = 0.25
+GrappleCameraSnapMaxPitchDegrees = 84.0
+PullAcceleration = 140.0
+MaxPullSpeed = 20.0
+LaunchSpeed = 30.0
+InheritPullVelocityFactor = 0.3
+MaxLaunchVelocity = 40.0
 LightShotSpeed = 50.5
 PrecisionShotSpeed = 177.0
 PrecisionFov = 31.0
@@ -29,7 +34,12 @@ SpeedFovMultiplier = 1.35
 MaxSpeedFovBonus = 33.0
 SpeedFovSmoothUp = 14.3
 SpeedFovSmoothDown = 17.8
-MouseLagPositionAmount = 0.015
-MovementInertiaPositionAmount = 0.004
-MovementInertiaRotationAmount = 0.35
-LandingPositionAmount = 0.025
+MouseLagPositionAmount = 0.056
+MouseLagRotationAmount = 5.6
+MovementInertiaPositionAmount = 0.026
+MovementInertiaRotationAmount = 3.45
+LandingPositionAmount = 0.092
+LandingRotationAmount = 0.1
+SwayFollowSpeed = 30.0
+SwayReturnSpeed = 14.9
+ImpulseReturnSpeed = 9.8

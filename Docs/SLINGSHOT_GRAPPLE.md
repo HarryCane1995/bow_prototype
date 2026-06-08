@@ -145,6 +145,8 @@ Vector3 launchVelocity = storedLaunchDirection * LaunchSpeed + inheritedDirectio
 
 `PlayerController` вызывает `PlayerSlingshotGrappleModule` в physics-пайплайне рядом с другими модулями. Во время Pulling модуль полностью управляет `Velocity`, поэтому:
 
+При успешном старте Pulling `PlayerSlingshotGrappleModule` регистрирует `SlingshotGrapplePull` в `PlayerAbilityStateModule` с priority `60` и locks `MovementInput | HorizontalVelocity | VerticalVelocity | Slide`. При переходе в Launch он заменяет request на `SlingshotGrappleLaunch` с priority `65` и теми же locks. Launch request снимается после `PostLaunchControlDelay`.
+
 - `PlayerJumpModule` временно не применяет прыжок/гравитацию;
 - `PlayerCrouchSlideModule` отменяет текущий slide и не запускает новый;
 - `PlayerMovementModule` не перезаписывает горизонтальную velocity.

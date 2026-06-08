@@ -145,6 +145,16 @@ public partial class PlayerBowShootModule : Node
             return;
         }
 
+        if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.Shooting) == true)
+        {
+            if (_isHoldingFire)
+            {
+                CancelShot();
+            }
+
+            return;
+        }
+
         if (Input.IsActionJustPressed(FireAction))
         {
             if (_isPrecisionReady)
@@ -251,6 +261,11 @@ public partial class PlayerBowShootModule : Node
 
     private bool Fire(ShotConfig shotConfig)
     {
+        if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.Shooting) == true)
+        {
+            return false;
+        }
+
         if (_cooldownRemaining > 0.0f || ArrowProjectileScene == null || _camera == null)
         {
             return false;
