@@ -9,39 +9,36 @@
 [ext_resource type="Script" uid="uid://co4hqb6i16q5i" path="res://Scripts/Player/Modules/PlayerBowShootModule.cs" id="5_shoot"]
 [ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="6_arrow_scene"]
 [ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="6_crouch_slide"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemies/BasicPatrolShooterEnemy.tscn" id="6_y05sl"]
+[ext_resource type="PackedScene" uid="uid://isdxd3muvxxa" path="res://Scenes/Enemies/BasicPatrolShooterEnemy.tscn" id="6_y05sl"]
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="7_crosshair"]
-[ext_resource type="Script" uid="uid://cdvyn2f1188fq" path="res://Scripts/Combat/TargetHitbox.cs" id="8_hitbox"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="9_visual"]
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="10_bow_model"]
+[ext_resource type="PackedScene" uid="uid://dtn1nlg8m5kbe" path="res://Assets/Models/Bow/cyber_bow_preview.glb" id="10_cyber_bow_model"]
 [ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="11_viewmodel_render"]
-[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_1x1x1.tscn" id="12_ve050"]
-[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x1x1.tscn" id="13_q0fdd"]
-[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_2x2x2.tscn" id="14_wiglu"]
-[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_3x3x3.tscn" id="15_tt6ua"]
-[ext_resource type="PackedScene" path="res://Scenes/Blocks/Block_4x2x2.tscn" id="16_xj1ry"]
+[ext_resource type="PackedScene" path="res://Scenes/Blocks/BlockoutArena.tscn" id="12_blockout_arena"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/TrainingTarget.tscn" id="13_training_target"]
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="17_camera_fov"]
 [ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
-[ext_resource type="Resource" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="Resource" uid="uid://bq0fvqf7tcneo" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="23_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="24_viewmodel_sway"]
 [ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="25_startup_window_mode"]
 [ext_resource type="Script" uid="uid://dsig4854mc5hn" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="26_ability_state"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ss23j"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dur7x"]
 panorama = ExtResource("2_f64f4")
 energy_multiplier = 1.2
 
-[sub_resource type="Sky" id="Sky_dur7x"]
-sky_material = SubResource("PanoramaSkyMaterial_ss23j")
+[sub_resource type="Sky" id="Sky_lm64b"]
+sky_material = SubResource("PanoramaSkyMaterial_dur7x")
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 2
 background_energy_multiplier = 2.66
-sky = SubResource("Sky_dur7x")
+sky = SubResource("Sky_lm64b")
 ambient_light_source = 3
 ambient_light_color = Color(0.59893155, 0.5245708, 0.64546496, 1)
 ambient_light_energy = 3.68
@@ -55,34 +52,6 @@ ssao_horizon = 0.03
 ssao_sharpness = 0.95
 ssao_light_affect = 0.05
 
-[sub_resource type="BoxMesh" id="BoxMesh_target_base"]
-size = Vector3(1.4, 0.2, 0.7)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_target_base"]
-albedo_color = Color(0.18, 0.18, 0.17, 1)
-roughness = 0.85
-
-[sub_resource type="BoxMesh" id="BoxMesh_target_stand"]
-size = Vector3(0.35, 2, 0.35)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_target_stand"]
-albedo_color = Color(0.28, 0.2, 0.14, 1)
-roughness = 0.8
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_target"]
-top_radius = 0.9
-bottom_radius = 0.9
-height = 0.16
-radial_segments = 48
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_target_face"]
-albedo_color = Color(0.78, 0.14, 0.1, 1)
-roughness = 0.65
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_target_hitbox"]
-height = 0.16
-radius = 0.9
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
 height = 1.8
@@ -93,7 +62,7 @@ height = 1.8
 script = ExtResource("25_startup_window_mode")
 
 [node name="Ground" parent="." unique_id=465419652 instance=ExtResource("1_gn7mj")]
-transform = Transform3D(8.025744, 0, 0, 0, 1, 0, 0, 0, 17.039303, 2.165, 0, -3.356)
+transform = Transform3D(14.760213, 0, 0, 0, 1, 0, 0, 0, 26.401424, 2.165, 0, -3.356)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
@@ -123,51 +92,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, -14)
 [node name="GrappleAnchor_RightArc" parent="GrappleAnchors" unique_id=702798717 instance=ExtResource("20_grapple_anchor")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 5, -20)
 
-[node name="GrappleAnchor_LowArc" parent="GrappleAnchors/GrappleAnchor_RightArc" unique_id=2318900 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 25.55315, -8)
-
-[node name="GrappleAnchor_CenterHigh" parent="GrappleAnchors/GrappleAnchor_RightArc" unique_id=1729184403 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.80315, -14)
-
-[node name="GrappleAnchor_RightArc" parent="GrappleAnchors/GrappleAnchor_RightArc" unique_id=2007805895 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 26.30315, -20)
-
-[node name="GrappleAnchor_LowArc" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1898952439 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.399765, 2.9043808, 29.945358)
-
-[node name="GrappleAnchor_CenterHigh" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=83617940 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.399767, 5.154381, 23.945358)
-
-[node name="GrappleAnchor_RightArc" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=232187683 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.899767, 3.6543808, 17.945358)
-
-[node name="GrappleAnchor_LowArc3" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=127146568 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.85366, 77.7272, 29.945358)
-
-[node name="GrappleAnchor_CenterHigh3" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1012953330 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.85366, 79.9772, 23.945358)
-
-[node name="GrappleAnchor_RightArc3" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=2044110316 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.35366, 78.4772, 17.945358)
-
-[node name="GrappleAnchor_LowArc4" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1464508305 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.85366, 49.972656, 62.134903)
-
-[node name="GrappleAnchor_CenterHigh4" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1167355681 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.85366, 52.222656, 56.134903)
-
-[node name="GrappleAnchor_RightArc4" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1672065280 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.35366, 50.722656, 50.134903)
-
-[node name="GrappleAnchor_LowArc2" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=369094444 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.30858, 80.39041, 29.945358)
-
-[node name="GrappleAnchor_CenterHigh2" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=2033491513 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.308582, 82.64041, 23.945358)
-
-[node name="GrappleAnchor_RightArc2" parent="GrappleAnchors/GrappleAnchor_RightArc/GrappleAnchor_RightArc" unique_id=1674095422 instance=ExtResource("20_grapple_anchor")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.808582, 81.14041, 17.945358)
-
 [node name="RuntimeTuningPanel" parent="." unique_id=262541560 instance=ExtResource("22_runtime_tuning_panel")]
 
 [node name="Enemies" type="Node3D" parent="." unique_id=254664251]
@@ -184,124 +108,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.30677, 1.9073486e-06, -19
 [node name="BasicPatrolShooterEnemy4" parent="Enemies" unique_id=1018025009 instance=ExtResource("6_y05sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.521544, 9.536743e-07, -28.374163)
 
-[node name="Block_1x1x1" parent="." unique_id=1423532735 instance=ExtResource("12_ve050")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.5, -2)
+[node name="BasicPatrolShooterEnemy5" parent="Enemies" unique_id=565744371 instance=ExtResource("6_y05sl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.763021, 21.139595, -14.871651)
 
-[node name="Block_2x1x1" parent="." unique_id=115327308 instance=ExtResource("13_q0fdd")]
-transform = Transform3D(3.9, 0, 0, 0, 1, 0, 0, 0, 2, -5.5, 0.5, 1.5)
-
-[node name="Block_2x2x2" parent="." unique_id=1723503734 instance=ExtResource("14_wiglu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 1, -1.2)
-
-[node name="Block_3x3x3" parent="." unique_id=208567403 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0019038, 1.5, -0.45099807)
-
-[node name="Block_3x3x3" parent="Block_3x3x3" unique_id=1133468860 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 11.228144, 0, 0, 0, 3.211377, -31.706562, 14.204342, -0.45099807)
-
-[node name="Block_3x3x9" parent="Block_3x3x3" unique_id=726055237 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(14.030232, 0, 0, 0, 40.966366, 0, 0, 0, 21.185032, -67.09154, 56.002785, -0.45099807)
-
-[node name="Block_3x3x4" parent="Block_3x3x3" unique_id=912496478 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 7.8114147, 0, 0, 0, 3.4416363, -31.706562, 8.012838, -14.833479)
-
-[node name="Block_3x3x5" parent="Block_3x3x3" unique_id=171370449 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 4.8619556, 0, 0, 0, 3.1526098, 24.119328, 4.7092457, -14.833479)
-
-[node name="Block_3x3x6" parent="Block_3x3x3" unique_id=310029090 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 9.656805, 0, 0, 0, 6.8681655, 24.119328, 4.7092457, -34.747387)
-
-[node name="Block_3x3x7" parent="Block_3x3x3" unique_id=683474254 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 3.2123444, 0, 0, 0, 2.3685975, 24.119328, 2.236784, 0.008429527)
-
-[node name="Block_3x3x8" parent="Block_3x3x3" unique_id=985736129 instance=ExtResource("15_tt6ua")]
-transform = Transform3D(3.7737072, 0, 0, 0, 9.656805, 0, 0, 0, 6.8681655, 24.119328, 11.495147, 35.245945)
-
-[node name="Block_4x2x2" parent="." unique_id=1033379595 instance=ExtResource("16_xj1ry")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 1, -1)
+[node name="BlockoutArena" parent="." instance=ExtResource("12_blockout_arena")]
 
 [node name="Targets" type="Node3D" parent="." unique_id=1886714089]
 
-[node name="Target_12m" type="Node3D" parent="Targets" unique_id=2085272750]
+[node name="Target_12m" parent="Targets" instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
 
-[node name="Base" type="MeshInstance3D" parent="Targets/Target_12m" unique_id=1653214064]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-mesh = SubResource("BoxMesh_target_base")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_base")
-
-[node name="Stand" type="MeshInstance3D" parent="Targets/Target_12m" unique_id=1417998450]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("BoxMesh_target_stand")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_stand")
-
-[node name="Face" type="MeshInstance3D" parent="Targets/Target_12m" unique_id=186105181]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-mesh = SubResource("CylinderMesh_target")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_face")
-
-[node name="FaceHitbox" type="Area3D" parent="Targets/Target_12m" unique_id=1760977750]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-collision_mask = 2
-script = ExtResource("8_hitbox")
-TargetMeshPath = NodePath("../Face")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Targets/Target_12m/FaceHitbox" unique_id=1899410222]
-shape = SubResource("CylinderShape3D_target_hitbox")
-
-[node name="Target_22m" type="Node3D" parent="Targets" unique_id=1466985651]
+[node name="Target_22m" parent="Targets" instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -22)
 
-[node name="Base" type="MeshInstance3D" parent="Targets/Target_22m" unique_id=1804479782]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-mesh = SubResource("BoxMesh_target_base")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_base")
-
-[node name="Stand" type="MeshInstance3D" parent="Targets/Target_22m" unique_id=786480851]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("BoxMesh_target_stand")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_stand")
-
-[node name="Face" type="MeshInstance3D" parent="Targets/Target_22m" unique_id=189527209]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-mesh = SubResource("CylinderMesh_target")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_face")
-
-[node name="FaceHitbox" type="Area3D" parent="Targets/Target_22m" unique_id=1362975894]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-collision_mask = 2
-script = ExtResource("8_hitbox")
-TargetMeshPath = NodePath("../Face")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Targets/Target_22m/FaceHitbox" unique_id=903696225]
-shape = SubResource("CylinderShape3D_target_hitbox")
-
-[node name="Target_34m" type="Node3D" parent="Targets" unique_id=898166484]
+[node name="Target_34m" parent="Targets" instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -34)
-
-[node name="Base" type="MeshInstance3D" parent="Targets/Target_34m" unique_id=49284706]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
-mesh = SubResource("BoxMesh_target_base")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_base")
-
-[node name="Stand" type="MeshInstance3D" parent="Targets/Target_34m" unique_id=241787437]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mesh = SubResource("BoxMesh_target_stand")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_stand")
-
-[node name="Face" type="MeshInstance3D" parent="Targets/Target_34m" unique_id=492739397]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-mesh = SubResource("CylinderMesh_target")
-surface_material_override/0 = SubResource("StandardMaterial3D_target_face")
-
-[node name="FaceHitbox" type="Area3D" parent="Targets/Target_34m" unique_id=1294423483]
-transform = Transform3D(1, 0, 0, 0, 3.1391647e-07, -1, 0, 1, 3.1391647e-07, 0, 2, 0.05)
-collision_mask = 2
-script = ExtResource("8_hitbox")
-TargetMeshPath = NodePath("../Face")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Targets/Target_34m/FaceHitbox" unique_id=1992256394]
-shape = SubResource("CylinderShape3D_target_hitbox")
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=785653356 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 8)
@@ -382,13 +203,15 @@ ChargeTime = 0.4
 script = ExtResource("9_visual")
 AnimationPlayerPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
 BowViewModelHolderPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder")
-ArrowVisualPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+ArrowVisualPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual")
 
 [node name="PlayerViewModelRenderModule" type="Node" parent="Player" unique_id=1949662572]
 script = ExtResource("11_viewmodel_render")
+LightRigEnabled = false
 
 [node name="PlayerViewModelSwayModule" type="Node" parent="Player" unique_id=1054700827]
 script = ExtResource("24_viewmodel_sway")
+ArrowTipMarkerPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="." unique_id=866929049]
 
@@ -416,17 +239,6 @@ fov = 65.0
 
 [node name="ViewModelLightRig" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=1111968662]
 
-[node name="MainLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=841386691]
-transform = Transform3D(0.86602527, 0.3535535, -0.35355335, 0, 0.70710653, 0.707107, 0.50000024, -0.61237264, 0.6123723, 0, 0, 0)
-layers = 524288
-light_energy = 1.8
-
-[node name="FillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=376092333]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.25, 1.25)
-layers = 524288
-light_energy = 0.45
-omni_range = 4.0
-
 [node name="ViewModelSwayRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=78159048]
 
 [node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot" unique_id=1623099216]
@@ -434,9 +246,16 @@ transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.
 
 [node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=94202277 instance=ExtResource("10_bow_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
+visible = false
 
-[node name="CanvasLayer_ViewModel_ViewModelSubViewportContainer_ViewModelSubViewport_ViewModelRoot_ViewModelSwayRoot_BowViewModelHolder_Bow_ViewModel_BowRig_NockPoint_Bone_Arrow_Bone_Arrow_Visual#ArrowTipMarker" type="Marker3D" parent="." unique_id=339129022]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45)
+[node name="CyberBowViewModelOffset" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=983122399]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, -0.04076618, -1.1705347)
+
+[node name="CyberBow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset" unique_id=1053969891 instance=ExtResource("10_cyber_bow_model")]
+transform = Transform3D(0.5535396, 0, 0, 0, 0.6267418, 0, 0, 0, 0.9614193, 0, 0.04677272, 4.004989)
+
+[node name="ArrowTipMarker" type="Marker3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual"]
+position = Vector3(0, 0, -0.45)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740547688]
 layer = 2
@@ -454,5 +273,5 @@ grow_vertical = 2
 script = ExtResource("7_crosshair")
 CrosshairColor = Color(1, 1, 1, 0.9)
 
-[node name="BasicPatrolShooterEnemy" parent="." unique_id=186729822 instance=ExtResource("6_y05sl")]
+[node name="BasicPatrolShooterEnemy6" parent="Enemies" unique_id=186729822 instance=ExtResource("6_y05sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.378411, 0.15999618, -16.100986)

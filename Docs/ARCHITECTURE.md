@@ -73,4 +73,4 @@ Aim-stabilized sway lives inside `PlayerViewModelSwayModule` and is only a visua
 - При Precision Ready итоговый FOV выбирает только `PlayerCameraFovModule`; `PlayerSpeedFovModule` может отключать speed bonus через `DisableSpeedFovDuringPrecisionAim`.
 - ПКМ остаётся свободным под будущий parry.
 
-Все новые `[Export]`-поля должны сопровождаться русским XML summary-комментарием, понятным названием, а при необходимости — `ExportGroup`, `Range` и suffix. В Godot C# XML summary не заполняет стандартный Inspector tooltip автоматически, поэтому читаемость Inspector достигается через названия, группы, диапазоны и единицы измерения. Inspector должен быть рабочим интерфейсом настройки, а не набором непонятных переменных.
+Новые `[Export]`-поля должны быть понятны в Inspector через названия, `ExportGroup` / `ExportSubgroup`, безопасные `Range` и suffix для единиц измерения. XML summary нужен только для неочевидных архитектурных контрактов, gameplay-правил и fallback-логики; не добавлять его над каждым очевидным полем ради формальности.

@@ -2,213 +2,94 @@ using Godot;
 
 public partial class PlayerViewModelSwayModule : Node
 {
-    /// <summary>
-    /// Путь к визуальному pivot-узлу viewmodel. Модуль двигает только этот Node3D и не меняет игровые камеры или направление стрельбы.
-    /// </summary>
+    // Visual-only module: never move gameplay Camera3D, ShootPoint, crosshair, or projectile direction.
     [ExportGroup("References")]
     [Export] public NodePath ViewModelSwayRootPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot");
 
-    /// <summary>
-    /// Путь к viewmodel-камере, центральный луч которой используется только для визуальной стабилизации наконечника стрелы.
-    /// </summary>
     [Export] public NodePath ViewModelCameraPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D");
 
-    /// <summary>
-    /// Путь к Marker3D на визуальном наконечнике стрелы; если маркер не назначен, aim stabilization отключается без ошибки.
-    /// </summary>
-    [Export] public NodePath ArrowTipMarkerPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual/ArrowTipMarker");
+    [Export] public NodePath ArrowTipMarkerPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker");
 
-    /// <summary>
-    /// Включает процедурный visual sway `ViewModelSwayRoot`; для диагностики jitter можно отключить без влияния на стрельбу.
-    /// </summary>
     [ExportGroup("ViewModel Sway")]
     [Export] public bool EnableViewModelSway { get; set; } = true;
 
-    /// <summary>
-    /// Включает лёгкое отставание лука от движения мыши.
-    /// </summary>
     [ExportGroup("Mouse Lag")]
     [Export] public bool EnableMouseLag { get; set; } = true;
 
-    /// <summary>
-    /// Сила позиционного сдвига от mouse look delta.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.08,0.001,suffix:m")] public float MouseLagPositionAmount { get; set; } = 0.015f;
 
-    /// <summary>
-    /// Сила поворота лука от mouse look delta.
-    /// </summary>
     [Export(PropertyHint.Range, "0,8,0.1,suffix:deg")] public float MouseLagRotationAmount { get; set; } = 1.5f;
 
-    /// <summary>
-    /// Максимальный позиционный offset от mouse lag.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.2,0.001,suffix:m")] public float MouseLagMaxPositionOffset { get; set; } = 0.08f;
 
-    /// <summary>
-    /// Максимальный поворот от mouse lag в градусах.
-    /// </summary>
     [Export(PropertyHint.Range, "0,20,0.1,suffix:deg")] public float MouseLagMaxRotationDegrees { get; set; } = 5.0f;
 
-    /// <summary>
-    /// Включает сглаживание mouse delta и итогового mouse lag offset, чтобы сильный mouse sway не дёргался каждый тик.
-    /// </summary>
     [ExportGroup("Mouse Lag Smoothing")]
     [Export] public bool EnableMouseLagSmoothing { get; set; } = true;
 
-    /// <summary>
-    /// Скорость экспоненциального сглаживания входного mouse delta перед расчётом mouse lag.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,40,0.1")] public float MouseLagInputSmoothSpeed { get; set; } = 18.0f;
 
-    /// <summary>
-    /// Скорость экспоненциального сглаживания готового position/rotation offset от mouse lag.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,40,0.1")] public float MouseLagOutputSmoothSpeed { get; set; } = 12.0f;
 
-    /// <summary>
-    /// Включает инерцию viewmodel от изменения velocity игрока.
-    /// </summary>
     [ExportGroup("Movement Inertia")]
     [Export] public bool EnableMovementInertia { get; set; } = true;
 
-    /// <summary>
-    /// Сила позиционного сдвига от горизонтального ускорения игрока.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.03,0.001,suffix:m")] public float MovementInertiaPositionAmount { get; set; } = 0.004f;
 
-    /// <summary>
-    /// Сила поворота от горизонтального ускорения игрока.
-    /// </summary>
     [Export(PropertyHint.Range, "0,4,0.05,suffix:deg")] public float MovementInertiaRotationAmount { get; set; } = 0.35f;
 
-    /// <summary>
-    /// Максимальный позиционный offset от movement inertia.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.2,0.001,suffix:m")] public float MovementInertiaMaxPositionOffset { get; set; } = 0.10f;
 
-    /// <summary>
-    /// Максимальный поворот от movement inertia в градусах.
-    /// </summary>
     [Export(PropertyHint.Range, "0,20,0.1,suffix:deg")] public float MovementInertiaMaxRotationDegrees { get; set; } = 6.0f;
 
-    /// <summary>
-    /// Ограничение величины рассчитанного ускорения, чтобы slide/slingshot не уводили лук за экран.
-    /// </summary>
     [Export(PropertyHint.Range, "1,120,0.5")] public float MovementInertiaVelocityClamp { get; set; } = 40.0f;
 
-    /// <summary>
-    /// Включает короткую просадку лука при приземлении.
-    /// </summary>
     [ExportGroup("Landing")]
     [Export] public bool EnableLandingSway { get; set; } = true;
 
-    /// <summary>
-    /// Минимальная вертикальная скорость падения, начиная с которой приземление даёт viewmodel impulse.
-    /// </summary>
     [Export(PropertyHint.Range, "0,20,0.1,suffix:m/s")] public float LandingMinImpactSpeed { get; set; } = 4.0f;
 
-    /// <summary>
-    /// Сила вертикальной просадки лука при приземлении.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.1,0.001,suffix:m")] public float LandingPositionAmount { get; set; } = 0.025f;
 
-    /// <summary>
-    /// Сила кивка/поворота лука при приземлении.
-    /// </summary>
     [Export(PropertyHint.Range, "0,10,0.1,suffix:deg")] public float LandingRotationAmount { get; set; } = 2.0f;
 
-    /// <summary>
-    /// Максимальная позиционная просадка от landing impulse.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.2,0.001,suffix:m")] public float LandingMaxPositionOffset { get; set; } = 0.12f;
 
-    /// <summary>
-    /// Максимальный поворот от landing impulse.
-    /// </summary>
     [Export(PropertyHint.Range, "0,20,0.1,suffix:deg")] public float LandingMaxRotationDegrees { get; set; } = 8.0f;
 
-    /// <summary>
-    /// Максимальная скорость падения, учитываемая landing impulse.
-    /// </summary>
     [Export(PropertyHint.Range, "1,80,0.5,suffix:m/s")] public float LandingMaxImpactSpeed { get; set; } = 24.0f;
 
-    /// <summary>
-    /// Скорость следования к активному sway offset.
-    /// </summary>
     [ExportGroup("Smoothing")]
     [Export(PropertyHint.Range, "0.1,30,0.1")] public float SwayFollowSpeed { get; set; } = 12.0f;
 
-    /// <summary>
-    /// Скорость возврата viewmodel к базовому transform, когда input/acceleration затухают.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,30,0.1")] public float SwayReturnSpeed { get; set; } = 10.0f;
 
-    /// <summary>
-    /// Скорость затухания landing impulse.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,30,0.1")] public float ImpulseReturnSpeed { get; set; } = 14.0f;
 
-    /// <summary>
-    /// Включает отдельное сглаживание итогового rotation offset viewmodel.
-    /// </summary>
     [ExportGroup("Rotation Smoothing")]
     [Export] public bool EnableRotationSmoothing { get; set; } = true;
 
-    /// <summary>
-    /// Скорость экспоненциального сглаживания итогового поворота viewmodel.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,40,0.1")] public float RotationSmoothSpeed { get; set; } = 14.0f;
 
-    /// <summary>
-    /// Скорость экспоненциального сглаживания итогового позиционного offset viewmodel.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,40,0.1")] public float PositionSmoothSpeed { get; set; } = 14.0f;
 
-    /// <summary>
-    /// Включает визуальную стабилизацию наконечника стрелы около центра viewmodel-камеры без изменения gameplay aim.
-    /// </summary>
     [ExportGroup("Aim Stabilization")]
     [Export] public bool EnableAimStabilization { get; set; } = true;
 
-    /// <summary>
-    /// Сила корректирующего поворота: 0 не компенсирует sway, 1 стремится полностью совместить наконечник с center ray.
-    /// </summary>
     [Export(PropertyHint.Range, "0,1,0.01")] public float AimStabilizationStrength { get; set; } = 0.65f;
 
-    /// <summary>
-    /// Скорость экспоненциального сглаживания визуальной aim-stabilization correction.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,40,0.1")] public float AimStabilizationSmoothSpeed { get; set; } = 14.0f;
 
-    /// <summary>
-    /// Максимальный угол визуальной корректировки, чтобы лук не выворачивался при экстремальном sway.
-    /// </summary>
     [Export(PropertyHint.Range, "0,30,0.5,suffix:deg")] public float MaxAimCorrectionDegrees { get; set; } = 12.0f;
 
-    /// <summary>
-    /// Минимальная глубина наконечника относительно viewmodel-камеры для стабильного расчёта center ray target.
-    /// </summary>
     [Export(PropertyHint.Range, "0.01,10,0.01")] public float MinAimStabilizationDepth { get; set; } = 0.25f;
 
-    /// <summary>
-    /// Угловая dead zone в радианах; если наконечник уже почти на center ray, коррекция плавно затухает.
-    /// </summary>
     [Export(PropertyHint.Range, "0,0.2,0.005")] public float AimStabilizationDeadZone { get; set; } = 0.02f;
 
-    /// <summary>
-    /// Если включено, визуальная стабилизация работает только во время precision aiming.
-    /// </summary>
     [Export] public bool StabilizeOnlyWhenAiming { get; set; } = false;
 
-    /// <summary>
-    /// Печатает debug-данные aim stabilization в Output Godot.
-    /// </summary>
     [Export] public bool DebugDrawAimStabilization { get; set; } = false;
 
-    /// <summary>
-    /// Печатает landing impulse и debug-данные sway в Output Godot.
-    /// </summary>
     [ExportGroup("Debug")]
     [Export] public bool DebugPrintSway { get; set; } = false;
 
@@ -230,15 +111,14 @@ public partial class PlayerViewModelSwayModule : Node
     private Vector3 _currentAimCorrectionAxisAngle;
     private bool _warnedMissingAimStabilizationReferences;
 
-    /// <summary>
-    /// Инициализирует sway-модуль, сохраняет базовый transform ViewModelSwayRoot и стартовое состояние игрока.
-    /// </summary>
     public void Initialize(PlayerController player)
     {
         _player = player;
         _viewModelSwayRoot = GetNodeOrNull<Node3D>(ViewModelSwayRootPath) ?? FindNode3DByName(GetTree().CurrentScene, "ViewModelSwayRoot");
         _viewModelCamera = GetNodeOrNull<Camera3D>(ViewModelCameraPath) ?? FindNode3DByName(GetTree().CurrentScene, "ViewModelCamera3D") as Camera3D;
-        _arrowTipMarker = GetNodeOrNull<Node3D>(ArrowTipMarkerPath) ?? FindNode3DByName(GetTree().CurrentScene, "ArrowTipMarker");
+        _arrowTipMarker = GetNodeOrNull<Node3D>(ArrowTipMarkerPath)
+            ?? FindNode3DByName(_viewModelSwayRoot, "ArrowTipMarker")
+            ?? FindNode3DByName(GetTree().CurrentScene, "ArrowTipMarker");
 
         if (_viewModelSwayRoot == null)
         {
@@ -312,9 +192,6 @@ public partial class PlayerViewModelSwayModule : Node
         _previousIsOnFloor = currentIsOnFloor;
     }
 
-    /// <summary>
-    /// Сбрасывает процедурные sway offsets к базовому transform для диагностического отключения viewmodel sway.
-    /// </summary>
     private void ResetViewModelSwayState()
     {
         _smoothedMouseDelta = Vector2.Zero;
@@ -458,9 +335,6 @@ public partial class PlayerViewModelSwayModule : Node
         return from.Lerp(to, GetExpSmoothingFactor(speed, delta));
     }
 
-    /// <summary>
-    /// Добавляет поверх обычного sway мягкий визуальный поворот, который тянет ArrowTipMarker к центральному лучу ViewModelCamera3D.
-    /// </summary>
     private void ApplyAimStabilization(float delta)
     {
         if (!ShouldApplyAimStabilization())
@@ -491,9 +365,6 @@ public partial class PlayerViewModelSwayModule : Node
         }
     }
 
-    /// <summary>
-    /// Проверяет, можно ли применять визуальную стабилизацию на текущем кадре.
-    /// </summary>
     private bool ShouldApplyAimStabilization()
     {
         if (!CurrentEnableAimStabilization)
@@ -510,9 +381,6 @@ public partial class PlayerViewModelSwayModule : Node
         return !CurrentStabilizeOnlyWhenAiming || _player.CameraFovModule?.IsPrecisionAiming == true;
     }
 
-    /// <summary>
-    /// Рассчитывает axis-angle correction, которая поворачивает вектор pivot->tip к target-вектору с учётом силы и clamp.
-    /// </summary>
     private Vector3 CalculateAimCorrectionAxisAngle(Vector3 currentPivotToTip, Vector3 desiredPivotToTip)
     {
         if (currentPivotToTip.LengthSquared() <= 0.000001f || desiredPivotToTip.LengthSquared() <= 0.000001f)
@@ -540,9 +408,6 @@ public partial class PlayerViewModelSwayModule : Node
         return axis.Normalized() * correctionAngle;
     }
 
-    /// <summary>
-    /// Применяет сглаженный axis-angle correction к global basis ViewModelSwayRoot, не меняя gameplay camera или projectile direction.
-    /// </summary>
     private void ApplyAimCorrectionAxisAngle(Vector3 axisAngle)
     {
         float angle = axisAngle.Length();
@@ -557,17 +422,11 @@ public partial class PlayerViewModelSwayModule : Node
         _viewModelSwayRoot.GlobalTransform = transform;
     }
 
-    /// <summary>
-    /// Ограничивает axis-angle вектор максимальным углом коррекции.
-    /// </summary>
     private static Vector3 ClampAxisAngle(Vector3 axisAngle, float maxAngleRadians)
     {
         return ClampVectorLength(axisAngle, maxAngleRadians);
     }
 
-    /// <summary>
-    /// Один раз предупреждает о недостающих ссылках aim stabilization, чтобы модуль отключался спокойно.
-    /// </summary>
     private void WarnMissingAimStabilizationReferences()
     {
         if (_warnedMissingAimStabilizationReferences || !CurrentEnableAimStabilization)
@@ -579,9 +438,6 @@ public partial class PlayerViewModelSwayModule : Node
         GD.PushWarning($"{nameof(PlayerViewModelSwayModule)} aim stabilization is disabled because ViewModelCamera3D or ArrowTipMarker was not found. ViewModelCameraPath='{ViewModelCameraPath}', ArrowTipMarkerPath='{ArrowTipMarkerPath}'.");
     }
 
-    /// <summary>
-    /// Возвращает factor для framerate-independent exponential smoothing.
-    /// </summary>
     private static float GetExpSmoothingFactor(float speed, float delta)
     {
         return 1.0f - Mathf.Exp(-Mathf.Max(0.0f, speed) * delta);

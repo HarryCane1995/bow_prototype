@@ -23,6 +23,8 @@
 
 `res://Scenes/BowPrototypeScene.tscn`
 
+Повторяющиеся сценовые сущности вынесены в PackedScene: тренировочная мишень живёт в `res://Scenes/Debug/TrainingTarget.tscn`, а крупный blockout-кластер - в `res://Scenes/Blocks/BlockoutArena.tscn`. Главная сцена должна оставаться читабельным outline из логических root-групп и инстансов.
+
 Текущие удачные Inspector-настройки фиксируются в `Docs/TUNING_NOTES.md`.
 
 ## Архитектурные правила

@@ -2,98 +2,45 @@ using Godot;
 
 public partial class PlayerSpeedFovModule : Node
 {
-    /// <summary>
-    /// Включает расширение FOV от скорости движения игрока. Если выключено, модуль всегда возвращает нулевой FOV-бонус.
-    /// </summary>
+    // Calculates a speed bonus only. PlayerCameraFovModule applies the final gameplay camera FOV.
     [ExportGroup("Speed FOV")]
     [Export] public bool EnableSpeedFov { get; set; } = true;
 
-    /// <summary>
-    /// Главная сила эффекта: насколько каждый м/с сверх MinSpeedForFov увеличивает FOV.
-    /// </summary>
     [Export(PropertyHint.Range, "0,2,0.05")] public float SpeedFovMultiplier { get; set; } = 0.45f;
 
-    /// <summary>
-    /// Скорость, ниже которой speed FOV не добавляет FOV-бонус.
-    /// </summary>
     [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float MinSpeedForFov { get; set; } = 5.0f;
 
-    /// <summary>
-    /// Максимальная прибавка к FOV от скорости, чтобы быстрый slide или slingshot launch не раздувал камеру бесконечно.
-    /// </summary>
     [Export(PropertyHint.Range, "0,40,1,suffix:deg")] public float MaxSpeedFovBonus { get; set; } = 18.0f;
 
-    /// <summary>
-    /// Скорость плавного расширения FOV при разгоне.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,25,0.1")] public float SpeedFovSmoothUp { get; set; } = 8.0f;
 
-    /// <summary>
-    /// Скорость плавного возврата FOV при замедлении.
-    /// </summary>
     [Export(PropertyHint.Range, "0.1,25,0.1")] public float SpeedFovSmoothDown { get; set; } = 6.0f;
 
-    /// <summary>
-    /// Если включено, speed FOV учитывает полную скорость Vector3, включая вертикальный вылет от slingshot. Если выключено, учитывается только XZ-скорость.
-    /// </summary>
     [Export] public bool UseFullVelocityForSpeedFov { get; set; } = true;
 
-    /// <summary>
-    /// Если включено, speed FOV отключается во время precision aiming, чтобы не спорить со снайперским сужением FOV.
-    /// </summary>
     [Export] public bool DisableSpeedFovDuringPrecisionAim { get; set; } = true;
 
-    /// <summary>
-    /// Если включено, speed FOV раскладывает горизонтальную скорость на forward/back и strafe относительно камеры.
-    /// </summary>
     [ExportGroup("Speed FOV / Axis Influence")]
     [Export] public bool UseAxisBasedSpeedFov { get; set; } = true;
 
-    /// <summary>
-    /// Множитель влияния боковой скорости A/D на FOV. Значение 0 полностью отключает вклад strafe.
-    /// </summary>
     [Export(PropertyHint.Range, "0,2,0.05")] public float StrafeSpeedFovMultiplier { get; set; } = 0.0f;
 
-    /// <summary>
-    /// Боковая скорость, ниже которой strafe не добавляет FOV-бонус.
-    /// </summary>
     [Export(PropertyHint.Range, "0,25,0.5,suffix:m/s")] public float MinStrafeSpeedForFov { get; set; } = 5.0f;
 
-    /// <summary>
-    /// Если включено, движение назад S влияет на forward FOV так же, как движение вперёд.
-    /// </summary>
     [Export] public bool IncludeBackwardSpeedInForwardFov { get; set; } = true;
 
-    /// <summary>
-    /// Текущий сглаженный FOV-бонус от скорости. Его читает PlayerCameraFovModule и прибавляет к своему базовому FOV.
-    /// </summary>
     public float CurrentSpeedFovBonus { get; private set; }
 
-    /// <summary>
-    /// Последний рассчитанный целевой FOV-бонус до smoothing. Полезен для debug-наблюдения за формулой speed FOV.
-    /// </summary>
     public float CurrentTargetSpeedFovBonus { get; private set; }
 
-    /// <summary>
-    /// Последняя измеренная скорость игрока для диагностики jitter/FOV.
-    /// </summary>
     public float CurrentSpeed { get; private set; }
 
-    /// <summary>
-    /// Последняя forward/back скорость относительно камеры для диагностики axis-based speed FOV.
-    /// </summary>
     public float CurrentForwardSpeed { get; private set; }
 
-    /// <summary>
-    /// Последняя strafe скорость относительно камеры для диагностики axis-based speed FOV.
-    /// </summary>
     public float CurrentStrafeSpeed { get; private set; }
 
     private PlayerController _player;
 
-    /// <summary>
-    /// Инициализирует модуль и сохраняет ссылку на PlayerController как источник velocity и tuning profile.
-    /// </summary>
     public void Initialize(PlayerController player)
     {
         _player = player;
@@ -101,9 +48,6 @@ public partial class PlayerSpeedFovModule : Node
         CurrentTargetSpeedFovBonus = 0.0f;
     }
 
-    /// <summary>
-    /// Обновляет сглаженный FOV-бонус от скорости и возвращает значение, которое должен применить владелец Camera3D.Fov.
-    /// </summary>
     public float UpdateSpeedFovBonus(double delta, bool precisionAimActive)
     {
         if (!CurrentEnableSpeedFov || (precisionAimActive && CurrentDisableSpeedFovDuringPrecisionAim))
@@ -122,9 +66,6 @@ public partial class PlayerSpeedFovModule : Node
         return CurrentSpeedFovBonus;
     }
 
-    /// <summary>
-    /// Считает целевой FOV-бонус по формуле clamp((speed - MinSpeedForFov) * SpeedFovMultiplier, 0, MaxSpeedFovBonus).
-    /// </summary>
     public float CalculateTargetSpeedFovBonus(bool precisionAimActive)
     {
         if (!CurrentEnableSpeedFov || _player == null || (precisionAimActive && CurrentDisableSpeedFovDuringPrecisionAim))
