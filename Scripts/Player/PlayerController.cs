@@ -18,11 +18,12 @@ public partial class PlayerController : CharacterBody3D
     /// </summary>
     [ExportGroup("Связи игрока")]
     [Export] public NodePath CameraPivotPath { get; set; } = new("CameraPivot");
+    [Export] public NodePath CameraEffectsPivotPath { get; set; } = new("CameraPivot/CameraEffectsPivot");
 
     /// <summary>
     /// Путь к основной FPS-камере. От этой камеры зависят обзор игрока и направление стрельбы; неверный путь оставит связанные модули без камеры.
     /// </summary>
-    [Export] public NodePath CameraPath { get; set; } = new("CameraPivot/Camera3D");
+    [Export] public NodePath CameraPath { get; set; } = new("CameraPivot/CameraEffectsPivot/Camera3D");
 
     /// <summary>
     /// Путь к RayCast3D для дополнительной проверки земли. Более точная ссылка улучшает grounded-состояние; неверная ссылка отключит этот запасной ground check.
@@ -93,6 +94,7 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath ViewModelSwayModulePath { get; set; } = new("PlayerViewModelSwayModule");
 
     public Node3D CameraPivot { get; private set; }
+    public Node3D CameraEffectsPivot { get; private set; }
     public Camera3D Camera { get; private set; }
     public RayCast3D GroundCheck { get; private set; }
     public PlayerAbilityStateModule AbilityStateModule { get; private set; }
@@ -117,7 +119,19 @@ public partial class PlayerController : CharacterBody3D
         AddToGroup("player");
 
         CameraPivot = GetNode<Node3D>(CameraPivotPath);
-        Camera = GetNode<Camera3D>(CameraPath);
+        CameraEffectsPivot = GetNodeOrNull<Node3D>(CameraEffectsPivotPath);
+        if (CameraEffectsPivot == null)
+        {
+            GD.PushWarning($"CameraEffectsPivot was not found at path: {CameraEffectsPivotPath}. Additive camera effects such as wall-run roll are disabled for this player.");
+        }
+
+        Camera = GetNodeOrNull<Camera3D>(CameraPath)
+            ?? CameraEffectsPivot?.GetNodeOrNull<Camera3D>("Camera3D")
+            ?? GetNodeOrNull<Camera3D>("CameraPivot/Camera3D");
+        if (Camera == null)
+        {
+            throw new System.InvalidOperationException($"Player Camera3D was not found. CameraPath='{CameraPath}'.");
+        }
         GroundCheck = GetNode<RayCast3D>(GroundCheckPath);
         AbilityStateModule = GetNodeOrNull<PlayerAbilityStateModule>(AbilityStateModulePath);
         if (AbilityStateModule == null)

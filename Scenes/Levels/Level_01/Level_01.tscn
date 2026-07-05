@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bst7plxmvwfkx" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
 [ext_resource type="PackedScene" uid="uid://ecws3xg03lek" path="res://Level_01_Blockout.blend" id="2_imported_level"]
-[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://cgvixhtobap65" path="res://Scenes/Player.tscn" id="3_player"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="4_grapple_anchor"]
 [ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
 [ext_resource type="Texture2D" uid="uid://cbgrraldhdcfq" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="6_skybox"]

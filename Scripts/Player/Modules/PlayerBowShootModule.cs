@@ -122,7 +122,7 @@ public partial class PlayerBowShootModule : Node
 
         _player = player;
         _camera = GetNodeOrNull<Camera3D>(CameraPath) ?? _player.Camera;
-        _shootPoint = GetNodeOrNull<Node3D>(ShootPointPath) ?? _camera;
+        _shootPoint = GetNodeOrNull<Node3D>(ShootPointPath) ?? _camera?.GetNodeOrNull<Node3D>("ShootPoint") ?? _camera;
         _bowVisualModule = _player.BowVisualModule;
         _cameraFovModule = _player.CameraFovModule;
     }

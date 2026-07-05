@@ -35,6 +35,7 @@ public partial class PlayerWallRunModule : Node
     private float _cameraRoll;
     private float _cameraPitchOffset;
     private float _currentFovBoost;
+    private bool _warnedMissingCameraEffectsPivot;
     private string _lastExitReason = "none";
 
     public bool IsWallRunning { get; private set; }
@@ -519,14 +520,19 @@ public partial class PlayerWallRunModule : Node
 
     private void UpdateCameraEffects(float delta)
     {
-        if (_player?.CameraPivot == null)
+        Node3D cameraEffectsPivot = _player?.CameraEffectsPivot;
+        if (cameraEffectsPivot == null)
         {
-            return;
+            if (!_warnedMissingCameraEffectsPivot)
+            {
+                GD.PushWarning("PlayerWallRunModule camera roll/pitch effects are disabled because PlayerController.CameraEffectsPivot was not found.");
+                _warnedMissingCameraEffectsPivot = true;
+            }
         }
 
         float targetRoll = 0.0f;
         float targetPitchOffset = 0.0f;
-        if (IsWallRunning && CurrentEnableCameraRoll)
+        if (cameraEffectsPivot != null && IsWallRunning && CurrentEnableCameraRoll)
         {
             float sideSign = _wallSide == WallSide.Left ? -1.0f : 1.0f;
             targetRoll = Mathf.DegToRad(CurrentWallRunCameraRollAngle) * sideSign;
@@ -537,15 +543,12 @@ public partial class PlayerWallRunModule : Node
         _cameraRoll = Mathf.MoveToward(_cameraRoll, targetRoll, rollSpeed * delta);
         _cameraPitchOffset = Mathf.MoveToward(_cameraPitchOffset, targetPitchOffset, rollSpeed * delta);
 
-        Vector3 pivotRotation = _player.CameraPivot.Rotation;
-        pivotRotation.Z = _cameraRoll;
-        _player.CameraPivot.Rotation = pivotRotation;
-
-        if (_player.Camera != null)
+        if (cameraEffectsPivot != null)
         {
-            Vector3 cameraRotation = _player.Camera.Rotation;
-            cameraRotation.X = _cameraPitchOffset;
-            _player.Camera.Rotation = cameraRotation;
+            Vector3 effectsRotation = cameraEffectsPivot.Rotation;
+            effectsRotation.X = _cameraPitchOffset;
+            effectsRotation.Z = _cameraRoll;
+            cameraEffectsPivot.Rotation = effectsRotation;
         }
 
         float targetFovBoost = IsWallRunning && CurrentEnableWallRunFovBoost ? CurrentWallRunFovBoost : 0.0f;

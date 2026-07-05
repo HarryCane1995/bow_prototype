@@ -26,6 +26,8 @@ Level_01_Blockout_*.png.png
 Level_01_Blockout_*.png.png.import
 Level_01_Blockout_*.png_2.png
 Level_01_Blockout_*.png_2.png.import
+Level_01_Blockout_*.png_[0-9].png
+Level_01_Blockout_*.png_[0-9].png.import
 
 # Local HDRI skyboxes
 Art/Skyboxes/*.hdr
