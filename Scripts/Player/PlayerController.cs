@@ -55,6 +55,8 @@ public partial class PlayerController : CharacterBody3D
     /// </summary>
     [Export] public NodePath SlingshotGrappleModulePath { get; set; } = new("PlayerSlingshotGrappleModule");
 
+    [Export] public NodePath WallRunModulePath { get; set; } = new("PlayerWallRunModule");
+
     /// <summary>
     /// Путь к модулю обзора мышью. Смена пути подключает другой look-модуль; неверный путь отключит поворот камеры и игрока.
     /// </summary>
@@ -98,6 +100,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerJumpModule JumpModule { get; private set; }
     public PlayerCrouchSlideModule CrouchSlideModule { get; private set; }
     public PlayerSlingshotGrappleModule SlingshotGrappleModule { get; private set; }
+    public PlayerWallRunModule WallRunModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
     public PlayerCameraFovModule CameraFovModule { get; private set; }
     public PlayerSpeedFovModule SpeedFovModule { get; private set; }
@@ -129,6 +132,11 @@ public partial class PlayerController : CharacterBody3D
         {
             GD.PushWarning($"PlayerSlingshotGrappleModule was not found at path: {SlingshotGrappleModulePath}. Slingshot grapple is disabled for this player.");
         }
+        WallRunModule = GetNodeOrNull<PlayerWallRunModule>(WallRunModulePath);
+        if (WallRunModule == null)
+        {
+            GD.PushWarning($"PlayerWallRunModule was not found at path: {WallRunModulePath}. Wall run is disabled for this player.");
+        }
         LookModule = GetNode<PlayerLookModule>(LookModulePath);
         CameraFovModule = GetNode<PlayerCameraFovModule>(CameraFovModulePath);
         SpeedFovModule = GetNodeOrNull<PlayerSpeedFovModule>(SpeedFovModulePath);
@@ -150,6 +158,7 @@ public partial class PlayerController : CharacterBody3D
         JumpModule.Initialize(this);
         CrouchSlideModule.Initialize(this);
         SlingshotGrappleModule?.Initialize(this);
+        WallRunModule?.Initialize(this);
         LookModule.Initialize(this);
         CameraFovModule.Initialize(this);
         SpeedFovModule?.Initialize(this);
@@ -162,8 +171,9 @@ public partial class PlayerController : CharacterBody3D
     public override void _PhysicsProcess(double delta)
     {
         SlingshotGrappleModule?.ProcessSlingshotInput();
+        WallRunModule?.ProcessWallRun(delta);
 
-        if (SlingshotGrappleModule?.BlocksJump != true)
+        if (SlingshotGrappleModule?.BlocksJump != true && WallRunModule?.BlocksNormalJumpAndGravity != true)
         {
             JumpModule.UpdateVerticalVelocity(delta);
         }

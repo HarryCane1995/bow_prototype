@@ -28,17 +28,17 @@
 [ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="25_startup_window_mode"]
 [ext_resource type="Script" uid="uid://dsig4854mc5hn" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="26_ability_state"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dur7x"]
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_f64f4"]
 panorama = ExtResource("2_f64f4")
 energy_multiplier = 1.2
 
-[sub_resource type="Sky" id="Sky_lm64b"]
-sky_material = SubResource("PanoramaSkyMaterial_dur7x")
+[sub_resource type="Sky" id="Sky_y05sl"]
+sky_material = SubResource("PanoramaSkyMaterial_f64f4")
 
 [sub_resource type="Environment" id="Environment_world"]
 background_mode = 2
 background_energy_multiplier = 2.66
-sky = SubResource("Sky_lm64b")
+sky = SubResource("Sky_y05sl")
 ambient_light_source = 3
 ambient_light_color = Color(0.59893155, 0.5245708, 0.64546496, 1)
 ambient_light_energy = 3.68
@@ -111,17 +111,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.521544, 9.536743e-07, -28.
 [node name="BasicPatrolShooterEnemy5" parent="Enemies" unique_id=565744371 instance=ExtResource("6_y05sl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.763021, 21.139595, -14.871651)
 
-[node name="BlockoutArena" parent="." instance=ExtResource("12_blockout_arena")]
+[node name="BasicPatrolShooterEnemy6" parent="Enemies" unique_id=186729822 instance=ExtResource("6_y05sl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.378411, 0.15999618, -16.100986)
+
+[node name="BlockoutArena" parent="." unique_id=379849726 instance=ExtResource("12_blockout_arena")]
 
 [node name="Targets" type="Node3D" parent="." unique_id=1886714089]
 
-[node name="Target_12m" parent="Targets" instance=ExtResource("13_training_target")]
+[node name="Target_12m" parent="Targets" unique_id=1839784238 instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
 
-[node name="Target_22m" parent="Targets" instance=ExtResource("13_training_target")]
+[node name="Target_22m" parent="Targets" unique_id=1749072338 instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -22)
 
-[node name="Target_34m" parent="Targets" instance=ExtResource("13_training_target")]
+[node name="Target_34m" parent="Targets" unique_id=54355051 instance=ExtResource("13_training_target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -34)
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=785653356 groups=["player"]]
@@ -211,7 +214,6 @@ LightRigEnabled = false
 
 [node name="PlayerViewModelSwayModule" type="Node" parent="Player" unique_id=1054700827]
 script = ExtResource("24_viewmodel_sway")
-ArrowTipMarkerPath = NodePath("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="." unique_id=866929049]
 
@@ -254,9 +256,6 @@ transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, -0.04076618, -1.1
 [node name="CyberBow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset" unique_id=1053969891 instance=ExtResource("10_cyber_bow_model")]
 transform = Transform3D(0.5535396, 0, 0, 0, 0.6267418, 0, 0, 0, 0.9614193, 0, 0.04677272, 4.004989)
 
-[node name="ArrowTipMarker" type="Marker3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual"]
-position = Vector3(0, 0, -0.45)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1740547688]
 layer = 2
 
@@ -273,5 +272,5 @@ grow_vertical = 2
 script = ExtResource("7_crosshair")
 CrosshairColor = Color(1, 1, 1, 0.9)
 
-[node name="BasicPatrolShooterEnemy6" parent="Enemies" unique_id=186729822 instance=ExtResource("6_y05sl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.378411, 0.15999618, -16.100986)
+[node name="GrappleAnchor" parent="." unique_id=1968514720 instance=ExtResource("20_grapple_anchor")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.810173, 10.422663, 4.4183655)

@@ -248,6 +248,14 @@ public partial class PlayerCrouchSlideModule : Node
             return;
         }
 
+        if (_player.WallRunModule?.IsWallRunning == true)
+        {
+            CancelSlide();
+            UpdateCrouchState(false);
+            UpdateHeight(deltaFloat);
+            return;
+        }
+
         bool isPressed = Input.IsActionPressed(CrouchSlideAction);
         bool justPressed = Input.IsActionJustPressed(CrouchSlideAction);
         UpdateAirborneSlideBuffer(deltaFloat, isPressed, velocity);

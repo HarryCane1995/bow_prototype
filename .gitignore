@@ -9,6 +9,23 @@ obj/
 
 # Editor backups
 *.old
+*.bak
+*.tmp
+
+# Blender backups / temporary files
+*.blend[0-9]
+*.blend[0-9][0-9]
+*.blend~
+*.blend@
+*.blend.autosave
+*.blend*.autosave
+*_autosave.blend
+
+# Accidental duplicate image exports from Level_01 blockout iteration
+Level_01_Blockout_*.png.png
+Level_01_Blockout_*.png.png.import
+Level_01_Blockout_*.png_2.png
+Level_01_Blockout_*.png_2.png.import
 
 # Local HDRI skyboxes
 Art/Skyboxes/*.hdr

@@ -15,6 +15,7 @@ Default-профиль лежит здесь:
 - `PlayerMovementModule` - movement-настройки;
 - `PlayerJumpModule` - jump и double jump;
 - `PlayerCrouchSlideModule` - crouch/slide;
+- `PlayerWallRunModule` - wall run, wall jump, camera roll, and wall-run FOV boost;
 - `PlayerSlingshotGrappleModule` - slingshot grapple;
 - `PlayerBowShootModule` - скорости выстрелов и projectile gravity;
 - `PlayerCameraFovModule` - базовый FOV, precision FOV и скорость перехода;
@@ -40,6 +41,7 @@ Default-профиль лежит здесь:
 - `Movement`;
 - `Jump`;
 - `Crouch / Slide`;
+- `Wall Run`;
 - `Slingshot Grapple`;
 - `Bow / Projectiles`;
 - `Camera`.
@@ -88,6 +90,12 @@ Default-профиль лежит здесь:
 ## Jitter Diagnostics
 
 Для A/D strafe jitter используйте `Docs/JITTER_DIAGNOSTICS.md`. Основной порядок: выключить `EnableViewModelSway`/`EnableAimStabilization`, затем `EnableSpeedFov`, затем `EnableDirectionChangeAcceleration`, затем `EnableCounterStrafeBoost`. В `Camera / Speed FOV` есть readout `Speed FOV Debug` с текущей speed/FOV диагностикой.
+
+## Wall Run Tuning
+
+`Wall Run` contains the Ghostrunner-style side-wall movement controls: enable/forward/grace/double-jump/camera/FOV/debug toggles; wall detection distance/height/radius/normal slope thresholds; entry speed, retention, grace, and forward-dot threshold; run speed, acceleration, duration, stick force, wall gravity, fall clamp, vertical damping, arc down force, and exit retention; wall-jump away/up/forward forces, speed clamp, lockout, and cooldown; camera roll angle/enter/exit speeds, pitch offset, FOV boost, and FOV lerp speed.
+
+The readout `Wall Run Debug` shows active side, wall normal, cooldowns, FOV boost, and last exit reason. `Save Runtime Values`, `Load Saved Values`, `Reset To Defaults`, and `Save As Project Defaults` include all Wall Run fields.
 
 ## Save / Load
 

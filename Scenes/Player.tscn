@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3]
+[gd_scene load_steps=21 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerController.cs" id="1_controller"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerMovementModule.cs" id="2_movement"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="6_arrow_scene"]
 [ext_resource type="Script" uid="uid://cq77hks5slvk5" path="res://Scripts/Player/Modules/PlayerBowVisualModule.cs" id="7_visual"]
 [ext_resource type="PackedScene" uid="uid://dcvjebv0ewk1a" path="res://Assets/Models/Bow/bow_viewmodel.glb" id="8_bow_model"]
+[ext_resource type="PackedScene" uid="uid://dtn1nlg8m5kbe" path="res://Assets/Models/Bow/cyber_bow_preview.glb" id="8_cyber_bow_model"]
+[ext_resource type="Material" path="res://Assets/Models/Bow/cyber_bow_preview_albedo_nearest.tres" id="8_cyber_bow_material"]
 [ext_resource type="Script" uid="uid://b4bs3il3bnnpw" path="res://Scripts/Player/Modules/PlayerViewModelRenderModule.cs" id="9_viewmodel_render"]
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="10_camera_fov"]
 [ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="11_crouch_slide"]
@@ -16,6 +18,7 @@
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="14_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="15_viewmodel_sway"]
 [ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="16_ability_state"]
+[ext_resource type="Script" path="res://Scripts/Player/Modules/PlayerWallRunModule.cs" id="17_wall_run"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -50,32 +53,50 @@ script = ExtResource("16_ability_state")
 
 [node name="PlayerMovementModule" type="Node" parent="."]
 script = ExtResource("2_movement")
-MoveSpeed = 6.0
-Acceleration = 18.0
-AirControlMultiplier = 0.35
+MoveSpeed = 15.0
+Acceleration = 60.0
+AirControlMultiplier = 0.5
+CounterStrafeBoost = 1.75
+AirAcceleration = 20.5
+AirDeceleration = 10.0
 
 [node name="PlayerJumpModule" type="Node" parent="."]
 script = ExtResource("3_jump")
-JumpVelocity = 5.0
-GravityMultiplier = 1.0
+JumpVelocity = 10.0
+GravityMultiplier = 5.0
+GroundedVerticalVelocity = -3.2
+FloorSnapLength = 1.0
 
 [node name="PlayerCrouchSlideModule" type="Node" parent="."]
 script = ExtResource("11_crouch_slide")
+SlideInitialSpeed = 20.0
+SlideJumpHorizontalBoost = 6.0
 
 [node name="PlayerSlingshotGrappleModule" type="Node" parent="."]
 script = ExtResource("12_slingshot_grapple")
+PullAcceleration = 9.5
+MaxPullSpeed = 13.5
+GrappleArriveDistance = 2.0
+LaunchForce = 0.5
+InheritPullVelocityFactor = 0.15
+MaxLaunchVelocity = 9.5
+PostLaunchControlDelay = 0.73
+DebugPrintStateChanges = true
 
 [node name="PlayerLookModule" type="Node" parent="."]
 script = ExtResource("4_look")
-MouseSensitivity = 0.003
+MouseSensitivity = 0.0017
 MinPitch = -80.0
 MaxPitch = 80.0
 
+[node name="PlayerWallRunModule" type="Node" parent="."]
+script = ExtResource("17_wall_run")
+
 [node name="PlayerCameraFovModule" type="Node" parent="."]
 script = ExtResource("10_camera_fov")
-PlayerFov = 75.0
+PlayerFov = 100.0
 PrecisionFov = 45.0
-FovTransitionSpeed = 90.0
+FovTransitionSpeed = 240.0
 
 [node name="PlayerSpeedFovModule" type="Node" parent="."]
 script = ExtResource("14_speed_fov")
@@ -89,7 +110,7 @@ LightShotSpeed = 50.0
 ChargedShotSpeed = 100.0
 LightShotDamage = 8.0
 ChargedShotDamage = 24.0
-ChargeTime = 0.8
+ChargeTime = 0.4
 FireCooldown = 0.2
 ProjectileLifetime = 5.0
 SpawnForwardOffset = 0.35
@@ -101,7 +122,7 @@ BowViewModelHolderPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewport
 DrawAnimationName = "Draw"
 ReleaseAnimationName = "Release"
 UseReleaseAnimation = false
-ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual")
+ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual")
 HideArrowOnShot = true
 ArrowShowDelay = 0.15
 DrawResetSpeed = 12.0
@@ -110,12 +131,13 @@ DrawResetSpeed = 12.0
 script = ExtResource("9_viewmodel_render")
 ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
 ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot")
+LightRigEnabled = false
 
 [node name="PlayerViewModelSwayModule" type="Node" parent="."]
 script = ExtResource("15_viewmodel_sway")
 ViewModelSwayRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot")
 ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
-ArrowTipMarkerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual/ArrowTipMarker")
+ArrowTipMarkerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="."]
 
@@ -131,7 +153,9 @@ stretch = true
 
 [node name="ViewModelSubViewport" type="SubViewport" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer"]
 transparent_bg = true
+handle_input_locally = false
 size = Vector2i(1152, 648)
+render_target_update_mode = 4
 
 [node name="ViewModelRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport"]
 
@@ -142,25 +166,26 @@ fov = 65.0
 
 [node name="ViewModelLightRig" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
 
-[node name="MainLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
-transform = Transform3D(0.86602527, 0.3535535, -0.35355335, 0, 0.70710653, 0.707107, 0.50000024, -0.61237264, 0.6123723, 0, 0, 0)
-layers = 524288
-light_energy = 1.8
-shadow_enabled = false
-
-[node name="FillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0.25, 1.25)
-layers = 524288
-light_energy = 0.45
-omni_range = 4.0
-shadow_enabled = false
-
 [node name="ViewModelSwayRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot"]
 
 [node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot"]
-position = Vector3(0.35, -0.35, -0.85)
+transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
 
 [node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" instance=ExtResource("8_bow_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
+visible = false
 
-[node name="ArrowTipMarker" type="Marker3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/BowRig/NockPoint_Bone/Arrow_Bone/Arrow_Visual"]
+[node name="CyberBowViewModelOffset" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder"]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, -0.04076618, -1.1705347)
+
+[node name="CyberBow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset" instance=ExtResource("8_cyber_bow_model")]
+transform = Transform3D(0.5535396, 0, 0, 0, 0.6267418, 0, 0, 0, 0.9614193, 0, 0.04677272, 4.004989)
+
+[node name="Bow_Visual" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel" index="0"]
+material_override = ExtResource("8_cyber_bow_material")
+
+[node name="Arrow_Visual" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel" index="1"]
+material_override = ExtResource("8_cyber_bow_material")
+
+[node name="ArrowTipMarker" type="Marker3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual"]
 position = Vector3(0, 0, -0.45)

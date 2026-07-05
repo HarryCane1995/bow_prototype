@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://m3mpn82178hw"]
+
+[ext_resource type="Script" uid="uid://bst7plxmvwfkx" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
+[ext_resource type="PackedScene" uid="uid://ecws3xg03lek" path="res://Level_01_Blockout.blend" id="2_imported_level"]
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="4_grapple_anchor"]
+[ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
+[ext_resource type="Texture2D" uid="uid://cbgrraldhdcfq" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="6_skybox"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="8_runtime_tuning_panel"]
+[ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="9_crosshair"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
+panorama = ExtResource("6_skybox")
+energy_multiplier = 0.85
+
+[sub_resource type="Sky" id="Sky_level_01"]
+sky_material = SubResource("PanoramaSkyMaterial_level_01")
+
+[sub_resource type="Environment" id="Environment_level_01"]
+background_mode = 2
+background_energy_multiplier = 0.07
+sky = SubResource("Sky_level_01")
+ambient_light_source = 3
+ambient_light_color = Color(0.74, 0.78, 0.82, 1)
+ambient_light_energy = 1.75
+reflected_light_source = 2
+ssao_enabled = true
+ssao_radius = 1.4
+ssao_power = 1.35
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_temporary_safety_floor"]
+size = Vector3(30, 0.5, 30)
+
+[node name="Level_01" type="Node3D" unique_id=1950637911]
+
+[node name="StartupWindowModeController" type="Node" parent="." unique_id=1237572802]
+script = ExtResource("5_startup_window_mode")
+
+[node name="ImportedLevel" parent="." unique_id=1325503189 instance=ExtResource("2_imported_level")]
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=248952348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 4)
+
+[node name="Player" parent="." unique_id=1353686518 instance=ExtResource("3_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 4)
+
+[node name="Gameplay" type="Node3D" parent="." unique_id=1883463015]
+script = ExtResource("1_marker_binder")
+GrappleAnchorScene = ExtResource("4_grapple_anchor")
+DisableImportedLights = false
+
+[node name="Enemies" type="Node3D" parent="Gameplay" unique_id=721523057]
+
+[node name="GrappleAnchors" type="Node3D" parent="Gameplay" unique_id=279533576]
+
+[node name="Triggers" type="Node3D" parent="Gameplay" unique_id=2100804113]
+
+[node name="World" type="Node3D" parent="." unique_id=1887815920]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World" unique_id=1820387475]
+transform = Transform3D(0.86602527, 0.32139382, -0.38302252, 0, 0.76604444, 0.64278764, 0.50000024, -0.5566704, 0.663414, 0, 0, 0)
+light_energy = 0.85
+light_indirect_energy = 0.6
+light_volumetric_fog_energy = 0.0
+light_angular_distance = 8.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=619635705]
+environment = SubResource("Environment_level_01")
+
+[node name="Debug" type="Node3D" parent="." unique_id=488753892]
+
+[node name="TemporarySafetyFloor" type="StaticBody3D" parent="Debug" unique_id=1909425007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Debug/TemporarySafetyFloor" unique_id=943698149]
+visible = false
+shape = SubResource("BoxShape3D_temporary_safety_floor")
+disabled = true
+
+[node name="RuntimeTuningPanel" parent="Debug" unique_id=1950765612 instance=ExtResource("8_runtime_tuning_panel")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1713791246]
+layer = 2
+
+[node name="CrosshairUI" type="Control" parent="CanvasLayer" unique_id=880699753]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_crosshair")
+CrosshairColor = Color(1, 1, 1, 0.9)

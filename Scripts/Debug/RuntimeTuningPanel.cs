@@ -104,6 +104,7 @@ public partial class RuntimeTuningPanel : Window
         AddMovementSection();
         AddJumpSection();
         AddCrouchSlideSection();
+        AddWallRunSection();
         AddSlingshotGrappleSection();
         AddBowSection();
         AddCameraSection();
@@ -197,6 +198,51 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Slide Jump Carry", 0.0, 1.5, 0.05, () => TuningProfile.SlideJumpVelocityCarryFactor, value => TuningProfile.SlideJumpVelocityCarryFactor = value);
         AddFloatControl("Slide Jump Max Speed", 0.0, 35.0, 0.5, () => TuningProfile.SlideJumpMaxHorizontalSpeed, value => TuningProfile.SlideJumpMaxHorizontalSpeed = value);
         AddBoolControl("Slide Jump Needs Headroom", () => TuningProfile.SlideJumpRequiresStandUpSpace, value => TuningProfile.SlideJumpRequiresStandUpSpace = value);
+    }
+
+    private void AddWallRunSection()
+    {
+        AddSection("Wall Run");
+        AddBoolControl("Enable Wall Run", () => TuningProfile.EnableWallRun, value => TuningProfile.EnableWallRun = value);
+        AddBoolControl("Require Forward Input", () => TuningProfile.RequireWallRunForwardInput, value => TuningProfile.RequireWallRunForwardInput = value);
+        AddBoolControl("Allow Ground Grace", () => TuningProfile.AllowWallRunFromGroundGrace, value => TuningProfile.AllowWallRunFromGroundGrace = value);
+        AddBoolControl("Restore Double Jump", () => TuningProfile.RestoreDoubleJumpOnWallRun, value => TuningProfile.RestoreDoubleJumpOnWallRun = value);
+        AddBoolControl("Enable Wall Jump", () => TuningProfile.EnableWallJump, value => TuningProfile.EnableWallJump = value);
+        AddBoolControl("Enable Camera Roll", () => TuningProfile.EnableWallRunCameraRoll, value => TuningProfile.EnableWallRunCameraRoll = value);
+        AddBoolControl("Enable FOV Boost", () => TuningProfile.EnableWallRunFovBoost, value => TuningProfile.EnableWallRunFovBoost = value);
+        AddBoolControl("Debug Wall Run", () => TuningProfile.DebugWallRun, value => TuningProfile.DebugWallRun = value);
+        AddFloatControl("Wall Detection Distance", 0.1, 3.0, 0.05, () => TuningProfile.WallDetectionDistance, value => TuningProfile.WallDetectionDistance = value);
+        AddFloatControl("Wall Detection Height", 0.0, 2.0, 0.05, () => TuningProfile.WallDetectionHeightOffset, value => TuningProfile.WallDetectionHeightOffset = value);
+        AddFloatControl("Wall Detection Radius", 0.0, 1.0, 0.01, () => TuningProfile.WallDetectionRadius, value => TuningProfile.WallDetectionRadius = value);
+        AddFloatControl("Wall Normal Vertical Dot", 0.0, 0.9, 0.01, () => TuningProfile.MinWallNormalVerticalDot, value => TuningProfile.MinWallNormalVerticalDot = value);
+        AddFloatControl("Reattach Cooldown", 0.0, 1.0, 0.01, () => TuningProfile.WallReattachCooldown, value => TuningProfile.WallReattachCooldown = value);
+        AddFloatControl("Same Wall Cooldown", 0.0, 2.0, 0.01, () => TuningProfile.SameWallReattachCooldown, value => TuningProfile.SameWallReattachCooldown = value);
+        AddFloatControl("Min Entry Speed", 0.0, 30.0, 0.1, () => TuningProfile.WallRunMinEntrySpeed, value => TuningProfile.WallRunMinEntrySpeed = value);
+        AddFloatControl("Entry Speed Retention", 0.0, 1.5, 0.05, () => TuningProfile.WallRunEntrySpeedRetention, value => TuningProfile.WallRunEntrySpeedRetention = value);
+        AddFloatControl("Entry Grace Time", 0.0, 0.5, 0.01, () => TuningProfile.WallRunEntryGraceTime, value => TuningProfile.WallRunEntryGraceTime = value);
+        AddFloatControl("Forward Dot Threshold", -1.0, 1.0, 0.01, () => TuningProfile.WallRunMaxStartAngleForwardDot, value => TuningProfile.WallRunMaxStartAngleForwardDot = value);
+        AddFloatControl("Wall Run Speed", 0.0, 40.0, 0.1, () => TuningProfile.WallRunSpeed, value => TuningProfile.WallRunSpeed = value);
+        AddFloatControl("Wall Run Acceleration", 0.0, 140.0, 0.5, () => TuningProfile.WallRunAcceleration, value => TuningProfile.WallRunAcceleration = value);
+        AddFloatControl("Max Duration", 0.1, 5.0, 0.05, () => TuningProfile.WallRunMaxDuration, value => TuningProfile.WallRunMaxDuration = value);
+        AddFloatControl("Wall Stick Force", 0.0, 80.0, 0.5, () => TuningProfile.WallStickForce, value => TuningProfile.WallStickForce = value);
+        AddFloatControl("Wall Gravity", 0.0, 40.0, 0.5, () => TuningProfile.WallGravity, value => TuningProfile.WallGravity = value);
+        AddFloatControl("Fall Speed Clamp", 0.0, 40.0, 0.5, () => TuningProfile.WallFallSpeedClamp, value => TuningProfile.WallFallSpeedClamp = value);
+        AddFloatControl("Vertical Damping", 0.0, 3.0, 0.05, () => TuningProfile.WallVerticalDamping, value => TuningProfile.WallVerticalDamping = value);
+        AddFloatControl("Arc Down Force", 0.0, 60.0, 0.5, () => TuningProfile.WallArcDownForce, value => TuningProfile.WallArcDownForce = value);
+        AddFloatControl("Exit Speed Retention", 0.0, 1.5, 0.05, () => TuningProfile.WallRunExitSpeedRetention, value => TuningProfile.WallRunExitSpeedRetention = value);
+        AddFloatControl("Jump Away Force", 0.0, 40.0, 0.1, () => TuningProfile.WallJumpAwayForce, value => TuningProfile.WallJumpAwayForce = value);
+        AddFloatControl("Jump Up Force", 0.0, 40.0, 0.1, () => TuningProfile.WallJumpUpForce, value => TuningProfile.WallJumpUpForce = value);
+        AddFloatControl("Jump Forward Force", 0.0, 40.0, 0.1, () => TuningProfile.WallJumpForwardForce, value => TuningProfile.WallJumpForwardForce = value);
+        AddFloatControl("Jump Speed Clamp", 0.0, 60.0, 0.5, () => TuningProfile.WallJumpSpeedClamp, value => TuningProfile.WallJumpSpeedClamp = value);
+        AddFloatControl("Jump Lockout Time", 0.0, 1.0, 0.01, () => TuningProfile.WallJumpLockoutTime, value => TuningProfile.WallJumpLockoutTime = value);
+        AddFloatControl("Jump Cooldown", 0.0, 1.0, 0.01, () => TuningProfile.WallJumpCooldown, value => TuningProfile.WallJumpCooldown = value);
+        AddFloatControl("Camera Roll Angle", 0.0, 35.0, 0.5, () => TuningProfile.WallRunCameraRollAngle, value => TuningProfile.WallRunCameraRollAngle = value);
+        AddFloatControl("Camera Roll Enter", 1.0, 360.0, 1.0, () => TuningProfile.WallRunCameraRollEnterSpeed, value => TuningProfile.WallRunCameraRollEnterSpeed = value);
+        AddFloatControl("Camera Roll Exit", 1.0, 360.0, 1.0, () => TuningProfile.WallRunCameraRollExitSpeed, value => TuningProfile.WallRunCameraRollExitSpeed = value);
+        AddFloatControl("Camera Pitch Offset", -15.0, 15.0, 0.5, () => TuningProfile.WallRunCameraPitchOffset, value => TuningProfile.WallRunCameraPitchOffset = value);
+        AddFloatControl("FOV Boost", 0.0, 30.0, 0.5, () => TuningProfile.WallRunFovBoost, value => TuningProfile.WallRunFovBoost = value);
+        AddFloatControl("FOV Lerp Speed", 0.1, 30.0, 0.1, () => TuningProfile.WallRunFovLerpSpeed, value => TuningProfile.WallRunFovLerpSpeed = value);
+        AddReadout("Wall Run Debug", GetWallRunDebugText);
     }
 
     private void AddSlingshotGrappleSection()
@@ -394,6 +440,11 @@ public partial class RuntimeTuningPanel : Window
         return $"speed={speedFov.CurrentSpeed:0.00}, forward={speedFov.CurrentForwardSpeed:0.00}, strafe={speedFov.CurrentStrafeSpeed:0.00}, bonus={speedFov.CurrentSpeedFovBonus:0.00}/{speedFov.CurrentTargetSpeedFovBonus:0.00}, targetFov={cameraFov.FinalTargetFov:0.00}, cameraFov={cameraFov.CurrentCameraFov:0.00}";
     }
 
+    private string GetWallRunDebugText()
+    {
+        return _player?.WallRunModule?.GetDebugText() ?? "wall run module not found";
+    }
+
     private string GetFramePhysicsDebugText()
     {
         Vector3 velocity = _player?.Velocity ?? Vector3.Zero;
@@ -513,6 +564,45 @@ public partial class RuntimeTuningPanel : Window
             ["EnableDoubleJumpRedirect"] = profile.EnableDoubleJumpRedirect,
             ["DoubleJumpRedirectSpeed"] = profile.DoubleJumpRedirectSpeed,
             ["RestoreDoubleJumpOnGrapple"] = profile.RestoreDoubleJumpOnGrapple,
+            ["EnableWallRun"] = profile.EnableWallRun,
+            ["RequireWallRunForwardInput"] = profile.RequireWallRunForwardInput,
+            ["AllowWallRunFromGroundGrace"] = profile.AllowWallRunFromGroundGrace,
+            ["RestoreDoubleJumpOnWallRun"] = profile.RestoreDoubleJumpOnWallRun,
+            ["EnableWallJump"] = profile.EnableWallJump,
+            ["EnableWallRunCameraRoll"] = profile.EnableWallRunCameraRoll,
+            ["EnableWallRunFovBoost"] = profile.EnableWallRunFovBoost,
+            ["DebugWallRun"] = profile.DebugWallRun,
+            ["WallDetectionDistance"] = profile.WallDetectionDistance,
+            ["WallDetectionHeightOffset"] = profile.WallDetectionHeightOffset,
+            ["WallDetectionRadius"] = profile.WallDetectionRadius,
+            ["MinWallNormalVerticalDot"] = profile.MinWallNormalVerticalDot,
+            ["WallReattachCooldown"] = profile.WallReattachCooldown,
+            ["SameWallReattachCooldown"] = profile.SameWallReattachCooldown,
+            ["WallRunMinEntrySpeed"] = profile.WallRunMinEntrySpeed,
+            ["WallRunEntrySpeedRetention"] = profile.WallRunEntrySpeedRetention,
+            ["WallRunEntryGraceTime"] = profile.WallRunEntryGraceTime,
+            ["WallRunMaxStartAngleForwardDot"] = profile.WallRunMaxStartAngleForwardDot,
+            ["WallRunSpeed"] = profile.WallRunSpeed,
+            ["WallRunAcceleration"] = profile.WallRunAcceleration,
+            ["WallRunMaxDuration"] = profile.WallRunMaxDuration,
+            ["WallStickForce"] = profile.WallStickForce,
+            ["WallGravity"] = profile.WallGravity,
+            ["WallFallSpeedClamp"] = profile.WallFallSpeedClamp,
+            ["WallVerticalDamping"] = profile.WallVerticalDamping,
+            ["WallArcDownForce"] = profile.WallArcDownForce,
+            ["WallRunExitSpeedRetention"] = profile.WallRunExitSpeedRetention,
+            ["WallJumpAwayForce"] = profile.WallJumpAwayForce,
+            ["WallJumpUpForce"] = profile.WallJumpUpForce,
+            ["WallJumpForwardForce"] = profile.WallJumpForwardForce,
+            ["WallJumpSpeedClamp"] = profile.WallJumpSpeedClamp,
+            ["WallJumpLockoutTime"] = profile.WallJumpLockoutTime,
+            ["WallJumpCooldown"] = profile.WallJumpCooldown,
+            ["WallRunCameraRollAngle"] = profile.WallRunCameraRollAngle,
+            ["WallRunCameraRollEnterSpeed"] = profile.WallRunCameraRollEnterSpeed,
+            ["WallRunCameraRollExitSpeed"] = profile.WallRunCameraRollExitSpeed,
+            ["WallRunCameraPitchOffset"] = profile.WallRunCameraPitchOffset,
+            ["WallRunFovBoost"] = profile.WallRunFovBoost,
+            ["WallRunFovLerpSpeed"] = profile.WallRunFovLerpSpeed,
             ["CrouchSpeedMultiplier"] = profile.CrouchSpeedMultiplier,
             ["SlideInitialSpeed"] = profile.SlideInitialSpeed,
             ["SlideDuration"] = profile.SlideDuration,
@@ -624,6 +714,45 @@ public partial class RuntimeTuningPanel : Window
         profile.EnableDoubleJumpRedirect = GetBool(values, "EnableDoubleJumpRedirect", profile.EnableDoubleJumpRedirect);
         profile.DoubleJumpRedirectSpeed = GetFloat(values, "DoubleJumpRedirectSpeed", profile.DoubleJumpRedirectSpeed);
         profile.RestoreDoubleJumpOnGrapple = GetBool(values, "RestoreDoubleJumpOnGrapple", profile.RestoreDoubleJumpOnGrapple);
+        profile.EnableWallRun = GetBool(values, "EnableWallRun", profile.EnableWallRun);
+        profile.RequireWallRunForwardInput = GetBool(values, "RequireWallRunForwardInput", profile.RequireWallRunForwardInput);
+        profile.AllowWallRunFromGroundGrace = GetBool(values, "AllowWallRunFromGroundGrace", profile.AllowWallRunFromGroundGrace);
+        profile.RestoreDoubleJumpOnWallRun = GetBool(values, "RestoreDoubleJumpOnWallRun", profile.RestoreDoubleJumpOnWallRun);
+        profile.EnableWallJump = GetBool(values, "EnableWallJump", profile.EnableWallJump);
+        profile.EnableWallRunCameraRoll = GetBool(values, "EnableWallRunCameraRoll", profile.EnableWallRunCameraRoll);
+        profile.EnableWallRunFovBoost = GetBool(values, "EnableWallRunFovBoost", profile.EnableWallRunFovBoost);
+        profile.DebugWallRun = GetBool(values, "DebugWallRun", profile.DebugWallRun);
+        profile.WallDetectionDistance = GetFloat(values, "WallDetectionDistance", profile.WallDetectionDistance);
+        profile.WallDetectionHeightOffset = GetFloat(values, "WallDetectionHeightOffset", profile.WallDetectionHeightOffset);
+        profile.WallDetectionRadius = GetFloat(values, "WallDetectionRadius", profile.WallDetectionRadius);
+        profile.MinWallNormalVerticalDot = GetFloat(values, "MinWallNormalVerticalDot", profile.MinWallNormalVerticalDot);
+        profile.WallReattachCooldown = GetFloat(values, "WallReattachCooldown", profile.WallReattachCooldown);
+        profile.SameWallReattachCooldown = GetFloat(values, "SameWallReattachCooldown", profile.SameWallReattachCooldown);
+        profile.WallRunMinEntrySpeed = GetFloat(values, "WallRunMinEntrySpeed", profile.WallRunMinEntrySpeed);
+        profile.WallRunEntrySpeedRetention = GetFloat(values, "WallRunEntrySpeedRetention", profile.WallRunEntrySpeedRetention);
+        profile.WallRunEntryGraceTime = GetFloat(values, "WallRunEntryGraceTime", profile.WallRunEntryGraceTime);
+        profile.WallRunMaxStartAngleForwardDot = GetFloat(values, "WallRunMaxStartAngleForwardDot", profile.WallRunMaxStartAngleForwardDot);
+        profile.WallRunSpeed = GetFloat(values, "WallRunSpeed", profile.WallRunSpeed);
+        profile.WallRunAcceleration = GetFloat(values, "WallRunAcceleration", profile.WallRunAcceleration);
+        profile.WallRunMaxDuration = GetFloat(values, "WallRunMaxDuration", profile.WallRunMaxDuration);
+        profile.WallStickForce = GetFloat(values, "WallStickForce", profile.WallStickForce);
+        profile.WallGravity = GetFloat(values, "WallGravity", profile.WallGravity);
+        profile.WallFallSpeedClamp = GetFloat(values, "WallFallSpeedClamp", profile.WallFallSpeedClamp);
+        profile.WallVerticalDamping = GetFloat(values, "WallVerticalDamping", profile.WallVerticalDamping);
+        profile.WallArcDownForce = GetFloat(values, "WallArcDownForce", profile.WallArcDownForce);
+        profile.WallRunExitSpeedRetention = GetFloat(values, "WallRunExitSpeedRetention", profile.WallRunExitSpeedRetention);
+        profile.WallJumpAwayForce = GetFloat(values, "WallJumpAwayForce", profile.WallJumpAwayForce);
+        profile.WallJumpUpForce = GetFloat(values, "WallJumpUpForce", profile.WallJumpUpForce);
+        profile.WallJumpForwardForce = GetFloat(values, "WallJumpForwardForce", profile.WallJumpForwardForce);
+        profile.WallJumpSpeedClamp = GetFloat(values, "WallJumpSpeedClamp", profile.WallJumpSpeedClamp);
+        profile.WallJumpLockoutTime = GetFloat(values, "WallJumpLockoutTime", profile.WallJumpLockoutTime);
+        profile.WallJumpCooldown = GetFloat(values, "WallJumpCooldown", profile.WallJumpCooldown);
+        profile.WallRunCameraRollAngle = GetFloat(values, "WallRunCameraRollAngle", profile.WallRunCameraRollAngle);
+        profile.WallRunCameraRollEnterSpeed = GetFloat(values, "WallRunCameraRollEnterSpeed", profile.WallRunCameraRollEnterSpeed);
+        profile.WallRunCameraRollExitSpeed = GetFloat(values, "WallRunCameraRollExitSpeed", profile.WallRunCameraRollExitSpeed);
+        profile.WallRunCameraPitchOffset = GetFloat(values, "WallRunCameraPitchOffset", profile.WallRunCameraPitchOffset);
+        profile.WallRunFovBoost = GetFloat(values, "WallRunFovBoost", profile.WallRunFovBoost);
+        profile.WallRunFovLerpSpeed = GetFloat(values, "WallRunFovLerpSpeed", profile.WallRunFovLerpSpeed);
         profile.CrouchSpeedMultiplier = GetFloat(values, "CrouchSpeedMultiplier", profile.CrouchSpeedMultiplier);
         profile.SlideInitialSpeed = GetFloat(values, "SlideInitialSpeed", profile.SlideInitialSpeed);
         profile.SlideDuration = GetFloat(values, "SlideDuration", profile.SlideDuration);

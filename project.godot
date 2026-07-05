@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bow_prototype"
-run/main_scene="res://Scenes/BowPrototypeScene.tscn"
+run/main_scene="res://Scenes/Levels/Level_01/Level_01.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -6,7 +6,7 @@
 
 ## Зачем Это Нужно
 
-Проект уже содержит slide, slide jump, double jump, slingshot grapple, precision stance и shooting. Дальше появятся wall run, parry, knockback, death state и, возможно, dash/air tricks. Без общего арбитража каждая новая механика начнёт знать слишком много о соседях.
+Проект уже содержит slide, slide jump, double jump, wall run, slingshot grapple, precision stance и shooting. Дальше появятся parry, knockback, death state и, возможно, dash/air tricks. Без общего арбитража каждая новая механика начнёт знать слишком много о соседях.
 
 `PlayerAbilityStateModule` даёт общий контракт:
 
@@ -29,7 +29,7 @@
 - `Knockback`
 - `Death`
 
-`WallRun`, `Parry`, `Knockback` и `Death` сейчас зарезервированы для будущих механик.
+`WallRun` реализован в `PlayerWallRunModule`. `Parry`, `Knockback` и `Death` сейчас зарезервированы для будущих механик.
 
 ## PlayerAbilityLock
 
@@ -66,6 +66,8 @@
 
 `SlingshotGrappleLaunch` регистрируется на фазе launch с теми же locks и остаётся активным до конца `PostLaunchControlDelay`. Это защищает вылет от немедленного перетирания обычным horizontal movement.
 
+`WallRun` регистрируется при входе на боковую стену в воздухе и держит `HorizontalVelocity`, `VerticalVelocity` и `Slide`. Он не блокирует `Shooting`. Wall jump сначала снимает request `WallRun`, затем применяет away/up/forward impulse. Grapple pull/launch имеет более высокий приоритет и может забрать те же velocity locks.
+
 `PlayerJumpModule` сейчас проверяет `Jump` перед обычным jump и `DoubleJump` перед air jump. Текущие механики эти locks не держат, поэтому slide jump и double jump после grapple продолжают работать по старым правилам.
 
 `PlayerBowShootModule` проверяет `Shooting` перед выстрелом. Сейчас ни одна механика не блокирует shooting; это подготовка к будущим `Parry` и `Death`.
@@ -76,7 +78,7 @@ Slide управляет `HorizontalVelocity`, но не блокирует shoo
 
 SlingshotGrapplePull перебивает обычное движение и slide, потому что его приоритет выше и он держит velocity/slide locks.
 
-Будущий WallRun сможет перебивать обычное движение через `HorizontalVelocity`, но не обязан блокировать `Shooting`.
+WallRun перебивает обычное движение через `HorizontalVelocity` и `VerticalVelocity`, блокирует slide, но не блокирует `Shooting`.
 
 Будущий Parry сможет на короткое окно держать `Shooting`, не блокируя movement.
 

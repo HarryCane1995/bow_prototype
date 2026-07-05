@@ -44,7 +44,8 @@ public partial class PlayerCameraFovModule : Node
 
         float baseTargetFov = _isPrecisionAiming ? CurrentPrecisionFov : CurrentPlayerFov;
         float speedFovBonus = _player.SpeedFovModule?.UpdateSpeedFovBonus(delta, _isPrecisionAiming) ?? 0.0f;
-        _targetFov = Mathf.Min(baseTargetFov + speedFovBonus, 140.0f);
+        float wallRunFovBonus = _player.WallRunModule?.CurrentFovBoost ?? 0.0f;
+        _targetFov = Mathf.Min(baseTargetFov + speedFovBonus + wallRunFovBonus, 140.0f);
         _camera.Fov = Mathf.MoveToward(_camera.Fov, _targetFov, CurrentFovTransitionSpeed * (float)delta);
     }
 

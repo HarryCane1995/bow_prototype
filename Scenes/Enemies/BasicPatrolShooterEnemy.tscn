@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene format=3 uid="uid://isdxd3muvxxa"]
 
 [ext_resource type="Script" uid="uid://dr7bocqwo1an3" path="res://Scripts/Enemies/BasicPatrolShooterEnemy.cs" id="1_enemy"]
 [ext_resource type="PackedScene" path="res://Scenes/Enemies/EnemyProjectile.tscn" id="2_projectile"]
@@ -11,7 +11,6 @@ height = 1.8
 radius = 0.45
 height = 1.8
 radial_segments = 20
-rings = 8
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enemy"]
 albedo_color = Color(0.65, 0.08, 0.08, 1)
@@ -23,32 +22,24 @@ emission_enabled = true
 emission = Color(1, 0.72, 0.08, 1)
 emission_energy_multiplier = 0.8
 
-[node name="BasicPatrolShooterEnemy" type="CharacterBody3D" groups=["enemy"]]
+[node name="BasicPatrolShooterEnemy" type="CharacterBody3D" unique_id=999655466 groups=["enemy"]]
 collision_layer = 4
-collision_mask = 1
 script = ExtResource("1_enemy")
 EnemyProjectileScene = ExtResource("2_projectile")
-ShootPointPath = NodePath("ShootPoint")
-PatrolDistance = 5.0
-PatrolSpeed = 2.5
-ShootInterval = 2.0
-ProjectileSpeed = 16.0
-MaxHealth = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-position = Vector3(0, 0.9, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1112346597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_enemy")
 
-[node name="BodyVisual" type="MeshInstance3D" parent="."]
-position = Vector3(0, 0.9, 0)
+[node name="BodyVisual" type="MeshInstance3D" parent="." unique_id=888697464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 mesh = SubResource("CapsuleMesh_enemy")
 surface_material_override/0 = SubResource("StandardMaterial3D_enemy")
 
-[node name="EyeVisual" type="MeshInstance3D" parent="."]
-position = Vector3(0, 1.35, -0.42)
-scale = Vector3(0.35, 0.12, 0.08)
+[node name="EyeVisual" type="MeshInstance3D" parent="." unique_id=1234779151]
+transform = Transform3D(0.35, 0, 0, 0, 0.12, 0, 0, 0, 0.08, 0, 1.35, -0.42)
 mesh = SubResource("CapsuleMesh_enemy")
 surface_material_override/0 = SubResource("StandardMaterial3D_eye")
 
-[node name="ShootPoint" type="Marker3D" parent="."]
-position = Vector3(0, 1.2, -0.75)
+[node name="ShootPoint" type="Marker3D" parent="." unique_id=1305832629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.75)

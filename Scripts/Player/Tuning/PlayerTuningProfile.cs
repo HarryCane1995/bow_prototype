@@ -70,6 +70,57 @@ public partial class PlayerTuningProfile : Resource
     /// </summary>
     [Export] public bool RestoreDoubleJumpOnGrapple { get; set; } = true;
 
+    [ExportGroup("Wall Run")]
+    [Export] public bool EnableWallRun { get; set; } = true;
+    [Export] public bool RequireWallRunForwardInput { get; set; } = true;
+    [Export] public bool AllowWallRunFromGroundGrace { get; set; } = true;
+    [Export] public bool RestoreDoubleJumpOnWallRun { get; set; } = true;
+    [Export] public bool EnableWallJump { get; set; } = true;
+    [Export] public bool EnableWallRunCameraRoll { get; set; } = true;
+    [Export] public bool EnableWallRunFovBoost { get; set; } = true;
+    [Export] public bool DebugWallRun { get; set; } = false;
+
+    [ExportGroup("Wall Run / Detection")]
+    [Export(PropertyHint.Range, "0.1,3,0.05,suffix:m")] public float WallDetectionDistance { get; set; } = 0.9f;
+    [Export(PropertyHint.Range, "0,2,0.05,suffix:m")] public float WallDetectionHeightOffset { get; set; } = 1.0f;
+    [Export(PropertyHint.Range, "0,1,0.01")] public float WallDetectionRadius { get; set; } = 0.28f;
+    [Export(PropertyHint.Range, "0,0.9,0.01")] public float MinWallNormalVerticalDot { get; set; } = 0.25f;
+    [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallReattachCooldown { get; set; } = 0.08f;
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float SameWallReattachCooldown { get; set; } = 0.22f;
+
+    [ExportGroup("Wall Run / Entry")]
+    [Export(PropertyHint.Range, "0,30,0.1,suffix:m/s")] public float WallRunMinEntrySpeed { get; set; } = 7.0f;
+    [Export(PropertyHint.Range, "0,1.5,0.05")] public float WallRunEntrySpeedRetention { get; set; } = 0.85f;
+    [Export(PropertyHint.Range, "0,0.5,0.01,suffix:s")] public float WallRunEntryGraceTime { get; set; } = 0.12f;
+    [Export(PropertyHint.Range, "-1,1,0.01")] public float WallRunMaxStartAngleForwardDot { get; set; } = 0.2f;
+
+    [ExportGroup("Wall Run / Run")]
+    [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallRunSpeed { get; set; } = 17.0f;
+    [Export(PropertyHint.Range, "0,140,0.5,suffix:m/s^2")] public float WallRunAcceleration { get; set; } = 55.0f;
+    [Export(PropertyHint.Range, "0.1,5,0.05,suffix:s")] public float WallRunMaxDuration { get; set; } = 1.4f;
+    [Export(PropertyHint.Range, "0,80,0.5,suffix:m/s^2")] public float WallStickForce { get; set; } = 16.0f;
+    [Export(PropertyHint.Range, "0,40,0.5,suffix:m/s^2")] public float WallGravity { get; set; } = 3.5f;
+    [Export(PropertyHint.Range, "0,40,0.5,suffix:m/s")] public float WallFallSpeedClamp { get; set; } = 7.0f;
+    [Export(PropertyHint.Range, "0,3,0.05")] public float WallVerticalDamping { get; set; } = 0.35f;
+    [Export(PropertyHint.Range, "0,60,0.5,suffix:m/s^2")] public float WallArcDownForce { get; set; } = 7.0f;
+    [Export(PropertyHint.Range, "0,1.5,0.05")] public float WallRunExitSpeedRetention { get; set; } = 0.9f;
+
+    [ExportGroup("Wall Run / Wall Jump")]
+    [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallJumpAwayForce { get; set; } = 13.0f;
+    [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallJumpUpForce { get; set; } = 12.0f;
+    [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallJumpForwardForce { get; set; } = 10.0f;
+    [Export(PropertyHint.Range, "0,60,0.5,suffix:m/s")] public float WallJumpSpeedClamp { get; set; } = 24.0f;
+    [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallJumpLockoutTime { get; set; } = 0.08f;
+    [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallJumpCooldown { get; set; } = 0.16f;
+
+    [ExportGroup("Wall Run / Camera")]
+    [Export(PropertyHint.Range, "0,35,0.5,suffix:deg")] public float WallRunCameraRollAngle { get; set; } = 12.0f;
+    [Export(PropertyHint.Range, "1,360,1,suffix:deg/s")] public float WallRunCameraRollEnterSpeed { get; set; } = 120.0f;
+    [Export(PropertyHint.Range, "1,360,1,suffix:deg/s")] public float WallRunCameraRollExitSpeed { get; set; } = 160.0f;
+    [Export(PropertyHint.Range, "-15,15,0.5,suffix:deg")] public float WallRunCameraPitchOffset { get; set; } = -1.5f;
+    [Export(PropertyHint.Range, "0,30,0.5,suffix:deg")] public float WallRunFovBoost { get; set; } = 8.0f;
+    [Export(PropertyHint.Range, "0.1,30,0.1")] public float WallRunFovLerpSpeed { get; set; } = 10.0f;
+
     /// <summary>
     /// Множитель скорости обычного движения в crouch-состоянии.
     /// </summary>

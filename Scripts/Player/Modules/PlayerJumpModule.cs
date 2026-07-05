@@ -171,6 +171,23 @@ public partial class PlayerJumpModule : Node
         _forceNextJumpAsAirJumpFromGrapple = true;
     }
 
+    public void RestoreAirJumpChargeFromWallRun()
+    {
+        if (!CurrentRestoreDoubleJumpOnWallRun || !CurrentEnableDoubleJump)
+        {
+            return;
+        }
+
+        int maxJumpCount = Mathf.Max(1, MaxJumpCount);
+        if (maxJumpCount <= 1)
+        {
+            return;
+        }
+
+        _jumpsUsed = maxJumpCount - 1;
+        _forceNextJumpAsAirJumpFromGrapple = true;
+    }
+
     private void TryJump(ref Vector3 velocity, bool isGrounded)
     {
         if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.Jump) == true)
@@ -282,4 +299,5 @@ public partial class PlayerJumpModule : Node
     private bool CurrentEnableDoubleJumpRedirect => TuningProfile?.EnableDoubleJumpRedirect ?? EnableDoubleJumpRedirect;
     private float CurrentDoubleJumpRedirectSpeed => TuningProfile?.DoubleJumpRedirectSpeed ?? DoubleJumpRedirectSpeed;
     private bool CurrentRestoreDoubleJumpOnGrapple => TuningProfile?.RestoreDoubleJumpOnGrapple ?? RestoreDoubleJumpOnGrapple;
+    private bool CurrentRestoreDoubleJumpOnWallRun => TuningProfile?.RestoreDoubleJumpOnWallRun ?? true;
 }

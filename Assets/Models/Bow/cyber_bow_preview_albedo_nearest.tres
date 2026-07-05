@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b04p5f8gqbr2f"]
+
+[ext_resource type="Texture2D" uid="uid://8chetql2uqtn" path="res://Assets/Models/Bow/modern_bowUV.png" id="1_albedo"]
+
+[resource]
+resource_name = "CyberBowPreviewAlbedoNearest"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("1_albedo")
+texture_filter = 0

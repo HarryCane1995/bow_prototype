@@ -1,6 +1,5 @@
 using Godot;
 
-[Tool]
 public partial class TestSkyboxEnvironment : WorldEnvironment
 {
     /// <summary>
