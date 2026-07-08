@@ -160,6 +160,9 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Ground Deceleration", 0.0, 160.0, 0.5, () => TuningProfile.GroundDeceleration, value => TuningProfile.GroundDeceleration = value);
         AddBoolControl("Enable Direction Change Accel", () => TuningProfile.EnableDirectionChangeAcceleration, value => TuningProfile.EnableDirectionChangeAcceleration = value);
         AddFloatControl("Ground Direction Change", 0.0, 180.0, 0.5, () => TuningProfile.GroundDirectionChangeAcceleration, value => TuningProfile.GroundDirectionChangeAcceleration = value);
+        AddFloatControl("Air Acceleration", 0.0, 60.0, 0.5, () => TuningProfile.AirAcceleration, value => TuningProfile.AirAcceleration = value);
+        AddFloatControl("Air Deceleration", 0.0, 30.0, 0.5, () => TuningProfile.AirDeceleration, value => TuningProfile.AirDeceleration = value);
+        AddFloatControl("Air Direction Change Acceleration", 0.0, 80.0, 0.5, () => TuningProfile.AirDirectionChangeAcceleration, value => TuningProfile.AirDirectionChangeAcceleration = value);
         AddBoolControl("Enable Counter Strafe Boost", () => TuningProfile.EnableCounterStrafeBoost, value => TuningProfile.EnableCounterStrafeBoost = value);
         AddFloatControl("Counter Strafe Boost", 1.0, 4.0, 0.05, () => TuningProfile.CounterStrafeBoost, value => TuningProfile.CounterStrafeBoost = value);
     }
@@ -477,6 +480,9 @@ public partial class RuntimeTuningPanel : Window
             ["GroundDeceleration"] = profile.GroundDeceleration,
             ["EnableDirectionChangeAcceleration"] = profile.EnableDirectionChangeAcceleration,
             ["GroundDirectionChangeAcceleration"] = profile.GroundDirectionChangeAcceleration,
+            ["AirAcceleration"] = profile.AirAcceleration,
+            ["AirDeceleration"] = profile.AirDeceleration,
+            ["AirDirectionChangeAcceleration"] = profile.AirDirectionChangeAcceleration,
             ["EnableCounterStrafeBoost"] = profile.EnableCounterStrafeBoost,
             ["CounterStrafeBoost"] = profile.CounterStrafeBoost,
             ["JumpVelocity"] = profile.JumpVelocity,
@@ -627,6 +633,9 @@ public partial class RuntimeTuningPanel : Window
         profile.GroundDeceleration = GetFloat(values, "GroundDeceleration", profile.GroundDeceleration);
         profile.EnableDirectionChangeAcceleration = GetBool(values, "EnableDirectionChangeAcceleration", profile.EnableDirectionChangeAcceleration);
         profile.GroundDirectionChangeAcceleration = GetFloat(values, "GroundDirectionChangeAcceleration", profile.GroundDirectionChangeAcceleration);
+        profile.AirAcceleration = GetFloat(values, "AirAcceleration", profile.AirAcceleration);
+        profile.AirDeceleration = GetFloat(values, "AirDeceleration", profile.AirDeceleration);
+        profile.AirDirectionChangeAcceleration = GetFloat(values, "AirDirectionChangeAcceleration", profile.AirDirectionChangeAcceleration);
         profile.EnableCounterStrafeBoost = GetBool(values, "EnableCounterStrafeBoost", profile.EnableCounterStrafeBoost);
         profile.CounterStrafeBoost = GetFloat(values, "CounterStrafeBoost", profile.CounterStrafeBoost);
         profile.JumpVelocity = GetFloat(values, "JumpVelocity", profile.JumpVelocity);

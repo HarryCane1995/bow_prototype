@@ -142,10 +142,10 @@ public partial class PlayerMovementModule : Node
 
         if (!hasInput)
         {
-            return isGrounded ? CurrentGroundDeceleration : AirDeceleration;
+            return isGrounded ? CurrentGroundDeceleration : CurrentAirDeceleration;
         }
 
-        float selectedAcceleration = isGrounded ? CurrentGroundAcceleration : AirAcceleration;
+        float selectedAcceleration = isGrounded ? CurrentGroundAcceleration : CurrentAirAcceleration;
         if (currentHorizontalVelocity.LengthSquared() <= 0.0025f)
         {
             return selectedAcceleration;
@@ -154,7 +154,7 @@ public partial class PlayerMovementModule : Node
         float dot = currentHorizontalVelocity.Normalized().Dot(desiredDirection);
         if (CurrentEnableDirectionChangeAcceleration && dot < DirectionChangeDotThreshold)
         {
-            selectedAcceleration = isGrounded ? CurrentGroundDirectionChangeAcceleration : AirDirectionChangeAcceleration;
+            selectedAcceleration = isGrounded ? CurrentGroundDirectionChangeAcceleration : CurrentAirDirectionChangeAcceleration;
         }
 
         if (CurrentEnableCounterStrafeBoost && dot < 0.0f)
@@ -171,6 +171,9 @@ public partial class PlayerMovementModule : Node
     private float CurrentGroundDeceleration => TuningProfile?.GroundDeceleration ?? GroundDeceleration;
     private bool CurrentEnableDirectionChangeAcceleration => TuningProfile?.EnableDirectionChangeAcceleration ?? EnableDirectionChangeAcceleration;
     private float CurrentGroundDirectionChangeAcceleration => TuningProfile?.GroundDirectionChangeAcceleration ?? GroundDirectionChangeAcceleration;
+    private float CurrentAirAcceleration => TuningProfile?.AirAcceleration ?? AirAcceleration;
+    private float CurrentAirDeceleration => TuningProfile?.AirDeceleration ?? AirDeceleration;
+    private float CurrentAirDirectionChangeAcceleration => TuningProfile?.AirDirectionChangeAcceleration ?? AirDirectionChangeAcceleration;
     private bool CurrentEnableCounterStrafeBoost => TuningProfile?.EnableCounterStrafeBoost ?? EnableCounterStrafeBoost;
     private float CurrentCounterStrafeBoost => TuningProfile?.CounterStrafeBoost ?? CounterStrafeBoost;
 

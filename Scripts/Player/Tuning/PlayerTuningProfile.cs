@@ -29,6 +29,12 @@ public partial class PlayerTuningProfile : Resource
     /// </summary>
     [Export(PropertyHint.Range, "0,180,0.5,suffix:m/s^2")] public float GroundDirectionChangeAcceleration { get; set; } = 55.0f;
 
+    [Export(PropertyHint.Range, "0,60,0.5,suffix:m/s^2")] public float AirAcceleration { get; set; } = 8.0f;
+
+    [Export(PropertyHint.Range, "0,30,0.5,suffix:m/s^2")] public float AirDeceleration { get; set; } = 2.0f;
+
+    [Export(PropertyHint.Range, "0,80,0.5,suffix:m/s^2")] public float AirDirectionChangeAcceleration { get; set; } = 12.0f;
+
     /// <summary>
     /// Включает множитель counter-strafe acceleration; для диагностики jitter можно временно отключить.
     /// </summary>
