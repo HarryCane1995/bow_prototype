@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cbgrraldhdcfq" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="6_skybox"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="8_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="9_crosshair"]
+[ext_resource type="Script" path="res://Scripts/Debug/SpeedometerHud.cs" id="10_speedometer_hud"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
 panorama = ExtResource("6_skybox")
@@ -93,3 +94,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("9_crosshair")
 CrosshairColor = Color(1, 1, 1, 0.9)
+
+[node name="SpeedometerHud" type="Label" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -76.0
+offset_right = 80.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+text = "0.0 m/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("10_speedometer_hud")
