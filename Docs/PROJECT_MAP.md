@@ -30,18 +30,25 @@ Root scene: `Scenes/Player.tscn`
 
 Main script: `Scripts/Player/PlayerController.cs`
 
+Camera stack:
+
+`Player -> CameraPivot -> CameraEffectsPivot -> Camera3D`
+
+- `PlayerLookModule.cs` owns base yaw/pitch: yaw through `Player.Rotation.Y`, pitch through `CameraPivot.Rotation.X`.
+- `CameraEffectsPivot` is the additive camera effects layer for wallrun roll/tilt and future camera shake/lean.
+
 Player modules:
 
 - `PlayerMovementModule.cs` - WASD movement.
 - `PlayerJumpModule.cs` - gravity, jump, double jump.
 - `PlayerCrouchSlideModule.cs` - crouch, slide, slide jump.
 - `PlayerSlingshotGrappleModule.cs` - grapple selection, pull, launch.
-- `PlayerWallRunModule.cs` - wall run, wall jump, camera roll/FOV boost.
+- `PlayerWallRunModule.cs` - wall run, wall jump, additive camera effects on `CameraEffectsPivot`, FOV boost request.
 - `PlayerBowShootModule.cs` - light/charged/precision shots.
 - `PlayerBowVisualModule.cs` - bow draw/release visuals.
 - `PlayerLookModule.cs` - mouse look and dev mouse capture/reload.
-- `PlayerCameraFovModule.cs` - final gameplay camera FOV.
-- `PlayerSpeedFovModule.cs` - speed-based FOV bonus.
+- `PlayerCameraFovModule.cs` - final gameplay `Camera3D.Fov` owner.
+- `PlayerSpeedFovModule.cs` - speed-based FOV bonus calculation only.
 - `PlayerViewModelRenderModule.cs` - separate SubViewport viewmodel render.
 - `PlayerViewModelSwayModule.cs` - viewmodel sway, inertia, aim stabilization.
 - `PlayerAbilityStateModule.cs` - ability tags, locks, priorities.

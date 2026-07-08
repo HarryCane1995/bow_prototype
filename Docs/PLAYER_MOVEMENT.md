@@ -85,13 +85,13 @@
 
 ## Wall Run
 
-- `PlayerWallRunModule` owns wall-run detection, horizontal/vertical velocity, wall jump, camera roll, and the wall-run FOV bonus.
+- `PlayerWallRunModule` owns wall-run detection, horizontal/vertical velocity, wall jump, additive wall-run camera effect requests, and the wall-run FOV bonus.
 - The module casts left/right wall rays from the player at `WallDetectionHeightOffset`, rejects floor/ceiling-like normals with `MinWallNormalVerticalDot`, then chooses the run direction along the wall that best matches camera/input/velocity.
 - Entry requires airborne state, enough horizontal speed, a side wall, optional forward intent, no reattach cooldown, and free ability channels for `HorizontalVelocity`, `VerticalVelocity`, and `Slide`.
 - While active, WallRun registers `PlayerAbilityTag.WallRun` at priority `PriorityWallRun` and locks `HorizontalVelocity`, `VerticalVelocity`, and `Slide`. Shooting remains unlocked. Slingshot grapple has higher priority and can take over the same velocity channels.
 - Normal gravity/jump and normal movement do not write velocity while WallRun is active. Crouch/slide is cancelled and held out of the way.
 - Jump during WallRun performs wall jump: away-from-wall impulse + upward impulse + forward impulse, then releases the WallRun ability and starts reattach cooldowns so the same wall is not grabbed immediately.
-- Camera roll is applied to the main `CameraPivot`; the optional pitch offset is applied to the gameplay `Camera3D`. The viewmodel SubViewport pipeline is not modified.
+- Camera roll and optional pitch offset are applied only to `CameraEffectsPivot` (`Player/CameraPivot/CameraEffectsPivot`). WallRun does not write base look to `CameraPivot` and does not write rotation to `Camera3D`. The viewmodel SubViewport pipeline is not modified.
 - TODO: add optional `WallRunnable` group/layer filtering and a proper debug line drawer for left/right wall rays.
 
 ## Movement Response

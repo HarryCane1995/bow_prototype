@@ -14,7 +14,10 @@ Observed symptom: when the player strafes A/D around a target and keeps aiming a
 - `PlayerSpeedFovModule.UpdateSpeedFovBonus` uses exponential smoothing for the speed FOV bonus.
 - `PlayerViewModelSwayModule._Process` updates visual sway each rendered frame.
 - Viewmodel aim stabilization is inside `PlayerViewModelSwayModule` and runs after normal sway.
-- `Camera3D` is a child of `Player/CameraPivot`; no separate camera position update loop was found.
+- `Camera3D` is a child of `Player/CameraPivot/CameraEffectsPivot`; no separate camera position update loop was found.
+- `PlayerLookModule` owns base yaw/pitch: yaw through `Player.Rotation.Y`, pitch through `CameraPivot.Rotation.X`.
+- `CameraEffectsPivot` owns additive camera rotation effects such as wallrun roll/tilt. WallRun should not write base look to `CameraPivot` or direct rotation to `Camera3D`.
+- `PlayerCameraFovModule` owns final `Camera3D.Fov`; `PlayerSpeedFovModule` only calculates the speed-based bonus.
 
 ## Project Settings Checked
 

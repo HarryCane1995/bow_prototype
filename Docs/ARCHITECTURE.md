@@ -32,6 +32,21 @@ Skybox/HDRI workflow описан в `Docs/SKYBOX.md`: активная сцен
 - `TargetHitbox` - отвечает за обработку попаданий по мишеням.
 - `CrosshairUI` - отвечает за отображение и состояние прицела.
 
+## Gameplay Camera Ownership
+
+Current gameplay camera stack:
+
+`Player -> CameraPivot -> CameraEffectsPivot -> Camera3D`
+
+- `PlayerLookModule` owns base look: yaw through `Player.Rotation.Y`, pitch through `CameraPivot.Rotation.X`.
+- `CameraEffectsPivot` owns additive local camera rotation effects: wallrun roll/tilt now, possible future shake/lean later.
+- Additive effects must not write base look into `CameraPivot` and must not write direct rotation into `Camera3D`.
+- `PlayerCameraFovModule` is the owner of final `Camera3D.Fov`.
+- `PlayerSpeedFovModule` calculates only the speed-based FOV bonus and passes it to the camera FOV owner.
+- `PlayerWallRunModule` owns wallrun state, velocity, wall jump, and effect/FOV requests. It is not the owner of base camera look.
+- `PlayerViewModelSwayModule` works only on `ViewModelSwayRoot` and must not affect the gameplay camera.
+- `PlayerViewModelRenderModule` owns only the SubViewport/viewmodel camera/layers/lights/FOV path.
+
 ## Правила архитектуры
 
 - `PlayerController` не должен превращаться в монолит и не должен содержать детальную логику отдельных систем.

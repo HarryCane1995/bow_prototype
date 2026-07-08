@@ -4,7 +4,7 @@ FPS-лук рендерится через отдельный `SubViewport`, ч�
 
 ## Схема
 
-Основная камера игрока (`Player/CameraPivot/Camera3D`) рендерит мир, мишени, блоки и projectile-стрелы.
+Основная камера игрока (`Player/CameraPivot/CameraEffectsPivot/Camera3D`) рендерит мир, мишени, блоки и projectile-стрелы.
 
 Viewmodel-камера (`ViewModelCamera3D`) находится внутри:
 
@@ -17,6 +17,17 @@ Viewmodel-камера (`ViewModelCamera3D`) находится внутри:
 `CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot`
 
 `ViewModelSwayRoot` находится внутри SubViewport и двигает только viewmodel-лук. Он не меняет основную камеру, `ViewModelCamera3D`, `ShootPoint` или projectile direction.
+
+## Gameplay Camera Stack
+
+`Player -> CameraPivot -> CameraEffectsPivot -> Camera3D`
+
+- `PlayerLookModule` owns base yaw/pitch: yaw through `Player.Rotation.Y`, pitch through `CameraPivot.Rotation.X`.
+- `CameraEffectsPivot` is for additive camera effects only: wallrun roll/tilt and possible future shake/lean.
+- `PlayerCameraFovModule` owns final `Camera3D.Fov`.
+- `PlayerSpeedFovModule` only calculates the speed-based FOV bonus and passes it onward.
+- `PlayerViewModelSwayModule` works only on `ViewModelSwayRoot` and must not affect the gameplay camera.
+- `PlayerViewModelRenderModule` owns only the SubViewport/viewmodel camera/layers/lights/FOV path.
 
 ## Viewmodel Light Rig
 
