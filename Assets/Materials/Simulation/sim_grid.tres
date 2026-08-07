@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Simulation/sim_grid.gdshader" id="1_shader"]
+
+[resource]
+resource_name = "SIM_GRID_RUNTIME"
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/base_color = Color(0.003, 0.008, 0.01, 1)
+shader_parameter/grid_color = Color(0.035, 0.92, 0.59, 1)
+shader_parameter/cell_size = 1.0
+shader_parameter/line_width = 0.025
+shader_parameter/emission_strength = 2.2
+shader_parameter/scan_speed = 0.35
+shader_parameter/scan_strength = 0.35
+shader_parameter/noise_strength = 0.025
