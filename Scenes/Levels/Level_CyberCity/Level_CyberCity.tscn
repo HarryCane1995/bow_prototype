@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
+[ext_resource type="PackedScene" uid="uid://c87f4ahbd34kn" path="res://Level_CyberCity_Blockout.blend" id="2_imported_level"]
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="4_grapple_anchor"]
+[ext_resource type="Script" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
+[ext_resource type="Environment" path="res://Scenes/Levels/Level_CyberCity/Level_CyberCityEnvironment.tres" id="6_environment"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="7_runtime_tuning_panel"]
+[ext_resource type="Script" path="res://Scripts/UI/CrosshairUI.cs" id="8_crosshair"]
+[ext_resource type="Script" path="res://Scripts/Debug/SpeedometerHud.cs" id="9_speedometer_hud"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fallback_floor"]
+size = Vector3(24, 0.5, 24)
+
+[node name="Level_CyberCity" type="Node3D"]
+
+[node name="StartupWindowModeController" type="Node" parent="."]
+script = ExtResource("5_startup_window_mode")
+
+[node name="ImportedLevel" parent="." instance=ExtResource("2_imported_level")]
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Gameplay" type="Node3D" parent="."]
+script = ExtResource("1_marker_binder")
+GrappleAnchorScene = ExtResource("4_grapple_anchor")
+
+[node name="Enemies" type="Node3D" parent="Gameplay"]
+
+[node name="GrappleAnchors" type="Node3D" parent="Gameplay"]
+
+[node name="Triggers" type="Node3D" parent="Gameplay"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(0.86602527, 0.32139382, -0.38302252, 0, 0.76604444, 0.64278764, 0.50000024, -0.5566704, 0.663414, 0, 0, 0)
+light_color = Color(0.62, 0.76, 1, 1)
+light_energy = 0.8
+light_indirect_energy = 0.45
+light_volumetric_fog_energy = 0.25
+light_angular_distance = 6.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = ExtResource("6_environment")
+
+[node name="Debug" type="Node3D" parent="."]
+
+[node name="TemporarySafetyFloor" type="StaticBody3D" parent="Debug"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+visible = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Debug/TemporarySafetyFloor"]
+visible = false
+shape = SubResource("BoxShape3D_fallback_floor")
+disabled = true
+
+[node name="RuntimeTuningPanel" parent="Debug" instance=ExtResource("7_runtime_tuning_panel")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CrosshairUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_crosshair")
+CrosshairColor = Color(0.82, 0.94, 1, 0.92)
+
+[node name="SpeedometerHud" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -76.0
+offset_right = 80.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0.0 m/s"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_speedometer_hud")
