@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Tools/Blender/SimGridProbe/SimGridPipelineProbe.blend" id="1_palette"]
+
+[sub_resource type="Environment" id="Environment_palette"]
+background_mode = 1
+background_color = Color(0.001, 0.002, 0.004, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.08, 0.1, 0.13, 1)
+ambient_light_energy = 0.35
+
+[node name="SimGridPalette" type="Node3D"]
+
+[node name="ImportedPalette" parent="." instance=ExtResource("1_palette")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_palette")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.907571, -0.488692, 0)
+light_energy = 0.3
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 4.5, 20)
+rotation = Vector3(-0.14889, 0, 0)
+current = true
+fov = 55.0
+
+[node name="Label01" type="Label3D" parent="."]
+position = Vector3(-8, 3.55, 0)
+text = "SIM_GRID"
+font_size = 64
+outline_size = 8
+pixel_size = 0.004
+billboard = 1
+
+[node name="Label02" type="Label3D" parent="."]
+position = Vector3(-4, 3.55, 0)
+text = "SIM_GRID_02"
+font_size = 64
+outline_size = 8
+pixel_size = 0.004
+billboard = 1
+
+[node name="Label03" type="Label3D" parent="."]
+position = Vector3(0, 3.55, 0)
+text = "SIM_GRID_03"
+font_size = 64
+outline_size = 8
+pixel_size = 0.004
+billboard = 1
+
+[node name="Label04" type="Label3D" parent="."]
+position = Vector3(4, 3.55, 0)
+text = "SIM_GRID_04"
+font_size = 64
+outline_size = 8
+pixel_size = 0.004
+billboard = 1
+
+[node name="Label05" type="Label3D" parent="."]
+position = Vector3(8, 3.55, 0)
+text = "SIM_GRID_05"
+font_size = 64
+outline_size = 8
+pixel_size = 0.004
+billboard = 1

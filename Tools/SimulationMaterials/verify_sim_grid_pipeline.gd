@@ -1,8 +1,23 @@
 extends SceneTree
 
-const EXPECTED_MATERIAL_PATH := "res://Assets/Materials/Simulation/sim_grid.tres"
 const EXPECTED_SHADER_PATH := "res://Assets/Materials/Simulation/sim_grid.gdshader"
-const EXPECTED_NODES := ["SimGrid_Floor", "SimGrid_Scaled", "SimGrid_Wall"]
+const EXPECTED_VARIANTS := {
+	"SimGrid_01": {"semantic": "SIM_GRID", "material": "res://Assets/Materials/Simulation/sim_grid.tres"},
+	"SimGrid_02": {"semantic": "SIM_GRID_02", "material": "res://Assets/Materials/Simulation/sim_grid_02.tres"},
+	"SimGrid_03": {"semantic": "SIM_GRID_03", "material": "res://Assets/Materials/Simulation/sim_grid_03.tres"},
+	"SimGrid_04": {"semantic": "SIM_GRID_04", "material": "res://Assets/Materials/Simulation/sim_grid_04.tres"},
+	"SimGrid_05": {"semantic": "SIM_GRID_05", "material": "res://Assets/Materials/Simulation/sim_grid_05.tres"},
+}
+const PARAMETER_NAMES := [
+	"base_color",
+	"grid_color",
+	"cell_size",
+	"line_width",
+	"emission_strength",
+	"scan_speed",
+	"scan_strength",
+	"noise_strength",
+]
 
 
 func _init() -> void:
@@ -12,21 +27,31 @@ func _init() -> void:
 func _run() -> void:
 	var args := OS.get_cmdline_user_args()
 	if args.is_empty() or args.size() > 2:
-		push_error("Usage: godot --headless --path . --script res://Tools/SimulationMaterials/verify_sim_grid_pipeline.gd -- <imported .blend> [output.png]")
+		push_error("Usage: godot --path . --script res://Tools/SimulationMaterials/verify_sim_grid_pipeline.gd -- <palette .blend> [output.png]")
 		quit(2)
 		return
 
 	var scene_path: String = args[0]
-	var output_path := "res://.godot/sim-grid-render.png"
+	var output_path := "res://.godot/sim-grid-palette-render.png"
 	if args.size() == 2:
 		output_path = args[1]
 
 	var packed := load(scene_path) as PackedScene
-	var expected_material := load(EXPECTED_MATERIAL_PATH) as ShaderMaterial
-	if packed == null or expected_material == null or expected_material.shader == null:
-		push_error("Could not load probe scene or SIM_GRID runtime material")
+	var expected_shader := load(EXPECTED_SHADER_PATH) as Shader
+	if packed == null or expected_shader == null:
+		push_error("Could not load the palette scene or shared SIM_GRID shader")
 		quit(3)
 		return
+
+	var expected_materials: Dictionary = {}
+	for node_name in EXPECTED_VARIANTS:
+		var material_path: String = EXPECTED_VARIANTS[node_name]["material"]
+		var material := load(material_path) as ShaderMaterial
+		if material == null or material.shader != expected_shader:
+			push_error("%s does not use the shared SIM_GRID shader" % material_path)
+			quit(3)
+			return
+		expected_materials[node_name] = material
 
 	var imported_root := packed.instantiate()
 	var meshes: Array[MeshInstance3D] = []
@@ -37,28 +62,33 @@ func _run() -> void:
 	var mesh_results: Array[Dictionary] = []
 	var names: Array[String] = []
 	for mesh_instance in meshes:
-		names.append(mesh_instance.name)
+		var node_name := String(mesh_instance.name)
+		names.append(node_name)
+		if not EXPECTED_VARIANTS.has(node_name):
+			errors.append("Unexpected palette mesh %s" % node_name)
+			continue
 		if mesh_instance.mesh == null:
-			errors.append("%s has no mesh" % mesh_instance.name)
+			errors.append("%s has no mesh" % node_name)
 			continue
 
 		var surface_count := mesh_instance.mesh.get_surface_count()
 		if surface_count != 1:
-			errors.append("%s expected 1 surface, got %d" % [mesh_instance.name, surface_count])
+			errors.append("%s expected 1 surface, got %d" % [node_name, surface_count])
 
 		var uv_entries := 0
 		var runtime_surfaces := 0
+		var expected_material: ShaderMaterial = expected_materials[node_name]
 		for surface_index in surface_count:
 			var material := mesh_instance.get_active_material(surface_index) as ShaderMaterial
 			if material == null:
-				errors.append("%s surface %d is not a ShaderMaterial" % [mesh_instance.name, surface_index])
+				errors.append("%s surface %d is not a ShaderMaterial" % [node_name, surface_index])
 				continue
 			if material != expected_material:
-				errors.append("%s surface %d does not use the shared SIM_GRID material" % [mesh_instance.name, surface_index])
-			if material.resource_path != EXPECTED_MATERIAL_PATH:
-				errors.append("%s surface %d material path is %s" % [mesh_instance.name, surface_index, material.resource_path])
-			if material.shader == null or material.shader.resource_path != EXPECTED_SHADER_PATH:
-				errors.append("%s surface %d shader path mismatch" % [mesh_instance.name, surface_index])
+				errors.append("%s surface %d did not map to %s" % [node_name, surface_index, expected_material.resource_path])
+			if material.resource_path != expected_material.resource_path:
+				errors.append("%s surface %d material path is %s" % [node_name, surface_index, material.resource_path])
+			if material.shader != expected_shader or material.shader.resource_path != EXPECTED_SHADER_PATH:
+				errors.append("%s surface %d shader path mismatch" % [node_name, surface_index])
 			runtime_surfaces += 1
 
 			var arrays := mesh_instance.mesh.surface_get_arrays(surface_index)
@@ -67,20 +97,28 @@ func _run() -> void:
 				uv_entries += uv_data.size()
 
 		if uv_entries != 0:
-			errors.append("%s unexpectedly contains %d UV entries" % [mesh_instance.name, uv_entries])
+			errors.append("%s unexpectedly contains %d UV entries" % [node_name, uv_entries])
 
+		var parameters := {}
+		for parameter_name in PARAMETER_NAMES:
+			parameters[parameter_name] = expected_material.get_shader_parameter(parameter_name)
 		mesh_results.append({
-			"name": mesh_instance.name,
+			"name": node_name,
+			"semantic": EXPECTED_VARIANTS[node_name]["semantic"],
+			"material": expected_material.resource_path,
 			"surface_count": surface_count,
 			"runtime_surfaces": runtime_surfaces,
 			"uv_entries": uv_entries,
 			"position": mesh_instance.position,
-			"rotation": mesh_instance.rotation,
-			"scale": mesh_instance.scale,
+			"parameters": parameters,
 		})
 
-	if names != EXPECTED_NODES:
-		errors.append("Expected mesh nodes %s, got %s" % [EXPECTED_NODES, names])
+	var expected_names: Array[String] = []
+	for expected_name in EXPECTED_VARIANTS:
+		expected_names.append(expected_name)
+	expected_names.sort()
+	if names != expected_names:
+		errors.append("Expected palette meshes %s, got %s" % [expected_names, names])
 
 	if not errors.is_empty():
 		for error in errors:
@@ -90,15 +128,15 @@ func _run() -> void:
 		return
 
 	var viewport := SubViewport.new()
-	viewport.name = "SimGridVerificationViewport"
-	viewport.size = Vector2i(640, 480)
+	viewport.name = "SimGridPaletteVerificationViewport"
+	viewport.size = Vector2i(960, 540)
 	viewport.own_world_3d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	viewport.render_target_clear_mode = SubViewport.CLEAR_MODE_ALWAYS
 	get_root().add_child(viewport)
 
 	var stage := Node3D.new()
-	stage.name = "SimGridVerificationStage"
+	stage.name = "SimGridPaletteVerificationStage"
 	viewport.add_child(stage)
 	stage.add_child(imported_root)
 
@@ -107,21 +145,21 @@ func _run() -> void:
 	environment.background_mode = Environment.BG_COLOR
 	environment.background_color = Color(0.001, 0.002, 0.003, 1.0)
 	environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	environment.ambient_light_color = Color(0.08, 0.12, 0.14, 1.0)
-	environment.ambient_light_energy = 0.4
+	environment.ambient_light_color = Color(0.08, 0.10, 0.13, 1.0)
+	environment.ambient_light_energy = 0.35
 	world_environment.environment = environment
 	stage.add_child(world_environment)
 
 	var camera := Camera3D.new()
-	camera.position = Vector3(10.0, 7.0, 10.0)
+	camera.position = Vector3(0.0, 4.5, 20.0)
 	camera.fov = 55.0
 	camera.current = true
 	stage.add_child(camera)
-	camera.look_at(Vector3(1.5, 1.0, -1.4), Vector3.UP)
+	camera.look_at(Vector3(0.0, 1.5, 0.0), Vector3.UP)
 
 	var light := DirectionalLight3D.new()
 	light.rotation_degrees = Vector3(-52.0, -28.0, 0.0)
-	light.light_energy = 0.35
+	light.light_energy = 0.3
 	stage.add_child(light)
 
 	for _frame in 8:
@@ -129,7 +167,7 @@ func _run() -> void:
 
 	var image := viewport.get_texture().get_image()
 	if image == null or image.is_empty():
-		push_error("Offscreen SIM_GRID render returned an empty image")
+		push_error("Offscreen SIM_GRID palette render returned an empty image")
 		viewport.queue_free()
 		quit(5)
 		return
@@ -138,7 +176,7 @@ func _run() -> void:
 	var absolute_output := ProjectSettings.globalize_path(output_path)
 	var save_error := image.save_png(absolute_output)
 	if save_error != OK:
-		push_error("Could not save SIM_GRID render to %s" % absolute_output)
+		push_error("Could not save SIM_GRID palette render to %s" % absolute_output)
 		viewport.queue_free()
 		quit(6)
 		return
@@ -158,27 +196,17 @@ func _run() -> void:
 			sample_count += 1
 
 	var average_luminance: float = luminance_sum / float(max(sample_count, 1))
-	if bright_samples < 20 or luminance_max < 0.25:
-		push_error("SIM_GRID render lacks visible emissive grid detail")
+	if bright_samples < 50 or luminance_max < 0.25:
+		push_error("SIM_GRID palette render lacks visible emissive detail")
 		viewport.queue_free()
 		quit(7)
 		return
 
 	var result := {
 		"scene": scene_path,
-		"material": expected_material.resource_path,
-		"shader": expected_material.shader.resource_path,
-		"parameters": {
-			"base_color": expected_material.get_shader_parameter("base_color"),
-			"grid_color": expected_material.get_shader_parameter("grid_color"),
-			"cell_size": expected_material.get_shader_parameter("cell_size"),
-			"line_width": expected_material.get_shader_parameter("line_width"),
-			"emission_strength": expected_material.get_shader_parameter("emission_strength"),
-			"scan_speed": expected_material.get_shader_parameter("scan_speed"),
-			"scan_strength": expected_material.get_shader_parameter("scan_strength"),
-			"noise_strength": expected_material.get_shader_parameter("noise_strength"),
-		},
-		"meshes": mesh_results,
+		"shader": expected_shader.resource_path,
+		"shader_count": 1,
+		"variants": mesh_results,
 		"render": {
 			"path": output_path,
 			"size": image.get_size(),
@@ -188,7 +216,7 @@ func _run() -> void:
 			"sample_count": sample_count,
 		},
 	}
-	print("SIM_GRID_PIPELINE_VERIFY=" + JSON.stringify(result))
+	print("SIM_GRID_PALETTE_VERIFY=" + JSON.stringify(result))
 	viewport.queue_free()
 	quit(0)
 

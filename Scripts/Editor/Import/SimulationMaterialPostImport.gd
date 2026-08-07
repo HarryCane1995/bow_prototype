@@ -3,6 +3,10 @@ extends EditorScenePostImport
 
 const MATERIAL_REPLACEMENTS := {
 	"SIM_GRID": preload("res://Assets/Materials/Simulation/sim_grid.tres"),
+	"SIM_GRID_02": preload("res://Assets/Materials/Simulation/sim_grid_02.tres"),
+	"SIM_GRID_03": preload("res://Assets/Materials/Simulation/sim_grid_03.tres"),
+	"SIM_GRID_04": preload("res://Assets/Materials/Simulation/sim_grid_04.tres"),
+	"SIM_GRID_05": preload("res://Assets/Materials/Simulation/sim_grid_05.tres"),
 }
 
 
