@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Environment/city_far_windows.gdshader" id="1_city_far_windows_shader"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_city_far_windows_shader")
+shader_parameter/building_color = Color(0.004, 0.009, 0.018, 1)
+shader_parameter/window_color = Color(0.12, 0.72, 1, 1)
+shader_parameter/secondary_window_color = Color(0.56, 0.22, 1, 1)
+shader_parameter/window_size = 1.6
+shader_parameter/window_spacing = 1.4
+shader_parameter/window_lit_ratio = 0.22
+shader_parameter/window_brightness = 4.5
+shader_parameter/window_seed = 37.0
+shader_parameter/window_color_variation = 0.3
+shader_parameter/flicker_strength = 0.0
+shader_parameter/flicker_speed = 0.35
