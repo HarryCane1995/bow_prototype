@@ -1,5 +1,6 @@
 """Create the editable Geometry Nodes simulation ceiling in Level_01."""
 
+import math
 import os
 import runpy
 
@@ -12,16 +13,19 @@ NODE_GROUP_NAME = "GN_SimCeiling"
 MODIFIER_NAME = "Simulation Ceiling"
 
 DEFAULTS = {
-    "Size X": 110.0,
-    "Size Y": 170.0,
-    "Cell Size": 7.5,
-    "Gap": 0.55,
-    "Base Thickness": 5.5,
-    "Height Variation": 6.5,
-    "Vertical Offset Variation": 1.8,
-    "Horizontal Jitter": 0.35,
-    "Density": 0.96,
-    "Seed": 11,
+    "Size X": 1000.0,
+    "Size Y": 1000.0,
+    "Cell Size": 8.0,
+    "Gap": 1.0,
+    "Base Thickness": 18.5,
+    "Height Variation": 50.0,
+    "Vertical Offset Variation": 2.94,
+    "Horizontal Jitter": 2.02,
+    "Density": 1.0,
+    "Seed": 140,
+    "Edge Angle": math.radians(90.0),
+    "Edge Angle Tolerance": math.radians(5.0),
+    "Edge Radius": 0.08,
 }
 
 
@@ -56,15 +60,17 @@ def _seed_offset(nodes, links, group_input, offset, name, location):
     return node
 
 
-def _new_input(interface, name, socket_type, default, minimum, maximum):
+def _new_input(interface, name, socket_type, default, minimum, maximum, subtype=None):
     socket = interface.new_socket(name=name, in_out="INPUT", socket_type=socket_type)
     socket.default_value = default
     socket.min_value = minimum
     socket.max_value = maximum
+    if subtype is not None:
+        socket.subtype = subtype
     return socket
 
 
-def _build_node_group(material):
+def _build_node_group(face_material, edge_material):
     old_group = bpy.data.node_groups.get(NODE_GROUP_NAME)
     if old_group is not None and old_group.users == 0:
         bpy.data.node_groups.remove(old_group)
@@ -72,12 +78,12 @@ def _build_node_group(material):
     group = bpy.data.node_groups.new(NODE_GROUP_NAME, "GeometryNodeTree")
     interface = group.interface
     interface.new_socket(name="Geometry", in_out="OUTPUT", socket_type="NodeSocketGeometry")
-    _new_input(interface, "Size X", "NodeSocketFloat", DEFAULTS["Size X"], 10.0, 300.0)
-    _new_input(interface, "Size Y", "NodeSocketFloat", DEFAULTS["Size Y"], 10.0, 400.0)
+    _new_input(interface, "Size X", "NodeSocketFloat", DEFAULTS["Size X"], 10.0, 2000.0)
+    _new_input(interface, "Size Y", "NodeSocketFloat", DEFAULTS["Size Y"], 10.0, 2000.0)
     _new_input(interface, "Cell Size", "NodeSocketFloat", DEFAULTS["Cell Size"], 2.0, 20.0)
     _new_input(interface, "Gap", "NodeSocketFloat", DEFAULTS["Gap"], 0.05, 4.0)
-    _new_input(interface, "Base Thickness", "NodeSocketFloat", DEFAULTS["Base Thickness"], 0.5, 20.0)
-    _new_input(interface, "Height Variation", "NodeSocketFloat", DEFAULTS["Height Variation"], 0.0, 20.0)
+    _new_input(interface, "Base Thickness", "NodeSocketFloat", DEFAULTS["Base Thickness"], 0.5, 100.0)
+    _new_input(interface, "Height Variation", "NodeSocketFloat", DEFAULTS["Height Variation"], 0.0, 100.0)
     _new_input(
         interface,
         "Vertical Offset Variation",
@@ -89,6 +95,25 @@ def _build_node_group(material):
     _new_input(interface, "Horizontal Jitter", "NodeSocketFloat", DEFAULTS["Horizontal Jitter"], 0.0, 3.0)
     _new_input(interface, "Density", "NodeSocketFloat", DEFAULTS["Density"], 0.5, 1.0)
     _new_input(interface, "Seed", "NodeSocketInt", DEFAULTS["Seed"], 0, 100000)
+    _new_input(
+        interface,
+        "Edge Angle",
+        "NodeSocketFloat",
+        DEFAULTS["Edge Angle"],
+        0.0,
+        math.pi,
+        "ANGLE",
+    )
+    _new_input(
+        interface,
+        "Edge Angle Tolerance",
+        "NodeSocketFloat",
+        DEFAULTS["Edge Angle Tolerance"],
+        0.0,
+        math.radians(45.0),
+        "ANGLE",
+    )
+    _new_input(interface, "Edge Radius", "NodeSocketFloat", DEFAULTS["Edge Radius"], 0.01, 0.5)
 
     nodes = group.nodes
     links = group.links
@@ -235,19 +260,54 @@ def _build_node_group(material):
 
     cube = _node(nodes, "GeometryNodeMeshCube", "Reusable Unit Block", (120, 480))
     cube.inputs["Size"].default_value = (1.0, 1.0, 1.0)
-    set_material = _node(nodes, "GeometryNodeSetMaterial", "SIM_GRID_CEILING", (360, 480))
-    set_material.inputs["Material"].default_value = material
+    set_material = _node(nodes, "GeometryNodeSetMaterial", "Ceiling Faces - SIM_CEILING_DARK", (360, 480))
+    set_material.inputs["Material"].default_value = face_material
     links.new(cube.outputs["Mesh"], set_material.inputs["Geometry"])
     instance = _node(nodes, "GeometryNodeInstanceOnPoints", "Ceiling Block Instances", (650, 310))
     links.new(set_position.outputs["Geometry"], instance.inputs["Points"])
     links.new(set_material.outputs["Geometry"], instance.inputs["Instance"])
     links.new(block_scale.outputs["Vector"], instance.inputs["Scale"])
-    # Godot's direct Blender importer expands un-realized GN instances into one
-    # MeshInstance3D per block. Realizing only at the final export boundary keeps
-    # the authoring graph procedural while importing the ceiling as one mesh.
-    realize = _node(nodes, "GeometryNodeRealizeInstances", "Godot Export Fallback", (850, 310))
+
+    # Realization was already required by the direct Godot importer to avoid one
+    # MeshInstance3D per block. Deriving edges after non-uniform block scaling also
+    # keeps the curve profile at a constant world-space radius.
+    realize = _node(nodes, "GeometryNodeRealizeInstances", "Godot Export and Uniform Edge Radius", (850, 310))
     links.new(instance.outputs["Instances"], realize.inputs["Geometry"])
-    links.new(realize.outputs["Geometry"], group_output.inputs["Geometry"])
+
+    edge_angle = _node(nodes, "GeometryNodeInputMeshEdgeAngle", "Real Mesh Edge Angle", (760, -40))
+    angle_delta = _math(nodes, "Angle Delta", "SUBTRACT", (970, -40))
+    angle_abs = _math(nodes, "Absolute Angle Delta", "ABSOLUTE", (1170, -40))
+    angle_tolerance = _math(nodes, "90 Degree Edge Tolerance", "LESS_THAN", (1370, -40))
+    links.new(edge_angle.outputs["Unsigned Angle"], angle_delta.inputs[0])
+    links.new(group_input.outputs["Edge Angle"], angle_delta.inputs[1])
+    links.new(angle_delta.outputs[0], angle_abs.inputs[0])
+    links.new(angle_abs.outputs[0], angle_tolerance.inputs[0])
+    links.new(group_input.outputs["Edge Angle Tolerance"], angle_tolerance.inputs[1])
+
+    mesh_to_curve = _node(nodes, "GeometryNodeMeshToCurve", "Ceiling Edges - 90 Degrees", (1080, 250))
+    links.new(realize.outputs["Geometry"], mesh_to_curve.inputs["Mesh"])
+    links.new(angle_tolerance.outputs[0], mesh_to_curve.inputs["Selection"])
+
+    profile = _node(nodes, "GeometryNodeCurvePrimitiveCircle", "Uniform Edge Profile", (1290, 410))
+    profile.mode = "RADIUS"
+    # Three sides are sufficient for a distant emissive outline and keep the
+    # full 1000 m array materially cheaper than a smooth circular tube.
+    profile.inputs["Resolution"].default_value = 3
+    links.new(group_input.outputs["Edge Radius"], profile.inputs["Radius"])
+
+    curve_to_mesh = _node(nodes, "GeometryNodeCurveToMesh", "Solid Emissive Edges", (1510, 250))
+    links.new(mesh_to_curve.outputs["Curve"], curve_to_mesh.inputs["Curve"])
+    links.new(profile.outputs["Curve"], curve_to_mesh.inputs["Profile Curve"])
+    curve_to_mesh.inputs["Fill Caps"].default_value = False
+
+    edge_material_node = _node(nodes, "GeometryNodeSetMaterial", "Ceiling Edges - SIM_EDGE_CEILING", (1730, 250))
+    edge_material_node.inputs["Material"].default_value = edge_material
+    links.new(curve_to_mesh.outputs["Mesh"], edge_material_node.inputs["Geometry"])
+
+    join = _node(nodes, "GeometryNodeJoinGeometry", "Ceiling Faces and Edges", (1960, 310))
+    links.new(realize.outputs["Geometry"], join.inputs["Geometry"])
+    links.new(edge_material_node.outputs["Geometry"], join.inputs["Geometry"])
+    links.new(join.outputs["Geometry"], group_output.inputs["Geometry"])
 
     return group
 
@@ -258,7 +318,7 @@ def create_or_update_sim_ceiling():
         os.path.join(repo_root, "Tools", "Blender", "ensure_sim_grid_material.py"),
         run_name="sim_grid_material_helper",
     )
-    material = material_helper["ensure_sim_grid_ceiling_material"]()
+    face_material, edge_material = material_helper["ensure_sim_ceiling_outline_materials"]()
 
     collection = bpy.data.collections.get(COLLECTION_NAME)
     if collection is None:
@@ -266,43 +326,60 @@ def create_or_update_sim_ceiling():
         bpy.context.scene.collection.children.link(collection)
 
     obj = bpy.data.objects.get(OBJECT_NAME)
+    existing_values = {}
+    if obj is not None:
+        for existing_modifier in obj.modifiers:
+            if existing_modifier.type != "NODES" or existing_modifier.node_group is None:
+                continue
+            for item in existing_modifier.node_group.interface.items_tree:
+                if getattr(item, "item_type", None) != "SOCKET" or getattr(item, "in_out", None) != "INPUT":
+                    continue
+                try:
+                    existing_values[item.name] = existing_modifier[item.identifier]
+                except (KeyError, TypeError):
+                    pass
     if obj is None:
         mesh = bpy.data.meshes.new(OBJECT_NAME + "_Source")
         mesh.from_pydata([(0.0, 0.0, 0.0)], [], [])
         obj = bpy.data.objects.new(OBJECT_NAME, mesh)
+        obj.location = (2.0, 35.0, 181.0)
+        obj.rotation_euler = (0.0, 0.0, 0.0)
+        obj.scale = (1.0, 1.0, 1.0)
     for owner in list(obj.users_collection):
         owner.objects.unlink(obj)
     collection.objects.link(obj)
-    obj.location = (2.0, 35.0, 72.0)
-    obj.rotation_euler = (0.0, 0.0, 0.0)
-    obj.scale = (1.0, 1.0, 1.0)
     obj["decorative_only"] = True
     obj["collision"] = False
-    obj["simulation_material_semantic"] = "SIM_GRID_CEILING"
-    if material.name not in [slot.name for slot in obj.data.materials if slot is not None]:
-        obj.data.materials.append(material)
+    obj["simulation_material_semantic"] = "SIM_CEILING_DARK + SIM_EDGE_CEILING"
+    obj.data.materials.clear()
 
     for modifier in list(obj.modifiers):
         obj.modifiers.remove(modifier)
     old_group = bpy.data.node_groups.get(NODE_GROUP_NAME)
     if old_group is not None and old_group.users == 0:
         bpy.data.node_groups.remove(old_group)
-    group = _build_node_group(material)
+    group = _build_node_group(face_material, edge_material)
     modifier = obj.modifiers.new(MODIFIER_NAME, "NODES")
     modifier.node_group = group
     for item in group.interface.items_tree:
         if getattr(item, "item_type", None) == "SOCKET" and getattr(item, "in_out", None) == "INPUT":
             if item.name in DEFAULTS:
-                modifier[item.identifier] = DEFAULTS[item.name]
+                modifier[item.identifier] = existing_values.get(item.name, DEFAULTS[item.name])
 
     bpy.context.view_layer.objects.active = obj
     obj.select_set(True)
-    return obj, modifier, material
+    return obj, modifier, face_material, edge_material
 
 
 if __name__ == "__main__":
-    ceiling, modifier, material = create_or_update_sim_ceiling()
+    ceiling, modifier, face_material, edge_material = create_or_update_sim_ceiling()
     print(
-        "Simulation ceiling ready: object=%s collection=%s modifier=%s material=%s"
-        % (ceiling.name, ceiling.users_collection[0].name, modifier.name, material.name)
+        "Simulation ceiling ready: object=%s collection=%s modifier=%s materials=%s,%s"
+        % (
+            ceiling.name,
+            ceiling.users_collection[0].name,
+            modifier.name,
+            face_material.name,
+            edge_material.name,
+        )
     )

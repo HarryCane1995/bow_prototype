@@ -78,6 +78,24 @@ CEILING_PRESET = {
     "scan_strength": 0.16,
     "noise_strength": 0.012,
 }
+CEILING_DARK_PRESET = {
+    "name": "SIM_CEILING_DARK",
+    "runtime": "res://Assets/Materials/Simulation/sim_ceiling_dark.tres",
+    "base_color": (0.003, 0.006, 0.012, 1.0),
+    "metallic": 0.2,
+    "roughness": 0.72,
+    "emission_color": (0.0, 0.0, 0.0, 1.0),
+    "emission_strength": 0.0,
+}
+CEILING_EDGE_PRESET = {
+    "name": "SIM_EDGE_CEILING",
+    "runtime": "res://Assets/Materials/Simulation/sim_edge_ceiling.tres",
+    "base_color": (0.0, 0.019, 0.029, 1.0),
+    "metallic": 0.15,
+    "roughness": 0.5,
+    "emission_color": (0.0, 0.55, 0.82, 1.0),
+    "emission_strength": 3.2,
+}
 
 
 def _node(nodes, node_type, name, location):
@@ -97,7 +115,10 @@ def _math(nodes, name, operation, location, second_value=None):
 
 
 def _find_numbered_duplicates():
-    canonical_names = {preset["name"] for preset in PALETTE + (CEILING_PRESET,)}
+    canonical_names = {
+        preset["name"]
+        for preset in PALETTE + (CEILING_PRESET, CEILING_DARK_PRESET, CEILING_EDGE_PRESET)
+    }
     duplicates = []
     for material in bpy.data.materials:
         if any(material.name.startswith(name + ".") for name in canonical_names):
@@ -260,6 +281,34 @@ def _build_preview_material(preset):
     return material
 
 
+def _build_simple_preview_material(preset):
+    material = bpy.data.materials.get(preset["name"])
+    if material is None:
+        material = bpy.data.materials.new(preset["name"])
+
+    material.use_fake_user = True
+    material.use_nodes = True
+    material.diffuse_color = preset["base_color"]
+    material.metallic = preset["metallic"]
+    material.roughness = preset["roughness"]
+    material["simulation_material_semantic"] = preset["name"]
+    material["godot_runtime_material"] = preset["runtime"]
+    material["blender_proxy_only"] = True
+
+    nodes = material.node_tree.nodes
+    links = material.node_tree.links
+    nodes.clear()
+    output = _node(nodes, "ShaderNodeOutputMaterial", "Material Output", (340, 0))
+    shader = _node(nodes, "ShaderNodeBsdfPrincipled", "%s Preview" % preset["name"], (20, 0))
+    shader.inputs["Base Color"].default_value = preset["base_color"]
+    shader.inputs["Metallic"].default_value = preset["metallic"]
+    shader.inputs["Roughness"].default_value = preset["roughness"]
+    shader.inputs["Emission Color"].default_value = preset["emission_color"]
+    shader.inputs["Emission Strength"].default_value = preset["emission_strength"]
+    links.new(shader.outputs["BSDF"], output.inputs["Surface"])
+    return material
+
+
 def ensure_sim_grid_material():
     duplicates = _find_numbered_duplicates()
     if duplicates:
@@ -297,6 +346,19 @@ def ensure_sim_grid_ceiling_material():
             + ", ".join(duplicates)
         )
     return _build_preview_material(CEILING_PRESET)
+
+
+def ensure_sim_ceiling_outline_materials():
+    duplicates = _find_numbered_duplicates()
+    if duplicates:
+        raise RuntimeError(
+            "Refusing to build ceiling outline materials while duplicate materials exist: "
+            + ", ".join(duplicates)
+        )
+    return (
+        _build_simple_preview_material(CEILING_DARK_PRESET),
+        _build_simple_preview_material(CEILING_EDGE_PRESET),
+    )
 
 
 if __name__ == "__main__":

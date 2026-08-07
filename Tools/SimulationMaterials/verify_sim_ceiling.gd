@@ -1,8 +1,9 @@
 extends SceneTree
 
 const CEILING_NODE := "ENV_SimCeiling_GN"
-const MATERIAL_PATH := "res://Assets/Materials/Simulation/sim_grid_ceiling.tres"
-const SHADER_PATH := "res://Assets/Materials/Simulation/sim_grid.gdshader"
+const FACE_MATERIAL_PATH := "res://Assets/Materials/Simulation/sim_ceiling_dark.tres"
+const EDGE_MATERIAL_PATH := "res://Assets/Materials/Simulation/sim_edge_ceiling.tres"
+const EDGE_SHADER_PATH := "res://Assets/Materials/Simulation/sim_edge_ceiling.gdshader"
 
 
 func _init() -> void:
@@ -22,9 +23,10 @@ func _run() -> void:
 		output_path = args[1]
 
 	var packed := load(scene_path) as PackedScene
-	var expected_material := load(MATERIAL_PATH) as ShaderMaterial
-	if packed == null or expected_material == null or expected_material.shader == null:
-		push_error("Could not load Level_01 or SIM_GRID_CEILING runtime material")
+	var expected_face_material := load(FACE_MATERIAL_PATH) as StandardMaterial3D
+	var expected_edge_material := load(EDGE_MATERIAL_PATH) as ShaderMaterial
+	if packed == null or expected_face_material == null or expected_edge_material == null or expected_edge_material.shader == null:
+		push_error("Could not load Level_01 or the ceiling face/edge runtime materials")
 		quit(3)
 		return
 
@@ -45,28 +47,43 @@ func _run() -> void:
 
 	var ceiling := ceiling_nodes[0]
 	var vertex_count := 0
-	var mapped_surfaces := 0
+	var mapped_face_surfaces := 0
+	var mapped_edge_surfaces := 0
 	var surface_paths: Array[String] = []
+	var surface_vertex_counts: Dictionary = {}
 	for surface_index in ceiling.mesh.get_surface_count():
 		var arrays := ceiling.mesh.surface_get_arrays(surface_index)
 		var vertices: Variant = arrays[Mesh.ARRAY_VERTEX]
 		if vertices != null:
 			vertex_count += vertices.size()
-		var material := ceiling.get_active_material(surface_index) as ShaderMaterial
+		var material := ceiling.get_active_material(surface_index)
 		if material != null:
 			surface_paths.append(material.resource_path)
-			if material == expected_material and material.shader.resource_path == SHADER_PATH:
-				mapped_surfaces += 1
+			surface_vertex_counts[material.resource_path] = vertices.size() if vertices != null else 0
+			if material == expected_face_material:
+				mapped_face_surfaces += 1
+			elif material == expected_edge_material and expected_edge_material.shader.resource_path == EDGE_SHADER_PATH:
+				mapped_edge_surfaces += 1
 
 	if vertex_count < 1000:
 		push_error("Ceiling geometry is unexpectedly small: %d vertices" % vertex_count)
 		imported_root.free()
 		quit(6)
 		return
-	if mapped_surfaces != 1:
-		push_error("SIM_GRID_CEILING mapping mismatch: %s" % surface_paths)
+	if mapped_face_surfaces != 1 or mapped_edge_surfaces != 1:
+		push_error("Ceiling face/edge material mapping mismatch: %s" % surface_paths)
 		imported_root.free()
 		quit(7)
+		return
+	if "res://Assets/Materials/Simulation/sim_grid_ceiling.tres" in surface_paths:
+		push_error("Legacy world-grid ceiling material is still active on ceiling geometry")
+		imported_root.free()
+		quit(12)
+		return
+	if vertex_count > 4000000:
+		push_error("Ceiling edge geometry exceeded the runtime vertex budget: %d" % vertex_count)
+		imported_root.free()
+		quit(13)
 		return
 
 	var collision_nodes := _count_collision_nodes(ceiling)
@@ -151,9 +168,12 @@ func _run() -> void:
 		"mesh_nodes": all_meshes.size(),
 		"total_nodes": _count_nodes(imported_root),
 		"surface_count": ceiling.mesh.get_surface_count(),
-		"mapped_surfaces": mapped_surfaces,
-		"material": expected_material.resource_path,
-		"shader": expected_material.shader.resource_path,
+		"mapped_face_surfaces": mapped_face_surfaces,
+		"mapped_edge_surfaces": mapped_edge_surfaces,
+		"face_material": expected_face_material.resource_path,
+		"edge_material": expected_edge_material.resource_path,
+		"edge_shader": expected_edge_material.shader.resource_path,
+		"surface_vertex_counts": surface_vertex_counts,
 		"vertex_count": vertex_count,
 		"aabb_size": ceiling.mesh.get_aabb().size,
 		"global_position": ceiling.global_position,

@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Simulation/sim_edge_ceiling.gdshader" id="1_shader"]
+
+[resource]
+resource_name = "SIM_EDGE_CEILING_RUNTIME"
+render_priority = 1
+shader = ExtResource("1_shader")
+shader_parameter/edge_color = Color(0, 0.55, 0.82, 1)
+shader_parameter/emission_strength = 3.2

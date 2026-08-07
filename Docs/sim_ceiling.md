@@ -1,6 +1,6 @@
 # Procedural simulation ceiling
 
-`Level_01_Blockout.blend` contains one decorative Geometry Nodes object named `ENV_SimCeiling_GN` in the `ENV_Simulation` collection. It is positioned at Blender `(2, 35, 72)` above the current training route and has no collision, navigation, physics, or gameplay nodes.
+`Level_01_Blockout.blend` contains one decorative Geometry Nodes object named `ENV_SimCeiling_GN` in the `ENV_Simulation` collection. It is positioned at Blender `(2, 35, 181)` above the current training route and has no collision, navigation, physics, or gameplay nodes.
 
 ## Modifier controls
 
@@ -8,28 +8,38 @@ Select `ENV_SimCeiling_GN` and open the Modifiers tab. The `Simulation Ceiling` 
 
 | Control | Default | Purpose |
 | --- | ---: | --- |
-| Size X | 110 m | Width of the ceiling array |
-| Size Y | 170 m | Length of the ceiling array in Blender's horizontal plane |
-| Cell Size | 7.5 m | Grid spacing and approximate block footprint |
-| Gap | 0.55 m | Controlled gap between neighboring blocks |
-| Base Thickness | 5.5 m | Average hanging block depth |
-| Height Variation | 6.5 m | Low-frequency clustered relief plus small cell variation |
-| Vertical Offset Variation | 1.8 m | Additional up/down placement variation |
-| Horizontal Jitter | 0.35 m | Small aligned-plan displacement |
-| Density | 0.96 | Rare deterministic omissions; keep high for a solid ceiling mass |
-| Seed | 11 | Deterministic layout seed |
+| Size X | 1000 m | Width of the ceiling array |
+| Size Y | 1000 m | Length of the ceiling array in Blender's horizontal plane |
+| Cell Size | 8 m | Grid spacing and approximate block footprint |
+| Gap | 1 m | Controlled gap between neighboring blocks |
+| Base Thickness | 18.5 m | Average hanging block depth |
+| Height Variation | 50 m | Low-frequency clustered relief plus small cell variation |
+| Vertical Offset Variation | 2.94 m | Additional up/down placement variation |
+| Horizontal Jitter | 2.02 m | Small aligned-plan displacement |
+| Density | 1 | Deterministic occupancy |
+| Seed | 140 | Deterministic layout seed |
+| Edge Angle | 90 degrees | Target angle between adjacent faces for luminous structural edges |
+| Edge Angle Tolerance | 5 degrees | Stable tolerance around the target angle; no exact float comparison |
+| Edge Radius | 0.08 m | World-space radius of the emissive curve profile |
 
-The node tree is `GN_SimCeiling`. It builds a regular mesh grid, converts vertices to points, computes clustered noise plus seeded per-cell variation, instances a reusable unit cube, assigns `SIM_GRID_CEILING`, and realizes only at the final Godot export boundary.
+The node tree is `GN_SimCeiling`. It preserves the regular grid, clustered noise, seeded per-cell variation, density, and block scaling. The block faces use `SIM_CEILING_DARK`. After the existing instances are scaled and realized, `Edge Angle` is compared to the target with `abs(angle - target) < tolerance`; only those real mesh edges pass through `Mesh to Curve` and `Curve to Mesh`. The resulting edge geometry uses `SIM_EDGE_CEILING`, then joins the dark faces for export.
 
 Do not apply the modifier. Changing the controls or seed updates the ceiling procedurally in Blender. Keep Density high and Horizontal Jitter small so the result reads as one architectural megastructure rather than an asteroid field.
 
 ## Material pipeline
 
-Blender semantic `SIM_GRID_CEILING` maps during post-import to `res://Assets/Materials/Simulation/sim_grid_ceiling.tres`. The resource uses the existing `sim_grid.gdshader`; no additional shader implementation exists. Its starting preset is dark blue-black with a cold cyan grid, 3.2 m cells, thin lines, moderate-low emission, slow scan, and little noise.
+The post-import semantic mappings are:
+
+- `SIM_CEILING_DARK` -> `res://Assets/Materials/Simulation/sim_ceiling_dark.tres` (`StandardMaterial3D`, nearly black, matte, no emission);
+- `SIM_EDGE_CEILING` -> `res://Assets/Materials/Simulation/sim_edge_ceiling.tres` (dedicated cyan emissive shader with no grid, scan, or noise).
+
+`SIM_GRID_CEILING` remains available and unchanged but is no longer assigned to the ceiling output. Edge color and emission are adjusted in `sim_edge_ceiling.tres`; geometric thickness is adjusted with the `Edge Radius` modifier input.
 
 ## Import fallback
 
-Godot's direct `.blend` importer was tested with `blender/meshes/export_geometry_nodes_instances=true`. It expanded the ceiling into 334 separate runtime mesh nodes. The production configuration therefore keeps that option disabled and the GN tree uses a final `Realize Instances` node. Authoring remains instanced and procedural upstream, while Godot receives one ceiling mesh with one mapped surface.
+Godot's direct `.blend` importer expands un-realized Geometry Nodes instances into separate runtime mesh nodes. The production configuration therefore keeps instance export disabled. The authoring graph retains `Ceiling Block Instances`, but realizes once before hard-edge extraction. This is also necessary for a constant `Edge Radius`: building a beveled wire prototype before non-uniform instance scaling would distort the profile thickness on horizontal edges.
+
+The edge profile is three-sided and uncapped. At ceiling viewing distances it reads as a uniform emissive line while limiting the full 15,876-block array to 1,270,080 evaluated Blender vertices and 666,792 polygons. Godot imports one ceiling mesh with two surfaces, not thousands of nodes.
 
 Run the runtime verifier with a real renderer:
 

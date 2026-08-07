@@ -8,6 +8,8 @@ const MATERIAL_REPLACEMENTS := {
 	"SIM_GRID_04": preload("res://Assets/Materials/Simulation/sim_grid_04.tres"),
 	"SIM_GRID_05": preload("res://Assets/Materials/Simulation/sim_grid_05.tres"),
 	"SIM_GRID_CEILING": preload("res://Assets/Materials/Simulation/sim_grid_ceiling.tres"),
+	"SIM_CEILING_DARK": preload("res://Assets/Materials/Simulation/sim_ceiling_dark.tres"),
+	"SIM_EDGE_CEILING": preload("res://Assets/Materials/Simulation/sim_edge_ceiling.tres"),
 }
 
 

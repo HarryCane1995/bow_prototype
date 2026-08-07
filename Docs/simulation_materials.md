@@ -18,8 +18,10 @@ Current palette mapping:
 | `SIM_GRID_04` | `res://Assets/Materials/Simulation/sim_grid_04.tres` | `res://Assets/Materials/Simulation/sim_grid.gdshader` |
 | `SIM_GRID_05` | `res://Assets/Materials/Simulation/sim_grid_05.tres` | `res://Assets/Materials/Simulation/sim_grid.gdshader` |
 | `SIM_GRID_CEILING` | `res://Assets/Materials/Simulation/sim_grid_ceiling.tres` | `res://Assets/Materials/Simulation/sim_grid.gdshader` |
+| `SIM_CEILING_DARK` | `res://Assets/Materials/Simulation/sim_ceiling_dark.tres` | `StandardMaterial3D` |
+| `SIM_EDGE_CEILING` | `res://Assets/Materials/Simulation/sim_edge_ceiling.tres` | `res://Assets/Materials/Simulation/sim_edge_ceiling.gdshader` |
 
-The import script is configured in both `Level_01_Blockout.blend.import` and the test fixture's `.blend.import`. Existing production geometry is unchanged unless an artist explicitly assigns a `SIM_GRID*` semantic material in Blender; the procedural ceiling uses its dedicated `SIM_GRID_CEILING` slot.
+The import script is configured in both `Level_01_Blockout.blend.import` and the test fixture's `.blend.import`. Existing production geometry is unchanged unless an artist explicitly assigns a semantic material in Blender; the procedural ceiling uses the dedicated `SIM_CEILING_DARK` and `SIM_EDGE_CEILING` slots.
 
 ## Assigning palette materials in Blender
 
