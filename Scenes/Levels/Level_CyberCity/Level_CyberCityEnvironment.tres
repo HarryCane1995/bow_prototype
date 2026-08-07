@@ -1,7 +1,14 @@
-[gd_resource type="Environment" format=3]
+[gd_resource type="Environment" load_steps=3 format=3]
+
+[ext_resource type="Material" path="res://Assets/Materials/Sky/cybercity_star_sky.tres" id="1_star_sky_material"]
+
+[sub_resource type="Sky" id="Sky_cybercity_procedural"]
+sky_material = ExtResource("1_star_sky_material")
+process_mode = 3
 
 [resource]
-background_mode = 1
+background_mode = 2
+sky = SubResource("Sky_cybercity_procedural")
 background_color = Color(0.004, 0.008, 0.02, 1)
 background_energy_multiplier = 0.35
 ambient_light_source = 3
@@ -15,5 +22,6 @@ fog_enabled = true
 fog_light_color = Color(0.06, 0.12, 0.2, 1)
 fog_light_energy = 0.45
 fog_density = 0.0008
+fog_sky_affect = 0.35
 fog_height = -40.0
 fog_height_density = 0.025

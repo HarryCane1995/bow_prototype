@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Sky/cybercity_star_sky.gdshader" id="1_star_sky_shader"]
+
+[resource]
+shader = ExtResource("1_star_sky_shader")
+shader_parameter/sky_top_color = Color(0.006, 0.012, 0.035, 1)
+shader_parameter/sky_horizon_color = Color(0.045, 0.11, 0.18, 1)
+shader_parameter/horizon_fade = 0.5
+shader_parameter/star_density = 0.075
+shader_parameter/star_size_min = 0.035
+shader_parameter/star_size_max = 0.11
+shader_parameter/star_brightness = 6.5
+shader_parameter/star_contrast = 3.4
+shader_parameter/star_seed = 42.0
+shader_parameter/star_color_variation = 0.35
+shader_parameter/twinkle_strength = 0.08
+shader_parameter/twinkle_speed = 0.7
+shader_parameter/nebula_strength = 0.08
