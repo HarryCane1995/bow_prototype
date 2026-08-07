@@ -23,10 +23,15 @@ public partial class RuntimeTuningPanel : Window
     /// </summary>
     [Export] public string RuntimeSavePath { get; set; } = "user://player_tuning_runtime.json";
 
+    [ExportGroup("Runtime Materials")]
+    [Export] public Godot.Collections.Array<ShaderMaterial> RuntimeMaterials { get; set; } = new();
+
     private VBoxContainer _content;
+    private VBoxContainer _currentSectionContent;
     private bool _wasTogglePressed;
     private PlayerController _player;
     private readonly System.Collections.Generic.List<System.Action> _readoutUpdaters = new();
+    private readonly System.Collections.Generic.Dictionary<string, bool> _sectionExpandedStates = new();
 
     public override void _Ready()
     {
@@ -107,6 +112,7 @@ public partial class RuntimeTuningPanel : Window
         AddWallRunSection();
         AddSlingshotGrappleSection();
         AddBowSection();
+        AddVisualMaterialsSection();
         AddCameraSection();
         AddSpeedFovSection();
         AddFramePhysicsDebugSection();
@@ -116,6 +122,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddToolbar()
     {
+        _currentSectionContent = null;
         HBoxContainer toolbar = new()
         {
             Name = "Toolbar"
@@ -154,7 +161,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddMovementSection()
     {
-        AddSection("Movement");
+        AddSection("Movement", true);
         AddFloatControl("Move Speed", 0.0, 30.0, 0.1, () => TuningProfile.MoveSpeed, value => TuningProfile.MoveSpeed = value);
         AddFloatControl("Ground Acceleration", 0.0, 160.0, 0.5, () => TuningProfile.GroundAcceleration, value => TuningProfile.GroundAcceleration = value);
         AddFloatControl("Ground Deceleration", 0.0, 160.0, 0.5, () => TuningProfile.GroundDeceleration, value => TuningProfile.GroundDeceleration = value);
@@ -169,7 +176,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddJumpSection()
     {
-        AddSection("Jump");
+        AddSection("Jump / Air Control", true);
         AddFloatControl("Jump Velocity", 0.0, 30.0, 0.1, () => TuningProfile.JumpVelocity, value => TuningProfile.JumpVelocity = value);
         AddBoolControl("Enable Double Jump", () => TuningProfile.EnableDoubleJump, value => TuningProfile.EnableDoubleJump = value);
         AddFloatControl("Double Jump Multiplier", 0.1, 3.0, 0.05, () => TuningProfile.DoubleJumpVelocityMultiplier, value => TuningProfile.DoubleJumpVelocityMultiplier = value);
@@ -180,7 +187,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddCrouchSlideSection()
     {
-        AddSection("Crouch / Slide");
+        AddSection("Crouch / Slide", false);
         AddFloatControl("Crouch Speed Multiplier", 0.1, 1.0, 0.05, () => TuningProfile.CrouchSpeedMultiplier, value => TuningProfile.CrouchSpeedMultiplier = value);
         AddFloatControl("Slide Initial Speed", 0.0, 40.0, 0.1, () => TuningProfile.SlideInitialSpeed, value => TuningProfile.SlideInitialSpeed = value);
         AddFloatControl("Slide Duration", 0.05, 3.0, 0.01, () => TuningProfile.SlideDuration, value => TuningProfile.SlideDuration = value);
@@ -205,7 +212,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddWallRunSection()
     {
-        AddSection("Wall Run");
+        AddSection("Wall Run", false);
         AddBoolControl("Enable Wall Run", () => TuningProfile.EnableWallRun, value => TuningProfile.EnableWallRun = value);
         AddBoolControl("Require Forward Input", () => TuningProfile.RequireWallRunForwardInput, value => TuningProfile.RequireWallRunForwardInput = value);
         AddBoolControl("Allow Ground Grace", () => TuningProfile.AllowWallRunFromGroundGrace, value => TuningProfile.AllowWallRunFromGroundGrace = value);
@@ -250,7 +257,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddSlingshotGrappleSection()
     {
-        AddSection("Slingshot Grapple");
+        AddSection("Hook / Slingshot Grapple", false);
         AddFloatControl("Max Grapple Distance", 1.0, 100.0, 0.5, () => TuningProfile.MaxGrappleDistance, value => TuningProfile.MaxGrappleDistance = value);
         AddBoolControl("Enable Screen Assist", () => TuningProfile.EnableScreenSpaceGrappleAssist, value => TuningProfile.EnableScreenSpaceGrappleAssist = value);
         AddFloatControl("Screen Assist Radius", 0.0, 240.0, 4.0, () => TuningProfile.GrappleScreenAssistRadiusPixels, value => TuningProfile.GrappleScreenAssistRadiusPixels = value);
@@ -275,7 +282,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddBowSection()
     {
-        AddSection("Bow / Projectiles");
+        AddSection("Bow / Combat", true);
         AddFloatControl("Light Shot Speed", 0.0, 220.0, 0.5, () => TuningProfile.LightShotSpeed, value => TuningProfile.LightShotSpeed = value);
         AddFloatControl("Charged Shot Speed", 0.0, 240.0, 0.5, () => TuningProfile.ChargedShotSpeed, value => TuningProfile.ChargedShotSpeed = value);
         AddBoolControl("Enable Precision Shot", () => TuningProfile.EnablePrecisionShot, value => TuningProfile.EnablePrecisionShot = value);
@@ -285,9 +292,85 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Projectile Gravity", 0.0, 80.0, 0.5, () => TuningProfile.ProjectileGravity, value => TuningProfile.ProjectileGravity = value);
     }
 
+    private void AddVisualMaterialsSection()
+    {
+        System.Collections.Generic.List<ShaderMaterial> materials = new();
+        foreach (ShaderMaterial material in RuntimeMaterials)
+        {
+            if (material?.Shader == null)
+            {
+                continue;
+            }
+
+            if (ShaderHasFloatParameter(material, "metallic")
+                || ShaderHasFloatParameter(material, "roughness")
+                || ShaderHasFloatParameter(material, "specular_strength"))
+            {
+                materials.Add(material);
+            }
+        }
+
+        if (materials.Count == 0)
+        {
+            return;
+        }
+
+        AddSection("Visual / Materials", true);
+        VBoxContainer sectionContent = _currentSectionContent;
+        foreach (ShaderMaterial material in materials)
+        {
+            string materialName = string.IsNullOrWhiteSpace(material.ResourceName)
+                ? material.ResourcePath.GetFile()
+                : material.ResourceName;
+            AddSubsection(materialName);
+
+            VBoxContainer materialControls = new()
+            {
+                Name = $"{ToNodeName(materialName)}Controls",
+                SizeFlagsHorizontal = Control.SizeFlags.ExpandFill
+            };
+            sectionContent.AddChild(materialControls);
+            _currentSectionContent = materialControls;
+
+            if (ShaderHasFloatParameter(material, "metallic"))
+            {
+                AddFloatControl("Metallic", 0.0, 1.0, 0.01,
+                    () => GetShaderFloat(material, "metallic", 0.15f),
+                    value => material.SetShaderParameter("metallic", value));
+            }
+
+            if (ShaderHasFloatParameter(material, "roughness"))
+            {
+                AddFloatControl("Roughness", 0.0, 1.0, 0.01,
+                    () => GetShaderFloat(material, "roughness", 0.5f),
+                    value => material.SetShaderParameter("roughness", value));
+            }
+
+            if (ShaderHasFloatParameter(material, "specular_strength"))
+            {
+                AddFloatControl("Specular / Reflection Strength", 0.0, 1.0, 0.01,
+                    () => GetShaderFloat(material, "specular_strength", 0.5f),
+                    value => material.SetShaderParameter("specular_strength", value));
+            }
+
+            _currentSectionContent = sectionContent;
+        }
+    }
+
+    private static bool ShaderHasFloatParameter(ShaderMaterial material, string parameterName)
+    {
+        return material?.Shader?.Code?.Contains($"uniform float {parameterName}", System.StringComparison.Ordinal) == true;
+    }
+
+    private static float GetShaderFloat(ShaderMaterial material, StringName parameterName, float fallback)
+    {
+        Variant value = material.GetShaderParameter(parameterName);
+        return value.VariantType == Variant.Type.Nil ? fallback : (float)value.AsDouble();
+    }
+
     private void AddCameraSection()
     {
-        AddSection("Camera");
+        AddSection("Camera", true);
         AddFloatControl("Player FOV", 50.0, 120.0, 1.0, () => TuningProfile.PlayerFov, value => TuningProfile.PlayerFov = value);
         AddFloatControl("Precision FOV", 20.0, 100.0, 0.5, () => TuningProfile.PrecisionFov, value => TuningProfile.PrecisionFov = value);
         AddFloatControl("FOV Transition Speed", 1.0, 300.0, 1.0, () => TuningProfile.FovTransitionSpeed, value => TuningProfile.FovTransitionSpeed = value);
@@ -295,7 +378,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddSpeedFovSection()
     {
-        AddSection("Camera / Speed FOV");
+        AddSection("Camera / Speed FOV", false);
         AddBoolControl("Enable Speed FOV", () => TuningProfile.EnableSpeedFov, value => TuningProfile.EnableSpeedFov = value);
         AddFloatControl("Speed FOV Multiplier", 0.0, 2.0, 0.05, () => TuningProfile.SpeedFovMultiplier, value => TuningProfile.SpeedFovMultiplier = value);
         AddFloatControl("Min Speed For FOV", 0.0, 25.0, 0.5, () => TuningProfile.MinSpeedForFov, value => TuningProfile.MinSpeedForFov = value);
@@ -313,13 +396,13 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddFramePhysicsDebugSection()
     {
-        AddSection("Frame / Physics Debug");
+        AddSection("Frame / Physics Debug", false);
         AddReadout("Cadence Debug", GetFramePhysicsDebugText);
     }
 
     private void AddViewModelSwaySection()
     {
-        AddSection("ViewModel / Sway");
+        AddSection("ViewModel / Sway", false);
         AddBoolControl("Enable ViewModel Sway", () => TuningProfile.EnableViewModelSway, value => TuningProfile.EnableViewModelSway = value);
         AddBoolControl("Enable Mouse Lag", () => TuningProfile.EnableMouseLag, value => TuningProfile.EnableMouseLag = value);
         AddFloatControl("Mouse Lag Position", 0.0, 0.08, 0.001, () => TuningProfile.MouseLagPositionAmount, value => TuningProfile.MouseLagPositionAmount = value);
@@ -343,7 +426,7 @@ public partial class RuntimeTuningPanel : Window
 
     private void AddViewModelAimStabilizationSection()
     {
-        AddSection("ViewModel / Aim Stabilization");
+        AddSection("ViewModel / Aim Stabilization", false);
         AddBoolControl("Enable Aim Stabilization", () => TuningProfile.EnableAimStabilization, value => TuningProfile.EnableAimStabilization = value);
         AddFloatControl("Aim Stabilization Strength", 0.0, 1.0, 0.01, () => TuningProfile.AimStabilizationStrength, value => TuningProfile.AimStabilizationStrength = value);
         AddFloatControl("Aim Stabilization Smooth", 0.1, 40.0, 0.1, () => TuningProfile.AimStabilizationSmoothSpeed, value => TuningProfile.AimStabilizationSmoothSpeed = value);
