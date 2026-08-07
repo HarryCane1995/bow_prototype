@@ -66,6 +66,18 @@ PALETTE = (
         "noise_strength": 0.14,
     },
 )
+CEILING_PRESET = {
+    "name": "SIM_GRID_CEILING",
+    "runtime": "res://Assets/Materials/Simulation/sim_grid_ceiling.tres",
+    "base_color": (0.001, 0.004, 0.009, 1.0),
+    "grid_color": (0.32, 0.78, 1.0, 1.0),
+    "cell_size": 3.2,
+    "line_width": 0.009,
+    "emission_strength": 1.4,
+    "scan_speed": 0.12,
+    "scan_strength": 0.16,
+    "noise_strength": 0.012,
+}
 
 
 def _node(nodes, node_type, name, location):
@@ -85,7 +97,7 @@ def _math(nodes, name, operation, location, second_value=None):
 
 
 def _find_numbered_duplicates():
-    canonical_names = {preset["name"] for preset in PALETTE}
+    canonical_names = {preset["name"] for preset in PALETTE + (CEILING_PRESET,)}
     duplicates = []
     for material in bpy.data.materials:
         if any(material.name.startswith(name + ".") for name in canonical_names):
@@ -275,6 +287,16 @@ def ensure_sim_grid_palette(preserve_existing_primary=True):
         else:
             materials.append(_build_preview_material(preset))
     return materials
+
+
+def ensure_sim_grid_ceiling_material():
+    duplicates = _find_numbered_duplicates()
+    if duplicates:
+        raise RuntimeError(
+            "Refusing to build SIM_GRID_CEILING while duplicate materials exist: "
+            + ", ".join(duplicates)
+        )
+    return _build_preview_material(CEILING_PRESET)
 
 
 if __name__ == "__main__":

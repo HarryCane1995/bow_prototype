@@ -7,6 +7,7 @@ const MATERIAL_REPLACEMENTS := {
 	"SIM_GRID_03": preload("res://Assets/Materials/Simulation/sim_grid_03.tres"),
 	"SIM_GRID_04": preload("res://Assets/Materials/Simulation/sim_grid_04.tres"),
 	"SIM_GRID_05": preload("res://Assets/Materials/Simulation/sim_grid_05.tres"),
+	"SIM_GRID_CEILING": preload("res://Assets/Materials/Simulation/sim_grid_ceiling.tres"),
 }
 
 
