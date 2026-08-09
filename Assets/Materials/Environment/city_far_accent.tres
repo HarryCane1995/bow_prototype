@@ -1,0 +1,12 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bfmr4yaqqqcui"]
+
+[ext_resource type="Shader" uid="uid://3cyq5cdsbm1h" path="res://Assets/Materials/Environment/city_far_accent.gdshader" id="1_city_far_accent_shader"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_city_far_accent_shader")
+shader_parameter/accent_color = Color(0.61392313, 0.79806346, 0.6058818, 1)
+shader_parameter/secondary_accent_color = Color(0.99520856, 0.7464901, 0.35193923, 1)
+shader_parameter/accent_brightness = 4.80000007152576
+shader_parameter/accent_color_variation = 0.21999999508256
+shader_parameter/panel_pattern_strength = 0.16999999620016

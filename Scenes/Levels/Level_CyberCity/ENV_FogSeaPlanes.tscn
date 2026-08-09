@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://c48f80cm4as82"]
+
+[ext_resource type="Material" uid="uid://b33p3e4abkwt5" path="res://Assets/Materials/Environment/fog_sea_top.tres" id="1_fog_sea_top"]
+[ext_resource type="Material" uid="uid://b4ls7fi7dokv8" path="res://Assets/Materials/Environment/fog_sea_detail.tres" id="2_fog_sea_detail"]
+[ext_resource type="Material" uid="uid://dct2gnpenirm4" path="res://Assets/Materials/Environment/fog_sea_mid.tres" id="3_fog_sea_mid"]
+[ext_resource type="Material" uid="uid://ddoj3ek4obn3u" path="res://Assets/Materials/Environment/fog_sea_far.tres" id="4_fog_sea_far"]
+[ext_resource type="Material" uid="uid://du736uu3dijh4" path="res://Assets/Materials/Environment/fog_sea_top_lower.tres" id="5_fog_sea_top_lower"]
+[ext_resource type="Material" path="res://Assets/Materials/Environment/fog_sea_detail_lower.tres" id="6_fog_sea_detail_lower"]
+[ext_resource type="Material" path="res://Assets/Materials/Environment/fog_sea_mid_lower.tres" id="7_fog_sea_mid_lower"]
+[ext_resource type="Material" path="res://Assets/Materials/Environment/fog_sea_far_lower.tres" id="8_fog_sea_far_lower"]
+[ext_resource type="Script" uid="uid://bbkh7r1tmy1f1" path="res://Scripts/Levels/FogSeaController.gd" id="9_fog_sea_controller"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fog_sea"]
+size = Vector2(12000, 12000)
+
+[node name="ENV_FogSeaPlanes" type="Node3D" unique_id=566447043]
+script = ExtResource("9_fog_sea_controller")
+downward_fill_start = 0.4
+downward_fill_end = 0.72
+top_material = ExtResource("1_fog_sea_top")
+top_lower_material = ExtResource("5_fog_sea_top_lower")
+detail_material = ExtResource("2_fog_sea_detail")
+detail_lower_material = ExtResource("6_fog_sea_detail_lower")
+mid_material = ExtResource("3_fog_sea_mid")
+mid_lower_material = ExtResource("7_fog_sea_mid_lower")
+far_material = ExtResource("4_fog_sea_far")
+far_lower_material = ExtResource("8_fog_sea_far_lower")
+
+[node name="FogSea_Top" type="MeshInstance3D" parent="." unique_id=672299434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -55.5, 0)
+material_override = ExtResource("1_fog_sea_top")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_TopLower" type="MeshInstance3D" parent="." unique_id=1222611402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -59.5, 0)
+material_override = ExtResource("5_fog_sea_top_lower")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_Detail" type="MeshInstance3D" parent="." unique_id=1452195712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -63.5, 0)
+material_override = ExtResource("2_fog_sea_detail")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_DetailLower" type="MeshInstance3D" parent="." unique_id=1741674234]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -70.5, 0)
+material_override = ExtResource("6_fog_sea_detail_lower")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_Mid" type="MeshInstance3D" parent="." unique_id=451657598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -79, 0)
+material_override = ExtResource("3_fog_sea_mid")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_MidLower" type="MeshInstance3D" parent="." unique_id=1424805663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -89, 0)
+material_override = ExtResource("7_fog_sea_mid_lower")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_Far" type="MeshInstance3D" parent="." unique_id=1243467277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -101, 0)
+material_override = ExtResource("4_fog_sea_far")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")
+
+[node name="FogSea_FarLower" type="MeshInstance3D" parent="." unique_id=1075237356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -118, 0)
+material_override = ExtResource("8_fog_sea_far_lower")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_fog_sea")

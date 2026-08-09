@@ -7,6 +7,10 @@ bin/
 obj/
 .vs/
 
+# Python helper caches
+__pycache__/
+*.py[cod]
+
 # Editor backups
 *.old
 *.bak
@@ -22,6 +26,8 @@ obj/
 *_autosave.blend
 
 # Accidental duplicate image exports from Level_01 blockout iteration
+Level_01_Blockout_*.png
+Level_01_Blockout_*.png.import
 Level_01_Blockout_*.png.png
 Level_01_Blockout_*.png.png.import
 Level_01_Blockout_*.png_2.png

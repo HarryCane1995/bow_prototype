@@ -1,18 +1,24 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://boee8majwg152"]
 
-[ext_resource type="Shader" path="res://Assets/Materials/Environment/city_far_windows.gdshader" id="1_city_far_windows_shader"]
+[ext_resource type="Shader" uid="uid://bcf23g8ltjs6c" path="res://Assets/Materials/Environment/city_far_windows.gdshader" id="1_city_far_windows_shader"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_city_far_windows_shader")
-shader_parameter/building_color = Color(0.004, 0.009, 0.018, 1)
-shader_parameter/window_color = Color(0.12, 0.72, 1, 1)
-shader_parameter/secondary_window_color = Color(0.56, 0.22, 1, 1)
-shader_parameter/window_size = 1.6
-shader_parameter/window_spacing = 1.4
-shader_parameter/window_lit_ratio = 0.22
-shader_parameter/window_brightness = 4.5
-shader_parameter/window_seed = 37.0
-shader_parameter/window_color_variation = 0.3
+shader_parameter/building_color = Color(0.005598504, 0.010566062, 0.02615348, 1)
+shader_parameter/facade_cool_tint = Color(0.45685083, 0.6936854, 0.7905595, 1)
+shader_parameter/facade_purple_tint = Color(0.75936466, 0.5983511, 0.8470403, 1)
+shader_parameter/facade_tint_variation = 0.32999999262384
+shader_parameter/window_color = Color(0.6649433, 0.6508256, 0.9895435, 1)
+shader_parameter/secondary_window_color = Color(0.22878599, 0.46266806, 0.83155525, 1)
+shader_parameter/window_size = 1.05000001564625
+shader_parameter/window_spacing = 5.7500000856819
+shader_parameter/window_lit_ratio = 0.50999998860048
+shader_parameter/window_lit_ratio_variation = 0.30999999307088
+shader_parameter/window_vertical_zone_height = 28.0
+shader_parameter/window_vertical_variation = 0.71999998390656
+shader_parameter/window_brightness = 10.40000015497248
+shader_parameter/window_seed = 522.0
+shader_parameter/window_color_variation = 0.60999998636528
 shader_parameter/flicker_strength = 0.0
 shader_parameter/flicker_speed = 0.35

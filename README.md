@@ -6,8 +6,11 @@
 
 ## Project
 
-- Engine: Godot 4 C#
-- Main scene: `res://Scenes/BowPrototypeScene.tscn`
+- Engine: Godot 4.6 C# / Forward+
+- Main scene: `res://Scenes/Levels/Level_01/Level_01.tscn`
+- Additional level: `res://Scenes/Levels/Level_CyberCity/Level_CyberCity.tscn`
+- Shared player prefab: `res://Scenes/Player.tscn`
+- Legacy gameplay playground: `res://Scenes/BowPrototypeScene.tscn`
 - Documentation: `Docs/`
 
 ## Docs

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[resource]
+resource_name = "CyberCity_ConcreteTower_TechDark"
+albedo_color = Color(0.018, 0.026, 0.038, 1)
+metallic = 0.35
+roughness = 0.3

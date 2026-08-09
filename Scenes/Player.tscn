@@ -13,7 +13,7 @@
 [ext_resource type="Script" uid="uid://cqh11pdux3rhx" path="res://Scripts/Player/Modules/PlayerCameraFovModule.cs" id="10_camera_fov"]
 [ext_resource type="Script" uid="uid://d0bdg71xcs1u1" path="res://Scripts/Player/Modules/PlayerCrouchSlideModule.cs" id="11_crouch_slide"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="12_slingshot_grapple"]
-[ext_resource type="Resource" uid="uid://bq0fvqf7tcneo" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
+[ext_resource type="Resource" uid="uid://1ekng6pfu7oj" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="13_player_tuning_profile"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="14_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="15_viewmodel_sway"]
 [ext_resource type="Script" uid="uid://dsig4854mc5hn" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="16_ability_state"]
@@ -34,10 +34,11 @@ shape = SubResource("CapsuleShape3D_player")
 [node name="CameraPivot" type="Node3D" parent="." unique_id=4344553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 
-[node name="CameraEffectsPivot" type="Node3D" parent="CameraPivot"]
+[node name="CameraEffectsPivot" type="Node3D" parent="CameraPivot" unique_id=1451591346]
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/CameraEffectsPivot" unique_id=1011445523]
 current = true
+far = 5000.0
 
 [node name="ShootPoint" type="Marker3D" parent="CameraPivot/CameraEffectsPivot/Camera3D" unique_id=1044159652]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.45)
@@ -111,7 +112,6 @@ ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContain
 script = ExtResource("9_viewmodel_render")
 ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
 ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot")
-LightRigEnabled = true
 
 [node name="PlayerViewModelSwayModule" type="Node" parent="." unique_id=1570584019]
 script = ExtResource("15_viewmodel_sway")
@@ -146,17 +146,15 @@ fov = 97.3
 [node name="ViewModelLightRig" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=194780506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03172764, -0.04209256)
 
-[node name="ViewModelKeyLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
+[node name="ViewModelKeyLight" type="DirectionalLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=297922023]
 transform = Transform3D(0.86602527, 0.32139382, -0.38302252, 0, 0.76604444, 0.64278764, 0.50000024, -0.5566704, 0.663414, 0, 0, 0)
-light_cull_mask = 524288
 light_energy = 1.8
-shadow_enabled = false
-
-[node name="ViewModelFillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.35, 1.0)
 light_cull_mask = 524288
+
+[node name="ViewModelFillLight" type="OmniLight3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelLightRig" unique_id=1899466797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.35, 1)
 light_energy = 0.45
-shadow_enabled = false
+light_cull_mask = 524288
 omni_range = 8.0
 
 [node name="ViewModelSwayRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=2005878544]

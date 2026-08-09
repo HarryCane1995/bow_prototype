@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Environment/fog_sea_plane.gdshader" id="1_fog_sea_shader"]
+
+[resource]
+render_priority = -7
+shader = ExtResource("1_fog_sea_shader")
+shader_parameter/fog_color = Color(0.16, 0.34, 0.47, 1)
+shader_parameter/opacity = 1.0
+shader_parameter/threshold = 0.24
+shader_parameter/softness = 0.36
+shader_parameter/noise_scale = 0.00016
+shader_parameter/detail_scale = 1.5
+shader_parameter/detail_strength = 0.05
+shader_parameter/wind_direction = Vector2(-0.95, 0.3)
+shader_parameter/wind_speed = 0.65
+shader_parameter/secondary_speed = 0.42
+shader_parameter/depth_fade_distance = 60.0
+shader_parameter/depth_fade_enabled = true
+shader_parameter/view_angle_fade = 0.06
+shader_parameter/distance_fade_start = 1500.0
+shader_parameter/distance_fade_end = 3000.0

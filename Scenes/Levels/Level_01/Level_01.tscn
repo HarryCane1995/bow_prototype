@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cbgrraldhdcfq" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="6_skybox"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="8_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="9_crosshair"]
-[ext_resource type="Script" path="res://Scripts/Debug/SpeedometerHud.cs" id="10_speedometer_hud"]
+[ext_resource type="Script" uid="uid://b08d4h32ogwgp" path="res://Scripts/Debug/SpeedometerHud.cs" id="10_speedometer_hud"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
 panorama = ExtResource("6_skybox")
@@ -38,6 +38,7 @@ size = Vector3(30, 0.5, 30)
 script = ExtResource("5_startup_window_mode")
 
 [node name="ImportedLevel" parent="." unique_id=1325503189 instance=ExtResource("2_imported_level")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53069067, -0.7474613, -0.05218792)
 
 [node name="PlayerSpawn" type="Marker3D" parent="." unique_id=248952348]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 4)
@@ -95,8 +96,7 @@ grow_vertical = 2
 script = ExtResource("9_crosshair")
 CrosshairColor = Color(1, 1, 1, 0.9)
 
-[node name="SpeedometerHud" type="Label" parent="CanvasLayer"]
-layout_mode = 3
+[node name="SpeedometerHud" type="Label" parent="CanvasLayer" unique_id=1655660837]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -108,7 +108,6 @@ offset_right = 80.0
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
-mouse_filter = 2
 text = "0.0 m/s"
 horizontal_alignment = 1
 vertical_alignment = 1

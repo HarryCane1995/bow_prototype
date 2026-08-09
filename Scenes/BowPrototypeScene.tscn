@@ -21,7 +21,7 @@
 [ext_resource type="Script" uid="uid://dj8xt87wynuq7" path="res://Scripts/Rendering/TestSkyboxEnvironment.cs" id="18_skybox_environment"]
 [ext_resource type="Script" uid="uid://c8hd7b0wkv5et" path="res://Scripts/Player/Modules/PlayerSlingshotGrappleModule.cs" id="19_slingshot_grapple"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="20_grapple_anchor"]
-[ext_resource type="Resource" uid="uid://bq0fvqf7tcneo" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
+[ext_resource type="Resource" uid="uid://1ekng6pfu7oj" path="res://Resources/Tuning/DefaultPlayerTuningProfile.tres" id="21_player_tuning_profile"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="22_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://bc26phvwwhl64" path="res://Scripts/Player/Modules/PlayerSpeedFovModule.cs" id="23_speed_fov"]
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="24_viewmodel_sway"]
@@ -66,20 +66,19 @@ transform = Transform3D(14.760213, 0, 0, 0, 1, 0, 0, 0, 26.401424, 2.165, 0, -3.
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1595484939]
 transform = Transform3D(0.86602527, 0.38302252, -0.32139382, 0, 0.64278734, 0.7660447, 0.50000024, -0.66341406, 0.55667007, 0, 0, 0)
-light_energy = 1.873
-light_indirect_energy = 1.235
+light_energy = 6.094
+light_indirect_energy = 1.712
 light_volumetric_fog_energy = 0.0
-light_angular_distance = 10.0
 shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1825141203]
 environment = SubResource("Environment_world")
 script = ExtResource("18_skybox_environment")
-BackgroundEnergy = 2.66
-SkyEnergy = 1.2
-AmbientLightEnergy = 3.68
+BackgroundEnergy = 1.0
+SkyEnergy = 0.5
+AmbientLightEnergy = 2.0
 GaussianBlurEnabled = true
-GaussianBlurSigma = 8.9
+GaussianBlurSigma = 7.6
 
 [node name="GrappleAnchors" type="Node3D" parent="." unique_id=1113233226]
 

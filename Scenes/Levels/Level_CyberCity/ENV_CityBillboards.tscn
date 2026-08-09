@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Environment/EmissiveLogoBillboard3D.tscn" id="1_billboard"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/nexora.svg" id="2_nexora"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/vantek.svg" id="3_vantek"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/orbix.svg" id="4_orbix"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/cylara.svg" id="5_cylara"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/quantex.svg" id="6_quantex"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/helion.svg" id="7_helion"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/zyrail.svg" id="8_zyrail"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/novadex.svg" id="9_novadex"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/luxara.svg" id="10_luxara"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Environment/Billboards/Logos/trionix.svg" id="11_trionix"]
+
+[node name="ENV_CityBillboards" type="Node3D"]
+
+[node name="NEXORA_Primary" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(592.609, 160, -1384.978)
+logo_texture = ExtResource("2_nexora")
+billboard_size = Vector2(64, 54.67)
+emission_color = Color(0.72, 0.94, 1, 1)
+emission_intensity = 5.2
+opacity = 0.92
+
+[node name="VANTEK_Mid" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(888.365, 32, -1041.118)
+logo_texture = ExtResource("3_vantek")
+billboard_size = Vector2(44, 40.12)
+emission_color = Color(0.35, 0.82, 1, 1)
+emission_intensity = 4.6
+opacity = 0.9
+
+[node name="ORBIX_SideLarge" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(1546.392, 205, 77.595)
+rotation = Vector3(0, -1.570796, 0)
+logo_texture = ExtResource("4_orbix")
+billboard_size = Vector2(68, 60.43)
+emission_color = Color(0.58, 0.78, 1, 1)
+emission_intensity = 5.0
+opacity = 0.92
+
+[node name="CYLARA_SideSmall" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(1692.254, 230, -96.627)
+rotation = Vector3(0, -1.570796, 0)
+logo_texture = ExtResource("5_cylara")
+billboard_size = Vector2(42, 30.11)
+emission_color = Color(0.24, 0.76, 1, 1)
+emission_intensity = 3.8
+opacity = 0.86
+
+[node name="QUANTEX_Amber" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(242.783, 240, 652.04)
+rotation = Vector3(0, 3.141593, 0)
+logo_texture = ExtResource("6_quantex")
+billboard_size = Vector2(80, 62.71)
+emission_color = Color(1, 0.48, 0.16, 1)
+emission_intensity = 4.4
+opacity = 0.88
+
+[node name="HELION_Far" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(1245.336, 125, -2370.313)
+logo_texture = ExtResource("7_helion")
+billboard_size = Vector2(58, 53.57)
+emission_color = Color(0.76, 0.94, 1, 1)
+emission_intensity = 5.4
+opacity = 0.9
+
+[node name="ZYRAIL_FarLeft" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(-612.891, 125, -1880.716)
+logo_texture = ExtResource("8_zyrail")
+billboard_size = Vector2(55, 41.79)
+emission_color = Color(0.28, 0.72, 1, 1)
+emission_intensity = 4.4
+opacity = 0.86
+
+[node name="NOVADEX_Large" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(-242.32, 155, -1899.767)
+logo_texture = ExtResource("9_novadex")
+billboard_size = Vector2(92, 74.31)
+emission_color = Color(0.8, 0.95, 1, 1)
+emission_intensity = 5.8
+opacity = 0.94
+
+[node name="LUXARA_Magenta" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(892.176, 175, -1536.089)
+logo_texture = ExtResource("10_luxara")
+billboard_size = Vector2(38, 31.07)
+emission_color = Color(0.7, 0.36, 0.74, 1)
+emission_intensity = 3.7
+opacity = 0.8
+
+[node name="TRIONIX_Red" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(2035.45, 190, -1565.123)
+logo_texture = ExtResource("11_trionix")
+billboard_size = Vector2(76, 60.56)
+emission_color = Color(0.9, 0.2, 0.24, 1)
+emission_intensity = 4.2
+opacity = 0.84
+
+[node name="NEXORA_RepeatSmall" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(1341.102, 105, 546.451)
+rotation = Vector3(0, -1.570796, 0)
+logo_texture = ExtResource("2_nexora")
+billboard_size = Vector2(42, 35.9)
+emission_color = Color(0.3, 0.82, 1, 1)
+emission_intensity = 3.5
+opacity = 0.8
+
+[node name="VANTEK_RepeatSmall" parent="." instance=ExtResource("1_billboard")]
+position = Vector3(1378.173, 95, -550.068)
+logo_texture = ExtResource("3_vantek")
+billboard_size = Vector2(36, 32.82)
+emission_color = Color(0.68, 0.9, 1, 1)
+emission_intensity = 3.4
+opacity = 0.78

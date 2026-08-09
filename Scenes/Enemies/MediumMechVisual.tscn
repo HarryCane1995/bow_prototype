@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Models/Enemies/MediumMech/MediumMech.blend" id="1_medium_mech"]
+
+[node name="MediumMechVisual" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_medium_mech")]

@@ -2,7 +2,7 @@
 
 ## Startup Window Mode
 
-При запуске `BowPrototypeScene` через Play игра может автоматически открываться на primary monitor и переходить в fullscreen. Это поведение включает root-node `StartupWindowModeController` в сцене `res://Scenes/BowPrototypeScene.tscn`.
+При запуске текущих level-wrapper сцен через Play игра может автоматически открываться на primary monitor и переходить в fullscreen. Это поведение включает root-node `StartupWindowModeController` в `Level_01.tscn` и `Level_CyberCity.tscn`.
 
 Контроллер находится в:
 

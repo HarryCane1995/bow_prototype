@@ -1,0 +1,8 @@
+[gd_resource type="FogMaterial" format=3 uid="uid://dlib7khnlivqc"]
+
+[resource]
+density = 0.1113
+albedo = Color(0.77160424, 0.8477451, 0.94242626, 1)
+emission = Color(0.16160408, 0.5441982, 0.6496497, 1)
+height_falloff = 0.36358097
+edge_fade = 0.4873521

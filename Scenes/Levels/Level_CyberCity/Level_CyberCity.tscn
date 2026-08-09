@@ -1,44 +1,58 @@
-[gd_scene load_steps=12 format=3]
+[gd_scene format=3 uid="uid://c02u1se1yi6wm"]
 
-[ext_resource type="Script" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
+[ext_resource type="Script" uid="uid://bst7plxmvwfkx" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
 [ext_resource type="PackedScene" uid="uid://c87f4ahbd34kn" path="res://Level_CyberCity_Blockout.blend" id="2_imported_level"]
-[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" uid="uid://cgvixhtobap65" path="res://Scenes/Player.tscn" id="3_player"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="4_grapple_anchor"]
-[ext_resource type="Script" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
-[ext_resource type="Environment" path="res://Scenes/Levels/Level_CyberCity/Level_CyberCityEnvironment.tres" id="6_environment"]
+[ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
+[ext_resource type="Environment" uid="uid://cpsk3wak2pbv" path="res://Scenes/Levels/Level_CyberCity/Level_CyberCityEnvironment.tres" id="6_environment"]
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="7_runtime_tuning_panel"]
-[ext_resource type="Script" path="res://Scripts/UI/CrosshairUI.cs" id="8_crosshair"]
-[ext_resource type="Script" path="res://Scripts/Debug/SpeedometerHud.cs" id="9_speedometer_hud"]
+[ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="8_crosshair"]
+[ext_resource type="Script" uid="uid://b08d4h32ogwgp" path="res://Scripts/Debug/SpeedometerHud.cs" id="9_speedometer_hud"]
+[ext_resource type="PackedScene" path="res://Scenes/Architecture/CyberCity/CyberCity_Concrete_Parkour_Tower.tscn" id="11_manual_concrete_tower"]
+[ext_resource type="PackedScene" uid="uid://c48f80cm4as82" path="res://Scenes/Levels/Level_CyberCity/ENV_FogSeaPlanes.tscn" id="12_fog_sea_planes"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/Level_CyberCity/ENV_UnderFogCityLights.tscn" id="13_underfog_city_lights"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/Level_CyberCity/ENV_CityBillboards.tscn" id="14_city_billboards"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/MediumMechVisual.tscn" id="15_medium_mech"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fallback_floor"]
 size = Vector3(24, 0.5, 24)
 
-[node name="Level_CyberCity" type="Node3D"]
+[node name="Level_CyberCity" type="Node3D" unique_id=1260252915]
 
-[node name="StartupWindowModeController" type="Node" parent="."]
+[node name="StartupWindowModeController" type="Node" parent="." unique_id=1391819583]
 script = ExtResource("5_startup_window_mode")
 
-[node name="ImportedLevel" parent="." instance=ExtResource("2_imported_level")]
+[node name="ImportedLevel" parent="." unique_id=1854852564 instance=ExtResource("2_imported_level")]
 
-[node name="PlayerSpawn" type="Marker3D" parent="."]
+[node name="VOLUME_FOG_CITY" parent="ImportedLevel" index="22" unique_id=1768786542]
+visible = false
+
+[node name="ManualConcreteParkourTower" parent="." unique_id=1785023079 instance=ExtResource("11_manual_concrete_tower")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 760, 0, 138)
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1912329251]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Player" parent="." instance=ExtResource("3_player")]
+[node name="Player" parent="." unique_id=1903661522 instance=ExtResource("3_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
-[node name="Gameplay" type="Node3D" parent="."]
+[node name="Gameplay" type="Node3D" parent="." unique_id=2063915835]
 script = ExtResource("1_marker_binder")
 GrappleAnchorScene = ExtResource("4_grapple_anchor")
 
-[node name="Enemies" type="Node3D" parent="Gameplay"]
+[node name="Enemies" type="Node3D" parent="Gameplay" unique_id=602173245]
 
-[node name="GrappleAnchors" type="Node3D" parent="Gameplay"]
+[node name="MediumMechVisual" parent="Gameplay/Enemies" instance=ExtResource("15_medium_mech")]
+position = Vector3(620, 127, 128)
 
-[node name="Triggers" type="Node3D" parent="Gameplay"]
+[node name="GrappleAnchors" type="Node3D" parent="Gameplay" unique_id=6497149]
 
-[node name="World" type="Node3D" parent="."]
+[node name="Triggers" type="Node3D" parent="Gameplay" unique_id=1481529177]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+[node name="World" type="Node3D" parent="." unique_id=1163244750]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World" unique_id=176744671]
 transform = Transform3D(0.86602527, 0.32139382, -0.38302252, 0, 0.76604444, 0.64278764, 0.50000024, -0.5566704, 0.663414, 0, 0, 0)
 light_color = Color(0.62, 0.76, 1, 1)
 light_energy = 0.8
@@ -47,26 +61,37 @@ light_volumetric_fog_energy = 0.25
 light_angular_distance = 6.0
 shadow_enabled = true
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=1913664011]
 environment = ExtResource("6_environment")
 
-[node name="Debug" type="Node3D" parent="."]
+[node name="ENV_FogSeaPlanes" parent="World" unique_id=534070923 instance=ExtResource("12_fog_sea_planes")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.051838, 0)
+master_opacity = 0.79
+downward_fill_start = 0.08
+downward_fill_end = 0.19
 
-[node name="TemporarySafetyFloor" type="StaticBody3D" parent="Debug"]
+[node name="ENV_UnderFogCityLights" parent="World" unique_id=540899605 instance=ExtResource("13_underfog_city_lights")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -462.07062, 0)
+
+[node name="ENV_CityBillboards" parent="World" unique_id=1059133403 instance=ExtResource("14_city_billboards")]
+
+[node name="Debug" type="Node3D" parent="." unique_id=667416649]
+
+[node name="TemporarySafetyFloor" type="StaticBody3D" parent="Debug" unique_id=1053927588]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Debug/TemporarySafetyFloor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Debug/TemporarySafetyFloor" unique_id=1690050845]
 visible = false
 shape = SubResource("BoxShape3D_fallback_floor")
 disabled = true
 
-[node name="RuntimeTuningPanel" parent="Debug" instance=ExtResource("7_runtime_tuning_panel")]
+[node name="RuntimeTuningPanel" parent="Debug" unique_id=1576424905 instance=ExtResource("7_runtime_tuning_panel")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=937305696]
 layer = 2
 
-[node name="CrosshairUI" type="Control" parent="CanvasLayer"]
+[node name="CrosshairUI" type="Control" parent="CanvasLayer" unique_id=100518682]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -76,7 +101,7 @@ grow_vertical = 2
 script = ExtResource("8_crosshair")
 CrosshairColor = Color(0.82, 0.94, 1, 0.92)
 
-[node name="SpeedometerHud" type="Label" parent="CanvasLayer"]
+[node name="SpeedometerHud" type="Label" parent="CanvasLayer" unique_id=1830376962]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -92,3 +117,5 @@ text = "0.0 m/s"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("9_speedometer_hud")
+
+[editable path="ImportedLevel"]

@@ -1,19 +1,43 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dg4421rjkn2ww"]
 
-[ext_resource type="Shader" path="res://Assets/Materials/Sky/cybercity_star_sky.gdshader" id="1_star_sky_shader"]
+[ext_resource type="Shader" uid="uid://utmc4iqfde7b" path="res://Assets/Materials/Sky/cybercity_star_sky.gdshader" id="1_star_sky_shader"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6bpi6"]
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_f7tyu"]
+noise = SubResource("FastNoiseLite_6bpi6")
 
 [resource]
 shader = ExtResource("1_star_sky_shader")
 shader_parameter/sky_top_color = Color(0.006, 0.012, 0.035, 1)
-shader_parameter/sky_horizon_color = Color(0.045, 0.11, 0.18, 1)
-shader_parameter/horizon_fade = 0.5
-shader_parameter/star_density = 0.075
-shader_parameter/star_size_min = 0.035
-shader_parameter/star_size_max = 0.11
-shader_parameter/star_brightness = 6.5
-shader_parameter/star_contrast = 3.4
-shader_parameter/star_seed = 42.0
-shader_parameter/star_color_variation = 0.35
-shader_parameter/twinkle_strength = 0.08
+shader_parameter/sky_horizon_color = Color(0.05713561, 0.43107465, 0.36888412, 1)
+shader_parameter/horizon_fade = 0.23999999463552998
+shader_parameter/star_density = 0.18499999586488
+shader_parameter/star_size_min = 0.06000000284999
+shader_parameter/star_size_max = 0.01800000085499
+shader_parameter/star_brightness = 1.65000002458698
+shader_parameter/star_contrast = 4.15000005811468
+shader_parameter/star_seed = 371.0
+shader_parameter/star_color_variation = 0.51999998837696
+shader_parameter/twinkle_strength = 0.33499999251208
 shader_parameter/twinkle_speed = 0.7
 shader_parameter/nebula_strength = 0.08
+shader_parameter/cloud_enabled = true
+shader_parameter/cloud_noise_texture = SubResource("NoiseTexture3D_f7tyu")
+shader_parameter/cloud_color = Color(0.6497095, 0.74082464, 0.87172604, 1)
+shader_parameter/cloud_secondary_color = Color(0.898014, 0.6307674, 0.73743916, 1)
+shader_parameter/cloud_tertiary_color = Color(0.87067986, 0.79202783, 0.4943179, 1)
+shader_parameter/cloud_density = 0.48999998904752
+shader_parameter/cloud_scale = 0.80000000447036
+shader_parameter/cloud_detail_scale = 4.5000000521542
+shader_parameter/cloud_detail_strength = 0.27999999374144
+shader_parameter/cloud_softness = 0.32999999262384005
+shader_parameter/cloud_contrast = 2.20000002905734
+shader_parameter/cloud_opacity = 0.12999999709424
+shader_parameter/cloud_brightness = 1.60000002384192
+shader_parameter/cloud_horizon_fade = 0.06999999843536
+shader_parameter/cloud_star_occlusion = 0.13999999687072
+shader_parameter/cloud_speed = 0.022000001045
+shader_parameter/cloud_direction = Vector3(0.465, 0.06, 0.78)
+shader_parameter/cloud_secondary_speed = 1.1699999738481601
+shader_parameter/cloud_seed = 278.0

@@ -1,5 +1,7 @@
 # Blender Tools
 
+The canonical Level_01 Blender/Godot workflow, material conventions, reimport commands, and validation steps are documented in `Docs/blender_pipeline.md`. Use `verify_scene_import.gd` after Godot imports a changed `.blend`.
+
 ## Grapple Anchor Markers
 
 Use `create_grapple_anchor_marker.py` to create/update the first Level_01 grapple marker in `Level_01_Blockout.blend`.

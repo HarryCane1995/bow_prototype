@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Models/Architecture/CyberCity/CyberCity_Concrete_Parkour_Tower.blend" id="1_model"]
+[ext_resource type="Script" path="res://Scripts/Levels/CyberCityConcreteParkourTower.gd" id="2_material_binder"]
+[ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="3_grapple_anchor"]
+
+[node name="CyberCity_Concrete_Parkour_Tower" type="Node3D"]
+script = ExtResource("2_material_binder")
+
+[node name="ImportedModel" parent="." instance=ExtResource("1_model")]
+
+[node name="GrappleAnchors" type="Node3D" parent="."]
+
+[node name="GrappleAnchor_Lower" parent="GrappleAnchors" instance=ExtResource("3_grapple_anchor")]
+position = Vector3(-24, 164, 0)
+
+[node name="GrappleAnchor_Mid" parent="GrappleAnchors" instance=ExtResource("3_grapple_anchor")]
+position = Vector3(18, 220, 0)
+
+[node name="GrappleAnchor_Upper" parent="GrappleAnchors" instance=ExtResource("3_grapple_anchor")]
+position = Vector3(-14, 275, 0)
+
+[node name="GrappleAnchor_Crown" parent="GrappleAnchors" instance=ExtResource("3_grapple_anchor")]
+position = Vector3(8, 330, 0)

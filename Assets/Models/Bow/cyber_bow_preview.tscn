@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://b576yyfgfd5ta"]
-
-[ext_resource type="PackedScene" uid="uid://dtn1nlg8m5kbe" path="res://Assets/Models/Bow/cyber_bow_preview.glb" id="1_28upb"]
-
-[node name="cyber_bow_preview" unique_id=1768117817 instance=ExtResource("1_28upb")]

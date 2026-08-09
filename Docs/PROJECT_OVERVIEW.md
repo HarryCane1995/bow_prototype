@@ -6,29 +6,29 @@
 
 ## Текущий статус
 
-- Есть FPS-персонаж.
-- Есть WASD movement.
-- Есть jump.
-- Есть mouse look.
-- Есть crosshair.
-- Есть projectile arrows.
-- Есть light shot и charged shot.
-- Есть bow viewmodel с Draw-анимацией.
-- Есть target hitboxes.
-- Есть modular blockout blocks.
+- Общий FPS-персонаж собран в `Scenes/Player.tscn` и используется level-wrapper сценами.
+- Movement включает jump/double jump, crouch/slide, wall run и slingshot grapple.
+- Лук поддерживает light, charged и precision shot; projectile остаётся отдельной сценой.
+- Основной playable-уровень импортируется напрямую из `Level_01_Blockout.blend`.
+- `Level_CyberCity` служит отдельным уровнем для rooftop/cybercity окружения.
+- Runtime Tuning Panel меняет общий `PlayerTuningProfile` во время Play.
 
 ## Главная сцена
 
 Главная сцена проекта:
 
-`res://Scenes/BowPrototypeScene.tscn`
+`res://Scenes/Levels/Level_01/Level_01.tscn`
 
-Повторяющиеся сценовые сущности вынесены в PackedScene: тренировочная мишень живёт в `res://Scenes/Debug/TrainingTarget.tscn`, а крупный blockout-кластер - в `res://Scenes/Blocks/BlockoutArena.tscn`. Главная сцена должна оставаться читабельным outline из логических root-групп и инстансов.
+Дополнительный текущий уровень:
 
-Текущие удачные Inspector-настройки фиксируются в `Docs/TUNING_NOTES.md`.
+`res://Scenes/Levels/Level_CyberCity/Level_CyberCity.tscn`
+
+Обе сцены остаются лёгкими wrapper-сценами: gameplay-контейнеры и Godot-окружение принадлежат wrapper, а редактируемая геометрия — соответствующему `.blend`-источнику. Старый `Scenes/BowPrototypeScene.tscn` сохранён только как legacy playground и не является источником истины для игрока или запуска проекта.
+
+Текущие значения настройки хранятся в `Resources/Tuning/DefaultPlayerTuningProfile.tres` и `Scenes/Player.tscn`; `Docs/TUNING_NOTES.md` описывает порядок работы с ними без дублирования чисел.
 
 ## Архитектурные правила
 
 - Общая модульная архитектура описана в `Docs/ARCHITECTURE.md`.
 - Правило взаимодействий описано в `Docs/INTERACTION_ARCHITECTURE.md`: игрок выражает намерение, а объект сам владеет своим поведением, анимацией, звуком и состоянием.
-- Skybox/HDRI workflow описан в `Docs/SKYBOX.md`.
+- Blender/Godot asset workflow описан в `Docs/blender_pipeline.md`.
