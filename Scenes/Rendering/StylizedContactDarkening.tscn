@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Rendering/StylizedContactDarkening.cs" id="1_controller"]
+[ext_resource type="Shader" path="res://Assets/Shaders/PostProcessing/stylized_contact_darkening.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_contact_darkening"]
+render_priority = 127
+shader = ExtResource("2_shader")
+shader_parameter/effect_enabled = true
+shader_parameter/display_mode = 3
+shader_parameter/strength = 0.55
+shader_parameter/radius = 0.8
+shader_parameter/bias = 0.06
+shader_parameter/falloff = 2.0
+shader_parameter/fade_start = 25.0
+shader_parameter/fade_end = 70.0
+shader_parameter/debug_depth_range = 80.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_fullscreen"]
+material = SubResource("ShaderMaterial_contact_darkening")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="StylizedContactDarkening" type="Node"]
+script = ExtResource("1_controller")
+Mode = 3
+
+[node name="FullscreenQuad" type="MeshInstance3D" parent="."]
+cast_shadow = 0
+extra_cull_margin = 16384.0
+ignore_occlusion_culling = true
+gi_mode = 0
+mesh = SubResource("QuadMesh_fullscreen")
+material_override = SubResource("ShaderMaterial_contact_darkening")

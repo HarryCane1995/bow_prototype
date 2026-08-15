@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Debug/RuntimeTuningPanel.tscn" id="8_runtime_tuning_panel"]
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="9_crosshair"]
 [ext_resource type="Script" uid="uid://b08d4h32ogwgp" path="res://Scripts/Debug/SpeedometerHud.cs" id="10_speedometer_hud"]
+[ext_resource type="PackedScene" path="res://Scenes/Rendering/StylizedContactDarkening.tscn" id="11_contact_darkening"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
 panorama = ExtResource("6_skybox")
@@ -82,6 +83,8 @@ shape = SubResource("BoxShape3D_temporary_safety_floor")
 disabled = true
 
 [node name="RuntimeTuningPanel" parent="Debug" unique_id=1950765612 instance=ExtResource("8_runtime_tuning_panel")]
+
+[node name="StylizedContactDarkening" parent="." instance=ExtResource("11_contact_darkening")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1713791246]
 layer = 2

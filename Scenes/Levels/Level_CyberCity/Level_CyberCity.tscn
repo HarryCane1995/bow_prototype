@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Levels/Level_CyberCity/ENV_UnderFogCityLights.tscn" id="13_underfog_city_lights"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/Level_CyberCity/ENV_CityBillboards.tscn" id="14_city_billboards"]
 [ext_resource type="PackedScene" path="res://Scenes/Enemies/MediumMechVisual.tscn" id="15_medium_mech"]
+[ext_resource type="PackedScene" path="res://Scenes/Rendering/StylizedContactDarkening.tscn" id="16_contact_darkening"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fallback_floor"]
 size = Vector3(24, 0.5, 24)
@@ -25,7 +26,7 @@ script = ExtResource("5_startup_window_mode")
 
 [node name="ImportedLevel" parent="." unique_id=1854852564 instance=ExtResource("2_imported_level")]
 
-[node name="VOLUME_FOG_CITY" parent="ImportedLevel" index="22" unique_id=1768786542]
+[node name="VOLUME_FOG_CITY" parent="ImportedLevel" index="6" unique_id=53915335]
 visible = false
 
 [node name="ManualConcreteParkourTower" parent="." unique_id=1785023079 instance=ExtResource("11_manual_concrete_tower")]
@@ -87,6 +88,8 @@ shape = SubResource("BoxShape3D_fallback_floor")
 disabled = true
 
 [node name="RuntimeTuningPanel" parent="Debug" unique_id=1576424905 instance=ExtResource("7_runtime_tuning_panel")]
+
+[node name="StylizedContactDarkening" parent="." instance=ExtResource("16_contact_darkening")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=937305696]
 layer = 2
