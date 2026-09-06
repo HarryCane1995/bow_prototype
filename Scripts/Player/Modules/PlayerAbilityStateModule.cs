@@ -179,6 +179,23 @@ public partial class PlayerAbilityStateModule : Node
     }
 
     /// <summary>
+    /// Проверяет захват каналов с вытеснением только менее приоритетных requests.
+    /// Вызывающая способность завершает уступающее состояние перед BeginAbility.
+    /// </summary>
+    public bool CanStart(PlayerAbilityLock requiredLocks, int priority)
+    {
+        foreach (AbilityStateRequest request in _activeRequests.Values)
+        {
+            if ((request.Locks & requiredLocks) != PlayerAbilityLock.None && request.Priority >= priority)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /// <summary>
     /// Проверяет, может ли requesterTag писать в channel: канал свободен или занят самым приоритетным request того же тега.
     /// </summary>
     public bool CanWrite(PlayerAbilityTag requesterTag, PlayerAbilityLock channel)

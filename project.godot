@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Levels/Level_01/Level_01.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerAudio="*res://Scripts/Audio/PlayerAudioController.cs"
+
 [dotnet]
 
 project/assembly_name="Bow_prototype"

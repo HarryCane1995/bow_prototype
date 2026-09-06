@@ -19,6 +19,14 @@ public partial class PlayerWallRunModule : Node
 
     [ExportGroup("Detection")]
     [Export(PropertyHint.Layers3DPhysics)] public uint WallCollisionMask { get; set; } = uint.MaxValue;
+    [ExportGroup("Canonical Wallrun Prototype")]
+    // Read on entry: switching A/B never splices two models into an active run.
+    [Export] public bool UseCanonicalTrajectory { get; set; } = true;
+    [Export(PropertyHint.Range, "0,0.2,0.01,suffix:s")] public float CanonicalEntryBlendSeconds { get; set; } = 0.10f;
+    [Export(PropertyHint.Range, "0,20,0.25,suffix:m/s")] public float CanonicalInitialUpSpeed { get; set; } = 9.75f;
+    [Export(PropertyHint.Range, "0,1,0.05")] public float CanonicalMomentumRetention { get; set; } = 1.0f;
+    [Export(PropertyHint.Range, "0.05,0.8,0.05")] public float CanonicalIntentMinAlignment { get; set; } = 0.25f;
+    [Export(PropertyHint.Range, "0.1,10,0.1,suffix:m/s")] public float CanonicalMinProjectedSpeed { get; set; } = 2.0f;
 
     private PlayerController _player;
     private float _gravity;
@@ -31,16 +39,23 @@ public partial class PlayerWallRunModule : Node
     private Vector3 _wallNormal = Vector3.Zero;
     private Vector3 _wallRunDirection = Vector3.Zero;
     private Vector3 _lastWallNormal = Vector3.Zero;
-    private WallSide _lastWallSide = WallSide.None;
     private float _cameraRoll;
     private float _cameraPitchOffset;
     private float _currentFovBoost;
     private bool _warnedMissingCameraEffectsPivot;
     private string _lastExitReason = "none";
+    private bool _activeCanonical;
+    private float _canonicalTargetSpeed;
+    private float _canonicalEntryAlongSpeed;
+    private float _canonicalVertical;
+    private string _entryIntent = "none";
 
     public bool IsWallRunning { get; private set; }
     public bool BlocksNormalJumpAndGravity => IsWallRunning || _blockNormalJumpThisFrame;
     public float CurrentFovBoost => _currentFovBoost;
+    public bool IsCanonicalRun => IsWallRunning && _activeCanonical;
+    public float EntryHorizontalSpeed { get; private set; }
+    public float CanonicalTargetSpeed => _canonicalTargetSpeed;
 
     public void Initialize(PlayerController player)
     {
@@ -87,7 +102,8 @@ public partial class PlayerWallRunModule : Node
     public string GetDebugText()
     {
         string state = IsWallRunning ? $"active side={_wallSide}" : "inactive";
-        return $"{state}, timer={_wallRunTimer:0.00}, normal=({_wallNormal.X:0.00},{_wallNormal.Y:0.00},{_wallNormal.Z:0.00}), cooldown={_reattachCooldownTimer:0.00}, sameCooldown={_sameWallCooldownTimer:0.00}, fovBoost={_currentFovBoost:0.00}, lastExit={_lastExitReason}";
+        string model = (IsWallRunning ? _activeCanonical : UseCanonicalTrajectory) ? "B" : "A";
+        return $"{state}, model={model}, intent={_entryIntent}, entrySpeed={EntryHorizontalSpeed:0.00}, timer={_wallRunTimer:0.00}, normal=({_wallNormal.X:0.00},{_wallNormal.Y:0.00},{_wallNormal.Z:0.00}), cooldown={_reattachCooldownTimer:0.00}, sameCooldown={_sameWallCooldownTimer:0.00}, fovBoost={_currentFovBoost:0.00}, lastExit={_lastExitReason}";
     }
 
     private void TryStartWallRun()
@@ -102,12 +118,16 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
-        if (!TryGetWallRunDirection(hit.Normal, out Vector3 runDirection))
+        Vector3 runDirection;
+        bool hasDirection = UseCanonicalTrajectory
+            ? TryGetCanonicalEntryDirection(hit.Normal, out runDirection)
+            : TryGetWallRunDirection(hit.Normal, out runDirection);
+        if (!hasDirection)
         {
             return;
         }
 
-        if (!PassesForwardDot(runDirection))
+        if (!UseCanonicalTrajectory && !PassesForwardDot(runDirection))
         {
             return;
         }
@@ -133,7 +153,10 @@ public partial class PlayerWallRunModule : Node
         }
 
         bool hasAirState = !_player.IsGrounded || (CurrentAllowWallRunFromGroundGrace && _groundGraceTimer > 0.0f && _player.Velocity.Y > 0.1f);
-        if (!hasAirState)
+        // B can acquire a validated wall directly from a grounded slide.
+        // A keeps its original entry behavior for the existing comparison.
+        bool canTransferSlide = UseCanonicalTrajectory && _player.CrouchSlideModule?.IsSliding == true;
+        if (!hasAirState && !canTransferSlide)
         {
             return false;
         }
@@ -148,8 +171,11 @@ public partial class PlayerWallRunModule : Node
             return false;
         }
 
+        const PlayerAbilityLock requiredLocks = PlayerAbilityLock.HorizontalVelocity | PlayerAbilityLock.VerticalVelocity | PlayerAbilityLock.Slide;
         return _player.AbilityStateModule == null
-            || _player.AbilityStateModule.CanStart(PlayerAbilityLock.HorizontalVelocity | PlayerAbilityLock.VerticalVelocity | PlayerAbilityLock.Slide);
+            || (UseCanonicalTrajectory
+                ? _player.AbilityStateModule.CanStart(requiredLocks, PlayerAbilityStateModule.PriorityWallRun)
+                : _player.AbilityStateModule.CanStart(requiredLocks));
     }
 
     private void BeginWallRun(WallHit hit, Vector3 runDirection)
@@ -160,7 +186,10 @@ public partial class PlayerWallRunModule : Node
         _wallNormal = hit.Normal;
         _wallRunDirection = runDirection;
         _lastExitReason = "running";
+        _activeCanonical = UseCanonicalTrajectory;
 
+        // Capture the real incoming momentum before the synchronous ownership handoff.
+        Vector3 velocity = _player.Velocity;
         _player.CrouchSlideModule?.CancelSlide();
         _player.JumpModule?.RestoreAirJumpChargeFromWallRun();
         _player.AbilityStateModule?.BeginAbility(
@@ -170,17 +199,30 @@ public partial class PlayerWallRunModule : Node
             nameof(PlayerWallRunModule)
         );
 
-        Vector3 velocity = _player.Velocity;
-        float carriedSpeed = Mathf.Abs(GetHorizontalVelocity(velocity).Dot(_wallRunDirection)) * CurrentEntrySpeedRetention;
-        float entrySpeed = Mathf.Max(CurrentWallRunSpeed, carriedSpeed);
-        velocity.X = _wallRunDirection.X * entrySpeed;
-        velocity.Z = _wallRunDirection.Z * entrySpeed;
-        velocity.Y = Mathf.Max(velocity.Y * (1.0f - CurrentWallVerticalDamping), -CurrentWallFallSpeedClamp);
+        EntryHorizontalSpeed = GetHorizontalVelocity(velocity).Length();
+        if (_activeCanonical)
+        {
+            _canonicalTargetSpeed = Mathf.Max(CurrentWallRunSpeed, EntryHorizontalSpeed * Mathf.Clamp(CanonicalMomentumRetention, 0.0f, 1.0f));
+            _canonicalEntryAlongSpeed = Mathf.Min(_canonicalTargetSpeed,
+                Mathf.Max(CurrentMinEntrySpeed, GetHorizontalVelocity(velocity).Dot(_wallRunDirection)));
+            _canonicalVertical = CanonicalInitialUpSpeed;
+            float speed = CanonicalEntryBlendSeconds > 0.0f ? _canonicalEntryAlongSpeed : _canonicalTargetSpeed;
+            velocity = _wallRunDirection * speed + Vector3.Up * _canonicalVertical;
+        }
+        else
+        {
+            _entryIntent = "legacy_input_velocity_camera";
+            float carriedSpeed = Mathf.Abs(GetHorizontalVelocity(velocity).Dot(_wallRunDirection)) * CurrentEntrySpeedRetention;
+            float entrySpeed = Mathf.Max(CurrentWallRunSpeed, carriedSpeed);
+            velocity.X = _wallRunDirection.X * entrySpeed;
+            velocity.Z = _wallRunDirection.Z * entrySpeed;
+            velocity.Y = Mathf.Max(velocity.Y * (1.0f - CurrentWallVerticalDamping), -CurrentWallFallSpeedClamp);
+        }
         _player.Velocity = velocity;
 
         if (CurrentDebugWallRun)
         {
-            GD.Print($"WallRun enter side={_wallSide} normal={_wallNormal} direction={_wallRunDirection}");
+            GD.Print($"WallRun enter model={(_activeCanonical ? "B" : "A")} side={_wallSide} normal={_wallNormal} direction={_wallRunDirection} inputSpeed={EntryHorizontalSpeed:0.00} intent={_entryIntent}");
         }
     }
 
@@ -209,19 +251,38 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
-        if (CurrentRequireForwardInput && !HasForwardIntent())
+        bool canonicalWallJump = _activeCanonical && CurrentEnableWallJump
+            && Input.IsActionJustPressed(GetJumpAction());
+        if (CurrentRequireForwardInput && !HasForwardIntent() && !canonicalWallJump)
         {
             EndWallRun("input_released", true);
             return;
         }
 
-        if (!TryFindBestWall(_wallSide, out WallHit hit))
+        WallHit hit;
+        bool foundWall = _activeCanonical
+            ? TryCastWallDirection(-_wallNormal, _wallSide, out hit)
+            : TryFindBestWall(_wallSide, out hit);
+        if (!foundWall)
         {
             EndWallRun("lost_wall", true);
             return;
         }
 
-        if (!TryGetWallRunDirection(hit.Normal, out Vector3 runDirection))
+        // Preserve a deliberate look-away jump before checking continuation intent.
+        if (canonicalWallJump)
+        {
+            _wallSide = hit.Side;
+            _wallNormal = hit.Normal;
+            PerformWallJump();
+            return;
+        }
+
+        Vector3 runDirection;
+        bool hasDirection = _activeCanonical
+            ? TryContinueCanonicalDirection(hit.Normal, out runDirection)
+            : TryGetWallRunDirection(hit.Normal, out runDirection);
+        if (!hasDirection)
         {
             EndWallRun("bad_wall_direction", true);
             return;
@@ -237,7 +298,28 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
-        ApplyWallRunVelocity(delta);
+        if (_activeCanonical) ApplyCanonicalWallRunVelocity(delta);
+        else ApplyWallRunVelocity(delta);
+    }
+
+    private void ApplyCanonicalWallRunVelocity(float delta)
+    {
+        float blend = CanonicalEntryBlendSeconds <= 0.0f ? 1.0f
+            : Mathf.SmoothStep(0.0f, 1.0f, Mathf.Clamp(_wallRunTimer / CanonicalEntryBlendSeconds, 0.0f, 1.0f));
+        float speed = Mathf.Lerp(_canonicalEntryAlongSpeed, _canonicalTargetSpeed, blend);
+        // Same wall-specific arc forces as A, integrated from a fixed seed,
+        // independently of incoming jump phase and MoveAndSlide's resolved Y.
+        _canonicalVertical = Mathf.MoveToward(_canonicalVertical, 0.0f,
+            CurrentWallVerticalDamping * delta * Mathf.Max(1.0f, _gravity));
+        _canonicalVertical -= CurrentWallGravity * delta;
+        float arc = CurrentWallRunMaxDuration > 0.0f ? Mathf.Clamp(_wallRunTimer / CurrentWallRunMaxDuration, 0.0f, 1.0f) : 1.0f;
+        _canonicalVertical = Mathf.Max(_canonicalVertical - CurrentWallArcDownForce * arc * delta, -CurrentWallFallSpeedClamp);
+        Vector3 stick = -_wallNormal * CurrentWallStickForce * delta;
+        Vector3 velocity = _wallRunDirection * speed;
+        velocity.X += stick.X;
+        velocity.Z += stick.Z;
+        velocity.Y = _canonicalVertical;
+        _player.Velocity = velocity;
     }
 
     private void ApplyWallRunVelocity(float delta)
@@ -294,7 +376,6 @@ public partial class PlayerWallRunModule : Node
         }
 
         _lastWallNormal = _wallNormal;
-        _lastWallSide = _wallSide;
         IsWallRunning = false;
         _wallRunTimer = 0.0f;
         _wallSide = WallSide.None;
@@ -349,9 +430,14 @@ public partial class PlayerWallRunModule : Node
 
     private bool TryCastWall(WallSide side, out WallHit hit)
     {
+        Vector3 sideDirection = GetSideDirection(side);
+        return TryCastWallDirection(sideDirection, side, out hit);
+    }
+
+    private bool TryCastWallDirection(Vector3 sideDirection, WallSide side, out WallHit hit)
+    {
         hit = default;
         Vector3 origin = _player.GlobalPosition + Vector3.Up * CurrentWallDetectionHeightOffset;
-        Vector3 sideDirection = GetSideDirection(side);
         if (sideDirection == Vector3.Zero)
         {
             return false;
@@ -407,6 +493,75 @@ public partial class PlayerWallRunModule : Node
         return true;
     }
 
+    private bool TryGetCanonicalEntryDirection(Vector3 normal, out Vector3 direction)
+    {
+        direction = normal.Cross(Vector3.Up).Normalized();
+        if (direction.IsZeroApprox()) return false;
+        Vector3 incoming = GetHorizontalVelocity(_player.Velocity);
+        Vector3 intent = GetCanonicalInputDirection();
+        float incomingAlong = incoming.Dot(direction);
+        float inputAlong = intent.Dot(direction);
+        float confidence = Mathf.Clamp(CanonicalIntentMinAlignment, 0.05f, 0.8f);
+        bool clearVelocity = Mathf.Abs(incomingAlong) >= Mathf.Max(0.1f, CanonicalMinProjectedSpeed)
+            && Mathf.Abs(incomingAlong) >= incoming.Length() * confidence;
+        bool clearInput = !intent.IsZeroApprox() && Mathf.Abs(inputAlong) >= confidence;
+        float sign;
+        if (clearVelocity)
+        {
+            if (clearInput && incomingAlong * inputAlong < 0.0f)
+            {
+                _entryIntent = "rejected_conflicting_intent";
+                return false;
+            }
+            sign = Mathf.Sign(incomingAlong);
+            _entryIntent = "incoming_tangent";
+        }
+        else if (clearInput)
+        {
+            sign = Mathf.Sign(inputAlong);
+            _entryIntent = "input_fallback";
+        }
+        else if (!intent.IsZeroApprox())
+        {
+            _entryIntent = "rejected_ambiguous_input";
+            return false;
+        }
+        else
+        {
+            float cameraAlong = GetFlatDirection(-_player.GlobalBasis.Z, Vector3.Forward).Dot(direction);
+            if (Mathf.Abs(cameraAlong) < confidence)
+            {
+                _entryIntent = "rejected_ambiguous_camera";
+                return false;
+            }
+            sign = Mathf.Sign(cameraAlong);
+            _entryIntent = "camera_yaw_fallback";
+        }
+        direction *= sign;
+        return true;
+    }
+
+    private Vector3 GetCanonicalInputDirection()
+    {
+        Vector2 input = GetMovementInput();
+        if (input.LengthSquared() <= 0.01f) return Vector3.Zero;
+        // The player owns yaw; visual camera roll/pitch must not bias intent.
+        Basis basis = _player.GlobalBasis.Orthonormalized();
+        return (GetFlatDirection(-basis.Z, Vector3.Forward) * input.Y
+            + GetFlatDirection(basis.X, Vector3.Right) * input.X).Normalized();
+    }
+
+    private bool TryContinueCanonicalDirection(Vector3 normal, out Vector3 direction)
+    {
+        direction = normal.Cross(Vector3.Up).Normalized();
+        float continuity = direction.Dot(_wallRunDirection);
+        if (Mathf.Abs(continuity) < 0.5f) return false; // Do not rail around sharp corners.
+        if (continuity < 0.0f) direction = -direction;
+        Vector3 input = GetCanonicalInputDirection();
+        // A deliberate reversal releases the wall instead of flipping velocity.
+        return input.IsZeroApprox() || input.Dot(direction) >= -0.35f;
+    }
+
     private bool PassesForwardDot(Vector3 runDirection)
     {
         Vector3 preferred = GetPreferredForwardDirection();
@@ -433,8 +588,9 @@ public partial class PlayerWallRunModule : Node
 
     private bool IsSameWallOnCooldown(WallHit hit)
     {
+        // Left/right changes when the player turns; it must not bypass the
+        // cooldown for the same world-space wall surface.
         return _sameWallCooldownTimer > 0.0f
-            && hit.Side == _lastWallSide
             && !_lastWallNormal.IsZeroApprox()
             && hit.Normal.Dot(_lastWallNormal) > 0.92f;
     }

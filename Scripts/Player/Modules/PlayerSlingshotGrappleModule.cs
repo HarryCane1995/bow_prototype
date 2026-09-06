@@ -129,6 +129,12 @@ public partial class PlayerSlingshotGrappleModule : Node
     /// </summary>
     [Export] public bool StopPullWhenPassedAnchor { get; set; } = true;
 
+    // A visible anchor can still be unreachable by the player's capsule. Only
+    // cancel a stalled collision; free flight and normal pull forces are unchanged.
+    [ExportSubgroup("Blocked Pull Recovery")]
+    [Export(PropertyHint.Range, "0,10,0.1,suffix:s")] public float BlockedPullTimeout { get; set; } = 2.0f;
+    [Export(PropertyHint.Range, "0.001,0.5,0.001,suffix:m")] public float BlockedPullMinProgress { get; set; } = 0.05f;
+
     /// <summary>
     /// Базовая скорость выстрела игрока по направлению от стартовой позиции через anchor-точку.
     /// </summary>
@@ -221,6 +227,8 @@ public partial class PlayerSlingshotGrappleModule : Node
     private Vector3 _storedLaunchDirection = Vector3.Forward;
     private float _cooldownTimer;
     private float _postLaunchControlTimer;
+    private float _closestPullDistance;
+    private float _blockedPullTimer;
     private MeshInstance3D _debugMeshInstance;
     private StandardMaterial3D _debugMaterial;
     private GrappleAnchor _currentHighlightedAnchor;
@@ -312,6 +320,8 @@ public partial class PlayerSlingshotGrappleModule : Node
         _initialPlayerPosition = _player.GlobalPosition;
         _grapplePointPosition = grapplePointPosition;
         _storedLaunchDirection = startToAnchor.Normalized();
+        _closestPullDistance = startToAnchor.Length();
+        _blockedPullTimer = 0.0f;
 
         _player.CrouchSlideModule?.CancelSlide();
         _player.JumpModule?.RestoreAirJumpChargeFromGrapple();
@@ -354,6 +364,12 @@ public partial class PlayerSlingshotGrappleModule : Node
         }
 
         Vector3 pullDirection = toAnchor / distanceToAnchor;
+        if (IsPullBlockedWithoutProgress(pullDirection, distanceToAnchor, deltaTime))
+        {
+            CancelGrapple();
+            return;
+        }
+
         Vector3 velocity = _player.Velocity + pullDirection * CurrentPullAcceleration * deltaTime;
         float maxPullSpeed = Mathf.Max(0.1f, CurrentMaxPullSpeed);
 
@@ -363,6 +379,35 @@ public partial class PlayerSlingshotGrappleModule : Node
         }
 
         _player.Velocity = velocity;
+    }
+
+    private bool IsPullBlockedWithoutProgress(Vector3 pullDirection, float distanceToAnchor, float deltaTime)
+    {
+        if (BlockedPullTimeout <= 0.0f)
+        {
+            return false;
+        }
+
+        if (_closestPullDistance - distanceToAnchor >= Mathf.Max(0.001f, BlockedPullMinProgress))
+        {
+            _closestPullDistance = distanceToAnchor;
+            _blockedPullTimer = 0.0f;
+            return false;
+        }
+
+        // MoveAndSlide contacts are from the preceding physics tick. Ignore
+        // surfaces that do not oppose the pull, such as a floor below an upward pull.
+        for (int i = 0; i < _player.GetSlideCollisionCount(); i++)
+        {
+            if (_player.GetSlideCollision(i).GetNormal().Dot(pullDirection) < -0.1f)
+            {
+                _blockedPullTimer += deltaTime;
+                return _blockedPullTimer >= BlockedPullTimeout;
+            }
+        }
+
+        _blockedPullTimer = 0.0f;
+        return false;
     }
 
     private bool HasPassedAnchor()

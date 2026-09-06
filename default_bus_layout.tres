@@ -1,0 +1,16 @@
+[gd_resource type="AudioBusLayout" format=3]
+
+[resource]
+bus/0/name = &"Master"
+bus/0/volume_db = 0.0
+bus/1/name = &"SFX"
+bus/1/send = &"Master"
+bus/1/volume_db = -3.0
+bus/2/name = &"Movement"
+bus/2/send = &"SFX"
+bus/3/name = &"Grapple"
+bus/3/send = &"SFX"
+bus/4/name = &"System"
+bus/4/send = &"SFX"
+bus/5/name = &"Speed"
+bus/5/send = &"SFX"
