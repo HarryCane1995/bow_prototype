@@ -1,0 +1,13 @@
+[gd_scene format=3]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/EnemyProjectile.tscn" id="base"]
+[sub_resource type="CapsuleMesh" id="bolt_mesh"]
+radius = 0.16
+height = 0.8
+radial_segments = 12
+rings = 4
+[node name="CyborgBolt" instance=ExtResource("base")]
+Speed = 12.0
+Lifetime = 4.0
+[node name="Visual" parent="." index="1"]
+rotation = Vector3(1.5707963,0,0)
+mesh = SubResource("bolt_mesh")

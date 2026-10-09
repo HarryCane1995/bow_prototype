@@ -289,7 +289,7 @@ public partial class PlayerSlingshotGrappleModule : Node
 
         if (CurrentState == SlingshotGrappleState.Cooldown && _cooldownTimer <= 0.0f && _postLaunchControlTimer <= 0.0f)
         {
-            SetState(SlingshotGrappleState.Idle);
+            SetState(SlingshotGrappleState.Idle, "UpdateSlingshot: cooldown <= 0 && postLaunchControl <= 0");
         }
 
         if (_postLaunchControlTimer <= 0.0f && CurrentState != SlingshotGrappleState.Pulling && CurrentState != SlingshotGrappleState.Launching)
@@ -323,9 +323,9 @@ public partial class PlayerSlingshotGrappleModule : Node
         _closestPullDistance = startToAnchor.Length();
         _blockedPullTimer = 0.0f;
 
-        _player.CrouchSlideModule?.CancelSlide();
+        _player.CrouchSlideModule?.CancelSlideWithTrace("PlayerSlingshotGrappleModule.TryStartGrappleAt: grapple preemption");
         _player.JumpModule?.RestoreAirJumpChargeFromGrapple();
-        SetState(SlingshotGrappleState.Pulling);
+        SetState(SlingshotGrappleState.Pulling, "TryStartGrappleAt: vector length and Grapple lock guards passed");
         ClearAvailableAnchorHighlight();
         RequestGrappleCameraSnap(grapplePointPosition);
 
@@ -340,7 +340,9 @@ public partial class PlayerSlingshotGrappleModule : Node
     /// <summary>
     /// Отменяет текущий slingshot grapple и переводит модуль в cooldown.
     /// </summary>
-    public void CancelGrapple()
+    public void CancelGrapple() => CancelGrappleWithTrace("CancelGrapple: external caller");
+
+    private void CancelGrappleWithTrace(string traceReason)
     {
         if (CurrentState == SlingshotGrappleState.Idle)
         {
@@ -349,7 +351,7 @@ public partial class PlayerSlingshotGrappleModule : Node
 
         _cooldownTimer = Mathf.Max(_cooldownTimer, Cooldown);
         ClearAvailableAnchorHighlight();
-        SetState(SlingshotGrappleState.Cooldown);
+        SetState(SlingshotGrappleState.Cooldown, traceReason);
     }
 
     private void UpdatePulling(float deltaTime)
@@ -359,14 +361,14 @@ public partial class PlayerSlingshotGrappleModule : Node
 
         if (distanceToAnchor <= GrappleArriveDistance || HasPassedAnchor())
         {
-            SetState(SlingshotGrappleState.Launching);
+            SetState(SlingshotGrappleState.Launching, "UpdatePulling: distance <= GrappleArriveDistance || HasPassedAnchor");
             return;
         }
 
         Vector3 pullDirection = toAnchor / distanceToAnchor;
         if (IsPullBlockedWithoutProgress(pullDirection, distanceToAnchor, deltaTime))
         {
-            CancelGrapple();
+            CancelGrappleWithTrace("UpdatePulling: IsPullBlockedWithoutProgress");
             return;
         }
 
@@ -454,7 +456,7 @@ public partial class PlayerSlingshotGrappleModule : Node
             GD.Print($"Slingshot grapple launch: velocity={launchVelocity}, speed={launchVelocity.Length():0.00}");
         }
 
-        SetState(SlingshotGrappleState.Cooldown);
+        SetState(SlingshotGrappleState.Cooldown, "LaunchPlayer: launch velocity applied");
     }
 
     private bool TryFindGrappleAnchor(out Node3D anchor)
@@ -647,8 +649,9 @@ public partial class PlayerSlingshotGrappleModule : Node
         return null;
     }
 
-    private void SetState(SlingshotGrappleState state)
+    private void SetState(SlingshotGrappleState state, string traceReason)
     {
+        object traceBefore = _player.MovementTrace?.Snapshot();
         SlingshotGrappleState previousState = CurrentState;
         CurrentState = state;
 
@@ -658,6 +661,7 @@ public partial class PlayerSlingshotGrappleModule : Node
         }
 
         UpdateGrappleAbilityState(previousState, CurrentState);
+        _player.MovementTrace?.StateChange("GRAPPLE", previousState.ToString(), CurrentState.ToString(), traceReason, traceBefore);
     }
 
     private void UpdateGrappleAbilityState(SlingshotGrappleState previousState, SlingshotGrappleState currentState)

@@ -80,6 +80,7 @@ public partial class MovementGymCourse : Node3D
         _readout.Text = Finished
             ? $"FINISH  {RunSeconds:0.00}s  |  recoveries {RecoveryCount}  |  F1: new run"
             : $"{section + 1:00}/{SectionNames.Count:00}  {name}   {RunSeconds:0.0}s   |   R: checkpoint  ({RecoveryCount})";
+        _readout.Text += $"\nPARKOUR: {(_player.ParkourIntentModule?.IsActive == true ? "ON" : "OFF")}  |  hold Shift";
         if (_humanLogger != null)
         {
             string selected = _canonicalWallrunSelected ? "B CANONICAL" : "A LEGACY";

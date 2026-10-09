@@ -18,6 +18,18 @@
 [ext_resource type="Script" uid="uid://dky5wyro4p8jr" path="res://Scripts/Player/Modules/PlayerViewModelSwayModule.cs" id="15_viewmodel_sway"]
 [ext_resource type="Script" uid="uid://dsig4854mc5hn" path="res://Scripts/Player/Modules/PlayerAbilityStateModule.cs" id="16_ability_state"]
 [ext_resource type="Script" uid="uid://cod6236yefpqk" path="res://Scripts/Player/Modules/PlayerWallRunModule.cs" id="17_wall_run"]
+[ext_resource type="Script" uid="uid://bcxrf0ms3deiy" path="res://Scripts/Player/Modules/PlayerParkourIntentModule.cs" id="18_parkour_intent"]
+[ext_resource type="PackedScene" path="res://Scenes/ViewModel/FirstPersonHands.tscn" id="19_hands"]
+[ext_resource type="Script" path="res://Scripts/Player/ViewModel/ViewModelMotionPrototype.cs" id="20_motion"]
+[ext_resource type="Script" path="res://Scripts/Player/ViewModel/ViewModelGait.cs" id="21_gait"]
+[ext_resource type="Script" path="res://Scripts/Player/ViewModel/CyberBowShotMotion.cs" id="22_shot"]
+[ext_resource type="PackedScene" path="res://Scenes/ViewModel/FirstPersonSlideLegs.tscn" id="23_slide_legs"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/MainCharacterV2.tscn" id="24_character_v2"]
+[ext_resource type="Script" path="res://Scripts/Player/Combat/PlayerRmbCombat.cs" id="25_rmb_combat"]
+[ext_resource type="Resource" path="res://Resources/Combat/RmbAnimationSlots.tres" id="26_rmb_slots"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/MainCharacterV3.tscn" id="27_character_v3"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Characters/MainCharacterV4.tscn" id="28_character_v4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_player"]
 radius = 0.45
@@ -26,6 +38,9 @@ height = 1.8
 [node name="Player" type="CharacterBody3D" unique_id=318510115 groups=["player"]]
 script = ExtResource("1_controller")
 TuningProfile = ExtResource("13_player_tuning_profile")
+
+[node name="PlayerParkourIntentModule" type="Node" parent="."]
+script = ExtResource("18_parkour_intent")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=296056940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
@@ -106,7 +121,7 @@ ChargeTime = 0.4
 script = ExtResource("7_visual")
 AnimationPlayerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/Bow_ViewModel/AnimationPlayer")
 BowViewModelHolderPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder")
-ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual")
+ArrowVisualPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowAxisCorrection/CyberBow_ViewModel/Arrow_Visual")
 
 [node name="PlayerViewModelRenderModule" type="Node" parent="." unique_id=409023575]
 script = ExtResource("9_viewmodel_render")
@@ -117,7 +132,16 @@ ViewModelRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportConta
 script = ExtResource("15_viewmodel_sway")
 ViewModelSwayRootPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot")
 ViewModelCameraPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D")
-ArrowTipMarkerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker")
+ArrowTipMarkerPath = NodePath("../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowAxisCorrection/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker")
+
+[node name="MotionPrototype" type="Node" parent="PlayerViewModelSwayModule"]
+script = ExtResource("20_motion")
+
+[node name="Gait" type="Node" parent="PlayerViewModelSwayModule/MotionPrototype"]
+script = ExtResource("21_gait")
+
+[node name="ShotMotion" type="Node" parent="PlayerViewModelSwayModule/MotionPrototype"]
+script = ExtResource("22_shot")
 
 [node name="CanvasLayer_ViewModel" type="CanvasLayer" parent="." unique_id=354144769]
 
@@ -159,15 +183,29 @@ omni_range = 8.0
 
 [node name="ViewModelSwayRoot" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" unique_id=2005878544]
 
+[node name="FirstPersonSlideLegs" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot" instance=ExtResource("23_slide_legs")]
+
 [node name="BowViewModelHolder" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot" unique_id=1021634852]
-transform = Transform3D(0.185, 0, 0, 0, 0.185, 0, 0, 0, 0.185, 0.007, -0.35, -1.07)
+position = Vector3(0, -0.32, -0.86)
 
 [node name="Bow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=705382311 instance=ExtResource("8_bow_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.7132912)
 visible = false
 
-[node name="CyberBowViewModelOffset" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=1945297971]
-transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, -0.27096498, -1.1705347)
+[node name="CyberBowAxisCorrection" type="Node3D" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder" unique_id=1945297971]
+scale = Vector3(0.056, 0.056, 0.056)
+metadata/axis_contract = "Import scene: +X right, +Y up, -Z arrow forward. Uniform metre conversion only; no corrective rotation required."
 
-[node name="CyberBow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset" unique_id=280646667 instance=ExtResource("8_cyber_bow_model")]
-transform = Transform3D(0.5534083, -0.008216231, -0.016724626, 0.009290284, 0.60961604, 0.22262925, 0.007685777, -0.14527883, 0.9351381, -0.12524639, -0.059963167, 6.092917)
+[node name="CyberBow_ViewModel" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowAxisCorrection" unique_id=280646667 instance=ExtResource("8_cyber_bow_model")]
+
+[node name="FirstPersonHands" parent="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot" instance=ExtResource("19_hands")]
+
+[node name="MainCharacterV2" parent="." instance=ExtResource("24_character_v2")]
+
+[node name="PlayerRmbCombat" type="Node" parent="."]
+script = ExtResource("25_rmb_combat")
+AnimationSlots = ExtResource("26_rmb_slots")
+
+[node name="MainCharacterV3" parent="." instance=ExtResource("27_character_v3")]
+
+[node name="MainCharacterV4" parent="." instance=ExtResource("28_character_v4")]

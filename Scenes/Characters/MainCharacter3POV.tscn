@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/SplitBodyVisual.cs" id="visual"]
+[ext_resource type="PackedScene" path="res://Assets/Characters/BaseHumanoid/Exports/BH01_3POV.glb" id="body"]
+[ext_resource type="PackedScene" path="res://Assets/Models/Bow/cyber_bow_preview.glb" id="bow"]
+[ext_resource type="Resource" path="res://Resources/Presentation/Split3POVSlots.tres" id="slots"]
+
+[node name="MainCharacter3POV" type="Node3D"]
+physics_interpolation_mode = 2
+script = ExtResource("visual")
+Slots = ExtResource("slots")
+
+[node name="Body" parent="." instance=ExtResource("body")]
+rotation = Vector3(0, 3.14159265, 0)
+
+[node name="Grip" type="BoneAttachment3D" parent="."]
+bone_name = "hand.L"
+use_external_skeleton = true
+external_skeleton = NodePath("../Body/Skeleton3D")
+
+[node name="World_CyberBow" type="Node3D" parent="Grip"]
+
+[node name="CyberBow_ViewModel" parent="Grip/World_CyberBow" instance=ExtResource("bow")]

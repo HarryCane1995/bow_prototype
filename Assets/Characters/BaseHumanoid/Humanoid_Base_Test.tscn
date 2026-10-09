@@ -1,0 +1,249 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Characters/BaseHumanoid/Exports/Humanoid_Male.glb" id="1_5xkkc"]
+[ext_resource type="PackedScene" path="res://Assets/Characters/BaseHumanoid/Exports/Humanoid_Female.glb" id="2_ukb12"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rcdwj"]
+albedo_color = Color(0.085, 0.098, 0.12, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_tm7ow"]
+size = Vector3(8, 0.06, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkijf"]
+albedo_color = Color(0.6, 0.68, 0.75, 1)
+roughness = 0.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_hk31f"]
+size = Vector3(0.008, 1.8, 0.008)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3lmut"]
+size = Vector3(0.065, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mf0ev"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wfg7r"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s3f4d"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cu482"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nalys"]
+size = Vector3(0.065, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gracy"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2sykk"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dsdp4"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3ww0o"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3m1iv"]
+size = Vector3(0.065, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a3elk"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bmksr"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t5sn2"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7hgwy"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1qxye"]
+size = Vector3(0.065, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2k2um"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bexwo"]
+size = Vector3(0.035, 0.003, 0.006)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h2648"]
+size = Vector3(0.065, 0.003, 0.006)
+
+[sub_resource type="Environment" id="Environment_osikt"]
+background_mode = 1
+background_color = Color(0.055, 0.067, 0.085, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.74, 0.8, 0.9, 1)
+ambient_light_energy = 0.5
+
+[node name="Humanoid_Base_Test" type="Node3D" unique_id=1924107897]
+
+[node name="Male" type="Node3D" parent="." unique_id=78613834 instance=ExtResource("1_5xkkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0, 0)
+
+[node name="Female" type="Node3D" parent="." unique_id=1089592716 instance=ExtResource("2_ukb12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0, 0)
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=658850548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.03, 0)
+material_override = SubResource("StandardMaterial3D_rcdwj")
+mesh = SubResource("BoxMesh_tm7ow")
+
+[node name="Scale_1_8m" type="MeshInstance3D" parent="." unique_id=783213059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_hk31f")
+
+[node name="Scale_Tick_00" type="MeshInstance3D" parent="." unique_id=2131441831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_3lmut")
+
+[node name="Scale_Tick_01" type="MeshInstance3D" parent="." unique_id=693679202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.1, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_mf0ev")
+
+[node name="Scale_Tick_02" type="MeshInstance3D" parent="." unique_id=878709118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.2, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_wfg7r")
+
+[node name="Scale_Tick_03" type="MeshInstance3D" parent="." unique_id=946987284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.3, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_s3f4d")
+
+[node name="Scale_Tick_04" type="MeshInstance3D" parent="." unique_id=720625055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.4, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_cu482")
+
+[node name="Scale_Tick_05" type="MeshInstance3D" parent="." unique_id=119909996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.5, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_nalys")
+
+[node name="Scale_Tick_06" type="MeshInstance3D" parent="." unique_id=459282991]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.6, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_gracy")
+
+[node name="Scale_Tick_07" type="MeshInstance3D" parent="." unique_id=273374510]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.7, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_2sykk")
+
+[node name="Scale_Tick_08" type="MeshInstance3D" parent="." unique_id=1629573387]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.8, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_dsdp4")
+
+[node name="Scale_Tick_09" type="MeshInstance3D" parent="." unique_id=1331952219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 0.9, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_3ww0o")
+
+[node name="Scale_Tick_10" type="MeshInstance3D" parent="." unique_id=1850158567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_3m1iv")
+
+[node name="Scale_Tick_11" type="MeshInstance3D" parent="." unique_id=1087499928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.1, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_a3elk")
+
+[node name="Scale_Tick_12" type="MeshInstance3D" parent="." unique_id=1635455136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.2, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_bmksr")
+
+[node name="Scale_Tick_13" type="MeshInstance3D" parent="." unique_id=1911283838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.3, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_t5sn2")
+
+[node name="Scale_Tick_14" type="MeshInstance3D" parent="." unique_id=34545740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.4, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_7hgwy")
+
+[node name="Scale_Tick_15" type="MeshInstance3D" parent="." unique_id=236465419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.5, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_1qxye")
+
+[node name="Scale_Tick_16" type="MeshInstance3D" parent="." unique_id=1668807108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.6, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_2k2um")
+
+[node name="Scale_Tick_17" type="MeshInstance3D" parent="." unique_id=427099553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.7, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_bexwo")
+
+[node name="Scale_Tick_18" type="MeshInstance3D" parent="." unique_id=502116144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.55, 1.8, 0)
+material_override = SubResource("StandardMaterial3D_vkijf")
+mesh = SubResource("BoxMesh_h2648")
+
+[node name="Label_23" type="Label3D" parent="." unique_id=997369898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54, 1.88, 0)
+pixel_size = 0.002
+modulate = Color(0.83, 0.86, 0.9, 1)
+text = "1.8 m"
+font_size = 28
+outline_size = 0
+
+[node name="Label_24" type="Label3D" parent="." unique_id=1242142548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.1, 0.4)
+pixel_size = 0.002
+modulate = Color(0.83, 0.86, 0.9, 1)
+text = "MALE / 1.80 m"
+font_size = 28
+outline_size = 0
+
+[node name="Label_25" type="Label3D" parent="." unique_id=147847478]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0.1, 0.4)
+pixel_size = 0.002
+modulate = Color(0.83, 0.86, 0.9, 1)
+text = "FEMALE / 1.70 m"
+font_size = 28
+outline_size = 0
+
+[node name="ReviewCamera" type="Camera3D" parent="." unique_id=752962128]
+transform = Transform3D(1, 0, 0, 0, 0.99904823, 0.043619387, 0, -0.043619387, 0.99904823, 0.07, 1.16, 5)
+projection = 1
+current = true
+size = 2.25
+
+[node name="KeyLight" type="DirectionalLight3D" parent="." unique_id=597251107]
+transform = Transform3D(0.81915206, 0.32898995, -0.46984634, 0, 0.81915206, 0.57357645, 0.57357645, -0.46984634, 0.6710101, 0, 0, 0)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="FillLight" type="DirectionalLight3D" parent="." unique_id=829540184]
+transform = Transform3D(-0.81915206, -0.1484525, 0.5540323, 0, 0.9659258, 0.25881904, -0.57357645, 0.21201216, -0.7912401, 0, 0, 0)
+light_energy = 0.45
+
+[node name="NeutralEnvironment" type="WorldEnvironment" parent="." unique_id=1600252322]
+environment = SubResource("Environment_osikt")
+
+[node name="ReviewTitle" type="CanvasLayer" parent="." unique_id=674733713]
+
+[node name="Title" type="Label" parent="ReviewTitle" unique_id=420507759]
+modulate = Color(0.8, 0.85, 0.92, 1)
+offset_left = 30.0
+offset_top = 22.0
+offset_right = 30.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 20
+text = "HUMANOID BASE / BH_01
+53 BONES  |  NEUTRAL A-POSE  |  METERS"

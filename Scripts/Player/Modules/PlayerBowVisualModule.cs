@@ -79,6 +79,15 @@ public partial class PlayerBowVisualModule : Node
     private bool _warnedMissingDrawAnimation;
     private bool _warnedMissingReleaseAnimation;
 
+    // Presentation-only state for the separately rigged blocking hands/string.
+    public float DrawAmount => _drawAmount;
+    public bool IsDrawing => !_isResettingDraw && _drawAmount > 0;
+    public bool IsPrecisionAiming => _isPrecisionAiming;
+    public uint ShotVisualSequence { get; private set; }
+    // The procedural hands pass becomes the sole arrow visibility writer when
+    // enabled. The legacy timer remains available for the legacy viewmodel.
+    public bool ArrowPresentationOwnedByHands { get; set; }
+
     public void Initialize(PlayerController player)
     {
         _player = player;
@@ -126,6 +135,7 @@ public partial class PlayerBowVisualModule : Node
 
     public void HandleShotVisual()
     {
+        ShotVisualSequence++;
         SetPrecisionAiming(false);
         HideArrowVisualTemporarily();
 
@@ -168,6 +178,7 @@ public partial class PlayerBowVisualModule : Node
 
     private void UpdateArrowVisibility(float delta)
     {
+        if (ArrowPresentationOwnedByHands) return;
         if (_arrowShowTimer <= 0.0f)
         {
             return;
@@ -207,6 +218,7 @@ public partial class PlayerBowVisualModule : Node
 
     private void HideArrowVisualTemporarily()
     {
+        if (ArrowPresentationOwnedByHands) return;
         if (!HideArrowOnShot || _arrowVisual == null)
         {
             return;

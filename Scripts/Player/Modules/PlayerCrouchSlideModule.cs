@@ -193,6 +193,8 @@ public partial class PlayerCrouchSlideModule : Node
 
     public bool IsCrouching => _state is CrouchSlideState.Crouching or CrouchSlideState.Sliding;
     public bool IsSliding => _state == CrouchSlideState.Sliding;
+    // Read-only presentation access; consumers that need entry heading must snapshot it.
+    public Vector3 SlideDirection => IsSliding ? _slideDirection : Vector3.Zero;
     public float CurrentSpeedMultiplier => IsCrouching ? CurrentCrouchSpeedMultiplier : 1.0f;
 
     private PlayerController _player;
@@ -240,9 +242,13 @@ public partial class PlayerCrouchSlideModule : Node
         float deltaFloat = (float)delta;
         _slideCooldownTimer = Mathf.Max(0.0f, _slideCooldownTimer - deltaFloat);
 
+        bool isPressed = Input.IsActionPressed(CrouchSlideAction);
+        bool justPressed = Input.IsActionJustPressed(CrouchSlideAction);
+        bool freshSlideGesture = UpdateSlideGesture(isPressed, justPressed);
+
         if (_player.SlingshotGrappleModule?.BlocksSlide == true)
         {
-            CancelSlide();
+            CancelSlideWithTrace("ProcessCrouchSlide: SlingshotGrappleModule.BlocksSlide");
             UpdateCrouchState(false);
             UpdateHeight(deltaFloat);
             return;
@@ -250,15 +256,13 @@ public partial class PlayerCrouchSlideModule : Node
 
         if (_player.WallRunModule?.IsWallRunning == true)
         {
-            CancelSlide();
+            CancelSlideWithTrace("ProcessCrouchSlide: WallRunModule.IsWallRunning");
             UpdateCrouchState(false);
             UpdateHeight(deltaFloat);
             return;
         }
 
-        bool isPressed = Input.IsActionPressed(CrouchSlideAction);
-        bool justPressed = Input.IsActionJustPressed(CrouchSlideAction);
-        UpdateAirborneSlideBuffer(deltaFloat, isPressed, velocity);
+        UpdateAirborneSlideBuffer(deltaFloat, freshSlideGesture, velocity);
 
         if (IsSliding)
         {
@@ -268,7 +272,7 @@ public partial class PlayerCrouchSlideModule : Node
         {
             // Landing slide started from the airborne buffer.
         }
-        else if (justPressed && CanStartSlide(velocity))
+        else if (freshSlideGesture && CanStartSlide(velocity))
         {
             StartSlide(ref velocity);
         }
@@ -282,13 +286,17 @@ public partial class PlayerCrouchSlideModule : Node
 
     private void UpdateCrouchState(bool isPressed)
     {
+        CrouchSlideState tracePrevious = _state;
         if (EnableCrouch && isPressed)
         {
             _state = CrouchSlideState.Crouching;
+            TracePosture(tracePrevious, "UpdateCrouchState: EnableCrouch && isPressed");
             return;
         }
 
         _state = CanStandUp() ? CrouchSlideState.Standing : CrouchSlideState.Crouching;
+        TracePosture(tracePrevious, _state == CrouchSlideState.Standing
+            ? "UpdateCrouchState: CanStandUp true" : "UpdateCrouchState: CanStandUp false");
     }
 
     private bool CanStartSlide(Vector3 velocity)
@@ -300,7 +308,7 @@ public partial class PlayerCrouchSlideModule : Node
     {
         Vector3 horizontalVelocity = new(velocity.X, 0.0f, velocity.Z);
         Vector3 direction = GetSlideStartDirection(horizontalVelocity);
-        StartSlide(ref velocity, direction);
+        StartSlide(ref velocity, direction, "ProcessCrouchSlide: fresh slide DOWN gesture && CanStartSlide(velocity, SlideMinStartSpeed)");
     }
 
     private void ProcessSlide(float delta, bool holdCrouch, ref Vector3 velocity)
@@ -319,29 +327,36 @@ public partial class PlayerCrouchSlideModule : Node
 
         if (_slideTimer <= 0.0f || ShouldExitSlideBySpeed())
         {
-            StopSlide(holdCrouch);
+            StopSlide(holdCrouch, _slideTimer <= 0.0f
+                ? "ProcessSlide: _slideTimer <= 0" : "ProcessSlide: ShouldExitSlideBySpeed true", velocity);
         }
     }
 
-    private void StopSlide(bool holdCrouch)
+    private void StopSlide(bool holdCrouch, string traceReason, Vector3? traceVelocity = null)
     {
+        CrouchSlideState tracePrevious = _state;
+        object traceBefore = IsSliding ? _player.MovementTrace?.Snapshot(traceVelocity) : null;
         EndSlideAbility();
 
         if ((EnableCrouch && holdCrouch) || !CanStandUp())
         {
             _state = CrouchSlideState.Crouching;
+            TracePosture(tracePrevious, traceReason + "; next: (EnableCrouch && holdCrouch) || !CanStandUp", traceBefore, traceVelocity);
             return;
         }
 
         _state = CrouchSlideState.Standing;
+        TracePosture(tracePrevious, traceReason + "; next: CanStandUp and no held crouch", traceBefore, traceVelocity);
     }
 
     /// <summary>
     /// Принудительно завершает текущий slide и возвращает модуль в crouch/standing состояние без изменения текущей velocity.
     /// </summary>
-    public void CancelSlide()
+    public void CancelSlide() => CancelSlideWithTrace("CancelSlide: external caller");
+
+    public void CancelSlideWithTrace(string traceReason)
     {
-        StopSlide(false);
+        StopSlide(false, traceReason);
         _slideTimer = 0.0f;
         _slideExitSpeedGraceTimer = 0.0f;
         _slideSpeed = 0.0f;
@@ -359,13 +374,13 @@ public partial class PlayerCrouchSlideModule : Node
 
         if (!CurrentEnableSlideJump)
         {
-            StopSlide(Input.IsActionPressed(CrouchSlideAction));
+            StopSlide(Input.IsActionPressed(CrouchSlideAction), "TryConsumeSlideJumpBoost: !CurrentEnableSlideJump (jump allowed without boost)", velocity);
             return true;
         }
 
         if (CurrentSlideJumpRequiresStandUpSpace && !CanStandUp())
         {
-            StopSlide(true);
+            StopSlide(true, "TryConsumeSlideJumpBoost: stand-up space blocked (jump rejected)", velocity);
             return false;
         }
 
@@ -377,10 +392,11 @@ public partial class PlayerCrouchSlideModule : Node
 
         if (horizontalVelocity.LengthSquared() <= 0.0001f)
         {
-            StopSlide(Input.IsActionPressed(CrouchSlideAction));
+            StopSlide(Input.IsActionPressed(CrouchSlideAction), "TryConsumeSlideJumpBoost: horizontalVelocity.LengthSquared <= 0.0001 (jump rejected)", velocity);
             return false;
         }
 
+        object traceBefore = _player.MovementTrace?.Snapshot(velocity);
         Vector3 direction = horizontalVelocity.Normalized();
         Vector3 newHorizontalVelocity = horizontalVelocity * CurrentSlideJumpVelocityCarryFactor + direction * CurrentSlideJumpHorizontalBoost;
         float maxHorizontalSpeed = Mathf.Max(0.0f, CurrentSlideJumpMaxHorizontalSpeed);
@@ -396,6 +412,7 @@ public partial class PlayerCrouchSlideModule : Node
         _slideSpeed = 0.0f;
         EndSlideAbility();
         _state = CrouchSlideState.Standing;
+        TracePosture(CrouchSlideState.Sliding, "TryConsumeSlideJumpBoost: applied slide jump boost", traceBefore, velocity);
         return true;
     }
 
@@ -470,27 +487,35 @@ public partial class PlayerCrouchSlideModule : Node
         return horizontalVelocity.LengthSquared() > 0.0f ? horizontalVelocity.Normalized() : Vector3.Zero;
     }
 
-    private void UpdateAirborneSlideBuffer(float delta, bool holdCrouch, Vector3 velocity)
+    private void UpdateAirborneSlideBuffer(float delta, bool freshSlideGesture, Vector3 velocity)
     {
         if (_airborneSlideBufferTimer > 0.0f)
         {
             _airborneSlideBufferTimer = Mathf.Max(0.0f, _airborneSlideBufferTimer - delta);
+            if (_airborneSlideBufferTimer <= 0.0f) _airborneSlideIntentArmed = false;
         }
 
-        if (!CurrentEnableAirborneSlideEntry || _player.IsGrounded || !holdCrouch)
+        // One airborne DOWN can create one intent. Held input never renews its TTL,
+        // and an active Slide cannot create its own next acquisition.
+        if (IsSliding || !HasAvailableSlideGesture || !freshSlideGesture
+            || !CurrentEnableAirborneSlideEntry || (_player.IsGrounded && !JumpConsumedThisTick))
         {
             return;
         }
 
         if (GetHorizontalVelocity(velocity).Length() >= CurrentAirborneSlideMinSpeed)
         {
+            _airborneSlideIntentArmed = true;
             _airborneSlideBufferTimer = CurrentAirborneSlideBufferTime;
+            _player.MovementTrace?.Emit("SLIDE_AIR_BUFFER_ARM",
+                "UpdateAirborneSlideBuffer: fresh available gesture && airborne intent && speed requirement; arm once", velocity: velocity);
         }
     }
 
     private bool TryStartBufferedLandingSlide(bool holdCrouch, ref Vector3 velocity)
     {
-        if (!CurrentEnableAirborneSlideEntry || _airborneSlideBufferTimer <= 0.0f || !holdCrouch || !CanStartSlide(velocity, CurrentAirborneSlideMinSpeed))
+        if (!CurrentEnableAirborneSlideEntry || !_airborneSlideIntentArmed || _airborneSlideBufferTimer <= 0.0f
+            || !holdCrouch || !CanStartSlide(velocity, CurrentAirborneSlideMinSpeed))
         {
             return false;
         }
@@ -501,13 +526,12 @@ public partial class PlayerCrouchSlideModule : Node
             return false;
         }
 
-        StartSlide(ref velocity, direction);
-        _airborneSlideBufferTimer = 0.0f;
-        return true;
+        return StartSlide(ref velocity, direction, "TryStartBufferedLandingSlide: available gesture && armed unexpired intent && held && CanStartSlide && direction available");
     }
 
     private bool CanStartSlide(Vector3 velocity, float minStartSpeed)
     {
+        if (!HasAvailableSlideGesture || JumpConsumedThisTick) return false;
         if (!EnableSlide || !_player.IsGrounded || _slideCooldownTimer > 0.0f)
         {
             return false;
@@ -522,24 +546,33 @@ public partial class PlayerCrouchSlideModule : Node
         return GetHorizontalVelocity(velocity).Length() >= minStartSpeed;
     }
 
-    private void StartSlide(ref Vector3 velocity, Vector3 direction)
+    private bool StartSlide(ref Vector3 velocity, Vector3 direction, string traceReason)
     {
+        // Invariant at the acquisition boundary, regardless of which entry path called us.
+        if (!HasAvailableSlideGesture || IsSliding || JumpConsumedThisTick) return false;
         Vector3 horizontalVelocity = GetHorizontalVelocity(velocity);
         if (direction == Vector3.Zero)
         {
-            return;
+            _player.MovementTrace?.Emit("SLIDE_START_REJECTED", "StartSlide: direction == Vector3.Zero", velocity: velocity);
+            return false;
         }
 
+        CrouchSlideState tracePrevious = _state;
+        object traceBefore = _player.MovementTrace?.Snapshot(velocity);
         _state = CrouchSlideState.Sliding;
         _slideTimer = CurrentSlideDuration;
         _slideCooldownTimer = CurrentSlideCooldown;
         _slideExitSpeedGraceTimer = CurrentSlideExitMinSpeedGraceTime;
         _slideDirection = direction;
         _slideSpeed = Mathf.Max(CurrentSlideInitialSpeed, horizontalVelocity.Length());
+        ConsumeSlideGesture();
         BeginSlideAbility();
 
         velocity.X = _slideDirection.X * _slideSpeed;
         velocity.Z = _slideDirection.Z * _slideSpeed;
+        TracePosture(tracePrevious, traceReason, traceBefore, velocity);
+        _player.MovementTrace?.Emit("SLIDE_GESTURE_CONSUMED", "StartSlide succeeded: gesture consumed and airborne intent cleared", velocity: velocity);
+        return true;
     }
 
     private bool TryGetAirborneSlideDirection(Vector3 horizontalVelocity, out Vector3 direction)

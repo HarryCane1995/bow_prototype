@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "clips": {
+    "BH01_1POV_BOW_DRAW_START": {
+      "action": "BH01_1POV_BOW_DRAW_START",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_BOW_FOLLOW_THROUGH": {
+      "action": "BH01_1POV_BOW_FOLLOW_THROUGH",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_BOW_FULL_DRAW": {
+      "action": "BH01_1POV_BOW_FULL_DRAW",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_BOW_READY": {
+      "action": "BH01_1POV_BOW_READY",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_BOW_RECOVERY": {
+      "action": "BH01_1POV_BOW_RECOVERY",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_BOW_RELEASE": {
+      "action": "BH01_1POV_BOW_RELEASE",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_CROUCH": {
+      "action": "BH01_1POV_CROUCH",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_FALL": {
+      "action": "BH01_1POV_FALL",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_GRAPPLE_FLIGHT": {
+      "action": "BH01_1POV_GRAPPLE_FLIGHT",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_GRAPPLE_LAUNCH": {
+      "action": "BH01_1POV_GRAPPLE_LAUNCH",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_GRAPPLE_PULL": {
+      "action": "BH01_1POV_GRAPPLE_PULL",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_IDLE": {
+      "action": "BH01_1POV_IDLE",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_JUMP_AIR": {
+      "action": "BH01_1POV_JUMP_AIR",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_JUMP_TAKEOFF": {
+      "action": "BH01_1POV_JUMP_TAKEOFF",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_LANDING": {
+      "action": "BH01_1POV_LANDING",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_MELEE": {
+      "action": "BH01_1POV_MELEE",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_MELEE_RECOVERY": {
+      "action": "BH01_1POV_MELEE_RECOVERY",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_PARRY": {
+      "action": "BH01_1POV_PARRY",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_RMB_ANTICIPATION": {
+      "action": "BH01_1POV_RMB_ANTICIPATION",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_RUN": {
+      "action": "BH01_1POV_RUN",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_SLIDE": {
+      "action": "BH01_1POV_SLIDE",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_WALLRUN_LEFT": {
+      "action": "BH01_1POV_WALLRUN_LEFT",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_WALLRUN_RIGHT": {
+      "action": "BH01_1POV_WALLRUN_RIGHT",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    },
+    "BH01_1POV_WALL_JUMP": {
+      "action": "BH01_1POV_WALL_JUMP",
+      "kind": "static_pose",
+      "start_frame": 1.0,
+      "end_frame": 1.0,
+      "fps": 24.0,
+      "sample_fps": 60,
+      "duration_seconds": 1.0,
+      "loop": false
+    }
+  }
+}

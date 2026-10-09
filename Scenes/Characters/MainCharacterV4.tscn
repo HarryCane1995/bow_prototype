@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/MainCharacterV4.cs" id="host"]
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/SplitGameplayCamera.cs" id="camera"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/MainCharacter1POV.tscn" id="fp"]
+[ext_resource type="PackedScene" path="res://Scenes/Characters/MainCharacter3POV.tscn" id="world"]
+
+[node name="MainCharacterV4" type="Node"]
+script = ExtResource("host")
+
+[node name="GameplayCameraLayer" type="Node" parent="."]
+script = ExtResource("camera")
+
+[node name="FirstPerson" parent="." instance=ExtResource("fp")]
+visible = false
+
+[node name="ThirdPerson" parent="." instance=ExtResource("world")]
+visible = false
+
+[node name="ExternalCamera" type="Camera3D" parent="."]
+physics_interpolation_mode = 2
+fov = 65.0
+near = 0.05
+far = 5000.0
+
+[node name="Readout" type="CanvasLayer" parent="."]
+layer = 60
+
+[node name="Label" type="Label" parent="Readout"]
+offset_left = 18.0
+offset_top = 150.0
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2

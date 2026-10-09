@@ -28,6 +28,7 @@ public partial class EnemyProjectile : Area3D
     private float _lifetimeRemaining;
     private bool _wasInitialized;
     private Rid _ignoredBodyRid;
+    private bool _hitHandled;
 
     public override void _Ready()
     {
@@ -98,16 +99,22 @@ public partial class EnemyProjectile : Area3D
 
     private void HandleHit(Node node)
     {
-        if (node == null || node == this || IsEnemyNode(node))
+        if (_hitHandled || node == null || node == this || IsEnemyNode(node))
         {
             return;
         }
 
+        _hitHandled = true;
+        SetPhysicsProcess(false);
         if (IsPlayerNode(node))
         {
-            if (ReloadSceneOnPlayerHit)
+            var scene = GetTree().CurrentScene;
+            // Several bolts may hit in one physics frame. Queue one reset outside
+            // the physics callback instead of removing collision bodies mid-query.
+            if (ReloadSceneOnPlayerHit && scene != null && !scene.HasMeta("enemy_reset_pending"))
             {
-                GetTree().ReloadCurrentScene();
+                scene.SetMeta("enemy_reset_pending", true);
+                GetTree().CallDeferred(SceneTree.MethodName.ReloadCurrentScene);
             }
 
             QueueFree();

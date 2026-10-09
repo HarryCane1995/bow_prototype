@@ -111,6 +111,7 @@ public partial class PlayerAbilityStateModule : Node
             return false;
         }
 
+        object traceBefore = _player?.MovementTrace?.Snapshot();
         _activeRequests[tag] = new AbilityStateRequest
         {
             Tag = tag,
@@ -120,6 +121,8 @@ public partial class PlayerAbilityStateModule : Node
             StartedAtTime = GetNowSeconds()
         };
 
+        _player?.MovementTrace?.Emit("ABILITY_BEGIN", ownerName + ": BeginAbility",
+            null, tag.ToString(), new { priority, locks = locks.ToString(), owner = ownerName, before = traceBefore });
         return true;
     }
 
@@ -138,7 +141,11 @@ public partial class PlayerAbilityStateModule : Node
             return;
         }
 
+        object traceBefore = _player?.MovementTrace?.Snapshot();
         _activeRequests.Remove(tag);
+        _player?.MovementTrace?.Emit("ABILITY_END", ownerName + ": EndAbility",
+            tag.ToString(), GetHighestPriorityAbility().ToString(),
+            new { request.Priority, locks = request.Locks.ToString(), owner = ownerName, before = traceBefore });
     }
 
     /// <summary>

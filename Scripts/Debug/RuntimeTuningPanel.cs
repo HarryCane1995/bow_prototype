@@ -225,8 +225,7 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Wall Detection Height", 0.0, 2.0, 0.05, () => TuningProfile.WallDetectionHeightOffset, value => TuningProfile.WallDetectionHeightOffset = value);
         AddFloatControl("Wall Detection Radius", 0.0, 1.0, 0.01, () => TuningProfile.WallDetectionRadius, value => TuningProfile.WallDetectionRadius = value);
         AddFloatControl("Wall Normal Vertical Dot", 0.0, 0.9, 0.01, () => TuningProfile.MinWallNormalVerticalDot, value => TuningProfile.MinWallNormalVerticalDot = value);
-        AddFloatControl("Reattach Cooldown", 0.0, 1.0, 0.01, () => TuningProfile.WallReattachCooldown, value => TuningProfile.WallReattachCooldown = value);
-        AddFloatControl("Same Wall Cooldown", 0.0, 2.0, 0.01, () => TuningProfile.SameWallReattachCooldown, value => TuningProfile.SameWallReattachCooldown = value);
+        AddFloatControl("Same Wall Clearance (m)", 0.25, 4.0, 0.05, () => TuningProfile.SameWallRearmClearance, value => TuningProfile.SameWallRearmClearance = value);
         AddFloatControl("Min Entry Speed", 0.0, 30.0, 0.1, () => TuningProfile.WallRunMinEntrySpeed, value => TuningProfile.WallRunMinEntrySpeed = value);
         AddFloatControl("Entry Speed Retention", 0.0, 1.5, 0.05, () => TuningProfile.WallRunEntrySpeedRetention, value => TuningProfile.WallRunEntrySpeedRetention = value);
         AddFloatControl("Entry Grace Time", 0.0, 0.5, 0.01, () => TuningProfile.WallRunEntryGraceTime, value => TuningProfile.WallRunEntryGraceTime = value);
@@ -244,8 +243,6 @@ public partial class RuntimeTuningPanel : Window
         AddFloatControl("Jump Up Force", 0.0, 40.0, 0.1, () => TuningProfile.WallJumpUpForce, value => TuningProfile.WallJumpUpForce = value);
         AddFloatControl("Jump Forward Force", 0.0, 40.0, 0.1, () => TuningProfile.WallJumpForwardForce, value => TuningProfile.WallJumpForwardForce = value);
         AddFloatControl("Jump Speed Clamp", 0.0, 60.0, 0.5, () => TuningProfile.WallJumpSpeedClamp, value => TuningProfile.WallJumpSpeedClamp = value);
-        AddFloatControl("Jump Lockout Time", 0.0, 1.0, 0.01, () => TuningProfile.WallJumpLockoutTime, value => TuningProfile.WallJumpLockoutTime = value);
-        AddFloatControl("Jump Cooldown", 0.0, 1.0, 0.01, () => TuningProfile.WallJumpCooldown, value => TuningProfile.WallJumpCooldown = value);
         AddFloatControl("Camera Roll Angle", 0.0, 35.0, 0.5, () => TuningProfile.WallRunCameraRollAngle, value => TuningProfile.WallRunCameraRollAngle = value);
         AddFloatControl("Camera Roll Enter", 1.0, 360.0, 1.0, () => TuningProfile.WallRunCameraRollEnterSpeed, value => TuningProfile.WallRunCameraRollEnterSpeed = value);
         AddFloatControl("Camera Roll Exit", 1.0, 360.0, 1.0, () => TuningProfile.WallRunCameraRollExitSpeed, value => TuningProfile.WallRunCameraRollExitSpeed = value);
@@ -586,8 +583,7 @@ public partial class RuntimeTuningPanel : Window
             ["WallDetectionHeightOffset"] = profile.WallDetectionHeightOffset,
             ["WallDetectionRadius"] = profile.WallDetectionRadius,
             ["MinWallNormalVerticalDot"] = profile.MinWallNormalVerticalDot,
-            ["WallReattachCooldown"] = profile.WallReattachCooldown,
-            ["SameWallReattachCooldown"] = profile.SameWallReattachCooldown,
+            ["SameWallRearmClearance"] = profile.SameWallRearmClearance,
             ["WallRunMinEntrySpeed"] = profile.WallRunMinEntrySpeed,
             ["WallRunEntrySpeedRetention"] = profile.WallRunEntrySpeedRetention,
             ["WallRunEntryGraceTime"] = profile.WallRunEntryGraceTime,
@@ -605,8 +601,6 @@ public partial class RuntimeTuningPanel : Window
             ["WallJumpUpForce"] = profile.WallJumpUpForce,
             ["WallJumpForwardForce"] = profile.WallJumpForwardForce,
             ["WallJumpSpeedClamp"] = profile.WallJumpSpeedClamp,
-            ["WallJumpLockoutTime"] = profile.WallJumpLockoutTime,
-            ["WallJumpCooldown"] = profile.WallJumpCooldown,
             ["WallRunCameraRollAngle"] = profile.WallRunCameraRollAngle,
             ["WallRunCameraRollEnterSpeed"] = profile.WallRunCameraRollEnterSpeed,
             ["WallRunCameraRollExitSpeed"] = profile.WallRunCameraRollExitSpeed,
@@ -739,8 +733,7 @@ public partial class RuntimeTuningPanel : Window
         profile.WallDetectionHeightOffset = GetFloat(values, "WallDetectionHeightOffset", profile.WallDetectionHeightOffset);
         profile.WallDetectionRadius = GetFloat(values, "WallDetectionRadius", profile.WallDetectionRadius);
         profile.MinWallNormalVerticalDot = GetFloat(values, "MinWallNormalVerticalDot", profile.MinWallNormalVerticalDot);
-        profile.WallReattachCooldown = GetFloat(values, "WallReattachCooldown", profile.WallReattachCooldown);
-        profile.SameWallReattachCooldown = GetFloat(values, "SameWallReattachCooldown", profile.SameWallReattachCooldown);
+        profile.SameWallRearmClearance = GetFloat(values, "SameWallRearmClearance", profile.SameWallRearmClearance);
         profile.WallRunMinEntrySpeed = GetFloat(values, "WallRunMinEntrySpeed", profile.WallRunMinEntrySpeed);
         profile.WallRunEntrySpeedRetention = GetFloat(values, "WallRunEntrySpeedRetention", profile.WallRunEntrySpeedRetention);
         profile.WallRunEntryGraceTime = GetFloat(values, "WallRunEntryGraceTime", profile.WallRunEntryGraceTime);
@@ -758,8 +751,6 @@ public partial class RuntimeTuningPanel : Window
         profile.WallJumpUpForce = GetFloat(values, "WallJumpUpForce", profile.WallJumpUpForce);
         profile.WallJumpForwardForce = GetFloat(values, "WallJumpForwardForce", profile.WallJumpForwardForce);
         profile.WallJumpSpeedClamp = GetFloat(values, "WallJumpSpeedClamp", profile.WallJumpSpeedClamp);
-        profile.WallJumpLockoutTime = GetFloat(values, "WallJumpLockoutTime", profile.WallJumpLockoutTime);
-        profile.WallJumpCooldown = GetFloat(values, "WallJumpCooldown", profile.WallJumpCooldown);
         profile.WallRunCameraRollAngle = GetFloat(values, "WallRunCameraRollAngle", profile.WallRunCameraRollAngle);
         profile.WallRunCameraRollEnterSpeed = GetFloat(values, "WallRunCameraRollEnterSpeed", profile.WallRunCameraRollEnterSpeed);
         profile.WallRunCameraRollExitSpeed = GetFloat(values, "WallRunCameraRollExitSpeed", profile.WallRunCameraRollExitSpeed);

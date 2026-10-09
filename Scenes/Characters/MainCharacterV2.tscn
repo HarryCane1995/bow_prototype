@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/MainCharacterV2.cs" id="controller"]
+[ext_resource type="PackedScene" path="res://Assets/Characters/BaseHumanoid/Exports/BH01_Male_V2.glb" id="body"]
+
+[node name="MainCharacterV2" type="Node3D"]
+script = ExtResource("controller")
+BowMeshInHand = Transform3D(0.36967352032661, 0.92234563827515, 0.11233857274055, -0.92582696676254, 0.37587854266167, -0.03948793187737, -0.07864711433649, -0.08940853178501, 0.99288481473923, 0.10530698299408, 0.07670626044273, -0.03825551271439)
+
+[node name="Body" parent="." instance=ExtResource("body")]
+rotation = Vector3(0, 3.14159265, 0)
+
+[node name="ExternalCamera" type="Camera3D" parent="."]
+fov = 65.0
+near = 0.05
+far = 5000.0

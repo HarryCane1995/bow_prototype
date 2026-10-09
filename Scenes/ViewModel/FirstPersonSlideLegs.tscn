@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/Models/Player/FP_Slide_Legs.blend" id="legs"]
+[ext_resource type="Script" path="res://Scripts/Player/ViewModel/FirstPersonSlideLegs.cs" id="script"]
+
+[node name="FirstPersonSlideLegs" type="Node3D"]
+visible = false
+script = ExtResource("script")
+
+[node name="Legs" parent="." instance=ExtResource("legs")]

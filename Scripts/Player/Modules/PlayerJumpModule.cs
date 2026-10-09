@@ -93,6 +93,8 @@ public partial class PlayerJumpModule : Node
     private float _coyoteTimer;
     private int _jumpsUsed;
     private bool _forceNextJumpAsAirJumpFromGrapple;
+    private ulong _lastConsumedJumpTick = ulong.MaxValue;
+    public bool JumpConsumedThisTick => _lastConsumedJumpTick == Engine.GetPhysicsFrames();
 
     public void Initialize(PlayerController player)
     {
@@ -192,6 +194,7 @@ public partial class PlayerJumpModule : Node
     {
         if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.Jump) == true)
         {
+            _player.MovementTrace?.Emit("JUMP_REJECTED", "TryJump: ability Jump lock", velocity: velocity);
             return;
         }
 
@@ -200,23 +203,29 @@ public partial class PlayerJumpModule : Node
         {
             if (_player.CrouchSlideModule?.IsSliding == true && !_player.CrouchSlideModule.TryConsumeSlideJumpBoost(ref velocity))
             {
+                _player.MovementTrace?.Emit("JUMP_REJECTED", "TryJump: TryConsumeSlideJumpBoost returned false", velocity: velocity);
                 return;
             }
 
             velocity.Y = CurrentJumpVelocity;
+            _lastConsumedJumpTick = Engine.GetPhysicsFrames();
             _jumpsUsed = 1;
             _coyoteTimer = 0.0f;
+            _player.MovementTrace?.Emit("JUMP", isGrounded ? "TryJump: canGroundJump via IsGrounded" : "TryJump: canGroundJump via coyote timer",
+                "GROUND_OR_COYOTE", "JUMP", new { jumps_used = _jumpsUsed }, velocity);
             return;
         }
 
         int maxJumpCount = CurrentEnableDoubleJump ? Mathf.Max(1, MaxJumpCount) : 1;
         if (_jumpsUsed >= maxJumpCount)
         {
+            _player.MovementTrace?.Emit("JUMP_REJECTED", "TryJump: _jumpsUsed >= maxJumpCount", velocity: velocity);
             return;
         }
 
         if (_player.AbilityStateModule?.IsLocked(PlayerAbilityLock.DoubleJump) == true)
         {
+            _player.MovementTrace?.Emit("JUMP_REJECTED", "TryJump: ability DoubleJump lock", velocity: velocity);
             return;
         }
 
@@ -231,8 +240,11 @@ public partial class PlayerJumpModule : Node
         }
 
         _jumpsUsed++;
+        _lastConsumedJumpTick = Engine.GetPhysicsFrames();
         _coyoteTimer = 0.0f;
         _forceNextJumpAsAirJumpFromGrapple = false;
+        _player.MovementTrace?.Emit("AIR_JUMP", "TryJump: air-jump branch applied impulse", "AIR", "AIR_JUMP",
+            new { jumps_used = _jumpsUsed }, velocity);
     }
 
     private bool TryGetDoubleJumpRedirectDirection(out Vector3 direction)

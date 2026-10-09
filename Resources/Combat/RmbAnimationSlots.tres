@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RmbCombatAnimationSlots" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player/Combat/RmbCombatAnimationSlots.cs" id="slots"]
+
+[resource]
+script = ExtResource("slots")
+Anticipation = &"BH01_RMB_ANTICIPATION"
+Melee = &"BH01_MELEE"
+ParrySuccess = &"BH01_PARRY"
+MeleeRecovery = &"BH01_MELEE_RECOVERY"
+BowReady = &"BH01_BOW_READY"
+BowDrawStart = &"BH01_BOW_DRAW_START"
+BowFullDraw = &"BH01_BOW_FULL_DRAW"
+BowRelease = &"BH01_BOW_RELEASE"
+BowFollowThrough = &"BH01_BOW_FOLLOW_THROUGH"
+BowRecovery = &"BH01_BOW_RECOVERY"

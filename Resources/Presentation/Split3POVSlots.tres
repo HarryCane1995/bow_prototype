@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="SplitAnimationSlots" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/SplitAnimationSlots.cs" id="1"]
+
+[resource]
+script = ExtResource("1")
+Clips = Dictionary[int, StringName]({
+0: &"BH01_3POV_IDLE",
+1: &"BH01_3POV_RUN",
+2: &"BH01_3POV_CROUCH",
+3: &"BH01_3POV_SLIDE",
+4: &"BH01_3POV_WALLRUN_LEFT",
+5: &"BH01_3POV_WALLRUN_RIGHT",
+6: &"BH01_3POV_WALL_JUMP",
+7: &"BH01_3POV_JUMP_TAKEOFF",
+8: &"BH01_3POV_JUMP_AIR",
+9: &"BH01_3POV_FALL",
+10: &"BH01_3POV_LANDING",
+11: &"BH01_3POV_GRAPPLE_PULL",
+12: &"BH01_3POV_GRAPPLE_LAUNCH",
+13: &"BH01_3POV_GRAPPLE_FLIGHT",
+14: &"BH01_3POV_BOW_READY",
+15: &"BH01_3POV_BOW_DRAW_START",
+16: &"BH01_3POV_BOW_FULL_DRAW",
+17: &"BH01_3POV_BOW_RELEASE",
+18: &"BH01_3POV_BOW_FOLLOW_THROUGH",
+19: &"BH01_3POV_BOW_RECOVERY",
+20: &"BH01_3POV_RMB_ANTICIPATION",
+21: &"BH01_3POV_MELEE",
+22: &"BH01_3POV_PARRY",
+23: &"BH01_3POV_MELEE_RECOVERY"
+})
+Fallback = &"BH01_3POV_IDLE"

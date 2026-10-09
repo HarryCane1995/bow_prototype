@@ -11,12 +11,14 @@ public partial class PlayerLookModule : Node
     /// <summary>
     /// Нижний предел вертикального угла камеры в градусах. Более отрицательное значение позволяет сильнее смотреть вниз; значение ближе к 0 ограничивает наклон вниз.
     /// </summary>
-    [Export(PropertyHint.Range, "-89,0,1,suffix:deg")] public float MinPitch { get; set; } = -80.0f;
+    // Stay just off the pole: projectile LookAt uses world Up, which becomes
+    // collinear with aim at exactly 90 degrees. Body yaw remains independent.
+    [Export(PropertyHint.Range, "-89.9,0,0.1,suffix:deg")] public float MinPitch { get; set; } = -89.9f;
 
     /// <summary>
     /// Верхний предел вертикального угла камеры в градусах. Большее значение позволяет выше смотреть вверх; значение ближе к 0 ограничивает наклон вверх.
     /// </summary>
-    [Export(PropertyHint.Range, "0,89,1,suffix:deg")] public float MaxPitch { get; set; } = 80.0f;
+    [Export(PropertyHint.Range, "0,89.9,0.1,suffix:deg")] public float MaxPitch { get; set; } = 89.9f;
 
     /// <summary>
     /// Имя Input Map action для освобождения курсора. Esc делает курсор видимым; смена имени требует соответствующей настройки InputMap.

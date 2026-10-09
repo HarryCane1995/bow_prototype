@@ -60,6 +60,10 @@ public partial class PlayerAudioController
         voice.PitchScale = pitch * (1 + pitchOffset);
         voice.VolumeDb = db + Mathf.LinearToDb(Mathf.Max(.0001f, gain)) + ((float)_random.NextDouble() * 1.2f - .6f);
         voice.Play();
+        if (family is "slide_enter" or "slide_exit")
+            _player?.MovementTrace?.Emit(family == "slide_enter" ? "SLIDE_AUDIO_START" : "SLIDE_AUDIO_STOP",
+                "PlayerAudioController.OneShot: voice.Play executed", details: new
+                { layer = "one_shot", family, variant = index, muted = Settings.Muted, gain_db = voice.VolumeDb });
         _duck = .13f;
         Trace("one_shot", new() { ["family"] = family, ["variant"] = index,
             ["pitch"] = voice.PitchScale, ["gain_db"] = voice.VolumeDb });
@@ -70,10 +74,24 @@ public partial class PlayerAudioController
         var voice = _loops[name];
         float gain = Mathf.Lerp(_loopGains[name], target, 1 - Mathf.Exp(-18 * delta));
         _loopGains[name] = gain;
-        if (gain < .00015f && target < .00015f) { voice.Stop(); _loopGains[name] = 0; return; }
+        if (gain < .00015f && target < .00015f)
+        {
+            bool traceWasPlaying = voice.Playing;
+            voice.Stop(); _loopGains[name] = 0;
+            if (name == "slide_loop" && traceWasPlaying)
+                _player?.MovementTrace?.Emit("SLIDE_AUDIO_STOP", "SetLoop: gain and target below .00015; voice.Stop executed",
+                    details: new { layer = "loop", target, gain, muted = Settings.Muted });
+            return;
+        }
         voice.VolumeDb = Mathf.LinearToDb(Mathf.Max(.0001f, gain));
         voice.PitchScale = Mathf.Lerp(voice.PitchScale, pitch, 1 - Mathf.Exp(-8 * delta));
-        if (!voice.Playing) voice.Play();
+        if (!voice.Playing)
+        {
+            voice.Play();
+            if (name == "slide_loop")
+                _player?.MovementTrace?.Emit("SLIDE_AUDIO_START", "SetLoop: !voice.Playing; voice.Play executed",
+                    details: new { layer = "loop", target, gain, muted = Settings.Muted });
+        }
     }
 
     private void ApplyMix(float delta)

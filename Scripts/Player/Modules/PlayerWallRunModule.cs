@@ -2,7 +2,7 @@ using Godot;
 
 public partial class PlayerWallRunModule : Node
 {
-    private enum WallSide
+    public enum WallSide
     {
         None,
         Left,
@@ -15,6 +15,8 @@ public partial class PlayerWallRunModule : Node
         public WallSide Side;
         public Vector3 Normal;
         public Vector3 Position;
+        public long ColliderId;
+        public int ShapeIndex;
     }
 
     [ExportGroup("Detection")]
@@ -31,14 +33,17 @@ public partial class PlayerWallRunModule : Node
     private PlayerController _player;
     private float _gravity;
     private float _wallRunTimer;
-    private float _reattachCooldownTimer;
-    private float _sameWallCooldownTimer;
     private float _groundGraceTimer;
     private bool _blockNormalJumpThisFrame;
     private WallSide _wallSide = WallSide.None;
     private Vector3 _wallNormal = Vector3.Zero;
     private Vector3 _wallRunDirection = Vector3.Zero;
-    private Vector3 _lastWallNormal = Vector3.Zero;
+    private WallHit _activeSurface;
+    private WallHit _spentSurface;
+    private CollisionShape3D _playerCollision;
+    private readonly CapsuleShape3D _rearmProbe = new();
+    private PhysicsShapeQueryParameters3D _rearmQuery;
+    private string _lastRearmReason = "none";
     private float _cameraRoll;
     private float _cameraPitchOffset;
     private float _currentFovBoost;
@@ -51,16 +56,29 @@ public partial class PlayerWallRunModule : Node
     private string _entryIntent = "none";
 
     public bool IsWallRunning { get; private set; }
+    // Presentation reads the side chosen by wall acquisition; it cannot set it.
+    public WallSide ActiveWallSide => IsWallRunning ? _wallSide : WallSide.None;
     public bool BlocksNormalJumpAndGravity => IsWallRunning || _blockNormalJumpThisFrame;
     public float CurrentFovBoost => _currentFovBoost;
     public bool IsCanonicalRun => IsWallRunning && _activeCanonical;
     public float EntryHorizontalSpeed { get; private set; }
     public float CanonicalTargetSpeed => _canonicalTargetSpeed;
+    public string ActiveSurfaceId => SurfaceId(_activeSurface);
+    public string SpentSurfaceId => SurfaceId(_spentSurface);
+    public string LastRearmReason => _lastRearmReason;
 
     public void Initialize(PlayerController player)
     {
         _player = player;
         _gravity = (float)ProjectSettings.GetSetting("physics/3d/default_gravity").AsDouble();
+        _playerCollision = player.CrouchSlideModule.GetNodeOrNull<CollisionShape3D>(player.CrouchSlideModule.CollisionShapePath);
+        _rearmQuery = new PhysicsShapeQueryParameters3D
+        {
+            Shape = _rearmProbe,
+            CollideWithAreas = false,
+            CollideWithBodies = true,
+            Exclude = new Godot.Collections.Array<Rid> { player.GetRid() }
+        };
     }
 
     public override void _Process(double delta)
@@ -72,8 +90,7 @@ public partial class PlayerWallRunModule : Node
     {
         float deltaFloat = (float)delta;
         _blockNormalJumpThisFrame = false;
-        _reattachCooldownTimer = Mathf.Max(0.0f, _reattachCooldownTimer - deltaFloat);
-        _sameWallCooldownTimer = Mathf.Max(0.0f, _sameWallCooldownTimer - deltaFloat);
+        UpdateSpentSurface();
 
         if (_player.IsGrounded)
         {
@@ -90,6 +107,14 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
+        if (_player.ParkourIntentModule?.IsActive != true)
+        {
+            // Voluntary release keeps the current velocity. Normal air movement
+            // resumes this tick; existing reattach rules still apply afterwards.
+            if (IsWallRunning) EndWallRun("parkour_released", false);
+            return;
+        }
+
         if (IsWallRunning)
         {
             UpdateActiveWallRun(deltaFloat);
@@ -103,7 +128,7 @@ public partial class PlayerWallRunModule : Node
     {
         string state = IsWallRunning ? $"active side={_wallSide}" : "inactive";
         string model = (IsWallRunning ? _activeCanonical : UseCanonicalTrajectory) ? "B" : "A";
-        return $"{state}, model={model}, intent={_entryIntent}, entrySpeed={EntryHorizontalSpeed:0.00}, timer={_wallRunTimer:0.00}, normal=({_wallNormal.X:0.00},{_wallNormal.Y:0.00},{_wallNormal.Z:0.00}), cooldown={_reattachCooldownTimer:0.00}, sameCooldown={_sameWallCooldownTimer:0.00}, fovBoost={_currentFovBoost:0.00}, lastExit={_lastExitReason}";
+        return $"{state}, model={model}, intent={_entryIntent}, entrySpeed={EntryHorizontalSpeed:0.00}, timer={_wallRunTimer:0.00}, normal=({_wallNormal.X:0.00},{_wallNormal.Y:0.00},{_wallNormal.Z:0.00}), surface={ActiveSurfaceId}, spent={SpentSurfaceId}, rearm={_lastRearmReason}, fovBoost={_currentFovBoost:0.00}, lastExit={_lastExitReason}";
     }
 
     private void TryStartWallRun()
@@ -132,17 +157,12 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
-        if (IsSameWallOnCooldown(hit))
-        {
-            return;
-        }
-
         BeginWallRun(hit, runDirection);
     }
 
     private bool CanAttemptWallRun()
     {
-        if (_player == null || _reattachCooldownTimer > 0.0f)
+        if (_player == null)
         {
             return false;
         }
@@ -180,6 +200,9 @@ public partial class PlayerWallRunModule : Node
 
     private void BeginWallRun(WallHit hit, Vector3 runDirection)
     {
+        object traceBefore = _player.MovementTrace?.Snapshot();
+        if (_spentSurface.HasHit) ClearSpentSurface("different_surface");
+        _activeSurface = hit;
         IsWallRunning = true;
         _wallRunTimer = 0.0f;
         _wallSide = hit.Side;
@@ -190,7 +213,7 @@ public partial class PlayerWallRunModule : Node
 
         // Capture the real incoming momentum before the synchronous ownership handoff.
         Vector3 velocity = _player.Velocity;
-        _player.CrouchSlideModule?.CancelSlide();
+        _player.CrouchSlideModule?.CancelSlideWithTrace("PlayerWallRunModule.BeginWallRun: wallrun preemption");
         _player.JumpModule?.RestoreAirJumpChargeFromWallRun();
         _player.AbilityStateModule?.BeginAbility(
             PlayerAbilityTag.WallRun,
@@ -220,6 +243,8 @@ public partial class PlayerWallRunModule : Node
         }
         _player.Velocity = velocity;
 
+        _player.MovementTrace?.StateChange("WALLRUN", "Inactive", "WallRun",
+            "BeginWallRun: TryStartWallRun passed entry guards and wall/direction selection", traceBefore);
         if (CurrentDebugWallRun)
         {
             GD.Print($"WallRun enter model={(_activeCanonical ? "B" : "A")} side={_wallSide} normal={_wallNormal} direction={_wallRunDirection} inputSpeed={EntryHorizontalSpeed:0.00} intent={_entryIntent}");
@@ -272,6 +297,7 @@ public partial class PlayerWallRunModule : Node
         // Preserve a deliberate look-away jump before checking continuation intent.
         if (canonicalWallJump)
         {
+            _activeSurface = hit;
             _wallSide = hit.Side;
             _wallNormal = hit.Normal;
             PerformWallJump();
@@ -291,6 +317,7 @@ public partial class PlayerWallRunModule : Node
         _wallSide = hit.Side;
         _wallNormal = hit.Normal;
         _wallRunDirection = runDirection;
+        _activeSurface = hit;
 
         if (CurrentEnableWallJump && Input.IsActionJustPressed(GetJumpAction()))
         {
@@ -358,8 +385,7 @@ public partial class PlayerWallRunModule : Node
         EndWallRun("wall_jump", false);
         _blockNormalJumpThisFrame = true;
         _player.Velocity = impulse;
-        _reattachCooldownTimer = Mathf.Max(_reattachCooldownTimer, Mathf.Max(CurrentWallJumpCooldown, CurrentWallJumpLockoutTime));
-        _sameWallCooldownTimer = Mathf.Max(_sameWallCooldownTimer, CurrentSameWallReattachCooldown);
+        _player.MovementTrace?.Emit("WALL_JUMP", "PerformWallJump: applied impulse after EndWallRun(wall_jump)", "WALLRUN", "WALL_JUMP");
 
         if (CurrentDebugWallRun)
         {
@@ -375,15 +401,16 @@ public partial class PlayerWallRunModule : Node
             return;
         }
 
-        _lastWallNormal = _wallNormal;
+        object traceBefore = _player.MovementTrace?.Snapshot();
+        _spentSurface = _activeSurface;
+        _activeSurface = default;
+        if (_player.IsOnFloor()) ClearSpentSurface("landing");
         IsWallRunning = false;
         _wallRunTimer = 0.0f;
         _wallSide = WallSide.None;
         _wallNormal = Vector3.Zero;
         _wallRunDirection = Vector3.Zero;
         _lastExitReason = reason;
-        _reattachCooldownTimer = Mathf.Max(_reattachCooldownTimer, CurrentWallReattachCooldown);
-        _sameWallCooldownTimer = Mathf.Max(_sameWallCooldownTimer, CurrentSameWallReattachCooldown);
         _player?.AbilityStateModule?.EndAbility(PlayerAbilityTag.WallRun, nameof(PlayerWallRunModule));
 
         if (applyExitRetention && _player != null)
@@ -398,11 +425,15 @@ public partial class PlayerWallRunModule : Node
         {
             GD.Print($"WallRun exit reason={reason}");
         }
+        _player?.MovementTrace?.StateChange("WALLRUN", "WallRun", "Inactive", "EndWallRun: " + reason, traceBefore);
     }
 
     private bool TryFindBestWall(out WallHit hit)
     {
-        if (TryCastWall(WallSide.Left, out WallHit leftHit) && TryCastWall(WallSide.Right, out WallHit rightHit))
+        // A spent candidate must not hide another valid surface on the other side.
+        bool left = TryCastWall(WallSide.Left, out WallHit leftHit) && !IsSpentSurface(leftHit);
+        bool right = TryCastWall(WallSide.Right, out WallHit rightHit) && !IsSpentSurface(rightHit);
+        if (left && right)
         {
             float leftScore = GetWallAlignmentScore(leftHit);
             float rightScore = GetWallAlignmentScore(rightHit);
@@ -410,12 +441,13 @@ public partial class PlayerWallRunModule : Node
             return true;
         }
 
-        if (TryCastWall(WallSide.Left, out hit))
+        if (left)
         {
+            hit = leftHit;
             return true;
         }
-
-        return TryCastWall(WallSide.Right, out hit);
+        hit = right ? rightHit : default;
+        return right;
     }
 
     private bool TryFindBestWall(WallSide preferredSide, out WallHit hit)
@@ -468,6 +500,8 @@ public partial class PlayerWallRunModule : Node
         hit = new WallHit
         {
             HasHit = true,
+            ColliderId = result["collider_id"].AsInt64(),
+            ShapeIndex = result["shape"].AsInt32(),
             Side = side,
             Normal = normal,
             Position = result["position"].AsVector3()
@@ -586,13 +620,47 @@ public partial class PlayerWallRunModule : Node
         return !forward.IsZeroApprox() && horizontalVelocity.Normalized().Dot(forward) >= CurrentMaxStartAngleForwardDot;
     }
 
-    private bool IsSameWallOnCooldown(WallHit hit)
+    private bool IsSpentSurface(WallHit hit)
     {
-        // Left/right changes when the player turns; it must not bypass the
-        // cooldown for the same world-space wall surface.
-        return _sameWallCooldownTimer > 0.0f
-            && !_lastWallNormal.IsZeroApprox()
-            && hit.Normal.Dot(_lastWallNormal) > 0.92f;
+        return _spentSurface.HasHit && hit.ColliderId == _spentSurface.ColliderId
+            && hit.ShapeIndex == _spentSurface.ShapeIndex;
+    }
+
+    private static string SurfaceId(WallHit surface) => surface.HasHit
+        ? $"{surface.ColliderId}/{surface.ShapeIndex}" : "none";
+
+    private void ClearSpentSurface(string reason)
+    {
+        _spentSurface = default;
+        _lastRearmReason = reason;
+    }
+
+    private void UpdateSpentSurface()
+    {
+        if (!_spentSurface.HasHit) return;
+        // Use actual contact, not the proximity GroundCheck ray.
+        if (_player.IsOnFloor()) { ClearSpentSurface("landing"); return; }
+        if (_playerCollision?.Shape is not CapsuleShape3D capsule) return;
+
+        // Minkowski expansion measures clearance from the capsule to the actual
+        // collider shape, including finite edges and moving surfaces. Camera and
+        // normals never participate in identity or separation.
+        float clearance = Mathf.Max(0.0f, TuningProfile?.SameWallRearmClearance ?? 1.75f);
+        float radius = capsule.Radius + clearance;
+        float height = capsule.Height + 2.0f * clearance;
+        if (!Mathf.IsEqualApprox(_rearmProbe.Radius, radius)) _rearmProbe.Radius = radius;
+        if (!Mathf.IsEqualApprox(_rearmProbe.Height, height)) _rearmProbe.Height = height;
+        _rearmQuery.Transform = _playerCollision.GlobalTransform;
+        _rearmQuery.CollisionMask = WallCollisionMask;
+        const int maxResults = 64;
+        var nearby = _player.GetWorld3D().DirectSpaceState.IntersectShape(_rearmQuery, maxResults);
+        foreach (var contact in nearby)
+        {
+            if (contact["collider_id"].AsInt64() == _spentSurface.ColliderId
+                && contact["shape"].AsInt32() == _spentSurface.ShapeIndex) return;
+        }
+        // A full result buffer cannot prove absence of the spent shape.
+        if (nearby.Count < maxResults) ClearSpentSurface("separated");
     }
 
     private float GetWallAlignmentScore(WallHit hit)
@@ -728,8 +796,6 @@ public partial class PlayerWallRunModule : Node
     private float CurrentWallDetectionDistance => TuningProfile?.WallDetectionDistance ?? 0.9f;
     private float CurrentWallDetectionHeightOffset => TuningProfile?.WallDetectionHeightOffset ?? 1.0f;
     private float CurrentMinWallNormalVerticalDot => TuningProfile?.MinWallNormalVerticalDot ?? 0.25f;
-    private float CurrentWallReattachCooldown => TuningProfile?.WallReattachCooldown ?? 0.08f;
-    private float CurrentSameWallReattachCooldown => TuningProfile?.SameWallReattachCooldown ?? 0.22f;
     private float CurrentMinEntrySpeed => TuningProfile?.WallRunMinEntrySpeed ?? 7.0f;
     private float CurrentEntrySpeedRetention => TuningProfile?.WallRunEntrySpeedRetention ?? 0.85f;
     private float CurrentEntryGraceTime => TuningProfile?.WallRunEntryGraceTime ?? 0.12f;
@@ -747,8 +813,6 @@ public partial class PlayerWallRunModule : Node
     private float CurrentWallJumpUpForce => TuningProfile?.WallJumpUpForce ?? 12.0f;
     private float CurrentWallJumpForwardForce => TuningProfile?.WallJumpForwardForce ?? 10.0f;
     private float CurrentWallJumpSpeedClamp => TuningProfile?.WallJumpSpeedClamp ?? 24.0f;
-    private float CurrentWallJumpLockoutTime => TuningProfile?.WallJumpLockoutTime ?? 0.08f;
-    private float CurrentWallJumpCooldown => TuningProfile?.WallJumpCooldown ?? 0.16f;
     private float CurrentWallRunCameraRollAngle => TuningProfile?.WallRunCameraRollAngle ?? 12.0f;
     private float CurrentWallRunCameraRollEnterSpeed => TuningProfile?.WallRunCameraRollEnterSpeed ?? 120.0f;
     private float CurrentWallRunCameraRollExitSpeed => TuningProfile?.WallRunCameraRollExitSpeed ?? 160.0f;

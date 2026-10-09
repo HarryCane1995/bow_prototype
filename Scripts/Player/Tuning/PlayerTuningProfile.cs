@@ -91,8 +91,7 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "0,2,0.05,suffix:m")] public float WallDetectionHeightOffset { get; set; } = 1.0f;
     [Export(PropertyHint.Range, "0,1,0.01")] public float WallDetectionRadius { get; set; } = 0.28f;
     [Export(PropertyHint.Range, "0,0.9,0.01")] public float MinWallNormalVerticalDot { get; set; } = 0.25f;
-    [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallReattachCooldown { get; set; } = 0.08f;
-    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float SameWallReattachCooldown { get; set; } = 0.22f;
+    [Export(PropertyHint.Range, "0.25,4,0.05,suffix:m")] public float SameWallRearmClearance { get; set; } = 1.75f;
 
     [ExportGroup("Wall Run / Entry")]
     [Export(PropertyHint.Range, "0,30,0.1,suffix:m/s")] public float WallRunMinEntrySpeed { get; set; } = 7.0f;
@@ -116,6 +115,12 @@ public partial class PlayerTuningProfile : Resource
     [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallJumpUpForce { get; set; } = 12.0f;
     [Export(PropertyHint.Range, "0,40,0.1,suffix:m/s")] public float WallJumpForwardForce { get; set; } = 10.0f;
     [Export(PropertyHint.Range, "0,60,0.5,suffix:m/s")] public float WallJumpSpeedClamp { get; set; } = 24.0f;
+
+    // Serialized compatibility only. Surface identity and spatial rearm replaced
+    // these timers; they no longer affect wallrun or wall jump acquisition.
+    [ExportGroup("Wall Run / Legacy Timing (unused)")]
+    [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallReattachCooldown { get; set; } = 0.08f;
+    [Export(PropertyHint.Range, "0,2,0.01,suffix:s")] public float SameWallReattachCooldown { get; set; } = 0.22f;
     [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallJumpLockoutTime { get; set; } = 0.08f;
     [Export(PropertyHint.Range, "0,1,0.01,suffix:s")] public float WallJumpCooldown { get; set; } = 0.16f;
 

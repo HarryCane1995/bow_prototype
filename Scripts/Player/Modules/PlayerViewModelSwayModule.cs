@@ -8,7 +8,7 @@ public partial class PlayerViewModelSwayModule : Node
 
     [Export] public NodePath ViewModelCameraPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelCamera3D");
 
-    [Export] public NodePath ArrowTipMarkerPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowViewModelOffset/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker");
+    [Export] public NodePath ArrowTipMarkerPath { get; set; } = new("../../CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot/ViewModelSwayRoot/BowViewModelHolder/CyberBowAxisCorrection/CyberBow_ViewModel/Arrow_Visual/ArrowTipMarker");
 
     [ExportGroup("ViewModel Sway")]
     [Export] public bool EnableViewModelSway { get; set; } = true;
@@ -110,6 +110,8 @@ public partial class PlayerViewModelSwayModule : Node
     private Vector3 _landingRotationImpulseDegrees;
     private Vector3 _currentAimCorrectionAxisAngle;
     private bool _warnedMissingAimStabilizationReferences;
+    private ViewModelMotionPrototype _motionPrototype;
+    private bool _usingPrototype;
 
     public void Initialize(PlayerController player)
     {
@@ -128,6 +130,8 @@ public partial class PlayerViewModelSwayModule : Node
 
         _basePosition = _viewModelSwayRoot.Position;
         _baseRotationDegrees = _viewModelSwayRoot.RotationDegrees;
+        _motionPrototype = GetNodeOrNull<ViewModelMotionPrototype>("MotionPrototype");
+        _motionPrototype?.Initialize(player, _viewModelSwayRoot);
         _previousVelocity = _player.Velocity;
         _previousIsOnFloor = _player.IsGrounded;
 
@@ -147,6 +151,25 @@ public partial class PlayerViewModelSwayModule : Node
         float deltaFloat = Mathf.Max(0.0001f, (float)delta);
         Vector3 currentVelocity = _player.Velocity;
         bool currentIsOnFloor = _player.IsGrounded;
+
+        bool usePrototype = CurrentEnableViewModelSway && _motionPrototype?.UseNewMotion == true;
+        if (usePrototype != _usingPrototype)
+        {
+            ResetViewModelSwayState();
+            _currentAimCorrectionAxisAngle = Vector3.Zero;
+            _motionPrototype?.ResetMotion();
+            _usingPrototype = usePrototype;
+        }
+        if (usePrototype)
+        {
+            _motionPrototype.Evaluate(deltaFloat, _player.LookModule?.ConsumeLookDelta() ?? Vector2.Zero,
+                out Vector3 position, out Vector3 rotation);
+            _viewModelSwayRoot.Position = _basePosition + position;
+            _viewModelSwayRoot.RotationDegrees = _baseRotationDegrees + rotation;
+            _previousVelocity = currentVelocity;
+            _previousIsOnFloor = currentIsOnFloor;
+            return;
+        }
 
         if (!CurrentEnableViewModelSway)
         {

@@ -17,7 +17,6 @@ DoubleJumpRedirectSpeed = 27.0
 DebugWallRun = true
 WallDetectionDistance = 2.0
 MinWallNormalVerticalDot = 0.9
-SameWallReattachCooldown = 2.0
 WallRunMinEntrySpeed = 4.4
 WallRunSpeed = 33.0
 WallFallSpeedClamp = 26.5

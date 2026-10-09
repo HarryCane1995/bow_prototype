@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "reference": "Split camera independent of animated skeleton",
+  "socket": "FP_CAMERA_SOCKET",
+  "offset_space": "skeleton_axes_position_only",
+  "cameras": {}
+}

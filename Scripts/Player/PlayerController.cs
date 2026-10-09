@@ -57,6 +57,7 @@ public partial class PlayerController : CharacterBody3D
     [Export] public NodePath SlingshotGrappleModulePath { get; set; } = new("PlayerSlingshotGrappleModule");
 
     [Export] public NodePath WallRunModulePath { get; set; } = new("PlayerWallRunModule");
+    [Export] public NodePath ParkourIntentModulePath { get; set; } = new("PlayerParkourIntentModule");
 
     /// <summary>
     /// Путь к модулю обзора мышью. Смена пути подключает другой look-модуль; неверный путь отключит поворот камеры и игрока.
@@ -103,6 +104,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerCrouchSlideModule CrouchSlideModule { get; private set; }
     public PlayerSlingshotGrappleModule SlingshotGrappleModule { get; private set; }
     public PlayerWallRunModule WallRunModule { get; private set; }
+    public PlayerParkourIntentModule ParkourIntentModule { get; private set; }
     public PlayerLookModule LookModule { get; private set; }
     public PlayerCameraFovModule CameraFovModule { get; private set; }
     public PlayerSpeedFovModule SpeedFovModule { get; private set; }
@@ -112,6 +114,7 @@ public partial class PlayerController : CharacterBody3D
     public PlayerViewModelSwayModule ViewModelSwayModule { get; private set; }
 
     public bool IsGrounded => IsOnFloor() || (Velocity.Y <= 0.0f && GroundCheck?.IsColliding() == true);
+    public PlayerMovementTrace MovementTrace { get; private set; }
     public PlayerTuningProfile ActiveTuningProfile => UseTuningProfile ? TuningProfile : null;
 
     public override void _Ready()
@@ -147,6 +150,7 @@ public partial class PlayerController : CharacterBody3D
             GD.PushWarning($"PlayerSlingshotGrappleModule was not found at path: {SlingshotGrappleModulePath}. Slingshot grapple is disabled for this player.");
         }
         WallRunModule = GetNodeOrNull<PlayerWallRunModule>(WallRunModulePath);
+        ParkourIntentModule = GetNodeOrNull<PlayerParkourIntentModule>(ParkourIntentModulePath);
         if (WallRunModule == null)
         {
             GD.PushWarning($"PlayerWallRunModule was not found at path: {WallRunModulePath}. Wall run is disabled for this player.");
@@ -180,10 +184,12 @@ public partial class PlayerController : CharacterBody3D
         ViewModelSwayModule?.Initialize(this);
         BowVisualModule.Initialize(this);
         BowShootModule.Initialize(this);
+        MovementTrace = PlayerMovementTrace.AttachIfRequested(this);
     }
 
     public override void _PhysicsProcess(double delta)
     {
+        MovementTrace?.BeginTick(delta);
         SlingshotGrappleModule?.ProcessSlingshotInput();
         WallRunModule?.ProcessWallRun(delta);
 
@@ -197,7 +203,9 @@ public partial class PlayerController : CharacterBody3D
         Velocity = velocity;
         SlingshotGrappleModule?.UpdateSlingshot(delta);
         MovementModule.UpdateHorizontalVelocity(delta);
+        MovementTrace?.BeforeMove();
         MoveAndSlide();
+        MovementTrace?.AfterMove();
     }
 
     public override void _Input(InputEvent @event)
