@@ -1,0 +1,78 @@
+V06 — MANUAL TEST CHECKLIST
+
+Выберите LEVEL_PROXY. Controls: N → V06 Local либо Object Properties → Custom Properties.
+Проверяйте на копии файла или используйте Undo. Apply/Bake/rebuild не нужны.
+API QA выполнено на disposable fixtures; человеческий UX/playability test выполняете вы.
+
+01 — NO INTERSECTIONS
+Seeds 17 / 42 / 73 / 109, затем Density 0.3 / 1 и Orientation Randomness 8 / 25.
+EXPECTED: platforms, walls и ramps не проходят друг через друга. Разрешены
+стыки вровень: wall/ramp на поверхности пола, конец runway у receiving catch.
+Между несвязанными primitives — clearance 0.3 m.
+Debug Placement Volumes показывает принятые ориентированные объёмы;
+большой wire-box у required crossing — резерв пространства, не отдельный mesh.
+
+02 — PLACEMENT VARIETY
+Сделайте длинный горизонтальный extrusion (150–300+ m), меняйте Seed.
+EXPECTED: длинный открытый run, стены по краям, смещённые/парные платформы,
+редкий bridge/ramp; формы преимущественно прямоугольные и wedge.
+Не каждый section обязан содержать все эти элементы.
+
+03 — WIDE ARENA
+Отдельный closed proxy island 70 × 90 × 24 m либо похожая широкая секция.
+EXPECTED: одна основная большая поверхность и несколько крупных элементов,
+открытый центр. Не россыпь маленьких pads. Density 1 увеличивает состав,
+но ограниченный бюджет не позволяет заполнить всю площадь объектами.
+
+04 — NARROW FLOW
+Узкая длинная секция около 16 × 240 × 14 m.
+EXPECTED: lane и отдельные run/gap/catch; огромная arena slab не появляется.
+Length Variation 0 → 0.82 → 1 меняет беговые длины отдельно от jump gaps.
+Пример ramp: 20 × 240 × 16 m, Seed 1, Ramp Presence / Density / Slide Bias = 1.
+
+05 — VERTICAL RHYTHM
+Высокий shaft около 14 × 18 × 72 m; меняйте Seed, Verticality, Platform Density.
+EXPECTED: простые pads/walls со сменой стороны, свободные промежутки,
+некоторые пропущенные beats и optional grapple hints. Нет бесконечной
+плотной лестницы. Не все верхние точки гарантированно доступны без grapple.
+
+06 — GRAPPLE REQUIRED
+Длинный горизонтальный proxy: 20 × 480 × 12 m, local bounds
+X -10..10, Y 0..480, Z -0.7..11.3. Seed 17, обычные defaults.
+Debug Span Colors = true: MAGENTA crossing имеет gap около 28.202 m.
+EXPECTED: крупный required marker в свободном пространстве, подход и
+receiving catch; marker сохраняется при Grapple Bias = 0.
+Helper примерно в 18.447 m от подхода; это Blender candidate, не runtime anchor.
+В реальном коротком/наклонном Proxy D-span может отсутствовать — это нормально.
+
+07 — CUTTER
+Use Cutter = true, покажите LEVEL_CUTTER и переместите в required marker.
+EXPECTED: исходный D gap сокращается до Basic; marker не исчезает молча
+с сохранением заведомо дальнего D crossing. Остальное локально вычитается.
+Огромный Cutter может уничтожить сам маршрут; automatic reachability solver отсутствует.
+
+08 — OLD PROXY STABILITY
+Запомните старые 2–3 нетронутые секции. Tab → extrude хвост, поверните/расширьте
+новую cap либо вытяните её вверх.
+EXPECTED: старые placements остаются; новая зона и junction могут измениться.
+Не редактируйте/растворяйте грани старой секции в этом тесте.
+
+09 — LIVE EDIT MODE
+Обычные E и G на Source, не выходя из Edit Mode.
+EXPECTED: generated output обновляется без Apply/Bake.
+Открытая/самопересекающаяся оболочка не является корректным closed proxy.
+
+10 — RAMPS
+На подходящей секции Ramp Presence = 1, Ramp Steepness 45 / 55 / 70.
+EXPECTED: один заметный крупный wedge/chute, а не несколько мелких wedges.
+Изменение угла может привести к отбрасыванию ramp, если новый объём не помещается.
+
+11 — DEBUG OFF / SOURCE UNCHANGED
+Выключите Debug Span Colors и Debug Placement Volumes.
+EXPECTED: нейтральный blockout. Seed/controls меняют procedural fill, но
+не topology вашего LEVEL_PROXY. Source остаётся обычным mesh без modifiers.
+
+ЧТО ПРИСЛАТЬ
+Номер теста, Seed/параметры, операцию и что ожидали/увидели.
+Укажите, происходило ли обновление внутри Edit Mode и помогает ли Undo.
+Godot gameplay/collisions в V06 не проверялись и не создавались.

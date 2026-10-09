@@ -1,0 +1,48 @@
+V04 LOCAL PROXY — QUICKSTART
+
+Файл: Assets/Levels/Level_Freestyle_01/Source/Level_Freestyle_01.blend
+Группа: GN_LevelProxyGenerator_v04
+
+1. Выберите LEVEL_PROXY. Это обычный редактируемый Mesh, отображаемый wire.
+2. Tab → Edit Mode → 3 (Face Select в стандартной раскладке Blender).
+3. Выберите внешнюю грань, E, вытяните новую секцию. Можно поворачивать,
+   расширять, поднимать и опускать маршрут обычными инструментами.
+4. LEVEL_GENERATED_OUTPUT должен обновляться при редактировании без Apply,
+   Bake, Reload, запуска скрипта или выхода из Edit Mode.
+5. Параметры находятся НА LEVEL_PROXY: Object Properties → Custom Properties.
+   В текущем сеансе доступна удобная N-панель → V04 Local.
+   Если панель отсутствует после открытия файла, параметры всё равно работают.
+   Необязательный Text V04_CONTROLS_PANEL.py можно выполнить для панели;
+   сам генератор не зависит от разрешения Auto Run Python Scripts.
+6. Начните с Seed 17; затем сравните 42 и 73. Verticality и Platform Density
+   меняют верхние площадки; Grapple Bias — жёлтые candidate markers.
+7. Ramp Presence = 1 увеличивает число рамп. Ramp Steepness = 45–70°.
+8. Preview Quality: 0 — быстрый Manifold, 1 — Exact для проверки сложной формы.
+   Оба режима пересекают результат с настоящим proxy, не с bounding box.
+9. LEVEL_CUTTER — необязательное локальное вычитание. Включите Use Cutter
+   на LEVEL_PROXY, покажите Cutter в Outliner, перенесите его внутрь нужной
+   секции и редактируйте. Исходный Cutter оставлен в прежнем месте.
+10. Пройдите V04_MANUAL_TEST_CHECKLIST. Human / hotkey тест ещё не проведён.
+
+ВАЖНО
+• Proxy должен быть замкнутым manifold объёмом, с нормалями наружу,
+  без самопересечений. Обычный Extrude Region сохраняет caps автоматически.
+• Delete одной грани открывает объём: output намеренно исчезает. Undo или
+  закройте отверстие. Для удаления целой ветки восстановите закрытую cap.
+• Локальные участки определяются по граням, их рёбрам и локальным raycasts.
+  Лучше всего работают quad-секции от extrusion. Это не восстановление
+  истории операций Blender и не гарантированное распознавание любых n-gons.
+• Наращивание хвоста оставляет нетронутые patches стабильными. Изменение,
+  subdivide или dissolve САМОГО patch может перестроить его наполнение.
+• Основной путь: размеры задавать в Edit Mode, Object Scale держать 1,1,1.
+  Неединичный Object Scale сохраняет containment, но масштабирует и игровые
+  расстояния. Метрики рассчитаны для 1 Blender unit = 1 metre.
+• Grapple markers — предложения для будущего gameplay теста. Они не anchors.
+• Нет разрешённого exterior overhang. Числовой допуск QA — 0.3 mm.
+  Совпадающие rings очищаются только в GN с порогом 0.1 mm.
+
+Ваш предыдущий редактированный mesh сохранён как UX_TEST_V04_PROXY (hidden).
+LEVEL_PROXY создан независимой копией; последующие ручные правки сохранены.
+Старые генераторы сохранены. Прежний объект вывода V02 переименован в
+V02_GENERATED_OUTPUT_REFERENCE, чтобы освободить имя LEVEL_GENERATED_OUTPUT.
+Никакого экспорта в Godot в этой итерации.

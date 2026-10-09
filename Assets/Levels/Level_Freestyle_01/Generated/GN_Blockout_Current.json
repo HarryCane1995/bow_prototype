@@ -1,0 +1,8790 @@
+{
+  "placements": [
+    {
+      "section_id": -1073126529,
+      "placement_id": 609261589,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        6.0,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        183.458252,
+        23.597275,
+        -8.634728
+      ],
+      "bounds": [
+        [
+          180.273041,
+          186.643448
+        ],
+        [
+          23.322275,
+          23.872274
+        ],
+        [
+          -12.292107,
+          -4.977351
+        ]
+      ]
+    },
+    {
+      "section_id": -1073126529,
+      "placement_id": -23498875,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        6.0,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        176.268753,
+        12.020455,
+        -9.885347
+      ],
+      "bounds": [
+        [
+          172.999924,
+          179.537582
+        ],
+        [
+          11.745456,
+          12.295455
+        ],
+        [
+          -13.612834,
+          -6.157861
+        ]
+      ]
+    },
+    {
+      "section_id": -1726695304,
+      "placement_id": 1425706307,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        6.509463787078857,
+        4.799999713897705,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        137.240005,
+        106.715759,
+        121.225716
+      ],
+      "bounds": [
+        [
+          134.578903,
+          139.901093
+        ],
+        [
+          106.440758,
+          106.990761
+        ],
+        [
+          117.783554,
+          124.667877
+        ]
+      ]
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": 450365540,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        4.799999237060547,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        142.759995,
+        80.371506,
+        144.089661
+      ],
+      "bounds": [
+        [
+          140.299271,
+          145.220718
+        ],
+        [
+          80.096504,
+          80.646507
+        ],
+        [
+          140.548309,
+          147.631012
+        ]
+      ]
+    },
+    {
+      "section_id": -1685087441,
+      "placement_id": 183383862,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        4.799999237060547,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        142.759995,
+        80.598778,
+        156.012894
+      ],
+      "bounds": [
+        [
+          140.073807,
+          145.446198
+        ],
+        [
+          80.323776,
+          80.873779
+        ],
+        [
+          152.323227,
+          159.70256
+        ]
+      ]
+    },
+    {
+      "section_id": 787065286,
+      "placement_id": -345098241,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        4.799999237060547,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        142.759995,
+        102.509193,
+        167.373352
+      ],
+      "bounds": [
+        [
+          140.066269,
+          145.45372
+        ],
+        [
+          102.234192,
+          102.784195
+        ],
+        [
+          163.678894,
+          171.06781
+        ]
+      ]
+    },
+    {
+      "section_id": 707631292,
+      "placement_id": 170621601,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "primitive_id": 10,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.0,
+        4.799999713897705,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_pad",
+      "center": [
+        142.759995,
+        58.693424,
+        144.740997
+      ],
+      "bounds": [
+        [
+          140.067642,
+          145.452362
+        ],
+        [
+          58.418423,
+          58.968426
+        ],
+        [
+          141.047409,
+          148.434586
+        ]
+      ]
+    },
+    {
+      "section_id": -964803255,
+      "placement_id": 1260297589,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        8.0,
+        0.5,
+        6.199999809265137
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_wall",
+      "center": [
+        145.399994,
+        104.295197,
+        156.071396
+      ],
+      "bounds": [
+        [
+          145.149994,
+          145.649994
+        ],
+        [
+          101.195198,
+          107.395195
+        ],
+        [
+          152.071396,
+          160.071396
+        ]
+      ]
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": 1876855307,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        8.0,
+        0.5,
+        6.199999809265137
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_wall",
+      "center": [
+        145.399994,
+        82.125198,
+        168.273392
+      ],
+      "bounds": [
+        [
+          145.149994,
+          145.649994
+        ],
+        [
+          79.0252,
+          85.225197
+        ],
+        [
+          164.273392,
+          172.273392
+        ]
+      ]
+    },
+    {
+      "section_id": 1559476479,
+      "placement_id": 1579656288,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        8.0,
+        0.5,
+        6.199999809265137
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "vertical_wall",
+      "center": [
+        145.399994,
+        59.9552,
+        168.273392
+      ],
+      "bounds": [
+        [
+          145.149994,
+          145.649994
+        ],
+        [
+          56.855202,
+          63.055199
+        ],
+        [
+          164.273392,
+          172.273392
+        ]
+      ]
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1522595557,
+      "pattern_id": 10,
+      "primitive_role": 4,
+      "primitive_id": 7,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        6.094881057739258,
+        10.0,
+        8.704391479492188
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "ramp",
+      "center": [
+        205.546478,
+        -9.089128,
+        -153.652679
+      ],
+      "bounds": [
+        [
+          200.546478,
+          210.546478
+        ],
+        [
+          -13.441324,
+          -4.736933
+        ],
+        [
+          -156.700119,
+          -150.60524
+        ]
+      ]
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -573080090,
+      "pattern_id": 10,
+      "primitive_role": 4,
+      "primitive_id": 7,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.3178534507751465,
+        8.337918281555176,
+        7.594681262969971
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "ramp",
+      "center": [
+        -80.942688,
+        85.080017,
+        27.35519
+      ],
+      "bounds": [
+        [
+          -85.111649,
+          -76.773727
+        ],
+        [
+          81.282677,
+          88.877357
+        ],
+        [
+          24.696264,
+          30.014116
+        ]
+      ]
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": 928579041,
+      "pattern_id": 5,
+      "primitive_role": 3,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        4.880819320678711,
+        6.879055976867676,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        193.779236,
+        -10.124824,
+        -26.567635
+      ],
+      "bounds": [
+        [
+          190.905228,
+          196.653229
+        ],
+        [
+          -10.399823,
+          -9.849824
+        ],
+        [
+          -30.299793,
+          -22.835476
+        ]
+      ]
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": 1205415686,
+      "pattern_id": 3,
+      "primitive_role": 3,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        5.5473809242248535,
+        6.486148834228516,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        237.489349,
+        -6.859733,
+        -33.567635
+      ],
+      "bounds": [
+        [
+          234.586411,
+          240.392303
+        ],
+        [
+          -7.134733,
+          -6.584733
+        ],
+        [
+          -36.920544,
+          -30.214725
+        ]
+      ]
+    },
+    {
+      "section_id": 1702150185,
+      "placement_id": 1998271304,
+      "pattern_id": 2,
+      "primitive_role": 3,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "occ_size": [
+        5.691934585571289,
+        5.139185428619385,
+        0.550000011920929
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        170.09166,
+        94.197922,
+        -12.580177
+      ],
+      "bounds": [
+        [
+          167.791321,
+          172.391998
+        ],
+        [
+          91.897583,
+          96.49826
+        ],
+        [
+          -15.297012,
+          -9.863342
+        ]
+      ]
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -1054152039,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "primitive_id": 4,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        15.871321678161621,
+        0.6000000238418579,
+        7.3830342292785645
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        -90.365082,
+        84.974197,
+        49.398689
+      ],
+      "bounds": [
+        [
+          -90.665085,
+          -90.065079
+        ],
+        [
+          81.282677,
+          88.665718
+        ],
+        [
+          41.463028,
+          57.334351
+        ]
+      ]
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": -1712212940,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "primitive_id": 4,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        24.375940322875977,
+        0.6000000238418579,
+        6.49899959564209
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        258.151306,
+        -10.191825,
+        -147.992157
+      ],
+      "bounds": [
+        [
+          257.851288,
+          258.451294
+        ],
+        [
+          -13.441324,
+          -6.942325
+        ],
+        [
+          -160.18013,
+          -135.804184
+        ]
+      ]
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -1313090987,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "primitive_id": 4,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        15.871321678161621,
+        0.6000000238418579,
+        7.370541095733643
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        -50.675507,
+        84.967949,
+        29.118668
+      ],
+      "bounds": [
+        [
+          -50.97551,
+          -50.375504
+        ],
+        [
+          81.282677,
+          88.653221
+        ],
+        [
+          21.183006,
+          37.054329
+        ]
+      ]
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -2146804805,
+      "pattern_id": 5,
+      "primitive_role": 2,
+      "primitive_id": 5,
+      "primitive_scale_class": 1,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        6.0,
+        0.5,
+        5.099270820617676
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        264.552124,
+        -10.99169,
+        -97.522049
+      ],
+      "bounds": [
+        [
+          264.243774,
+          264.860474
+        ],
+        [
+          -13.541325,
+          -8.442055
+        ],
+        [
+          -100.526344,
+          -94.517754
+        ]
+      ]
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -795210033,
+      "pattern_id": 6,
+      "primitive_role": 2,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        10.629325866699219,
+        0.5,
+        4.724869251251221
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        179.550964,
+        -11.17889,
+        -6.105355
+      ],
+      "bounds": [
+        [
+          174.230881,
+          184.871033
+        ],
+        [
+          -13.541325,
+          -8.816456
+        ],
+        [
+          -6.675075,
+          -5.535635
+        ]
+      ]
+    },
+    {
+      "section_id": 58044545,
+      "placement_id": -2108967090,
+      "pattern_id": 4,
+      "primitive_role": 2,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        12.0,
+        0.5,
+        5.842771530151367
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        136.496918,
+        46.596542,
+        7.44493
+      ],
+      "bounds": [
+        [
+          136.043839,
+          136.949997
+        ],
+        [
+          43.675156,
+          49.517929
+        ],
+        [
+          1.439905,
+          13.449955
+        ]
+      ]
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": 730664660,
+      "pattern_id": 5,
+      "primitive_role": 2,
+      "primitive_id": 4,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        11.64753532409668,
+        0.5,
+        4.31822395324707
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        136.278748,
+        25.514977,
+        41.712841
+      ],
+      "bounds": [
+        [
+          135.607498,
+          136.949997
+        ],
+        [
+          23.355864,
+          27.674089
+        ],
+        [
+          35.886265,
+          47.539417
+        ]
+      ]
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -1286713546,
+      "pattern_id": 6,
+      "primitive_role": 2,
+      "primitive_id": 3,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        10.629325866699219,
+        0.5,
+        4.724869251251221
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "edge_wall",
+      "center": [
+        180.957596,
+        -11.17889,
+        -13.344795
+      ],
+      "bounds": [
+        [
+          175.637527,
+          186.277664
+        ],
+        [
+          -13.541325,
+          -8.816456
+        ],
+        [
+          -13.914515,
+          -12.775075
+        ]
+      ]
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 486975069,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        32.939998626708984,
+        18.299999237060547,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        202.687561,
+        -6.635141,
+        -77.235588
+      ],
+      "bounds": [
+        [
+          192.993958,
+          212.381149
+        ],
+        [
+          -6.960141,
+          -6.310141
+        ],
+        [
+          -94.001266,
+          -60.46991
+        ]
+      ]
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": -1500842031,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.107840538024902,
+        12.923772811889648,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        -40.92067,
+        86.78643,
+        51.16217
+      ],
+      "bounds": [
+        [
+          -47.701523,
+          -34.139816
+        ],
+        [
+          86.461433,
+          87.111427
+        ],
+        [
+          43.817261,
+          58.50708
+        ]
+      ]
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 536922954,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.107840538024902,
+        12.923772811889648,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        -82.610275,
+        85.881355,
+        51.16217
+      ],
+      "bounds": [
+        [
+          -89.086533,
+          -76.134018
+        ],
+        [
+          85.556358,
+          86.206352
+        ],
+        [
+          44.095089,
+          58.229252
+        ]
+      ]
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": 1751532293,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        32.939998626708984,
+        13.666970252990723,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        18.770378,
+        86.310402,
+        26.914322
+      ],
+      "bounds": [
+        [
+          2.195541,
+          35.345207
+        ],
+        [
+          85.985405,
+          86.635399
+        ],
+        [
+          19.82416,
+          34.004486
+        ]
+      ]
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 475722170,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.861664,
+        0.0,
+        0.507479
+      ],
+      "occ_size": [
+        32.939998626708984,
+        18.299999237060547,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        78.208954,
+        87.107796,
+        58.898327
+      ],
+      "bounds": [
+        [
+          59.374435,
+          97.043472
+        ],
+        [
+          86.782799,
+          87.432793
+        ],
+        [
+          42.645668,
+          75.150986
+        ]
+      ]
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 392281000,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.107840538024902,
+        12.923772811889648,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        -16.740707,
+        89.586433,
+        31.763887
+      ],
+      "bounds": [
+        [
+          -23.521561,
+          -9.959854
+        ],
+        [
+          89.261436,
+          89.91143
+        ],
+        [
+          24.418978,
+          39.108795
+        ]
+      ]
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 1932273478,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.861664,
+        0.0,
+        0.507479
+      ],
+      "occ_size": [
+        32.939998626708984,
+        18.299999237060547,
+        0.6499999761581421
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "raised_platform",
+      "center": [
+        101.930229,
+        89.907791,
+        114.428726
+      ],
+      "bounds": [
+        [
+          83.095711,
+          120.764748
+        ],
+        [
+          89.582794,
+          90.232788
+        ],
+        [
+          98.176071,
+          130.681381
+        ]
+      ]
+    },
+    {
+      "section_id": -259332885,
+      "placement_id": 1001306668,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        1.055938720703125,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        258.623322,
+        -13.791325,
+        -30.067635
+      ],
+      "bounds": [
+        [
+          258.095337,
+          259.151306
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -32.817635,
+          -27.317635
+        ]
+      ]
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": -1777533875,
+      "pattern_id": 3,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        23.11408805847168,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        232.866547,
+        -13.791325,
+        -30.067635
+      ],
+      "bounds": [
+        [
+          221.309494,
+          244.423584
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -32.817635,
+          -27.317635
+        ]
+      ]
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": -1368584670,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        20.336748123168945,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        197.846588,
+        -13.791325,
+        -30.067635
+      ],
+      "bounds": [
+        [
+          187.678207,
+          208.014954
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -32.817635,
+          -27.317635
+        ]
+      ]
+    },
+    {
+      "section_id": 1309886846,
+      "placement_id": 1613129560,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.727446556091309,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.182158470153809,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        179.863541,
+        -13.791325,
+        -23.953911
+      ],
+      "bounds": [
+        [
+          177.113541,
+          182.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -31.044991,
+          -16.862831
+        ]
+      ]
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": -1596241446,
+      "pattern_id": 1,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.429038047790527,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        268.410492,
+        -13.791325,
+        -24.077351
+      ],
+      "bounds": [
+        [
+          265.660492,
+          271.160492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -31.29187,
+          -16.862831
+        ]
+      ]
+    },
+    {
+      "section_id": -1003787041,
+      "placement_id": 919112121,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 2,
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        36.516273498535156,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        268.410492,
+        -13.791325,
+        -166.527451
+      ],
+      "bounds": [
+        [
+          265.160492,
+          271.660492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -184.785583,
+          -148.269318
+        ]
+      ]
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -1171925259,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "primitive_id": 2,
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        39.10585403442383,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        268.410492,
+        -13.791325,
+        -98.304169
+      ],
+      "bounds": [
+        [
+          265.160492,
+          271.660492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -117.857094,
+          -78.751244
+        ]
+      ]
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": -979806650,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        22.962915420532227,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        268.410492,
+        -13.791325,
+        -54.753887
+      ],
+      "bounds": [
+        [
+          265.660492,
+          271.160492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -66.235344,
+          -43.27243
+        ]
+      ]
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": 1830556411,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.739583,
+        0.0,
+        0.673066
+      ],
+      "occ_size": [
+        23.197664260864258,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        147.023422,
+        -13.791325,
+        -223.259079
+      ],
+      "bounds": [
+        [
+          136.594208,
+          157.452652
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -233.099701,
+          -213.418457
+        ]
+      ]
+    },
+    {
+      "section_id": -1195378419,
+      "placement_id": -1393461298,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.01397705078125,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        179.863541,
+        -13.791325,
+        -181.278595
+      ],
+      "bounds": [
+        [
+          177.113541,
+          182.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -184.785583,
+          -177.771606
+        ]
+      ]
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": -283850653,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 2,
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        39.615562438964844,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        179.863541,
+        -13.791325,
+        -146.524261
+      ],
+      "bounds": [
+        [
+          176.613541,
+          183.113541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -166.332047,
+          -126.716476
+        ]
+      ]
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 302801710,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 2,
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        72.088134765625,
+        7.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        179.863541,
+        -13.791325,
+        -79.316498
+      ],
+      "bounds": [
+        [
+          176.113541,
+          183.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -115.360565,
+          -43.27243
+        ]
+      ]
+    },
+    {
+      "section_id": 1684089661,
+      "placement_id": -1223539206,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        -0.673066,
+        0.0,
+        -0.739583
+      ],
+      "occ_size": [
+        16.401622772216797,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        182.468445,
+        -13.791325,
+        -190.510223
+      ],
+      "bounds": [
+        [
+          174.914902,
+          190.021973
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -198.426331,
+          -182.594116
+        ]
+      ]
+    },
+    {
+      "section_id": 1133346014,
+      "placement_id": 377548733,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.765142440795898,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        8.433069229125977,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        80.932678,
+        133.551834
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          80.682678,
+          81.182678
+        ],
+        [
+          129.335297,
+          137.768372
+        ]
+      ]
+    },
+    {
+      "section_id": 670041300,
+      "placement_id": -899136762,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.181146621704102,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        9.522794723510742,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        85.013931
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          80.252533,
+          89.77533
+        ]
+      ]
+    },
+    {
+      "section_id": -416562162,
+      "placement_id": 979141001,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.760749816894531,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        64.623428
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          61.743053,
+          67.503799
+        ]
+      ]
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -28219017,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 2,
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        39.1293830871582,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        118.203682
+      ],
+      "bounds": [
+        [
+          136.75,
+          143.25
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          98.638992,
+          137.768372
+        ]
+      ]
+    },
+    {
+      "section_id": 847943270,
+      "placement_id": 1256615457,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.627490997314453,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        15.47854232788086,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        166.635117
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          158.895844,
+          174.37439
+        ]
+      ]
+    },
+    {
+      "section_id": 483207176,
+      "placement_id": -251136160,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        13.616485595703125,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        28.419991
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          21.611748,
+          35.228233
+        ]
+      ]
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": 1304486378,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        11.85761547088623,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        62.64259
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          56.713783,
+          68.571396
+        ]
+      ]
+    },
+    {
+      "section_id": 160900389,
+      "placement_id": 80488148,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        15.545318603515625,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        97.547997
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          89.775337,
+          105.320656
+        ]
+      ]
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": -2031996221,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        10.430183410644531,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        133.354324
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          128.139236,
+          138.569412
+        ]
+      ]
+    },
+    {
+      "section_id": -921800817,
+      "placement_id": 575579054,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "occ_size": [
+        22.493572235107422,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        187.43309,
+        102.82386,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          179.303635,
+          195.562546
+        ],
+        [
+          94.694405,
+          110.953316
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": 1702150185,
+      "placement_id": -1328595178,
+      "pattern_id": 2,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "occ_size": [
+        23.716394424438477,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        171.095398,
+        86.486176,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          162.533615,
+          179.657196
+        ],
+        [
+          77.924385,
+          95.047966
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": -232234515,
+      "placement_id": -613309666,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "occ_size": [
+        11.408002853393555,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        158.677048,
+        74.067818,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          154.466934,
+          162.887161
+        ],
+        [
+          69.857704,
+          78.277931
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": -12851134,
+      "placement_id": 544966055,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.707107,
+        0.707107,
+        -0.0
+      ],
+      "occ_size": [
+        12.474056243896484,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        150.233475,
+        65.624237,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          145.646454,
+          154.820496
+        ],
+        [
+          61.037216,
+          70.211258
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -1029678827,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        15.629325866699219,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        179.863541,
+        -13.791325,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          172.048889,
+          187.678207
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": 387573549,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        12.208820343017578,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        152.104416,
+        43.425156,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          146.0,
+          158.208817
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": 58044545,
+      "placement_id": -257052348,
+      "pattern_id": 4,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        19.29278564453125,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        7.059074
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          -2.587318,
+          16.705467
+        ]
+      ]
+    },
+    {
+      "section_id": 1070841935,
+      "placement_id": 1477230431,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.807717323303223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        20.690473556518555,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        39.358421
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          29.013184,
+          49.703659
+        ]
+      ]
+    },
+    {
+      "section_id": 822316697,
+      "placement_id": 1381030347,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        14.275514602661133,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        43.425156,
+        -9.725074
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          -16.862831,
+          -2.587317
+        ]
+      ]
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": 1002605846,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        16.64753532409668,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        23.105865,
+        41.37989
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          22.855865,
+          23.355865
+        ],
+        [
+          33.056122,
+          49.703659
+        ]
+      ]
+    },
+    {
+      "section_id": -1422583929,
+      "placement_id": -1120754412,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        -0.733847,
+        -0.679315
+      ],
+      "occ_size": [
+        15.746963500976562,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        28.803625,
+        56.211018
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          22.855865,
+          34.751385
+        ],
+        [
+          50.678986,
+          61.74305
+        ]
+      ]
+    },
+    {
+      "section_id": 1473952316,
+      "placement_id": 894703850,
+      "pattern_id": 3,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        12.0,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        5.402937
+      ],
+      "bounds": [
+        [
+          134.0,
+          146.0
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          2.652937,
+          8.152937
+        ]
+      ]
+    },
+    {
+      "section_id": 1168783893,
+      "placement_id": -580316583,
+      "pattern_id": 8,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        12.0,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        16.208813
+      ],
+      "bounds": [
+        [
+          134.0,
+          146.0
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          13.458813,
+          18.958813
+        ]
+      ]
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 730579662,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "primitive_id": 0,
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        28.088510513305664,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "run",
+      "center": [
+        140.0,
+        -0.45,
+        -14.044255
+      ],
+      "bounds": [
+        [
+          136.75,
+          143.25
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          -28.088511,
+          -0.0
+        ]
+      ]
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": -2069216938,
+      "pattern_id": 3,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        255.345352,
+        -13.791325,
+        -30.067635
+      ],
+      "bounds": [
+        [
+          252.595352,
+          258.095337
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -32.817635,
+          -27.317635
+        ]
+      ]
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": 961137697,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        218.559494,
+        -13.791325,
+        -30.067635
+      ],
+      "bounds": [
+        [
+          215.809494,
+          221.309494
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -32.817635,
+          -27.317635
+        ]
+      ]
+    },
+    {
+      "section_id": 1309886846,
+      "placement_id": 575131366,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.727446556091309,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        179.863541,
+        -13.791325,
+        -40.522438
+      ],
+      "bounds": [
+        [
+          177.113541,
+          182.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -43.272438,
+          -37.772438
+        ]
+      ]
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": -1212762056,
+      "pattern_id": 1,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        268.410492,
+        -13.791325,
+        -40.522438
+      ],
+      "bounds": [
+        [
+          265.660492,
+          271.160492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -43.272438,
+          -37.772438
+        ]
+      ]
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": 126377080,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        10.0,
+        8.0,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        268.410492,
+        -13.791325,
+        -143.269318
+      ],
+      "bounds": [
+        [
+          264.410492,
+          272.410492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -148.269318,
+          -138.269318
+        ]
+      ]
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": -295863275,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        268.410492,
+        -13.791325,
+        -76.001244
+      ],
+      "bounds": [
+        [
+          265.660492,
+          271.160492
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -78.751244,
+          -73.251244
+        ]
+      ]
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": -227770935,
+      "pattern_id": 6,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.739583,
+        0.0,
+        0.673066
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        163.012177,
+        -13.791325,
+        -208.708328
+      ],
+      "bounds": [
+        [
+          159.127396,
+          166.896957
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -212.593109,
+          -204.823547
+        ]
+      ]
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": 1039329567,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        179.863541,
+        -13.791325,
+        -175.021606
+      ],
+      "bounds": [
+        [
+          177.113541,
+          182.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -177.771606,
+          -172.271606
+        ]
+      ]
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 321879728,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        179.863541,
+        -13.791325,
+        -123.966476
+      ],
+      "bounds": [
+        [
+          177.113541,
+          182.613541
+        ],
+        [
+          -14.041325,
+          -13.541325
+        ],
+        [
+          -126.716476,
+          -121.216476
+        ]
+      ]
+    },
+    {
+      "section_id": 670041300,
+      "placement_id": 1953327873,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.181146621704102,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        -0.45,
+        71.321388
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          68.571388,
+          74.071388
+        ]
+      ]
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -1946497668,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 1,
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        10.0,
+        8.0,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        43.425156,
+        72.503799
+      ],
+      "bounds": [
+        [
+          136.0,
+          144.0
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          67.503799,
+          77.503799
+        ]
+      ]
+    },
+    {
+      "section_id": 847943270,
+      "placement_id": -44856651,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.627490997314453,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.5,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        43.425156,
+        141.518356
+      ],
+      "bounds": [
+        [
+          136.75,
+          143.25
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          137.768356,
+          145.268356
+        ]
+      ]
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": -1313057892,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.5,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        -0.45,
+        38.978233
+      ],
+      "bounds": [
+        [
+          136.75,
+          143.25
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          35.228233,
+          42.728233
+        ]
+      ]
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": 1095725614,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        7.5,
+        6.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        -0.45,
+        109.070656
+      ],
+      "bounds": [
+        [
+          136.75,
+          143.25
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          105.320656,
+          112.820656
+        ]
+      ]
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": -1713528871,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        169.298889,
+        43.425156,
+        -9.725075
+      ],
+      "bounds": [
+        [
+          166.548889,
+          172.048889
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          -12.475075,
+          -6.975075
+        ]
+      ]
+    },
+    {
+      "section_id": 1070841935,
+      "placement_id": 911938644,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.807717323303223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        43.425156,
+        19.455467
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          43.175156,
+          43.675156
+        ],
+        [
+          16.705467,
+          22.205467
+        ]
+      ]
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": -496926542,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        23.105865,
+        24.361752
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          22.855865,
+          23.355865
+        ],
+        [
+          21.611752,
+          27.111752
+        ]
+      ]
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 1287682350,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "primitive_id": 0,
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        5.5,
+        5.5,
+        0.5
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "receiving_catch",
+      "center": [
+        140.0,
+        -0.45,
+        -39.25
+      ],
+      "bounds": [
+        [
+          137.25,
+          142.75
+        ],
+        [
+          -0.7,
+          -0.2
+        ],
+        [
+          -42.0,
+          -36.5
+        ]
+      ]
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "primitive_id": 9,
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        140.71315002441406,
+        70.67308044433594,
+        0.6000000238418579
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "arena_floor",
+      "center": [
+        223.414749,
+        -13.741324,
+        -114.029007
+      ],
+      "bounds": [
+        [
+          188.078217,
+          258.751282
+        ],
+        [
+          -14.041325,
+          -13.441324
+        ],
+        [
+          -184.38559,
+          -43.672432
+        ]
+      ]
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "primitive_id": 9,
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        43.28700256347656,
+        40.889591217041016,
+        0.6000000238418579
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "arena_floor",
+      "center": [
+        -28.830688,
+        80.982681,
+        39.699547
+      ],
+      "bounds": [
+        [
+          -49.275482,
+          -8.385895
+        ],
+        [
+          80.682678,
+          81.282684
+        ],
+        [
+          18.056046,
+          61.343048
+        ]
+      ]
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "primitive_id": 9,
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        43.28700256347656,
+        40.889591217041016,
+        0.6000000238418579
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "arena_floor",
+      "center": [
+        -70.520294,
+        80.982681,
+        39.699547
+      ],
+      "bounds": [
+        [
+          -90.965088,
+          -50.0755
+        ],
+        [
+          80.682678,
+          81.282684
+        ],
+        [
+          18.056046,
+          61.343048
+        ]
+      ]
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "primitive_id": 9,
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.861664,
+        0.0,
+        0.507479
+      ],
+      "occ_size": [
+        109.70063781738281,
+        60.94225311279297,
+        0.6000000238418579
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "role": "arena_floor",
+      "center": [
+        93.878174,
+        80.982681,
+        88.906601
+      ],
+      "bounds": [
+        [
+          31.152161,
+          156.604187
+        ],
+        [
+          80.682678,
+          81.282684
+        ],
+        [
+          34.815338,
+          142.997864
+        ]
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "section_id": -704388152,
+      "placement_id": -631176435,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-631176435",
+      "position": [
+        223.414749,
+        -2.041325,
+        -114.029007
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": -57974701,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-57974701",
+      "position": [
+        -28.830688,
+        92.682678,
+        39.699547
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": -81712054,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-81712054",
+      "position": [
+        47.756348,
+        92.682678,
+        39.699551
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -1073126529,
+      "placement_id": 1848894305,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1073126529,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a1848894305",
+      "position": [
+        179.863495,
+        26.708698,
+        -9.7251
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": 796622390,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -834277879,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a796622390",
+      "position": [
+        140.0,
+        95.010201,
+        143.8694
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": -1208921668,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -834277879,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-1208921668",
+      "position": [
+        140.0,
+        83.925201,
+        143.8694
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 787065286,
+      "placement_id": -776659393,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 787065286,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-776659393",
+      "position": [
+        140.0,
+        106.0952,
+        168.273392
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": -512918926,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -745131948,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-512918926",
+      "position": [
+        140.0,
+        95.010201,
+        168.273392
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": -1247811142,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -745131948,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-1247811142",
+      "position": [
+        140.0,
+        83.925201,
+        168.273392
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": 109140860,
+      "pattern_id": 1,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1185291850,
+      "anchor_distance_from_approach": 8.700451850891113,
+      "anchor_height": 8.0,
+      "landing_distance": 8.000961303710938,
+      "id": "a109140860",
+      "position": [
+        268.410492,
+        -6.041325,
+        -34.985794
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": 1935153329,
+      "pattern_id": 5,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -635459283,
+      "anchor_distance_from_approach": 14.495892524719238,
+      "anchor_height": 8.0,
+      "landing_distance": 11.545135498046875,
+      "id": "a1935153329",
+      "position": [
+        268.410492,
+        -6.041325,
+        -129.492065
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": 1715234432,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1864509902,
+      "anchor_distance_from_approach": 8.861909866333008,
+      "anchor_height": 8.0,
+      "landing_distance": 8.084015846252441,
+      "id": "a1715234432",
+      "position": [
+        268.410492,
+        -6.041325,
+        -70.234406
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": 1572392510,
+      "pattern_id": 6,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.7395825982093811,
+        -0.0,
+        0.6730658411979675
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1859869567,
+      "anchor_distance_from_approach": 8.941106796264648,
+      "anchor_height": 8.0,
+      "landing_distance": 8.125386238098145,
+      "id": "a1572392510",
+      "position": [
+        158.666382,
+        -6.041325,
+        -212.663269
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": -1939211050,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -520004597,
+      "anchor_distance_from_approach": 8.52199935913086,
+      "anchor_height": 8.0,
+      "landing_distance": 7.911418437957764,
+      "id": "a-1939211050",
+      "position": [
+        179.863541,
+        -6.041325,
+        -118.698433
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 1133346014,
+      "placement_id": 1505510936,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.765142440795898,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1133346014,
+      "anchor_distance_from_approach": 9.10026741027832,
+      "anchor_height": 8.0,
+      "landing_distance": 8.209689140319824,
+      "id": "a1505510936",
+      "position": [
+        140.0,
+        88.682678,
+        124.909172
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": 2002252482,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 173401953,
+      "anchor_distance_from_approach": 14.684943199157715,
+      "anchor_height": 7.66342306137085,
+      "landing_distance": 11.57189655303955,
+      "id": "a2002252482",
+      "position": [
+        140.0,
+        50.838577,
+        86.591934
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": 1223023721,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 593133798,
+      "anchor_distance_from_approach": 11.508529663085938,
+      "anchor_height": 8.0,
+      "landing_distance": 9.61330509185791,
+      "id": "a1223023721",
+      "position": [
+        140.0,
+        7.3,
+        48.74202
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": -483589511,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1552535640,
+      "anchor_distance_from_approach": 12.097670555114746,
+      "anchor_height": 8.0,
+      "landing_distance": 9.981900215148926,
+      "id": "a-483589511",
+      "position": [
+        140.0,
+        7.3,
+        119.407639
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": -582146785,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1373996401,
+      "anchor_distance_from_approach": 9.292339324951172,
+      "anchor_height": 8.0,
+      "landing_distance": 8.31330394744873,
+      "id": "a-582146785",
+      "position": [
+        162.962646,
+        51.175156,
+        -9.725075
+      ],
+      "role": "optional_helper"
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": -209048035,
+      "pattern_id": 5,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 383476316,
+      "anchor_distance_from_approach": 8.54659652709961,
+      "anchor_height": 8.0,
+      "landing_distance": 7.923606872558594,
+      "id": "a-209048035",
+      "position": [
+        140.0,
+        30.855865,
+        29.667831
+      ],
+      "role": "optional_helper"
+    }
+  ],
+  "targets": [
+    {
+      "section_id": -1073126529,
+      "placement_id": 609261589,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p609261589_0",
+      "type": "LANDING",
+      "position": [
+        183.458252,
+        23.872274,
+        -8.634728
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -1073126529,
+      "placement_id": -23498875,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-23498875_0",
+      "type": "LANDING",
+      "position": [
+        176.268753,
+        12.295455,
+        -9.885347
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -1726695304,
+      "placement_id": 1425706307,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1425706307_0",
+      "type": "LANDING",
+      "position": [
+        137.240005,
+        106.990761,
+        121.225716
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": 450365540,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p450365540_0",
+      "type": "LANDING",
+      "position": [
+        142.759995,
+        80.646507,
+        144.089661
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -1685087441,
+      "placement_id": 183383862,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p183383862_0",
+      "type": "LANDING",
+      "position": [
+        142.759995,
+        80.873779,
+        156.012894
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": 787065286,
+      "placement_id": -345098241,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-345098241_0",
+      "type": "LANDING",
+      "position": [
+        142.759995,
+        102.784195,
+        167.373352
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": 707631292,
+      "placement_id": 170621601,
+      "pattern_id": 11,
+      "primitive_role": 7,
+      "role": "vertical_pad",
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p170621601_0",
+      "type": "LANDING",
+      "position": [
+        142.759995,
+        58.968426,
+        144.740997
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -964803255,
+      "placement_id": 1260297589,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "role": "vertical_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1260297589_0",
+      "type": "WALLRUN",
+      "position": [
+        145.649994,
+        104.295197,
+        156.071396
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": 1876855307,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "role": "vertical_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1876855307_0",
+      "type": "WALLRUN",
+      "position": [
+        145.649994,
+        82.125198,
+        168.273392
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": 1559476479,
+      "placement_id": 1579656288,
+      "pattern_id": 11,
+      "primitive_role": 8,
+      "role": "vertical_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1579656288_0",
+      "type": "WALLRUN",
+      "position": [
+        145.649994,
+        59.9552,
+        168.273392
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": true,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1522595557,
+      "pattern_id": 10,
+      "primitive_role": 4,
+      "role": "ramp",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1522595557_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        205.546478,
+        -6.168761,
+        -155.69754
+      ],
+      "normal": [
+        0.0,
+        0.573576,
+        0.819152
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -573080090,
+      "pattern_id": 10,
+      "primitive_role": 4,
+      "role": "ramp",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-573080090_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        -80.942688,
+        87.628075,
+        25.571024
+      ],
+      "normal": [
+        0.0,
+        0.573576,
+        0.819152
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": 928579041,
+      "pattern_id": 5,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p928579041_0",
+      "type": "LANDING",
+      "position": [
+        193.779236,
+        -9.849824,
+        -26.567635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": 1205415686,
+      "pattern_id": 3,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1205415686_0",
+      "type": "LANDING",
+      "position": [
+        237.489349,
+        -6.584733,
+        -33.567635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -1054152039,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1054152039_0",
+      "type": "WALLRUN",
+      "position": [
+        -90.065079,
+        84.974197,
+        49.398689
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": -1712212940,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1712212940_0",
+      "type": "WALLRUN",
+      "position": [
+        258.451294,
+        -10.191825,
+        -147.992157
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": -1313090987,
+      "pattern_id": 10,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1313090987_0",
+      "type": "WALLRUN",
+      "position": [
+        -50.375504,
+        84.967949,
+        29.118668
+      ],
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -2146804805,
+      "pattern_id": 5,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 1,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-2146804805_0",
+      "type": "WALLRUN",
+      "position": [
+        264.802094,
+        -10.99169,
+        -97.526917
+      ],
+      "normal": [
+        0.99981,
+        0.0,
+        -0.019466
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -795210033,
+      "pattern_id": 6,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-795210033_0",
+      "type": "WALLRUN",
+      "position": [
+        179.535889,
+        -11.17889,
+        -5.855809
+      ],
+      "normal": [
+        -0.060244,
+        0.0,
+        0.998184
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 58044545,
+      "placement_id": -2108967090,
+      "pattern_id": 4,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-2108967090_0",
+      "type": "WALLRUN",
+      "position": [
+        136.746765,
+        46.596542,
+        7.436462
+      ],
+      "normal": [
+        0.999426,
+        0.0,
+        -0.033871
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": 730664660,
+      "pattern_id": 5,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p730664660_0",
+      "type": "WALLRUN",
+      "position": [
+        136.528091,
+        25.514977,
+        41.694729
+      ],
+      "normal": [
+        0.997372,
+        0.0,
+        -0.072446
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -1286713546,
+      "pattern_id": 6,
+      "primitive_role": 2,
+      "role": "edge_wall",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1286713546_0",
+      "type": "WALLRUN",
+      "position": [
+        180.972656,
+        -11.17889,
+        -13.095249
+      ],
+      "normal": [
+        0.060244,
+        0.0,
+        0.998184
+      ],
+      "radius": 2.2,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 486975069,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p486975069_0",
+      "type": "LANDING",
+      "position": [
+        202.687561,
+        -6.310141,
+        -77.235588
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 486975069,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p486975069_1",
+      "type": "LANDING",
+      "position": [
+        202.358353,
+        -6.310141,
+        -67.35907
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 486975069,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p486975069_2",
+      "type": "LANDING",
+      "position": [
+        203.016754,
+        -6.310141,
+        -87.112106
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": -1500842031,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1500842031_0",
+      "type": "LANDING",
+      "position": [
+        -40.92067,
+        87.111427,
+        51.16217
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 536922954,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p536922954_0",
+      "type": "LANDING",
+      "position": [
+        -82.610275,
+        86.206352,
+        51.16217
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": 1751532293,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1751532293_0",
+      "type": "LANDING",
+      "position": [
+        18.770378,
+        86.635399,
+        26.914324
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": 1751532293,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1751532293_1",
+      "type": "LANDING",
+      "position": [
+        8.889587,
+        86.635399,
+        26.759815
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": 1751532293,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1751532293_2",
+      "type": "LANDING",
+      "position": [
+        28.651169,
+        86.635399,
+        27.068829
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 475722170,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p475722170_0",
+      "type": "LANDING",
+      "position": [
+        78.208954,
+        87.432793,
+        58.898327
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 475722170,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p475722170_1",
+      "type": "LANDING",
+      "position": [
+        69.699387,
+        87.432793,
+        53.874268
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 475722170,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p475722170_2",
+      "type": "LANDING",
+      "position": [
+        86.718521,
+        87.432793,
+        63.922386
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 392281000,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p392281000_0",
+      "type": "LANDING",
+      "position": [
+        -16.740707,
+        89.91143,
+        31.763887
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": 1932273478,
+      "pattern_id": 10,
+      "primitive_role": 3,
+      "role": "raised_platform",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1932273478_0",
+      "type": "LANDING",
+      "position": [
+        95.253479,
+        90.232788,
+        100.585922
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -259332885,
+      "placement_id": 1001306668,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1001306668_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        258.623322,
+        -13.541325,
+        -30.067635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": -1777533875,
+      "pattern_id": 3,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-1777533875_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        232.866547,
+        -13.541325,
+        -30.067635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": -1368584670,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-1368584670_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        197.846588,
+        -13.541325,
+        -30.067635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1309886846,
+      "placement_id": 1613129560,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.727446556091309,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1613129560_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -23.953911
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": -1596241446,
+      "pattern_id": 1,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-1596241446_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -24.077351
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1003787041,
+      "placement_id": 919112121,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p919112121_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -166.527451
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1003787041,
+      "placement_id": 919112121,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p919112121_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -155.572571
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1003787041,
+      "placement_id": 919112121,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p919112121_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -177.48233
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -1171925259,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-1171925259_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -98.304169
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -1171925259,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-1171925259_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -86.572411
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": -1171925259,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-1171925259_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -110.035927
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": -979806650,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-979806650_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        268.410492,
+        -13.541325,
+        -54.753887
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": 1830556411,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1830556411_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        147.023422,
+        -13.541325,
+        -223.259079
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1195378419,
+      "placement_id": -1393461298,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1393461298_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -181.278595
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": -283850653,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-283850653_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -146.524261
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": -283850653,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-283850653_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -134.639587
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": -283850653,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-283850653_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -158.408936
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 302801710,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p302801710_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -79.316498
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 302801710,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p302801710_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -57.690056
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 302801710,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p302801710_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -100.94294
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1684089661,
+      "placement_id": -1223539206,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1223539206_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        182.468445,
+        -13.541325,
+        -190.510223
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1133346014,
+      "placement_id": 377548733,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.765142440795898,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p377548733_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        81.182678,
+        133.551834
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 670041300,
+      "placement_id": -899136762,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.181146621704102,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-899136762_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        85.013931
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -416562162,
+      "placement_id": 979141001,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p979141001_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        64.623428
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -28219017,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-28219017_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        118.203682
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -28219017,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-28219017_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        129.942505
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -28219017,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-28219017_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        106.464867
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 847943270,
+      "placement_id": 1256615457,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.627490997314453,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p1256615457_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        166.635117
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 483207176,
+      "placement_id": -251136160,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-251136160_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        28.419991
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": 1304486378,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p1304486378_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        62.64259
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 160900389,
+      "placement_id": 80488148,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p80488148_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        97.547997
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": -2031996221,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p-2031996221_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        133.354324
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -921800817,
+      "placement_id": 575579054,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p575579054_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        187.256317,
+        103.000633,
+        -9.725075
+      ],
+      "normal": [
+        -0.707107,
+        0.707107,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1702150185,
+      "placement_id": -1328595178,
+      "pattern_id": 2,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1328595178_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        170.918625,
+        86.662949,
+        -9.725074
+      ],
+      "normal": [
+        -0.707107,
+        0.707107,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -232234515,
+      "placement_id": -613309666,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-613309666_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        158.500275,
+        74.244591,
+        -9.725074
+      ],
+      "normal": [
+        -0.707107,
+        0.707107,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -12851134,
+      "placement_id": 544966055,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p544966055_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        150.056686,
+        65.80101,
+        -9.725075
+      ],
+      "normal": [
+        -0.707107,
+        0.707107,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 29246183,
+      "placement_id": -1029678827,
+      "pattern_id": 6,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1029678827_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        179.863541,
+        -13.541325,
+        -9.725075
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": 387573549,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p387573549_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        152.104416,
+        43.675156,
+        -9.725075
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 58044545,
+      "placement_id": -257052348,
+      "pattern_id": 4,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-257052348_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        7.059074
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1070841935,
+      "placement_id": 1477230431,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.807717323303223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1477230431_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        39.358421
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 822316697,
+      "placement_id": 1381030347,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1381030347_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        43.675156,
+        -9.725074
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": 1002605846,
+      "pattern_id": 5,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1002605846_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        23.355865,
+        41.37989
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1422583929,
+      "placement_id": -1120754412,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-1120754412_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        28.973454,
+        56.027557
+      ],
+      "normal": [
+        0.0,
+        0.679315,
+        -0.733847
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1473952316,
+      "placement_id": 894703850,
+      "pattern_id": 3,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p894703850_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        5.402937
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1168783893,
+      "placement_id": -580316583,
+      "pattern_id": 8,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 1,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-580316583_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        16.208813
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 730579662,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p730579662_0",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        -14.044254
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 730579662,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p730579662_1",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        -5.617701
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 730579662,
+      "pattern_id": 0,
+      "primitive_role": 0,
+      "role": "run",
+      "primitive_scale_class": 2,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p730579662_2",
+      "type": "PASS_THROUGH",
+      "position": [
+        140.0,
+        -0.2,
+        -22.47081
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1922218180,
+      "placement_id": -2069216938,
+      "pattern_id": 3,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.171773910522461,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-2069216938_0",
+      "type": "LANDING",
+      "position": [
+        255.345352,
+        -13.541325,
+        -30.067635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1071770905,
+      "placement_id": 961137697,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.794536590576172,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p961137697_0",
+      "type": "LANDING",
+      "position": [
+        218.559494,
+        -13.541325,
+        -30.067635
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1309886846,
+      "placement_id": 575131366,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.727446556091309,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p575131366_0",
+      "type": "LANDING",
+      "position": [
+        179.863541,
+        -13.541325,
+        -40.522438
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": -1212762056,
+      "pattern_id": 1,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-1212762056_0",
+      "type": "LANDING",
+      "position": [
+        268.410492,
+        -13.541325,
+        -40.522438
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": 126377080,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p126377080_0",
+      "type": "LANDING",
+      "position": [
+        268.410492,
+        -13.541325,
+        -143.269318
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": -295863275,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-295863275_0",
+      "type": "LANDING",
+      "position": [
+        268.410492,
+        -13.541325,
+        -76.001244
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": -227770935,
+      "pattern_id": 6,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-227770935_0",
+      "type": "LANDING",
+      "position": [
+        163.012177,
+        -13.541325,
+        -208.708328
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 680061492,
+      "placement_id": 1039329567,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.939572334289551,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1039329567_0",
+      "type": "LANDING",
+      "position": [
+        179.863541,
+        -13.541325,
+        -175.021606
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": 321879728,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p321879728_0",
+      "type": "LANDING",
+      "position": [
+        179.863541,
+        -13.541325,
+        -123.966476
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 670041300,
+      "placement_id": 1953327873,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.181146621704102,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1953327873_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        -0.2,
+        71.321388
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": -1946497668,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 2,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "id": "p-1946497668_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        43.675156,
+        72.503799
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 847943270,
+      "placement_id": -44856651,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.627490997314453,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p-44856651_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        43.675156,
+        141.518356
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": -1313057892,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p-1313057892_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        -0.2,
+        38.978233
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": 1095725614,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "id": "p1095725614_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        -0.2,
+        109.070656
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": -1713528871,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-1713528871_0",
+      "type": "LANDING",
+      "position": [
+        169.298889,
+        43.675156,
+        -9.725075
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1070841935,
+      "placement_id": 911938644,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 6.807717323303223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p911938644_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        43.675156,
+        19.455467
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": -496926542,
+      "pattern_id": 5,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p-496926542_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        23.355865,
+        24.361752
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -221334023,
+      "placement_id": 1287682350,
+      "pattern_id": 0,
+      "primitive_role": 1,
+      "role": "receiving_catch",
+      "primitive_scale_class": 1,
+      "span_class": 1,
+      "span_distance": 8.411489486694336,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "id": "p1287682350_0",
+      "type": "LANDING",
+      "position": [
+        140.0,
+        -0.2,
+        -39.25
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1475924762_0",
+      "type": "LANDING",
+      "position": [
+        223.414749,
+        -13.441324,
+        -114.029007
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1475924762_1",
+      "type": "LANDING",
+      "position": [
+        243.203217,
+        -13.441324,
+        -74.629326
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1475924762_2",
+      "type": "LANDING",
+      "position": [
+        203.626282,
+        -13.441324,
+        -74.629333
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1475924762_3",
+      "type": "LANDING",
+      "position": [
+        243.203217,
+        -13.441324,
+        -153.42868
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": 1475924762,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1475924762_4",
+      "type": "LANDING",
+      "position": [
+        235.193604,
+        -13.441325,
+        -137.481201
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1693554132_0",
+      "type": "LANDING",
+      "position": [
+        -28.830688,
+        81.282684,
+        39.699547
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1693554132_1",
+      "type": "LANDING",
+      "position": [
+        -17.381607,
+        81.282684,
+        51.819908
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1693554132_2",
+      "type": "LANDING",
+      "position": [
+        -40.27977,
+        81.282684,
+        51.819912
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1693554132_3",
+      "type": "LANDING",
+      "position": [
+        -17.381607,
+        81.282684,
+        27.579185
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": 1693554132,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1693554132_4",
+      "type": "LANDING",
+      "position": [
+        -40.27977,
+        81.282684,
+        27.579187
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1708252142_0",
+      "type": "LANDING",
+      "position": [
+        -70.520294,
+        81.282684,
+        39.699547
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1708252142_1",
+      "type": "LANDING",
+      "position": [
+        -59.071213,
+        81.282684,
+        51.819908
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1708252142_2",
+      "type": "LANDING",
+      "position": [
+        -81.969376,
+        81.282684,
+        51.819912
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1708252142_3",
+      "type": "LANDING",
+      "position": [
+        -59.071213,
+        81.282684,
+        27.579185
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -878138220,
+      "placement_id": 1708252142,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p1708252142_4",
+      "type": "LANDING",
+      "position": [
+        -81.969376,
+        81.282684,
+        27.579187
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-995670338_0",
+      "type": "LANDING",
+      "position": [
+        93.878166,
+        81.282684,
+        88.906593
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-995670338_1",
+      "type": "LANDING",
+      "position": [
+        55.197205,
+        81.282684,
+        73.900513
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-995670338_2",
+      "type": "LANDING",
+      "position": [
+        76.070679,
+        81.282684,
+        58.615494
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-995670338_3",
+      "type": "LANDING",
+      "position": [
+        129.987061,
+        81.282684,
+        108.922577
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": 1218155971,
+      "placement_id": -995670338,
+      "pattern_id": 10,
+      "primitive_role": 6,
+      "role": "arena_floor",
+      "primitive_scale_class": 3,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "id": "p-995670338_4",
+      "type": "LANDING",
+      "position": [
+        126.984024,
+        81.282684,
+        96.876099
+      ],
+      "normal": [
+        0.0,
+        1.0,
+        -0.0
+      ],
+      "radius": 2.5,
+      "vertical": false,
+      "arena": true
+    },
+    {
+      "section_id": -704388152,
+      "placement_id": -631176435,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-631176435",
+      "position": [
+        223.414749,
+        -2.041325,
+        -114.029007
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -2144986013,
+      "placement_id": -57974701,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-57974701",
+      "position": [
+        -28.830688,
+        92.682678,
+        39.699547
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1887306958,
+      "placement_id": -81712054,
+      "pattern_id": 10,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 0,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-81712054",
+      "position": [
+        47.756348,
+        92.682678,
+        39.699551
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1073126529,
+      "placement_id": 1848894305,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1073126529,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a1848894305",
+      "position": [
+        179.863495,
+        26.708698,
+        -9.7251
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": 796622390,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -834277879,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a796622390",
+      "position": [
+        140.0,
+        95.010201,
+        143.8694
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -834277879,
+      "placement_id": -1208921668,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -834277879,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-1208921668",
+      "position": [
+        140.0,
+        83.925201,
+        143.8694
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 787065286,
+      "placement_id": -776659393,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 787065286,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-776659393",
+      "position": [
+        140.0,
+        106.0952,
+        168.273392
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": -512918926,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -745131948,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-512918926",
+      "position": [
+        140.0,
+        95.010201,
+        168.273392
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -745131948,
+      "placement_id": -1247811142,
+      "pattern_id": 11,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 0,
+      "span_distance": 0.0,
+      "grapple_required": false,
+      "required_traversal": 0,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -745131948,
+      "anchor_distance_from_approach": 0.0,
+      "anchor_height": 0.0,
+      "landing_distance": 0.0,
+      "id": "a-1247811142",
+      "position": [
+        140.0,
+        83.925201,
+        168.273392
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1185291850,
+      "placement_id": 109140860,
+      "pattern_id": 1,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 6.480568885803223,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1185291850,
+      "anchor_distance_from_approach": 8.700451850891113,
+      "anchor_height": 8.0,
+      "landing_distance": 8.000961303710938,
+      "id": "a109140860",
+      "position": [
+        268.410492,
+        -6.041325,
+        -34.985794
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -635459283,
+      "placement_id": 1935153329,
+      "pattern_id": 5,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 3,
+      "span_distance": 20.412214279174805,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -635459283,
+      "anchor_distance_from_approach": 14.495892524719238,
+      "anchor_height": 8.0,
+      "landing_distance": 11.545135498046875,
+      "id": "a1935153329",
+      "position": [
+        268.410492,
+        -6.041325,
+        -129.492065
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -1864509902,
+      "placement_id": 1715234432,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.015896797180176,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -1864509902,
+      "anchor_distance_from_approach": 8.861909866333008,
+      "anchor_height": 8.0,
+      "landing_distance": 8.084015846252441,
+      "id": "a1715234432",
+      "position": [
+        268.410492,
+        -6.041325,
+        -70.234406
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1859869567,
+      "placement_id": 1572392510,
+      "pattern_id": 6,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.269783973693848,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.7395825982093811,
+        -0.0,
+        0.6730658411979675
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1859869567,
+      "anchor_distance_from_approach": 8.941106796264648,
+      "anchor_height": 8.0,
+      "landing_distance": 8.125386238098145,
+      "id": "a1572392510",
+      "position": [
+        158.666382,
+        -6.041325,
+        -212.663269
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": -520004597,
+      "placement_id": -1939211050,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 5.855912208557129,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": -520004597,
+      "anchor_distance_from_approach": 8.52199935913086,
+      "anchor_height": 8.0,
+      "landing_distance": 7.911418437957764,
+      "id": "a-1939211050",
+      "position": [
+        179.863541,
+        -6.041325,
+        -118.698433
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1133346014,
+      "placement_id": 1505510936,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 7.765142440795898,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1133346014,
+      "anchor_distance_from_approach": 9.10026741027832,
+      "anchor_height": 8.0,
+      "landing_distance": 8.209689140319824,
+      "id": "a1505510936",
+      "position": [
+        140.0,
+        88.682678,
+        124.909172
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 173401953,
+      "placement_id": 2002252482,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 3,
+      "span_distance": 21.13518524169922,
+      "grapple_required": false,
+      "required_traversal": 3,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 173401953,
+      "anchor_distance_from_approach": 14.684943199157715,
+      "anchor_height": 7.66342306137085,
+      "landing_distance": 11.57189655303955,
+      "id": "a2002252482",
+      "position": [
+        140.0,
+        50.838577,
+        86.591934
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 593133798,
+      "placement_id": 1223023721,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 2,
+      "span_distance": 13.98554515838623,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 593133798,
+      "anchor_distance_from_approach": 11.508529663085938,
+      "anchor_height": 8.0,
+      "landing_distance": 9.61330509185791,
+      "id": "a1223023721",
+      "position": [
+        140.0,
+        7.3,
+        48.74202
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1552535640,
+      "placement_id": -483589511,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 2,
+      "span_distance": 15.318573951721191,
+      "grapple_required": false,
+      "required_traversal": 2,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1552535640,
+      "anchor_distance_from_approach": 12.097670555114746,
+      "anchor_height": 8.0,
+      "landing_distance": 9.981900215148926,
+      "id": "a-483589511",
+      "position": [
+        140.0,
+        7.3,
+        119.407639
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 1373996401,
+      "placement_id": -582146785,
+      "pattern_id": 0,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 8.34006118774414,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 1373996401,
+      "anchor_distance_from_approach": 9.292339324951172,
+      "anchor_height": 8.0,
+      "landing_distance": 8.31330394744873,
+      "id": "a-582146785",
+      "position": [
+        162.962646,
+        51.175156,
+        -9.725075
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    },
+    {
+      "section_id": 383476316,
+      "placement_id": -209048035,
+      "pattern_id": 5,
+      "primitive_role": 10,
+      "primitive_id": 0,
+      "primitive_scale_class": 0,
+      "span_class": 1,
+      "span_distance": 5.944372177124023,
+      "grapple_required": false,
+      "required_traversal": 1,
+      "local_forward": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "occ_size": [
+        0.47999998927116394,
+        0.47999998927116394,
+        0.47999998927116394
+      ],
+      "source_span": 383476316,
+      "anchor_distance_from_approach": 8.54659652709961,
+      "anchor_height": 8.0,
+      "landing_distance": 7.923606872558594,
+      "id": "a-209048035",
+      "position": [
+        140.0,
+        30.855865,
+        29.667831
+      ],
+      "role": "optional_helper",
+      "type": "GRAPPLE",
+      "radius": 0,
+      "vertical": false,
+      "arena": false
+    }
+  ],
+  "omitted_target_regions": [
+    {
+      "placement_id": 1998271304,
+      "region": 0,
+      "reason": "no supported landing footprint on surviving face"
+    }
+  ],
+  "schema_version": 1,
+  "created_utc": "2026-09-21T04:26:55.749218+03:00",
+  "source": "Assets/Levels/Level_Freestyle_01/Source/Level_Freestyle_01.blend",
+  "source_proxy_sha256": "473ad0d485dc17b7b8303f86d6586b6b5bfa070fbd3281a4a35235ef83cd5002",
+  "proxy_vertices": 162,
+  "proxy_faces": 159,
+  "controls": {
+    "Seed": 17,
+    "Density": 0.58,
+    "Verticality": 0.72,
+    "Openness": 0.7,
+    "Route Complexity": 0.55,
+    "Traversal Difficulty": 0.4,
+    "Wallrun Bias": 0.6,
+    "Slide Bias": 0.3,
+    "Grapple Bias": 0.65,
+    "Ramp Presence": 0.4,
+    "Ramp Steepness": 55.0,
+    "Orientation Randomness": 8.0,
+    "Platform Density": 0.65,
+    "Preview Quality": 0,
+    "Use Cutter": false,
+    "Length Variation": 0.82,
+    "Debug Span Colors": false,
+    "Debug Placement Volumes": false
+  },
+  "geometry_sha256": "c329956d91d73cee90cab89ebf5422f0cb3790e66266aaa6941309edb43448e7",
+  "vertices": 729,
+  "polygons": 543,
+  "triangles": 1106,
+  "bounds": [
+    [
+      -90.965088,
+      272.410492
+    ],
+    [
+      -14.041325,
+      110.953316
+    ],
+    [
+      -233.099701,
+      174.37439
+    ]
+  ],
+  "coordinates": "Godot world meters: Blender (x,y,z) -> (x,z,-y); source world transform baked",
+  "collision": "StaticBody3D + ConcavePolygonShape3D from every imported visual triangle",
+  "coverage_semantics": "Representative final-surface targets, not a reachability proof",
+  "preserved_spawn": [
+    140,
+    0.05,
+    5.4
+  ],
+  "spawn_surface_below": [
+    140,
+    -0.2,
+    5.4
+  ],
+  "glb_sha256": "c8212650342170691be541a436bb51dd7059a8e8eb3c8002101e99fa06ec59b9",
+  "source_file_sha256": "a2ddb29d1a75c794874e7c1a018909133783663b886da09cac39aa425349b56a",
+  "spawn_change_authorization": "User explicitly approved lower runway spawn (140, 0.05, 5.40); verified grounded in Godot."
+}

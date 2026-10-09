@@ -1,0 +1,57 @@
+V05 — LOCAL PROXY VARIETY
+
+File: Assets/Levels/Level_Freestyle_01/Source/Level_Freestyle_01.blend
+Group: GN_LevelProxyGenerator_v05
+
+1. Выберите LEVEL_PROXY → Tab → обычные Extrude / Move / Rotate / Scale.
+   Macro shape задаёт только ваш mesh. Python не переписывает его topology.
+2. Параметры: N → V05 Local. Если панель не появилась после открытия файла:
+   Object Properties → Custom Properties. Генератор работает без Auto Run Python.
+   Необязательный Text V05_CONTROLS_PANEL.py восстанавливает удобную панель.
+3. Length Variation: 0 — почти одинаковые беговые участки; 1 — сильный ритм.
+   Default 0.82. Длина участка и прыжковый gap — разные величины.
+4. Для заметного ритма сделайте длинный горизонтальный extrusion, 150–300+ m.
+   Сравните Seeds 17 / 42 / 73. Маленький proxy не заставляется вмещать большой gap.
+5. Включите Debug Span Colors:
+   BLUE = BASIC_JUMP, GREEN = AIR_JUMP,
+   ORANGE = NEAR_LIMIT, MAGENTA = GRAPPLE_REQUIRED.
+   Серый = непрерывный участок / vertical motif. Default — нейтральный blockout.
+6. Маленькие жёлтые markers — OPTIONAL_GRAPPLE.
+   Крупные розовые markers — REQUIRED_GRAPPLE; они остаются при Grapple Bias = 0.
+7. Use Cutter включает локальное вычитание прежним LEVEL_CUTTER.
+   Если Cutter перекрывает обязательный marker или защищённую catch-зону,
+   исходный D-span понижается до Basic и gap сокращается.
+8. Preview Quality: 0 Manifold / 1 Exact. Оба режима пересекают результат
+   с настоящим закрытым proxy mesh. Никакого global bounding-box layout.
+9. Библиотека: hidden collection V05_GAMEPLAY_MESH_LIBRARY, 42 distinct meshes.
+   Обзор: Docs/Reviews/LocalProxyV05/V05_LIBRARY_OVERVIEW.png.
+10. Пройдите V05_MANUAL_TEST_CHECKLIST. Human / hotkey test ещё не выполнен.
+
+ПРОВЕРЕННЫЕ HORIZONTAL METRICS
+Standing: 8.534 m; running: 12.505 m; air/double: 23.035 m;
+slide-jump: 14.741 m; grapple acquisition: 50 m.
+Source hashes совпали с verified snapshot, Godot не запускался.
+
+SPAN BANDS
+BASIC_JUMP: 5.627–8.754 m.
+AIR_JUMP: 13.360–17.967 m.
+NEAR_LIMIT: 19.350–21.653 m.
+GRAPPLE_REQUIRED: 25.339–33.401 m + обязательный candidate + catch.
+Это spatial intent, не gameplay guarantee.
+
+НАПОМИНАНИЯ
+• Closed manifold volume, normals наружу, без внутренних caps/самопересечений.
+• Обычный Extrude не требует ручного восстановления caps.
+• Delete одной грани открывает volume: output пуст до исправления / Undo.
+• Quad extrusion — основной случай. Complex n-gons могут давать underfill.
+• Append новой секции сохраняет старые untouched patches и их variant choice.
+  Изменение самого patch / subdivide / dissolve может изменить его наполнение.
+• Измеренные jump bands применяются к почти горизонтальным frames.
+  Наклонные patches получают непрерывный speed/descent fill: наклонная длина
+  не выдаётся за подтверждённую дальность горизонтального прыжка.
+• Метрическая настройка — 1 unit = 1 m и Object Scale (1,1,1).
+• Основной fit library shapes — uniform 0.65–1.35; слишком большой shape
+  пропускается, используются повторения и нейтральные metric connectors.
+  Ramps имеют отдельную контролируемую X-компрессию для 45–70°.
+• V04 и предыдущие версии сохранены hidden/reference.
+• No CU, no Godot export/collision/anchors, no commit/push.

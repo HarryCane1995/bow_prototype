@@ -1,0 +1,590 @@
+[
+  {
+    "id": 0,
+    "family": "LANDING",
+    "name": "rectangle",
+    "object": "V05_LIB_00_LANDING_rectangle",
+    "dimensions": [
+      10.0,
+      7.0,
+      0.5
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "dea9f2b1f946b1e7b2d6e4222ff53c4fbb05559bd0d574ab638cd74e0145e956"
+  },
+  {
+    "id": 1,
+    "family": "LANDING",
+    "name": "trapezoid",
+    "object": "V05_LIB_01_LANDING_trapezoid",
+    "dimensions": [
+      10.0,
+      8.600000381469727,
+      0.5
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "0b0a97f23c030f87f4ae75adb7355e68a74fc00eca14f7fadad34d9b40ffe9a5"
+  },
+  {
+    "id": 2,
+    "family": "LANDING",
+    "name": "clipped_corners",
+    "object": "V05_LIB_02_LANDING_clipped_corners",
+    "dimensions": [
+      12.0,
+      8.0,
+      0.5
+    ],
+    "vertices": 16,
+    "faces": 10,
+    "normalized_geometry_hash": "87f4298e28500444a5d27628120d383ab63266f52d2d3412e074fe2e12702200"
+  },
+  {
+    "id": 3,
+    "family": "LANDING",
+    "name": "asymmetric_bay",
+    "object": "V05_LIB_03_LANDING_asymmetric_bay",
+    "dimensions": [
+      10.0,
+      9.300000190734863,
+      0.5
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "ac234dcebf10c57b8fe2a06726517960896ce57d25a6374221306d2048403cfd"
+  },
+  {
+    "id": 4,
+    "family": "LANDING",
+    "name": "L_pocket",
+    "object": "V05_LIB_04_LANDING_L_pocket",
+    "dimensions": [
+      10.0,
+      8.0,
+      0.5
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "268f0b8fe9dbd728f6d4f0d9252fa692b9402a9fb3c806e183dc53b8e819bd4f"
+  },
+  {
+    "id": 5,
+    "family": "LANDING",
+    "name": "split_recovery",
+    "object": "V05_LIB_05_LANDING_split_recovery",
+    "dimensions": [
+      9.5,
+      9.600000381469727,
+      0.5
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "941634beefafaa1c69bf9cabed45d348edfac8bb2e5ce000dc6410d340d0d0c4"
+  },
+  {
+    "id": 6,
+    "family": "PLATFORM",
+    "name": "hex_pad",
+    "object": "V05_LIB_06_PLATFORM_hex_pad",
+    "dimensions": [
+      6.5,
+      5.799999952316284,
+      0.5
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "50104d98fcc97fb58e85a00c101e3ec16122bfccc5411f44b5d741747a736a02"
+  },
+  {
+    "id": 7,
+    "family": "PLATFORM",
+    "name": "tri_cut_pad",
+    "object": "V05_LIB_07_PLATFORM_tri_cut_pad",
+    "dimensions": [
+      7.0,
+      5.5,
+      0.5
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "33a5464bd1037548b1eee74a97f4600f75c89c69ef4fdbcd54981eeebf666d52"
+  },
+  {
+    "id": 8,
+    "family": "PLATFORM",
+    "name": "boomerang",
+    "object": "V05_LIB_08_PLATFORM_boomerang",
+    "dimensions": [
+      8.0,
+      6.0,
+      0.5
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "0124f6516abb491177f9eb24b19a86631a451c4723d2852839823ba8461f8e12"
+  },
+  {
+    "id": 9,
+    "family": "PLATFORM",
+    "name": "offset_double",
+    "object": "V05_LIB_09_PLATFORM_offset_double",
+    "dimensions": [
+      9.300000190734863,
+      7.700000047683716,
+      0.949999988079071
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "33a3e1a7d52c2cdfb4b2248cda6dda691f413d1445157f29fa0f2f0d9c2c009f"
+  },
+  {
+    "id": 10,
+    "family": "PLATFORM",
+    "name": "T_catch",
+    "object": "V05_LIB_10_PLATFORM_T_catch",
+    "dimensions": [
+      8.0,
+      7.0,
+      0.5
+    ],
+    "vertices": 16,
+    "faces": 10,
+    "normalized_geometry_hash": "8fb464cd7e372b846fcad7e4c430397cb401cf40f318106518a268509b961fb3"
+  },
+  {
+    "id": 11,
+    "family": "PLATFORM",
+    "name": "spear_slab",
+    "object": "V05_LIB_11_PLATFORM_spear_slab",
+    "dimensions": [
+      14.0,
+      5.400000095367432,
+      0.5
+    ],
+    "vertices": 10,
+    "faces": 7,
+    "normalized_geometry_hash": "8dced44e4082c841789a2d03d3e0d906c9bde9a259f638548a3cd9195d8ece8a"
+  },
+  {
+    "id": 12,
+    "family": "WALL",
+    "name": "stepped_strip",
+    "object": "V05_LIB_12_WALL_stepped_strip",
+    "dimensions": [
+      15.399999618530273,
+      0.4000000059604645,
+      4.800000190734863
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "d7343add5fcdf99b04c91d0aba7965ca83b3b994c22cb47f577ed4ffcea320e5"
+  },
+  {
+    "id": 13,
+    "family": "WALL",
+    "name": "kinked_wall",
+    "object": "V05_LIB_13_WALL_kinked_wall",
+    "dimensions": [
+      11.599999904632568,
+      2.719999998807907,
+      4.199999809265137
+    ],
+    "vertices": 12,
+    "faces": 8,
+    "normalized_geometry_hash": "33b80c622110e215a34105086133d5dea13171811147be5c25fddae53ae86d51"
+  },
+  {
+    "id": 14,
+    "family": "WALL",
+    "name": "stagger_pair",
+    "object": "V05_LIB_14_WALL_stagger_pair",
+    "dimensions": [
+      13.0,
+      6.400000095367432,
+      4.5
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "132b80f5d8ffdf1eede9db53d30807787f8549c2b5efc3750793cb5d18c87c18"
+  },
+  {
+    "id": 15,
+    "family": "WALL",
+    "name": "converging_pair",
+    "object": "V05_LIB_15_WALL_converging_pair",
+    "dimensions": [
+      10.842787742614746,
+      8.699891567230225,
+      4.800000190734863
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "5b4ccf0eb5bb9a959d24e829fb63c46aded1a6761e50e02e8069421b8ebe01b7"
+  },
+  {
+    "id": 16,
+    "family": "WALL",
+    "name": "broken_run",
+    "object": "V05_LIB_16_WALL_broken_run",
+    "dimensions": [
+      14.899999618530273,
+      1.9499999284744263,
+      5.0
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "3a20983634b25d9a454de4c522adb1b9e84a5707659afd45753eec98013194ca"
+  },
+  {
+    "id": 17,
+    "family": "WALL",
+    "name": "jump_pincer",
+    "object": "V05_LIB_17_WALL_jump_pincer",
+    "dimensions": [
+      7.989887475967407,
+      8.015155792236328,
+      6.0
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "09345802b5620379281a5ad481d9d91450bad0f8e4a352e1947590ed0f8b5036"
+  },
+  {
+    "id": 18,
+    "family": "RAMP",
+    "name": "clean_wedge",
+    "object": "V05_LIB_18_RAMP_clean_wedge",
+    "dimensions": [
+      4.0,
+      5.0,
+      4.179999828338623
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "f111c131db21d7b10a411d89194fffb0c4f3102fffa6fcf7e8f259dca2a52f9f"
+  },
+  {
+    "id": 19,
+    "family": "RAMP",
+    "name": "offset_entry",
+    "object": "V05_LIB_19_RAMP_offset_entry",
+    "dimensions": [
+      4.0,
+      6.75,
+      4.179999828338623
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "98eae84f7b52b4104c1917d6a0272d07a5895ad211d345e520f525ccaf811d3e"
+  },
+  {
+    "id": 20,
+    "family": "RAMP",
+    "name": "flared_exit",
+    "object": "V05_LIB_20_RAMP_flared_exit",
+    "dimensions": [
+      4.0,
+      6.800000190734863,
+      4.179999828338623
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "8d276bd894a2d00af23f97c020a027f2dc6c0b1913b8bc29072c6867709fdc0d"
+  },
+  {
+    "id": 21,
+    "family": "RAMP",
+    "name": "dogleg_descent",
+    "object": "V05_LIB_21_RAMP_dogleg_descent",
+    "dimensions": [
+      6.890973091125488,
+      6.810507535934448,
+      6.180000305175781
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "71e4ea0dd47bcf6d490469d4922c564b69595f5919ad3c71c73b1b135780c516"
+  },
+  {
+    "id": 22,
+    "family": "RAMP",
+    "name": "wedge_landing",
+    "object": "V05_LIB_22_RAMP_wedge_landing",
+    "dimensions": [
+      7.0,
+      4.800000190734863,
+      4.179999828338623
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "81f2fef8040f916001a62b8f2d9478647d08f9604acbcdbd28e30fe9e2428b87"
+  },
+  {
+    "id": 23,
+    "family": "RAMP",
+    "name": "chute_lips",
+    "object": "V05_LIB_23_RAMP_chute_lips",
+    "dimensions": [
+      5.0,
+      4.200000286102295,
+      5.179999828338623
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "257d7c28980d65bd85aec31d0e10ba060fc6c56b3c822f5f91040e7f21943a7a"
+  },
+  {
+    "id": 24,
+    "family": "BRIDGE",
+    "name": "diagonal_plate",
+    "object": "V05_LIB_24_BRIDGE_diagonal_plate",
+    "dimensions": [
+      12.0,
+      9.5,
+      0.44999998807907104
+    ],
+    "vertices": 8,
+    "faces": 6,
+    "normalized_geometry_hash": "2d8b7dac2cb5590c269e4c27da7bca41af9eb384664d740bf26993cd3862082b"
+  },
+  {
+    "id": 25,
+    "family": "BRIDGE",
+    "name": "dogleg_link",
+    "object": "V05_LIB_25_BRIDGE_dogleg_link",
+    "dimensions": [
+      14.0,
+      5.700000047683716,
+      0.44999998807907104
+    ],
+    "vertices": 16,
+    "faces": 10,
+    "normalized_geometry_hash": "130491acd7f2fb79e1435aa6f8ca942d381dbdcc149ac704df8d232f4018d4e9"
+  },
+  {
+    "id": 26,
+    "family": "BRIDGE",
+    "name": "staggered_chain",
+    "object": "V05_LIB_26_BRIDGE_staggered_chain",
+    "dimensions": [
+      14.400000095367432,
+      6.299999952316284,
+      0.8500000238418579
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "405ffc16cbb3cbe721c9a95cd36df491ad154ce154722715df951987ed6679be"
+  },
+  {
+    "id": 27,
+    "family": "BRIDGE",
+    "name": "fork_connection",
+    "object": "V05_LIB_27_BRIDGE_fork_connection",
+    "dimensions": [
+      12.0,
+      9.199999809265137,
+      0.44999998807907104
+    ],
+    "vertices": 18,
+    "faces": 11,
+    "normalized_geometry_hash": "ed15805fac4d3414bbae991a9654fa77575239f00379ec4204dae578d4197d42"
+  },
+  {
+    "id": 28,
+    "family": "BRIDGE",
+    "name": "unequal_rails",
+    "object": "V05_LIB_28_BRIDGE_unequal_rails",
+    "dimensions": [
+      13.25,
+      6.5,
+      0.8999999761581421
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "1dcc7003e49152ddfbdde1c55f771afa57b2d384b20eef0607d83750b9494b35"
+  },
+  {
+    "id": 29,
+    "family": "BRIDGE",
+    "name": "offset_transfer",
+    "object": "V05_LIB_29_BRIDGE_offset_transfer",
+    "dimensions": [
+      13.0,
+      8.0,
+      1.600000023841858
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "80405ebd8949aaf3449b4b08875589545dc7c28927389b4ce80bcbfc1927731f"
+  },
+  {
+    "id": 30,
+    "family": "SPEED",
+    "name": "flared_runway",
+    "object": "V05_LIB_30_SPEED_flared_runway",
+    "dimensions": [
+      20.0,
+      10.0,
+      0.44999998807907104
+    ],
+    "vertices": 16,
+    "faces": 10,
+    "normalized_geometry_hash": "b55b19e4c609be556c8a0cdeda1fc1cd4f85e47b7416a910f9c8c92966f79b90"
+  },
+  {
+    "id": 31,
+    "family": "SPEED",
+    "name": "S_lane",
+    "object": "V05_LIB_31_SPEED_S_lane",
+    "dimensions": [
+      20.0,
+      6.0,
+      0.44999998807907104
+    ],
+    "vertices": 16,
+    "faces": 10,
+    "normalized_geometry_hash": "34e61f8c9fa7e2b7e2dbe712678ab3a271cd7cd588d44901fc42b055fac700d3"
+  },
+  {
+    "id": 32,
+    "family": "SPEED",
+    "name": "chute_recovery",
+    "object": "V05_LIB_32_SPEED_chute_recovery",
+    "dimensions": [
+      13.0,
+      8.0,
+      4.199999809265137
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "2777dc694cdb3a659ae6c2b7f46e224361fe6b3008a40035837e51f9111f872a"
+  },
+  {
+    "id": 33,
+    "family": "SPEED",
+    "name": "descent_gap",
+    "object": "V05_LIB_33_SPEED_descent_gap",
+    "dimensions": [
+      12.5,
+      7.5,
+      5.199999809265137
+    ],
+    "vertices": 16,
+    "faces": 12,
+    "normalized_geometry_hash": "b87bb35ace786da580070dd80c394876389c892540c1543fae7c8762dbc27f3a"
+  },
+  {
+    "id": 34,
+    "family": "SPEED",
+    "name": "split_speed_lanes",
+    "object": "V05_LIB_34_SPEED_split_speed_lanes",
+    "dimensions": [
+      18.5,
+      9.0,
+      0.44999998807907104
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "9a9055e8426286c3608b39e1a6252669b97e52409180b98bc4033582d89c6aa5"
+  },
+  {
+    "id": 35,
+    "family": "SPEED",
+    "name": "banked_shelf",
+    "object": "V05_LIB_35_SPEED_banked_shelf",
+    "dimensions": [
+      18.0,
+      8.0,
+      1.7000000476837158
+    ],
+    "vertices": 20,
+    "faces": 14,
+    "normalized_geometry_hash": "eca84465903be0e06a9386a4fd21f7976e03e6ae525e01ad176befca413b984f"
+  },
+  {
+    "id": 36,
+    "family": "VERTICAL",
+    "name": "alternating_stack",
+    "object": "V05_LIB_36_VERTICAL_alternating_stack",
+    "dimensions": [
+      8.5,
+      8.25,
+      7.049999713897705
+    ],
+    "vertices": 24,
+    "faces": 18,
+    "normalized_geometry_hash": "d52fbbab8209f674eaffafccd0088872838df7ee3ddbdd24b8b5d092da8efdac"
+  },
+  {
+    "id": 37,
+    "family": "VERTICAL",
+    "name": "central_step_crowns",
+    "object": "V05_LIB_37_VERTICAL_central_step_crowns",
+    "dimensions": [
+      6.136791706085205,
+      6.0,
+      6.800000190734863
+    ],
+    "vertices": 26,
+    "faces": 19,
+    "normalized_geometry_hash": "37d2bf3d3919e8c457252163b1992216998b1692480ca8bdb2c51e4b8a654c01"
+  },
+  {
+    "id": 38,
+    "family": "VERTICAL",
+    "name": "wall_pair_ascent",
+    "object": "V05_LIB_38_VERTICAL_wall_pair_ascent",
+    "dimensions": [
+      7.75,
+      6.0,
+      7.0
+    ],
+    "vertices": 32,
+    "faces": 24,
+    "normalized_geometry_hash": "9591f9a91b6f81e9d1b90605525a37ea3f76bc0bde705636a6a83b3463e71ce1"
+  },
+  {
+    "id": 39,
+    "family": "VERTICAL",
+    "name": "offset_balconies",
+    "object": "V05_LIB_39_VERTICAL_offset_balconies",
+    "dimensions": [
+      8.5,
+      7.5,
+      7.449999809265137
+    ],
+    "vertices": 28,
+    "faces": 20,
+    "normalized_geometry_hash": "39ff7d0d1e7db45cdfb6afefce51f1288c2b3fbd28bfc2b018fd79702d854561"
+  },
+  {
+    "id": 40,
+    "family": "VERTICAL",
+    "name": "sparse_catch",
+    "object": "V05_LIB_40_VERTICAL_sparse_catch",
+    "dimensions": [
+      8.5,
+      6.005659580230713,
+      6.900000095367432
+    ],
+    "vertices": 28,
+    "faces": 20,
+    "normalized_geometry_hash": "1a15ebb1a3656c24e504747dd53d36d50e6cb16a85b02052d241414ec915d696"
+  },
+  {
+    "id": 41,
+    "family": "VERTICAL",
+    "name": "cross_transfer",
+    "object": "V05_LIB_41_VERTICAL_cross_transfer",
+    "dimensions": [
+      8.599999904632568,
+      6.5,
+      8.199999809265137
+    ],
+    "vertices": 32,
+    "faces": 24,
+    "normalized_geometry_hash": "a09c6ccf358889dc6bdbe221aee1ca74c09f14f6ceab6f60adc653efcaf940ce"
+  }
+]

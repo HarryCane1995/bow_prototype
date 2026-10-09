@@ -1,0 +1,114 @@
+V05 MANUAL TEST CHECKLIST — ПРОВОДИТ ПОЛЬЗОВАТЕЛЬ
+
+API QA выполнено на disposable fixtures. Human / hotkeys / gameplay не проверены.
+Работайте в копии файла либо используйте Undo между тестами.
+Не нажимайте Apply / Bake и не запускайте rebuild-скрипты.
+Controls находятся у LEVEL_PROXY: N → V05 Local или Custom Properties.
+
+01 HORIZONTAL EXTRUDE
+Tab → внешняя cap → E → вытяните горизонтально.
+EXPECTED: новое локальное наполнение появляется до выхода из Edit Mode.
+
+02 TURN
+E, затем смещение cap в сторону и R Z без перекручивания/самопересечения.
+EXPECTED: новая секция следует вашему направлению, старая не растягивается.
+
+03 VERTICAL EXTRUDE
+Верхняя грань → E Z, 25–35 m.
+EXPECTED: внутри возникают vertical motifs — pads, wall pairs, upper catches.
+
+04 LONG VERTICAL SECTION
+Продолжите shaft вверх ещё на 20–30 m.
+EXPECTED: добавляются верхние motifs; старые ниже junction не перераспределяются.
+
+05 SEED
+Seed 17 → 42 → 73 → 17.
+EXPECTED: меняются shapes, spacing и композиции; macro mesh не меняется;
+возврат 17 воспроизводит прежний результат при неизменной topology.
+
+06 VERTICALITY / PLATFORM DENSITY
+Сравните низкие и высокие значения на высоком proxy.
+EXPECTED: изменяются наличие и расположение vertical motifs.
+
+07 GRAPPLE BIAS
+Grapple Bias 0 / 1.
+EXPECTED: optional жёлтые markers исчезают/появляются;
+required крупные розовые markers остаются даже при 0.
+
+08 RAMPS
+Ramp Presence = 1, Density = 1; Ramp Steepness 45 / 55 / 70.
+EXPECTED: меняется уклон доступных ramp variants, а не весь proxy.
+Сложные составные ramps могут включать несколько наклонов и landing.
+
+09 DELETE / RESHAPE
+Измените vertices или локально inset/bevel; удалите отдельный closed island.
+EXPECTED: corresponding fill меняется/исчезает. Удаление одной грани открывает
+volume — output намеренно пуст до Undo или закрытия отверстия.
+
+10 DISCONNECTED ISLAND
+Добавьте отдельный closed island в том же LEVEL_PROXY mesh.
+EXPECTED: независимое наполнение, прежние islands не меняют variant choices.
+
+11 CUTTER
+Use Cutter = true; покажите LEVEL_CUTTER и переместите внутрь нужной секции.
+EXPECTED: локальное вычитание, исходный proxy не изменён.
+Если Cutter уничтожает required marker/catch, D-span должен сократиться до Basic.
+
+12 VERTICAL EXTENSION STABILITY
+Запомните первую горизонтальную секцию, вытяните хвост, затем его верхнюю cap.
+EXPECTED: старая секция сохраняет размеры/позиции; меняются новая зона и junction.
+
+13 CONTAINMENT
+Осмотрите wire proxy с разных сторон, особенно повороты, shafts и helpers.
+EXPECTED: visible exterior overhang отсутствует. Проверочный допуск 0.3 mm.
+
+14 WIDE AFTER NARROW
+Из narrow section сделайте extrusion и расширьте новую cap.
+EXPECTED: локальная широкая композиция; прежняя narrow section не расширяется.
+
+15 STRAIGHT LENGTH VARIATION
+Создайте длинный прямой горизонтальный extrusion, желательно 150–300+ m.
+Length Variation 0 → 0.82 → 1, затем несколько Seeds.
+EXPECTED: при 0 run lengths близки к 22 m; при 1 виден ритм коротких,
+средних, длинных и очень длинных участков. Gaps имеют отдельную грамматику.
+Не ожидайте 80 m runway внутри 20 m authored patch.
+
+16 MESH VARIETY
+Осмотрите несколько sections при Seeds 17 / 42 / 73.
+EXPECTED: trapezoids, cut corners, L/asymmetric/split landings,
+разные pads, kinked/broken/paired walls, ramps и connections.
+Не только один прямоугольник разного масштаба.
+Справочник 42 forms: V05_GAMEPLAY_MESH_LIBRARY и V05_LIBRARY_OVERVIEW.png.
+
+17 DOUBLE JUMP SPAN
+Включите Debug Span Colors и найдите зелёный AIR_JUMP участок.
+EXPECTED: gap относится к 13.36–17.97 m, заметно длиннее Basic 5.63–8.75 m.
+Оранжевый Near Limit — 19.35–21.65 m с увеличенной catch-площадкой.
+
+18 BEYOND DOUBLE JUMP
+На длинной горизонтальной секции найдите MAGENTA GRAPPLE_REQUIRED span.
+EXPECTED: gap 25.34–33.40 m, то есть больше observed air/double 23.035 m;
+есть крупный розовый required candidate и примерно 12 m receiving landing.
+Grapple Bias = 0 не должен удалять этот marker.
+QA-пример: closed box 20×480×12 m, локальные bounds
+X -10..10, Y 0..480, Z -0.7..11.3, Seed 17, defaults:
+gap 28.202 m, acquisition distance 18.447 m, catch 12 m.
+Это пример для воспроизведения на копии, не требование менять ваш macro route.
+
+19 LOCAL VARIANT STABILITY
+Запомните silhouettes 2–3 старых sections; добавьте extrusion в конец.
+EXPECTED: старые untouched sections сохраняют shapes/variant choices и размеры.
+Subdivide/dissolve самого старого patch намеренно может изменить его выбор.
+
+ЧТО ПРИСЛАТЬ
+Номер теста, OK/проблема, Seed и параметры, операция, что ожидали/увидели.
+Укажите, обновлялось ли всё внутри Edit Mode и воспроизводится ли после Undo.
+Для shape bug полезны .blend или виды до/после.
+
+KNOWN LIMITS
+Quad patches и замкнутый volume — основной случай. Complex n-gons, очень узкие,
+сильно искажённые или самопересекающиеся формы не имеют той же гарантии наполнения.
+Игра сейчас не запускалась: spatial classes не доказывают gameplay traversability,
+line of sight, правильный timing double jump или фактическую runtime grapple acquisition.
+На наклонных proxy patches span classes не навязываются: сохраняется continuous
+speed/descent fill. Object Scale должен быть 1,1,1 для физических метров.

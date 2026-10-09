@@ -1,0 +1,76 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/GNSnapshot/GNBlockoutSnapshot.cs" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/Levels/Level_Freestyle_01/Generated/GN_Blockout_Current.glb" id="2"]
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="4"]
+[ext_resource type="Texture2D" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="7"]
+[ext_resource type="Script" path="res://Scripts/UI/CrosshairUI.cs" id="8"]
+[ext_resource type="Script" path="res://Scripts/Debug/SpeedometerHud.cs" id="9"]
+
+[sub_resource type="PanoramaSkyMaterial" id="SkyMaterial"]
+panorama = ExtResource("7")
+energy_multiplier = 0.85
+
+[sub_resource type="Sky" id="Sky"]
+sky_material = SubResource("SkyMaterial")
+
+[sub_resource type="Environment" id="Environment"]
+background_mode = 2
+background_energy_multiplier = 0.07
+sky = SubResource("Sky")
+ambient_light_source = 2
+ambient_light_color = Color(0.74, 0.78, 0.82, 1)
+ambient_light_energy = 0.85
+reflected_light_source = 2
+ssao_enabled = true
+ssao_radius = 1.4
+ssao_power = 1.35
+
+[node name="Level_Freestyle_01" type="Node3D"]
+
+[node name="GN_Blockout_Current" type="Node3D" parent="."]
+script = ExtResource("1")
+
+[node name="Visual" parent="GN_Blockout_Current" instance=ExtResource("2")]
+
+[node name="Collision" type="StaticBody3D" parent="GN_Blockout_Current"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="GrappleAnchors" type="Node3D" parent="GN_Blockout_Current"]
+
+[node name="CoverageDebug" type="Node3D" parent="GN_Blockout_Current"]
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(140, 0.05, 5.4)
+
+[node name="Player" parent="." instance=ExtResource("4")]
+position = Vector3(140, 0.05, 5.4)
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+rotation_degrees = Vector3(-45, -30, 0)
+light_energy = 0.85
+light_indirect_energy = 0.6
+shadow_enabled = true
+directional_shadow_max_distance = 100.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="CrosshairUI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("8")
+
+[node name="SpeedometerHud" type="Label" parent="CanvasLayer"]
+script = ExtResource("9")

@@ -1,0 +1,35 @@
+V06 — LOCAL PROXY COMPOSITION
+
+LEVEL_PROXY → Tab → обычные Extrude / Move.
+Настройки: N → V06 Local либо Object Properties → Custom Properties.
+Если панель отсутствует после открытия, необязательный Text V06_CONTROLS_PANEL.py
+восстанавливает её. Генератор работает с отключённым Auto Run Python.
+
+• Простые прямоугольные платформы/стены, strips, wedges и крупный arena floor.
+• Разнообразие создают схемы размещения, расстояния, высоты, стороны и количество.
+• V05 library из 42 форм сохранена как hidden/reference; V06 её не использует.
+• Length Variation 0 — регулярнее, 0.82 — default, 1 — выраженный ритм.
+• Wide section: arena floor + few large elements. Narrow: flow lane.
+• Перед созданием mesh placements проходят консервативную проверку объёмов.
+• Primitive Clearance 0.3 m. Стыки вровень отдельно разрешены; проникновения нет.
+• В каждом локальном section ограничен бюджет. Свободное место может оставаться пустым.
+
+Debug Span Colors: Basic blue / Air green / Near Limit orange / Required magenta.
+Debug Placement Volumes: accepted oriented boxes + required corridor reserve.
+Wire volumes — диагностика; они могут выходить за финальный clipped mesh.
+Оба debug режима по умолчанию выключены.
+
+SPAN BANDS (V05 сохранены)
+Basic 5.627–8.754 m; Air 13.360–17.967 m; Near Limit 19.350–21.653 m;
+Required 25.339–33.401 m. Подтверждённый observed air/double jump 23.035 m.
+Required крупный розовый helper остаётся при Grapple Bias = 0.
+Optional helpers маленькие жёлтые. Это spatial intent, не gameplay guarantee.
+
+Proxy: closed manifold, normals наружу, без самопересечений, unit Object Scale.
+Quad extrusions — основной workflow. Изменение самого patch может менять его fill.
+Горизонтальные jump bands не применяются к наклонным patches: там continuous fill.
+Global bounds не используются для layout. Append сохраняет старые untouched patches.
+Conservative occupancy может отклонить допустимое размещение и оставить больше воздуха.
+
+Смотрите V06_MANUAL_TEST_CHECKLIST (11 tests).
+No CU. No Godot/export/collision/runtime anchor. No commit/push.
