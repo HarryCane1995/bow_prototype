@@ -40,3 +40,95 @@ Art/Skyboxes/*.hdr
 Art/Skyboxes/*.hdr.import
 Art/Skyboxes/*.exr
 Art/Skyboxes/*.exr.import
+
+# Local-only Overwatch animation R&D references
+/dev_external/overwatch_hanzo_reference/
+
+# Local-only compound bow Blender R&D reference
+/dev_external/compound_bow_rig_reference/
+
+# Required CC0 environment used by the playable scenes (see THIRD_PARTY_ASSETS.md)
+!Art/Skyboxes/ferndale_studio_10_4k.exr
+!Art/Skyboxes/ferndale_studio_10_4k.exr.import
+
+# Local credentials and machine-only settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Checkpoint exclusions: disposable evidence and reference collections
+/Docs/Reviews/*
+!/Docs/Reviews/LevelFreestyle01/
+/Docs/Reviews/LevelFreestyle01/*
+!/Docs/Reviews/LevelFreestyle01/metrics_snapshot.json
+!/Docs/Reviews/LocalProxyV04/
+/Docs/Reviews/LocalProxyV04/*
+!/Docs/Reviews/LocalProxyV04/V04_QUICKSTART.txt
+!/Docs/Reviews/LocalProxyV04/V04_MANUAL_TEST_CHECKLIST.txt
+!/Docs/Reviews/LocalProxyV05/
+/Docs/Reviews/LocalProxyV05/*
+!/Docs/Reviews/LocalProxyV05/library_manifest.json
+!/Docs/Reviews/LocalProxyV05/V05_QUICKSTART.txt
+!/Docs/Reviews/LocalProxyV05/V05_MANUAL_TEST_CHECKLIST.txt
+!/Docs/Reviews/LocalProxyV06/
+/Docs/Reviews/LocalProxyV06/*
+!/Docs/Reviews/LocalProxyV06/V06_QUICKSTART.txt
+!/Docs/Reviews/LocalProxyV06/V06_MANUAL_TEST_CHECKLIST.txt
+/Assets/Characters/BaseHumanoid/Review/
+/Assets/Levels/Level_Freestyle_01/Source/Backups/
+/Tools/Art/ArtPass/review/*
+!/Tools/Art/ArtPass/review/materials_best_12.jpg
+!/Tools/Art/ArtPass/review/materials_catalog_50.jpg
+!/Tools/Art/ArtPass/review/materials_tiles_4.jpg
+!/Tools/Art/ArtPass/review/materials_wraps_4.jpg
+!/Tools/Art/ArtPass/review/materials_godot.webp
+!/Tools/Art/ArtPass/review/vfx_godot.webp
+!/Tools/Art/ArtPass/review/billboards.webp
+!/Tools/Art/ArtPass/review/billboards_godot.webp
+!/Tools/Art/ArtPass/review/billboards_best_8.webp
+!/Tools/Art/ArtPass/review/shapes_godot.webp
+/Tools/Art/FacadeFactory/review/
+/Tools/Art/FacadeFactory/WebLab/review/
+/Assets/Textures/Levels/Level_01/FacadeFactory/resolution_tests/
+/Assets/Materials/Environment/FacadeFactory/resolution_tests/
+/Assets/Textures/Levels/Level_01/FacadeFactory/**/*_preview.png
+/Assets/Textures/Levels/Level_01/FacadeFactory/**/*_preview.png.import
+/Assets/Textures/Levels/Level_01/FacadeFactory/**/*_seam_debug.png
+/Assets/Textures/Levels/Level_01/FacadeFactory/**/*_seam_debug.png.import
+/Art/Environment/BOW_ENVIRONMENT_DNA/
+/Art/Environment/Skyscrapers/References/
+/Art/Environment/Skyscrapers/Review/
+/Art/Environment/Skyscrapers/Reference_Contact.png
+/Art/Environment/Highrise100/Previews/
+/Art/Environment/Highrise100/ContactSheets/
+/Art/Environment/Highrise100/Mood/
+/Art/Environment/Highrise100/References/
+/Art/Environment/Highrise100/GodotSanity/
+/Art/Environment/Highrise100/Logs/
+/Art/Environment/Highrise100/QA/
+/Art/Environment/Highrise100/RuntimeShowcase_QA/*
+!/Art/Environment/Highrise100/RuntimeShowcase_QA/baseline.json
+!/Art/Environment/Highrise100/RuntimeShowcase_QA/source_inspection.json
+/Art/Environment/Highrise100/UV_Material_QA/
+/Art/Environment/Highrise100/Highrise100_UV_Candidate.blend
+/Art/Environment/Highrise100/Highrise100_UV_Subset.blend
+/Art/Environment/Highrise100/index.html
+/Art/Environment/Highrise100/CommonScale.jpg
+/Art/Environment/Highrise100/Materials.jpg
+/Art/Environment/Highrise100/file_manifest.json
+/Art/Environment/Highrise100/REPORT.md
+/Art/Characters/Hero_Mask/Review/
+/Art/Characters/Hero_Silhouette/Review/
+/Art/Characters/Hero_Mask/Mask_Concept_Reference.png
+/Art/Characters/Hero_Silhouette/Concept_Reference.png
+
+# Isolated downloaded-animation experiments and unintegrated scratch import
+/dev/animation_tests/hanzo_retarget/
+/BlenderAssets/untitled_Hunyuan 3D V2.1_2026-10-01_00-38-30.glb
+/BlenderAssets/untitled_Hunyuan 3D V2.1_2026-10-01_00-38-30.glb.import
+/BlenderAssets/untitled_Hunyuan 3D V2_0.png
+/BlenderAssets/untitled_Hunyuan 3D V2_0.png.import
+/BlenderAssets/untitled_Hunyuan 3D V2_1.png
+/BlenderAssets/untitled_Hunyuan 3D V2_1.png.import
