@@ -1,0 +1,145 @@
+{
+  "id": "HR073",
+  "name": "Platform Funnel",
+  "category": "transit",
+  "subtype": 2,
+  "seed": 1503187,
+  "role": "midground",
+  "collection": "HR073_Platform_Funnel",
+  "bounds_m": [
+    103.60700000000001,
+    64.0012,
+    253.95
+  ],
+  "bounds_min": [
+    -51.80350000000001,
+    -32.0006,
+    0.0
+  ],
+  "bounds_max": [
+    51.80350000000001,
+    32.0006,
+    253.95
+  ],
+  "parameters": {
+    "width": 77.9,
+    "depth": 52.46,
+    "height": 243.95,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Platform Funnel",
+    "narrow_base",
+    "paired_side_platforms",
+    "raking_ground_legs",
+    "roof_exhaust_trio",
+    "tapered_transit_funnel",
+    "transit"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 20,
+    "triangles": 320,
+    "vertices": 288,
+    "polygons": 144
+  },
+  "geometry_sha256": "c7a70057b4a89bfd8e3e261437d01dbd69cff9181e6d9b37419fd3e3ef4385ae",
+  "geometry_only_sha256": "8b9625bb547fdf008bab9e967fc6732338daf75218bc3db1559b8a9241d9bcc9",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.245,
+    "mass_complexity": 0.211,
+    "industrial_density": 0.25,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.39,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.38
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "central_service": [
+      "wall_service_rack",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "platform_rake_shoe": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "platform_rake": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "funnel_tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "funnel_tower": [
+      "f2_1_uv"
+    ],
+    "side_station_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "side_station": [
+      "f4_2_uv"
+    ],
+    "station_leg": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 68,
+    "floor_metal_deck": 5,
+    "wall_service_rack": 4,
+    "floor_rooftop": 15,
+    "f2_1_uv": 16,
+    "f4_2_uv": 8,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f2_1_uv.uv.json",
+    "Recipes/f4_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_service_rack.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f2_1_uv": 925219,
+    "f4_2_uv": 925438,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_service_rack": 4174,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR073.png",
+    "UV_Material_QA/Views/HR073_back.png",
+    "UV_Material_QA/Views/HR073_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

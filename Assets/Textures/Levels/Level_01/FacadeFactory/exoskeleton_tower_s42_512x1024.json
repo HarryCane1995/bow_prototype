@@ -1,0 +1,228 @@
+{
+  "version": "0.1.0",
+  "preset": "EXOSKELETON_TOWER",
+  "seed": 42,
+  "resolution": [
+    512,
+    1024
+  ],
+  "config": {
+    "name": "EXOSKELETON_TOWER",
+    "grammar": "exoskeleton",
+    "palette": "cold",
+    "window_density": 0.85,
+    "window_aspect": 0.9,
+    "floor_height": 26,
+    "structural_width": 20,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "emission_density": 0.32,
+    "emission_strength": 1.35,
+    "grime_amount": 0.19,
+    "panel_density": 0.24,
+    "signage_density": 0.2,
+    "macro_contrast": 0.23,
+    "retro_strength": 0.72,
+    "style": {
+      "posterization": 40,
+      "dithering": 0.22,
+      "color_quantization": 112,
+      "micro_contrast": 0.12,
+      "compression_artifacts": 0.08,
+      "pixel_noise": 0.65,
+      "edge_exaggeration": 0.2,
+      "baked_ao_strength": 0.32
+    }
+  },
+  "floor_groups": [
+    {
+      "index": 0,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.45,
+      "zones": [
+        0.54,
+        0.362,
+        0.584
+      ]
+    },
+    {
+      "index": 1,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.458,
+      "zones": [
+        0.453,
+        0.515,
+        0.37
+      ]
+    },
+    {
+      "index": 2,
+      "dark": true,
+      "service": false,
+      "occupancy": 0.324,
+      "zones": [
+        0.418,
+        0.197,
+        0.245
+      ]
+    },
+    {
+      "index": 3,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.078,
+      "zones": [
+        0.01,
+        0.194,
+        0.01
+      ]
+    },
+    {
+      "index": 4,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.422,
+      "zones": [
+        0.396,
+        0.447,
+        0.322
+      ]
+    },
+    {
+      "index": 5,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.214,
+      "zones": [
+        0.326,
+        0.362,
+        0.066
+      ]
+    },
+    {
+      "index": 6,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.549,
+      "zones": [
+        0.447,
+        0.677,
+        0.535
+      ]
+    },
+    {
+      "index": 7,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.399,
+      "zones": [
+        0.249,
+        0.541,
+        0.397
+      ]
+    },
+    {
+      "index": 8,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.524,
+      "zones": [
+        0.408,
+        0.642,
+        0.571
+      ]
+    },
+    {
+      "index": 9,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.403,
+      "zones": [
+        0.413,
+        0.303,
+        0.56
+      ]
+    },
+    {
+      "index": 10,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.107,
+      "zones": [
+        0.202,
+        0.115,
+        0.041
+      ]
+    },
+    {
+      "index": 11,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.483,
+      "zones": [
+        0.507,
+        0.635,
+        0.485
+      ]
+    },
+    {
+      "index": 12,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.539,
+      "zones": [
+        0.689,
+        0.48,
+        0.638
+      ]
+    },
+    {
+      "index": 13,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.266,
+      "zones": [
+        0.355,
+        0.298,
+        0.216
+      ]
+    },
+    {
+      "index": 14,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.473,
+      "zones": [
+        0.563,
+        0.521,
+        0.478
+      ]
+    }
+  ],
+  "window_states": {
+    "ON": 108,
+    "DIM": 63,
+    "OFF": 138,
+    "BLOCKED": 18,
+    "SERVICE": 6,
+    "BRIGHT": 13,
+    "BROKEN/DARK": 14
+  },
+  "signage_count": 6,
+  "tiling": "unique sheet / clamp",
+  "normal": "OpenGL +X +Y +Z",
+  "orm": {
+    "R": "ambient occlusion",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "sha256": {
+    "albedo": "529c5acddc30785c111b41960aca6042fa8fa95a169aa9791cb9185081ecd83e",
+    "emission": "af0e10883909991c8ea891b3942e5e3d1cabf4d448da2efb556f3d920fe619be",
+    "height": "7a96eed6e589f31b22bbeec666e7119e5bd937315af465c0f59a57674eb67f00",
+    "orm": "69ff54c99fcde72878011574b57c25dec9db183a1883846a617108a17a772d2d",
+    "normal": "8196d51a611a1c22dc04f522ae046193154012d64d93993ac29c5392accb9824"
+  }
+}

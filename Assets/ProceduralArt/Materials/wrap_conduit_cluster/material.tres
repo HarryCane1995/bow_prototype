@@ -1,0 +1,23 @@
+[gd_resource type="ORMMaterial3D" load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/ProceduralArt/Materials/wrap_conduit_cluster/albedo.png" id="1"]
+[ext_resource type="Texture2D" path="res://Assets/ProceduralArt/Materials/wrap_conduit_cluster/normal.png" id="2"]
+[ext_resource type="Texture2D" path="res://Assets/ProceduralArt/Materials/wrap_conduit_cluster/orm.png" id="3"]
+[ext_resource type="Texture2D" path="res://Assets/ProceduralArt/Materials/wrap_conduit_cluster/emission.png" id="4"]
+
+[resource]
+resource_name = "WRAP_CONDUIT_CLUSTER"
+albedo_texture = ExtResource("1")
+normal_enabled = true
+normal_texture = ExtResource("2")
+normal_scale = 0.55
+orm_texture = ExtResource("3")
+ao_enabled = true
+ao_light_affect = 0.18
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("4")
+emission_energy_multiplier = 1.15
+texture_filter = 5
+texture_repeat = true

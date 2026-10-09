@@ -1,0 +1,157 @@
+{
+  "id": "HR067",
+  "name": "Spine Cantilevers",
+  "category": "suspended",
+  "subtype": 1,
+  "seed": 1455673,
+  "role": "midground",
+  "collection": "HR067_Spine_Cantilevers",
+  "bounds_m": [
+    73.458,
+    25.4856,
+    303.15
+  ],
+  "bounds_min": [
+    -36.729,
+    -14.563200000000002,
+    0.0
+  ],
+  "bounds_max": [
+    36.729,
+    10.9224,
+    303.15
+  ],
+  "parameters": {
+    "width": 58.3,
+    "depth": 30.34,
+    "height": 298.7,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Spine Cantilevers",
+    "alternating_cantilevers",
+    "four_open_slots",
+    "roof_paired_hvac",
+    "single_spine",
+    "suspended",
+    "suspension_rods"
+  ],
+  "metrics": {
+    "meshes": 15,
+    "primitives": 22,
+    "triangles": 328,
+    "vertices": 288,
+    "polygons": 148
+  },
+  "geometry_sha256": "886aebb7804fa65720288c06bbbf4bcdf64182b6d78901f8d860da4b7a71c713",
+  "geometry_only_sha256": "763fabc28414a364079f9e66eef62d1795d56a3d0f2ba89c3fef55dee2303bfc",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.413,
+    "mass_complexity": 0.232,
+    "industrial_density": 0.818,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.286,
+    "cantilever_overhang": 0.64,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "central_anchor": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "suspended_wing_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "suspended_wing_0": [
+      "f5_0_uv"
+    ],
+    "wing_suspender": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "suspended_wing_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "suspended_wing_1": [
+      "f5_0_uv"
+    ],
+    "suspended_wing_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "suspended_wing_2": [
+      "f5_0_uv"
+    ],
+    "suspended_wing_3_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "suspended_wing_3": [
+      "f5_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 22,
+    "floor_metal_deck": 90,
+    "wall_tech_spine": 4,
+    "floor_rooftop": 4,
+    "f5_0_uv": 16,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f5_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f5_0_uv": 925505,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR067.png",
+    "UV_Material_QA/Views/HR067_back.png",
+    "UV_Material_QA/Views/HR067_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

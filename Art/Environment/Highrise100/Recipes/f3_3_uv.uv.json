@@ -1,0 +1,43 @@
+{
+  "key": "f3_3_uv",
+  "recipe": "Recipes/f3_3_uv.uv.json",
+  "mode": "PERIODIC_FACADE_INTERIOR",
+  "seed": 925354,
+  "preset": "EXOSKELETON_TOWER",
+  "parameters": {
+    "window_density": 0.85,
+    "emission_density": 0.73,
+    "structural_width": 20,
+    "grime_amount": 0.59,
+    "retro_strength": 0.35,
+    "window_aspect": 2.1,
+    "floor_height": 44,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.24,
+    "signage_density": 0.2,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.35
+  },
+  "sha256": {
+    "albedo": "7588e12dcf4a6b9dcf75a2320d56ebf5cd89276e0e7cb7199c6a848a94d0dfb8",
+    "normal": "5e263be2d8bf67eb8b22a1df7a2f60a58a7bd98a823085f7fc1b689605a0d73d",
+    "orm": "25ea34330070933e709cce77f5a534127ec911a125ca5dfc5671a3fa3a040ac4",
+    "height": "c876937b58c07fa567089e3e07bd7815c41d0b86afc668e7205b97ba1124acd4",
+    "emission": "c174f707c24f662f71ba5d3830742d1acd82ff24af6746c97fa921234d5d28ed"
+  },
+  "source_key": "f3_3",
+  "uv_qa_version": 1,
+  "crop": [
+    0,
+    36,
+    512,
+    992
+  ],
+  "tile_width_m": 42,
+  "nominal_floor_rows": 21.727272727272727,
+  "image_size": [
+    512,
+    956
+  ]
+}

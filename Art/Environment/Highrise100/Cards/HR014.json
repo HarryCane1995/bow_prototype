@@ -1,0 +1,110 @@
+{
+  "id": "HR014",
+  "name": "Heat Exchanger",
+  "category": "industrial",
+  "subtype": 3,
+  "seed": 1035966,
+  "role": "midground",
+  "collection": "HR014_Heat_Exchanger",
+  "bounds_m": [
+    70.90400000000001,
+    43.495999999999995,
+    223.25
+  ],
+  "bounds_min": [
+    -35.452000000000005,
+    -21.747999999999998,
+    0.0
+  ],
+  "bounds_max": [
+    35.452000000000005,
+    21.747999999999998,
+    223.25
+  ],
+  "parameters": {
+    "width": 62.64,
+    "depth": 36.4,
+    "height": 223.25,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "regular_service_rings",
+    "six_exposed_pipes"
+  ],
+  "metrics": {
+    "meshes": 6,
+    "primitives": 22,
+    "triangles": 360,
+    "vertices": 320,
+    "polygons": 156
+  },
+  "geometry_sha256": "d28f66eeb909ba8f5016426b7801d8252c7a3040e5892e2f17ce5460f80c42ed",
+  "geometry_only_sha256": "09c149de4ea6b33f2aa6d445baf1ff27f19cc28d0e4cfd42dd2eb38721f44e42",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.315,
+    "mass_complexity": 0.232,
+    "industrial_density": 0.955,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.192,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Exchanger": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Pipe_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Pipe": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 26,
+    "floor_rooftop": 1,
+    "floor_metal_deck": 121,
+    "wall_reactor_housing": 8
+  },
+  "recipes": [
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR014.png",
+    "UV_Material_QA/Views/HR014_back.png",
+    "UV_Material_QA/Views/HR014_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

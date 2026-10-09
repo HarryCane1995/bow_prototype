@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/ring.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.9058823529411765, 0.7411764705882353, 0.4627450980392157, 1)
+shader_parameter/color_b = Color(0.6196078431372549, 0.3568627450980392, 0.21568627450980393, 1)
+shader_parameter/opacity = 0.65
+shader_parameter/emission_strength = 0.3
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.15
+shader_parameter/flat_unshaded = true
+shader_parameter/dither_mode = false

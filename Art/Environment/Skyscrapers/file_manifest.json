@@ -1,0 +1,198 @@
+[
+  {
+    "path": "Art/Environment/Skyscrapers/.gdignore",
+    "bytes": 0
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/layout.json",
+    "bytes": 2963
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Reference_Contact.png",
+    "bytes": 1678752
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/01_neon_megacity.png",
+    "bytes": 461095
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/02_exoskeleton_tower.png",
+    "bytes": 288045
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/03_clean_spires.png",
+    "bytes": 626300
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/04_suspended_block_tower.png",
+    "bytes": 399807
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/05_needle_corporate_tower.png",
+    "bytes": 189805
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/06_mechanical_spine_tower.png",
+    "bytes": 379484
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/References/07_megablock_rain_tower.png",
+    "bytes": 418847
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_exoskeleton.png",
+    "bytes": 142237
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_landmark.png",
+    "bytes": 130997
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_overview.png",
+    "bytes": 112066
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_route_ground.png",
+    "bytes": 335123
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_route_spawn.png",
+    "bytes": 378450
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_skyline_east.png",
+    "bytes": 157086
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_skyline_west.png",
+    "bytes": 645029
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/after_suspended.png",
+    "bytes": 186489
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/before_overview.png",
+    "bytes": 191021
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/before_route_ground.png",
+    "bytes": 483735
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/before_route_spawn.png",
+    "bytes": 294872
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/before_skyline_east.png",
+    "bytes": 428704
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/before_skyline_west.png",
+    "bytes": 340841
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_01_Exoskeleton.png",
+    "bytes": 307581
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_02_Needle.png",
+    "bytes": 280569
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_03_CorporateMonolith.png",
+    "bytes": 298804
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_04_SuspendedVolumes.png",
+    "bytes": 288166
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_05_UtilitySpine.png",
+    "bytes": 282311
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_06_Megablock.png",
+    "bytes": 290975
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_07_Skybridge.png",
+    "bytes": 303258
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_08_Commerce.png",
+    "bytes": 283831
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_09_CleanSplitSpire.png",
+    "bytes": 281074
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/kit_L01_Skyline_10_OffsetHalo.png",
+    "bytes": 291014
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/Kit_Lineup.jpg",
+    "bytes": 203700
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/Kit_Lineup_initial.png",
+    "bytes": 758039
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/Skyline_and_Route.jpg",
+    "bytes": 270286
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Review/Tower_Closeups.jpg",
+    "bytes": 126909
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/runtime_validation.json",
+    "bytes": 2315
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/Skyscraper_Kit.blend",
+    "bytes": 257967
+  },
+  {
+    "path": "Art/Environment/Skyscrapers/source_validation.json",
+    "bytes": 252
+  },
+  {
+    "path": "Docs/ENV_SKYSCRAPER_PASS.md",
+    "bytes": 13666
+  },
+  {
+    "path": "Tools/Environment/build_skyscrapers.py",
+    "bytes": 20518
+  },
+  {
+    "path": "Tools/Environment/inspect_level.py",
+    "bytes": 1907
+  },
+  {
+    "path": "Tools/Environment/make_review_boards.py",
+    "bytes": 1410
+  },
+  {
+    "path": "Tools/Environment/render_kit.py",
+    "bytes": 1748
+  },
+  {
+    "path": "Tools/Environment/review_skyline.gd",
+    "bytes": 2074
+  },
+  {
+    "path": "Tools/Environment/review_skyline.gd.uid",
+    "bytes": 19
+  },
+  {
+    "path": "Tools/Environment/validate_skyline.gd",
+    "bytes": 2561
+  },
+  {
+    "path": "Tools/Environment/validate_skyline.gd.uid",
+    "bytes": 20
+  }
+]

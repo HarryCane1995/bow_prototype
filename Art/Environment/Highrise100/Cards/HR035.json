@@ -1,0 +1,125 @@
+{
+  "id": "HR035",
+  "name": "Sky Courtyard",
+  "category": "arcology",
+  "subtype": 4,
+  "seed": 1202265,
+  "role": "hero",
+  "collection": "HR035_Sky_Courtyard",
+  "bounds_m": [
+    121.07000000000001,
+    77.24,
+    291.5
+  ],
+  "bounds_min": [
+    -60.535000000000004,
+    -38.62,
+    0.0
+  ],
+  "bounds_max": [
+    60.535000000000004,
+    38.62,
+    291.5
+  ],
+  "parameters": {
+    "width": 88.2,
+    "depth": 66.0,
+    "height": 291.5,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "open_sky_courtyard",
+    "two_link_elevations"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 8,
+    "triangles": 96,
+    "vertices": 104,
+    "polygons": 48
+  },
+  "geometry_sha256": "3be45f4dfe64b5e8fee755294d46dd15cf010d1268440ea4b6a04a5192968175",
+  "geometry_only_sha256": "873b1bf72df1893316a4a3c6b3114ed361e4bb4f4950ad0f683631b7f4c6a157",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.241,
+    "mass_complexity": 0.084,
+    "industrial_density": 0.25,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.433,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.65
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "CourtTower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "CourtTower": [
+      "f1_1_uv"
+    ],
+    "SkyCourtLink_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "SkyCourtLink": [
+      "f0_2_uv"
+    ],
+    "LowerCourt_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "LowerCourt": [
+      "f1_1_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 12,
+    "floor_rooftop": 6,
+    "floor_metal_deck": 6,
+    "wall_reinforced": 4,
+    "f1_1_uv": 12,
+    "f0_2_uv": 8
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f1_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reinforced.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f1_1_uv": 925118,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reinforced": 4285
+  },
+  "previews": [
+    "Previews/HR035.png",
+    "UV_Material_QA/Views/HR035_back.png",
+    "UV_Material_QA/Views/HR035_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

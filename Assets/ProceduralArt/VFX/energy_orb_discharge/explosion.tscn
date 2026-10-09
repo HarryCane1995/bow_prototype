@@ -1,0 +1,171 @@
+[gd_scene load_steps=26 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/OrbitalBand_00.obj" id="Mesh_OrbitalBand_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/OrbitalBand_01.obj" id="Mesh_OrbitalBand_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/OrbitalBand_02.obj" id="Mesh_OrbitalBand_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_00.obj" id="Mesh_Satellite_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_01.obj" id="Mesh_Satellite_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_02.obj" id="Mesh_Satellite_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_03.obj" id="Mesh_Satellite_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_04.obj" id="Mesh_Satellite_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_05.obj" id="Mesh_Satellite_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_06.obj" id="Mesh_Satellite_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_07.obj" id="Mesh_Satellite_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_08.obj" id="Mesh_Satellite_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_09.obj" id="Mesh_Satellite_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_10.obj" id="Mesh_Satellite_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_11.obj" id="Mesh_Satellite_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_12.obj" id="Mesh_Satellite_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_13.obj" id="Mesh_Satellite_13"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/energy_orb_discharge/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="OrbitalBand_00" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_OrbitalBand_00")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="OrbitalBand_01" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_OrbitalBand_01")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="OrbitalBand_02" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_OrbitalBand_02")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="Satellite_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_09" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_09")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_10" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_10")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_11" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_11")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_12" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_12")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Satellite_13" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Satellite_13")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

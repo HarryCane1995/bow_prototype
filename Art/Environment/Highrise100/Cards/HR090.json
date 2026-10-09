@@ -1,0 +1,141 @@
+{
+  "id": "HR090",
+  "name": "Atrium City",
+  "category": "mixed_use",
+  "subtype": 4,
+  "seed": 1637810,
+  "role": "midground",
+  "collection": "HR090_Atrium_City",
+  "bounds_m": [
+    93.492,
+    55.0,
+    235.45
+  ],
+  "bounds_min": [
+    -46.746,
+    -27.5,
+    0.0
+  ],
+  "bounds_max": [
+    46.746,
+    27.5,
+    235.45
+  ],
+  "parameters": {
+    "width": 88.2,
+    "depth": 55.0,
+    "height": 231.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Atrium City",
+    "mixed_use",
+    "open_tall_atrium",
+    "rear_glass_skin",
+    "roof_paired_hvac",
+    "three_community_bridges",
+    "unequal_flanks"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 17,
+    "triangles": 332,
+    "vertices": 336,
+    "polygons": 134
+  },
+  "geometry_sha256": "28f43182eadb87f00c709f977645fbda1b9ede569483caadd12c2bf583f4b16d",
+  "geometry_only_sha256": "1e8ca5278f06ad80acf6c4d26e3828e14cf16c55add5a83b11d5dd7b0911db3a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.252,
+    "mass_complexity": 0.179,
+    "industrial_density": 0.588,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.12,
+    "rooftop_complexity": 0.667,
+    "old_new": 0.46
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "atrium_flank_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "atrium_flank": [
+      "f4_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "rear_atrium_skin": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "community_link_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "community_link": [
+      "f1_1_uv"
+    ],
+    "public_lobby": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 17,
+    "floor_rooftop": 7,
+    "f4_0_uv": 8,
+    "floor_metal_deck": 58,
+    "wall_maintenance": 8,
+    "wall_vent_bank": 16,
+    "glass": 8,
+    "f1_1_uv": 12
+  },
+  "recipes": [
+    "Recipes/f1_1_uv.uv.json",
+    "Recipes/f4_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f1_1_uv": 925118,
+    "f4_0_uv": 925404,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR090.png",
+    "UV_Material_QA/Views/HR090_back.png",
+    "UV_Material_QA/Views/HR090_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

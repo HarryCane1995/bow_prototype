@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://vbbex2y1qf1d"
+path="res://.godot/imported/Terminal_06.obj-8f65a7098e2077efdf40621c766a0d06.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Terminal_06.obj-8f65a7098e2077efdf40621c766a0d06.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_06.obj"
+dest_files=["res://.godot/imported/Terminal_06.obj-8f65a7098e2077efdf40621c766a0d06.mesh", "res://.godot/imported/Terminal_06.obj-8f65a7098e2077efdf40621c766a0d06.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

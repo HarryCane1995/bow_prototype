@@ -1,0 +1,148 @@
+{
+  "id": "HR052",
+  "name": "Twin Courtyard",
+  "category": "retro",
+  "subtype": 1,
+  "seed": 1336888,
+  "role": "background",
+  "collection": "HR052_Twin_Courtyard",
+  "bounds_m": [
+    58.3248,
+    33.8,
+    252.01049999999998
+  ],
+  "bounds_min": [
+    -29.1624,
+    -16.9,
+    0.0
+  ],
+  "bounds_max": [
+    29.1624,
+    16.9,
+    252.01049999999998
+  ],
+  "parameters": {
+    "width": 55.12,
+    "depth": 32.8,
+    "height": 236.9,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Twin Courtyard",
+    "elevated_bridge",
+    "open_court",
+    "rear_spine",
+    "retro",
+    "roof_paired_hvac",
+    "unequal_twins"
+  ],
+  "metrics": {
+    "meshes": 13,
+    "primitives": 26,
+    "triangles": 440,
+    "vertices": 416,
+    "polygons": 188
+  },
+  "geometry_sha256": "659e3663f42b020dbb6e36ad9c99b4535188e215bd0572de0cbb88cc4ab25257",
+  "geometry_only_sha256": "84fd01f3d55f219695a5937547392e8af59951c06ad8f5d05fe0e2701ab303b4",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.432,
+    "mass_complexity": 0.274,
+    "industrial_density": 0.385,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.118,
+    "rooftop_complexity": 0.667,
+    "old_new": 0.48
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "court_wing_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "court_wing": [
+      "f4_3_uv"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "wing_cap_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "wing_cap": [
+      "f0_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "rear_court_link_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rear_court_link": [
+      "f0_0_uv"
+    ],
+    "high_crossing_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "high_crossing": [
+      "f0_0_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 66,
+    "floor_rooftop": 16,
+    "f4_3_uv": 8,
+    "f0_0_uv": 16,
+    "floor_metal_deck": 58,
+    "wall_maintenance": 8,
+    "wall_vent_bank": 16
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/f4_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "f4_3_uv": 925455,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR052.png",
+    "UV_Material_QA/Views/HR052_back.png",
+    "UV_Material_QA/Views/HR052_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

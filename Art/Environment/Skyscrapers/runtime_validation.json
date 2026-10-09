@@ -1,0 +1,81 @@
+{
+	"ceiling_absent": true,
+	"materials": {
+		"M_Level01_Skyline_AmberService": "StandardMaterial3D",
+		"M_Level01_Skyline_CeramicConcrete": "StandardMaterial3D",
+		"M_Level01_Skyline_Exoframe": "StandardMaterial3D",
+		"M_Level01_Skyline_Graphite": "StandardMaterial3D",
+		"M_Level01_Skyline_OfficeWindows": "StandardMaterial3D",
+		"M_Level01_Skyline_PaleAlloy": "StandardMaterial3D",
+		"M_Level01_Skyline_ServiceBlack": "StandardMaterial3D",
+		"M_Level01_Skyline_SmokedGlass": "StandardMaterial3D",
+		"M_Level01_Skyline_TealSignal": "StandardMaterial3D"
+	},
+	"render_triangles": 16336,
+	"roof_rays": [
+		{
+			"body": "L01_Skyline_01_Exoskeleton_SlantedCrown_14_COL",
+			"height": 487.900024414063,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_01_Exoskeleton"
+		},
+		{
+			"body": "L01_Skyline_02_Needle_NeedleShaft_03_COL",
+			"height": 724.800048828125,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_02_Needle"
+		},
+		{
+			"body": "L01_Skyline_03_CorporateMonolith_ExecutiveRoof_06_COL",
+			"height": 511.199920654297,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_03_CorporateMonolith"
+		},
+		{
+			"body": "L01_Skyline_04_SuspendedVolumes_TopPlant_10_COL",
+			"height": 381.639953613281,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_04_SuspendedVolumes"
+		},
+		{
+			"body": "L01_Skyline_05_UtilitySpine_PlantHousing_16_COL",
+			"height": 325.000030517578,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_05_UtilitySpine"
+		},
+		{
+			"body": "L01_Skyline_06_Megablock_HabitatRaft4_08_COL",
+			"height": 247.5,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_06_Megablock"
+		},
+		{
+			"body": "L01_Skyline_07_Skybridge_BridgeTerrace_10_COL",
+			"height": 368.191986083984,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_07_Skybridge"
+		},
+		{
+			"body": "L01_Skyline_08_Commerce_MediaCrown_09_COL",
+			"height": 346.240051269531,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_08_Commerce"
+		},
+		{
+			"body": "L01_Skyline_09_CleanSplitSpire_LinkFloor_06_COL",
+			"height": 303.500061035156,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_09_CleanSplitSpire"
+		},
+		{
+			"body": "L01_Skyline_10_OffsetHalo_OffsetTop_12_COL",
+			"height": 588.199951171875,
+			"normal_y": 1.0,
+			"tower": "L01_Skyline_10_OffsetHalo"
+		}
+	],
+	"route_envelope_clear": true,
+	"simplified_bodies": 95,
+	"towers": 10,
+	"visual_meshes": 125
+}

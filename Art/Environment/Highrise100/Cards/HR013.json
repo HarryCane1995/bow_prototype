@@ -1,0 +1,127 @@
+{
+  "id": "HR013",
+  "name": "Gantry Works",
+  "category": "industrial",
+  "subtype": 2,
+  "seed": 1028047,
+  "role": "midground",
+  "collection": "HR013_Gantry_Works",
+  "bounds_m": [
+    50.922,
+    57.63199999999999,
+    278.25174999999996
+  ],
+  "bounds_min": [
+    -25.461,
+    -28.815999999999995,
+    0.0
+  ],
+  "bounds_max": [
+    25.461,
+    28.815999999999995,
+    278.25174999999996
+  ],
+  "parameters": {
+    "width": 44.28,
+    "depth": 48.8,
+    "height": 279.65,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "open_gantry",
+    "suspended_works"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 11,
+    "triangles": 132,
+    "vertices": 120,
+    "polygons": 66
+  },
+  "geometry_sha256": "92ff90858aa605b2c627c703134e6e6d1d2332fc528f3b887295698f62e8369f",
+  "geometry_only_sha256": "8e295b824bb9534c232a1ff515eaa38f490766f6031d8d4250a141e89f8ec22a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.483,
+    "mass_complexity": 0.116,
+    "industrial_density": 0.545,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.53,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "GantryLeg": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "GantryHead_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "GantryHead": [
+      "f2_2_uv"
+    ],
+    "HangingWorks_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "HangingWorks": [
+      "f2_3_uv"
+    ],
+    "Hangers": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 15,
+    "floor_rooftop": 5,
+    "floor_metal_deck": 18,
+    "wall_reactor_housing": 12,
+    "f2_2_uv": 4,
+    "f2_3_uv": 12
+  },
+  "recipes": [
+    "Recipes/f2_2_uv.uv.json",
+    "Recipes/f2_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "f2_2_uv": 925236,
+    "f2_3_uv": 925253,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR013.png",
+    "UV_Material_QA/Views/HR013_back.png",
+    "UV_Material_QA/Views/HR013_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

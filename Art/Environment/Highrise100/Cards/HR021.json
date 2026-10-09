@@ -1,0 +1,113 @@
+{
+  "id": "HR021",
+  "name": "Vent Mast",
+  "category": "hvac",
+  "subtype": 0,
+  "seed": 1091399,
+  "role": "midground",
+  "collection": "HR021_Vent_Mast",
+  "bounds_m": [
+    45.56,
+    53.23159999999999,
+    198.0
+  ],
+  "bounds_min": [
+    -22.78,
+    -26.615799999999997,
+    0.0
+  ],
+  "bounds_max": [
+    22.78,
+    26.615799999999997,
+    198.0
+  ],
+  "parameters": {
+    "width": 39.6,
+    "depth": 44.94,
+    "height": 198.0,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "alternating_vent_pods",
+    "narrow_mast"
+  ],
+  "metrics": {
+    "meshes": 6,
+    "primitives": 9,
+    "triangles": 108,
+    "vertices": 112,
+    "polygons": 54
+  },
+  "geometry_sha256": "11f84f612b21fe691d805b9e8735074e0b536ec0af52109d92b61f7f3e4c1402",
+  "geometry_only_sha256": "69fe3b5c59e11f9257f0d39b92a7f90ad13e3d5e43c54aa994a631f2bd7409b7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.372,
+    "mass_complexity": 0.095,
+    "industrial_density": 0.333,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.211,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.25
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_vent_bank",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Mast": [
+      "wall_vent_bank",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "VentPod_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "VentPod": [
+      "f2_2_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 13,
+    "floor_rooftop": 6,
+    "floor_metal_deck": 7,
+    "wall_vent_bank": 8,
+    "f2_2_uv": 20
+  },
+  "recipes": [
+    "Recipes/f2_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f2_2_uv": 925236,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR021.png",
+    "UV_Material_QA/Views/HR021_back.png",
+    "UV_Material_QA/Views/HR021_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,112 @@
+{
+  "id": "HR003",
+  "name": "Chamfered Wedge",
+  "category": "corporate",
+  "subtype": 2,
+  "seed": 948857,
+  "role": "background",
+  "collection": "HR003_Chamfered_Wedge",
+  "bounds_m": [
+    36.276,
+    49.28719999999999,
+    333.2
+  ],
+  "bounds_min": [
+    -18.138,
+    -24.643599999999996,
+    0.0
+  ],
+  "bounds_max": [
+    18.138,
+    24.643599999999996,
+    333.2
+  ],
+  "parameters": {
+    "width": 31.16,
+    "depth": 41.48,
+    "height": 333.2,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "chamfered_plan",
+    "sloped_crown"
+  ],
+  "metrics": {
+    "meshes": 6,
+    "primitives": 10,
+    "triangles": 128,
+    "vertices": 96,
+    "polygons": 64
+  },
+  "geometry_sha256": "66094de5e8f53daf33df9601cbcaf57bae84a88ffd32f9488b2d8af2e6101422",
+  "geometry_only_sha256": "faebc6672e1e722338f3520d02f96fc765f32cff639fa3a06ba7411baa435500",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.676,
+    "mass_complexity": 0.105,
+    "industrial_density": 0.8,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.214,
+    "cantilever_overhang": 0.224,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Wedge_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Wedge": [
+      "f0_0_uv"
+    ],
+    "Fins": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 14,
+    "floor_rooftop": 2,
+    "floor_metal_deck": 36,
+    "wall_corporate": 4,
+    "f0_0_uv": 8
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR003.png",
+    "UV_Material_QA/Views/HR003_back.png",
+    "UV_Material_QA/Views/HR003_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

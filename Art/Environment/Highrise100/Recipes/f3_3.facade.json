@@ -1,0 +1,221 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 4,
+  "generator_version": "0.4.0",
+  "generator_fingerprint": "38c970db1f0695bec9006f5fd5c35d164466e620e90486f34d5d222630722a5e",
+  "created_at": "2026-09-25T17:33:13+00:00",
+  "name": "f3_3",
+  "surface_mode": "UNIQUE_FACADE",
+  "tile_mode": "UNIQUE_SHEET",
+  "preset": "EXOSKELETON_TOWER",
+  "seed": 925354,
+  "palette": "cold",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 0.8,
+    "weathering": 0.27,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.258,
+      "seam_contrast": 0.564,
+      "material_variation": 0.4117,
+      "macro_grime_strength": 0.2504,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.7384,
+      "baked_lighting_strength": 0.314,
+      "detail_contrast": 0.436,
+      "module_irregularity": 0.401
+    }
+  },
+  "parameters": {
+    "window_density": 0.85,
+    "emission_density": 0.73,
+    "structural_width": 20,
+    "grime_amount": 0.59,
+    "retro_strength": 0.35,
+    "window_aspect": 2.1,
+    "floor_height": 44,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.24,
+    "signage_density": 0.2,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.35
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    512,
+    1024
+  ],
+  "breakup": {
+    "mode": "LAYERED",
+    "export_mode": "BAKED",
+    "macro_variation": 0.18,
+    "grime": 0.19,
+    "micro_grain": 0.025,
+    "retro_artifacts": 0.12,
+    "version": "1.0"
+  },
+  "palette_mix": {
+    "enabled": true,
+    "preset": "NEUTRAL_COLD",
+    "version": "1.0",
+    "colors": {
+      "BASE": "#657780",
+      "SECONDARY": "#889496",
+      "DARK": "#19262e",
+      "ACCENT": "#839e9f",
+      "GLASS": "#283e4c",
+      "EMISSION_PRIMARY": "#93c8d2",
+      "EMISSION_SECONDARY": "#b9b38a",
+      "GRIME_TINT": "#4b4840"
+    },
+    "locks": {
+      "BASE": false,
+      "SECONDARY": false,
+      "DARK": false,
+      "ACCENT": false,
+      "GLASS": false,
+      "EMISSION_PRIMARY": false,
+      "EMISSION_SECONDARY": false,
+      "GRIME_TINT": false
+    },
+    "material_responses": {
+      "PAINTED_METAL": {
+        "roughness": 0.76,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      },
+      "RAW_METAL": {
+        "roughness": 0.49,
+        "metallic": 0.82,
+        "ao_response": 1.0
+      },
+      "GLASS": {
+        "roughness": 0.23,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "CONCRETE": {
+        "roughness": 0.94,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "VENT": {
+        "roughness": 0.82,
+        "metallic": 0.38,
+        "ao_response": 1.0
+      },
+      "RECESSED_VOID": {
+        "roughness": 0.98,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "ACCENT_PAINT": {
+        "roughness": 0.74,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      }
+    },
+    "albedo_influence": 1.0,
+    "emission_influence": 1.0,
+    "weather_tint_influence": 0.25,
+    "material_variation_influence": 1.0,
+    "accent_usage": 1.0,
+    "colored_balance": 1.0,
+    "structural_separation": 1.0,
+    "orm_influence": 1.0
+  },
+  "overrides": {
+    "emission_density": 0.73,
+    "grime_amount": 0.59,
+    "retro_strength": 0.35,
+    "window_aspect": 2.1,
+    "floor_height": 44
+  },
+  "outputs": {
+    "albedo": "Textures/f3_3/albedo.png",
+    "normal": "Textures/f3_3/normal.png",
+    "orm": "Textures/f3_3/orm.png",
+    "height": "Textures/f3_3/height.png",
+    "emission": "Textures/f3_3/emission.png"
+  },
+  "sha256": {
+    "albedo": "cfe69e06f0f265bccb0fc6d150aec064b255e4b5ce6ff9aa2fcb078cf36ea126",
+    "normal": "891835b020e9117f286626ed597fd50f70e23bb07e3e182e0d42d9995514925a",
+    "orm": "d8e59819e8112d1c4991b9d1a6522557ebd92ae936b20a4569f14eed144beae3",
+    "height": "6a38d6b2daff52e72e6dee00e5bfc18e4079e01f3edb0acf9cc86d250bb926ac",
+    "emission": "f8ac335d200298a7e65bb67c6cefb0b19b8b012ba5d2cec9b061659b9f76b66a"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data",
+    "emission_mask": "linear data"
+  },
+  "palette_role_weights": {
+    "PAINTED_METAL": {
+      "BASE": 0.76,
+      "SECONDARY": 0.2,
+      "ACCENT": 0.04
+    },
+    "RAW_METAL": {
+      "DARK": 0.15,
+      "BASE": 0.85
+    },
+    "GLASS": {
+      "GLASS": 0.92,
+      "BASE": 0.08
+    },
+    "CONCRETE": {
+      "BASE": 0.65,
+      "SECONDARY": 0.35
+    },
+    "VENT": {
+      "DARK": 1.0
+    },
+    "RECESSED_VOID": {
+      "DARK": 1.0
+    },
+    "SIGNAGE": {
+      "ACCENT": 1.0
+    },
+    "EMISSIVE": {
+      "EMISSION_PRIMARY": 0.75,
+      "EMISSION_SECONDARY": 0.25
+    }
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL"
+}

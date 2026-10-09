@@ -1,0 +1,174 @@
+{
+  "id": "HR099",
+  "name": "Helix Citadel",
+  "category": "hero",
+  "subtype": 3,
+  "seed": 1709081,
+  "role": "hero",
+  "collection": "HR099_Helix_Citadel",
+  "bounds_m": [
+    79.29613910710165,
+    69.34283176239174,
+    365.45
+  ],
+  "bounds_min": [
+    -39.648069553550826,
+    -34.67141588119587,
+    0.0
+  ],
+  "bounds_max": [
+    39.648069553550826,
+    34.67141588119587,
+    365.45
+  ],
+  "parameters": {
+    "width": 73.08,
+    "depth": 43.68,
+    "height": 361.0,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Helix Citadel",
+    "central_load_spine",
+    "five_rotating_districts",
+    "hero",
+    "open_transfer_floors",
+    "roof_paired_hvac",
+    "spiral_silhouette"
+  ],
+  "metrics": {
+    "meshes": 19,
+    "primitives": 27,
+    "triangles": 388,
+    "vertices": 344,
+    "polygons": 178
+  },
+  "geometry_sha256": "565dd5d631fcbea0edc44d9e7cbc4d63b92f39c0f1b209221068911898e165a8",
+  "geometry_only_sha256": "d20ef8958266b313814f0dbb88b1a5fc6cfe112b2ac02798ae2ff45f57e05e2d",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.461,
+    "mass_complexity": 0.284,
+    "industrial_density": 0.778,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.145,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "helix_spine": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "rotary_district_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_0": [
+      "f5_3_uv"
+    ],
+    "rotary_transfer": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rotary_belt": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_1": [
+      "f0_0_uv"
+    ],
+    "rotary_district_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_2": [
+      "f5_3_uv"
+    ],
+    "rotary_district_3_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_3": [
+      "f0_0_uv"
+    ],
+    "rotary_district_4_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rotary_district_4": [
+      "f5_3_uv"
+    ],
+    "helix_crown_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "helix_crown": [
+      "f0_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 27,
+    "floor_metal_deck": 105,
+    "wall_tech_spine": 4,
+    "floor_rooftop": 6,
+    "f5_3_uv": 12,
+    "f0_0_uv": 12,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/f5_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "f5_3_uv": 925556,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR099.png",
+    "UV_Material_QA/Views/HR099_back.png",
+    "UV_Material_QA/Views/HR099_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

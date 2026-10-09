@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5jda1wt850f8"
+path="res://.godot/imported/Spark_23.obj-36a46d790e6c563f07d370f41968da62.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Spark_23.obj-36a46d790e6c563f07d370f41968da62.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_23.obj"
+dest_files=["res://.godot/imported/Spark_23.obj-36a46d790e6c563f07d370f41968da62.mesh", "res://.godot/imported/Spark_23.obj-36a46d790e6c563f07d370f41968da62.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

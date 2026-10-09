@@ -1,0 +1,154 @@
+{
+  "id": "HR087",
+  "name": "Terraced Quarter",
+  "category": "mixed_use",
+  "subtype": 1,
+  "seed": 1614053,
+  "role": "midground",
+  "collection": "HR087_Terraced_Quarter",
+  "bounds_m": [
+    103.03200000000001,
+    48.0315,
+    220.75
+  ],
+  "bounds_min": [
+    -51.516000000000005,
+    -25.9325,
+    0.0
+  ],
+  "bounds_max": [
+    51.516000000000005,
+    22.099,
+    220.75
+  ],
+  "parameters": {
+    "width": 95.4,
+    "depth": 45.1,
+    "height": 216.3,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Terraced Quarter",
+    "asymmetric_setbacks",
+    "front_shop_bar",
+    "mixed_use",
+    "rear_office_blade",
+    "roof_paired_hvac",
+    "three_residential_terraces"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 13,
+    "triangles": 220,
+    "vertices": 216,
+    "polygons": 94
+  },
+  "geometry_sha256": "b01572d6b6a44e450432bb71436e08d7db5a74e9369ca9a32e9951e97ea8c2e5",
+  "geometry_only_sha256": "01ca0b7cdb627578428a6d45f54ac1b028369b4742bfbe908ed7c3e14bd950c4",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.214,
+    "mass_complexity": 0.137,
+    "industrial_density": 0.385,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.14,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.46
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "rear_office_blade_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rear_office_blade": [
+      "f4_1_uv"
+    ],
+    "residential_terrace_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "residential_terrace_0": [
+      "f1_2_uv"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "residential_terrace_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "residential_terrace_1": [
+      "f1_2_uv"
+    ],
+    "residential_terrace_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "residential_terrace_2": [
+      "f1_2_uv"
+    ],
+    "front_shop_bar": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 25,
+    "floor_rooftop": 8,
+    "f4_1_uv": 4,
+    "f1_2_uv": 12,
+    "glass": 4,
+    "floor_metal_deck": 29,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f1_2_uv.uv.json",
+    "Recipes/f4_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f1_2_uv": 925135,
+    "f4_1_uv": 925421,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR087.png",
+    "UV_Material_QA/Views/HR087_back.png",
+    "UV_Material_QA/Views/HR087_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

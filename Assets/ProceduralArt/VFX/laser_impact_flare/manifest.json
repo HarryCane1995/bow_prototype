@@ -1,0 +1,677 @@
+{
+  "recipe": {
+    "schema": "bowprototype.mesh_vfx",
+    "schema_version": 1,
+    "generator_version": "0.2.0",
+    "effect": "LASER_IMPACT",
+    "seed": 1106,
+    "parameters": {
+      "overall_scale": 1.0,
+      "duration": 1.2,
+      "core_size": 0.65,
+      "core_brightness": 1.6,
+      "core_lifetime": 0.23,
+      "petal_count": 9,
+      "petal_length": 1.8,
+      "petal_width": 0.65,
+      "petal_curl": 0.75,
+      "petal_spread": 0.8,
+      "petal_irregularity": 0.38,
+      "petal_lifetime": 0.85,
+      "ring_radius": 3.3,
+      "ring_thickness": 0.18,
+      "ring_speed": 1.4,
+      "ring_tilt": 0,
+      "ring_vertical_offset": 0.06,
+      "shard_count": 16,
+      "shard_length": 0.65,
+      "shard_spread": 2.6,
+      "shard_speed": 1.4,
+      "smoke_count": 8,
+      "smoke_puff_size": 0.65,
+      "smoke_expansion_speed": 0.7,
+      "smoke_darkness": 0.5,
+      "smoke_linger": 1.9,
+      "smoke_delay": 0.2,
+      "dust_spread": 2.2,
+      "low_poly_amount": 0.82,
+      "vertex_wobble": 0.025,
+      "posterization": 5,
+      "palette_quantization": 0.35,
+      "alpha_dithering": 0.7,
+      "chunkiness": 0.65,
+      "silhouette_exaggeration": 0.55,
+      "effect_length": 3.8,
+      "effect_radius": 1.35,
+      "effect_width": 0.06,
+      "effect_count": 10,
+      "effect_segments": 10,
+      "effect_jitter": 0.3,
+      "effect_arc": 1.4,
+      "effect_lifetime": 0.68,
+      "effect_stagger": 0.08,
+      "effect_motion": 1.0
+    },
+    "layers": {
+      "core": {
+        "enabled": true,
+        "color": "#fff3c7",
+        "color_b": "#fff8e8",
+        "opacity": 0.95,
+        "emission": 1.2,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "petals": {
+        "enabled": true,
+        "color": "#ff793a",
+        "color_b": "#ffcf73",
+        "opacity": 0.9,
+        "emission": 0.9,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.0,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "ring": {
+        "enabled": true,
+        "color": "#ed5732",
+        "color_b": "#fcae48",
+        "opacity": 0.65,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "shards": {
+        "enabled": true,
+        "color": "#ffe8a3",
+        "color_b": "#ff592e",
+        "opacity": 0.9,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "smoke": {
+        "enabled": false,
+        "color": "#77736a",
+        "color_b": "#3b4142",
+        "opacity": 0.6,
+        "emission": 0.0,
+        "blend": "DITHER",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": true,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "dust": {
+        "enabled": false,
+        "color": "#716b5a",
+        "color_b": "#3a3935",
+        "opacity": 0.3,
+        "emission": 0.0,
+        "blend": "ALPHA",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "Core",
+      "layer": "core",
+      "mesh": "Core",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.155,
+        0.155,
+        0.155
+      ],
+      "scale1": [
+        0.62,
+        0.62,
+        0.62
+      ],
+      "start": 0.0,
+      "life": 0.25,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0,
+      "tint": 0.4626802004801808
+    },
+    {
+      "name": "IncomingBeam",
+      "layer": "petals",
+      "mesh": "IncomingBeam",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.4,
+        0.4,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.37400000000000005,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0,
+      "tint": 0.6442192018387972
+    },
+    {
+      "name": "Band_00",
+      "layer": "ring",
+      "mesh": "Band_00",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.081,
+        0.25,
+        0.081
+      ],
+      "scale1": [
+        1.35,
+        0.5,
+        1.35
+      ],
+      "start": 0.0,
+      "life": 0.68,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "gravity": 0,
+      "fade_start": 0.08,
+      "tint": 0.7605084478777848
+    },
+    {
+      "name": "Band_01",
+      "layer": "ring",
+      "mesh": "Band_01",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.06561,
+        0.25,
+        0.06561
+      ],
+      "scale1": [
+        1.0935000000000001,
+        0.5,
+        1.0935000000000001
+      ],
+      "start": 0.08,
+      "life": 0.68,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.7071067811865476,
+        0.0,
+        0.0,
+        0.7071067811865476
+      ],
+      "gravity": 0,
+      "fade_start": 0.08,
+      "tint": 0.7187610289865336
+    },
+    {
+      "name": "FlareRay_00",
+      "layer": "shards",
+      "mesh": "FlareRay_00",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.5189744797297533,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.007299680040496668,
+        0.0,
+        -0.7070691017653836,
+        0.7071067811865475
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.8683773065139792
+    },
+    {
+      "name": "FlareRay_01",
+      "layer": "shards",
+      "mesh": "FlareRay_01",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.6644612656706668,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.02193335104380798,
+        0.0,
+        -0.45370784745271253,
+        0.8908805291798756
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.7255346184591557
+    },
+    {
+      "name": "FlareRay_02",
+      "layer": "shards",
+      "mesh": "FlareRay_02",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.5140355265630792,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        -0.056571063119183196,
+        0.0,
+        -0.1556947608640388,
+        0.9861839870212126
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.6798800504923792
+    },
+    {
+      "name": "FlareRay_03",
+      "layer": "shards",
+      "mesh": "FlareRay_03",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.6080558031202693,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.03830311743775915,
+        0.0,
+        0.15609560669730488,
+        0.986999003426219
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.39857801683669514
+    },
+    {
+      "name": "FlareRay_04",
+      "layer": "shards",
+      "mesh": "FlareRay_04",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.490654050954091,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.06935656543333286,
+        0.0,
+        0.4511584677240142,
+        0.8897447408286332
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.6114768780840262
+    },
+    {
+      "name": "FlareRay_05",
+      "layer": "shards",
+      "mesh": "FlareRay_05",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.38437360355062433,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.009576351960382543,
+        0.0,
+        0.7070419319129034,
+        0.7071067811865476
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.6963446810145898
+    },
+    {
+      "name": "FlareRay_06",
+      "layer": "shards",
+      "mesh": "FlareRay_06",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.460581034487334,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.11035249267744121,
+        0.0,
+        0.8833035874544847,
+        0.4556282473134351
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.9237113148620684
+    },
+    {
+      "name": "FlareRay_07",
+      "layer": "shards",
+      "mesh": "FlareRay_07",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.45634833257380314,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        -0.03283938358059858,
+        0.0,
+        0.9871295291517795,
+        0.15651475190100317
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.4099522384764903
+    },
+    {
+      "name": "FlareRay_08",
+      "layer": "shards",
+      "mesh": "FlareRay_08",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.4266218849685187,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0.26406708777098553,
+        0.0,
+        -0.9508181794270041,
+        0.16190541321175134
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.8558383647250947
+    },
+    {
+      "name": "FlareRay_09",
+      "layer": "shards",
+      "mesh": "FlareRay_09",
+      "origin": [
+        0,
+        1.15,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.6057566384382053,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        -0.030476467392255232,
+        0.0,
+        -0.8904219252634663,
+        0.4541145009195266
+      ],
+      "gravity": 0,
+      "fade_start": 0.03,
+      "tint": 0.5591761626324409
+    }
+  ],
+  "duration": 1.2,
+  "stats": {
+    "mesh_count": 14,
+    "triangle_count": 748
+  },
+  "coordinate_system": "right-handed, Y-up, metres; trail local -Z, laser incoming +Z, lightning from +Y",
+  "animation": "analytic life curves, no billboards"
+}

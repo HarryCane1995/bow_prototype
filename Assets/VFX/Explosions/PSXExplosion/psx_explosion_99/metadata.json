@@ -1,0 +1,288 @@
+{
+  "cols": 6,
+  "rows": 6,
+  "frame_count": 32,
+  "frame_size": 128,
+  "cell_size": 132,
+  "gutter": 2,
+  "rectangles": [
+    [
+      2,
+      2,
+      128,
+      128
+    ],
+    [
+      134,
+      2,
+      128,
+      128
+    ],
+    [
+      266,
+      2,
+      128,
+      128
+    ],
+    [
+      398,
+      2,
+      128,
+      128
+    ],
+    [
+      530,
+      2,
+      128,
+      128
+    ],
+    [
+      662,
+      2,
+      128,
+      128
+    ],
+    [
+      2,
+      134,
+      128,
+      128
+    ],
+    [
+      134,
+      134,
+      128,
+      128
+    ],
+    [
+      266,
+      134,
+      128,
+      128
+    ],
+    [
+      398,
+      134,
+      128,
+      128
+    ],
+    [
+      530,
+      134,
+      128,
+      128
+    ],
+    [
+      662,
+      134,
+      128,
+      128
+    ],
+    [
+      2,
+      266,
+      128,
+      128
+    ],
+    [
+      134,
+      266,
+      128,
+      128
+    ],
+    [
+      266,
+      266,
+      128,
+      128
+    ],
+    [
+      398,
+      266,
+      128,
+      128
+    ],
+    [
+      530,
+      266,
+      128,
+      128
+    ],
+    [
+      662,
+      266,
+      128,
+      128
+    ],
+    [
+      2,
+      398,
+      128,
+      128
+    ],
+    [
+      134,
+      398,
+      128,
+      128
+    ],
+    [
+      266,
+      398,
+      128,
+      128
+    ],
+    [
+      398,
+      398,
+      128,
+      128
+    ],
+    [
+      530,
+      398,
+      128,
+      128
+    ],
+    [
+      662,
+      398,
+      128,
+      128
+    ],
+    [
+      2,
+      530,
+      128,
+      128
+    ],
+    [
+      134,
+      530,
+      128,
+      128
+    ],
+    [
+      266,
+      530,
+      128,
+      128
+    ],
+    [
+      398,
+      530,
+      128,
+      128
+    ],
+    [
+      530,
+      530,
+      128,
+      128
+    ],
+    [
+      662,
+      530,
+      128,
+      128
+    ],
+    [
+      2,
+      662,
+      128,
+      128
+    ],
+    [
+      134,
+      662,
+      128,
+      128
+    ]
+  ],
+  "fps": 16,
+  "playback_duration": 2.0,
+  "alpha": "straight",
+  "order": "row-major, top-left origin",
+  "filter": "nearest",
+  "mipmaps": false,
+  "emission": true,
+  "sequence": true,
+  "hero_frame": 4,
+  "canvas_world_size": 4.0,
+  "pivot": [
+    0.5,
+    0.82
+  ],
+  "color_space": "sRGB; alpha linear",
+  "last_frame": "fully transparent",
+  "sha256": {
+    "color/color_0000.png": "2c009046015d3a377594028a02122b4d5a90177b94c743cf40c6435b29e03330",
+    "color/color_0001.png": "8cd849499d945977c79be3161248c1223d8701cf45028e54f13e64ec4e9c85b5",
+    "color/color_0002.png": "47b43e472be22da7efc189086e9eba4a4d8fcd71e096893edfd2c6f4e42c70f7",
+    "color/color_0003.png": "a0006455b22a7fc269b9c465c2f6c3e6bedc575a3d15c66bbbd25966a9923757",
+    "color/color_0004.png": "d3ebc48c02d3caaa3020508f423ba890eb638bd360e86efdd52582076543ddda",
+    "color/color_0005.png": "f419c07a672c69e3f666e8ef3909dab47b97ea653b32a4a4835e4fae09a7bfb6",
+    "color/color_0006.png": "e798ee06803bca1b8b894d9a0d8b39cdba4ef33d08f98102dad598de7d6490a7",
+    "color/color_0007.png": "b906e841fc3438c2e1d653a318dfc0fad1b2577ef47cb5c9fdddb6b3eaf057ec",
+    "color/color_0008.png": "5833fa9f9672f7f7c1246a3527c782413d4d05c11a38c4a5d6a9cb39db9d4b83",
+    "color/color_0009.png": "61bc15fa0fd189e9e2f916795572cea9d6a2b9501edbdc2af47e697d9f2ddfa0",
+    "color/color_0010.png": "3f82e53a8afeb9ad39c8ecf2f851bb7e326ea1d3de12411de21a6a9d3f0cab2a",
+    "color/color_0011.png": "bc65215049b0ae380ca0852f1e31583b8db3e95765e60407abd53282a69f098c",
+    "color/color_0012.png": "05d7b1db537c00d71284db24e993442897392f63a569cc045f8711851e0b0087",
+    "color/color_0013.png": "bfb0b13fbc081c980930d5a3de5238aaa78d3522d898c0f1c8c76182a3aa44b1",
+    "color/color_0014.png": "99f04118a33f942e7c48d573fb399bd41979004315486d6722238594f4bb9428",
+    "color/color_0015.png": "4c699521903cc176a4b4e0c09058089ae674671aa18582fb78980400913b61ff",
+    "color/color_0016.png": "dde9e31219e9360cbf40496ac20016d05e43ecdc6bac580c6d58f997f7de828b",
+    "color/color_0017.png": "127362dda0d92a59af3d9a883810feba7a9fb23407883b6967680098a6324706",
+    "color/color_0018.png": "a75b6e055dadab7f0c0628f45c65b1bb74555b16260f89fc0d2f9875aa90a68b",
+    "color/color_0019.png": "30ba178ff533a69fe1d56a35e657de176fc5e43f2c5f48f1037d07e22daef29b",
+    "color/color_0020.png": "b3dae3b82fbda476516710bbb9bdabab75ebba34b661b6d2aece3f07d5bb9d5f",
+    "color/color_0021.png": "23e5f529cb09f32cb6cd222c0902c195a2a85416c01b51d28463bf5987469075",
+    "color/color_0022.png": "4ee9eaa17facdd2eea6e37947b3208cb5afb3b3a3ea2ccb61a80ff4b7f916b91",
+    "color/color_0023.png": "a8de13c10798e35b2d3287e0de26ef5b69406ad0077d2b32191c58bbcc7d6d45",
+    "color/color_0024.png": "e16820eb0ff63fc23ba071e88e79feaa350c0d484f442b8eb7ea804307c48892",
+    "color/color_0025.png": "2e561d2b24ef6e27eab83f82a66a2dac80be0387406657a1f6f3f60536609860",
+    "color/color_0026.png": "d4387a8e07d91434745880e310de5e0e2a00109f85237fb2429cfbb0b8153882",
+    "color/color_0027.png": "0502e859326b2515e3c3a38a148c840abb1d28529d9dbc9910dfb443ca25f5f2",
+    "color/color_0028.png": "6c7377b8ac227840e54933c0a6b6adc8c3d51074d2dcc8d4264effe45e64d6b4",
+    "color/color_0029.png": "a0e88949cf38cc0559ada4bc5e2db103689d27a3589e8d2d782ea62d2954c40d",
+    "color/color_0030.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "color/color_0031.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "color_sheet.png": "74a9e3c071fc55c3c4d69c609ba907d2df71b2572399bea33aae0894ff406efb",
+    "contact_sheet.png": "9f14beae56a43efe2c24b20b44d204fa7d66709ec7e1fe02f34f37489b1e5b8a",
+    "emission/emission_0000.png": "2c009046015d3a377594028a02122b4d5a90177b94c743cf40c6435b29e03330",
+    "emission/emission_0001.png": "8cd849499d945977c79be3161248c1223d8701cf45028e54f13e64ec4e9c85b5",
+    "emission/emission_0002.png": "092c67cd903e61438458ee5fdbe29bcdf257fe6791b1e34a503f991b70497d37",
+    "emission/emission_0003.png": "d65c7e533f1e15c988bb0a42137f917e90c89c660b853ddb98202941f7990ef0",
+    "emission/emission_0004.png": "0231aa7c185c5708967b41b9982e65240ee46afddf1c2e70a6f957f73673f33c",
+    "emission/emission_0005.png": "f575c3e46fd118768130e448e6d238b33d9d88e29f4afc85c7a6038037de6780",
+    "emission/emission_0006.png": "76011a7de41465ebd49d3cdc79b38f1b7bbb20d6707b26c7a318095c9fceca0c",
+    "emission/emission_0007.png": "3145a6eeca063ed359fd3ce75563091154ea1a694947b2ef55225770f64370df",
+    "emission/emission_0008.png": "c05a2675e1feb75542e67f2d288cf3df14244a33f83d25f3968596ee6d7a48ab",
+    "emission/emission_0009.png": "0487ea12860baab7e29fadca27340352385326ceb2d5993b0a0eec5a2c7538c0",
+    "emission/emission_0010.png": "930f25ef71bb585a87db91c2203a29182a8d22cbf83adc0c45d83839e7718f22",
+    "emission/emission_0011.png": "70c12976b58d97a344bf36f422fe6055da60071a551fcfe0f085dff22ec583a0",
+    "emission/emission_0012.png": "c8d34a36cc01a34894b8e5219a30bfa5fd71d673cd282e06f0692c18574bee71",
+    "emission/emission_0013.png": "c87f2ce4a09911057d9f74f0e23a4ab802c5e26a938c419af359b81db8e5911c",
+    "emission/emission_0014.png": "50b4c0c97fcd66204f3c26308cb36d32488e1564013be121f0037efc36dd2342",
+    "emission/emission_0015.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0016.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0017.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0018.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0019.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0020.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0021.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0022.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0023.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0024.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0025.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0026.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0027.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0028.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0029.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0030.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission/emission_0031.png": "1594258d650464372a84556d099c6f0fad9551bbf0efe58e7403336fee183eee",
+    "emission_sheet.png": "2d07654df376fefe91ca7345f7a0f445d154185cc70bb3f3fdb18efdad8a4910",
+    "preview.png": "d3ebc48c02d3caaa3020508f423ba890eb638bd360e86efdd52582076543ddda"
+  }
+}

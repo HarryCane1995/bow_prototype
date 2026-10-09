@@ -1,0 +1,347 @@
+[gd_scene load_steps=48 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_00.obj" id="Mesh_MetalChunk_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_00.obj" id="Mesh_HotFragment_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_01.obj" id="Mesh_MetalChunk_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_02.obj" id="Mesh_MetalChunk_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_02.obj" id="Mesh_HotFragment_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_03.obj" id="Mesh_MetalChunk_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_04.obj" id="Mesh_MetalChunk_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_04.obj" id="Mesh_HotFragment_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_05.obj" id="Mesh_MetalChunk_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_06.obj" id="Mesh_MetalChunk_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_06.obj" id="Mesh_HotFragment_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_07.obj" id="Mesh_MetalChunk_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_08.obj" id="Mesh_MetalChunk_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_08.obj" id="Mesh_HotFragment_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_09.obj" id="Mesh_MetalChunk_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_10.obj" id="Mesh_MetalChunk_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_10.obj" id="Mesh_HotFragment_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_11.obj" id="Mesh_MetalChunk_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_12.obj" id="Mesh_MetalChunk_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_12.obj" id="Mesh_HotFragment_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_13.obj" id="Mesh_MetalChunk_13"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_14.obj" id="Mesh_MetalChunk_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_14.obj" id="Mesh_HotFragment_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_15.obj" id="Mesh_MetalChunk_15"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_16.obj" id="Mesh_MetalChunk_16"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_16.obj" id="Mesh_HotFragment_16"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_17.obj" id="Mesh_MetalChunk_17"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_18.obj" id="Mesh_MetalChunk_18"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_18.obj" id="Mesh_HotFragment_18"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_19.obj" id="Mesh_MetalChunk_19"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_20.obj" id="Mesh_MetalChunk_20"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_20.obj" id="Mesh_HotFragment_20"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_21.obj" id="Mesh_MetalChunk_21"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_22.obj" id="Mesh_MetalChunk_22"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/HotFragment_22.obj" id="Mesh_HotFragment_22"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/MetalChunk_23.obj" id="Mesh_MetalChunk_23"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/ImpactDust_00.obj" id="Mesh_ImpactDust_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/ImpactDust_01.obj" id="Mesh_ImpactDust_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/ImpactDust_02.obj" id="Mesh_ImpactDust_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/meshes/ImpactDust_03.obj" id="Mesh_ImpactDust_03"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/debris_spark_scatter/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="HotFragment_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_02" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_02")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_04" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_04")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_06" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_06")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_08" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_08")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_10" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_10")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_12" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_12")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_14" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_14")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_16" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_16")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_18" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_18")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_20" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_20")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="HotFragment_22" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_HotFragment_22")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="MetalChunk_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_09" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_09")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_10" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_10")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_11" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_11")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_12" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_12")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_13" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_13")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_14" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_14")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_15" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_15")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_16" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_16")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_17" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_17")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_18" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_18")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_19" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_19")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_20" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_20")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_21" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_21")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_22" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_22")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="MetalChunk_23" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_MetalChunk_23")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]
+
+[node name="ImpactDust_00" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_ImpactDust_00")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ImpactDust_01" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_ImpactDust_01")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ImpactDust_02" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_ImpactDust_02")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ImpactDust_03" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_ImpactDust_03")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5

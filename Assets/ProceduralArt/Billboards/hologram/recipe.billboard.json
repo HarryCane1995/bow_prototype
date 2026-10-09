@@ -1,0 +1,36 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "HOLOGRAM",
+  "seed": 99,
+  "palette": "COLD_SERVICE",
+  "colors": {
+    "neon": "#69e5da",
+    "accent": "#ffc36b",
+    "back": "#17272c",
+    "ink": "#b9ceca"
+  },
+  "parameters": {
+    "aspect": 1.3,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": false,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "long_edge": 512,
+  "size": [
+    512,
+    394
+  ],
+  "sha256": {
+    "albedo": "f478f9cca226ce3dfdd4c2f566778741b7b277ee0fb17fa8e00d2895d409d6be",
+    "emission": "03103083983460c84c16caf3ab948b531d926f22416b19ed5010327976001d52",
+    "orm": "9d6881b1998fa9c72f295111cae960a050a180ce70b756771b800e3b9afab8c1"
+  }
+}

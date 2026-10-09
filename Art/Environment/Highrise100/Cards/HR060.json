@@ -1,0 +1,182 @@
+{
+  "id": "HR060",
+  "name": "Plant Cathedral",
+  "category": "maintenance",
+  "subtype": 4,
+  "seed": 1400240,
+  "role": "background",
+  "collection": "HR060_Plant_Cathedral",
+  "bounds_m": [
+    60.1328,
+    34.0,
+    220.00000000000003
+  ],
+  "bounds_min": [
+    -30.0664,
+    -17.0,
+    0.0
+  ],
+  "bounds_max": [
+    30.0664,
+    17.0,
+    220.00000000000003
+  ],
+  "parameters": {
+    "width": 57.82,
+    "depth": 34.0,
+    "height": 220.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Plant Cathedral",
+    "four_plant_piers",
+    "industrial_nave",
+    "maintenance",
+    "new_steel_secondary_layer",
+    "old_new_retrofit",
+    "old_regular_window_grid",
+    "open_crown_gap",
+    "roof_exhaust_trio",
+    "triple_stacks"
+  ],
+  "metrics": {
+    "meshes": 19,
+    "primitives": 32,
+    "triangles": 432,
+    "vertices": 344,
+    "polygons": 204
+  },
+  "geometry_sha256": "c1f5a3468894f15d1b69e1d695b4331b58c2e33fd7456dba7d5ea433bd6c97a9",
+  "geometry_only_sha256": "c378b888ab9f96a57aec2f8c8607a35317cfcc10eaf58a94d6bf86f5c353c41a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.366,
+    "mass_complexity": 0.337,
+    "industrial_density": 0.625,
+    "window_emission_density": 0.54,
+    "signage_density": 0.067,
+    "weathering": 0.43,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.1,
+    "rooftop_complexity": 0.6,
+    "old_new": 0.16
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "plant_nave_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "plant_nave": [
+      "f1_2_uv"
+    ],
+    "old_concrete_pier": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "plant_pier": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "upper_plant_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "upper_plant": [
+      "f4_3_uv"
+    ],
+    "nave_roof_brace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rooftop_stack": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ],
+    "BillboardFrame": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Display": [
+      "floor_metal_deck",
+      "sign_2_uv"
+    ],
+    "DisplayRail": [
+      "signal"
+    ],
+    "ScreenMount": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "new_external_lift": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "new_lift_rail": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "new_lift_machine": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 64,
+    "floor_rooftop": 10,
+    "f1_2_uv": 4,
+    "floor_metal_deck": 55,
+    "wall_maintenance": 36,
+    "f4_3_uv": 4,
+    "wrap_heavy_pipe": 24,
+    "sign_2_uv": 1,
+    "signal": 6
+  },
+  "recipes": [
+    "Recipes/f1_2_uv.uv.json",
+    "Recipes/f4_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/sign_2_uv.uv.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f1_2_uv": 925135,
+    "f4_3_uv": 925455,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "sign_2_uv": 925762,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR060.png",
+    "UV_Material_QA/Views/HR060_back.png",
+    "UV_Material_QA/Views/HR060_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,168 @@
+{
+  "id": "HR055",
+  "name": "Octagon Regency",
+  "category": "retro",
+  "subtype": 4,
+  "seed": 1360645,
+  "role": "background",
+  "collection": "HR055_Octagon_Regency",
+  "bounds_m": [
+    62.14678928934323,
+    48.780839316595944,
+    261.0
+  ],
+  "bounds_min": [
+    -31.07339464467162,
+    -24.39041965829797,
+    0
+  ],
+  "bounds_max": [
+    31.073394644671616,
+    24.390419658297972,
+    261.0
+  ],
+  "parameters": {
+    "width": 50.96,
+    "depth": 40.0,
+    "height": 253.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Octagon Regency",
+    "deco_fins",
+    "drum_plinth",
+    "octagonal",
+    "retro",
+    "roof_water_tank",
+    "tiered_crown"
+  ],
+  "metrics": {
+    "meshes": 18,
+    "primitives": 15,
+    "triangles": 284,
+    "vertices": 256,
+    "polygons": 124
+  },
+  "geometry_sha256": "38df5587434fbb18d2872887490bb0004796c91d52fb864bbf98dfeb0d5d95ca",
+  "geometry_only_sha256": "3b452524444602321852fd8d0cf0fca16486aab4a6f03c715677269db442aa25",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.42,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.267,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.28,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.48
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "octagon_plinth_Caps": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "octagon_plinth": [
+      "wall_dark_concrete"
+    ],
+    "octagon_shaft_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "octagon_shaft": [
+      "f4_2_uv"
+    ],
+    "crown_drum_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "crown_drum": [
+      "f0_3_uv"
+    ],
+    "deco_fin_0": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_1": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_2": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_3": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_4": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_5": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_6": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "deco_fin_7": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 55,
+    "floor_rooftop": 11,
+    "f4_2_uv": 16,
+    "f0_3_uv": 16,
+    "floor_metal_deck": 12,
+    "wall_maintenance": 4,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f0_3_uv.uv.json",
+    "Recipes/f4_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f0_3_uv": 925051,
+    "f4_2_uv": 925438,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR055.png",
+    "UV_Material_QA/Views/HR055_back.png",
+    "UV_Material_QA/Views/HR055_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

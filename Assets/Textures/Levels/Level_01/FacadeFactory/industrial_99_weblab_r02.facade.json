@@ -1,0 +1,263 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 1,
+  "generator_version": "0.1.0",
+  "generator_fingerprint": "b806a9a8c6a383229fd7acafad451af065ad352f5a616e9722139e4f39ea4f69",
+  "created_at": "2026-09-18T00:42:42+00:00",
+  "name": "industrial_99_weblab_r02",
+  "preset": "INDUSTRIAL_TOWER",
+  "seed": 99,
+  "palette": "industrial",
+  "parameters": {
+    "window_density": 0.28,
+    "emission_density": 0.24,
+    "structural_width": 18,
+    "grime_amount": 0.48,
+    "retro_strength": 0.72,
+    "window_aspect": 1.65,
+    "floor_height": 32,
+    "service_floor_frequency": 0.32,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.88,
+    "signage_density": 0.32,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.15
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    1024,
+    2048
+  ],
+  "overrides": {},
+  "outputs": {
+    "albedo": "industrial_99_weblab_r02_albedo.png",
+    "emission": "industrial_99_weblab_r02_emission.png",
+    "normal": "industrial_99_weblab_r02_normal.png",
+    "orm": "industrial_99_weblab_r02_orm.png",
+    "height": "industrial_99_weblab_r02_height.png"
+  },
+  "sha256": {
+    "albedo": "9f962ca8d869a64132a121a0c925dbce4939a39c89c786d953c7d4b4f5d1c313",
+    "emission": "3aaec7823ef7ccbd5cb9b80a399e6e37fd1f97c4815da1fbe7c646706ba94724",
+    "height": "505314323e5801993c7a5032f0df7eb93b21bc7936e551ed0ce6210e1b37ab36",
+    "orm": "70b584523e0d263f88c9ea5c97c3df0687beaa7095581cafb0cd22b5f743332a",
+    "normal": "3ff24de88049dbe1ff6bae741327af68923f01254c721a5723cd8fd742728a43"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "material": "Assets/Materials/Environment/FacadeFactory/Generated/industrial_99_weblab_r02.tres",
+  "canonical_metadata": {
+    "version": "0.1.0",
+    "preset": "INDUSTRIAL_TOWER",
+    "seed": 99,
+    "resolution": [
+      1024,
+      2048
+    ],
+    "config": {
+      "name": "INDUSTRIAL_TOWER",
+      "grammar": "industrial",
+      "palette": "industrial",
+      "window_density": 0.28,
+      "window_aspect": 1.65,
+      "floor_height": 32,
+      "structural_width": 18,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "emission_density": 0.24,
+      "emission_strength": 1.15,
+      "grime_amount": 0.48,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "retro_strength": 0.72,
+      "style": {
+        "posterization": 40,
+        "dithering": 0.22,
+        "color_quantization": 112,
+        "micro_contrast": 0.12,
+        "compression_artifacts": 0.08,
+        "pixel_noise": 0.65,
+        "edge_exaggeration": 0.2,
+        "baked_ao_strength": 0.32
+      }
+    },
+    "floor_groups": [
+      {
+        "index": 0,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.198,
+        "zones": [
+          0.332,
+          0.106,
+          0.208
+        ]
+      },
+      {
+        "index": 1,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.186,
+        "zones": [
+          0.233,
+          0.287,
+          0.06
+        ]
+      },
+      {
+        "index": 2,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.033,
+        "zones": [
+          0.184,
+          0.043,
+          0.111
+        ]
+      },
+      {
+        "index": 3,
+        "dark": false,
+        "service": true,
+        "occupancy": 0.314,
+        "zones": [
+          0.272,
+          0.219,
+          0.439
+        ]
+      },
+      {
+        "index": 4,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.343,
+        "zones": [
+          0.459,
+          0.415,
+          0.354
+        ]
+      },
+      {
+        "index": 5,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.333,
+        "zones": [
+          0.243,
+          0.484,
+          0.366
+        ]
+      },
+      {
+        "index": 6,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.311,
+        "zones": [
+          0.178,
+          0.417,
+          0.202
+        ]
+      },
+      {
+        "index": 7,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.259,
+        "zones": [
+          0.124,
+          0.362,
+          0.155
+        ]
+      },
+      {
+        "index": 8,
+        "dark": false,
+        "service": true,
+        "occupancy": 0.049,
+        "zones": [
+          0.01,
+          0.051,
+          0.055
+        ]
+      },
+      {
+        "index": 9,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.064,
+        "zones": [
+          0.169,
+          0.01,
+          0.145
+        ]
+      },
+      {
+        "index": 10,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.299,
+        "zones": [
+          0.26,
+          0.304,
+          0.269
+        ]
+      },
+      {
+        "index": 11,
+        "dark": false,
+        "service": false,
+        "occupancy": 0.341,
+        "zones": [
+          0.228,
+          0.304,
+          0.403
+        ]
+      }
+    ],
+    "window_states": {
+      "OFF": 17,
+      "ON": 6,
+      "DIM": 9,
+      "BRIGHT": 1,
+      "BROKEN/DARK": 1,
+      "BLOCKED": 2
+    },
+    "signage_count": 3,
+    "tiling": "unique sheet / clamp",
+    "normal": "OpenGL +X +Y +Z",
+    "orm": {
+      "R": "ambient occlusion",
+      "G": "roughness",
+      "B": "metallic"
+    },
+    "sha256": {
+      "albedo": "9f962ca8d869a64132a121a0c925dbce4939a39c89c786d953c7d4b4f5d1c313",
+      "emission": "3aaec7823ef7ccbd5cb9b80a399e6e37fd1f97c4815da1fbe7c646706ba94724",
+      "height": "505314323e5801993c7a5032f0df7eb93b21bc7936e551ed0ce6210e1b37ab36",
+      "orm": "70b584523e0d263f88c9ea5c97c3df0687beaa7095581cafb0cd22b5f743332a",
+      "normal": "3ff24de88049dbe1ff6bae741327af68923f01254c721a5723cd8fd742728a43"
+    }
+  }
+}

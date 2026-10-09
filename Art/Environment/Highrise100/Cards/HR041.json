@@ -1,0 +1,149 @@
+{
+  "id": "HR041",
+  "name": "High Bridge",
+  "category": "twins",
+  "subtype": 0,
+  "seed": 1249779,
+  "role": "midground",
+  "collection": "HR041_High_Bridge",
+  "bounds_m": [
+    79.76,
+    39.8138,
+    242.04999999999998
+  ],
+  "bounds_min": [
+    -39.88,
+    -19.9069,
+    0.0
+  ],
+  "bounds_max": [
+    39.88,
+    19.9069,
+    242.04999999999998
+  ],
+  "parameters": {
+    "width": 57.6,
+    "depth": 33.17,
+    "height": 237.6,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "roof_paired_hvac",
+    "separate_shafts",
+    "single_high_bridge"
+  ],
+  "metrics": {
+    "meshes": 13,
+    "primitives": 19,
+    "triangles": 356,
+    "vertices": 328,
+    "polygons": 146
+  },
+  "geometry_sha256": "cf371a1b5b5ff3d03ec572692ee6e171ae43192301aed25139ab8fcdbb237d3f",
+  "geometry_only_sha256": "78456f1eaca3aee740577c0f0355cccdb650ccad03167d41465c2d6d6db014db",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.303,
+    "mass_complexity": 0.2,
+    "industrial_density": 0.789,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.445,
+    "rooftop_complexity": 0.667,
+    "old_new": 0.75
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Tower": [
+      "f4_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "Skybridge": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "BridgeHabitat": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "BridgeBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 25,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 77,
+    "wall_corporate": 4,
+    "f0_2_uv": 4,
+    "wall_maintenance": 8,
+    "wall_vent_bank": 16,
+    "f4_3_uv": 4,
+    "glass": 4
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f4_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f4_3_uv": 925455,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR041.png",
+    "UV_Material_QA/Views/HR041_back.png",
+    "UV_Material_QA/Views/HR041_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

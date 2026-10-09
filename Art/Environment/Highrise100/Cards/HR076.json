@@ -1,0 +1,150 @@
+{
+  "id": "HR076",
+  "name": "Vent Stack",
+  "category": "datacenter",
+  "subtype": 0,
+  "seed": 1526944,
+  "role": "background",
+  "collection": "HR076_Vent_Stack",
+  "bounds_m": [
+    53.480000000000004,
+    57.126400000000004,
+    177.2
+  ],
+  "bounds_min": [
+    -26.740000000000002,
+    -28.563200000000002,
+    0.0
+  ],
+  "bounds_max": [
+    26.740000000000002,
+    28.563200000000002,
+    177.2
+  ],
+  "parameters": {
+    "width": 46.8,
+    "depth": 49.22,
+    "height": 167.2,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Vent Stack",
+    "datacenter",
+    "deep_side_fins",
+    "five_cooling_bands",
+    "offset_control_cap",
+    "roof_exhaust_trio",
+    "sealed_server_core"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 24,
+    "triangles": 336,
+    "vertices": 312,
+    "polygons": 156
+  },
+  "geometry_sha256": "787566c017ec89f8b556a421c46454ed855d20a2593749702cf693d24e2b1a39",
+  "geometry_only_sha256": "06c62e494a974c6e8c68feccd80406bda4f1c5c9162885b9e042bce2f2b99f9c",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.31,
+    "mass_complexity": 0.253,
+    "industrial_density": 0.708,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.523,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.8
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "sealed_rack_core": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "occupied_band_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "occupied_band": [
+      "f2_0_uv"
+    ],
+    "cooling_fin": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "control_cap_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "control_cap": [
+      "f2_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 28,
+    "floor_rooftop": 7,
+    "floor_metal_deck": 61,
+    "accent_datacenter": 8,
+    "f2_0_uv": 20,
+    "f2_3_uv": 4,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/accent_datacenter.facade.json",
+    "Recipes/f2_0_uv.uv.json",
+    "Recipes/f2_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "accent_datacenter": 5876,
+    "f2_0_uv": 925202,
+    "f2_3_uv": 925253,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR076.png",
+    "UV_Material_QA/Views/HR076_back.png",
+    "UV_Material_QA/Views/HR076_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

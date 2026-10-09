@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/dust.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.44313725490196076, 0.4196078431372549, 0.35294117647058826, 1)
+shader_parameter/color_b = Color(0.22745098039215686, 0.2235294117647059, 0.20784313725490197, 1)
+shader_parameter/opacity = 0.3
+shader_parameter/emission_strength = 0.0
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.15
+shader_parameter/flat_unshaded = false
+shader_parameter/dither_mode = false

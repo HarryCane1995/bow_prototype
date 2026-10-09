@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Environment/FacadeFactory/FacadeReview.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Assets/Models/Environment/FacadeReview/Facade_Review_Buildings.blend" id="2"]
+[ext_resource type="Resource" path="res://Assets/Materials/Environment/FacadeFactory/review_settings.tres" id="3"]
+
+[node name="Level_Facade_Review" type="Node3D"]
+script = ExtResource("1")
+material_settings = ExtResource("3")
+
+[node name="ReviewBuildings" parent="." instance=ExtResource("2")]

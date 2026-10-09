@@ -1,0 +1,154 @@
+{
+  "id": "HR095",
+  "name": "Four Petal Keep",
+  "category": "buttress",
+  "subtype": 4,
+  "seed": 1677405,
+  "role": "hero",
+  "collection": "HR095_Four_Petal_Keep",
+  "bounds_m": [
+    73.257312,
+    52.47840000000001,
+    351.0
+  ],
+  "bounds_min": [
+    -36.628656,
+    -26.239200000000004,
+    0
+  ],
+  "bounds_max": [
+    36.628656,
+    26.239200000000004,
+    351.0
+  ],
+  "parameters": {
+    "width": 61.74,
+    "depth": 43.0,
+    "height": 341.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Four Petal Keep",
+    "buttress",
+    "faceted_plan",
+    "four_occupied_petals",
+    "pointed_central_keep",
+    "radial_buttressing",
+    "roof_exhaust_trio"
+  ],
+  "metrics": {
+    "meshes": 15,
+    "primitives": 17,
+    "triangles": 412,
+    "vertices": 408,
+    "polygons": 174
+  },
+  "geometry_sha256": "92b3c0fe79a401fe0742b33c6a943978b845d31fe1650605043aa51e1c7049f6",
+  "geometry_only_sha256": "9f69092a8b9ce9ad4c8f595602c162fb0ff9f11ca48926d5a4388d46d8bfc573",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.479,
+    "mass_complexity": 0.179,
+    "industrial_density": 0.235,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.247,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "petal_core_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "petal_core": [
+      "f3_0_uv"
+    ],
+    "petal_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "petal_0": [
+      "f3_1_uv"
+    ],
+    "petal_spine_shoe": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "petal_spine": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "petal_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "petal_1": [
+      "f3_1_uv"
+    ],
+    "petal_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "petal_2": [
+      "f3_1_uv"
+    ],
+    "petal_3_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "petal_3": [
+      "f3_1_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 49,
+    "floor_rooftop": 13,
+    "f3_0_uv": 16,
+    "f3_1_uv": 64,
+    "floor_metal_deck": 4,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f3_0_uv.uv.json",
+    "Recipes/f3_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f3_0_uv": 925303,
+    "f3_1_uv": 925320,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR095.png",
+    "UV_Material_QA/Views/HR095_back.png",
+    "UV_Material_QA/Views/HR095_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

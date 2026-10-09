@@ -1,0 +1,6610 @@
+{
+  "buildings": [
+    {
+      "id": "HR001",
+      "name": "Setback Veil",
+      "category": "corporate",
+      "collection": "HR001_Setback_Veil",
+      "bounds_min": [
+        -19.809999465942383,
+        -21.736600875854492,
+        0.0
+      ],
+      "bounds_max": [
+        19.809999465942383,
+        21.736600875854492,
+        244.21600341796875
+      ],
+      "triangles": 256,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "4a404dd5107c870e4fc34b24073f4aa02030ab073c506b45e72f79fa1d55bc6e"
+    },
+    {
+      "id": "HR002",
+      "name": "Split Blades",
+      "category": "corporate",
+      "collection": "HR002_Split_Blades",
+      "bounds_min": [
+        -23.15399932861328,
+        -16.891599655151367,
+        0.0
+      ],
+      "bounds_max": [
+        23.15399932861328,
+        16.891599655151367,
+        300.3999938964844
+      ],
+      "triangles": 96,
+      "meshes": 8,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "4a561d302c4bf6819374b3afe3250cfd8faa1cd7dcd1b7a482c58bba0b5576f5"
+    },
+    {
+      "id": "HR003",
+      "name": "Chamfered Wedge",
+      "category": "corporate",
+      "collection": "HR003_Chamfered_Wedge",
+      "bounds_min": [
+        -18.13800048828125,
+        -24.643600463867188,
+        0.0
+      ],
+      "bounds_max": [
+        18.13800048828125,
+        24.643600463867188,
+        333.20001220703125
+      ],
+      "triangles": 128,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "bc3c8ad4b5fdec6f4bc327fe2fd38573846df0636efc132a46983723dd36598c"
+    },
+    {
+      "id": "HR004",
+      "name": "Triad Court",
+      "category": "corporate",
+      "collection": "HR004_Triad_Court",
+      "bounds_min": [
+        -25.243999481201172,
+        -18.635799407958984,
+        0.0
+      ],
+      "bounds_max": [
+        25.243999481201172,
+        18.635799407958984,
+        288.0
+      ],
+      "triangles": 376,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "bb8c29ab10988ce587bf9419fb1fccb39c94f0064899e2eda75c5bc3f556ee75"
+    },
+    {
+      "id": "HR005",
+      "name": "Offset Atrium",
+      "category": "corporate",
+      "collection": "HR005_Offset_Atrium",
+      "bounds_min": [
+        -21.48200035095215,
+        -20.3799991607666,
+        0.0
+      ],
+      "bounds_max": [
+        21.48200035095215,
+        20.3799991607666,
+        324.3999938964844
+      ],
+      "triangles": 152,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "f921b969719b2a32bee6d605e4de283f71a39aeb2669daf566ba04e26bcacb86"
+    },
+    {
+      "id": "HR006",
+      "name": "Terraced Cliff",
+      "category": "megablock",
+      "collection": "HR006_Terraced_Cliff",
+      "bounds_min": [
+        -39.61000061035156,
+        -30.885099411010742,
+        0.0
+      ],
+      "bounds_max": [
+        39.61000061035156,
+        30.885099411010742,
+        183.64999389648438
+      ],
+      "triangles": 280,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c2389363a72dd920857f264ff773557bde4e051412fdc752fce124b9e8f3f66b"
+    },
+    {
+      "id": "HR007",
+      "name": "Inhabited Gate",
+      "category": "megablock",
+      "collection": "HR007_Inhabited_Gate",
+      "bounds_min": [
+        -46.4739990234375,
+        -23.902599334716797,
+        0.0
+      ],
+      "bounds_max": [
+        46.4739990234375,
+        23.902599334716797,
+        203.6999969482422
+      ],
+      "triangles": 144,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "98ef3bc4260d74ac71a9b637ba86743a89e821181f6b1f45723028df5b5f91c9"
+    },
+    {
+      "id": "HR008",
+      "name": "Stacked Districts",
+      "category": "megablock",
+      "collection": "HR008_Stacked_Districts",
+      "bounds_min": [
+        -37.41659927368164,
+        -35.07460021972656,
+        0.0
+      ],
+      "bounds_max": [
+        36.178001403808594,
+        35.07460021972656,
+        226.10000610351562
+      ],
+      "triangles": 96,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "b977e5d0b6896cac85987f9239a9292a72802b5e57a6c71e98e4035e8d95a47e"
+    },
+    {
+      "id": "HR009",
+      "name": "Buttressed Slab",
+      "category": "megablock",
+      "collection": "HR009_Buttressed_Slab",
+      "bounds_min": [
+        -50.763999938964844,
+        -28.091699600219727,
+        0.0
+      ],
+      "bounds_max": [
+        50.763999938964844,
+        26.41629981994629,
+        187.89999389648438
+      ],
+      "triangles": 336,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "015112458c5e03ac0029fbed9f78808bd5b542a6feb7ece5d7102bab48c5bf91"
+    },
+    {
+      "id": "HR010",
+      "name": "Open Courtyard",
+      "category": "megablock",
+      "collection": "HR010_Open_Courtyard",
+      "bounds_min": [
+        -43.04199981689453,
+        -28.93000030517578,
+        0.0
+      ],
+      "bounds_max": [
+        43.04199981689453,
+        28.93000030517578,
+        225.39999389648438
+      ],
+      "triangles": 140,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "6550f319d47f161632cf709cccc070763d3beb537b07da482e5b6e50ce330c9a"
+    },
+    {
+      "id": "HR011",
+      "name": "Chimney Bank",
+      "category": "industrial",
+      "collection": "HR011_Chimney_Bank",
+      "bounds_min": [
+        -27.729999542236328,
+        -25.395999908447266,
+        0.0
+      ],
+      "bounds_max": [
+        27.729999542236328,
+        25.395999908447266,
+        234.6840057373047
+      ],
+      "triangles": 288,
+      "meshes": 8,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "294301677d830caad753f9f6ca43184c3ee0fb86d354c1dcc64b0cdd2c83530c"
+    },
+    {
+      "id": "HR012",
+      "name": "Service Spine",
+      "category": "industrial",
+      "collection": "HR012_Service_Spine",
+      "bounds_min": [
+        -32.481998443603516,
+        -19.695999145507812,
+        0.0
+      ],
+      "bounds_max": [
+        32.481998443603516,
+        19.695999145507812,
+        242.0500030517578
+      ],
+      "triangles": 168,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c9fa9adac3d6aa74a753ba31249a510e7514795037c3f46842b55bedbd80cc87"
+    },
+    {
+      "id": "HR013",
+      "name": "Gantry Works",
+      "category": "industrial",
+      "collection": "HR013_Gantry_Works",
+      "bounds_min": [
+        -25.461000442504883,
+        -28.81599998474121,
+        0.0
+      ],
+      "bounds_max": [
+        25.461000442504883,
+        28.81599998474121,
+        278.2517395019531
+      ],
+      "triangles": 132,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "1f05c818b151ea4e47c845641ed5b44d70b68e79bd365d5baa7a9516877456da"
+    },
+    {
+      "id": "HR014",
+      "name": "Heat Exchanger",
+      "category": "industrial",
+      "collection": "HR014_Heat_Exchanger",
+      "bounds_min": [
+        -35.45199966430664,
+        -21.74799919128418,
+        0.0
+      ],
+      "bounds_max": [
+        35.45199966430664,
+        21.74799919128418,
+        223.25
+      ],
+      "triangles": 360,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "a53ecc55aa2b20cf0e0aee3a0f3a15c0b3026fe9ece4c9a94f4685f6e94f867d"
+    },
+    {
+      "id": "HR015",
+      "name": "Stepped Foundry",
+      "category": "industrial",
+      "collection": "HR015_Stepped_Foundry",
+      "bounds_min": [
+        -30.106000900268555,
+        -23.799999237060547,
+        0.0
+      ],
+      "bounds_max": [
+        30.106000900268555,
+        23.799999237060547,
+        265.9150085449219
+      ],
+      "triangles": 360,
+      "meshes": 8,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "9a924e9bdd4c4f17443767b1ddb309e2899a372af6107245006506eb67f65b1d"
+    },
+    {
+      "id": "HR016",
+      "name": "Staggered Slabs",
+      "category": "residential",
+      "collection": "HR016_Staggered_Slabs",
+      "bounds_min": [
+        -33.66999816894531,
+        -18.68709945678711,
+        0.0
+      ],
+      "bounds_max": [
+        33.66999816894531,
+        18.68709945678711,
+        174.85000610351562
+      ],
+      "triangles": 208,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "4603c998ed7bb4e5356c757958f3638693a46be64f2f543d535e318077cfb57f"
+    },
+    {
+      "id": "HR017",
+      "name": "L Court",
+      "category": "residential",
+      "collection": "HR017_L_Court",
+      "bounds_min": [
+        -39.47800064086914,
+        -14.55459976196289,
+        0.0
+      ],
+      "bounds_max": [
+        39.47800064086914,
+        14.55459976196289,
+        193.39999389648438
+      ],
+      "triangles": 396,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "ae18cd0d4fe2e30badcec5237e2c17652ef7cd8d6cde3a4440b5f87784006666"
+    },
+    {
+      "id": "HR018",
+      "name": "Cross Estate",
+      "category": "residential",
+      "collection": "HR018_Cross_Estate",
+      "bounds_min": [
+        -30.766000747680664,
+        -21.16659927368164,
+        0.0
+      ],
+      "bounds_max": [
+        30.766000747680664,
+        21.16659927368164,
+        224.1999969482422
+      ],
+      "triangles": 456,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2d28d22d7b7f7f571e6f155a1b7e6c596c1e9b1ee607b380b9555a9ccd650b70"
+    },
+    {
+      "id": "HR019",
+      "name": "Balcony Terraces",
+      "category": "residential",
+      "collection": "HR019_Balcony_Terraces",
+      "bounds_min": [
+        -43.108001708984375,
+        -16.042299270629883,
+        0.0
+      ],
+      "bounds_max": [
+        43.108001708984375,
+        19.153499603271484,
+        190.39999389648438
+      ],
+      "triangles": 216,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "190166e8784553f7cc92b46f63231abf4dc62cc16d8f59ce7e76442909602bd3"
+    },
+    {
+      "id": "HR020",
+      "name": "Three Neighbours",
+      "category": "residential",
+      "collection": "HR020_Three_Neighbours",
+      "bounds_min": [
+        -37.514400482177734,
+        -17.530000686645508,
+        0.0
+      ],
+      "bounds_max": [
+        37.514400482177734,
+        17.530000686645508,
+        204.0399932861328
+      ],
+      "triangles": 364,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "68342c39946e6582f928cfc0ee083156625b47d8c37fb45d943027ae7453bedc"
+    },
+    {
+      "id": "HR021",
+      "name": "Vent Mast",
+      "category": "hvac",
+      "collection": "HR021_Vent_Mast",
+      "bounds_min": [
+        -22.780000686645508,
+        -26.615800857543945,
+        0.0
+      ],
+      "bounds_max": [
+        22.780000686645508,
+        26.615800857543945,
+        198.0
+      ],
+      "triangles": 108,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "821a8e47c02d033bdc1514e3f0307fe754ada49caa61afc0abfe8df4a2c7c6f2"
+    },
+    {
+      "id": "HR022",
+      "name": "Radiator Stack",
+      "category": "hvac",
+      "collection": "HR022_Radiator_Stack",
+      "bounds_min": [
+        -26.652000427246094,
+        -20.630800247192383,
+        0.0
+      ],
+      "bounds_max": [
+        26.652000427246094,
+        20.630800247192383,
+        231.75
+      ],
+      "triangles": 192,
+      "meshes": 4,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d3461b35c6433726f76d0fd79e9cfdd2e5a544dd6fc1d29ef650849244f26bf2"
+    },
+    {
+      "id": "HR023",
+      "name": "Cooling Racks",
+      "category": "hvac",
+      "collection": "HR023_Cooling_Racks",
+      "bounds_min": [
+        -20.8439998626709,
+        -30.20680046081543,
+        0.0
+      ],
+      "bounds_max": [
+        20.8439998626709,
+        30.20680046081543,
+        267.75
+      ],
+      "triangles": 660,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d6f2d46d2fab7823848a27014df8fa0673b4817c58e95c0692c20a27eb5ab2a2"
+    },
+    {
+      "id": "HR024",
+      "name": "External Ducts",
+      "category": "hvac",
+      "collection": "HR024_External_Ducts",
+      "bounds_min": [
+        -29.07200050354004,
+        -22.785400390625,
+        0.0
+      ],
+      "bounds_max": [
+        29.07200050354004,
+        22.785400390625,
+        212.12757873535156
+      ],
+      "triangles": 208,
+      "meshes": 8,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "0d4b2adfaf1fe99389d717fd27e9511671b2ea3f1f052cbcae20bf98da8d7f94"
+    },
+    {
+      "id": "HR025",
+      "name": "Plenum Fork",
+      "category": "hvac",
+      "collection": "HR025_Plenum_Fork",
+      "bounds_min": [
+        -24.715999603271484,
+        -24.940000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        24.715999603271484,
+        24.940000534057617,
+        241.3125
+      ],
+      "triangles": 96,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d608f0289fead45f6a6662aeb550ff9bd577ade2001391f07166828b317ce880"
+    },
+    {
+      "id": "HR026",
+      "name": "Screen Sail",
+      "category": "billboard",
+      "collection": "HR026_Screen_Sail",
+      "bounds_min": [
+        -21.790000915527344,
+        -21.126699447631836,
+        0.0
+      ],
+      "bounds_max": [
+        21.790000915527344,
+        21.126699447631836,
+        231.08799743652344
+      ],
+      "triangles": 120,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "a513f8f1ff2e150b039ef8f10a91f2630fad1690002fc09d2ea540ad7ef536cb"
+    },
+    {
+      "id": "HR027",
+      "name": "Media Gate",
+      "category": "billboard",
+      "collection": "HR027_Media_Gate",
+      "bounds_min": [
+        -25.486000061035156,
+        -16.4242000579834,
+        0.0
+      ],
+      "bounds_max": [
+        25.486000061035156,
+        16.4242000579834,
+        267.79998779296875
+      ],
+      "triangles": 132,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "9a4779e4603ecb68f4299aa8fc5f01dbea2674deeed3c358698e531ca8e23fb6"
+    },
+    {
+      "id": "HR028",
+      "name": "Stacked Channels",
+      "category": "billboard",
+      "collection": "HR028_Stacked_Channels",
+      "bounds_min": [
+        -21.008399963378906,
+        -23.948200225830078,
+        0.0
+      ],
+      "bounds_max": [
+        21.008399963378906,
+        23.948200225830078,
+        309.3999938964844
+      ],
+      "triangles": 336,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d5c03e211d545b52520b4a17fa2f5a535ca90064eca987d2b907e1b363987475"
+    },
+    {
+      "id": "HR029",
+      "name": "Beacon Blade",
+      "category": "billboard",
+      "collection": "HR029_Beacon_Blade",
+      "bounds_min": [
+        -27.79599952697754,
+        -18.11709976196289,
+        0.0
+      ],
+      "bounds_max": [
+        27.79599952697754,
+        18.11709976196289,
+        247.0
+      ],
+      "triangles": 248,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2076e478ca76163085c4459646e84d91b4b695655303dca5593cbc8c543895f9"
+    },
+    {
+      "id": "HR030",
+      "name": "Crown Display",
+      "category": "billboard",
+      "collection": "HR030_Crown_Display",
+      "bounds_min": [
+        -24.284400939941406,
+        -19.809999465942383,
+        0.0
+      ],
+      "bounds_max": [
+        24.284400939941406,
+        19.809999465942383,
+        290.2900085449219
+      ],
+      "triangles": 144,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c7bd9ddf4a4df6098c425857ed2ffb94258884b0aadfd60762185cceb592f737"
+    },
+    {
+      "id": "HR031",
+      "name": "Terrace Mountain",
+      "category": "arcology",
+      "collection": "HR031_Terrace_Mountain",
+      "bounds_min": [
+        -55.67499923706055,
+        -41.25339889526367,
+        0.0
+      ],
+      "bounds_max": [
+        55.67499923706055,
+        41.25339889526367,
+        246.1999969482422
+      ],
+      "triangles": 204,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "74069560ad587384f7edf4cf35ff276eae1f66b5f71901cb09de11e04cc38972"
+    },
+    {
+      "id": "HR032",
+      "name": "Hanging District",
+      "category": "arcology",
+      "collection": "HR032_Hanging_District",
+      "bounds_min": [
+        -65.3949966430664,
+        -31.848400115966797,
+        0.0
+      ],
+      "bounds_max": [
+        65.3949966430664,
+        31.848400115966797,
+        272.95001220703125
+      ],
+      "triangles": 96,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "f8846dbaefef3e44e3d285582af43aba5248b8e4055c9d66a19d40b1b90944b0"
+    },
+    {
+      "id": "HR033",
+      "name": "Twin Mountains",
+      "category": "arcology",
+      "collection": "HR033_Twin_Mountains",
+      "bounds_min": [
+        -50.814998626708984,
+        -46.896400451660156,
+        0.0
+      ],
+      "bounds_max": [
+        50.814998626708984,
+        46.896400451660156,
+        339.9639892578125
+      ],
+      "triangles": 144,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "444b155ee6e8bbeb565007608f06a20e6f34af013cef42d70950137030a6dcfe"
+    },
+    {
+      "id": "HR034",
+      "name": "Porous Tripod",
+      "category": "arcology",
+      "collection": "HR034_Porous_Tripod",
+      "bounds_min": [
+        -71.47000122070312,
+        -35.23419952392578,
+        0.0
+      ],
+      "bounds_max": [
+        71.47000122070312,
+        35.23419952392578,
+        242.93875122070312
+      ],
+      "triangles": 84,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "3c5199d9018f2eecfaa7d6afb6aa45fa091ad419be9fd181ed96f6c64a335448"
+    },
+    {
+      "id": "HR035",
+      "name": "Sky Courtyard",
+      "category": "arcology",
+      "collection": "HR035_Sky_Courtyard",
+      "bounds_min": [
+        -60.53499984741211,
+        -38.619998931884766,
+        0.0
+      ],
+      "bounds_max": [
+        60.53499984741211,
+        38.619998931884766,
+        291.5
+      ],
+      "triangles": 96,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "27f12bdaf7619c081d293f1b7c30efb5a8eb786f115cd155bad2b23850f85747"
+    },
+    {
+      "id": "HR036",
+      "name": "Tapered Lancet",
+      "category": "needle",
+      "collection": "HR036_Tapered_Lancet",
+      "bounds_min": [
+        -12.880000114440918,
+        -14.417799949645996,
+        0.0
+      ],
+      "bounds_max": [
+        12.880000114440918,
+        14.417799949645996,
+        360.79998779296875
+      ],
+      "triangles": 80,
+      "meshes": 5,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c7fe41a664d3d05b2e345b1af2b1203ace996f28094e2b2dd2cf1fecdf37d887"
+    },
+    {
+      "id": "HR037",
+      "name": "Bifurcated Needle",
+      "category": "needle",
+      "collection": "HR037_Bifurcated_Needle",
+      "bounds_min": [
+        -21.392974853515625,
+        -11.28279972076416,
+        0.0
+      ],
+      "bounds_max": [
+        21.392974853515625,
+        11.28279972076416,
+        434.968994140625
+      ],
+      "triangles": 116,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "0c6e5e7224c1faf13560a6e37e8db1bf2b2c0bcf14a435c1f5abcbe2e1da5897"
+    },
+    {
+      "id": "HR038",
+      "name": "Radio Spine",
+      "category": "needle",
+      "collection": "HR038_Radio_Spine",
+      "bounds_min": [
+        -11.824000358581543,
+        -16.298799514770508,
+        0.0
+      ],
+      "bounds_max": [
+        11.824000358581543,
+        16.298799514770508,
+        527.3319702148438
+      ],
+      "triangles": 128,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "5f14fa61b79ea30e9f7e036f7d4ae93ba675c09403832056b5f212471bcdfdb7"
+    },
+    {
+      "id": "HR039",
+      "name": "Triple Spires",
+      "category": "needle",
+      "collection": "HR039_Triple_Spires",
+      "bounds_min": [
+        -16.312000274658203,
+        -12.411399841308594,
+        0.0
+      ],
+      "bounds_max": [
+        16.312000274658203,
+        12.411399841308594,
+        389.5
+      ],
+      "triangles": 96,
+      "meshes": 5,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "5340294618721bc477f6f4e203ceee552c3938ce51709b27f0f2e91a0469827b"
+    },
+    {
+      "id": "HR040",
+      "name": "Offset Pinnacle",
+      "category": "needle",
+      "collection": "HR040_Offset_Pinnacle",
+      "bounds_min": [
+        -19.40399932861328,
+        -13.539999961853027,
+        0.0
+      ],
+      "bounds_max": [
+        21.403200149536133,
+        13.539999961853027,
+        487.4800109863281
+      ],
+      "triangles": 152,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "aaa7b11a95bdb591f8e6aadb5fb9a078aa9c69d83c6223a2798d8bf3342ada2a"
+    },
+    {
+      "id": "HR041",
+      "name": "High Bridge",
+      "category": "twins",
+      "collection": "HR041_High_Bridge",
+      "bounds_min": [
+        -39.880001068115234,
+        -19.90690040588379,
+        0.0
+      ],
+      "bounds_max": [
+        39.880001068115234,
+        19.90690040588379,
+        242.0500030517578
+      ],
+      "triangles": 356,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2f97247633ed71b44113872f56bbb85446cf39ff0901d483aa351604d824c5d1"
+    },
+    {
+      "id": "HR042",
+      "name": "Double Deck",
+      "category": "twins",
+      "collection": "HR042_Double_Deck",
+      "bounds_min": [
+        -46.79199981689453,
+        -15.489399909973145,
+        0.0
+      ],
+      "bounds_max": [
+        46.79199981689453,
+        15.489399909973145,
+        286.1000061035156
+      ],
+      "triangles": 300,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2f055781c15672dd18d4c876fc45e8b9bc8b0921008e5c3913702edbb3aa6896"
+    },
+    {
+      "id": "HR043",
+      "name": "Hinge Towers",
+      "category": "twins",
+      "collection": "HR043_Hinge_Towers",
+      "bounds_min": [
+        -36.42399978637695,
+        -22.55739974975586,
+        0.0
+      ],
+      "bounds_max": [
+        36.42399978637695,
+        22.55739974975586,
+        315.2349853515625
+      ],
+      "triangles": 312,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "79b8ce4f373addfc80e936085923760e6328831d0b4d627620c6d31111ed0cdb"
+    },
+    {
+      "id": "HR044",
+      "name": "Suspended Transfer",
+      "category": "twins",
+      "collection": "HR044_Suspended_Transfer",
+      "bounds_min": [
+        -51.11199951171875,
+        -17.079700469970703,
+        0.0
+      ],
+      "bounds_max": [
+        51.11199951171875,
+        17.079700469970703,
+        263.8999938964844
+      ],
+      "triangles": 204,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2523b687d8440a0ae3d9a43e4cf7f1d254335aa7001e23de8eaa0d06aef5a736"
+    },
+    {
+      "id": "HR045",
+      "name": "Unequal Partners",
+      "category": "twins",
+      "collection": "HR045_Unequal_Partners",
+      "bounds_min": [
+        -43.33599853515625,
+        -18.670000076293945,
+        0.0
+      ],
+      "bounds_max": [
+        43.33599853515625,
+        18.670000076293945,
+        262.9100036621094
+      ],
+      "triangles": 268,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d71562735b28733ec16ecc1b60246327dc4c02c89706aa7320e52be42dccbbba"
+    },
+    {
+      "id": "HR046",
+      "name": "Triple Vessels",
+      "category": "reactor",
+      "collection": "HR046_Triple_Vessels",
+      "bounds_min": [
+        -28.225000381469727,
+        -29.665300369262695,
+        0.0
+      ],
+      "bounds_max": [
+        28.225000381469727,
+        29.665300369262695,
+        189.72799682617188
+      ],
+      "triangles": 564,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "43f006b07fedddce1da6fc971ca56c272af40ef715b97a822afb3d9246dd8429"
+    },
+    {
+      "id": "HR047",
+      "name": "Cooling Hourglass",
+      "category": "reactor",
+      "collection": "HR047_Cooling_Hourglass",
+      "bounds_min": [
+        -33.064998626708984,
+        -22.96780014038086,
+        0.0
+      ],
+      "bounds_max": [
+        33.064998626708984,
+        22.96780014038086,
+        226.60000610351562
+      ],
+      "triangles": 224,
+      "meshes": 6,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "487501de0f997e6ecf7686663e849910d795b5ee82954cd67faf1d9c6db9856b"
+    },
+    {
+      "id": "HR048",
+      "name": "Armoured Vessel",
+      "category": "reactor",
+      "collection": "HR048_Armoured_Vessel",
+      "bounds_min": [
+        -25.80500030517578,
+        -33.683799743652344,
+        0.0
+      ],
+      "bounds_max": [
+        25.80500030517578,
+        33.683799743652344,
+        272.6719970703125
+      ],
+      "triangles": 284,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "b864fdc488963d80fb45bbcf5111859cf2ef38f8a712728aa5429247d19edbd4"
+    },
+    {
+      "id": "HR049",
+      "name": "Split Drums",
+      "category": "reactor",
+      "collection": "HR049_Split_Drums",
+      "bounds_min": [
+        -36.09000015258789,
+        -25.3789005279541,
+        0.0
+      ],
+      "bounds_max": [
+        36.09000015258789,
+        25.3789005279541,
+        192.27999877929688
+      ],
+      "triangles": 136,
+      "meshes": 7,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "f9462b8340567bf650c9a570f462d80fc95869c63ca565ef68b691ecba982933"
+    },
+    {
+      "id": "HR050",
+      "name": "Flue Cluster",
+      "category": "reactor",
+      "collection": "HR050_Flue_Cluster",
+      "bounds_min": [
+        -30.682559967041016,
+        -27.790000915527344,
+        0.0
+      ],
+      "bounds_max": [
+        31.801000595092773,
+        27.790000915527344,
+        214.75999450683594
+      ],
+      "triangles": 328,
+      "meshes": 8,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2af7367bb0b546c9b9ca00f8e43bd83beccc4b5736b8a8d155bfe0e2643bef94"
+    },
+    {
+      "id": "HR051",
+      "name": "Foundry Ziggurat",
+      "category": "retro",
+      "collection": "HR051_Foundry_Ziggurat",
+      "bounds_min": [
+        -27.90999984741211,
+        -25.610000610351562,
+        0.0
+      ],
+      "bounds_max": [
+        27.90999984741211,
+        25.610000610351562,
+        210.39999389648438
+      ],
+      "triangles": 228,
+      "meshes": 17,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "cd7bfd3aa17325f88a64913b0e48d43f25e5a8124d98ba75f585315ae4c406e4"
+    },
+    {
+      "id": "HR052",
+      "name": "Twin Courtyard",
+      "category": "retro",
+      "collection": "HR052_Twin_Courtyard",
+      "bounds_min": [
+        -29.162399291992188,
+        -16.899999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        29.162399291992188,
+        16.899999618530273,
+        252.010498046875
+      ],
+      "triangles": 440,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "b6f187ee486bf317cf62281e7e39f3a74c6d6c58e8501c57d57046e9b3261d4b"
+    },
+    {
+      "id": "HR053",
+      "name": "Cross Reliquary",
+      "category": "retro",
+      "collection": "HR053_Cross_Reliquary",
+      "bounds_min": [
+        -25.304800033569336,
+        -28.327999114990234,
+        0.0
+      ],
+      "bounds_max": [
+        25.304800033569336,
+        28.327999114990234,
+        294.62750244140625
+      ],
+      "triangles": 184,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "201d2a197141e58618a34f8b5e9d5c5b0578ced5ac4d7b625afa05c2e4a9b2e0"
+    },
+    {
+      "id": "HR054",
+      "name": "Sawtooth Crown",
+      "category": "retro",
+      "collection": "HR054_Sawtooth_Crown",
+      "bounds_min": [
+        -33.57279968261719,
+        -21.384000778198242,
+        0.0
+      ],
+      "bounds_max": [
+        33.57279968261719,
+        21.384000778198242,
+        224.0500030517578
+      ],
+      "triangles": 472,
+      "meshes": 26,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c4200b7f7769e8b6fe91096f7b9dcc19cb6ff883d3ce77dd6b0d2d272bbb864a"
+    },
+    {
+      "id": "HR055",
+      "name": "Octagon Regency",
+      "category": "retro",
+      "collection": "HR055_Octagon_Regency",
+      "bounds_min": [
+        -31.073394775390625,
+        -24.390419006347656,
+        0.0
+      ],
+      "bounds_max": [
+        31.073394775390625,
+        24.390419006347656,
+        261.0
+      ],
+      "triangles": 284,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "10a55131691b33422d585ff3cb4dff10eff79f5c7a6e8a36019a7db08013984e"
+    },
+    {
+      "id": "HR056",
+      "name": "Service Cleft",
+      "category": "maintenance",
+      "collection": "HR056_Service_Cleft",
+      "bounds_min": [
+        -28.16200065612793,
+        -21.027099609375,
+        0.0
+      ],
+      "bounds_max": [
+        28.16200065612793,
+        18.739999771118164,
+        180.4499969482422
+      ],
+      "triangles": 976,
+      "meshes": 24,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "efaa9d4ebb8f10c92808d5d65eb31d65c29338f224394c051d43c40d03dda779"
+    },
+    {
+      "id": "HR057",
+      "name": "Gantry Keep",
+      "category": "maintenance",
+      "collection": "HR057_Gantry_Keep",
+      "bounds_min": [
+        -33.14619827270508,
+        -15.539999961853027,
+        0.0
+      ],
+      "bounds_max": [
+        41.27640151977539,
+        15.539999961853027,
+        207.60000610351562
+      ],
+      "triangles": 540,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "b4539373bf578f1e3f771cae4875d547257ed81bd68da2ca639b734c77f28bef"
+    },
+    {
+      "id": "HR058",
+      "name": "Repair Stack",
+      "category": "maintenance",
+      "collection": "HR058_Repair_Stack",
+      "bounds_min": [
+        -27.09280014038086,
+        -20.444480895996094,
+        0.0
+      ],
+      "bounds_max": [
+        27.09280014038086,
+        20.739999771118164,
+        242.4499969482422
+      ],
+      "triangles": 400,
+      "meshes": 26,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "3bf035f16f982398d373f18ab1d4d165fcd84c67625a3b7662c465bed7425af9"
+    },
+    {
+      "id": "HR059",
+      "name": "Silo Annex",
+      "category": "maintenance",
+      "collection": "HR059_Silo_Annex",
+      "bounds_min": [
+        -36.235599517822266,
+        -16.23240089416504,
+        0.0
+      ],
+      "bounds_max": [
+        26.123605728149414,
+        14.782400131225586,
+        197.0500030517578
+      ],
+      "triangles": 900,
+      "meshes": 29,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "83a0c6f342eb379c986c14ca5a3dc8f46011ca37690480a2e8a0e069ac470698"
+    },
+    {
+      "id": "HR060",
+      "name": "Plant Cathedral",
+      "category": "maintenance",
+      "collection": "HR060_Plant_Cathedral",
+      "bounds_min": [
+        -30.0664005279541,
+        -17.0,
+        0.0
+      ],
+      "bounds_max": [
+        30.0664005279541,
+        17.0,
+        220.0
+      ],
+      "triangles": 432,
+      "meshes": 19,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "a04524af810daa06a87fdee9af91728d9235242b835704ac930291ea2ca93c0c"
+    },
+    {
+      "id": "HR061",
+      "name": "Diamond Carapace",
+      "category": "exoskeleton",
+      "collection": "HR061_Diamond_Carapace",
+      "bounds_min": [
+        -26.04558563232422,
+        -25.223386764526367,
+        0.0
+      ],
+      "bounds_max": [
+        26.04558563232422,
+        25.223386764526367,
+        285.20001220703125
+      ],
+      "triangles": 1116,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "5e87c0a856a2f2ce957b52894276eea8def7e4092aecdfa38cce5dda392a5176"
+    },
+    {
+      "id": "HR062",
+      "name": "Ladder Twins",
+      "category": "exoskeleton",
+      "collection": "HR062_Ladder_Twins",
+      "bounds_min": [
+        -31.051000595092773,
+        -16.153600692749023,
+        0.0
+      ],
+      "bounds_max": [
+        31.051000595092773,
+        16.153600692749023,
+        328.8999938964844
+      ],
+      "triangles": 572,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "8682b68e3c331563ccce3526eff375b3010d3b9bb855ad4ce9db10edc8cffa07"
+    },
+    {
+      "id": "HR063",
+      "name": "Crossbrace Monolith",
+      "category": "exoskeleton",
+      "collection": "HR063_Crossbrace_Monolith",
+      "bounds_min": [
+        -23.989999771118164,
+        -28.690000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        23.989999771118164,
+        28.690000534057617,
+        376.1499938964844
+      ],
+      "triangles": 276,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "3025f28f9c183072257d0afface9d8776b2cb9f1521290fe60a30bf247847d68"
+    },
+    {
+      "id": "HR064",
+      "name": "Splayed Cage",
+      "category": "exoskeleton",
+      "collection": "HR064_Splayed_Cage",
+      "bounds_min": [
+        -32.44388198852539,
+        -19.365591049194336,
+        0.0
+      ],
+      "bounds_max": [
+        32.44388198852539,
+        19.365591049194336,
+        301.572509765625
+      ],
+      "triangles": 356,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "8cd7346d22b7b0a6396a5b89e273d43a4e66d8b66291841483b4cadd65384d8b"
+    },
+    {
+      "id": "HR065",
+      "name": "Three Tube Frame",
+      "category": "exoskeleton",
+      "collection": "HR065_Three_Tube_Frame",
+      "bounds_min": [
+        -29.54759979248047,
+        -21.959999084472656,
+        0.0
+      ],
+      "bounds_max": [
+        29.54759979248047,
+        25.479999542236328,
+        354.5
+      ],
+      "triangles": 736,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "dcc21ec68872b38177031f6586db5dfece9b0dac42a8684f20e5776ef591966c"
+    },
+    {
+      "id": "HR066",
+      "name": "Raised Citadel",
+      "category": "suspended",
+      "collection": "HR066_Raised_Citadel",
+      "bounds_min": [
+        -26.235000610351562,
+        -20.98270034790039,
+        0.0
+      ],
+      "bounds_max": [
+        26.235000610351562,
+        20.98270034790039,
+        263.20001220703125
+      ],
+      "triangles": 168,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "6314afea7cd2f3c8fca6ff6c8fb9f70f3875a65c22b1a623b694559da017ab74"
+    },
+    {
+      "id": "HR067",
+      "name": "Spine Cantilevers",
+      "category": "suspended",
+      "collection": "HR067_Spine_Cantilevers",
+      "bounds_min": [
+        -36.729000091552734,
+        -14.563199996948242,
+        0.0
+      ],
+      "bounds_max": [
+        36.729000091552734,
+        10.92240047454834,
+        303.1499938964844
+      ],
+      "triangles": 328,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "6323c58a02627dd301063a1bedc7f39a2e7c042d8f25a634a4d8484aece4edb0"
+    },
+    {
+      "id": "HR068",
+      "name": "Hanging Cradle",
+      "category": "suspended",
+      "collection": "HR068_Hanging_Cradle",
+      "bounds_min": [
+        -23.226499557495117,
+        -22.56999969482422,
+        0.0
+      ],
+      "bounds_max": [
+        23.226499557495117,
+        22.56999969482422,
+        345.1000061035156
+      ],
+      "triangles": 244,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "88d67b5af235d1c0a6cb35084bfd99834f2c30a8cfaff0cbd9bdd26322113584"
+    },
+    {
+      "id": "HR069",
+      "name": "Habitable Truss",
+      "category": "suspended",
+      "collection": "HR069_Habitable_Truss",
+      "bounds_min": [
+        -35.72800064086914,
+        -18.571699142456055,
+        0.0
+      ],
+      "bounds_max": [
+        35.72800064086914,
+        18.571699142456055,
+        283.5
+      ],
+      "triangles": 336,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "0c04415e5fe35be79ac11b1dea58e5c370a9a488a360f416218f1fe14f7bc86a"
+    },
+    {
+      "id": "HR070",
+      "name": "Tripod Lantern",
+      "category": "suspended",
+      "collection": "HR070_Tripod_Lantern",
+      "bounds_min": [
+        -32.270835876464844,
+        -25.899999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        32.270835876464844,
+        17.775442123413086,
+        329.0
+      ],
+      "triangles": 276,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "8f44993beb02d46111392910f20b63959bc54f8c2af70a631d2e070e5046f521"
+    },
+    {
+      "id": "HR071",
+      "name": "Rail Gateway",
+      "category": "transit",
+      "collection": "HR071_Rail_Gateway",
+      "bounds_min": [
+        -63.27000045776367,
+        -23.0049991607666,
+        0.0
+      ],
+      "bounds_max": [
+        63.27000045776367,
+        23.0049991607666,
+        184.85000610351562
+      ],
+      "triangles": 368,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "e14620d042c34b51405ae110209611ce074fbdb42cd79611013c7389b19df31b"
+    },
+    {
+      "id": "HR072",
+      "name": "Crossing Terminal",
+      "category": "transit",
+      "collection": "HR072_Crossing_Terminal",
+      "bounds_min": [
+        -74.4651870727539,
+        -43.75138473510742,
+        0.0
+      ],
+      "bounds_max": [
+        74.4651870727539,
+        36.69938659667969,
+        219.14999389648438
+      ],
+      "triangles": 304,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "5335559998b0b6c116660155d678601d5db702f9ac028e45497e4f0aa1bcdb10"
+    },
+    {
+      "id": "HR073",
+      "name": "Platform Funnel",
+      "category": "transit",
+      "collection": "HR073_Platform_Funnel",
+      "bounds_min": [
+        -51.80350112915039,
+        -32.0005989074707,
+        0.0
+      ],
+      "bounds_max": [
+        51.80350112915039,
+        32.0005989074707,
+        253.9499969482422
+      ],
+      "triangles": 320,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "6e8a17c2cfc0fa46527743252aa926eecdbe7f8b66d49d507b805abd805ba626"
+    },
+    {
+      "id": "HR074",
+      "name": "Terrace Interchange",
+      "category": "transit",
+      "collection": "HR074_Terrace_Interchange",
+      "bounds_min": [
+        -57.30400085449219,
+        -21.325849533081055,
+        0.0
+      ],
+      "bounds_max": [
+        57.30400085449219,
+        16.825899124145508,
+        199.1999969482422
+      ],
+      "triangles": 392,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "412cdfce665192392549150e84e7085060b4b9e08786e80af0bd104e07092fe7"
+    },
+    {
+      "id": "HR075",
+      "name": "Radial Junction",
+      "category": "transit",
+      "collection": "HR075_Radial_Junction",
+      "bounds_min": [
+        -70.75599670410156,
+        -63.533992767333984,
+        0.0
+      ],
+      "bounds_max": [
+        70.75599670410156,
+        63.533992767333984,
+        233.5
+      ],
+      "triangles": 276,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "1d1c22856f91ee5bda961da33f486988c7386874e896a80215f430b5bda6e024"
+    },
+    {
+      "id": "HR076",
+      "name": "Vent Stack",
+      "category": "datacenter",
+      "collection": "HR076_Vent_Stack",
+      "bounds_min": [
+        -26.739999771118164,
+        -28.563199996948242,
+        0.0
+      ],
+      "bounds_max": [
+        26.739999771118164,
+        28.563199996948242,
+        177.1999969482422
+      ],
+      "triangles": 336,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "0d96b79dc3a47fe063b807bd8dabc8e7d85256fbbd65de6719a20bd4e426cdfe"
+    },
+    {
+      "id": "HR077",
+      "name": "Server Canyon",
+      "category": "datacenter",
+      "collection": "HR077_Server_Canyon",
+      "bounds_min": [
+        -29.213600158691406,
+        -19.237199783325195,
+        0.0
+      ],
+      "bounds_max": [
+        29.213600158691406,
+        19.237199783325195,
+        205.6999969482422
+      ],
+      "triangles": 564,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "ed030a4b9148bc4a4201c9cfe677a0a5f0b1d81ab09b92d284b0c49e8e4d8777"
+    },
+    {
+      "id": "HR078",
+      "name": "Cooling Chimneys",
+      "category": "datacenter",
+      "collection": "HR078_Cooling_Chimneys",
+      "bounds_min": [
+        -19.827600479125977,
+        -29.18239974975586,
+        0.0
+      ],
+      "bounds_max": [
+        19.827600479125977,
+        25.253999710083008,
+        227.5
+      ],
+      "triangles": 472,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "3c11c8d7df4a2feb0c5e472c73582ce5cde4481e09d9e4b0d19eb6153b3fa148"
+    },
+    {
+      "id": "HR079",
+      "name": "Rack Terraces",
+      "category": "datacenter",
+      "collection": "HR079_Rack_Terraces",
+      "bounds_min": [
+        -31.059999465942383,
+        -21.829999923706055,
+        0.0
+      ],
+      "bounds_max": [
+        31.059999465942383,
+        21.829999923706055,
+        190.5
+      ],
+      "triangles": 540,
+      "meshes": 11,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "0c3bea90e35ba44fd59d06560726e691226be44b2504be95f3e7c93b50c05d4f"
+    },
+    {
+      "id": "HR080",
+      "name": "Armored Archive",
+      "category": "datacenter",
+      "collection": "HR080_Armored_Archive",
+      "bounds_min": [
+        -30.787599563598633,
+        -27.549999237060547,
+        0.0
+      ],
+      "bounds_max": [
+        30.787599563598633,
+        27.549999237060547,
+        213.4499969482422
+      ],
+      "triangles": 396,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "21bf099d84934fa427be3a7537709897dd92ddfea20ddd2ae7d7a1b1edc547c9"
+    },
+    {
+      "id": "HR081",
+      "name": "Crown Assembly",
+      "category": "civic",
+      "collection": "HR081_Crown_Assembly",
+      "bounds_min": [
+        -47.08000183105469,
+        -29.24799919128418,
+        0.0
+      ],
+      "bounds_max": [
+        47.08000183105469,
+        29.24799919128418,
+        206.85000610351562
+      ],
+      "triangles": 280,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "ac01b833041070aa5e1e4adafb42560cd77f2841d7d16f055ac893bfd0ec4cc9"
+    },
+    {
+      "id": "HR082",
+      "name": "Court of Towers",
+      "category": "civic",
+      "collection": "HR082_Court_of_Towers",
+      "bounds_min": [
+        -47.06399917602539,
+        -10.102399826049805,
+        0.0
+      ],
+      "bounds_max": [
+        47.06399917602539,
+        19.483200073242188,
+        246.89999389648438
+      ],
+      "triangles": 400,
+      "meshes": 19,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "564771567f22689018eabfd248ce50081b491b7834b9e90d6d8641a02ce1cedd"
+    },
+    {
+      "id": "HR083",
+      "name": "Civic Needle",
+      "category": "civic",
+      "collection": "HR083_Civic_Needle",
+      "bounds_min": [
+        -35.768001556396484,
+        -31.060800552368164,
+        0.0
+      ],
+      "bounds_max": [
+        35.768001556396484,
+        31.060800552368164,
+        301.4700012207031
+      ],
+      "triangles": 212,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "b1c74cf7d663aff0add24e374458ffc27b5d704b90e3b212dae33df46aa89dfc"
+    },
+    {
+      "id": "HR084",
+      "name": "Sky Forum",
+      "category": "civic",
+      "collection": "HR084_Sky_Forum",
+      "bounds_min": [
+        -51.040000915527344,
+        -20.420400619506836,
+        0.0
+      ],
+      "bounds_max": [
+        51.040000915527344,
+        20.020000457763672,
+        222.9499969482422
+      ],
+      "triangles": 244,
+      "meshes": 12,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "061b812014af9414ee6d917d2f6991c9ea4ba29e71a9e48e79542d31686a70ba"
+    },
+    {
+      "id": "HR085",
+      "name": "Civic Bastion",
+      "category": "civic",
+      "collection": "HR085_Civic_Bastion",
+      "bounds_min": [
+        -44.907936096191406,
+        -24.796926498413086,
+        0.0
+      ],
+      "bounds_max": [
+        44.907936096191406,
+        24.796926498413086,
+        261.0
+      ],
+      "triangles": 200,
+      "meshes": 13,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "2bf831305358503ed40d8fea3bb9032399a119c1ff2f9230a615935178ef5f32"
+    },
+    {
+      "id": "HR086",
+      "name": "Market and Needles",
+      "category": "mixed_use",
+      "collection": "HR086_Market_and_Needles",
+      "bounds_min": [
+        -46.16999816894531,
+        -38.252498626708984,
+        0.0
+      ],
+      "bounds_max": [
+        46.16999816894531,
+        32.95600128173828,
+        192.8000030517578
+      ],
+      "triangles": 264,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "d7f08d77464e59cf432526b87419428e90121ad1ac8f42ff90cb7694f04a4cb8"
+    },
+    {
+      "id": "HR087",
+      "name": "Terraced Quarter",
+      "category": "mixed_use",
+      "collection": "HR087_Terraced_Quarter",
+      "bounds_min": [
+        -51.51599884033203,
+        -25.9325008392334,
+        0.0
+      ],
+      "bounds_max": [
+        51.51599884033203,
+        22.099000930786133,
+        220.75
+      ],
+      "triangles": 220,
+      "meshes": 14,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "406f58b4c37b2cd352a35cf67d3e5f9f738ebd5695ae4f41946f1a9283008ad7"
+    },
+    {
+      "id": "HR088",
+      "name": "Hotel Hinge",
+      "category": "mixed_use",
+      "collection": "HR088_Hotel_Hinge",
+      "bounds_min": [
+        -39.375999450683594,
+        -37.23400115966797,
+        0.0
+      ],
+      "bounds_max": [
+        39.375999450683594,
+        37.23400115966797,
+        254.35000610351562
+      ],
+      "triangles": 292,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "320831c95c6aceb2eadd1be23a89e312cf1f72bef4273da7511b295b5c6ca731"
+    },
+    {
+      "id": "HR089",
+      "name": "Stacked Districts",
+      "category": "mixed_use",
+      "collection": "HR089_Stacked_Districts",
+      "bounds_min": [
+        -64.72799682617188,
+        -24.774749755859375,
+        0.0
+      ],
+      "bounds_max": [
+        60.551998138427734,
+        24.774749755859375,
+        209.5
+      ],
+      "triangles": 360,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "f9a100f0168840a2536e3a9e17d2199f174ae63debf1bc05558f74942f54cd8a"
+    },
+    {
+      "id": "HR090",
+      "name": "Atrium City",
+      "category": "mixed_use",
+      "collection": "HR090_Atrium_City",
+      "bounds_min": [
+        -46.74599838256836,
+        -27.5,
+        0.0
+      ],
+      "bounds_max": [
+        46.74599838256836,
+        27.5,
+        235.4499969482422
+      ],
+      "triangles": 332,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "ae78f29285313559d75d597765a13d24544f936fcb0ab281075e60dcbcec420f"
+    },
+    {
+      "id": "HR091",
+      "name": "Flying Piers",
+      "category": "buttress",
+      "collection": "HR091_Flying_Piers",
+      "bounds_min": [
+        -33.53499984741211,
+        -16.613100051879883,
+        0.0
+      ],
+      "bounds_max": [
+        33.53499984741211,
+        16.613100051879883,
+        277.25
+      ],
+      "triangles": 244,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "be853f06e594d39c0872ba6c3b9f1435c40f1451e6d46d065f370ffafe8a321d"
+    },
+    {
+      "id": "HR092",
+      "name": "Raking Fortress",
+      "category": "buttress",
+      "collection": "HR092_Raking_Fortress",
+      "bounds_min": [
+        -50.12099838256836,
+        -19.947200775146484,
+        0.0
+      ],
+      "bounds_max": [
+        50.12099838256836,
+        19.947200775146484,
+        327.29998779296875
+      ],
+      "triangles": 224,
+      "meshes": 9,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "e3378e42fad191478b1aa8a5ae84869c07e968645e13ee7f5bb61d0fc2b3ce50"
+    },
+    {
+      "id": "HR093",
+      "name": "Stepped Abutments",
+      "category": "buttress",
+      "collection": "HR093_Stepped_Abutments",
+      "bounds_min": [
+        -30.737699508666992,
+        -25.705400466918945,
+        0.0
+      ],
+      "bounds_max": [
+        30.737699508666992,
+        25.705400466918945,
+        373.3500061035156
+      ],
+      "triangles": 280,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "c4869c1e206377b67b54c77872a8a66cd28f679a643a794bbae961e59d10cf10"
+    },
+    {
+      "id": "HR094",
+      "name": "Split Cathedral",
+      "category": "buttress",
+      "collection": "HR094_Split_Cathedral",
+      "bounds_min": [
+        -46.56719970703125,
+        -24.188899993896484,
+        0.0
+      ],
+      "bounds_max": [
+        46.56719970703125,
+        24.188899993896484,
+        302.5
+      ],
+      "triangles": 276,
+      "meshes": 10,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "28c5e199d5ef7d11190f20009c1d402a825a960c65488fc3183aaa7b97cad771"
+    },
+    {
+      "id": "HR095",
+      "name": "Four Petal Keep",
+      "category": "buttress",
+      "collection": "HR095_Four_Petal_Keep",
+      "bounds_min": [
+        -36.62865447998047,
+        -26.239200592041016,
+        0.0
+      ],
+      "bounds_max": [
+        36.62865447998047,
+        26.239200592041016,
+        351.0
+      ],
+      "triangles": 412,
+      "meshes": 15,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "245cbae5fba3dec70c89b0c6f1723ebe70846a13c9d10991bd80891795e99d05"
+    },
+    {
+      "id": "HR096",
+      "name": "Broken Halo",
+      "category": "hero",
+      "collection": "HR096_Broken_Halo",
+      "bounds_min": [
+        -30.051000595092773,
+        -21.827999114990234,
+        0.0
+      ],
+      "bounds_max": [
+        33.73649978637695,
+        21.827999114990234,
+        338.8500061035156
+      ],
+      "triangles": 280,
+      "meshes": 16,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "e22d024fe43a41c5aa1f61239aea9bf9a165ae84c91f564b4124dd4bb0ae4846"
+    },
+    {
+      "id": "HR097",
+      "name": "Giant Keyhole",
+      "category": "hero",
+      "collection": "HR097_Giant_Keyhole",
+      "bounds_min": [
+        -38.7307014465332,
+        -21.86079978942871,
+        0.0
+      ],
+      "bounds_max": [
+        38.7307014465332,
+        21.86079978942871,
+        401.3999938964844
+      ],
+      "triangles": 228,
+      "meshes": 17,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "30d42bf0a8a63fbde6418e5aaf533f23921c9c1251cc0eeb3dd678161e042991"
+    },
+    {
+      "id": "HR098",
+      "name": "Sky Cathedral",
+      "category": "hero",
+      "collection": "HR098_Sky_Cathedral",
+      "bounds_min": [
+        -27.638099670410156,
+        -25.473600387573242,
+        0.0
+      ],
+      "bounds_max": [
+        27.638099670410156,
+        28.694400787353516,
+        479.3320007324219
+      ],
+      "triangles": 280,
+      "meshes": 24,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "5e7bf58e2e355f172348763b5b010d447656a54e57a95d1e1bf65a1ace7d9916"
+    },
+    {
+      "id": "HR099",
+      "name": "Helix Citadel",
+      "category": "hero",
+      "collection": "HR099_Helix_Citadel",
+      "bounds_min": [
+        -39.6480712890625,
+        -34.671417236328125,
+        0.0
+      ],
+      "bounds_max": [
+        39.6480712890625,
+        34.671417236328125,
+        365.45001220703125
+      ],
+      "triangles": 388,
+      "meshes": 19,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "e0895eb2437291bfdf8ac52ec55c24b38913baa431bc84fc92fc292cf4b0b4d4"
+    },
+    {
+      "id": "HR100",
+      "name": "Crown of Bridges",
+      "category": "hero",
+      "collection": "HR100_Crown_of_Bridges",
+      "bounds_min": [
+        -33.03089904785156,
+        -21.84000015258789,
+        0.0
+      ],
+      "bounds_max": [
+        33.03089904785156,
+        29.760000228881836,
+        426.0
+      ],
+      "triangles": 484,
+      "meshes": 18,
+      "root_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "geometry_matches_uv_pass": true,
+      "exact_geometry_sha256": "e7285a636f6ddd726a99d5f074faf9b72c1edfb7f7770c31f9ea8d3cfc19dc1d"
+    }
+  ],
+  "materials": {
+    "H100_wall_dark_concrete": {
+      "images": [
+        {
+          "path": "Textures\\wall_dark_concrete\\albedo.png",
+          "name": "albedo.png",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "41d6e03d99b26dd0e2db70f95818b132a4cf7297aa72bba28d7d924e3156faab"
+        },
+        {
+          "path": "Textures\\wall_dark_concrete\\normal.png",
+          "name": "normal.png",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9adc880dec9fcf696e9c971aa58d43824d741b57459294031c594c1c2f6b6e4f"
+        },
+        {
+          "path": "Textures\\wall_dark_concrete\\orm.png",
+          "name": "orm.png",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "00e883e74352a97f4f3065907a46df1a18b8fe5a95d8d1fdc538b66fd235e7bc"
+        },
+        {
+          "path": "Textures\\wall_dark_concrete\\emission.png",
+          "name": "emission.png",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_dark_concrete.facade.json"
+    },
+    "H100_floor_rooftop": {
+      "images": [
+        {
+          "path": "Textures\\floor_rooftop\\albedo.png",
+          "name": "albedo.png.003",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "4b4a33a99bd8543c5656a72f5102047eb62c3deaf6c827084829ab71fc6b1de7"
+        },
+        {
+          "path": "Textures\\floor_rooftop\\normal.png",
+          "name": "normal.png.003",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "02c0b2062b0a9c00c1933742f329909f654c7cd48d95ee65a62c378fac9a8077"
+        },
+        {
+          "path": "Textures\\floor_rooftop\\orm.png",
+          "name": "orm.png.003",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "20fbad261a47e18ea5ef0022ec1e79666ae38df9e6beddb3e1ca1fe07782ccfa"
+        },
+        {
+          "path": "Textures\\floor_rooftop\\emission.png",
+          "name": "emission.png.003",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/floor_rooftop.facade.json"
+    },
+    "H100_floor_metal_deck": {
+      "images": [
+        {
+          "path": "Textures\\floor_metal_deck\\albedo.png",
+          "name": "albedo.png.001",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "411dab28f6009124bccdcc930ce506f661faf66c0c5ae43641eb064ef254f7cd"
+        },
+        {
+          "path": "Textures\\floor_metal_deck\\normal.png",
+          "name": "normal.png.001",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9827da97a1018d3ca949172d5679ae0c4a998acf651f5f5257180878ca94bf3e"
+        },
+        {
+          "path": "Textures\\floor_metal_deck\\orm.png",
+          "name": "orm.png.001",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "cac452542e3de5062cb9e9cf34601454d1b0f2733244bcbb645807ad94f6e530"
+        },
+        {
+          "path": "Textures\\floor_metal_deck\\emission.png",
+          "name": "emission.png.001",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/floor_metal_deck.facade.json"
+    },
+    "H100_wall_corporate": {
+      "images": [
+        {
+          "path": "Textures\\wall_corporate\\albedo.png",
+          "name": "albedo.png.002",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "ea2df7398c12fdfac31ed139355bff33435566566015272763b2bc06b34a6e63"
+        },
+        {
+          "path": "Textures\\wall_corporate\\normal.png",
+          "name": "normal.png.002",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "489a8297803ee4bf330a70f590c1243511a23515fb2402ac2697a6576e58fc39"
+        },
+        {
+          "path": "Textures\\wall_corporate\\orm.png",
+          "name": "orm.png.002",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "314b77d1406eadc203b5840bcafd6e6108e405ad8ac5e012f98c1a2dc089770b"
+        },
+        {
+          "path": "Textures\\wall_corporate\\emission.png",
+          "name": "emission.png.002",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "5d6c408b26bf0aa3fd6ad51543b30b380f03e5af63fbcc7b3cadc5dbb65c63ab"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_corporate.facade.json"
+    },
+    "H100_f0_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f0_0_uv\\albedo.png",
+          "name": "albedo.png.041",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "27ccd89a26eb439a19078e19c81c9d22de7cb48ac5fb25dc816a70931a57273b"
+        },
+        {
+          "path": "Textures\\f0_0_uv\\normal.png",
+          "name": "normal.png.041",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "2121cdae1c4e64f5b56f22e4d1912e57aedc73a5d5768f85f904a93d3d02f98e"
+        },
+        {
+          "path": "Textures\\f0_0_uv\\orm.png",
+          "name": "orm.png.041",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "36ade47902e567589cdc43df5efe00d17c14abbf97b0f1316c66283909a8c64f"
+        },
+        {
+          "path": "Textures\\f0_0_uv\\emission.png",
+          "name": "emission.png.041",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3e7cca0bd8cf12affab8b663079311876b62020412e0ac2d76f26fe022ef0fe5"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f0_0_uv.uv.json"
+    },
+    "H100_wall_maintenance": {
+      "images": [
+        {
+          "path": "Textures\\wall_maintenance\\albedo.png",
+          "name": "albedo.png.018",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "c6cb7aef871a19b289701cba99ba0157656b8f7b5c17f73e66a14ba9f28a4ea9"
+        },
+        {
+          "path": "Textures\\wall_maintenance\\normal.png",
+          "name": "normal.png.018",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e2e95ef19ef7d4214fef2bb13f88509d1cfab680d5cc11e1179f5980644b1ef2"
+        },
+        {
+          "path": "Textures\\wall_maintenance\\orm.png",
+          "name": "orm.png.018",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "c5c91babf29ae253c649ac19eae7f472a9e06979db2add514093522d212a1d07"
+        },
+        {
+          "path": "Textures\\wall_maintenance\\emission.png",
+          "name": "emission.png.018",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_maintenance.facade.json"
+    },
+    "H100_wall_vent_bank": {
+      "images": [
+        {
+          "path": "Textures\\wall_vent_bank\\albedo.png",
+          "name": "albedo.png.020",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "052a52846e15078ae59ab769ee1e33ea72f6bfaff78291433ed17218e15a6b97"
+        },
+        {
+          "path": "Textures\\wall_vent_bank\\normal.png",
+          "name": "normal.png.020",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "86094029ad53d59e3ab17ba37ae5405dc5778898f448f2b578230523fd55e8b8"
+        },
+        {
+          "path": "Textures\\wall_vent_bank\\orm.png",
+          "name": "orm.png.020",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "169d142b50d28e6c1e7838cc78dfd4031204491d8c93248ff318f02f8fe1ba49"
+        },
+        {
+          "path": "Textures\\wall_vent_bank\\emission.png",
+          "name": "emission.png.020",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_vent_bank.facade.json"
+    },
+    "H100_f0_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f0_1_uv\\albedo.png",
+          "name": "albedo.png.042",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f7675401e9f895b7aa26caff8c73353d9c3831e4f8abb6bff03cf5bd0f37983d"
+        },
+        {
+          "path": "Textures\\f0_1_uv\\normal.png",
+          "name": "normal.png.042",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "87dfdf4d85a86a381ca1aa3f662e0fb9997f1e55cc63696292a5566cf8121eff"
+        },
+        {
+          "path": "Textures\\f0_1_uv\\orm.png",
+          "name": "orm.png.042",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3c7a5c2ef62859ef42bdf65bccd541e16bee34ee35906367097abd89c1a19b84"
+        },
+        {
+          "path": "Textures\\f0_1_uv\\emission.png",
+          "name": "emission.png.042",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "92a3249d3630cc522b16980a512a071ca89ccdd5d8ec66e24f7f3acbc2b7fefe"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f0_1_uv.uv.json"
+    },
+    "H100_f4_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f4_2_uv\\albedo.png",
+          "name": "albedo.png.043",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "511df784035a71fb5e8eee303602b0013a188a4443084689835dbdfc75c14388"
+        },
+        {
+          "path": "Textures\\f4_2_uv\\normal.png",
+          "name": "normal.png.043",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "bb7bed2931f9e0a18ff02cc60d89bd8060b4b340228b030157c7b9da4fc7c7cb"
+        },
+        {
+          "path": "Textures\\f4_2_uv\\orm.png",
+          "name": "orm.png.043",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e2c9ec93dddac318812eebc526b202577707bcd4e83a5bf44b9ae170fdab8b94"
+        },
+        {
+          "path": "Textures\\f4_2_uv\\emission.png",
+          "name": "emission.png.043",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "81ce72fd65dc4a7d7080c1b2e0a9ea05ea038076c54036a883d7075a72c6e518"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f4_2_uv.uv.json"
+    },
+    "H100_wrap_tank_shell": {
+      "images": [
+        {
+          "path": "Textures\\wrap_tank_shell\\albedo.png",
+          "name": "albedo.png.044",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "024c67e0b11c6dbce4465156960099c1ab4aa77cae94fa71cac0021ac07cf337"
+        },
+        {
+          "path": "Textures\\wrap_tank_shell\\normal.png",
+          "name": "normal.png.044",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "ce74833e41703ac9f745afe56e1e11cf33216323f57b1bc7795d3eef676b6ab0"
+        },
+        {
+          "path": "Textures\\wrap_tank_shell\\orm.png",
+          "name": "orm.png.044",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e33e3bd8f3cb384884f57981b1db1ff4dcfff89c60da7cbfe9593a9b4bc4ae76"
+        },
+        {
+          "path": "Textures\\wrap_tank_shell\\emission.png",
+          "name": "emission.png.044",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wrap_tank_shell.facade.json"
+    },
+    "H100_wrap_heavy_pipe": {
+      "images": [
+        {
+          "path": "Textures\\wrap_heavy_pipe\\albedo.png",
+          "name": "albedo.png.045",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "54979b4417600905e66f50008fda86cf0fa2fae27bab5c29a6ec5dd21a604fe2"
+        },
+        {
+          "path": "Textures\\wrap_heavy_pipe\\normal.png",
+          "name": "normal.png.045",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "ede9a0e533f1fdc401dc44b213bab037d44a0e11cf1036753defb04a96382b85"
+        },
+        {
+          "path": "Textures\\wrap_heavy_pipe\\orm.png",
+          "name": "orm.png.045",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "d1c9030e357a115758911c5b123e7edce1384ae10b5671469a324233f5a9986d"
+        },
+        {
+          "path": "Textures\\wrap_heavy_pipe\\emission.png",
+          "name": "emission.png.045",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wrap_heavy_pipe.facade.json"
+    },
+    "H100_glass": {
+      "images": [],
+      "emission_strength": 0.0,
+      "base_color": [
+        0.03500000014901161,
+        0.07500000298023224,
+        0.0949999988079071,
+        1.0
+      ],
+      "recipe": null
+    },
+    "H100_f4_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f4_1_uv\\albedo.png",
+          "name": "albedo.png.046",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "23cbae657ced756eaac233bc31447e2b9fa63a37fd691afe7c80a1ee8319f31e"
+        },
+        {
+          "path": "Textures\\f4_1_uv\\normal.png",
+          "name": "normal.png.046",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "01ca403b8ec2a831f73b90a5b5ab45ca60f1e38b76badf8c6868633c0e107712"
+        },
+        {
+          "path": "Textures\\f4_1_uv\\orm.png",
+          "name": "orm.png.046",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "aebb84ba4bdf9392fc7d48f3d7fa746b2a17fce4c30a35f622411620258e2eaa"
+        },
+        {
+          "path": "Textures\\f4_1_uv\\emission.png",
+          "name": "emission.png.046",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e00fa02d48e0db9dddb0915dc6685f896f757b73eef365b0b2be504c63303488"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f4_1_uv.uv.json"
+    },
+    "H100_wall_service_rack": {
+      "images": [
+        {
+          "path": "Textures\\wall_service_rack\\albedo.png",
+          "name": "albedo.png.039",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "7da5c16c112bbec1e5eecd994edd0e0d4d354dcbf7a4928a41fd692961027830"
+        },
+        {
+          "path": "Textures\\wall_service_rack\\normal.png",
+          "name": "normal.png.039",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3b118e0d19decd01c1016a8a1cb51bd587717c5c4b48160da1398ecf6f05b411"
+        },
+        {
+          "path": "Textures\\wall_service_rack\\orm.png",
+          "name": "orm.png.039",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "8696973fc83b5cc0840e69fdfe3a8bc066bbf70918ac88dc0dcb7f7c6362a01d"
+        },
+        {
+          "path": "Textures\\wall_service_rack\\emission.png",
+          "name": "emission.png.039",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "8d76ce24613025bcd0c092258bdfb8b9bcc6b6772f46b146d1f1858e49d9dbd7"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_service_rack.facade.json"
+    },
+    "H100_warm": {
+      "images": [],
+      "emission_strength": 1.399999976158142,
+      "base_color": [
+        0.699999988079071,
+        0.30000001192092896,
+        0.06499999761581421,
+        1.0
+      ],
+      "recipe": null
+    },
+    "H100_wall_reinforced": {
+      "images": [
+        {
+          "path": "Textures\\wall_reinforced\\albedo.png",
+          "name": "albedo.png.008",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "52261d4503823b8d445a38d9f972c3d412d76f1533009dc490eff358b556faea"
+        },
+        {
+          "path": "Textures\\wall_reinforced\\normal.png",
+          "name": "normal.png.008",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "984407f0a758eb1eeccd25cd720e2236974b119ee11fe7899bc007227f205d92"
+        },
+        {
+          "path": "Textures\\wall_reinforced\\orm.png",
+          "name": "orm.png.008",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "35b28e233e64b7fc82a6a7b9d0f05b8c1d833e48e477188566dbd3e85f04c51d"
+        },
+        {
+          "path": "Textures\\wall_reinforced\\emission.png",
+          "name": "emission.png.008",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_reinforced.facade.json"
+    },
+    "H100_f1_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f1_0_uv\\albedo.png",
+          "name": "albedo.png.047",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "81d3b8cb908198237cca2803cd191b439d755fc480c5f61bd6df6fc820f79f5a"
+        },
+        {
+          "path": "Textures\\f1_0_uv\\normal.png",
+          "name": "normal.png.047",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "4b0e1212547354221acde164a441fad023a9b26cbbb9cd6f7871a09ca38a36d9"
+        },
+        {
+          "path": "Textures\\f1_0_uv\\orm.png",
+          "name": "orm.png.047",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "680d8f9740723d724f63ac843211aa8aee4657aae7df4521f695c97e70a8bce6"
+        },
+        {
+          "path": "Textures\\f1_0_uv\\emission.png",
+          "name": "emission.png.047",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "c787c4de9fb9236c511035c90caf9482e8b879f8c6daff32f8368471a2264641"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f1_0_uv.uv.json"
+    },
+    "H100_f1_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f1_1_uv\\albedo.png",
+          "name": "albedo.png.048",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "c51386c48d29ac03f7d79e024d58613ba151ad5be155c4fb3da1ecc3ddc3ac83"
+        },
+        {
+          "path": "Textures\\f1_1_uv\\normal.png",
+          "name": "normal.png.048",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9d0a1cd30e7e8f59333e5b44be11a8a37364f7d9cfe247f7f4f7d1faa3188b36"
+        },
+        {
+          "path": "Textures\\f1_1_uv\\orm.png",
+          "name": "orm.png.048",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "249c69137c691063fece44dc248f04290a447b2b80542afe7b865e30fcb38b53"
+        },
+        {
+          "path": "Textures\\f1_1_uv\\emission.png",
+          "name": "emission.png.048",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "4f6a3faf63b9b574929748dddbb90991e04c7f16f2e09ee2e1e169536cd57a37"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f1_1_uv.uv.json"
+    },
+    "H100_f1_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f1_2_uv\\albedo.png",
+          "name": "albedo.png.049",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "0ea7f15f8d1ca09fbf1aa137a2cdf7fe676354f46d57c41128b47b5c749c96dc"
+        },
+        {
+          "path": "Textures\\f1_2_uv\\normal.png",
+          "name": "normal.png.049",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "d70b70b3ab33990ff1a06878fd627a71ba7d2f0b1db347d56b36116857355d54"
+        },
+        {
+          "path": "Textures\\f1_2_uv\\orm.png",
+          "name": "orm.png.049",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f9d55fd94a3e76914ab659f24983b8265c262f9e184a7941822a0775edb8070f"
+        },
+        {
+          "path": "Textures\\f1_2_uv\\emission.png",
+          "name": "emission.png.049",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "213b2a0837a641d86ae82cb044bfc5ba3d9333e1a720a88f800b2579594992e2"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f1_2_uv.uv.json"
+    },
+    "H100_f1_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f1_3_uv\\albedo.png",
+          "name": "albedo.png.050",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "ba31340067c8f73c57df97b726cc20683b6f559db0f111f45dd2c5b48c07f5d7"
+        },
+        {
+          "path": "Textures\\f1_3_uv\\normal.png",
+          "name": "normal.png.050",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "4cb5efb707ed3389ddcc75c269f995ec650a2b46a77af1f7b428e2d1fc3000e8"
+        },
+        {
+          "path": "Textures\\f1_3_uv\\orm.png",
+          "name": "orm.png.050",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e48b855668b86f825c526cb596e28b5beba4767f7922ddf54d4da316e8383b7f"
+        },
+        {
+          "path": "Textures\\f1_3_uv\\emission.png",
+          "name": "emission.png.050",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e09a90d1d06279522eba508076c526ae6602cc6635a7a1436412a7c908be2cdb"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f1_3_uv.uv.json"
+    },
+    "H100_wall_reactor_housing": {
+      "images": [
+        {
+          "path": "Textures\\wall_reactor_housing\\albedo.png",
+          "name": "albedo.png.013",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3bbd9834863fbbf86d89d657aa88cc37f283ed946a2da443e3b330cb1ef17f70"
+        },
+        {
+          "path": "Textures\\wall_reactor_housing\\normal.png",
+          "name": "normal.png.013",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f52437b21274e81265bc7fef89d8ec06be787c933c77ffb4ca9606b235f8e533"
+        },
+        {
+          "path": "Textures\\wall_reactor_housing\\orm.png",
+          "name": "orm.png.013",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "0d72c6b21d5724b2ce85d35c127bd4960b813392007a432f41f6f47b45b295e7"
+        },
+        {
+          "path": "Textures\\wall_reactor_housing\\emission.png",
+          "name": "emission.png.013",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f35b2ade7d768b84c3900f7c2dba40c295a467882d223e0d6509ea450a735b42"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_reactor_housing.facade.json"
+    },
+    "H100_f2_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f2_1_uv\\albedo.png",
+          "name": "albedo.png.051",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "b340c401975cc1d1c30b783d795167b9d7c0b3c3be50439dd7982f41b40249b3"
+        },
+        {
+          "path": "Textures\\f2_1_uv\\normal.png",
+          "name": "normal.png.051",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "0c6900c24674d2a111316755f0a34853eccbbbb84da0a8c2015ab3f9422b1c00"
+        },
+        {
+          "path": "Textures\\f2_1_uv\\orm.png",
+          "name": "orm.png.051",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f671f6acba80819eb8c4e80b32f339b18685f1bc45c29b3a3210d7dbd7a6592b"
+        },
+        {
+          "path": "Textures\\f2_1_uv\\emission.png",
+          "name": "emission.png.051",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "93fa1e5721c59586851ddc12adb010b3e415807324722473b489d071206064d7"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f2_1_uv.uv.json"
+    },
+    "H100_f2_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f2_2_uv\\albedo.png",
+          "name": "albedo.png.052",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "570796af2ea4ffd23c4cff042ed5816740392f28fcd4309cd32cb15331001681"
+        },
+        {
+          "path": "Textures\\f2_2_uv\\normal.png",
+          "name": "normal.png.052",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1834313dbc9e93c64ecaebde43d68d5eab2fcad0fd24d54a5b6b59d43d041eb7"
+        },
+        {
+          "path": "Textures\\f2_2_uv\\orm.png",
+          "name": "orm.png.052",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "93f934f3818c9a7ec527ca9163edf1039d2dbcb48775737a084a4ef5b86dc8dd"
+        },
+        {
+          "path": "Textures\\f2_2_uv\\emission.png",
+          "name": "emission.png.052",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e18b9a089837a8b236c143d6a2a781010700d5f36c4b600e700de69bf868eade"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f2_2_uv.uv.json"
+    },
+    "H100_f2_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f2_3_uv\\albedo.png",
+          "name": "albedo.png.053",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "73c14ea5714a6daf97b16306664363d10ed7f770e5f86c5557e26ca53be7e90e"
+        },
+        {
+          "path": "Textures\\f2_3_uv\\normal.png",
+          "name": "normal.png.053",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "89cf933559660984ae71c32eb7eea96136e8665d22566e86b381fae7cfda7fef"
+        },
+        {
+          "path": "Textures\\f2_3_uv\\orm.png",
+          "name": "orm.png.053",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1a808ce9d8b5eeb404718f2770e8779b33f2ae096cc21b44ddfd498dd87ad8ec"
+        },
+        {
+          "path": "Textures\\f2_3_uv\\emission.png",
+          "name": "emission.png.053",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "8817550c5a69526b6200ad2b63aab4e8d983f12509e1c4bfcfc2d45d9186695d"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f2_3_uv.uv.json"
+    },
+    "H100_f2_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f2_0_uv\\albedo.png",
+          "name": "albedo.png.054",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e16be3b685473fba29da8da1e3c1f8eaf39dba73ae6f137fbdaf25a47a4bd2ba"
+        },
+        {
+          "path": "Textures\\f2_0_uv\\normal.png",
+          "name": "normal.png.054",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "5ba8f8adf5106088153cdffc719b675ab3065fb841d42769b7e3b974bb1cb0a8"
+        },
+        {
+          "path": "Textures\\f2_0_uv\\orm.png",
+          "name": "orm.png.054",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "5402ade3753eed15447635d6d8379c063a6b5282aeadeceb9843b35f4b10537f"
+        },
+        {
+          "path": "Textures\\f2_0_uv\\emission.png",
+          "name": "emission.png.054",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f5bbe1ff5368c679466c5ca8723bb4c2e439a547e4e13fd028ebfd3e5a25043f"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f2_0_uv.uv.json"
+    },
+    "H100_f4_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f4_3_uv\\albedo.png",
+          "name": "albedo.png.055",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "2ec25c426ed7d4fd86825062ce7d7c0445d131f6968a2925624d37dea3d8baa5"
+        },
+        {
+          "path": "Textures\\f4_3_uv\\normal.png",
+          "name": "normal.png.055",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "720031af2eda11e9b1c5e1d30dc2a92d3d56d1f4ea158e117e2fb42dd65da4d7"
+        },
+        {
+          "path": "Textures\\f4_3_uv\\orm.png",
+          "name": "orm.png.055",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "aef6cb447d03e7d2568fa6c505ebd5168564d3ca2db0441061784fc733b1f6ac"
+        },
+        {
+          "path": "Textures\\f4_3_uv\\emission.png",
+          "name": "emission.png.055",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "59034a3716fdca61934e74d864acc127955847b5128c4395e2abe446d832081f"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f4_3_uv.uv.json"
+    },
+    "H100_accent_billboard_support": {
+      "images": [
+        {
+          "path": "Textures\\accent_billboard_support\\albedo.png",
+          "name": "albedo.png.021",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e10ff6d519535e65deb5bb674f310668ba1a622e26f05ed20a988747af42e01b"
+        },
+        {
+          "path": "Textures\\accent_billboard_support\\normal.png",
+          "name": "normal.png.021",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "f7e04df2823ddcaddc8de73032bcfdb4b9c89c86cf2adad87574781d70306ddb"
+        },
+        {
+          "path": "Textures\\accent_billboard_support\\orm.png",
+          "name": "orm.png.021",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "82cb2cb415078bcc5d36c26e1eaa1da1e899ccb1b12a76af73e0c1339d071df6"
+        },
+        {
+          "path": "Textures\\accent_billboard_support\\emission.png",
+          "name": "emission.png.021",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/accent_billboard_support.facade.json"
+    },
+    "H100_f5_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f5_1_uv\\albedo.png",
+          "name": "albedo.png.056",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "6b62480ac38530dff8726efe176fd9bb381806071f4dba973b1e27cdd60b711b"
+        },
+        {
+          "path": "Textures\\f5_1_uv\\normal.png",
+          "name": "normal.png.056",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e302095099ad92d24bc68e13233455af789d62356a8d8cfd148dad813d8cc299"
+        },
+        {
+          "path": "Textures\\f5_1_uv\\orm.png",
+          "name": "orm.png.056",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "25941f36fb95977fa1106e6da2680edcafe05e0a8108f669fcc18bb288ea63e6"
+        },
+        {
+          "path": "Textures\\f5_1_uv\\emission.png",
+          "name": "emission.png.056",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "bcc22ebf1eaac44f98a61933b4c0180c9a2c8c8ffa6933895fbf1b1a4bafe5ea"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f5_1_uv.uv.json"
+    },
+    "H100_sign_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\sign_0_uv\\albedo.png",
+          "name": "albedo.png.057",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "533b9de0f59d1115f5e121acb5df7360b06795ecb053cee404dc7c3a20d9adf0"
+        },
+        {
+          "path": "Textures\\sign_0_uv\\normal.png",
+          "name": "normal.png.057",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "ea8e5287c0027e9f34b90daeaa4904f2227bee37fc76c9b7434d7ccc40ac980d"
+        },
+        {
+          "path": "Textures\\sign_0_uv\\orm.png",
+          "name": "orm.png.057",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "a90284b493079c59f64a836c394bf6185e65a9d5365ce61794b17ad97429ddd5"
+        },
+        {
+          "path": "Textures\\sign_0_uv\\emission.png",
+          "name": "emission.png.057",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "a5841e5fec95707bcf7c7e690f3d425ea6c64b74160d7ad687c8046d6fa1bdf1"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/sign_0_uv.uv.json"
+    },
+    "H100_signal": {
+      "images": [],
+      "emission_strength": 1.399999976158142,
+      "base_color": [
+        0.09000000357627869,
+        0.4699999988079071,
+        0.5299999713897705,
+        1.0
+      ],
+      "recipe": null
+    },
+    "H100_f5_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f5_2_uv\\albedo.png",
+          "name": "albedo.png.058",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "21d3fb7a374784826fe07fa6ac807434e23daac36a8494cfcf8011bd8fef3ff2"
+        },
+        {
+          "path": "Textures\\f5_2_uv\\normal.png",
+          "name": "normal.png.058",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e23b6d4725a4522973bab190f0eae9f0e37b20af3397693e60dc3b00522b2ca9"
+        },
+        {
+          "path": "Textures\\f5_2_uv\\orm.png",
+          "name": "orm.png.058",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "b55d4afedfe783cec13d71e2e97dd0d5d70c51c3c16cfbe88892fa5545b3595f"
+        },
+        {
+          "path": "Textures\\f5_2_uv\\emission.png",
+          "name": "emission.png.058",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "d08c13cd93334aabd839aeb237408050fb29cc5340272c221163822c86cd1a30"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f5_2_uv.uv.json"
+    },
+    "H100_sign_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\sign_1_uv\\albedo.png",
+          "name": "albedo.png.059",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "202eeb25dd5e98aa7b1d255a2d8b6b3034a8429d996fe490ecbd699f925545d9"
+        },
+        {
+          "path": "Textures\\sign_1_uv\\normal.png",
+          "name": "normal.png.059",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "59356612f06752f8326866c8808dbd03fbc8b3bc2b79adec2ad91c59cb8081e5"
+        },
+        {
+          "path": "Textures\\sign_1_uv\\orm.png",
+          "name": "orm.png.059",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "8dc9391881a39f100d8cc85b28d8569b3c436b40f46b339ea49aebe3cc529b83"
+        },
+        {
+          "path": "Textures\\sign_1_uv\\emission.png",
+          "name": "emission.png.059",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "feb576305df4fb7ee213339cc50cd4073fae86ee2a4476eaf76aa000af51539b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/sign_1_uv.uv.json"
+    },
+    "H100_f5_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f5_3_uv\\albedo.png",
+          "name": "albedo.png.060",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9b461a57d413e34844dbe2469cd152d15c561a559a5f4efb6c63cf3d1074c7e2"
+        },
+        {
+          "path": "Textures\\f5_3_uv\\normal.png",
+          "name": "normal.png.060",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "fc0f55d1a87f7d5a4378f3dec5f9a507ebfc4e66e229f5ecf0935e4f18c39f0f"
+        },
+        {
+          "path": "Textures\\f5_3_uv\\orm.png",
+          "name": "orm.png.060",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "57b6130caaded4528485c97f4da9c61c048508219c067dbeff68e32da9274b5b"
+        },
+        {
+          "path": "Textures\\f5_3_uv\\emission.png",
+          "name": "emission.png.060",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "0c62ef1ed3adb915c92e0875d0fb245693a701b6507b185e59603326595934dc"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f5_3_uv.uv.json"
+    },
+    "H100_sign_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\sign_2_uv\\albedo.png",
+          "name": "albedo.png.061",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "1da2e7bc751dba4a3c26cfcd9879da10178bc6465c71df78b5ef8dfdcb3bb752"
+        },
+        {
+          "path": "Textures\\sign_2_uv\\normal.png",
+          "name": "normal.png.061",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "e9e56d2e1a684819071ae6ccefd1151041284433b18dc804d1ea76333eab70d7"
+        },
+        {
+          "path": "Textures\\sign_2_uv\\orm.png",
+          "name": "orm.png.061",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "3a42683bdb1706f7ca14f75976a70f389be41f2c0aa5a4dcbe1828cf23882b5c"
+        },
+        {
+          "path": "Textures\\sign_2_uv\\emission.png",
+          "name": "emission.png.061",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "d962864297c533075c6ecd1c9b48f0d0c1ef11853e86eec670a4c8b89445d274"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/sign_2_uv.uv.json"
+    },
+    "H100_sign_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\sign_3_uv\\albedo.png",
+          "name": "albedo.png.062",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "f0032f0906fa71b81978160be5c7e7dc18d94034e6314b1bba12d361ce9a7176"
+        },
+        {
+          "path": "Textures\\sign_3_uv\\normal.png",
+          "name": "normal.png.062",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "cf5b88a4c0be80b63f7d9904c6bbfb8cceb85993aa0130ba713e3ca2632edd99"
+        },
+        {
+          "path": "Textures\\sign_3_uv\\orm.png",
+          "name": "orm.png.062",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "6c9787afc825652cbe4c35796089aa33035c674e3658bea04c778baf5919003b"
+        },
+        {
+          "path": "Textures\\sign_3_uv\\emission.png",
+          "name": "emission.png.062",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "49a4dae6c85d06bc56f09b8d78bc1a5c0da50e2e7c854600239f007ee90a4d72"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/sign_3_uv.uv.json"
+    },
+    "H100_f5_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f5_0_uv\\albedo.png",
+          "name": "albedo.png.063",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e6ae2b90fc2b3d8bed2c131d54869a5e128535f6536e9c6f6edd942c1138f050"
+        },
+        {
+          "path": "Textures\\f5_0_uv\\normal.png",
+          "name": "normal.png.063",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "73e6342951f3df4f43e2bc47836d8d7ace2c59e9098088b8b55a872565d56483"
+        },
+        {
+          "path": "Textures\\f5_0_uv\\orm.png",
+          "name": "orm.png.063",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "733c55aa26e10c5421fc018d4e5adbc562d4f3641e0458f1dce490ff5e654bc9"
+        },
+        {
+          "path": "Textures\\f5_0_uv\\emission.png",
+          "name": "emission.png.063",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3b84cf9e4c91465a09875520858acb2217e933590daaca7b8c000d984b011bbb"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f5_0_uv.uv.json"
+    },
+    "H100_sign_4_uv": {
+      "images": [
+        {
+          "path": "Textures\\sign_4_uv\\albedo.png",
+          "name": "albedo.png.064",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "01d726900ca4f731831502c0fb004eb3c9beb07b97fd6f20a1facd123bbbca45"
+        },
+        {
+          "path": "Textures\\sign_4_uv\\normal.png",
+          "name": "normal.png.064",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "5d17a7be6c5566e0e07f27d208d3db15509e952412f1ddea75a48ee9fd3a0a90"
+        },
+        {
+          "path": "Textures\\sign_4_uv\\orm.png",
+          "name": "orm.png.064",
+          "colorspace": "Non-Color",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "7bebe0b0d27a0d890bda4d02bc365ca8241c9f9baf29abb83978469d9077103f"
+        },
+        {
+          "path": "Textures\\sign_4_uv\\emission.png",
+          "name": "emission.png.064",
+          "colorspace": "sRGB",
+          "extension": "EXTEND",
+          "exists": true,
+          "sha256": "b11b531279f7768d79656c65a11bf80ab449485c0bee14257b06ffd6193d9566"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/sign_4_uv.uv.json"
+    },
+    "H100_f0_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f0_2_uv\\albedo.png",
+          "name": "albedo.png.065",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "bb38d2aa9c0a02472330562dd1e3c7cd2e904fcafba083593b48d7ce4d1e06b3"
+        },
+        {
+          "path": "Textures\\f0_2_uv\\normal.png",
+          "name": "normal.png.065",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9e730d60cea0279bd252d3c8a75eeff327771d02dd53190b904f26b830ee9aa8"
+        },
+        {
+          "path": "Textures\\f0_2_uv\\orm.png",
+          "name": "orm.png.065",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "8944ae7ed33926e5aa77a9499a744fda48cd2ad3ee61c8a663a96af9724fa507"
+        },
+        {
+          "path": "Textures\\f0_2_uv\\emission.png",
+          "name": "emission.png.065",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "2457f2a1fa9193c33c99c0906d95e2cf1ee4d9a933a6f385cb4682973087825a"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f0_2_uv.uv.json"
+    },
+    "H100_f0_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f0_3_uv\\albedo.png",
+          "name": "albedo.png.066",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "cef2b989b399724ce03b881345bd7d18a1e252697d191a17a8f1b6d161a74795"
+        },
+        {
+          "path": "Textures\\f0_3_uv\\normal.png",
+          "name": "normal.png.066",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "9f76c0f3b1367ba5962071efb4a14d3a186bd8981ff2bd94937f33e57c720436"
+        },
+        {
+          "path": "Textures\\f0_3_uv\\orm.png",
+          "name": "orm.png.066",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "152def2be35ba890ee380822e140863bcd38f17bdedf51f146fe1371bac4f041"
+        },
+        {
+          "path": "Textures\\f0_3_uv\\emission.png",
+          "name": "emission.png.066",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "bfa329dbc2428ec2c2d2e8c6245dfa2f13cd0f40f0fa93163f50a3295ab04a5c"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f0_3_uv.uv.json"
+    },
+    "H100_f4_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f4_0_uv\\albedo.png",
+          "name": "albedo.png.067",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "0582af9a0dcad2e6be9bedaf094496b55619a41b09d82dff4d2a9591bc27bc67"
+        },
+        {
+          "path": "Textures\\f4_0_uv\\normal.png",
+          "name": "normal.png.067",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "49676594b28d04c09a9c27fcfa709988c3994ed50b746efee5a8ae0bb78b3bc8"
+        },
+        {
+          "path": "Textures\\f4_0_uv\\orm.png",
+          "name": "orm.png.067",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "ce78b8d88d07417b1c939603485991c1e5f669f6c147098772cc048c89c05aab"
+        },
+        {
+          "path": "Textures\\f4_0_uv\\emission.png",
+          "name": "emission.png.067",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "748d1d24be0894e39315c2249e13950b63e406bb05d9d48aa62c7e3b8dd1185b"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f4_0_uv.uv.json"
+    },
+    "H100_f3_3_uv": {
+      "images": [
+        {
+          "path": "Textures\\f3_3_uv\\albedo.png",
+          "name": "albedo.png.068",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "7588e12dcf4a6b9dcf75a2320d56ebf5cd89276e0e7cb7199c6a848a94d0dfb8"
+        },
+        {
+          "path": "Textures\\f3_3_uv\\normal.png",
+          "name": "normal.png.068",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "5e263be2d8bf67eb8b22a1df7a2f60a58a7bd98a823085f7fc1b689605a0d73d"
+        },
+        {
+          "path": "Textures\\f3_3_uv\\orm.png",
+          "name": "orm.png.068",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "25ea34330070933e709cce77f5a534127ec911a125ca5dfc5671a3fa3a040ac4"
+        },
+        {
+          "path": "Textures\\f3_3_uv\\emission.png",
+          "name": "emission.png.068",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "c174f707c24f662f71ba5d3830742d1acd82ff24af6746c97fa921234d5d28ed"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f3_3_uv.uv.json"
+    },
+    "H100_f3_0_uv": {
+      "images": [
+        {
+          "path": "Textures\\f3_0_uv\\albedo.png",
+          "name": "albedo.png.069",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "db83d98ef8373a90730aab5b9665875d8bc773517ecd9ec1dfcdcc07446024e8"
+        },
+        {
+          "path": "Textures\\f3_0_uv\\normal.png",
+          "name": "normal.png.069",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e0c6622336c9779c0ee2c2b7b3f6d4bdf7007e7b6c27c495ccaf819949846d3d"
+        },
+        {
+          "path": "Textures\\f3_0_uv\\orm.png",
+          "name": "orm.png.069",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "4a4f2f0e885962696026d9c3173707f5ef5b2c74efc3fa146bc0c9aeb71c734f"
+        },
+        {
+          "path": "Textures\\f3_0_uv\\emission.png",
+          "name": "emission.png.069",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "44319de672ab5314bef09b89face379b3423377adad6a83a02ce66e0ec64a8ea"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f3_0_uv.uv.json"
+    },
+    "H100_f3_1_uv": {
+      "images": [
+        {
+          "path": "Textures\\f3_1_uv\\albedo.png",
+          "name": "albedo.png.070",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "a5459632cf2448367e3dac39f920385f8993e818a0b3daa177a1efe41cbc373c"
+        },
+        {
+          "path": "Textures\\f3_1_uv\\normal.png",
+          "name": "normal.png.070",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e6c8cdd92dd2c984be36bcac682dd9f25f933223839773ad0edafb8b61538816"
+        },
+        {
+          "path": "Textures\\f3_1_uv\\orm.png",
+          "name": "orm.png.070",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "22a05c17d4b8409526c7c584d73500edd3f80174c16f3594dc94a7358345f2db"
+        },
+        {
+          "path": "Textures\\f3_1_uv\\emission.png",
+          "name": "emission.png.070",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "5d8a279e571d3e09f7b903c379b26666669e74c848a10b18e5fdc8113ad0c074"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f3_1_uv.uv.json"
+    },
+    "H100_f3_2_uv": {
+      "images": [
+        {
+          "path": "Textures\\f3_2_uv\\albedo.png",
+          "name": "albedo.png.071",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "502292ad13a0b847b3f9ee6f19f456c92574e92f464801b408ee77a5b74b3d33"
+        },
+        {
+          "path": "Textures\\f3_2_uv\\normal.png",
+          "name": "normal.png.071",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "85ccc85b73ea9caeb85461c41e8cd4445da4328228af3ad43802762f9db6618b"
+        },
+        {
+          "path": "Textures\\f3_2_uv\\orm.png",
+          "name": "orm.png.071",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "3ff7c5e8708992c9f46eb003aa7a14c83fcdbc09b54bc54c3481e9d2b5718421"
+        },
+        {
+          "path": "Textures\\f3_2_uv\\emission.png",
+          "name": "emission.png.071",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "078cbafa2e9435f8ce8e7504093cf5f8472df270bc74b5a31c385884b5f8f588"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/f3_2_uv.uv.json"
+    },
+    "H100_wall_tech_spine": {
+      "images": [
+        {
+          "path": "Textures\\wall_tech_spine\\albedo.png",
+          "name": "albedo.png.038",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "8042ac165468133048bc9156d666cea61b7853fc049a0178dc83d97cdf788108"
+        },
+        {
+          "path": "Textures\\wall_tech_spine\\normal.png",
+          "name": "normal.png.038",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "06c4b23bba77a3ab07a844b3fc3ac9669dcdfc517c9dcea2422fca2ec71d1cbb"
+        },
+        {
+          "path": "Textures\\wall_tech_spine\\orm.png",
+          "name": "orm.png.038",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "1f61944843a678f1fd49bbede77705d396917cf5a5edd5b97065fa4be6fec48b"
+        },
+        {
+          "path": "Textures\\wall_tech_spine\\emission.png",
+          "name": "emission.png.038",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e3636c432dde84098a866001b274639f4b5615afebbef3b54aa22d08df1a448c"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/wall_tech_spine.facade.json"
+    },
+    "H100_accent_datacenter": {
+      "images": [
+        {
+          "path": "Textures\\accent_datacenter\\albedo.png",
+          "name": "albedo.png.040",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "e6aed2922a416d3842f609b3a03b1ec2124bd2775e65c108f0a8e0383088fd05"
+        },
+        {
+          "path": "Textures\\accent_datacenter\\normal.png",
+          "name": "normal.png.040",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "dcff10fca75ae73209d7f1ac8139b7810b165a6a6d55c8bba30af454ed78c310"
+        },
+        {
+          "path": "Textures\\accent_datacenter\\orm.png",
+          "name": "orm.png.040",
+          "colorspace": "Non-Color",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "976079c2e1eaa0067818fe6e2dd70648c4c261250fa256f60638f633e08e5d2d"
+        },
+        {
+          "path": "Textures\\accent_datacenter\\emission.png",
+          "name": "emission.png.040",
+          "colorspace": "sRGB",
+          "extension": "REPEAT",
+          "exists": true,
+          "sha256": "d02484f2be3627abe398a93f1df4ccf49566e3b64f2f57ae5c28b699293d8e6d"
+        }
+      ],
+      "emission_strength": 0.75,
+      "base_color": [
+        0.800000011920929,
+        0.800000011920929,
+        0.800000011920929,
+        1.0
+      ],
+      "recipe": "Recipes/accent_datacenter.facade.json"
+    }
+  },
+  "errors": [],
+  "blender": "5.1.2",
+  "export_options": {
+    "export_format": {
+      "type": "ENUM",
+      "default": "",
+      "description": "Output format. Binary is most efficient, but JSON may be easier to edit later"
+    },
+    "export_image_format": {
+      "type": "ENUM",
+      "default": "AUTO",
+      "description": "Output format for images. PNG is lossless and generally preferred, but JPEG might be preferable for web applications due to the smaller file size. Alternatively they can be omitted if they are not needed"
+    },
+    "export_image_add_webp": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Creates WebP textures for every texture. For already WebP textures, nothing happens"
+    },
+    "export_image_webp_fallback": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "For all WebP textures, create a PNG fallback texture"
+    },
+    "export_texture_dir": {
+      "type": "STRING",
+      "default": "",
+      "description": "Folder to place texture files in. Relative to the .gltf file"
+    },
+    "export_image_quality": {
+      "type": "INT",
+      "default": "75",
+      "description": "Quality of image export"
+    },
+    "export_keep_originals": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Keep original textures files if possible. WARNING: if you use more than one texture, where pbr standard requires only one, only one texture will be used. This can lead to unexpected results"
+    },
+    "export_tangents": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export vertex tangents with meshes"
+    },
+    "export_unused_images": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export images not assigned to any material"
+    },
+    "export_unused_textures": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export image texture nodes not assigned to any material. This feature is not standard and needs an external extension to be included in the glTF file"
+    },
+    "use_selection": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export selected objects only"
+    },
+    "use_active_scene": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export active scene only"
+    },
+    "export_extras": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export custom properties as glTF extras"
+    },
+    "export_morph_tangent": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export vertex tangents with shape keys (morph targets)"
+    },
+    "export_original_specular": {
+      "type": "BOOLEAN",
+      "default": "False",
+      "description": "Export original glTF PBR Specular, instead of Blender Principled Shader Specular"
+    }
+  }
+}

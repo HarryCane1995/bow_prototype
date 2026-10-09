@@ -9,14 +9,15 @@ const EXPECTED_VARIANTS := {
 	"SimGrid_05": {"semantic": "SIM_GRID_05", "material": "res://Assets/Materials/Simulation/sim_grid_05.tres"},
 }
 const PARAMETER_NAMES := [
-	"base_color",
-	"grid_color",
-	"cell_size",
-	"line_width",
+	"visual_system",
+	"surface_color",
+	"accent_color",
+	"structure_scale",
+	"structure_contrast",
+	"accent_density",
 	"emission_strength",
-	"scan_speed",
-	"scan_strength",
-	"noise_strength",
+	"motion_speed",
+	"distortion",
 ]
 
 
@@ -197,7 +198,7 @@ func _run() -> void:
 
 	var average_luminance: float = luminance_sum / float(max(sample_count, 1))
 	if bright_samples < 50 or luminance_max < 0.25:
-		push_error("SIM_GRID palette render lacks visible emissive detail")
+		push_error("SIM_GRID palette render lacks visible surface detail")
 		viewport.queue_free()
 		quit(7)
 		return

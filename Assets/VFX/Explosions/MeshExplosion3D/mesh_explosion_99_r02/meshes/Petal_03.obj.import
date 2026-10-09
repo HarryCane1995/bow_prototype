@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://beq20qlwk740"
+path="res://.godot/imported/Petal_03.obj-7846ca00e6c0891e3fe8ce8f350c5c12.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Petal_03.obj-7846ca00e6c0891e3fe8ce8f350c5c12.mesh"]
+
+source_file="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_03.obj"
+dest_files=["res://.godot/imported/Petal_03.obj-7846ca00e6c0891e3fe8ce8f350c5c12.mesh", "res://.godot/imported/Petal_03.obj-7846ca00e6c0891e3fe8ce8f350c5c12.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

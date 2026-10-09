@@ -1,0 +1,166 @@
+{
+  "id": "HR097",
+  "name": "Giant Keyhole",
+  "category": "hero",
+  "subtype": 1,
+  "seed": 1693243,
+  "role": "hero",
+  "collection": "HR097_Giant_Keyhole",
+  "bounds_m": [
+    77.4614,
+    43.7216,
+    401.4
+  ],
+  "bounds_min": [
+    -38.7307,
+    -21.8608,
+    0.0
+  ],
+  "bounds_max": [
+    38.7307,
+    21.8608,
+    401.4
+  ],
+  "parameters": {
+    "width": 66.78,
+    "depth": 39.36,
+    "height": 391.4,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Giant Keyhole",
+    "broad_upper_city",
+    "giant_keyhole",
+    "hero",
+    "offset_top_block",
+    "roof_exhaust_trio",
+    "two_ground_shanks"
+  ],
+  "metrics": {
+    "meshes": 17,
+    "primitives": 15,
+    "triangles": 228,
+    "vertices": 240,
+    "polygons": 102
+  },
+  "geometry_sha256": "6460bad3fd13764d4e2aa5601e4eca75719109f812979f1759e9d959edaa3137",
+  "geometry_only_sha256": "5653c1eecb46d39d51581bcf45df5969970f5fcc40f92c3bb1a1b92a10db4659",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.518,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.533,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.54,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "keyhole_shank_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "keyhole_shank": [
+      "f5_1_uv"
+    ],
+    "keyhole_haunch_left_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "keyhole_haunch_left": [
+      "f5_1_uv"
+    ],
+    "keyhole_haunch_right_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "keyhole_haunch_right": [
+      "f5_1_uv"
+    ],
+    "keyhole_upper_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "keyhole_upper": [
+      "f0_2_uv"
+    ],
+    "keyhole_top_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "keyhole_top": [
+      "f5_1_uv"
+    ],
+    "keyhole_transfer": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 21,
+    "floor_rooftop": 7,
+    "floor_metal_deck": 18,
+    "wall_tech_spine": 4,
+    "f5_1_uv": 20,
+    "f0_2_uv": 4,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f5_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f5_1_uv": 925522,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR097.png",
+    "UV_Material_QA/Views/HR097_back.png",
+    "UV_Material_QA/Views/HR097_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,127 @@
+{
+  "schema": "bowprototype.vfx_library",
+  "version": 1,
+  "count": 10,
+  "effects": [
+    {
+      "effect": "MESH_EXPLOSION_3D",
+      "label": "01 \u00b7 Industrial burst",
+      "directory": "Assets/ProceduralArt/VFX/industrial_burst",
+      "scene": "res://Assets/ProceduralArt/VFX/industrial_burst/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/industrial_burst/review.tscn",
+      "sample_time": 0.24,
+      "stats": {
+        "mesh_count": 35,
+        "triangle_count": 978
+      }
+    },
+    {
+      "effect": "SHOCK_RING",
+      "label": "02 \u00b7 Pressure shock rings",
+      "directory": "Assets/ProceduralArt/VFX/pressure_shock_rings",
+      "scene": "res://Assets/ProceduralArt/VFX/pressure_shock_rings/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/pressure_shock_rings/review.tscn",
+      "sample_time": 0.38,
+      "stats": {
+        "mesh_count": 22,
+        "triangle_count": 1112
+      }
+    },
+    {
+      "effect": "SPARK_BURST",
+      "label": "03 \u00b7 Electric spark burst",
+      "directory": "Assets/ProceduralArt/VFX/electric_spark_burst",
+      "scene": "res://Assets/ProceduralArt/VFX/electric_spark_burst/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/electric_spark_burst/review.tscn",
+      "sample_time": 0.22,
+      "stats": {
+        "mesh_count": 36,
+        "triangle_count": 780
+      }
+    },
+    {
+      "effect": "DIRECTIONAL_LIGHTNING",
+      "label": "04 \u00b7 Directional lightning",
+      "directory": "Assets/ProceduralArt/VFX/directional_lightning",
+      "scene": "res://Assets/ProceduralArt/VFX/directional_lightning/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/directional_lightning/review.tscn",
+      "sample_time": 0.2,
+      "stats": {
+        "mesh_count": 11,
+        "triangle_count": 796
+      }
+    },
+    {
+      "effect": "ARC_CLUSTER",
+      "label": "05 \u00b7 Arcing electricity",
+      "directory": "Assets/ProceduralArt/VFX/arcing_electricity",
+      "scene": "res://Assets/ProceduralArt/VFX/arcing_electricity/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/arcing_electricity/review.tscn",
+      "sample_time": 0.35,
+      "stats": {
+        "mesh_count": 15,
+        "triangle_count": 1088
+      }
+    },
+    {
+      "effect": "LASER_IMPACT",
+      "label": "06 \u00b7 Laser impact flare",
+      "directory": "Assets/ProceduralArt/VFX/laser_impact_flare",
+      "scene": "res://Assets/ProceduralArt/VFX/laser_impact_flare/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/laser_impact_flare/review.tscn",
+      "sample_time": 0.19,
+      "stats": {
+        "mesh_count": 14,
+        "triangle_count": 748
+      }
+    },
+    {
+      "effect": "PROJECTILE_TRAIL",
+      "label": "07 \u00b7 Projectile streak",
+      "directory": "Assets/ProceduralArt/VFX/projectile_streak",
+      "scene": "res://Assets/ProceduralArt/VFX/projectile_streak/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/projectile_streak/review.tscn",
+      "sample_time": 0.3,
+      "stats": {
+        "mesh_count": 13,
+        "triangle_count": 656
+      }
+    },
+    {
+      "effect": "ENERGY_ORB",
+      "label": "08 \u00b7 Energy orb discharge",
+      "directory": "Assets/ProceduralArt/VFX/energy_orb_discharge",
+      "scene": "res://Assets/ProceduralArt/VFX/energy_orb_discharge/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/energy_orb_discharge/review.tscn",
+      "sample_time": 0.42,
+      "stats": {
+        "mesh_count": 18,
+        "triangle_count": 1128
+      }
+    },
+    {
+      "effect": "SMOKE_BURST",
+      "label": "09 \u00b7 Dissipating smoke",
+      "directory": "Assets/ProceduralArt/VFX/dissipating_smoke",
+      "scene": "res://Assets/ProceduralArt/VFX/dissipating_smoke/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/dissipating_smoke/review.tscn",
+      "sample_time": 1.05,
+      "stats": {
+        "mesh_count": 21,
+        "triangle_count": 1680
+      }
+    },
+    {
+      "effect": "DEBRIS_SCATTER",
+      "label": "10 \u00b7 Debris and hot sparks",
+      "directory": "Assets/ProceduralArt/VFX/debris_spark_scatter",
+      "scene": "res://Assets/ProceduralArt/VFX/debris_spark_scatter/effect.tscn",
+      "review": "res://Assets/ProceduralArt/VFX/debris_spark_scatter/review.tscn",
+      "sample_time": 0.42,
+      "stats": {
+        "mesh_count": 40,
+        "triangle_count": 512
+      }
+    }
+  ]
+}

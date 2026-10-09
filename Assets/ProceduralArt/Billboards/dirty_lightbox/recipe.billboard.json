@@ -1,0 +1,36 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "DIRTY_LIGHTBOX",
+  "seed": 99,
+  "palette": "REACTOR_LIME",
+  "colors": {
+    "neon": "#bdda79",
+    "accent": "#ecc585",
+    "back": "#252c20",
+    "ink": "#cbd7b5"
+  },
+  "parameters": {
+    "aspect": 2.5,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.45,
+    "grime": 0.38,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "long_edge": 512,
+  "size": [
+    512,
+    205
+  ],
+  "sha256": {
+    "albedo": "b5773f1678a9fca3860b8ca0e827ee60c6b50d19b70b95868bb4008ba8ead465",
+    "emission": "3db27ce7e3e11632d03b0e5a099fc508fa656a658fcd8eb91e3bba03a03f2276",
+    "orm": "ea1472110206fe4f1e268a0dabeb44cb62e4a926335d5ee8c54e78ff9936fd30"
+  }
+}

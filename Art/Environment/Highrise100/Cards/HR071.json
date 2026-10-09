@@ -1,0 +1,146 @@
+{
+  "id": "HR071",
+  "name": "Rail Gateway",
+  "category": "transit",
+  "subtype": 0,
+  "seed": 1487349,
+  "role": "midground",
+  "collection": "HR071_Rail_Gateway",
+  "bounds_m": [
+    126.53999999999999,
+    46.01,
+    184.85
+  ],
+  "bounds_min": [
+    -63.269999999999996,
+    -23.005,
+    0.0
+  ],
+  "bounds_max": [
+    63.269999999999996,
+    23.005,
+    184.85
+  ],
+  "parameters": {
+    "width": 85.5,
+    "depth": 46.01,
+    "height": 180.4,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Rail Gateway",
+    "extended_station_decks",
+    "open_ground_passage",
+    "rail_gateway",
+    "roof_paired_hvac",
+    "transit",
+    "unequal_towers"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 20,
+    "triangles": 368,
+    "vertices": 344,
+    "polygons": 152
+  },
+  "geometry_sha256": "838e3aa84b3aadd07ed102e9480b2fc2c7851992bbbf6046cb45bce8c90370fb",
+  "geometry_only_sha256": "dee9d17f35b97bf5131a8f7e489b6146570e284b20bba0e7bf95522329cf721f",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.146,
+    "mass_complexity": 0.211,
+    "industrial_density": 0.65,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.54,
+    "rooftop_complexity": 0.667,
+    "old_new": 0.38
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "gateway_tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "gateway_tower": [
+      "f2_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "station_concourse_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "station_concourse": [
+      "f4_0_uv"
+    ],
+    "rail_deck": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rail_end_support": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "upper_gateway_link": [
+      "wall_service_rack",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 36,
+    "floor_rooftop": 7,
+    "f2_3_uv": 8,
+    "floor_metal_deck": 69,
+    "wall_maintenance": 8,
+    "wall_vent_bank": 16,
+    "f4_0_uv": 4,
+    "wall_service_rack": 4
+  },
+  "recipes": [
+    "Recipes/f2_3_uv.uv.json",
+    "Recipes/f4_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_service_rack.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f2_3_uv": 925253,
+    "f4_0_uv": 925404,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_service_rack": 4174,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR071.png",
+    "UV_Material_QA/Views/HR071_back.png",
+    "UV_Material_QA/Views/HR071_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

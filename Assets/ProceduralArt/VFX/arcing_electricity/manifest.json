@@ -1,0 +1,715 @@
+{
+  "recipe": {
+    "schema": "bowprototype.mesh_vfx",
+    "schema_version": 1,
+    "generator_version": "0.2.0",
+    "effect": "ARC_CLUSTER",
+    "seed": 1105,
+    "parameters": {
+      "overall_scale": 1.0,
+      "duration": 2.0,
+      "core_size": 0.65,
+      "core_brightness": 1.6,
+      "core_lifetime": 0.23,
+      "petal_count": 9,
+      "petal_length": 1.8,
+      "petal_width": 0.65,
+      "petal_curl": 0.75,
+      "petal_spread": 0.8,
+      "petal_irregularity": 0.38,
+      "petal_lifetime": 0.85,
+      "ring_radius": 3.3,
+      "ring_thickness": 0.18,
+      "ring_speed": 1.4,
+      "ring_tilt": 0,
+      "ring_vertical_offset": 0.06,
+      "shard_count": 16,
+      "shard_length": 0.65,
+      "shard_spread": 2.6,
+      "shard_speed": 1.4,
+      "smoke_count": 8,
+      "smoke_puff_size": 0.65,
+      "smoke_expansion_speed": 0.7,
+      "smoke_darkness": 0.5,
+      "smoke_linger": 1.9,
+      "smoke_delay": 0.2,
+      "dust_spread": 2.2,
+      "low_poly_amount": 0.82,
+      "vertex_wobble": 0.025,
+      "posterization": 5,
+      "palette_quantization": 0.35,
+      "alpha_dithering": 0.7,
+      "chunkiness": 0.65,
+      "silhouette_exaggeration": 0.55,
+      "effect_length": 4.0,
+      "effect_radius": 2.3,
+      "effect_width": 0.045,
+      "effect_count": 7,
+      "effect_segments": 15,
+      "effect_jitter": 0.2,
+      "effect_arc": 1.7,
+      "effect_lifetime": 1.15,
+      "effect_stagger": 0.16,
+      "effect_motion": 1.0
+    },
+    "layers": {
+      "core": {
+        "enabled": true,
+        "color": "#e4ffee",
+        "color_b": "#65e7ad",
+        "opacity": 0.95,
+        "emission": 1.2,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "petals": {
+        "enabled": true,
+        "color": "#65e7c0",
+        "color_b": "#2b7495",
+        "opacity": 0.9,
+        "emission": 0.9,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.0,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "ring": {
+        "enabled": false,
+        "color": "#e7bd76",
+        "color_b": "#9e5b37",
+        "opacity": 0.65,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "shards": {
+        "enabled": true,
+        "color": "#c5ffd7",
+        "color_b": "#329b80",
+        "opacity": 0.9,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "smoke": {
+        "enabled": false,
+        "color": "#77736a",
+        "color_b": "#3b4142",
+        "opacity": 0.6,
+        "emission": 0.0,
+        "blend": "DITHER",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": true,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "dust": {
+        "enabled": false,
+        "color": "#716b5a",
+        "color_b": "#3a3935",
+        "opacity": 0.3,
+        "emission": 0.0,
+        "blend": "ALPHA",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "Core",
+      "layer": "core",
+      "mesh": "Core",
+      "origin": [
+        0,
+        0.5,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "scale1": [
+        0.4,
+        0.4,
+        0.4
+      ],
+      "start": 0.0,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0,
+      "tint": 0.8151179328937534
+    },
+    {
+      "name": "Arc_00",
+      "layer": "petals",
+      "mesh": "Arc_00",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.46169817523197704
+    },
+    {
+      "name": "Terminal_00",
+      "layer": "shards",
+      "mesh": "Terminal_00",
+      "origin": [
+        2.299359286767779,
+        0.12,
+        -0.05428508409104748
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.0,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.4702782706755382
+    },
+    {
+      "name": "Arc_01",
+      "layer": "petals",
+      "mesh": "Arc_01",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.16,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.051423099079355855
+    },
+    {
+      "name": "Terminal_01",
+      "layer": "shards",
+      "mesh": "Terminal_01",
+      "origin": [
+        1.5003620582859385,
+        0.12,
+        1.7432480299876956
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.16,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.5529250856634765
+    },
+    {
+      "name": "Arc_02",
+      "layer": "petals",
+      "mesh": "Arc_02",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.32,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.41233474193208297
+    },
+    {
+      "name": "Terminal_02",
+      "layer": "shards",
+      "mesh": "Terminal_02",
+      "origin": [
+        -0.2759556869648185,
+        0.12,
+        2.2833853066952527
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.32,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.1304376969349611
+    },
+    {
+      "name": "Arc_03",
+      "layer": "petals",
+      "mesh": "Arc_03",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.47937033691592995
+    },
+    {
+      "name": "Terminal_03",
+      "layer": "shards",
+      "mesh": "Terminal_03",
+      "origin": [
+        -2.1167074927841147,
+        0.12,
+        0.8997496262803258
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.0,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.3631175104185636
+    },
+    {
+      "name": "Arc_04",
+      "layer": "petals",
+      "mesh": "Arc_04",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.16,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.8804562687186637
+    },
+    {
+      "name": "Terminal_04",
+      "layer": "shards",
+      "mesh": "Terminal_04",
+      "origin": [
+        -2.1542338766154967,
+        0.12,
+        -0.8057768952024928
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.16,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.8299992380374278
+    },
+    {
+      "name": "Arc_05",
+      "layer": "petals",
+      "mesh": "Arc_05",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.32,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.6318499462573004
+    },
+    {
+      "name": "Terminal_05",
+      "layer": "shards",
+      "mesh": "Terminal_05",
+      "origin": [
+        -0.6314861078143497,
+        0.12,
+        -2.211611470316946
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.32,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.7697721144079734
+    },
+    {
+      "name": "Arc_06",
+      "layer": "petals",
+      "mesh": "Arc_06",
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 1.15,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.051869645007007664
+    },
+    {
+      "name": "Terminal_06",
+      "layer": "shards",
+      "mesh": "Terminal_06",
+      "origin": [
+        1.5375156619360761,
+        0.12,
+        -1.710568791163123
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.03,
+        0.03,
+        0.03
+      ],
+      "scale1": [
+        0.135,
+        0.135,
+        0.135
+      ],
+      "start": 0.0,
+      "life": 0.9199999999999999,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.7517537126788347
+    }
+  ],
+  "duration": 2.0,
+  "stats": {
+    "mesh_count": 15,
+    "triangle_count": 1088
+  },
+  "coordinate_system": "right-handed, Y-up, metres; trail local -Z, laser incoming +Z, lightning from +Y",
+  "animation": "analytic life curves, no billboards"
+}

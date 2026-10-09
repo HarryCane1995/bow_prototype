@@ -1,0 +1,132 @@
+{
+  "id": "HR001",
+  "name": "Setback Veil",
+  "category": "corporate",
+  "subtype": 0,
+  "seed": 933019,
+  "role": "background",
+  "collection": "HR001_Setback_Veil",
+  "bounds_m": [
+    39.620000000000005,
+    43.4732,
+    244.21599999999998
+  ],
+  "bounds_min": [
+    -19.810000000000002,
+    -21.7366,
+    0.0
+  ],
+  "bounds_max": [
+    19.810000000000002,
+    21.7366,
+    244.21599999999998
+  ],
+  "parameters": {
+    "width": 34.2,
+    "depth": 36.38,
+    "height": 246.4,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "four_setbacks",
+    "offset_crown",
+    "roof_paired_hvac"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 16,
+    "triangles": 256,
+    "vertices": 240,
+    "polygons": 112
+  },
+  "geometry_sha256": "3fb5f5741f24e1d6a6c081fbde45d20a43c311050e064d47e9d9f40297e20bdb",
+  "geometry_only_sha256": "ffd39e4b633a9a911ee18a626265a608623ffba9b6875bbc7dc9f825ceed6a0d",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.562,
+    "mass_complexity": 0.168,
+    "industrial_density": 0.688,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.538,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Shaft_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Shaft": [
+      "f0_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 20,
+    "floor_rooftop": 5,
+    "floor_metal_deck": 55,
+    "wall_corporate": 4,
+    "f0_0_uv": 16,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR001.png",
+    "UV_Material_QA/Views/HR001_back.png",
+    "UV_Material_QA/Views/HR001_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,96 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://Scripts/Levels/Level01CombatDraft.cs" id="script"]
+[ext_resource type="PackedScene" path="res://Scenes/Enemies/CyborgPressureEnemy.tscn" id="cyborg"]
+[ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="anchor"]
+[node name="CombatDraft" type="Node3D"]
+script = ExtResource("script")
+[node name="CombatSpawn" type="Marker3D" parent="."]
+position = Vector3(96,0.2,49)
+[node name="Cyborg_01_Read" parent="." instance=ExtResource("cyborg")]
+position = Vector3(96, 0.07, 17)
+FireInterval = 1.5
+DetectionRange = 30.0
+InitialDelay = 0.8
+[node name="Cyborg_02_LeftAngle" parent="." instance=ExtResource("cyborg")]
+position = Vector3(85, 0.07, -15)
+FireInterval = 1.45
+DetectionRange = 30.0
+InitialDelay = 0.35
+[node name="Cyborg_03_Window" parent="." instance=ExtResource("cyborg")]
+position = Vector3(116, 0.07, -25)
+FireInterval = 1.5
+DetectionRange = 30.0
+InitialDelay = 0.95
+[node name="Cyborg_04_HighNest" parent="." instance=ExtResource("cyborg")]
+position = Vector3(126, 4, -49)
+FireInterval = 1.45
+DetectionRange = 34.0
+InitialDelay = 0.6
+[node name="Cyborg_05_Peek" parent="." instance=ExtResource("cyborg")]
+position = Vector3(96, 0.07, -88)
+FireInterval = 1.4
+DetectionRange = 28.0
+InitialDelay = 0.45
+[node name="Cyborg_06_Flank" parent="." instance=ExtResource("cyborg")]
+position = Vector3(125, 0.07, -96)
+FireInterval = 1.5
+DetectionRange = 28.0
+InitialDelay = 1.15
+[node name="Cyborg_07_LeftCross" parent="." instance=ExtResource("cyborg")]
+position = Vector3(82, 0.07, -134)
+FireInterval = 1.5
+DetectionRange = 32.0
+InitialDelay = 0.45
+[node name="Cyborg_08_RightCross" parent="." instance=ExtResource("cyborg")]
+position = Vector3(124, 0.07, -137)
+FireInterval = 1.4
+DetectionRange = 32.0
+InitialDelay = 1.05
+[node name="CombatAnchor_0" parent="." instance=ExtResource("anchor")]
+position = Vector3(103, 13, -51)
+[node name="CombatAnchor_1" parent="." instance=ExtResource("anchor")]
+position = Vector3(119, 13, -113)
+[node name="CombatAnchor_2" parent="." instance=ExtResource("anchor")]
+position = Vector3(75, 18, -98)
+[node name="Note_0" type="Label3D" parent="."]
+position = Vector3(102, 3.4, 43)
+text = "COMBAT DRAFT / PRESSURE PROXIES\nF1 reset | Ctrl/C duck | Shift parkour"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false
+[node name="Note_1" type="Label3D" parent="."]
+position = Vector3(96, 3, 30)
+text = "01 / READ + DUCK"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false
+[node name="Note_2" type="Label3D" parent="."]
+position = Vector3(107, 5, -16)
+text = "02 / CROSS THE WINDOW"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false
+[node name="Note_3" type="Label3D" parent="."]
+position = Vector3(114, 7, -45)
+text = "03 / HIGH NEST - CLIMB OR COVER"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false
+[node name="Note_4" type="Label3D" parent="."]
+position = Vector3(95, 5.5, -79)
+text = "04 / PEEK LOW - BYPASS HIGH"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false
+[node name="Note_5" type="Label3D" parent="."]
+position = Vector3(106, 6, -125)
+text = "05 / CROSSFIRE - KEEP MOVING"
+font_size = 50
+pixel_size = 0.015
+modulate = Color(0.5,0.85,0.65,1)
+no_depth_test = false

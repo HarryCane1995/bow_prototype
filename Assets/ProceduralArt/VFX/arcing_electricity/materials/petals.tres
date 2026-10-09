@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/petals.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.396078431372549, 0.9058823529411765, 0.7529411764705882, 1)
+shader_parameter/color_b = Color(0.16862745098039217, 0.4549019607843137, 0.5843137254901961, 1)
+shader_parameter/opacity = 0.9
+shader_parameter/emission_strength = 0.9
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.0
+shader_parameter/flat_unshaded = true
+shader_parameter/dither_mode = false

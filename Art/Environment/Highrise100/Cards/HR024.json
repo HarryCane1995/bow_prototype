@@ -1,0 +1,119 @@
+{
+  "id": "HR024",
+  "name": "External Ducts",
+  "category": "hvac",
+  "subtype": 3,
+  "seed": 1115156,
+  "role": "midground",
+  "collection": "HR024_External_Ducts",
+  "bounds_m": [
+    58.144000000000005,
+    45.5708,
+    212.12757873535156
+  ],
+  "bounds_min": [
+    -29.072000000000003,
+    -22.7854,
+    0.0
+  ],
+  "bounds_max": [
+    29.072000000000003,
+    22.7854,
+    212.12757873535156
+  ],
+  "parameters": {
+    "width": 51.04,
+    "depth": 38.22,
+    "height": 213.75,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "elbow_crown",
+    "four_external_ducts"
+  ],
+  "metrics": {
+    "meshes": 8,
+    "primitives": 12,
+    "triangles": 208,
+    "vertices": 200,
+    "polygons": 88
+  },
+  "geometry_sha256": "9fb5b4498021b8d90789d2bbdfda924d799abc3910037678fd69d1da759b7699",
+  "geometry_only_sha256": "975142886143798487eeb4a46ffcc1eefe31498f74ad5471449813331c6ddbc6",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.365,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.833,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.199,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.25
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_vent_bank",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Shaft_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Shaft": [
+      "f2_0_uv"
+    ],
+    "Duct_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Duct": [
+      "floor_metal_deck"
+    ],
+    "DuctElbow": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 20,
+    "floor_rooftop": 2,
+    "floor_metal_deck": 58,
+    "wall_vent_bank": 4,
+    "f2_0_uv": 4
+  },
+  "recipes": [
+    "Recipes/f2_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f2_0_uv": 925202,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR024.png",
+    "UV_Material_QA/Views/HR024_back.png",
+    "UV_Material_QA/Views/HR024_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

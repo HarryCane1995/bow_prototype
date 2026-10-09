@@ -1,0 +1,303 @@
+{
+  "version": "0.1.0",
+  "preset": "OFFICE_GRID",
+  "seed": 42,
+  "resolution": [
+    512,
+    1024
+  ],
+  "config": {
+    "name": "OFFICE_GRID",
+    "grammar": "office",
+    "palette": "cold",
+    "window_density": 0.96,
+    "window_aspect": 0.92,
+    "floor_height": 22,
+    "structural_width": 5,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "emission_density": 0.5,
+    "emission_strength": 1.35,
+    "grime_amount": 0.16,
+    "panel_density": 0.13,
+    "signage_density": 0.1,
+    "macro_contrast": 0.23,
+    "retro_strength": 0.72,
+    "style": {
+      "posterization": 40,
+      "dithering": 0.22,
+      "color_quantization": 112,
+      "micro_contrast": 0.12,
+      "compression_artifacts": 0.08,
+      "pixel_noise": 0.65,
+      "edge_exaggeration": 0.2,
+      "baked_ao_strength": 0.32
+    }
+  },
+  "floor_groups": [
+    {
+      "index": 0,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.489,
+      "zones": [
+        0.38,
+        0.372,
+        0.378,
+        0.349
+      ]
+    },
+    {
+      "index": 1,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.567,
+      "zones": [
+        0.564,
+        0.643,
+        0.505,
+        0.67
+      ]
+    },
+    {
+      "index": 2,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.302,
+      "zones": [
+        0.34,
+        0.329,
+        0.224,
+        0.224
+      ]
+    },
+    {
+      "index": 3,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.75,
+      "zones": [
+        0.657,
+        0.704,
+        0.614,
+        0.638
+      ]
+    },
+    {
+      "index": 4,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.526,
+      "zones": [
+        0.621,
+        0.67,
+        0.37,
+        0.414
+      ]
+    },
+    {
+      "index": 5,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.533,
+      "zones": [
+        0.543,
+        0.46,
+        0.511,
+        0.414
+      ]
+    },
+    {
+      "index": 6,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.654,
+      "zones": [
+        0.725,
+        0.789,
+        0.605,
+        0.765
+      ]
+    },
+    {
+      "index": 7,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.252,
+      "zones": [
+        0.168,
+        0.319,
+        0.189,
+        0.25
+      ]
+    },
+    {
+      "index": 8,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.49,
+      "zones": [
+        0.418,
+        0.582,
+        0.441,
+        0.542
+      ]
+    },
+    {
+      "index": 9,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.258,
+      "zones": [
+        0.269,
+        0.394,
+        0.177,
+        0.123
+      ]
+    },
+    {
+      "index": 10,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.559,
+      "zones": [
+        0.567,
+        0.481,
+        0.598,
+        0.628
+      ]
+    },
+    {
+      "index": 11,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.511,
+      "zones": [
+        0.604,
+        0.661,
+        0.669,
+        0.522
+      ]
+    },
+    {
+      "index": 12,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.468,
+      "zones": [
+        0.524,
+        0.411,
+        0.452,
+        0.444
+      ]
+    },
+    {
+      "index": 13,
+      "dark": true,
+      "service": false,
+      "occupancy": 0.692,
+      "zones": [
+        0.738,
+        0.727,
+        0.771,
+        0.569
+      ]
+    },
+    {
+      "index": 14,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.459,
+      "zones": [
+        0.576,
+        0.605,
+        0.393,
+        0.61
+      ]
+    },
+    {
+      "index": 15,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.557,
+      "zones": [
+        0.624,
+        0.407,
+        0.584,
+        0.479
+      ]
+    },
+    {
+      "index": 16,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.705,
+      "zones": [
+        0.571,
+        0.6,
+        0.566,
+        0.604
+      ]
+    },
+    {
+      "index": 17,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.346,
+      "zones": [
+        0.426,
+        0.493,
+        0.2,
+        0.287
+      ]
+    },
+    {
+      "index": 18,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.335,
+      "zones": [
+        0.33,
+        0.384,
+        0.27,
+        0.397
+      ]
+    },
+    {
+      "index": 19,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.726,
+      "zones": [
+        0.82,
+        0.595,
+        0.566,
+        0.77
+      ]
+    }
+  ],
+  "window_states": {
+    "SERVICE": 15,
+    "ON": 292,
+    "OFF": 207,
+    "BLOCKED": 39,
+    "DIM": 109,
+    "BRIGHT": 42,
+    "BROKEN/DARK": 29
+  },
+  "signage_count": 4,
+  "tiling": "unique sheet / clamp",
+  "normal": "OpenGL +X +Y +Z",
+  "orm": {
+    "R": "ambient occlusion",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "sha256": {
+    "albedo": "043cc8cefffed7b31ea44433bd1edb87d31452899f5514d2a2be094788a28612",
+    "emission": "6b480d72dc38dff225fed8c68ee8d77a2a6ea3018c49f53c4fde915596c35dd1",
+    "height": "3c27da3c0f6a6197dd0393374deb1c9a48ef8ea32d5df29ef3f203499f0ba745",
+    "orm": "9cbfc9bbf8c0c466c1eb669f0c2153fa0db2c8fecf2e46dbe79cc7398a5f5220",
+    "normal": "e97755aabafe15219f5847c8ad83708a47dbb67711332f38b9616d9544c91e74"
+  }
+}

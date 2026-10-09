@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="PackedScene" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/explosion.tscn" id="1"]
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/review.gd" id="2"]
+[sub_resource type="Environment" id="Environment"]
+background_mode = 1
+background_color = Color(0.024, 0.033, 0.041, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.5, 0.57, 0.6, 1)
+ambient_light_energy = 0.65
+tonemap_mode = 0
+[sub_resource type="StandardMaterial3D" id="FloorMaterial"]
+albedo_color = Color(0.065, 0.09, 0.10, 1)
+roughness = 0.9
+[sub_resource type="PlaneMesh" id="FloorMesh"]
+material = SubResource("FloorMaterial")
+size = Vector2(16, 16)
+[sub_resource type="StandardMaterial3D" id="CubeMaterial"]
+albedo_color = Color(0.23, 0.29, 0.3, 1)
+roughness = 0.8
+[sub_resource type="BoxMesh" id="CubeMesh"]
+material = SubResource("CubeMaterial")
+size = Vector3(1, 1, 1)
+
+[node name="MeshExplosionReview" type="Node3D"]
+script = ExtResource("2")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment")
+[node name="Floor" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.03, 0)
+mesh = SubResource("FloorMesh")
+[node name="ReferenceCube" type="MeshInstance3D" parent="."]
+position = Vector3(-2.7, 0.5, 0)
+mesh = SubResource("CubeMesh")
+[node name="Light" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-55, -30, 0)
+light_energy = 1.4
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(4.5, 3.1, 7.5)
+current = true
+fov = 43.0
+[node name="Explosion" parent="." instance=ExtResource("1")]
+loop = true

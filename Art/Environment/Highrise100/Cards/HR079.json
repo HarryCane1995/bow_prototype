@@ -1,0 +1,146 @@
+{
+  "id": "HR079",
+  "name": "Rack Terraces",
+  "category": "datacenter",
+  "subtype": 3,
+  "seed": 1550701,
+  "role": "background",
+  "collection": "HR079_Rack_Terraces",
+  "bounds_m": [
+    62.12,
+    43.66,
+    190.5
+  ],
+  "bounds_min": [
+    -31.06,
+    -21.83,
+    0.0
+  ],
+  "bounds_max": [
+    31.06,
+    21.83,
+    190.5
+  ],
+  "parameters": {
+    "width": 60.32,
+    "depth": 41.86,
+    "height": 180.5,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Rack Terraces",
+    "datacenter",
+    "diagonal_setbacks",
+    "four_rack_terraces",
+    "roof_exhaust_trio",
+    "side_coolant_spine",
+    "terrace_equipment"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 29,
+    "triangles": 540,
+    "vertices": 552,
+    "polygons": 222
+  },
+  "geometry_sha256": "0ab5c4e5f12175891cefb570c0448d4380926bf830dc1f9dc95b8b6cb740da1c",
+  "geometry_only_sha256": "a7f67773edafd72a5997615fc28f5c3fc907e818a6d9bd4b6ef8e94b67ab092a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.307,
+    "mass_complexity": 0.305,
+    "industrial_density": 0.862,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.09,
+    "rooftop_complexity": 1,
+    "old_new": 0.8
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "rack_terrace_0": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "rack_window_strip_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rack_window_strip": [
+      "f2_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rack_terrace_1": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "rack_terrace_2": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "rack_terrace_3": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "coolant_spine": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 29,
+    "floor_metal_deck": 45,
+    "accent_datacenter": 16,
+    "floor_rooftop": 4,
+    "f2_3_uv": 16,
+    "wall_maintenance": 16,
+    "wrap_heavy_pipe": 96
+  },
+  "recipes": [
+    "Recipes/accent_datacenter.facade.json",
+    "Recipes/f2_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "accent_datacenter": 5876,
+    "f2_3_uv": 925253,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR079.png",
+    "UV_Material_QA/Views/HR079_back.png",
+    "UV_Material_QA/Views/HR079_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

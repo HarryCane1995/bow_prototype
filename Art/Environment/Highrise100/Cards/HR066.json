@@ -1,0 +1,145 @@
+{
+  "id": "HR066",
+  "name": "Raised Citadel",
+  "category": "suspended",
+  "subtype": 0,
+  "seed": 1447754,
+  "role": "midground",
+  "collection": "HR066_Raised_Citadel",
+  "bounds_m": [
+    52.470000000000006,
+    41.9654,
+    263.2
+  ],
+  "bounds_min": [
+    -26.235000000000003,
+    -20.9827,
+    0.0
+  ],
+  "bounds_max": [
+    26.235000000000003,
+    20.9827,
+    263.2
+  ],
+  "parameters": {
+    "width": 49.5,
+    "depth": 39.59,
+    "height": 255.2,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Raised Citadel",
+    "four_open_piers",
+    "off_center_upper_city",
+    "raised_occupied_mass",
+    "roof_water_tank",
+    "street_void",
+    "suspended"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 12,
+    "triangles": 168,
+    "vertices": 144,
+    "polygons": 78
+  },
+  "geometry_sha256": "63492d1f1f22d28783acd2cb762417969aeb18ff41a57cfc57ca1bfac10a0472",
+  "geometry_only_sha256": "a501b7f04d39bccb8fac7a3999798195347aeba2216d21b66b39a33635c4f0d5",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.502,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.5,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.44,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "citadel_pier": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "raised_lower_city_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "raised_lower_city": [
+      "f5_3_uv"
+    ],
+    "upper_offset_city_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "upper_offset_city": [
+      "f2_0_uv"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "lift_core": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 28,
+    "floor_rooftop": 6,
+    "f5_3_uv": 4,
+    "f2_0_uv": 4,
+    "floor_metal_deck": 18,
+    "wall_tech_spine": 4,
+    "wall_maintenance": 4,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f2_0_uv.uv.json",
+    "Recipes/f5_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f2_0_uv": 925202,
+    "f5_3_uv": 925556,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR066.png",
+    "UV_Material_QA/Views/HR066_back.png",
+    "UV_Material_QA/Views/HR066_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

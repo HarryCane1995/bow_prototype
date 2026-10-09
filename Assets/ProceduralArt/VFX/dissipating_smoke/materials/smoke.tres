@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/smoke.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.49019607843137253, 0.5333333333333333, 0.5137254901960784, 1)
+shader_parameter/color_b = Color(0.27450980392156865, 0.34509803921568627, 0.32941176470588235, 1)
+shader_parameter/opacity = 0.6
+shader_parameter/emission_strength = 0.0
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.45
+shader_parameter/flat_unshaded = false
+shader_parameter/dither_mode = false

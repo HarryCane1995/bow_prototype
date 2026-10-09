@@ -1,0 +1,195 @@
+{
+  "id": "HR056",
+  "name": "Service Cleft",
+  "category": "maintenance",
+  "subtype": 0,
+  "seed": 1368564,
+  "role": "background",
+  "collection": "HR056_Service_Cleft",
+  "bounds_m": [
+    56.324,
+    39.7671,
+    180.45
+  ],
+  "bounds_min": [
+    -28.162,
+    -21.0271,
+    0.0
+  ],
+  "bounds_max": [
+    28.162,
+    18.740000000000002,
+    180.45
+  ],
+  "parameters": {
+    "width": 53.1,
+    "depth": 36.38,
+    "height": 176.0,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Service Cleft",
+    "concrete_majority_old_shell",
+    "exposed_risers",
+    "maintenance",
+    "maintenance_landings",
+    "new_replacement_face_module",
+    "new_steel_secondary_layer",
+    "old_new_retrofit",
+    "old_regular_window_grid",
+    "roof_paired_hvac",
+    "separate_vertical_window_bays",
+    "service_cleft",
+    "unequal_wings"
+  ],
+  "metrics": {
+    "meshes": 24,
+    "primitives": 68,
+    "triangles": 976,
+    "vertices": 840,
+    "polygons": 448
+  },
+  "geometry_sha256": "00c1c9d762db769f2398bf51e1b0bfd11f54878069d54115d7cfc52d4e0021e4",
+  "geometry_only_sha256": "3a48c6f0cbad5dee72b4a62babc6224ea12285855a8d0cd89622489e0098aa69",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.32,
+    "mass_complexity": 0.716,
+    "industrial_density": 0.574,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.5,
+    "cantilever_overhang": 0.121,
+    "rooftop_complexity": 0.667,
+    "old_new": 0.16
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "old_concrete_wing": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "old_vertical_window_bay_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "old_vertical_window_bay": [
+      "f1_2_uv"
+    ],
+    "old_side_window_bay_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "old_side_window_bay": [
+      "f1_2_uv"
+    ],
+    "rear_stair_window_bay_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rear_stair_window_bay": [
+      "f4_3_uv"
+    ],
+    "old_concrete_pier": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "service_spine": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "service_truss": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "riser_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "riser": [
+      "floor_metal_deck"
+    ],
+    "new_external_lift": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "new_lift_rail": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "new_lift_machine": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "replacement_face_module_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "replacement_face_module": [
+      "f4_3_uv"
+    ],
+    "replacement_module_steel_sill": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 154,
+    "floor_rooftop": 29,
+    "f1_2_uv": 32,
+    "f4_3_uv": 12,
+    "floor_metal_deck": 189,
+    "wall_maintenance": 16,
+    "wall_vent_bank": 16
+  },
+  "recipes": [
+    "Recipes/f1_2_uv.uv.json",
+    "Recipes/f4_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f1_2_uv": 925135,
+    "f4_3_uv": 925455,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR056.png",
+    "UV_Material_QA/Views/HR056_back.png",
+    "UV_Material_QA/Views/HR056_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

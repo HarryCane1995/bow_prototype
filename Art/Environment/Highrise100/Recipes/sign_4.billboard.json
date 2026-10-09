@@ -1,0 +1,40 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "HORIZONTAL_BILLBOARD",
+  "seed": 925824,
+  "palette": "COLD_SERVICE",
+  "colors": {
+    "neon": "#69e5da",
+    "accent": "#ffc36b",
+    "back": "#17272c",
+    "ink": "#b9ceca"
+  },
+  "parameters": {
+    "aspect": 3.1,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "outputs": {
+    "albedo": "Textures/sign_4/albedo.png",
+    "emission": "Textures/sign_4/emission.png",
+    "orm": "Textures/sign_4/orm.png",
+    "normal": "Textures/sign_4/normal.png",
+    "height": "Textures/sign_4/height.png"
+  },
+  "sha256": {
+    "albedo": "5ed2f00f3ef64c0b32cea09bceb505c0b92eccbb8710a00bd2f31d103625fad1",
+    "emission": "c7d19e2eccf145a03ce13d393b1ddb3dcfe765d6df372080d13cb1cabe6507d3",
+    "orm": "f2af59c525741b40ede8f1bca6d87e17cfbece5e2ef9807111d56d67ed19175e",
+    "normal": "88156bb6a2fe06d29ac598ed1c2342e78d7285a272a177f6b1e6803ea124d25e",
+    "height": "18acd88b0c0f80f23f5028550ccfcc4a002b1123b6e9bfd2797cfa8ddc50b677"
+  }
+}

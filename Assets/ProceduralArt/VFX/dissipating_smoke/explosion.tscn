@@ -1,0 +1,195 @@
+[gd_scene load_steps=29 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_00.obj" id="Mesh_SmokeLobe_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_01.obj" id="Mesh_SmokeLobe_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_02.obj" id="Mesh_SmokeLobe_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_03.obj" id="Mesh_SmokeLobe_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_04.obj" id="Mesh_SmokeLobe_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_05.obj" id="Mesh_SmokeLobe_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_06.obj" id="Mesh_SmokeLobe_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_07.obj" id="Mesh_SmokeLobe_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_08.obj" id="Mesh_SmokeLobe_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_09.obj" id="Mesh_SmokeLobe_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_10.obj" id="Mesh_SmokeLobe_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_11.obj" id="Mesh_SmokeLobe_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_12.obj" id="Mesh_SmokeLobe_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_13.obj" id="Mesh_SmokeLobe_13"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/SmokeLobe_14.obj" id="Mesh_SmokeLobe_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_00.obj" id="Mesh_DustSkirt_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_01.obj" id="Mesh_DustSkirt_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_02.obj" id="Mesh_DustSkirt_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_03.obj" id="Mesh_DustSkirt_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_04.obj" id="Mesh_DustSkirt_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/dissipating_smoke/meshes/DustSkirt_05.obj" id="Mesh_DustSkirt_05"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/dissipating_smoke/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="SmokeLobe_00" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_00")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_01" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_01")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_02" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_02")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_03" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_03")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_04" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_04")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_05" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_05")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_06" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_06")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_07" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_07")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_08" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_08")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_09" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_09")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_10" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_10")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_11" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_11")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_12" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_12")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_13" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_13")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SmokeLobe_14" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_SmokeLobe_14")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="dust" type="Node3D" parent="Layers"]
+
+[node name="DustSkirt_00" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_00")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="DustSkirt_01" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_01")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="DustSkirt_02" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_02")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="DustSkirt_03" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_03")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="DustSkirt_04" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_04")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="DustSkirt_05" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_DustSkirt_05")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5

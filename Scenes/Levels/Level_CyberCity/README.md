@@ -20,9 +20,6 @@ The Blender file contains selectable material datablocks for all current simulat
 - `SIM_GRID_03`
 - `SIM_GRID_04`
 - `SIM_GRID_05`
-- `SIM_GRID_CEILING`
-- `SIM_CEILING_DARK`
-- `SIM_EDGE_CEILING`
 
 Assign one of those material names, save the `.blend`, and let Godot reimport it. `SimulationMaterialPostImport.gd` replaces matching Blender materials with the shared external `.tres` resources.
 

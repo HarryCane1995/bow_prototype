@@ -4,7 +4,8 @@
 [ext_resource type="Shader" path="res://Assets/Shaders/PostProcessing/stylized_contact_darkening.gdshader" id="2_shader"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_contact_darkening"]
-render_priority = 127
+; screen_texture contains opaque geometry only. Composite before transparent VFX.
+render_priority = -128
 shader = ExtResource("2_shader")
 shader_parameter/effect_enabled = true
 shader_parameter/display_mode = 3

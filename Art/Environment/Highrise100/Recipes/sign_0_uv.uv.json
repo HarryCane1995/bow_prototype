@@ -1,0 +1,29 @@
+{
+  "key": "sign_0_uv",
+  "recipe": "Recipes/sign_0_uv.uv.json",
+  "mode": "CLAMP_SIGN_LETTERBOX",
+  "seed": 925700,
+  "preset": "PANEL_AD",
+  "parameters": {
+    "aspect": 0.55,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "sha256": {
+    "albedo": "533b9de0f59d1115f5e121acb5df7360b06795ecb053cee404dc7c3a20d9adf0",
+    "normal": "ea8e5287c0027e9f34b90daeaa4904f2227bee37fc76c9b7434d7ccc40ac980d",
+    "orm": "a90284b493079c59f64a836c394bf6185e65a9d5365ce61794b17ad97429ddd5",
+    "height": "cfc71f1f865b30b61675c6a3967b503b57b60f8610e129d2bb3065999f7ce3b2",
+    "emission": "a5841e5fec95707bcf7c7e690f3d425ea6c64b74160d7ad687c8046d6fa1bdf1"
+  },
+  "source_key": "sign_0",
+  "uv_qa_version": 1,
+  "image_size": [
+    290,
+    520
+  ]
+}

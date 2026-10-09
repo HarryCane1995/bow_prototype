@@ -1,0 +1,40 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "DIRTY_LIGHTBOX",
+  "seed": 925762,
+  "palette": "REACTOR_LIME",
+  "colors": {
+    "neon": "#bdda79",
+    "accent": "#ecc585",
+    "back": "#252c20",
+    "ink": "#cbd7b5"
+  },
+  "parameters": {
+    "aspect": 1.4,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.45,
+    "grime": 0.38,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "outputs": {
+    "albedo": "Textures/sign_2/albedo.png",
+    "emission": "Textures/sign_2/emission.png",
+    "orm": "Textures/sign_2/orm.png",
+    "normal": "Textures/sign_2/normal.png",
+    "height": "Textures/sign_2/height.png"
+  },
+  "sha256": {
+    "albedo": "825ec29e9097ddc8380711d51f00667abf275acea6ef033cb5f47e1527078d2b",
+    "emission": "6dcb91c58c621d2ccbba69419b05505c45a2be8aa49d70ccfdbaecede1fba777",
+    "orm": "1fc2c0b70f5e083c9e808bdfe46eb9e377cfb1911905b7c47d721c52667a0c02",
+    "normal": "55d0146f8d60d267151b274070d5f2399b017acba6d558aa84b16507f5042a43",
+    "height": "d2f66954a414788c0e90b898c6464a799c7c76f75f75425bd486ab4b7546bba9"
+  }
+}

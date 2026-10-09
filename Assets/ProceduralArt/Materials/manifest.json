@@ -1,0 +1,1256 @@
+{
+  "schema": "bowprototype.material-library",
+  "version": 1,
+  "materials": [
+    {
+      "id": "wall_tech_spine",
+      "category": "wall",
+      "description": "Offset plates with a central service spine",
+      "palette": "cold",
+      "references": [
+        "W02",
+        "T05"
+      ],
+      "preset": "WALL_TECH_SPINE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_tech_spine/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_tech_spine.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_tech_spine/preview.webp",
+      "sha256": {
+        "albedo": "8042ac165468133048bc9156d666cea61b7853fc049a0178dc83d97cdf788108",
+        "normal": "06c4b23bba77a3ab07a844b3fc3ac9669dcdfc517c9dcea2422fca2ec71d1cbb",
+        "orm": "1f61944843a678f1fd49bbede77705d396917cf5a5edd5b97065fa4be6fec48b",
+        "height": "ea0fd5cb663963b313cbcd2e1ab9e172665481a1ca63a412fd5519c3323ac1db",
+        "emission": "e3636c432dde84098a866001b274639f4b5615afebbef3b54aa22d08df1a448c"
+      }
+    },
+    {
+      "id": "wall_maintenance",
+      "category": "wall",
+      "description": "Wide calm panels with low access hatches",
+      "palette": "industrial",
+      "references": [
+        "W01",
+        "T06"
+      ],
+      "preset": "WALL_MAINTENANCE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_maintenance/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_maintenance.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_maintenance/preview.webp",
+      "sha256": {
+        "albedo": "c6cb7aef871a19b289701cba99ba0157656b8f7b5c17f73e66a14ba9f28a4ea9",
+        "normal": "e2e95ef19ef7d4214fef2bb13f88509d1cfab680d5cc11e1179f5980644b1ef2",
+        "orm": "c5c91babf29ae253c649ac19eae7f472a9e06979db2add514093522d212a1d07",
+        "height": "05d65706a5966a8c85b306c45df768e83112ca27f0775bc6e079801b2978a5bf",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_service_rack",
+      "category": "wall",
+      "description": "Two dense instrument racks around a quiet bay",
+      "palette": "cold",
+      "references": [
+        "D01",
+        "R05"
+      ],
+      "preset": "WALL_SERVICE_RACK",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_service_rack/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_service_rack.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_service_rack/preview.webp",
+      "sha256": {
+        "albedo": "7da5c16c112bbec1e5eecd994edd0e0d4d354dcbf7a4928a41fd692961027830",
+        "normal": "3b118e0d19decd01c1016a8a1cb51bd587717c5c4b48160da1398ecf6f05b411",
+        "orm": "8696973fc83b5cc0840e69fdfe3a8bc066bbf70918ac88dc0dcb7f7c6362a01d",
+        "height": "8188237f02ecca9d36d469c6dbc303a64eeeb3d1e1255e20f395291c5e16cdd2",
+        "emission": "8d76ce24613025bcd0c092258bdfb8b9bcc6b6772f46b146d1f1858e49d9dbd7"
+      }
+    },
+    {
+      "id": "wall_megablock",
+      "category": "wall",
+      "description": "Staggered cast concrete with embedded tie sockets",
+      "palette": "concrete",
+      "references": [
+        "M09",
+        "T02"
+      ],
+      "preset": "WALL_MEGABLOCK",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_megablock/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_megablock.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_megablock/preview.webp",
+      "sha256": {
+        "albedo": "c09deb5bacb104726ef33eab2c76af7caf3626d93044fcfeee7f8c02a001e390",
+        "normal": "3fc206bbf22f0f61e9ce555c689e9a11a3a499e6114b9926e09c9afda7056bf1",
+        "orm": "25b856791e48d5f9c67d3b78cc59f9476f09d4e5f89cc5a16ff581a805760626",
+        "height": "a95e4046f8f6e35a35d1ba1dde094c6a413feabb697cfd5445fe64cdbcdbc504",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_corporate",
+      "category": "wall",
+      "description": "Broad coated slabs and sparse edge lighting",
+      "palette": "cold",
+      "references": [
+        "W04",
+        "W05"
+      ],
+      "preset": "WALL_CORPORATE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_corporate/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_corporate.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_corporate/preview.webp",
+      "sha256": {
+        "albedo": "ea2df7398c12fdfac31ed139355bff33435566566015272763b2bc06b34a6e63",
+        "normal": "489a8297803ee4bf330a70f590c1243511a23515fb2402ac2697a6576e58fc39",
+        "orm": "314b77d1406eadc203b5840bcafd6e6108e405ad8ac5e012f98c1a2dc089770b",
+        "height": "7850db3648c1b293f3edcf1b4a36d6d537f7470a52de6102f6b31d5e788c5d12",
+        "emission": "5d6c408b26bf0aa3fd6ad51543b30b380f03e5af63fbcc7b3cadc5dbb65c63ab"
+      }
+    },
+    {
+      "id": "wall_reinforced",
+      "category": "wall",
+      "description": "Heavy crossing braces over steel plates",
+      "palette": "industrial",
+      "references": [
+        "M07",
+        "D12"
+      ],
+      "preset": "WALL_REINFORCED",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_reinforced/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_reinforced.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_reinforced/preview.webp",
+      "sha256": {
+        "albedo": "52261d4503823b8d445a38d9f972c3d412d76f1533009dc490eff358b556faea",
+        "normal": "984407f0a758eb1eeccd25cd720e2236974b119ee11fe7899bc007227f205d92",
+        "orm": "35b28e233e64b7fc82a6a7b9d0f05b8c1d833e48e477188566dbd3e85f04c51d",
+        "height": "a3cdc29a18f28e007e2e7d3392b972719280342f56701117db1031adad4442f8",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_dark_concrete",
+      "category": "wall",
+      "description": "Dark concrete bays and narrow cable conduit",
+      "palette": "concrete",
+      "references": [
+        "M09",
+        "W06"
+      ],
+      "preset": "WALL_DARK_CONCRETE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_dark_concrete/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_dark_concrete.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_dark_concrete/preview.webp",
+      "sha256": {
+        "albedo": "41d6e03d99b26dd0e2db70f95818b132a4cf7297aa72bba28d7d924e3156faab",
+        "normal": "9adc880dec9fcf696e9c971aa58d43824d741b57459294031c594c1c2f6b6e4f",
+        "orm": "00e883e74352a97f4f3065907a46df1a18b8fe5a95d8d1fdc538b66fd235e7bc",
+        "height": "97bfb39a25be796e5b8eb693c89008f02b37fdfebc7e3872dc3749e8a1957426",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_painted_utility",
+      "category": "wall",
+      "description": "Painted service bands and paired pipe tracks",
+      "palette": "industrial",
+      "references": [
+        "W02",
+        "R02"
+      ],
+      "preset": "WALL_PAINTED_UTILITY",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_painted_utility/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_painted_utility.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_painted_utility/preview.webp",
+      "sha256": {
+        "albedo": "1b7d7386f790410fca600b15e872c4bee823a966cb6d7a367d1d084cbaaed820",
+        "normal": "a7d203bab1e710b1f0ed348be5f53bfb1371daf61163451f3b3bd7c7ef9c8c69",
+        "orm": "61cbd0cbc95f9562e332e11807644540d915660f589425d42775579b70bd6793",
+        "height": "a90a011c678e6b425688f102fbd1acd30dbd17652d38dc5fa21230d30eb49604",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_reactor_housing",
+      "category": "wall",
+      "description": "Radial coolant ports inside segmented shielding",
+      "palette": "cold",
+      "references": [
+        "R08",
+        "D10"
+      ],
+      "preset": "WALL_REACTOR_HOUSING",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_reactor_housing/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_reactor_housing.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_reactor_housing/preview.webp",
+      "sha256": {
+        "albedo": "3bbd9834863fbbf86d89d657aa88cc37f283ed946a2da443e3b330cb1ef17f70",
+        "normal": "f52437b21274e81265bc7fef89d8ec06be787c933c77ffb4ca9606b235f8e533",
+        "orm": "0d72c6b21d5724b2ce85d35c127bd4960b813392007a432f41f6f47b45b295e7",
+        "height": "a7a79a2e6da43ab4efd87060a71d3b2d07eab9b1a307b423ec38150831098abb",
+        "emission": "f35b2ade7d768b84c3900f7c2dba40c295a467882d223e0d6509ea450a735b42"
+      }
+    },
+    {
+      "id": "wall_vent_bank",
+      "category": "wall",
+      "description": "Stacked broad louver banks with maintenance margins",
+      "palette": "cold",
+      "references": [
+        "T05",
+        "D09"
+      ],
+      "preset": "WALL_VENT_BANK",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_vent_bank/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_vent_bank.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_vent_bank/preview.webp",
+      "sha256": {
+        "albedo": "052a52846e15078ae59ab769ee1e33ea72f6bfaff78291433ed17218e15a6b97",
+        "normal": "86094029ad53d59e3ab17ba37ae5405dc5778898f448f2b578230523fd55e8b8",
+        "orm": "169d142b50d28e6c1e7838cc78dfd4031204491d8c93248ff318f02f8fe1ba49",
+        "height": "ea588e2203041988e47cf57f450625b9cf217f3aed2a9652411b3a13f304f06a",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_cable_riser",
+      "category": "wall",
+      "description": "Vertical routed cable ribbons with junction boxes",
+      "palette": "industrial",
+      "references": [
+        "R01",
+        "D05"
+      ],
+      "preset": "WALL_CABLE_RISER",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_cable_riser/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_cable_riser.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_cable_riser/preview.webp",
+      "sha256": {
+        "albedo": "89f4b52c5dc952722effeccb10def0800a94dbe3746ff06471f66b0bf0160378",
+        "normal": "bc62d95eb48a228edd3bbba9f66e181f2f97ff96c77152a7c86f4328f4418948",
+        "orm": "7143aecfd693163543ad5a2e8dfbddef546bba5398fd7c4c6887528a45efd6b8",
+        "height": "954007b245d0b1ff9c9445278fb5d126ea84ea3ce2407c05ccc88ded407cbc8b",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "wall_transit_acoustic",
+      "category": "wall",
+      "description": "Perforated acoustic bays between blank pilasters",
+      "palette": "concrete",
+      "references": [
+        "W11",
+        "T09"
+      ],
+      "preset": "WALL_TRANSIT_ACOUSTIC",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wall_transit_acoustic/material.tres",
+      "recipe": "Tools/Art/Library/materials/wall_transit_acoustic.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wall_transit_acoustic/preview.webp",
+      "sha256": {
+        "albedo": "c79c4d20a3fef16b45d5c2c3f3ed1c09c4e78739319fec28fdc3f01e25372cc1",
+        "normal": "773b488e70d2e9412bda853ade4ccf95c805299bbd4620be9c1b3fcc859b3236",
+        "orm": "3f5d305c9362ce19440846a55f51f9cd7e3b86351d6defd7aee92865fcc51c31",
+        "height": "b8f45c8dc59ed68ac0035294c545f05b5131403feffeaea85160c5d200133e6b",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_diamond_deck",
+      "category": "floor",
+      "description": "Alternating chevron tread in bolted deck plates",
+      "palette": "industrial",
+      "references": [
+        "R01",
+        "W07"
+      ],
+      "preset": "FLOOR_DIAMOND_DECK",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_diamond_deck.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_diamond_deck/preview.webp",
+      "sha256": {
+        "albedo": "ac4fda5c6c3f42c79390a121f3b26b61cfd52906c7542d07194a2bb415ba0af4",
+        "normal": "7bae5db5a41391f5a6c7609d506989389a22f6eae2a4d9af9cef4f95d2943a6f",
+        "orm": "73d44e405fa78d57a527cb5197d886270b46cf1de941e1747694946e7b988904",
+        "height": "5912a1084d7ee47b8c892579b9c151f0eb40527a06f8b81f4b8c0bfb1d1aa952",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_metal_deck",
+      "category": "floor",
+      "description": "Long ribbed plates and transverse fastener strips",
+      "palette": "cold",
+      "references": [
+        "T03",
+        "R02"
+      ],
+      "preset": "FLOOR_METAL_DECK",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_metal_deck/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_metal_deck.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_metal_deck/preview.webp",
+      "sha256": {
+        "albedo": "411dab28f6009124bccdcc930ce506f661faf66c0c5ae43641eb064ef254f7cd",
+        "normal": "9827da97a1018d3ca949172d5679ae0c4a998acf651f5f5257180878ca94bf3e",
+        "orm": "cac452542e3de5062cb9e9cf34601454d1b0f2733244bcbb645807ad94f6e530",
+        "height": "608fffb47b69a215735b51bd0632307bd4e955445f28903896efae187fcfe60e",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_service_walkway",
+      "category": "floor",
+      "description": "Clear central route flanked by drain channels",
+      "palette": "industrial",
+      "references": [
+        "R01",
+        "D15"
+      ],
+      "preset": "FLOOR_SERVICE_WALKWAY",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_service_walkway/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_service_walkway.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_service_walkway/preview.webp",
+      "sha256": {
+        "albedo": "e00c8b3916919f79d3511e156e6779df6937935d8f11eb166186da91f138c2da",
+        "normal": "fc302a3106efa902ace5fa284fcc9329acd68c8dee0518fe4c1324c08312b624",
+        "orm": "4a82a07e93a3b4f6778594fa0cea3c3b6d70603dbad90215e6feb7eee8734eed",
+        "height": "d976f29888c5ecb3cc6f3299e95be471d6ea7118604cf6852280f47d2dbfb8aa",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_grated",
+      "category": "floor",
+      "description": "Open square grating bounded by load rails",
+      "palette": "cold",
+      "references": [
+        "W07",
+        "R02"
+      ],
+      "preset": "FLOOR_GRATED",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_grated/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_grated.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_grated/preview.webp",
+      "sha256": {
+        "albedo": "c7deda4d8ec784d73afffd450ad38e1d9f4a50ad1d8c191a34f0c06163aea803",
+        "normal": "a3b5b768356e62565ca134d2011ee0f4c7ecfa2066ca20819fb8e5f8c5400d92",
+        "orm": "cef54dee7ae6831cda397df1db59f92247b8a5ff8c2db48a91d990520af82dd1",
+        "height": "60c75f10ee38a6951248e96aff13589549eb142dda058a4b5da2ba1faf477f18",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_access_tiles",
+      "category": "floor",
+      "description": "Raised square tiles with alternating lift sockets",
+      "palette": "cold",
+      "references": [
+        "W04",
+        "R05"
+      ],
+      "preset": "FLOOR_ACCESS_TILES",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_access_tiles/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_access_tiles.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_access_tiles/preview.webp",
+      "sha256": {
+        "albedo": "ce1fd3914825613add1403168b039028489cc1931fb8b080d931949d14d2c6a3",
+        "normal": "35ea2dbd0e30c1ca7c5b521c109b860b0e85679797682291006e59321d38af0f",
+        "orm": "b506c6ee8fb33296618e224bbbc1df8cf96865d5b7948ec63f44141fb0497ba0",
+        "height": "18ba573879709aa4e4b79ef06e7155c87ec28b9ff5b78c37b3936f77b11b9417",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_hazard_crossing",
+      "category": "floor",
+      "description": "Restricted crossing with diagonal safety borders",
+      "palette": "industrial",
+      "references": [
+        "S03",
+        "W06"
+      ],
+      "preset": "FLOOR_HAZARD_CROSSING",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_hazard_crossing/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_hazard_crossing.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_hazard_crossing/preview.webp",
+      "sha256": {
+        "albedo": "50f227f32d12b187e81fea12fbbf04ab69c3042a0affd138c50a67f7de1c06e7",
+        "normal": "87f2ffc480aab39107edf3ab5fe6dc77a0dd30a64c7129a992f31c068f33cc95",
+        "orm": "14e2f13278b0e76fe768f1c20ee00ffd55128a27017a448d31d0bf309d600ec5",
+        "height": "b1280c81e419eb9c8fdc50283cb21416f5a754e45318e355fda441a622d4d5f0",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_maintenance",
+      "category": "floor",
+      "description": "Asymmetric corridor access covers and guide rail",
+      "palette": "industrial",
+      "references": [
+        "W01",
+        "D15"
+      ],
+      "preset": "FLOOR_MAINTENANCE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_maintenance/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_maintenance.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_maintenance/preview.webp",
+      "sha256": {
+        "albedo": "f5787a4306f98b61902aa88ec85ec866cde96ae642f7203d12967e63a1511546",
+        "normal": "8b8ec50ea890815cd47e57d66c04e83fe88d1375f5fd80972b7934973809a56a",
+        "orm": "b3e7b605d42cf124e665a27438962023c3eda4b722a182470da7117f0a7b94fa",
+        "height": "415d4acef987a3d34607c052907cc40e0dd0f9adf1f6fe45feb1aca60b5e3a1d",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_damp_concrete",
+      "category": "floor",
+      "description": "Large concrete pours with dark drainage insets",
+      "palette": "concrete",
+      "references": [
+        "R07",
+        "T01"
+      ],
+      "preset": "FLOOR_DAMP_CONCRETE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_damp_concrete/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_damp_concrete.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_damp_concrete/preview.webp",
+      "sha256": {
+        "albedo": "0d7621434a399d5a9f61fa11b680f6c496b88b70646f8b3ed5f86e6e22183b10",
+        "normal": "f998b3d3564f38e8f2db729da844cf2f856bc4cd3b477cd5618481db09d0b532",
+        "orm": "a050c10071cb8eb520132c0e241283306164cebe03f98c1f2d063f223016ec01",
+        "height": "79ef3598f53cbe583561fb46a81787816700b433b66cabf72db99c36a16e9d6b",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_rooftop",
+      "category": "floor",
+      "description": "Standing-seam roofing around raised duct covers",
+      "palette": "cold",
+      "references": [
+        "M03",
+        "R07"
+      ],
+      "preset": "FLOOR_ROOFTOP",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_rooftop/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_rooftop.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_rooftop/preview.webp",
+      "sha256": {
+        "albedo": "4b4a33a99bd8543c5656a72f5102047eb62c3deaf6c827084829ab71fc6b1de7",
+        "normal": "02c0b2062b0a9c00c1933742f329909f654c7cd48d95ee65a62c378fac9a8077",
+        "orm": "20fbad261a47e18ea5ef0022ec1e79666ae38df9e6beddb3e1ca1fe07782ccfa",
+        "height": "0b163a0c13119aece358c90bfbcb891429316871157a13911ec2c524f014c2e0",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_utility_cuts",
+      "category": "floor",
+      "description": "Offset modular cuts with square cable pull boxes",
+      "palette": "concrete",
+      "references": [
+        "T02",
+        "R07"
+      ],
+      "preset": "FLOOR_UTILITY_CUTS",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_utility_cuts/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_utility_cuts.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_utility_cuts/preview.webp",
+      "sha256": {
+        "albedo": "2d92dccca8bc0a8f9b18225d12deec84cac27c2757563528ddee4c5e438ea414",
+        "normal": "e5640b46506c2c67721ab1402953656a4d684854108550cc5b97e0e7c68f8357",
+        "orm": "e54cc8b369f320247708d3ddab82193f6c8bad1ba33cc44987b5257b147c5bcc",
+        "height": "4e8016ba1892f35eac8a59168bdff15222a38eebf61217d9b63d773a3286b134",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_hex_armor",
+      "category": "floor",
+      "description": "Hexagonal armored tiles with inset centers",
+      "palette": "cold",
+      "references": [
+        "T08",
+        "M07"
+      ],
+      "preset": "FLOOR_HEX_ARMOR",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_hex_armor/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_hex_armor.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_hex_armor/preview.webp",
+      "sha256": {
+        "albedo": "31a46c4baf729873ea60507cdf906a2ff287d956ae21324b5cac8ba7be72fd95",
+        "normal": "99de7cef4f3c7578d5fedf396e2a687b77d5059db357f970880bdaed19640266",
+        "orm": "d0fbf67b41b006bcd8fff1df3fe104277b248373161a91ab2798f1803e2bb058",
+        "height": "a673537dd4394430d1cd90139dc8daccf1791c94b70ea0b8663697118e5f8e56",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "floor_drainage",
+      "category": "floor",
+      "description": "Parallel drain runs crossed by stamped traction",
+      "palette": "industrial",
+      "references": [
+        "R01",
+        "R02"
+      ],
+      "preset": "FLOOR_DRAINAGE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/floor_drainage/material.tres",
+      "recipe": "Tools/Art/Library/materials/floor_drainage.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/floor_drainage/preview.webp",
+      "sha256": {
+        "albedo": "6f93078da3953d2e3485ac9032cb3bfaff18685e28c41f72fcc38cd1bce72faf",
+        "normal": "564b73ad03909e2820eb311b843988affef3070fb52f72ad769cc2398f9346c9",
+        "orm": "555c0faae5a7eef798009ad0ab38523aef9f68ed25e5ce2e66469b9afd4e8c15",
+        "height": "89e2fdb81764449851f63765e64e4e0794776aa4f88fa73483f139014e277092",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "ceiling_tech",
+      "category": "ceiling",
+      "description": "Recessed ceiling cassettes with narrow light strips",
+      "palette": "cold",
+      "references": [
+        "W01",
+        "L01"
+      ],
+      "preset": "CEILING_TECH",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_tech/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_tech.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_tech/preview.webp",
+      "sha256": {
+        "albedo": "12c49702350e5a85a86ea05a1ff09ad91d77f30d91d1128c603f3f030e864ca7",
+        "normal": "ba623b09f33ad6e7e929328c5729bbe6e6504786d3b5e0510b0098f4f8d888ee",
+        "orm": "368f8ec423f43a7f7dd24734f253b176ba38b7c3ea33b98546d5d3a3a5674ca3",
+        "height": "d10815d64d42b12cf0c8360303ccccd5877b7e0a92e0914512e32d719158fe27",
+        "emission": "f9841cd03642c5c9b671e6a6b034fd69e58d4ff174c127ea802458d8242207b4"
+      }
+    },
+    {
+      "id": "ceiling_utility",
+      "category": "ceiling",
+      "description": "Crossing support beams above utility sheet",
+      "palette": "industrial",
+      "references": [
+        "W12",
+        "R09"
+      ],
+      "preset": "CEILING_UTILITY",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_utility/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_utility.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_utility/preview.webp",
+      "sha256": {
+        "albedo": "19e4594f8044cd63acec4a197178445238407fbedaee63b1075684314990301b",
+        "normal": "c14f5eb27abf56d87ac5f87355af38ff0f283663521fc97039b76a3abc248dc2",
+        "orm": "1234e9e6564aba35c99e176797035ebdf5a03928a6c15203640efee75c17bd90",
+        "height": "91531046694d7f8659ce230ff55264e9a82bf72b9bab716259bdabca1b177d53",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "ceiling_cable_tray",
+      "category": "ceiling",
+      "description": "Ladder cable trays and transverse support shoes",
+      "palette": "industrial",
+      "references": [
+        "R09",
+        "D12"
+      ],
+      "preset": "CEILING_CABLE_TRAY",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_cable_tray/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_cable_tray.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_cable_tray/preview.webp",
+      "sha256": {
+        "albedo": "e6f94c39ded0f21d46b48767e185bf07e5ad74ac49cbf81f047c5089623bd5cf",
+        "normal": "f7a504bad9b03062a3961b7b4b88c6545355929aed0fe2dc74305e5ffa6d5b1d",
+        "orm": "8b1ef57a315c00b5d45bb557639637665f0acd616030eb28d3c47aeb64d96ccc",
+        "height": "dfadc612bfad4f92484a9cf15dce2208243b2a3618ad9485e6fcab4e7d57c291",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "ceiling_hatch",
+      "category": "ceiling",
+      "description": "Large hinged hatch surrounded by service panels",
+      "palette": "cold",
+      "references": [
+        "T09",
+        "W12"
+      ],
+      "preset": "CEILING_HATCH",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_hatch/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_hatch.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_hatch/preview.webp",
+      "sha256": {
+        "albedo": "66ff52c2189b2e4d83d2440814f7491d50376622fd657f79ac1f6cf414f5eb8d",
+        "normal": "5f0dc05f11cfad567487f1e1391e8e51b2a6bbc5f9f5685c53c34477d6b43dfb",
+        "orm": "69d25108abe674b75fc24e90be39cc1125ec6a5c54c6ea7088ec3c8ec1a33fab",
+        "height": "4641a46dbbfed2a371ac66bf9c668bb932f0c1af694e768a142e9a3d00b63342",
+        "emission": "3d85c7e9f88db4fa1ba943fbb3a9a24d2a192f63be7f9cbd945a8bbdf157a761"
+      }
+    },
+    {
+      "id": "ceiling_ventilation",
+      "category": "ceiling",
+      "description": "Alternating intake filters and long louvers",
+      "palette": "cold",
+      "references": [
+        "W12",
+        "D09"
+      ],
+      "preset": "CEILING_VENTILATION",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_ventilation/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_ventilation.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_ventilation/preview.webp",
+      "sha256": {
+        "albedo": "a5160ccab0635260e4e30a7568697c53eafcd8288cd7bc9c22d6d745cd7734df",
+        "normal": "ea7d6f4d97fa225d55915af952a00e7814177e5e4a4144b1217b2d19078de67b",
+        "orm": "0f6df48dbea8a20db01072b59f788fa15b6b79baedb97ebae8c3ab678695d4d6",
+        "height": "e9c9271d58cb95e77b26cdcfff19be7bc3a8a7d99bee7d78990de09977d7c33f",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "ceiling_light_baffle",
+      "category": "ceiling",
+      "description": "Repeated deep baffles with inset practical lights",
+      "palette": "cold",
+      "references": [
+        "L01",
+        "L09"
+      ],
+      "preset": "CEILING_LIGHT_BAFFLE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/ceiling_light_baffle/material.tres",
+      "recipe": "Tools/Art/Library/materials/ceiling_light_baffle.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/ceiling_light_baffle/preview.webp",
+      "sha256": {
+        "albedo": "4c5178e11b875db52fd9da332d31dc291207992750152096302744370a73a491",
+        "normal": "ef796226502a35211889fe345e90c72c46a708a5e3be1c43237b80f5133c4afa",
+        "orm": "185682b6400e779a2fbe41cd15e5d6b6fbf5e52b174563c22c5b9e17bafb56d3",
+        "height": "24db39f82485f63621f3cbaf3cc0f80101e391370ca98ea5a4021e21706e023e",
+        "emission": "95ea058b5b8d43dec47015cf56c33a0c0e28efdb59c4384083376e4fb8f1f5cf"
+      }
+    },
+    {
+      "id": "wrap_heavy_pipe",
+      "category": "wrap",
+      "description": "Wide flange rings and bolted longitudinal shell",
+      "palette": "industrial",
+      "references": [
+        "R01",
+        "D10"
+      ],
+      "preset": "WRAP_HEAVY_PIPE",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_heavy_pipe/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_heavy_pipe.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_heavy_pipe/preview.webp",
+      "sha256": {
+        "albedo": "54979b4417600905e66f50008fda86cf0fa2fae27bab5c29a6ec5dd21a604fe2",
+        "normal": "ede9a0e533f1fdc401dc44b213bab037d44a0e11cf1036753defb04a96382b85",
+        "orm": "d1c9030e357a115758911c5b123e7edce1384ae10b5671469a324233f5a9986d",
+        "height": "d14ca59c3e263cf93a72b257a869a457382f9f6e6893522b9fa4d87aa45cfc3c",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_tank_shell",
+      "category": "wrap",
+      "description": "Broad welded tanks with inspection lid and datum band",
+      "palette": "industrial",
+      "references": [
+        "R07",
+        "R08"
+      ],
+      "preset": "WRAP_TANK_SHELL",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_tank_shell/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_tank_shell.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_tank_shell/preview.webp",
+      "sha256": {
+        "albedo": "024c67e0b11c6dbce4465156960099c1ab4aa77cae94fa71cac0021ac07cf337",
+        "normal": "ce74833e41703ac9f745afe56e1e11cf33216323f57b1bc7795d3eef676b6ab0",
+        "orm": "e33e3bd8f3cb384884f57981b1db1ff4dcfff89c60da7cbfe9593a9b4bc4ae76",
+        "height": "b7aed55d06c74c96395b0c86b01748efc6d6d6de702f6ce380e9fd6638b41130",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_reactor_core",
+      "category": "wrap",
+      "description": "Vertical luminous cells isolated by dark cooling fins",
+      "palette": "cold",
+      "references": [
+        "R08",
+        "D10"
+      ],
+      "preset": "WRAP_REACTOR_CORE",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_reactor_core/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_reactor_core.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_reactor_core/preview.webp",
+      "sha256": {
+        "albedo": "901cab6e33fa68aabb19fba1edbc479768bae67bb44b4a3a88c805d9ceb9a81d",
+        "normal": "52553597db386257692404445c5bd418f4b492e6be96a7d32d9fa1d6d504e0d5",
+        "orm": "0defd58ac207106d2ca76591278b7c61a66bd650a6b4a58409cf750b0c5250e1",
+        "height": "a97d262c61bfbd57474f0c8917afa1fc1e9281a1b2ea4b4850fdbb9af0a8f790",
+        "emission": "ae6d29537e4a716dceec465400a70f9f2ed5455c4bf261f32d92d492ee1718b8"
+      }
+    },
+    {
+      "id": "wrap_exoskeleton",
+      "category": "wrap",
+      "description": "Diamond load braces around recessed column plates",
+      "palette": "concrete",
+      "references": [
+        "D12",
+        "M09"
+      ],
+      "preset": "WRAP_EXOSKELETON",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_exoskeleton.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_exoskeleton/preview.webp",
+      "sha256": {
+        "albedo": "5f3979bd8237cf1704836d8eac8f5262e52dfe4b4e46931314e267a99a535580",
+        "normal": "8d8449bfb9b03cbeb1a58f7f30dd19da8c988692d5e82fd29f93c364d3f9fac1",
+        "orm": "96eefd71532e7b1c6bb55e8999bc0c2d938288bb0568b26495c64e09aaa1ea62",
+        "height": "11b5cba95ee6fb313a17c4038d80a2c09a714c69b761f4a3f44cb53348841395",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_vent_shaft",
+      "category": "wrap",
+      "description": "Rotating louver banks with heavy coupling rings",
+      "palette": "cold",
+      "references": [
+        "D09",
+        "R09"
+      ],
+      "preset": "WRAP_VENT_SHAFT",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_vent_shaft/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_vent_shaft.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_vent_shaft/preview.webp",
+      "sha256": {
+        "albedo": "ae72bbb64cd18c85988b59eb42596e076caeecf52af85873e945616ffbd532e0",
+        "normal": "732d3e2324112723f4191de0cb03204651717c1ba9bfdc3f342f15c12ddd3e48",
+        "orm": "3d27fbbd3990751fd7cb0ea466c38b601c5eedc65da3728d9d9ddeb426fc781d",
+        "height": "e477a779d0bc291fa78dfb061595934f3573a70a56bb553372c43526eea97275",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_utility_pillar",
+      "category": "wrap",
+      "description": "Service boxes and protected vertical utility routes",
+      "palette": "industrial",
+      "references": [
+        "R02",
+        "D05"
+      ],
+      "preset": "WRAP_UTILITY_PILLAR",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_utility_pillar/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_utility_pillar.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_utility_pillar/preview.webp",
+      "sha256": {
+        "albedo": "e95eb492fdf62c80bdee502de92a6e80032782457456788325133e5bb98907e8",
+        "normal": "d84decd4b5ff7b5dff2b1aa5219dee14697d021fde301e67c0164a218a5adccb",
+        "orm": "b07d7ad36396b29e2468d2c7c2f26670929ed7b4407011df9005b355c61d453a",
+        "height": "78e0797c8399e833802afa485e77ba659405706b2219125ee0605cde0e92d859",
+        "emission": "a802592fe592c9ed0f1cb7911e706be4e977e9c636e9e68e06858c4daf2b7d57"
+      }
+    },
+    {
+      "id": "wrap_insulated_pipe",
+      "category": "wrap",
+      "description": "Segmented insulation jackets with retention straps",
+      "palette": "concrete",
+      "references": [
+        "R01",
+        "R09"
+      ],
+      "preset": "WRAP_INSULATED_PIPE",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_insulated_pipe/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_insulated_pipe.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_insulated_pipe/preview.webp",
+      "sha256": {
+        "albedo": "51a98f0cdb8d2a6dce67ef4fb7fbc3f530dfba4c12b4a07fc655e86fac7343fe",
+        "normal": "dbb1ba5494ee4204a2927ba0a340a8b68b949fffa1120f1cf897a12c68458773",
+        "orm": "c523c456b60027f65eccb86469a50ef59a8c0bef12053db0b2d07c48f48589ff",
+        "height": "eecbead771ab89930bebdac16b3c3715c2ccd319c039bf61b2c4101b50ed24cf",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_conduit_cluster",
+      "category": "wrap",
+      "description": "Bundled unequal conduits with shared ties",
+      "palette": "cold",
+      "references": [
+        "D05",
+        "R01"
+      ],
+      "preset": "WRAP_CONDUIT_CLUSTER",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_conduit_cluster/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_conduit_cluster.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_conduit_cluster/preview.webp",
+      "sha256": {
+        "albedo": "4dc44caf0de78f9ddc75c16565ae35b069df63d86134815d5d15fad09a9e7af8",
+        "normal": "f36e1aa0b299d60d70411ab49badf8b375448a69af2d8c602d93561be210b408",
+        "orm": "4672e7946ff585b6fc6c18883a06a3443842dc05ec93c46761331cb7e937ad4d",
+        "height": "8d2a35ed95f24d4d99318e2e1af709e3ea627d9687535e27f4b42bf92ce3e9fd",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    {
+      "id": "wrap_coolant_chamber",
+      "category": "wrap",
+      "description": "Cooling collar stacks interrupted by gauge ports",
+      "palette": "cold",
+      "references": [
+        "R08",
+        "R02"
+      ],
+      "preset": "WRAP_COOLANT_CHAMBER",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_coolant_chamber/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_coolant_chamber.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_coolant_chamber/preview.webp",
+      "sha256": {
+        "albedo": "62e2dbd27b5ff3d12738a812755c6fbd9edd2c27df71315ed4246934df6e95de",
+        "normal": "38d8db125c425051eadc9ee8d15d81644b758edbd61fb2bd70f607024086ed87",
+        "orm": "eaf86472a7a95f6c21a027a5bb42a9db0bc1b36243ea0801d95710f466f582bd",
+        "height": "89df71f6c94f3786e9ca313f61a562dc90d01165c0c12b1c8ca278f999dd4ae6",
+        "emission": "ffd01c7308f5ceefbce11bfc936db116ca7e52df00d5e56816cf07d91b455c55"
+      }
+    },
+    {
+      "id": "wrap_pressure_column",
+      "category": "wrap",
+      "description": "Overlapping armor scales and sparse status lamps",
+      "palette": "industrial",
+      "references": [
+        "D10",
+        "R08"
+      ],
+      "preset": "WRAP_PRESSURE_COLUMN",
+      "resolution": [
+        512,
+        1024
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/wrap_pressure_column/material.tres",
+      "recipe": "Tools/Art/Library/materials/wrap_pressure_column.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/wrap_pressure_column/preview.webp",
+      "sha256": {
+        "albedo": "56688a242dbcc9587646d851175f25fa2239014cf8fe217398ec050f1eac52bc",
+        "normal": "fbdfd42f023c9cf7993b5878426a2f073d729d34608d97211d5dc4f22898e569",
+        "orm": "ae0ce57b389270ce62cd86368ecaefc9607a45d8fc6c4ca15ca4d2c3ea72de3f",
+        "height": "d8dd4ec3d3a6b3470d926da65fd171c913971df160a42e84298a34cd2143c5a5",
+        "emission": "133ebf7f964a79f4ee93d66efaf6dd98a30d2bcda1fcc1d64999c4046d4cafab"
+      }
+    },
+    {
+      "id": "accent_hazard_skin",
+      "category": "accent",
+      "description": "Diagonal restricted-zone paint over service plate",
+      "palette": "industrial",
+      "references": [
+        "S03",
+        "S08"
+      ],
+      "preset": "ACCENT_HAZARD_SKIN",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_hazard_skin/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_hazard_skin.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_hazard_skin/preview.webp",
+      "sha256": {
+        "albedo": "7e2cc245e6d0fa1909051506ce5cba1cc6c7894d5e85670b4c7afef9d9fe4404",
+        "normal": "50eec501d8f5eae8eee2757b1c397e463a44d7a67e96f0c974455dd70df6a710",
+        "orm": "3c4d129e41ab0d60d37e4fad30eece56c0a59eab1e57b60ea9d3d8454a4e53ad",
+        "height": "89b85e84f727f8f7f5b075598284affa44fa74f9e1a5efcde408cf73b7caa260",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "accent_emissive_panel",
+      "category": "accent",
+      "description": "Inset practical strips around a quiet service panel",
+      "palette": "cold",
+      "references": [
+        "L01",
+        "T05"
+      ],
+      "preset": "ACCENT_EMISSIVE_PANEL",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_emissive_panel/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_emissive_panel.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_emissive_panel/preview.webp",
+      "sha256": {
+        "albedo": "9f63e37c397e44cbaba0b7e807f3269e7215a0946d15c7005b0db65a09a90f8c",
+        "normal": "0ded51c925d74db193d79d4fca5800063dfc4b711c1f82327d3f5a611c2536c4",
+        "orm": "e8d7f73fb0659bf127c9dffd779884aa487f3b563667f022c62dc3f8c6f88f32",
+        "height": "b661e4bfe2d4a3bc8dc6946da5bfadaf2cb4056ca4268365d81988471a596354",
+        "emission": "d1d2fac0350db9ed0aae9068ca68b09e67066aca387450fe48e7006fdaa0ba93"
+      }
+    },
+    {
+      "id": "accent_access_door",
+      "category": "accent",
+      "description": "Paired inset door leaves and protected central lock",
+      "palette": "industrial",
+      "references": [
+        "T08",
+        "S02"
+      ],
+      "preset": "ACCENT_ACCESS_DOOR",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_access_door/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_access_door.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_access_door/preview.webp",
+      "sha256": {
+        "albedo": "736c7c4eecea8386fe53b5aeef928eeddb79e53aa7976fce93931e107d38cd94",
+        "normal": "b027ceb53f95d542a9e6aa5e95eb9a715710f07fe2705a7f410be218af86155c",
+        "orm": "7355e48b3da4b16ee57a815ca15b44d6b3eb437caf9a8a83f6d840081d180c25",
+        "height": "e24ea1ce2389c52e9b00577f022f0502f717e32115c80f685803cdf736363b54",
+        "emission": "8f7d45d31a109e1d86df8a516185953a98df62b83cd0b9c60b7f76aa73bcb02e"
+      }
+    },
+    {
+      "id": "accent_control_console",
+      "category": "accent",
+      "description": "Analog gauges, status lamps and switch rows",
+      "palette": "cold",
+      "references": [
+        "R05",
+        "R06"
+      ],
+      "preset": "ACCENT_CONTROL_CONSOLE",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_control_console/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_control_console.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_control_console/preview.webp",
+      "sha256": {
+        "albedo": "931dd1cf5ca6e707d15f0a8ab13116193f5595634929e1b3dd4017083adf0f0f",
+        "normal": "5e19b2c6cbcbb089df8983bd2267f34975943e9f44e2f26f8469602c06db3ce3",
+        "orm": "1f386e6941221c0be93cf83706f37e451b1dee5dfdd9b754d7eab67af5c579c7",
+        "height": "09a7a418f060da48b2ff7df35715001917db532287fb15f29cfdea5aa5c27a46",
+        "emission": "8bdf6a62535a9a2a8d105749ee41bd2dbd91d1e9cd7f41dfd0f9f2f18aea182e"
+      }
+    },
+    {
+      "id": "accent_machine_casing",
+      "category": "accent",
+      "description": "Offset machine cover, cooling grille and latch rail",
+      "palette": "industrial",
+      "references": [
+        "T09",
+        "D01"
+      ],
+      "preset": "ACCENT_MACHINE_CASING",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_machine_casing/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_machine_casing.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_machine_casing/preview.webp",
+      "sha256": {
+        "albedo": "c233ce401b9ce08a56871ebd60c5efda59a0e10902c35271b402ee5f7fa29d89",
+        "normal": "e4a13c856f3503726ce3da524a9f702307e6e7854650ed0b82c0a8ea00681791",
+        "orm": "190d48ce7d5ecbc3c8e6fe5ff1ef006195e9ea6a0b7135ec5e039d3beda7fbf4",
+        "height": "5af890471ebe879df04dd39ff18d78a93d6aeae9fc08f413720a5a3a98c73060",
+        "emission": "e65129032568b724e7dcb9656f5fcfc69e7ab1dcfdc794f6f533283f9b6a629f"
+      }
+    },
+    {
+      "id": "accent_shutter",
+      "category": "accent",
+      "description": "Horizontal interlocking shutter slats and guide rails",
+      "palette": "cold",
+      "references": [
+        "T14",
+        "D09"
+      ],
+      "preset": "ACCENT_SHUTTER",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_shutter/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_shutter.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_shutter/preview.webp",
+      "sha256": {
+        "albedo": "c75885961223a85c804544ad9da6df9cb5ff3175d2b2fbf2851934c2616e048a",
+        "normal": "089426e4030cd45239894a8df1a93e7ca726a9a812ebcb5fc44ce5b432ed2ec4",
+        "orm": "24e4cb4bfd7fa6c19f3b981fe1064ef117eeb6085512fd58a8677e11a2a80fa4",
+        "height": "3816fe7fde8bbf552fcba45c959c27c4307e12e1d2417ca554cb7ae154156363",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "accent_billboard_support",
+      "category": "accent",
+      "description": "Support lattice, mounting shoes and cable feed",
+      "palette": "cold",
+      "references": [
+        "S04",
+        "M08"
+      ],
+      "preset": "ACCENT_BILLBOARD_SUPPORT",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_billboard_support/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_billboard_support.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_billboard_support/preview.webp",
+      "sha256": {
+        "albedo": "e10ff6d519535e65deb5bb674f310668ba1a622e26f05ed20a988747af42e01b",
+        "normal": "f7e04df2823ddcaddc8de73032bcfdb4b9c89c86cf2adad87574781d70306ddb",
+        "orm": "82cb2cb415078bcc5d36c26e1eaa1da1e899ccb1b12a76af73e0c1339d071df6",
+        "height": "c54b733489157c950ef41943ccace12c4b6794bdbc9675991a318e3f0bb99c02",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "accent_hatch_cluster",
+      "category": "accent",
+      "description": "Three differently sized access covers on blank metal",
+      "palette": "industrial",
+      "references": [
+        "T05",
+        "T09"
+      ],
+      "preset": "ACCENT_HATCH_CLUSTER",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_hatch_cluster/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_hatch_cluster.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_hatch_cluster/preview.webp",
+      "sha256": {
+        "albedo": "61c9841b25f5856ce695081a46153c297f03d86abedfcdb1c8674e7300d3959b",
+        "normal": "60ada7b95e5dd514125a88c687974cc7662f3e98616e0d884ad7a0425653d8b3",
+        "orm": "19e16f17005a06d7d665455a3c8d9dde4651fbdac82cd7570007828e09f629fe",
+        "height": "baad9fad1e29359c95830dd972808dcebca77f1ba9b3d8388dd4a19cf874ce9a",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    {
+      "id": "accent_datacenter",
+      "category": "accent",
+      "description": "Tall server modules with intake and status arrays",
+      "palette": "cold",
+      "references": [
+        "D01",
+        "W04"
+      ],
+      "preset": "ACCENT_DATACENTER",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_datacenter/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_datacenter.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_datacenter/preview.webp",
+      "sha256": {
+        "albedo": "e6aed2922a416d3842f609b3a03b1ec2124bd2775e65c108f0a8e0383088fd05",
+        "normal": "dcff10fca75ae73209d7f1ac8139b7810b165a6a6d55c8bba30af454ed78c310",
+        "orm": "976079c2e1eaa0067818fe6e2dd70648c4c261250fa256f60638f633e08e5d2d",
+        "height": "2db089eba3d42b1dcfc5620d299c027618249cca8f00f1aab0860f1bf3dff38a",
+        "emission": "d02484f2be3627abe398a93f1df4ccf49566e3b64f2f57ae5c28b699293d8e6d"
+      }
+    },
+    {
+      "id": "accent_dark_monolith",
+      "category": "accent",
+      "description": "Nearly silent stone-like face split by fine light cuts",
+      "palette": "concrete",
+      "references": [
+        "M09",
+        "L06"
+      ],
+      "preset": "ACCENT_DARK_MONOLITH",
+      "resolution": [
+        512,
+        512
+      ],
+      "material": "res://Assets/ProceduralArt/Materials/accent_dark_monolith/material.tres",
+      "recipe": "Tools/Art/Library/materials/accent_dark_monolith.facade.json",
+      "preview": "Assets/ProceduralArt/Materials/accent_dark_monolith/preview.webp",
+      "sha256": {
+        "albedo": "8585dcf269c2724818984eb4c9e18a3f5ed991569f610a6bb2cb1c22625c4b6d",
+        "normal": "8842de91a09befe5934fd48fdacc8196eaf00d3268eed1b58bb5af9a63a69ef1",
+        "orm": "ba5b14cd3dadad4a5faede0d048215200ce0645cc9704c7ecbae94c9294329fb",
+        "height": "e26ea099766d52829a359ff375072b132a3e8b1092712e1a5b170444caa3df57",
+        "emission": "c4c8705fa15a845e5a339c41188033d6f596baa3ec63e9c3f897fa108d22e9d3"
+      }
+    }
+  ]
+}

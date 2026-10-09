@@ -1,0 +1,190 @@
+{
+  "id": "HR098",
+  "name": "Sky Cathedral",
+  "category": "hero",
+  "subtype": 2,
+  "seed": 1701162,
+  "role": "hero",
+  "collection": "HR098_Sky_Cathedral",
+  "bounds_m": [
+    55.2762,
+    54.168,
+    479.332
+  ],
+  "bounds_min": [
+    -27.6381,
+    -25.473599999999998,
+    0.0
+  ],
+  "bounds_max": [
+    27.6381,
+    28.6944,
+    479.332
+  ],
+  "parameters": {
+    "width": 51.66,
+    "depth": 58.56,
+    "height": 452.2,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Sky Cathedral",
+    "faceted_crowns",
+    "four_ascending_fingers",
+    "front_canyon",
+    "hero",
+    "roof_water_tank",
+    "suspended_rear_nave"
+  ],
+  "metrics": {
+    "meshes": 24,
+    "primitives": 16,
+    "triangles": 280,
+    "vertices": 296,
+    "polygons": 118
+  },
+  "geometry_sha256": "1803a1d687e2cfab9a7bded6c91d31ef76df7d1a773ad8c095215a04ff91073e",
+  "geometry_only_sha256": "66af739757059c98d53fab7907a69dd131d3c7f41ac10d44d092a51f30b99468",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.867,
+    "mass_complexity": 0.168,
+    "industrial_density": 0.312,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.45,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "cathedral_finger_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_finger_0": [
+      "f5_2_uv"
+    ],
+    "finger_crown_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "finger_crown_0": [
+      "f0_3_uv"
+    ],
+    "cathedral_finger_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_finger_1": [
+      "f5_2_uv"
+    ],
+    "finger_crown_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "finger_crown_1": [
+      "f0_3_uv"
+    ],
+    "cathedral_finger_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_finger_2": [
+      "f5_2_uv"
+    ],
+    "finger_crown_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "finger_crown_2": [
+      "f0_3_uv"
+    ],
+    "cathedral_finger_3_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_finger_3": [
+      "f5_2_uv"
+    ],
+    "finger_crown_3_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "finger_crown_3": [
+      "f0_3_uv"
+    ],
+    "suspended_nave_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "suspended_nave": [
+      "f0_3_uv"
+    ],
+    "nave_rake": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "low_apse": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 24,
+    "floor_rooftop": 11,
+    "f5_2_uv": 16,
+    "f0_3_uv": 36,
+    "floor_metal_deck": 13,
+    "wall_tech_spine": 4,
+    "wall_maintenance": 4,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f0_3_uv.uv.json",
+    "Recipes/f5_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f0_3_uv": 925051,
+    "f5_2_uv": 925539,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR098.png",
+    "UV_Material_QA/Views/HR098_back.png",
+    "UV_Material_QA/Views/HR098_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

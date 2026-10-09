@@ -1,0 +1,563 @@
+{
+  "recipe": {
+    "schema": "bowprototype.mesh_vfx",
+    "schema_version": 1,
+    "generator_version": "0.2.0",
+    "effect": "DIRECTIONAL_LIGHTNING",
+    "seed": 1104,
+    "parameters": {
+      "overall_scale": 1.0,
+      "duration": 1.3,
+      "core_size": 0.65,
+      "core_brightness": 1.6,
+      "core_lifetime": 0.23,
+      "petal_count": 9,
+      "petal_length": 1.8,
+      "petal_width": 0.65,
+      "petal_curl": 0.75,
+      "petal_spread": 0.8,
+      "petal_irregularity": 0.38,
+      "petal_lifetime": 0.85,
+      "ring_radius": 3.3,
+      "ring_thickness": 0.18,
+      "ring_speed": 1.4,
+      "ring_tilt": 0,
+      "ring_vertical_offset": 0.06,
+      "shard_count": 16,
+      "shard_length": 0.65,
+      "shard_spread": 2.6,
+      "shard_speed": 1.4,
+      "smoke_count": 8,
+      "smoke_puff_size": 0.65,
+      "smoke_expansion_speed": 0.7,
+      "smoke_darkness": 0.5,
+      "smoke_linger": 1.9,
+      "smoke_delay": 0.2,
+      "dust_spread": 2.2,
+      "low_poly_amount": 0.82,
+      "vertex_wobble": 0.025,
+      "posterization": 5,
+      "palette_quantization": 0.35,
+      "alpha_dithering": 0.7,
+      "chunkiness": 0.65,
+      "silhouette_exaggeration": 0.55,
+      "effect_length": 4.7,
+      "effect_radius": 2.0,
+      "effect_width": 0.065,
+      "effect_count": 6,
+      "effect_segments": 13,
+      "effect_jitter": 0.46,
+      "effect_arc": 1.4,
+      "effect_lifetime": 0.48,
+      "effect_stagger": 0.09,
+      "effect_motion": 1.0
+    },
+    "layers": {
+      "core": {
+        "enabled": true,
+        "color": "#efffff",
+        "color_b": "#b9c6ff",
+        "opacity": 0.95,
+        "emission": 1.2,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "petals": {
+        "enabled": true,
+        "color": "#aad9ff",
+        "color_b": "#615dda",
+        "opacity": 0.9,
+        "emission": 0.9,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.0,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "ring": {
+        "enabled": true,
+        "color": "#8ab4e4",
+        "color_b": "#6050a2",
+        "opacity": 0.65,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "shards": {
+        "enabled": true,
+        "color": "#7967e4",
+        "color_b": "#ceeeff",
+        "opacity": 0.9,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "smoke": {
+        "enabled": false,
+        "color": "#77736a",
+        "color_b": "#3b4142",
+        "opacity": 0.6,
+        "emission": 0.0,
+        "blend": "DITHER",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": true,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "dust": {
+        "enabled": false,
+        "color": "#716b5a",
+        "color_b": "#3a3935",
+        "opacity": 0.3,
+        "emission": 0.0,
+        "blend": "ALPHA",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "Core",
+      "layer": "core",
+      "mesh": "Core",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.1625,
+        0.1625,
+        0.1625
+      ],
+      "scale1": [
+        0.65,
+        0.65,
+        0.65
+      ],
+      "start": 0.0,
+      "life": 0.3,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0,
+      "tint": 0.15353115249873103
+    },
+    {
+      "name": "MainStrike",
+      "layer": "petals",
+      "mesh": "MainStrike",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.48,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.32515080907628574
+    },
+    {
+      "name": "Fork_00",
+      "layer": "shards",
+      "mesh": "Fork_00",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.6582342697127193
+    },
+    {
+      "name": "Fork_01",
+      "layer": "shards",
+      "mesh": "Fork_01",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.09,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.120494066859264
+    },
+    {
+      "name": "Fork_02",
+      "layer": "shards",
+      "mesh": "Fork_02",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.18,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.054897626794406684
+    },
+    {
+      "name": "Fork_03",
+      "layer": "shards",
+      "mesh": "Fork_03",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.0,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.705333272031688
+    },
+    {
+      "name": "Fork_04",
+      "layer": "shards",
+      "mesh": "Fork_04",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.09,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.9202435239768524
+    },
+    {
+      "name": "Fork_05",
+      "layer": "shards",
+      "mesh": "Fork_05",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.18,
+      "life": 0.384,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.7451468229228562
+    },
+    {
+      "name": "Restrike_00",
+      "layer": "petals",
+      "mesh": "Restrike_00",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.12,
+      "life": 0.13440000000000002,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.7816474303656855
+    },
+    {
+      "name": "Restrike_01",
+      "layer": "petals",
+      "mesh": "Restrike_01",
+      "origin": [
+        0.0,
+        0.25,
+        0.0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        1,
+        1,
+        1
+      ],
+      "scale1": [
+        1,
+        1,
+        1
+      ],
+      "start": 0.29000000000000004,
+      "life": 0.13440000000000002,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.1,
+      "tint": 0.8256533378437447
+    },
+    {
+      "name": "Band_00",
+      "layer": "ring",
+      "mesh": "Band_00",
+      "origin": [
+        0,
+        0.08,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.066,
+        0.25,
+        0.066
+      ],
+      "scale1": [
+        1.1,
+        1,
+        1.1
+      ],
+      "start": 0.0,
+      "life": 0.48,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.08,
+      "tint": 0.27746055415005194
+    }
+  ],
+  "duration": 1.3,
+  "stats": {
+    "mesh_count": 11,
+    "triangle_count": 796
+  },
+  "coordinate_system": "right-handed, Y-up, metres; trail local -Z, laser incoming +Z, lightning from +Y",
+  "animation": "analytic life curves, no billboards"
+}

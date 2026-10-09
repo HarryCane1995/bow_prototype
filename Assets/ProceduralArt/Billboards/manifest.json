@@ -1,0 +1,570 @@
+{
+  "schema": "bow.art-library",
+  "kind": "billboards",
+  "items": [
+    {
+      "id": "vertical_neon",
+      "archetype": "VERTICAL_NEON",
+      "directory": "Assets/ProceduralArt/Billboards/vertical_neon",
+      "scene": "res://Assets/ProceduralArt/Billboards/vertical_neon/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "VERTICAL_NEON",
+        "seed": 99,
+        "palette": "NIGHT_MARKET",
+        "colors": {
+          "neon": "#ff7c91",
+          "accent": "#79d9ef",
+          "back": "#281e2e",
+          "ink": "#e0c6cd"
+        },
+        "parameters": {
+          "aspect": 0.35,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          179,
+          512
+        ],
+        "sha256": {
+          "albedo": "5f41dc421e0a3bb74e527e0ce6918bf83c989e7534fdd956ada497a1ab847e99",
+          "emission": "5e033a12216a1ecb2259ce890627911b1b69a0164136b25eff07117c14c97c8e",
+          "orm": "6cdfef28f002eafeffd4adf4c19510c64fa0f322ff5fdf1b1dad9759aa8b4267"
+        }
+      },
+      "dimensions": [
+        1.048828125,
+        3.0
+      ],
+      "bytes": 15892
+    },
+    {
+      "id": "horizontal_billboard",
+      "archetype": "HORIZONTAL_BILLBOARD",
+      "directory": "Assets/ProceduralArt/Billboards/horizontal_billboard",
+      "scene": "res://Assets/ProceduralArt/Billboards/horizontal_billboard/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "HORIZONTAL_BILLBOARD",
+        "seed": 99,
+        "palette": "COLD_SERVICE",
+        "colors": {
+          "neon": "#69e5da",
+          "accent": "#ffc36b",
+          "back": "#17272c",
+          "ink": "#b9ceca"
+        },
+        "parameters": {
+          "aspect": 3.1,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          165
+        ],
+        "sha256": {
+          "albedo": "8dc3b153aead2ed5c86492c8541a68652a7c93fe86810fc33fe71e073558b969",
+          "emission": "da8570afb7b4bdf5537341cf34edb2c5200a212a56e397afabe1fe62ab6d1f00",
+          "orm": "88f1dcdc92533b071ed7930987be6ddc77ebba347f80687874e1b2d89fa47af7"
+        }
+      },
+      "dimensions": [
+        3.0,
+        0.966796875
+      ],
+      "bytes": 16987
+    },
+    {
+      "id": "service_strip",
+      "archetype": "SERVICE_STRIP",
+      "directory": "Assets/ProceduralArt/Billboards/service_strip",
+      "scene": "res://Assets/ProceduralArt/Billboards/service_strip/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "SERVICE_STRIP",
+        "seed": 99,
+        "palette": "COLD_SERVICE",
+        "colors": {
+          "neon": "#69e5da",
+          "accent": "#ffc36b",
+          "back": "#17272c",
+          "ink": "#b9ceca"
+        },
+        "parameters": {
+          "aspect": 4.4,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          116
+        ],
+        "sha256": {
+          "albedo": "6ca97540805732d5d16cc2a047f446c59f02aa72aad9c81d56beea08da2ed5b5",
+          "emission": "59fb06b9794a17a2e69f0c2afcc44bed895564dc520635245f973f4bce7d84e9",
+          "orm": "fc8c7b3a3ae107637c4523946af76f872a09928e527d585785f8a9f5d7b7b347"
+        }
+      },
+      "dimensions": [
+        3.0,
+        0.6796875
+      ],
+      "bytes": 13970
+    },
+    {
+      "id": "warning_panel",
+      "archetype": "WARNING_PANEL",
+      "directory": "Assets/ProceduralArt/Billboards/warning_panel",
+      "scene": "res://Assets/ProceduralArt/Billboards/warning_panel/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "WARNING_PANEL",
+        "seed": 99,
+        "palette": "AMBER_WARNING",
+        "colors": {
+          "neon": "#ffd477",
+          "accent": "#ed6942",
+          "back": "#29271e",
+          "ink": "#ded9b7"
+        },
+        "parameters": {
+          "aspect": 1.35,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": true,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          379
+        ],
+        "sha256": {
+          "albedo": "cc87788b3d4371c336b595c29c8f48936f1b1eba9ced0b3099ec286587e2662f",
+          "emission": "fa16bcbce3864c6932f52fce1197285c4176dca87bbec3df21ea49a902663a93",
+          "orm": "38fa906660894a690f0a9a0f7dda82a7bf082dfbe2bf381b7e329aa89e92c324"
+        }
+      },
+      "dimensions": [
+        3.0,
+        2.220703125
+      ],
+      "bytes": 27564
+    },
+    {
+      "id": "panel_ad",
+      "archetype": "PANEL_AD",
+      "directory": "Assets/ProceduralArt/Billboards/panel_ad",
+      "scene": "res://Assets/ProceduralArt/Billboards/panel_ad/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "PANEL_AD",
+        "seed": 99,
+        "palette": "CORPORATE_ICE",
+        "colors": {
+          "neon": "#b0dbea",
+          "accent": "#71b4ce",
+          "back": "#18232e",
+          "ink": "#c6ced4"
+        },
+        "parameters": {
+          "aspect": 1.5,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          341
+        ],
+        "sha256": {
+          "albedo": "7e3bb85ac2c10f57eb4c619a438531919b9e7962c416f13471df26bdfac9d7b1",
+          "emission": "be297a6d12b1e086e3a8b23cb63c8462dd1eb55a15f67819a603f53be46d5513",
+          "orm": "1f9f4d757ae420492691a21da88a6411380a6e69027f84980a43e83d02a8dff1"
+        }
+      },
+      "dimensions": [
+        3.0,
+        1.998046875
+      ],
+      "bytes": 27203
+    },
+    {
+      "id": "stacked_signage",
+      "archetype": "STACKED_SIGNAGE",
+      "directory": "Assets/ProceduralArt/Billboards/stacked_signage",
+      "scene": "res://Assets/ProceduralArt/Billboards/stacked_signage/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "STACKED_SIGNAGE",
+        "seed": 99,
+        "palette": "NIGHT_MARKET",
+        "colors": {
+          "neon": "#ff7c91",
+          "accent": "#79d9ef",
+          "back": "#281e2e",
+          "ink": "#e0c6cd"
+        },
+        "parameters": {
+          "aspect": 0.65,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          333,
+          512
+        ],
+        "sha256": {
+          "albedo": "c66f696637b06a89882012b03e4272898ea0900137cbd7be2941fe5e92436704",
+          "emission": "e87746c3a85d2beb8751b4e9a650889349ce037badb8739b340ec6f4d36b3d28",
+          "orm": "fc77b43c73dec624a949abb9d9b5bbe28d7820e61c0ea71f67e3488f6c77f3b4"
+        }
+      },
+      "dimensions": [
+        1.951171875,
+        3.0
+      ],
+      "bytes": 20833
+    },
+    {
+      "id": "hologram",
+      "archetype": "HOLOGRAM",
+      "directory": "Assets/ProceduralArt/Billboards/hologram",
+      "scene": "res://Assets/ProceduralArt/Billboards/hologram/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "HOLOGRAM",
+        "seed": 99,
+        "palette": "COLD_SERVICE",
+        "colors": {
+          "neon": "#69e5da",
+          "accent": "#ffc36b",
+          "back": "#17272c",
+          "ink": "#b9ceca"
+        },
+        "parameters": {
+          "aspect": 1.3,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": false,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          394
+        ],
+        "sha256": {
+          "albedo": "f478f9cca226ce3dfdd4c2f566778741b7b277ee0fb17fa8e00d2895d409d6be",
+          "emission": "03103083983460c84c16caf3ab948b531d926f22416b19ed5010327976001d52",
+          "orm": "9d6881b1998fa9c72f295111cae960a050a180ce70b756771b800e3b9afab8c1"
+        }
+      },
+      "dimensions": [
+        3.0,
+        2.30859375
+      ],
+      "bytes": 34651
+    },
+    {
+      "id": "glyph_monolith",
+      "archetype": "GLYPH_MONOLITH",
+      "directory": "Assets/ProceduralArt/Billboards/glyph_monolith",
+      "scene": "res://Assets/ProceduralArt/Billboards/glyph_monolith/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "GLYPH_MONOLITH",
+        "seed": 99,
+        "palette": "REACTOR_LIME",
+        "colors": {
+          "neon": "#bdda79",
+          "accent": "#ecc585",
+          "back": "#252c20",
+          "ink": "#cbd7b5"
+        },
+        "parameters": {
+          "aspect": 0.5,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          256,
+          512
+        ],
+        "sha256": {
+          "albedo": "a80a7a5949c1b1265302623e5c29bb01b99c5bf04fc2c224991730ca1bbe3d3e",
+          "emission": "f68177ff1d1c3a74773d05217079755fd540aa96a66a88bd461dac7fe81a421e",
+          "orm": "2cc2176c74596bd39127c71a1259ddd4c673021c38d370f296ea3eca25d0f28f"
+        }
+      },
+      "dimensions": [
+        1.5,
+        3.0
+      ],
+      "bytes": 19027
+    },
+    {
+      "id": "numeric_code",
+      "archetype": "NUMERIC_CODE",
+      "directory": "Assets/ProceduralArt/Billboards/numeric_code",
+      "scene": "res://Assets/ProceduralArt/Billboards/numeric_code/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "NUMERIC_CODE",
+        "seed": 99,
+        "palette": "AMBER_WARNING",
+        "colors": {
+          "neon": "#ffd477",
+          "accent": "#ed6942",
+          "back": "#29271e",
+          "ink": "#ded9b7"
+        },
+        "parameters": {
+          "aspect": 2.1,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.12,
+          "grime": 0.12,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          244
+        ],
+        "sha256": {
+          "albedo": "22e777ba0ae9346c90cb7d27670928a8d4cb25cd34081447fd623bac0336f914",
+          "emission": "bc9adb4cad68cafb856e255a41d9996b62d5dba512c62f1c7ef5deed9c548634",
+          "orm": "e51dfc740309f1fb687841907c61833c8f6ca753f6a25c2c08cacb86a9195239"
+        }
+      },
+      "dimensions": [
+        3.0,
+        1.4296875
+      ],
+      "bytes": 19825
+    },
+    {
+      "id": "corporate_panel",
+      "archetype": "CORPORATE_PANEL",
+      "directory": "Assets/ProceduralArt/Billboards/corporate_panel",
+      "scene": "res://Assets/ProceduralArt/Billboards/corporate_panel/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "CORPORATE_PANEL",
+        "seed": 99,
+        "palette": "CORPORATE_ICE",
+        "colors": {
+          "neon": "#b0dbea",
+          "accent": "#71b4ce",
+          "back": "#18232e",
+          "ink": "#c6ced4"
+        },
+        "parameters": {
+          "aspect": 2.4,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.03,
+          "grime": 0.02,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          213
+        ],
+        "sha256": {
+          "albedo": "8aab5296450a904da6ff76eade9a3b1c7017cae754d30bdf28a7f181390aadb9",
+          "emission": "ed04257345e57a89a617ceeb0061f7490f59e3d114ccc404cdcf4c52867bd702",
+          "orm": "815b19c0d07b51af23786fb26f6a2166e700c7df25343772d741bce94dee511a"
+        }
+      },
+      "dimensions": [
+        3.0,
+        1.248046875
+      ],
+      "bytes": 13829
+    },
+    {
+      "id": "dirty_lightbox",
+      "archetype": "DIRTY_LIGHTBOX",
+      "directory": "Assets/ProceduralArt/Billboards/dirty_lightbox",
+      "scene": "res://Assets/ProceduralArt/Billboards/dirty_lightbox/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "DIRTY_LIGHTBOX",
+        "seed": 99,
+        "palette": "REACTOR_LIME",
+        "colors": {
+          "neon": "#bdda79",
+          "accent": "#ecc585",
+          "back": "#252c20",
+          "ink": "#cbd7b5"
+        },
+        "parameters": {
+          "aspect": 2.5,
+          "density": 0.55,
+          "emission_strength": 2.0,
+          "wear": 0.45,
+          "grime": 0.38,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          205
+        ],
+        "sha256": {
+          "albedo": "b5773f1678a9fca3860b8ca0e827ee60c6b50d19b70b95868bb4008ba8ead465",
+          "emission": "3db27ce7e3e11632d03b0e5a099fc508fa656a658fcd8eb91e3bba03a03f2276",
+          "orm": "ea1472110206fe4f1e268a0dabeb44cb62e4a926335d5ee8c54e78ff9936fd30"
+        }
+      },
+      "dimensions": [
+        3.0,
+        1.201171875
+      ],
+      "bytes": 33565
+    },
+    {
+      "id": "inactive_billboard",
+      "archetype": "INACTIVE_BILLBOARD",
+      "directory": "Assets/ProceduralArt/Billboards/inactive_billboard",
+      "scene": "res://Assets/ProceduralArt/Billboards/inactive_billboard/sign.tscn",
+      "recipe": {
+        "schema": "bow.billboard",
+        "version": 1,
+        "generator_version": "1.0",
+        "archetype": "INACTIVE_BILLBOARD",
+        "seed": 99,
+        "palette": "CORPORATE_ICE",
+        "colors": {
+          "neon": "#b0dbea",
+          "accent": "#71b4ce",
+          "back": "#18232e",
+          "ink": "#c6ced4"
+        },
+        "parameters": {
+          "aspect": 2.8,
+          "density": 0.55,
+          "emission_strength": 0.0,
+          "wear": 0.32,
+          "grime": 0.25,
+          "border": 0.7,
+          "glyph_scale": 1.0
+        },
+        "support_frame": true,
+        "hazard": false,
+        "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+        "long_edge": 512,
+        "size": [
+          512,
+          183
+        ],
+        "sha256": {
+          "albedo": "28293419fee528beaeb9f0061321972bd16e890f5ad4c8f9597ccd92454beaa6",
+          "emission": "b0fdc10874ea9a392f4f41ed7b15f7bf8c791b61db91e419758256386f590582",
+          "orm": "d17f8fa19b1d416c56fbee3d5c7269d10f7bd2eeaacfbf4eb06dd24d636deae5"
+        }
+      },
+      "dimensions": [
+        3.0,
+        1.072265625
+      ],
+      "bytes": 19582
+    }
+  ]
+}

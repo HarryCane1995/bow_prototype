@@ -1,0 +1,248 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 3,
+  "generator_version": "0.3.0",
+  "generator_fingerprint": "56cbda157ee9299d7705eced7dada5f94595b64ba3f3028c7e8dd49aa7734242",
+  "created_at": "2026-09-18T01:49:51+00:00",
+  "name": "floor_99_A_legacy_baked",
+  "surface_mode": "TILEABLE_SURFACE",
+  "tile_mode": "FULL_2D_TILE",
+  "preset": "INDUSTRIAL_FLOOR",
+  "seed": 99,
+  "palette": "industrial",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.6,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.11,
+      "seam_contrast": 0.48,
+      "material_variation": 0.576,
+      "macro_grime_strength": 0.442,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.652,
+      "baked_lighting_strength": 0.18,
+      "detail_contrast": 0.34,
+      "module_irregularity": 0.62
+    }
+  },
+  "parameters": {
+    "tile_scale": 1,
+    "panel_scale": 1.3,
+    "grout_width": 3,
+    "surface_wear": 0.66,
+    "macro_variation": 0.55,
+    "seam_visibility": 0.45,
+    "floor_markings_density": 0.45,
+    "wall_module_density": 0.35
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "breakup": {
+    "mode": "LEGACY_BAKED",
+    "export_mode": "BAKED",
+    "macro_variation": 0.35,
+    "grime": 0.25,
+    "micro_grain": 0.12,
+    "retro_artifacts": 0,
+    "version": "1.0"
+  },
+  "overrides": {},
+  "outputs": {
+    "albedo": "floor_99_A_legacy_baked_albedo.png",
+    "emission": "floor_99_A_legacy_baked_emission.png",
+    "normal": "floor_99_A_legacy_baked_normal.png",
+    "orm": "floor_99_A_legacy_baked_orm.png",
+    "height": "floor_99_A_legacy_baked_height.png",
+    "preview": "floor_99_A_legacy_baked_preview.png",
+    "tiled_preview": "floor_99_A_legacy_baked_tiled_preview.png",
+    "seam_debug": "floor_99_A_legacy_baked_seam_debug.png"
+  },
+  "sha256": {
+    "albedo": "8c796099a3478584e3f299a80cd8922744e5c9ad994ed9dcd9cb4ddd1d7d609a",
+    "emission": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+    "normal": "4f764b1e4be041c11e8976e8ae6a028b5c7bd13eaa046089361a34a7fc5121df",
+    "orm": "fab6078ed7a5fccfc37068534f944ef5f03d35fab32a8b8a60153b6955808ef9",
+    "height": "71b9112eac5131155185f0aa49aac00c5f11d16b38dc14a5579a5b7d51c07ce8"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data"
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "material": "Assets/Materials/Environment/FacadeFactory/Generated/floor_99_A_legacy_baked.tres",
+  "canonical_metadata": {
+    "version": "0.3.0",
+    "surface_mode": "TILEABLE_SURFACE",
+    "preset": "INDUSTRIAL_FLOOR",
+    "seed": 99,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1.3,
+      "grout_width": 3,
+      "surface_wear": 0.66,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.45,
+      "floor_markings_density": 0.45,
+      "wall_module_density": 0.35
+    },
+    "breakup": {
+      "mode": "LEGACY_BAKED",
+      "export_mode": "BAKED",
+      "macro_variation": 0.35,
+      "grime": 0.25,
+      "micro_grain": 0.12,
+      "retro_artifacts": 0,
+      "version": "1.0"
+    },
+    "tile_mode": "FULL_2D_TILE",
+    "periodic_axes": [
+      "X",
+      "Y"
+    ],
+    "art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {},
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.48,
+        "material_variation": 0.576,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "applied_art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {
+        "material_variation": 0.40752,
+        "seam_contrast": 0.4605
+      },
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.4605,
+        "material_variation": 0.4075,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "art_statistics": {
+      "material_classes": {
+        "PAINTED_METAL": 239664,
+        "RAW_METAL": 10336,
+        "GLASS": 0,
+        "CONCRETE": 0,
+        "VENT": 0,
+        "RECESSED_VOID": 12144
+      },
+      "seam_classes": {
+        "DEEP_RECESS": 0,
+        "NORMAL_SEAM": 6216,
+        "SUBTLE_JOIN": 6072
+      },
+      "replacement_modules": 2,
+      "effective_style": {
+        "posterization": 256,
+        "dithering": 0.021999999999999995,
+        "color_quantization": 256,
+        "micro_contrast": 0.0408,
+        "compression_artifacts": 0.007999999999999998,
+        "pixel_noise": 0.65,
+        "edge_exaggeration": 0.010000000000000009,
+        "baked_ao_strength": 0.0576
+      },
+      "structural_modules": 4
+    },
+    "seam_qa": {
+      "axes": [
+        "X",
+        "Y"
+      ],
+      "channels": {
+        "albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "emission": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "height": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "orm": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "normal": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        }
+      },
+      "passed": true
+    },
+    "structure_hash": "e4b15bde89b0bdd89056e878fd3487f4283f0110aa7c76f3419ac37184575280",
+    "sha256": {
+      "albedo": "8c796099a3478584e3f299a80cd8922744e5c9ad994ed9dcd9cb4ddd1d7d609a",
+      "emission": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "height": "71b9112eac5131155185f0aa49aac00c5f11d16b38dc14a5579a5b7d51c07ce8",
+      "orm": "fab6078ed7a5fccfc37068534f944ef5f03d35fab32a8b8a60153b6955808ef9",
+      "normal": "4f764b1e4be041c11e8976e8ae6a028b5c7bd13eaa046089361a34a7fc5121df"
+    }
+  }
+}

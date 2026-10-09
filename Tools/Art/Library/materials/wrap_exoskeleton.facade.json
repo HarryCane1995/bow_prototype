@@ -1,0 +1,235 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 4,
+  "generator_version": "0.4.0",
+  "generator_fingerprint": "38c970db1f0695bec9006f5fd5c35d164466e620e90486f34d5d222630722a5e",
+  "created_at": "2026-09-18T17:21:25+00:00",
+  "name": "WRAP_EXOSKELETON",
+  "surface_mode": "CYLINDER_WRAP",
+  "tile_mode": "HORIZONTAL_WRAP_ONLY",
+  "preset": "WRAP_EXOSKELETON",
+  "seed": 5321,
+  "palette": "concrete",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.18,
+    "overrides": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "detail_contrast": 0.25,
+      "baked_lighting_strength": 0.12,
+      "module_irregularity": 0.25
+    },
+    "controls": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "material_variation": 0.4458,
+      "macro_grime_strength": 0.2236,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.6856,
+      "baked_lighting_strength": 0.12,
+      "detail_contrast": 0.25,
+      "module_irregularity": 0.25
+    }
+  },
+  "parameters": {
+    "circumference_modules": 6,
+    "vertical_band_count": 3,
+    "ring_density": 0.25,
+    "vertical_seam_count": 4,
+    "service_hatch_density": 0.16,
+    "emission_band_density": 0.08,
+    "pipe_grime_flow": 0.48
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    512,
+    1024
+  ],
+  "breakup": {
+    "mode": "LAYERED",
+    "export_mode": "BAKED",
+    "macro_variation": 0.18,
+    "grime": 0.14,
+    "micro_grain": 0.025,
+    "retro_artifacts": 0,
+    "version": "1.0"
+  },
+  "palette_mix": {
+    "enabled": true,
+    "preset": "DIRTY_CONCRETE",
+    "version": "1.0",
+    "colors": {
+      "BASE": "#77766a",
+      "SECONDARY": "#929084",
+      "DARK": "#252c2b",
+      "ACCENT": "#aa976e",
+      "GLASS": "#343e40",
+      "EMISSION_PRIMARY": "#bdc6b8",
+      "EMISSION_SECONDARY": "#d0b184",
+      "GRIME_TINT": "#514737"
+    },
+    "locks": {
+      "BASE": false,
+      "SECONDARY": false,
+      "DARK": false,
+      "ACCENT": false,
+      "GLASS": false,
+      "EMISSION_PRIMARY": false,
+      "EMISSION_SECONDARY": false,
+      "GRIME_TINT": false
+    },
+    "material_responses": {
+      "PAINTED_METAL": {
+        "roughness": 0.76,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      },
+      "RAW_METAL": {
+        "roughness": 0.49,
+        "metallic": 0.82,
+        "ao_response": 1.0
+      },
+      "GLASS": {
+        "roughness": 0.23,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "CONCRETE": {
+        "roughness": 0.94,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "VENT": {
+        "roughness": 0.82,
+        "metallic": 0.38,
+        "ao_response": 1.0
+      },
+      "RECESSED_VOID": {
+        "roughness": 0.98,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "ACCENT_PAINT": {
+        "roughness": 0.74,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      }
+    },
+    "albedo_influence": 0.82,
+    "emission_influence": 0.85,
+    "weather_tint_influence": 0.15,
+    "material_variation_influence": 0.4,
+    "accent_usage": 0.75,
+    "colored_balance": 0.8,
+    "structural_separation": 0.65,
+    "orm_influence": 0.65
+  },
+  "overrides": {
+    "circumference_modules": 6,
+    "vertical_band_count": 3,
+    "ring_density": 0.25,
+    "vertical_seam_count": 4,
+    "service_hatch_density": 0.16,
+    "emission_band_density": 0.08,
+    "pipe_grime_flow": 0.48
+  },
+  "outputs": {
+    "albedo": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/albedo.png",
+    "normal": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/normal.png",
+    "orm": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/orm.png",
+    "height": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/height.png",
+    "emission": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/emission.png"
+  },
+  "sha256": {
+    "albedo": "5f3979bd8237cf1704836d8eac8f5262e52dfe4b4e46931314e267a99a535580",
+    "normal": "8d8449bfb9b03cbeb1a58f7f30dd19da8c988692d5e82fd29f93c364d3f9fac1",
+    "orm": "96eefd71532e7b1c6bb55e8999bc0c2d938288bb0568b26495c64e09aaa1ea62",
+    "height": "11b5cba95ee6fb313a17c4038d80a2c09a714c69b761f4a3f44cb53348841395",
+    "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data",
+    "emission_mask": "linear data"
+  },
+  "palette_role_weights": {
+    "PAINTED_METAL": {
+      "BASE": 0.76,
+      "SECONDARY": 0.2,
+      "ACCENT": 0.04
+    },
+    "RAW_METAL": {
+      "DARK": 0.15,
+      "BASE": 0.85
+    },
+    "GLASS": {
+      "GLASS": 0.92,
+      "BASE": 0.08
+    },
+    "CONCRETE": {
+      "BASE": 0.65,
+      "SECONDARY": 0.35
+    },
+    "VENT": {
+      "DARK": 1.0
+    },
+    "RECESSED_VOID": {
+      "DARK": 1.0
+    },
+    "SIGNAGE": {
+      "ACCENT": 1.0
+    },
+    "EMISSIVE": {
+      "EMISSION_PRIMARY": 0.75,
+      "EMISSION_SECONDARY": 0.25
+    }
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "library": {
+    "id": "wrap_exoskeleton",
+    "category": "wrap",
+    "description": "Diamond load braces around recessed column plates",
+    "palette": "concrete",
+    "references": [
+      "D12",
+      "M09"
+    ],
+    "preset": "WRAP_EXOSKELETON"
+  },
+  "material": "res://Assets/ProceduralArt/Materials/wrap_exoskeleton/material.tres"
+}

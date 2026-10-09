@@ -1,0 +1,132 @@
+{
+  "id": "HR026",
+  "name": "Screen Sail",
+  "category": "billboard",
+  "subtype": 0,
+  "seed": 1130994,
+  "role": "midground",
+  "collection": "HR026_Screen_Sail",
+  "bounds_m": [
+    43.58,
+    42.2534,
+    231.08800000000002
+  ],
+  "bounds_min": [
+    -21.79,
+    -21.1267,
+    0.0
+  ],
+  "bounds_max": [
+    21.79,
+    21.1267,
+    231.08800000000002
+  ],
+  "parameters": {
+    "width": 37.8,
+    "depth": 35.31,
+    "height": 228.8,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "service_blade",
+    "single_screen_sail"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 10,
+    "triangles": 120,
+    "vertices": 88,
+    "polygons": 60
+  },
+  "geometry_sha256": "b07848f68990514381e2966ac491c551e6dd291f872d96ed2077eef7ae64c5b7",
+  "geometry_only_sha256": "1fac7f1432ee5d2d3f1d4f2e980380b7882a3cb88448cfb07b736d1aa0b413a2",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.53,
+    "mass_complexity": 0.105,
+    "industrial_density": 0.6,
+    "window_emission_density": 0.3,
+    "signage_density": 0.067,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.213,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "accent_billboard_support",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "SailShaft_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "SailShaft": [
+      "f5_1_uv"
+    ],
+    "BillboardFrame": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Display": [
+      "floor_metal_deck",
+      "sign_0_uv"
+    ],
+    "DisplayRail": [
+      "signal"
+    ],
+    "ScreenMount": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "ServiceBlade": [
+      "accent_billboard_support",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 12,
+    "floor_rooftop": 2,
+    "floor_metal_deck": 27,
+    "accent_billboard_support": 8,
+    "f5_1_uv": 4,
+    "sign_0_uv": 1,
+    "signal": 6
+  },
+  "recipes": [
+    "Recipes/accent_billboard_support.facade.json",
+    "Recipes/f5_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/sign_0_uv.uv.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "accent_billboard_support": 5802,
+    "f5_1_uv": 925522,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "sign_0_uv": 925700,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR026.png",
+    "UV_Material_QA/Views/HR026_back.png",
+    "UV_Material_QA/Views/HR026_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

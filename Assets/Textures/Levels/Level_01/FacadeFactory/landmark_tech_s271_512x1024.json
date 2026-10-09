@@ -1,0 +1,206 @@
+{
+  "version": "0.1.0",
+  "preset": "LANDMARK_TECH",
+  "seed": 271,
+  "resolution": [
+    512,
+    1024
+  ],
+  "config": {
+    "name": "LANDMARK_TECH",
+    "grammar": "landmark",
+    "palette": "cold",
+    "window_density": 0.58,
+    "window_aspect": 0.65,
+    "floor_height": 30,
+    "structural_width": 14,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "emission_density": 0.32,
+    "emission_strength": 1.7,
+    "grime_amount": 0.1,
+    "panel_density": 0.44,
+    "signage_density": 0.16,
+    "macro_contrast": 0.28,
+    "retro_strength": 0.72,
+    "style": {
+      "posterization": 40,
+      "dithering": 0.22,
+      "color_quantization": 112,
+      "micro_contrast": 0.12,
+      "compression_artifacts": 0.08,
+      "pixel_noise": 0.65,
+      "edge_exaggeration": 0.2,
+      "baked_ao_strength": 0.32
+    }
+  },
+  "floor_groups": [
+    {
+      "index": 0,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.517,
+      "zones": [
+        0.638,
+        0.663,
+        0.551
+      ]
+    },
+    {
+      "index": 1,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.207,
+      "zones": [
+        0.319,
+        0.284,
+        0.172
+      ]
+    },
+    {
+      "index": 2,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.139,
+      "zones": [
+        0.087,
+        0.043,
+        0.236
+      ]
+    },
+    {
+      "index": 3,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.395,
+      "zones": [
+        0.451,
+        0.491,
+        0.4
+      ]
+    },
+    {
+      "index": 4,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.548,
+      "zones": [
+        0.549,
+        0.409,
+        0.584
+      ]
+    },
+    {
+      "index": 5,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.459,
+      "zones": [
+        0.461,
+        0.59,
+        0.449
+      ]
+    },
+    {
+      "index": 6,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.135,
+      "zones": [
+        0.261,
+        0.01,
+        0.161
+      ]
+    },
+    {
+      "index": 7,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.25,
+      "zones": [
+        0.149,
+        0.356,
+        0.32
+      ]
+    },
+    {
+      "index": 8,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.272,
+      "zones": [
+        0.365,
+        0.12,
+        0.419
+      ]
+    },
+    {
+      "index": 9,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.131,
+      "zones": [
+        0.042,
+        0.023,
+        0.279
+      ]
+    },
+    {
+      "index": 10,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.381,
+      "zones": [
+        0.447,
+        0.424,
+        0.291
+      ]
+    },
+    {
+      "index": 11,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.504,
+      "zones": [
+        0.536,
+        0.56,
+        0.454
+      ]
+    },
+    {
+      "index": 12,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.359,
+      "zones": [
+        0.342,
+        0.452,
+        0.337
+      ]
+    }
+  ],
+  "window_states": {
+    "ON": 44,
+    "BROKEN/DARK": 8,
+    "DIM": 43,
+    "SERVICE": 7,
+    "OFF": 69,
+    "BRIGHT": 6,
+    "BLOCKED": 6
+  },
+  "signage_count": 4,
+  "tiling": "unique sheet / clamp",
+  "normal": "OpenGL +X +Y +Z",
+  "orm": {
+    "R": "ambient occlusion",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "sha256": {
+    "albedo": "61df75ccc24a2aea154eb106b3e38dbe6dac914cc3280f0ca90f2d5fbd29155f",
+    "emission": "eb5708a79f8589c84ed3aa05b44c4b2b30e283c51fc8e1ee468c689a0896487f",
+    "height": "84b42bffdd755b33a56c16eb43060c64c8bdc4c848575e9b182d5c431baa3985",
+    "orm": "3dc4bdac5c32d940286cda32c44024313f642bd07b64a61c76a079cc708f1e1c",
+    "normal": "a57eee28cadad38908ccf2c3fbdb97b745c2b785f1093c28f57b7d1fd79b49dd"
+  }
+}

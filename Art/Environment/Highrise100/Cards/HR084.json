@@ -1,0 +1,145 @@
+{
+  "id": "HR084",
+  "name": "Sky Forum",
+  "category": "civic",
+  "subtype": 3,
+  "seed": 1590296,
+  "role": "midground",
+  "collection": "HR084_Sky_Forum",
+  "bounds_m": [
+    102.08,
+    40.4404,
+    222.95
+  ],
+  "bounds_min": [
+    -51.04,
+    -20.4204,
+    0.0
+  ],
+  "bounds_max": [
+    51.04,
+    20.02,
+    222.95
+  ],
+  "parameters": {
+    "width": 92.8,
+    "depth": 40.04,
+    "height": 218.5,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Sky Forum",
+    "civic",
+    "elevated_loggia",
+    "open_central_portal",
+    "roof_paired_hvac",
+    "sky_forum",
+    "twin_support_towers"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 15,
+    "triangles": 244,
+    "vertices": 232,
+    "polygons": 106
+  },
+  "geometry_sha256": "4c2c96a99eb92cb2356e32c2d75c73bc8061c0bb577d74410a8ba779d64e9760",
+  "geometry_only_sha256": "026e7d58ca10aca6e9f52fc7550943db04bde3b0d69a520182cfe3e89f2e1e87",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.218,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.333,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.16,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "forum_support_tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "forum_support_tower": [
+      "f5_3_uv"
+    ],
+    "elevated_forum_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "elevated_forum": [
+      "f0_0_uv"
+    ],
+    "forum_front_loggia": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "loggia_column": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "assembly_back_crown_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "assembly_back_crown": [
+      "f5_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 39,
+    "floor_rooftop": 10,
+    "f5_3_uv": 12,
+    "f0_0_uv": 4,
+    "floor_metal_deck": 29,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/f5_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "f5_3_uv": 925556,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR084.png",
+    "UV_Material_QA/Views/HR084_back.png",
+    "UV_Material_QA/Views/HR084_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

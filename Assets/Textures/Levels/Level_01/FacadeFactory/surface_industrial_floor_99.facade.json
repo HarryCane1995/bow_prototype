@@ -1,0 +1,215 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 2,
+  "generator_version": "0.2.0",
+  "generator_fingerprint": "998af938452dcc1c428ffbb73e861a1d17bd40a00885edd128c8779ae490fc23",
+  "created_at": "2026-09-18T01:20:20+00:00",
+  "name": "surface_industrial_floor_99",
+  "surface_mode": "TILEABLE_SURFACE",
+  "tile_mode": "FULL_2D_TILE",
+  "preset": "INDUSTRIAL_FLOOR",
+  "seed": 99,
+  "palette": "industrial",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.6,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.11,
+      "seam_contrast": 0.48,
+      "material_variation": 0.576,
+      "macro_grime_strength": 0.442,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.652,
+      "baked_lighting_strength": 0.18,
+      "detail_contrast": 0.34,
+      "module_irregularity": 0.62
+    }
+  },
+  "parameters": {
+    "tile_scale": 1,
+    "panel_scale": 1.3,
+    "grout_width": 3,
+    "surface_wear": 0.66,
+    "macro_variation": 0.55,
+    "seam_visibility": 0.45,
+    "floor_markings_density": 0.45,
+    "wall_module_density": 0.35
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    1024,
+    1024
+  ],
+  "overrides": {},
+  "outputs": {
+    "albedo": "surface_industrial_floor_99_albedo.png",
+    "emission": "surface_industrial_floor_99_emission.png",
+    "normal": "surface_industrial_floor_99_normal.png",
+    "orm": "surface_industrial_floor_99_orm.png",
+    "height": "surface_industrial_floor_99_height.png",
+    "preview": "surface_industrial_floor_99_preview.png",
+    "tiled_preview": "surface_industrial_floor_99_tiled_preview.png",
+    "seam_debug": "surface_industrial_floor_99_seam_debug.png"
+  },
+  "sha256": {
+    "albedo": "8c796099a3478584e3f299a80cd8922744e5c9ad994ed9dcd9cb4ddd1d7d609a",
+    "emission": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+    "height": "71b9112eac5131155185f0aa49aac00c5f11d16b38dc14a5579a5b7d51c07ce8",
+    "orm": "fab6078ed7a5fccfc37068534f944ef5f03d35fab32a8b8a60153b6955808ef9",
+    "normal": "4f764b1e4be041c11e8976e8ae6a028b5c7bd13eaa046089361a34a7fc5121df"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "material": "Assets/Materials/Environment/FacadeFactory/Generated/surface_industrial_floor_99.tres",
+  "canonical_metadata": {
+    "version": "0.2.0",
+    "surface_mode": "TILEABLE_SURFACE",
+    "preset": "INDUSTRIAL_FLOOR",
+    "seed": 99,
+    "resolution": [
+      1024,
+      1024
+    ],
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1.3,
+      "grout_width": 3,
+      "surface_wear": 0.66,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.45,
+      "floor_markings_density": 0.45,
+      "wall_module_density": 0.35
+    },
+    "tile_mode": "FULL_2D_TILE",
+    "periodic_axes": [
+      "X",
+      "Y"
+    ],
+    "art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {},
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.48,
+        "material_variation": 0.576,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "applied_art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {
+        "material_variation": 0.40752,
+        "seam_contrast": 0.4605
+      },
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.4605,
+        "material_variation": 0.4075,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "art_statistics": {
+      "material_classes": {
+        "PAINTED_METAL": 239664,
+        "RAW_METAL": 10336,
+        "GLASS": 0,
+        "CONCRETE": 0,
+        "VENT": 0,
+        "RECESSED_VOID": 12144
+      },
+      "seam_classes": {
+        "DEEP_RECESS": 0,
+        "NORMAL_SEAM": 6216,
+        "SUBTLE_JOIN": 6072
+      },
+      "replacement_modules": 2,
+      "effective_style": {
+        "posterization": 256,
+        "dithering": 0.021999999999999995,
+        "color_quantization": 256,
+        "micro_contrast": 0.0408,
+        "compression_artifacts": 0.007999999999999998,
+        "pixel_noise": 0.65,
+        "edge_exaggeration": 0.010000000000000009,
+        "baked_ao_strength": 0.0576
+      },
+      "structural_modules": 4
+    },
+    "seam_qa": {
+      "axes": [
+        "X",
+        "Y"
+      ],
+      "channels": {
+        "albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "emission": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "height": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "orm": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "normal": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        }
+      },
+      "passed": true
+    },
+    "structure_hash": "e4b15bde89b0bdd89056e878fd3487f4283f0110aa7c76f3419ac37184575280",
+    "sha256": {
+      "albedo": "8c796099a3478584e3f299a80cd8922744e5c9ad994ed9dcd9cb4ddd1d7d609a",
+      "emission": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "height": "71b9112eac5131155185f0aa49aac00c5f11d16b38dc14a5579a5b7d51c07ce8",
+      "orm": "fab6078ed7a5fccfc37068534f944ef5f03d35fab32a8b8a60153b6955808ef9",
+      "normal": "4f764b1e4be041c11e8976e8ae6a028b5c7bd13eaa046089361a34a7fc5121df"
+    }
+  }
+}

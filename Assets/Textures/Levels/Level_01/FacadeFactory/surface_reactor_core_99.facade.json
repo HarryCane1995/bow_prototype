@@ -1,0 +1,208 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 2,
+  "generator_version": "0.2.0",
+  "generator_fingerprint": "998af938452dcc1c428ffbb73e861a1d17bd40a00885edd128c8779ae490fc23",
+  "created_at": "2026-09-18T01:20:38+00:00",
+  "name": "surface_reactor_core_99",
+  "surface_mode": "CYLINDER_WRAP",
+  "tile_mode": "HORIZONTAL_WRAP_ONLY",
+  "preset": "REACTOR_CORE_WRAP",
+  "seed": 99,
+  "palette": "cold",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.6,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.11,
+      "seam_contrast": 0.48,
+      "material_variation": 0.576,
+      "macro_grime_strength": 0.442,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.652,
+      "baked_lighting_strength": 0.18,
+      "detail_contrast": 0.34,
+      "module_irregularity": 0.62
+    }
+  },
+  "parameters": {
+    "circumference_modules": 10,
+    "vertical_band_count": 5,
+    "ring_density": 0.55,
+    "vertical_seam_count": 8,
+    "service_hatch_density": 0.25,
+    "emission_band_density": 0.8,
+    "pipe_grime_flow": 0.65
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    1024,
+    2048
+  ],
+  "overrides": {},
+  "outputs": {
+    "albedo": "surface_reactor_core_99_albedo.png",
+    "emission": "surface_reactor_core_99_emission.png",
+    "normal": "surface_reactor_core_99_normal.png",
+    "orm": "surface_reactor_core_99_orm.png",
+    "height": "surface_reactor_core_99_height.png",
+    "preview": "surface_reactor_core_99_preview.png",
+    "tiled_preview": "surface_reactor_core_99_tiled_preview.png",
+    "seam_debug": "surface_reactor_core_99_seam_debug.png"
+  },
+  "sha256": {
+    "albedo": "e9b5d6421eafadec2e73546d01cb1aee6c153115a37661eff6bf4f7656c9d3a6",
+    "emission": "5fdca4bba7a0f681fc67a242befe2ca8120f9e58931ee51112c85bf152574490",
+    "height": "aed842c706ea6d53d1c2762383fe3f6885973b74cb1667d8e1a53dec3822d93c",
+    "orm": "4217f91070b3af449a99604c5a417cd2975feae6ab457c08fcb2c8953bbffa42",
+    "normal": "77b987a1612c7234571ff7097a9163b889ad2666dfaca425abccf552c10502ce"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "material": "Assets/Materials/Environment/FacadeFactory/Generated/surface_reactor_core_99.tres",
+  "canonical_metadata": {
+    "version": "0.2.0",
+    "surface_mode": "CYLINDER_WRAP",
+    "preset": "REACTOR_CORE_WRAP",
+    "seed": 99,
+    "resolution": [
+      1024,
+      2048
+    ],
+    "parameters": {
+      "circumference_modules": 10,
+      "vertical_band_count": 5,
+      "ring_density": 0.55,
+      "vertical_seam_count": 8,
+      "service_hatch_density": 0.25,
+      "emission_band_density": 0.8,
+      "pipe_grime_flow": 0.65
+    },
+    "tile_mode": "HORIZONTAL_WRAP_ONLY",
+    "periodic_axes": [
+      "X"
+    ],
+    "art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {},
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.48,
+        "material_variation": 0.576,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "applied_art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 1,
+      "weathering": 0.6,
+      "overrides": {},
+      "controls": {
+        "panel_outline_strength": 0.11,
+        "seam_contrast": 0.48,
+        "material_variation": 0.576,
+        "macro_grime_strength": 0.442,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.652,
+        "baked_lighting_strength": 0.18,
+        "detail_contrast": 0.34,
+        "module_irregularity": 0.62
+      }
+    },
+    "art_statistics": {
+      "material_classes": {
+        "PAINTED_METAL": 374475,
+        "RAW_METAL": 69483,
+        "GLASS": 8192,
+        "CONCRETE": 0,
+        "VENT": 0,
+        "RECESSED_VOID": 72138
+      },
+      "seam_classes": {
+        "DEEP_RECESS": 36702,
+        "NORMAL_SEAM": 18084,
+        "SUBTLE_JOIN": 19356
+      },
+      "replacement_modules": 4,
+      "effective_style": {
+        "posterization": 256,
+        "dithering": 0.021999999999999995,
+        "color_quantization": 256,
+        "micro_contrast": 0.0408,
+        "compression_artifacts": 0.007999999999999998,
+        "pixel_noise": 0.65,
+        "edge_exaggeration": 0.010000000000000009,
+        "baked_ao_strength": 0.0576
+      },
+      "structural_modules": 61
+    },
+    "seam_qa": {
+      "axes": [
+        "X"
+      ],
+      "channels": {
+        "albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": null
+        },
+        "emission": {
+          "x_max_delta": 0,
+          "y_max_delta": null
+        },
+        "height": {
+          "x_max_delta": 0,
+          "y_max_delta": null
+        },
+        "orm": {
+          "x_max_delta": 0,
+          "y_max_delta": null
+        },
+        "normal": {
+          "x_max_delta": 0,
+          "y_max_delta": null
+        }
+      },
+      "passed": true
+    },
+    "structure_hash": "264ec95b42af3124f36e189ca3244e454a506e3f2b9715cc6e207bdd680eb171",
+    "sha256": {
+      "albedo": "e9b5d6421eafadec2e73546d01cb1aee6c153115a37661eff6bf4f7656c9d3a6",
+      "emission": "5fdca4bba7a0f681fc67a242befe2ca8120f9e58931ee51112c85bf152574490",
+      "height": "aed842c706ea6d53d1c2762383fe3f6885973b74cb1667d8e1a53dec3822d93c",
+      "orm": "4217f91070b3af449a99604c5a417cd2975feae6ab457c08fcb2c8953bbffa42",
+      "normal": "77b987a1612c7234571ff7097a9163b889ad2666dfaca425abccf552c10502ce"
+    }
+  }
+}

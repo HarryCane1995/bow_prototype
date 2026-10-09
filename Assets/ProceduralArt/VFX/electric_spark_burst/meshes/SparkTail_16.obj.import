@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://i8b8dj7yerrb"
+path="res://.godot/imported/SparkTail_16.obj-9208d5217d0f1e0525f78232022fc11d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SparkTail_16.obj-9208d5217d0f1e0525f78232022fc11d.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_16.obj"
+dest_files=["res://.godot/imported/SparkTail_16.obj-9208d5217d0f1e0525f78232022fc11d.mesh", "res://.godot/imported/SparkTail_16.obj-9208d5217d0f1e0525f78232022fc11d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

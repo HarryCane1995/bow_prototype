@@ -1,0 +1,137 @@
+{
+  "id": "HR083",
+  "name": "Civic Needle",
+  "category": "civic",
+  "subtype": 2,
+  "seed": 1582377,
+  "role": "midground",
+  "collection": "HR083_Civic_Needle",
+  "bounds_m": [
+    71.536,
+    62.12160000000001,
+    301.46999999999997
+  ],
+  "bounds_min": [
+    -35.768,
+    -31.060800000000004,
+    0.0
+  ],
+  "bounds_max": [
+    35.768,
+    31.060800000000004,
+    301.46999999999997
+  ],
+  "parameters": {
+    "width": 65.6,
+    "depth": 53.68,
+    "height": 273.7,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Civic Needle",
+    "ceremonial_front_axis",
+    "civic",
+    "continuous_taper",
+    "low_paired_shoulders",
+    "slender_civic_needle"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 13,
+    "triangles": 212,
+    "vertices": 192,
+    "polygons": 100
+  },
+  "geometry_sha256": "83925fc1dfe48f8008f500bc46e3a2db2e2df6d55a395c0a0e057cdc9c8f65d5",
+  "geometry_only_sha256": "29eacba40c6cc58e0f91fb88c4de9d1d1ce62692a84b69cfde536ef39a5f1cd7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.421,
+    "mass_complexity": 0.137,
+    "industrial_density": 0.231,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.15,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "civic_needle_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "civic_needle": [
+      "f5_2_uv"
+    ],
+    "needle_shoulder_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "needle_shoulder": [
+      "f0_3_uv"
+    ],
+    "ceremonial_axis": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 36,
+    "floor_rooftop": 9,
+    "floor_metal_deck": 13,
+    "wall_corporate": 4,
+    "f5_2_uv": 24,
+    "f0_3_uv": 8,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/f0_3_uv.uv.json",
+    "Recipes/f5_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_3_uv": 925051,
+    "f5_2_uv": 925539,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR083.png",
+    "UV_Material_QA/Views/HR083_back.png",
+    "UV_Material_QA/Views/HR083_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

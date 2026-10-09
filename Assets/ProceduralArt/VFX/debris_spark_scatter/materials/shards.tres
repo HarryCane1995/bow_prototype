@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/debris_spark_scatter/materials/shards.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.7137254901960784, 0.6431372549019608, 0.5450980392156862, 1)
+shader_parameter/color_b = Color(0.30196078431372547, 0.3803921568627451, 0.37254901960784315, 1)
+shader_parameter/opacity = 1.0
+shader_parameter/emission_strength = 0.0
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.15
+shader_parameter/flat_unshaded = false
+shader_parameter/dither_mode = true

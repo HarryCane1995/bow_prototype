@@ -1,0 +1,114 @@
+{
+  "id": "HR038",
+  "name": "Radio Spine",
+  "category": "needle",
+  "subtype": 2,
+  "seed": 1226022,
+  "role": "background",
+  "collection": "HR038_Radio_Spine",
+  "bounds_m": [
+    23.648,
+    32.5976,
+    527.3319999999999
+  ],
+  "bounds_min": [
+    -11.824,
+    -16.2988,
+    0.0
+  ],
+  "bounds_max": [
+    11.824,
+    16.2988,
+    527.3319999999999
+  ],
+  "parameters": {
+    "width": 19.68,
+    "depth": 26.84,
+    "height": 487.9,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "diminishing_platforms",
+    "radio_spine"
+  ],
+  "metrics": {
+    "meshes": 7,
+    "primitives": 10,
+    "triangles": 128,
+    "vertices": 96,
+    "polygons": 62
+  },
+  "geometry_sha256": "faaff3f542cda1af893ecd7beb40cc28b63436d15ba96e7a9fd52fe773e6eedd",
+  "geometry_only_sha256": "9f2e77d0a47388c35ec4ed14f20399e10fa4b2c3c9d113540dbf1bd51ac48635",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 1,
+    "mass_complexity": 0.105,
+    "industrial_density": 0.8,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.262,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.9
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ServiceNeedle": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 13,
+    "floor_rooftop": 1,
+    "floor_metal_deck": 34,
+    "wall_corporate": 8,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR038.png",
+    "UV_Material_QA/Views/HR038_back.png",
+    "UV_Material_QA/Views/HR038_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

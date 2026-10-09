@@ -1,0 +1,43 @@
+{
+  "key": "f5_1_uv",
+  "recipe": "Recipes/f5_1_uv.uv.json",
+  "mode": "PERIODIC_FACADE_INTERIOR",
+  "seed": 925522,
+  "preset": "LANDMARK_TECH",
+  "parameters": {
+    "window_density": 0.58,
+    "emission_density": 0.3,
+    "structural_width": 14,
+    "grime_amount": 0.26,
+    "retro_strength": 0.35,
+    "window_aspect": 0.85,
+    "floor_height": 28,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.44,
+    "signage_density": 0.16,
+    "macro_contrast": 0.28,
+    "emission_strength": 1.7
+  },
+  "sha256": {
+    "albedo": "6b62480ac38530dff8726efe176fd9bb381806071f4dba973b1e27cdd60b711b",
+    "normal": "e302095099ad92d24bc68e13233455af789d62356a8d8cfd148dad813d8cc299",
+    "orm": "25941f36fb95977fa1106e6da2680edcafe05e0a8108f669fcc18bb288ea63e6",
+    "height": "fd87142e3f44ee54553835a7e80896ae64802c42c20a18a17fb1255b832a9a76",
+    "emission": "bcc22ebf1eaac44f98a61933b4c0180c9a2c8c8ffa6933895fbf1b1a4bafe5ea"
+  },
+  "source_key": "f5_1",
+  "uv_qa_version": 1,
+  "crop": [
+    0,
+    36,
+    512,
+    992
+  ],
+  "tile_width_m": 42,
+  "nominal_floor_rows": 34.142857142857146,
+  "image_size": [
+    512,
+    956
+  ]
+}

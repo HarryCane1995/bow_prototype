@@ -1,0 +1,29 @@
+{
+  "key": "sign_3_uv",
+  "recipe": "Recipes/sign_3_uv.uv.json",
+  "mode": "CLAMP_SIGN_LETTERBOX",
+  "seed": 925793,
+  "preset": "VERTICAL_NEON",
+  "parameters": {
+    "aspect": 0.4,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "sha256": {
+    "albedo": "f0032f0906fa71b81978160be5c7e7dc18d94034e6314b1bba12d361ce9a7176",
+    "normal": "cf5b88a4c0be80b63f7d9904c6bbfb8cceb85993aa0130ba713e3ca2632edd99",
+    "orm": "6c9787afc825652cbe4c35796089aa33035c674e3658bea04c778baf5919003b",
+    "height": "b418d8bd0366e72ad5cf3744ec32cfc03e613964915e80eab25ab237f1831946",
+    "emission": "49a4dae6c85d06bc56f09b8d78bc1a5c0da50e2e7c854600239f007ee90a4d72"
+  },
+  "source_key": "sign_3",
+  "uv_qa_version": 1,
+  "image_size": [
+    213,
+    520
+  ]
+}

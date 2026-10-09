@@ -1,0 +1,228 @@
+{
+  "version": "0.1.0",
+  "preset": "MEGABLOCK",
+  "seed": 17,
+  "resolution": [
+    512,
+    1024
+  ],
+  "config": {
+    "name": "MEGABLOCK",
+    "grammar": "megablock",
+    "palette": "concrete",
+    "window_density": 0.68,
+    "window_aspect": 1.4,
+    "floor_height": 25,
+    "structural_width": 17,
+    "service_floor_frequency": 0.23,
+    "dark_floor_frequency": 0.13,
+    "emission_density": 0.42,
+    "emission_strength": 1.35,
+    "grime_amount": 0.4,
+    "panel_density": 0.45,
+    "signage_density": 0.34,
+    "macro_contrast": 0.23,
+    "retro_strength": 0.72,
+    "style": {
+      "posterization": 40,
+      "dithering": 0.22,
+      "color_quantization": 112,
+      "micro_contrast": 0.12,
+      "compression_artifacts": 0.08,
+      "pixel_noise": 0.65,
+      "edge_exaggeration": 0.2,
+      "baked_ao_strength": 0.32
+    }
+  },
+  "floor_groups": [
+    {
+      "index": 0,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.377,
+      "zones": [
+        0.344,
+        0.503,
+        0.487
+      ]
+    },
+    {
+      "index": 1,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.288,
+      "zones": [
+        0.216,
+        0.268,
+        0.353
+      ]
+    },
+    {
+      "index": 2,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.217,
+      "zones": [
+        0.264,
+        0.171,
+        0.346
+      ]
+    },
+    {
+      "index": 3,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.285,
+      "zones": [
+        0.203,
+        0.372,
+        0.431
+      ]
+    },
+    {
+      "index": 4,
+      "dark": true,
+      "service": false,
+      "occupancy": 0.476,
+      "zones": [
+        0.451,
+        0.456,
+        0.496
+      ]
+    },
+    {
+      "index": 5,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.656,
+      "zones": [
+        0.799,
+        0.607,
+        0.526
+      ]
+    },
+    {
+      "index": 6,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.254,
+      "zones": [
+        0.214,
+        0.225,
+        0.364
+      ]
+    },
+    {
+      "index": 7,
+      "dark": true,
+      "service": false,
+      "occupancy": 0.486,
+      "zones": [
+        0.547,
+        0.508,
+        0.43
+      ]
+    },
+    {
+      "index": 8,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.598,
+      "zones": [
+        0.536,
+        0.707,
+        0.742
+      ]
+    },
+    {
+      "index": 9,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.446,
+      "zones": [
+        0.497,
+        0.296,
+        0.399
+      ]
+    },
+    {
+      "index": 10,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.282,
+      "zones": [
+        0.32,
+        0.361,
+        0.418
+      ]
+    },
+    {
+      "index": 11,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.479,
+      "zones": [
+        0.423,
+        0.342,
+        0.399
+      ]
+    },
+    {
+      "index": 12,
+      "dark": true,
+      "service": true,
+      "occupancy": 0.575,
+      "zones": [
+        0.63,
+        0.576,
+        0.585
+      ]
+    },
+    {
+      "index": 13,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.305,
+      "zones": [
+        0.179,
+        0.344,
+        0.376
+      ]
+    },
+    {
+      "index": 14,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.461,
+      "zones": [
+        0.464,
+        0.587,
+        0.54
+      ]
+    }
+  ],
+  "window_states": {
+    "DIM": 39,
+    "OFF": 89,
+    "ON": 59,
+    "BRIGHT": 9,
+    "BROKEN/DARK": 8,
+    "BLOCKED": 7,
+    "SERVICE": 6
+  },
+  "signage_count": 8,
+  "tiling": "unique sheet / clamp",
+  "normal": "OpenGL +X +Y +Z",
+  "orm": {
+    "R": "ambient occlusion",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "sha256": {
+    "albedo": "0b98dbb3e9e02be967dff5624fc44abe2de1e7ec679dc4248c3d000359c330eb",
+    "emission": "ce171f0b3f098a07b9c2b9c831ee5f29f64217f1269185c47a59138162af2729",
+    "height": "8df16cee187bbd3f01bea7b92be5d81e41051bb79c939778630415d1a3f060d5",
+    "orm": "f7b7370de5246b5d6f41a0ddec41face4ad14a8488cb056a4a70fdf23cac1039",
+    "normal": "ef8af98749cc9f9ea683801c017da42c861f31f8dbda43c6b4b45c9f39cc350b"
+  }
+}

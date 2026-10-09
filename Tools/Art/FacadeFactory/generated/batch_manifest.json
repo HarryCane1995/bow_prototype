@@ -1,0 +1,323 @@
+{
+  "version": "0.1.0",
+  "resolution": [
+    512,
+    1024
+  ],
+  "variants": [
+    {
+      "stem": "corporate_monolith_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\corporate_monolith_s17_512x1024_albedo.png",
+      "preset": "CORPORATE_MONOLITH",
+      "seed": 17,
+      "sha256": {
+        "albedo": "8caefe6c4cf8d8d2aa650759ae02798d9b14f30a8783cd099c9ae94600dda7f6",
+        "emission": "7aee5b05c603c86f89c79111851b97d8295ec0b175c829a0d29a0e6119eb6239",
+        "height": "445b00f0073c2d7753bb69bed0f9fd265721954fd7254974f5d1ef7184b940f9",
+        "orm": "87234424cc665cce8fbf3d8cd33c497daebd81d85d2473646053f6f0686e0e58",
+        "normal": "61957fb35e9b7af5c7e2afd53b88498724a42e080793b3ec47afe3a3bcefcb41"
+      }
+    },
+    {
+      "stem": "corporate_monolith_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\corporate_monolith_s42_512x1024_albedo.png",
+      "preset": "CORPORATE_MONOLITH",
+      "seed": 42,
+      "sha256": {
+        "albedo": "bc555f0d930dc53459cfbe9124e9c08eb62a345edcf098dfa63e1420789527e2",
+        "emission": "4c8d53b55aef63eeb548358e4b42117e0f6bd344da811a2efaeb0258029639fa",
+        "height": "b72885381dfadfe6fba6d03205514942f2323097bc5c300fc288dfe50c35849a",
+        "orm": "2c5d06e8315705c789bfda0b4405426aa00ae3f09bd674524a6a29738c097249",
+        "normal": "0b07c38e442bd11aee69b7329bf63cbad5ed39e7eab43cabd7d8eacdb8b127f1"
+      }
+    },
+    {
+      "stem": "corporate_monolith_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\corporate_monolith_s103_512x1024_albedo.png",
+      "preset": "CORPORATE_MONOLITH",
+      "seed": 103,
+      "sha256": {
+        "albedo": "cc2326325384a6f84bfcc99bfd0a84b6962b9710fc2e28dae4d3a3aa6eb1265b",
+        "emission": "be995b1de8a82e3f4fe01531b98b2c5a293334bbf740c86e2ad42ba791cb1951",
+        "height": "382c851cac996a067448f0d62e8f400a7c182dc1d027257ae5bea20898c6cf16",
+        "orm": "25c3aa9b9ebc1c9503a8fe63c47eda5faf8ca750bc8a8becdcb10c8bc00735a4",
+        "normal": "9ad86179de9609a0c4b64c8eb9262e3c0ff0a05c25f72d9b5d8df0f067cb44c8"
+      }
+    },
+    {
+      "stem": "corporate_monolith_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\corporate_monolith_s271_512x1024_albedo.png",
+      "preset": "CORPORATE_MONOLITH",
+      "seed": 271,
+      "sha256": {
+        "albedo": "6c21eef02af5abd89f01aaf4835aec3f9d316ee50432bc0843917bbe77f56b6c",
+        "emission": "460751295e37d28a4adbba9a6c651b994dfff41bbe8086089b5040a074380614",
+        "height": "15baf8ae5e7cb4f49aae6a38ddf5e3173d0f054d30e5ddbe285beecf9399106d",
+        "orm": "e3323ffcc6535c03a84a9ac2cf0a0d6619825a3874eb7fe48643d3b83a26b868",
+        "normal": "5ab5a5f00e7561acb654685cd07b0ca03b856d96106ce758a072fcb725d28e22"
+      }
+    },
+    {
+      "stem": "megablock_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\megablock_s17_512x1024_albedo.png",
+      "preset": "MEGABLOCK",
+      "seed": 17,
+      "sha256": {
+        "albedo": "0b98dbb3e9e02be967dff5624fc44abe2de1e7ec679dc4248c3d000359c330eb",
+        "emission": "ce171f0b3f098a07b9c2b9c831ee5f29f64217f1269185c47a59138162af2729",
+        "height": "8df16cee187bbd3f01bea7b92be5d81e41051bb79c939778630415d1a3f060d5",
+        "orm": "f7b7370de5246b5d6f41a0ddec41face4ad14a8488cb056a4a70fdf23cac1039",
+        "normal": "ef8af98749cc9f9ea683801c017da42c861f31f8dbda43c6b4b45c9f39cc350b"
+      }
+    },
+    {
+      "stem": "megablock_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\megablock_s42_512x1024_albedo.png",
+      "preset": "MEGABLOCK",
+      "seed": 42,
+      "sha256": {
+        "albedo": "12f9d37b225eed80ec351f210736cd51afd53159d0d27779fcd794c440cf3073",
+        "emission": "997195311a573ac8402cdfaecd4c4d9f33e1cfe666d071e7ed9bb771abc90488",
+        "height": "f32dd2c9513fb35ffe6069031f51dccc05d3d2607d8e0959585a5c96709aa5e1",
+        "orm": "1ea9aeae1dd72f44e91fca042a4d9fe14bde79ef9e8be6e23c2d79f65032c980",
+        "normal": "52ecf2057905ad06f440288e87cec86ff9e5e8417623d614e4bc7e66eb9a329a"
+      }
+    },
+    {
+      "stem": "megablock_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\megablock_s103_512x1024_albedo.png",
+      "preset": "MEGABLOCK",
+      "seed": 103,
+      "sha256": {
+        "albedo": "eb0a050cff3b7ac65e74194a9b3539030697e0ad2d98018a147121aa90e00cff",
+        "emission": "5e8355ac6e052719e4f586c3c59b855f51d3d3c038f4a89bbe9025653f4b1283",
+        "height": "fb5cf0ff0da8ca68ce97aa41f8df23706a633a01ef88a3a96bdd1dcc391c2c88",
+        "orm": "dde2091adbcfb20f25178bc095429f0a6b74c8fb1816339e9951f38710cc68f4",
+        "normal": "15dbd7085eb636c69be754b93f58285a29d75540e9c7f3ca615385817ca95fa7"
+      }
+    },
+    {
+      "stem": "megablock_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\megablock_s271_512x1024_albedo.png",
+      "preset": "MEGABLOCK",
+      "seed": 271,
+      "sha256": {
+        "albedo": "3d81dc66226c198bc9fd318f06e244cf941021dc4bcc1def0db63ddf8903099a",
+        "emission": "aae03b8dd847942fd5dbff0ee13c71e4fc7f608f151d227ad9a0d2bb08d7cbf7",
+        "height": "c34680ead59bb4417dd334a72e55e4048f8a467e24351bb001fd53f7ebf00953",
+        "orm": "5d59a21c0580cc018866c231c0dbccec692de00a93489d1bdd7ee9287f6d7c1c",
+        "normal": "19804b5202702a3be59c41791a332eac9bc8470afe0b078c27edaff6c04d5b69"
+      }
+    },
+    {
+      "stem": "industrial_tower_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\industrial_tower_s17_512x1024_albedo.png",
+      "preset": "INDUSTRIAL_TOWER",
+      "seed": 17,
+      "sha256": {
+        "albedo": "fe1dd9babad22ad940e0e71fd8d27ec60233638f5d8f93302ec7db9535c4c235",
+        "emission": "9bf9a91d479285088ff6dd9889967fa52c1355ef906d18a16df71aacad266fa4",
+        "height": "682946c4b63ab5a5b7de827a811e4a3ffa4b43f702c6f15b4f434c51f9f8c911",
+        "orm": "6aca8ac418fb7d91f860bd76a13f38d130482af5ee8a6672b63c82ed518929e9",
+        "normal": "79f6e17ce20a676e6781f2b0555e595660042aa78b809b39679c7585e03c45f3"
+      }
+    },
+    {
+      "stem": "industrial_tower_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\industrial_tower_s42_512x1024_albedo.png",
+      "preset": "INDUSTRIAL_TOWER",
+      "seed": 42,
+      "sha256": {
+        "albedo": "2ec310f1f1bdbdf7d73e3221c79f250b43cc44bffeab4304e5606342acc05b33",
+        "emission": "80a1df5120cdce1619359c76211f8b2d19e2d0a06af72613d0efb4dc6177ef8b",
+        "height": "a1dbd46faa108da3b974de318408716dd26dda10515452a7748617349e5402a4",
+        "orm": "4e8d791d0e9dc36335b584936f199e85077b58539b3119ce35033f50e1252453",
+        "normal": "e7c1162916d252c97b824e5c19ad9372fd8d9975080c7ca07f84c886aa8e5b71"
+      }
+    },
+    {
+      "stem": "industrial_tower_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\industrial_tower_s103_512x1024_albedo.png",
+      "preset": "INDUSTRIAL_TOWER",
+      "seed": 103,
+      "sha256": {
+        "albedo": "e2ddd842746ad6135ad152ca61bc9d3537e2de1957578c759b9c5031d35a776e",
+        "emission": "6609cfb5bc0afe3feaa0365cf094fdba9bf6f885ee8580e03107e92f72adf90d",
+        "height": "9a33c206dc43cbf6a5e0cc3fd97ec35ff3eacc674dff962530a1f90314014d8a",
+        "orm": "eb07ed45239bde6c0065da5ccee7ac9a9cee5a2a394fc9b8dc94e9f0128c8056",
+        "normal": "4ba05aaf55c528ed4a5ffe570baed07738779860e45c9b20f588fceadfb19f76"
+      }
+    },
+    {
+      "stem": "industrial_tower_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\industrial_tower_s271_512x1024_albedo.png",
+      "preset": "INDUSTRIAL_TOWER",
+      "seed": 271,
+      "sha256": {
+        "albedo": "347834c5c10969d1432a239f93eb07d4f014ce0cc256d4ad7f6b59cf909921f1",
+        "emission": "1237fd883d50831c564c727fae049decc2f8416fa6234b2f2b76e766068b97fb",
+        "height": "0a8e654bc2ace01ae18b15b55e996460d6b0efbb158dba034d7fb712ce95d03d",
+        "orm": "3362f64c06a0f4faf3d738e0e52199fc59e2f014f009eabc3cf4d9f5a3fe2abf",
+        "normal": "9daa493eb0f69cb3b96e007d397d22dd28e5dad252875d7be254d40067280721"
+      }
+    },
+    {
+      "stem": "exoskeleton_tower_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\exoskeleton_tower_s17_512x1024_albedo.png",
+      "preset": "EXOSKELETON_TOWER",
+      "seed": 17,
+      "sha256": {
+        "albedo": "73e063de01a3b5db67f948055619d551f70609f6dec5ebad64178401141dd4ca",
+        "emission": "c6d3182f1f04e1e3909bd56e70d8fd0fe0a8ea214fbe4be7f00d40fb8b8f2277",
+        "height": "34f2c89d4f1e32edc4e72288a1a83cec9649d0f5bc0052e3994274af699b38b0",
+        "orm": "57a13c44e48a0183b993b3bbbe860300052ab031f53265e8c8626637ec6c34f1",
+        "normal": "e4d190050d02779bfa3e79e626f18e908fe1bbcbb1648ad6a52cd97d6b2bdbc1"
+      }
+    },
+    {
+      "stem": "exoskeleton_tower_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\exoskeleton_tower_s42_512x1024_albedo.png",
+      "preset": "EXOSKELETON_TOWER",
+      "seed": 42,
+      "sha256": {
+        "albedo": "529c5acddc30785c111b41960aca6042fa8fa95a169aa9791cb9185081ecd83e",
+        "emission": "af0e10883909991c8ea891b3942e5e3d1cabf4d448da2efb556f3d920fe619be",
+        "height": "7a96eed6e589f31b22bbeec666e7119e5bd937315af465c0f59a57674eb67f00",
+        "orm": "69ff54c99fcde72878011574b57c25dec9db183a1883846a617108a17a772d2d",
+        "normal": "8196d51a611a1c22dc04f522ae046193154012d64d93993ac29c5392accb9824"
+      }
+    },
+    {
+      "stem": "exoskeleton_tower_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\exoskeleton_tower_s103_512x1024_albedo.png",
+      "preset": "EXOSKELETON_TOWER",
+      "seed": 103,
+      "sha256": {
+        "albedo": "a4e77eb1fd914929f7984c06888ab56fd31efcb800d75852680d86758a6461d7",
+        "emission": "7d9a074d1d3de74d8785ccc3c484fba7eaae204ea644e877660f530dccaa3974",
+        "height": "86c1e89714ca71343ea8cefa991b05b998602410cc97eda787cdb23d146aeb52",
+        "orm": "69974e88469f4813e965d726c3e2b4521f41fcc9b0ebf53524ebfa9a95e729bd",
+        "normal": "32922d7bd61495015994c06edbd9d29f2ad6eef5ec5b658963515e3c01f7e9be"
+      }
+    },
+    {
+      "stem": "exoskeleton_tower_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\exoskeleton_tower_s271_512x1024_albedo.png",
+      "preset": "EXOSKELETON_TOWER",
+      "seed": 271,
+      "sha256": {
+        "albedo": "9bb014bf71056b2799ecccdf236613c365d37eaa7a9e179ac5b233a86b25f3c3",
+        "emission": "220a7dbc38fdf7d3b0d39f331cb8b55b22a8b1a3ee1da3fc4644dfe273215b44",
+        "height": "8a796da4d7877894e29fdab704fb076c511e4e4bcc26c13100ab9dc4490b21bf",
+        "orm": "9bb5823e69092d9442de8619103fc53e3b0b068594a7b788bf84439ec88390c1",
+        "normal": "eb824c2aacc60577416bf586a61102954b4ccd620ef4ce59ff245bf2bf9e53fa"
+      }
+    },
+    {
+      "stem": "office_grid_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\office_grid_s17_512x1024_albedo.png",
+      "preset": "OFFICE_GRID",
+      "seed": 17,
+      "sha256": {
+        "albedo": "5871666f538fc75b42e94f2e4b0a33ab56a4173d48f45e037a5e1c2181be7cf6",
+        "emission": "d17723e0ab0ab6bdac6ac07e9bf5bc865d5a4832d73f62b449508505f76b2137",
+        "height": "f5767554a4f683b80e6ce87947541643c11733ca92fcda33516520a77971959d",
+        "orm": "c18648b200c812f2c4ca986c2f99c8df669b0c1ee97795d7f11e94ad5ee9f445",
+        "normal": "a77bc4854a9375a71725159061320ed4d3a5d78ae773b454352b8f0bb4e46bdf"
+      }
+    },
+    {
+      "stem": "office_grid_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\office_grid_s42_512x1024_albedo.png",
+      "preset": "OFFICE_GRID",
+      "seed": 42,
+      "sha256": {
+        "albedo": "043cc8cefffed7b31ea44433bd1edb87d31452899f5514d2a2be094788a28612",
+        "emission": "6b480d72dc38dff225fed8c68ee8d77a2a6ea3018c49f53c4fde915596c35dd1",
+        "height": "3c27da3c0f6a6197dd0393374deb1c9a48ef8ea32d5df29ef3f203499f0ba745",
+        "orm": "9cbfc9bbf8c0c466c1eb669f0c2153fa0db2c8fecf2e46dbe79cc7398a5f5220",
+        "normal": "e97755aabafe15219f5847c8ad83708a47dbb67711332f38b9616d9544c91e74"
+      }
+    },
+    {
+      "stem": "office_grid_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\office_grid_s103_512x1024_albedo.png",
+      "preset": "OFFICE_GRID",
+      "seed": 103,
+      "sha256": {
+        "albedo": "d0971edb6276c0798e2256c5a842a080ecb12eeaf32c07d0326f9fe21be72801",
+        "emission": "74d02b8d978ffc2ebb906c5bfab3e42fe086018b109507833e540cc07d1f0052",
+        "height": "c28299200f8ba6dc2c12706ec78fc3d07e28eba700a594f2bb9b7bdaabca7332",
+        "orm": "2d05b7a40e09e03f136fc5226cd1c266619065ab451fcf782da3e682a1fa1a57",
+        "normal": "2fd0e7b0987cbf1d41c94b40976561b9a19fa7c75e7f78566e91c0669b383f7f"
+      }
+    },
+    {
+      "stem": "office_grid_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\office_grid_s271_512x1024_albedo.png",
+      "preset": "OFFICE_GRID",
+      "seed": 271,
+      "sha256": {
+        "albedo": "b279135dccae71ed681189cbd69fad64a39d51863ee76809588663007075dcf6",
+        "emission": "83ec375678fed944dd1f3f33de48c5e11373127975989eaaa84c5b98b9a78118",
+        "height": "ec408dc51ccce6278cdfaea7346d9d1c8c8e7e7bdce3cc806acbfbb9c89bd486",
+        "orm": "5c80b658340344d8fa49e166f838575bdd9fb3bbc9c6d0fe0322fd63ccaed216",
+        "normal": "35c96c61b8056bf8f4e1e9eb3dd7fe550b1c96ecb17925d07706398ecea8ac8e"
+      }
+    },
+    {
+      "stem": "landmark_tech_s17_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\landmark_tech_s17_512x1024_albedo.png",
+      "preset": "LANDMARK_TECH",
+      "seed": 17,
+      "sha256": {
+        "albedo": "418346386ee35fe4565ff436dddd241860f553630cb7cd27c546c52370b9759b",
+        "emission": "000a7629bf5f270c0838684b3a63d144ff0cf404b02f4073be38024db9b741fa",
+        "height": "b1901170d4d23eb87e2235cffb384976f21580a5300abc2c5fd6ae00cfc0823b",
+        "orm": "c011bf3912e9d80b5a5db2d91777f86caa0346c2cdf3ff4f4525c4da2eeb0628",
+        "normal": "d74bfd7b0698894b9978c5f9220a0cab32b0c41d8f78d419bc4cff501089f185"
+      }
+    },
+    {
+      "stem": "landmark_tech_s42_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\landmark_tech_s42_512x1024_albedo.png",
+      "preset": "LANDMARK_TECH",
+      "seed": 42,
+      "sha256": {
+        "albedo": "afeaa8dc996e5f8ee308c1810c2ae470f586dfefc9e52d70738366617da48e79",
+        "emission": "10a9ea088b698a104caec2fcd4f821e634602001b1d427c9a41192ade10e40c0",
+        "height": "6636a8e262e749ce53d031a790a2a74d08b01b066411b24aedd0366004e13f43",
+        "orm": "dc8a1339903444fa086a93c49594eeaa47fc6e5527cd7100b29019f6dacd828b",
+        "normal": "874361c3096610a850e271198cf9540dec37a844e795857b9664ddac18043c1d"
+      }
+    },
+    {
+      "stem": "landmark_tech_s103_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\landmark_tech_s103_512x1024_albedo.png",
+      "preset": "LANDMARK_TECH",
+      "seed": 103,
+      "sha256": {
+        "albedo": "3a98e592807df4d21b470a99044d1eca186b7fa7200e0b28c3866bb31f9b9151",
+        "emission": "96ff4ec84a50f913bd1d410f96ea1f465e26a66e8084fc1119f4702ae98b72de",
+        "height": "7f5bace8ee70dde65e4edf4a1c37d1ab2ef351988c948a6e5f206f37dd409cc3",
+        "orm": "9d215de12fab8207ab182c26f1335488989bdf67fc15868448c04da50fa62161",
+        "normal": "21f96ef11bc1247690e1ccbb9326401d8bf675d3259bf25b5ae2541485b22136"
+      }
+    },
+    {
+      "stem": "landmark_tech_s271_512x1024",
+      "albedo": "C:\\Users\\harry\\Documents\\bow_prototype\\Assets\\Textures\\Levels\\Level_01\\FacadeFactory\\landmark_tech_s271_512x1024_albedo.png",
+      "preset": "LANDMARK_TECH",
+      "seed": 271,
+      "sha256": {
+        "albedo": "61df75ccc24a2aea154eb106b3e38dbe6dac914cc3280f0ca90f2d5fbd29155f",
+        "emission": "eb5708a79f8589c84ed3aa05b44c4b2b30e283c51fc8e1ee468c689a0896487f",
+        "height": "84b42bffdd755b33a56c16eb43060c64c8bdc4c848575e9b182d5c431baa3985",
+        "orm": "3dc4bdac5c32d940286cda32c44024313f642bd07b64a61c76a079cc708f1e1c",
+        "normal": "a57eee28cadad38908ccf2c3fbdb97b745c2b785f1093c28f57b7d1fd79b49dd"
+      }
+    }
+  ],
+  "generation_seconds": 8.661,
+  "total_seconds": 9.462
+}

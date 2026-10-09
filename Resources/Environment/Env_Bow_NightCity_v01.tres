@@ -1,0 +1,41 @@
+[gd_resource type="Environment" format=3]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_72mpe"]
+sky_top_color = Color(0.025, 0.04, 0.045, 1)
+sky_horizon_color = Color(0.1, 0.105, 0.082, 1)
+sky_curve = 0.25
+ground_bottom_color = Color(0.025, 0.034, 0.036, 1)
+ground_horizon_color = Color(0.075, 0.086, 0.077, 1)
+sun_angle_max = 0.0
+
+[sub_resource type="Sky" id="Sky_1iff6"]
+sky_material = SubResource("ProceduralSkyMaterial_72mpe")
+
+[resource]
+resource_name = "Env_Bow_NightCity_v01"
+background_mode = 2
+background_energy_multiplier = 0.7
+sky = SubResource("Sky_1iff6")
+ambient_light_source = 2
+ambient_light_color = Color(0.45, 0.58, 0.62, 1)
+ambient_light_energy = 0.6
+reflected_light_source = 2
+tonemap_mode = 2
+tonemap_white = 4.0
+ssao_enabled = true
+ssao_radius = 2.0
+ssao_intensity = 1.1
+ssao_power = 1.2
+glow_enabled = true
+glow_intensity = 0.55
+glow_strength = 0.8
+glow_bloom = 0.015
+glow_hdr_threshold = 1.05
+glow_hdr_scale = 1.2
+glow_hdr_luminance_cap = 8.0
+fog_enabled = true
+fog_light_color = Color(0.095, 0.125, 0.125, 1)
+fog_light_energy = 0.85
+fog_density = 0.00025
+fog_aerial_perspective = 0.2
+fog_sky_affect = 0.2

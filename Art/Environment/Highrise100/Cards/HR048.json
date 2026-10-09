@@ -1,0 +1,123 @@
+{
+  "id": "HR048",
+  "name": "Armoured Vessel",
+  "category": "reactor",
+  "subtype": 2,
+  "seed": 1305212,
+  "role": "midground",
+  "collection": "HR048_Armoured_Vessel",
+  "bounds_m": [
+    51.61000000000001,
+    67.3676,
+    272.672
+  ],
+  "bounds_min": [
+    -25.805000000000003,
+    -33.6838,
+    0.0
+  ],
+  "bounds_max": [
+    25.805000000000003,
+    33.6838,
+    272.672
+  ],
+  "parameters": {
+    "width": 45.1,
+    "depth": 57.34,
+    "height": 261.8,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "armoured_ring_stack",
+    "central_vessel"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 11,
+    "triangles": 284,
+    "vertices": 296,
+    "polygons": 104
+  },
+  "geometry_sha256": "d73c2dd4ec99b458743886f113baf448c1d88416792860fd2965ae52c478fc01",
+  "geometry_only_sha256": "98d1e43b7ab3d7377ccbaa8e56e1f78f61ca6f420a00935bd17fe002ae2a5bb1",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.405,
+    "mass_complexity": 0.116,
+    "industrial_density": 0.364,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.204,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ArmouredCore_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ArmouredCore": [
+      "wall_reactor_housing"
+    ],
+    "ArmourRing_Caps": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "ArmourRing": [
+      "wall_dark_concrete"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 64,
+    "floor_rooftop": 6,
+    "floor_metal_deck": 14,
+    "wall_reactor_housing": 14,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR048.png",
+    "UV_Material_QA/Views/HR048_back.png",
+    "UV_Material_QA/Views/HR048_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

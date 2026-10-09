@@ -1,0 +1,2424 @@
+[
+  {
+    "key": "f0_0",
+    "recipe": "Recipes/f0_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925000,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.12,
+      "structural_width": 14,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "1474f75c61e863814f5ee5bc33a093e2c7c7b61bd9b763e6470fcc26af18ae7a",
+      "normal": "e8aa4a6160097dcade820ed83e267e120e47a5368c7e2cace34cba8eb488d4b7",
+      "orm": "d16b7dc5e213627b819ed7f2e4be50bedbb9b63ca3de1725022210a5449a78f2",
+      "height": "3843292e87a82e3a07a3a43bad930aa72b4fc23cc44afb80fbb4e5c29cb31fc1",
+      "emission": "3b5019b301d8c635e45eedc06bc53c77e239f23b191e90f5cfb50d864a0b3335"
+    }
+  },
+  {
+    "key": "f0_1",
+    "recipe": "Recipes/f0_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925017,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.3,
+      "structural_width": 14,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "0c203a8f3bb6934635bc36f36138a9b4576bcbd3a51c0dd81bec35b42d9e8bc8",
+      "normal": "8c134d0fc625df7e99b368515fd5e1637964e662537271df957ef476b0c2584e",
+      "orm": "da9dfc4b847882f0ad5af20df0cfa6c1b8608f08c860bae25bfbb78bc8853cb5",
+      "height": "4af54ed12fc54cec0474c8c0b60ca4cb033b0e1496877b95cf64568258b4ba5a",
+      "emission": "9b479fbc07f170b1e31f261521e5937559bffb8a52cbb4fdd25e172eb176e85a"
+    }
+  },
+  {
+    "key": "f0_2",
+    "recipe": "Recipes/f0_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925034,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.54,
+      "structural_width": 14,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "1434a815ca6e8568a1f57dcc49eec997888813aa493505b240a2f72a51f4ea12",
+      "normal": "5aeebf62fb7ee10a7354cb39d95da976a726704c5418eef11a6899b2bc448791",
+      "orm": "51dc37efdbda1bfb964942afd1cdd6800e00557037a2ad19ccef0ffc51917713",
+      "height": "ecc7067fee28f28a2f7d4794b1362b2b8c2c7d6ee212deb3f07d74a70fb79851",
+      "emission": "c8893081fad42d8b3e561bb400a0018a6269a4e7e023140b1580c971e83677e0"
+    }
+  },
+  {
+    "key": "f0_3",
+    "recipe": "Recipes/f0_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925051,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.73,
+      "structural_width": 14,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "84bbbade4e2ca936105b06e58600b893caa3ca3f28b99e78359623770b1461fc",
+      "normal": "6b7fccb0cb72fa984189059cd9163742904de24fa5b6d708f039c1da11854604",
+      "orm": "113bf55731ff1d9c1d9373401909fbfe5f6b686abdafd277e962a7c1e4034966",
+      "height": "e77ea1f11f7c4e83b7741cb49bb8cfa9b4dff178029c46766cddeec46593ddb6",
+      "emission": "969d20c900eadfc89fad2802679094781b40e0d41545aad54847c161d384099f"
+    }
+  },
+  {
+    "key": "f1_0",
+    "recipe": "Recipes/f1_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925101,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.12,
+      "structural_width": 17,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "c42b3996e344360e49a452096ea6975c0c00b14682b3899bf3da2ae0c484bc66",
+      "normal": "1a1fd4b9130bb1a2c19d1d79c8f54f1d6c2f2ab3512efc25e9aa79a32091b88c",
+      "orm": "459c601797239d2e03f93348d0a2ad13b2247147c1436b7070d977fb215a2b81",
+      "height": "141ea6f9bdb4d7349362b40cc5a6cedb5ad14c14df64c788c55a08d41543e8b7",
+      "emission": "bbd9cccd6be78a39d7b9424f4fb2e34310b479571231b3739cdebb3c00034327"
+    }
+  },
+  {
+    "key": "f1_1",
+    "recipe": "Recipes/f1_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925118,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.3,
+      "structural_width": 17,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "269f13540ee02b33c51c21c3de448e3aa1e323cbe5259ceaf9487ae83cc7df5a",
+      "normal": "a3955ef7223a2a708dc6772f49d822697baffac66bb5c87272a72e7888edd3bc",
+      "orm": "4fd19d2378c22adfb1fd11397cbf1183a7785477fb7f459183166daaf68de9b1",
+      "height": "bf391c44afdf2b027d0fc3da1b2dedf5690dfc10552e0ade416b2429622d5b99",
+      "emission": "c64e2840e2be42f2584a6f1f238a0814dfbdeef6948e647b30248ad8c209bc69"
+    }
+  },
+  {
+    "key": "f1_2",
+    "recipe": "Recipes/f1_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925135,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.54,
+      "structural_width": 17,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "ada4bd40c6503b44944fd3513715b70148e7fc60a73d90406d1c05d4bb00f7d9",
+      "normal": "d5e21d8e8460823a111aaf04d950a0484715898d4ff0cf2eaaf316e4efced9e4",
+      "orm": "61ba898edd031644a17f922edabf3d471d714b65ee911bafc94a23da63db978c",
+      "height": "351c5e74fd04aec61dca902b852c8a5e6389548867f7f1b7728ff25a2a612e28",
+      "emission": "d1d80c5abd6da3477dee04bd71498cae3df7e2cd1eab44d843da6cdb61cec3fa"
+    }
+  },
+  {
+    "key": "f1_3",
+    "recipe": "Recipes/f1_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925152,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.73,
+      "structural_width": 17,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "03607541a0124501ce025949a515a113dbc99ae8ff5cb7ef94f120721b7db70c",
+      "normal": "6fb780652c379a52c926b61b90cee85897de9a3527a54cc95b9b50533e1d8bd9",
+      "orm": "e9b8c2b8e8f28e78b643c3d2d427bb287e3e2afd7ae6c772bb2b39b71e0ea02d",
+      "height": "e1909d59ed49253a53df5abf11e474a67d5259d84c4b12cd39ad51de59dcb366",
+      "emission": "75705adc72ae1dad662fef20d8c5602252a79f6a060fc9bd4712f741f4508195"
+    }
+  },
+  {
+    "key": "f2_0",
+    "recipe": "Recipes/f2_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925202,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.12,
+      "structural_width": 18,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "844e2d7414be5cf6d1b8d53b54fade961ef1917320d311ba5d69e5ce2edb3274",
+      "normal": "0cae97061274fa5b8bac7bf23bdeda2a41e1e5f124d45c59ebb478d9c8c29913",
+      "orm": "7a60091e31748f75c7559c0bb1ec04dbfc1ae6eaa03461855dbaad1452e642af",
+      "height": "df14c38018ff648d16d4444d0977f26191fcc414073b6944d632b46b7eb420c5",
+      "emission": "0cfa7567525fefde528a98432cbdae1a4a9acb03f8c42a1524f0df4826aa9f4a"
+    }
+  },
+  {
+    "key": "f2_1",
+    "recipe": "Recipes/f2_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925219,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.3,
+      "structural_width": 18,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "b55f9c1ba6968985f22a4a9fddcb4cd25304f58705a6e19bbffa48d41fdede74",
+      "normal": "a4cde275d8fd5c584a4cfc012033b1dd27a33d21357bf3b74780a0ccdb6ec1a4",
+      "orm": "b0e4657395d552d059ad4abfe84c2f8cd5fc94216d0234ee797a426ffa76862f",
+      "height": "802f172ad0fc760fd66add5b13077983584003b757a3991003e9e3c979b65cdb",
+      "emission": "b9d9ddaec1d0f7774fc5358345d5f8ab7ecff743385b19891a4b213832809584"
+    }
+  },
+  {
+    "key": "f2_2",
+    "recipe": "Recipes/f2_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925236,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.54,
+      "structural_width": 18,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "ce01d10e7039b2fd2203bc9231f35b733743aabf3b6f5ae5eefdba98eeccd2b0",
+      "normal": "24ab0a91ee6dc213bc7d7f1c82cd4aab86796936254e3f57b98e709623eb41b7",
+      "orm": "6eb610c106c1aed3a1342bc073689d4921048048c5225ed2d39c6e624c1de322",
+      "height": "063a869fc08e1f2f12fc78d6ca0479470a7cf3da8bdb0614a18df24656e77966",
+      "emission": "ed8d0a9da8b8e44b40424ea3f03e2bf3f5a2c6053abd99fd7791cf9f26851bf3"
+    }
+  },
+  {
+    "key": "f2_3",
+    "recipe": "Recipes/f2_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925253,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.73,
+      "structural_width": 18,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "77f567f71699af060e0a1cccd5d61af6046bb76ef46627629957a25ce7d8cb7a",
+      "normal": "1d4f2d82f83495c1e1f1466fc409962002339ff5654e90637da51ca47d005a88",
+      "orm": "0f56ca35015a2a411f9c29289c083c5819e4e758e7625c539ff7a73a94b07404",
+      "height": "e7b2e39e6007904858fdb1fa2e0f0f46cc7494fbfdb79cb178c8667edac24176",
+      "emission": "bcfd42dafd5ba91b7b533afef6817953402f430add36ce70cdf1c450243fa0ee"
+    }
+  },
+  {
+    "key": "f3_0",
+    "recipe": "Recipes/f3_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925303,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.12,
+      "structural_width": 20,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "96935c24aed4ac4c7213ab59742bfa68e56d2d6c469daaa4761b8b66b978f6f5",
+      "normal": "ebe4a495962684a06f3e6db5fa979357c6c4cc5b99c6bcacc5ff7190e07eb80d",
+      "orm": "7ba0253e82b2b3cfa06916fbff5c3602705b7828c661ac9f43d50fa5d5048ed9",
+      "height": "cf85d9ac2c00e33a7c4d0aad13c3a15b9096dc21407ff0dcd4f73aca92d17576",
+      "emission": "0460b25b880eca8b4f661876f0769bc2c19fde42d0bac971e88185d634607ce4"
+    }
+  },
+  {
+    "key": "f3_1",
+    "recipe": "Recipes/f3_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925320,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.3,
+      "structural_width": 20,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "7c36e0474c7bdcf250dd1bcc0f153a8f0ed1dd6926d6b86c5c58e2fce9edc4fe",
+      "normal": "240ec3f73971369dd1f07d33fee4214f2b14cb06a521876826f8df3c491c7592",
+      "orm": "7f604e5ec68879219ad089d27510c01c813abaa39e78cc3c101855cae8662227",
+      "height": "045ee33f8b423914263aa66eae862edcd9e27dc2f3c4c6e4c33aa3dab3eac591",
+      "emission": "62d704704409b9eb40f10bfeb7bd299e70e912753960e34b05363b0b88a74496"
+    }
+  },
+  {
+    "key": "f3_2",
+    "recipe": "Recipes/f3_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925337,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.54,
+      "structural_width": 20,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "630158b32ff7ec01c07bc37fbac4264a7eedca12d7f64d25acba313a88c8d408",
+      "normal": "b94ce97a19bce741c69eff5faaac81624728a33016daee18b978a1cd5bce454d",
+      "orm": "b4f29cd53cca88f52bebed57720f31cf8d55c6020d50a95a7a727e0e8d2a4547",
+      "height": "f645eaa4e351df71e1577af9bb5e813866332451fa4b1e2c359232e52ff18d53",
+      "emission": "c28cfa60e2130b36e1fc08eed3a5b2c79b9677dd30ec3cfe0bd22e3aa585214e"
+    }
+  },
+  {
+    "key": "f3_3",
+    "recipe": "Recipes/f3_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925354,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.73,
+      "structural_width": 20,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "cfe69e06f0f265bccb0fc6d150aec064b255e4b5ce6ff9aa2fcb078cf36ea126",
+      "normal": "891835b020e9117f286626ed597fd50f70e23bb07e3e182e0d42d9995514925a",
+      "orm": "d8e59819e8112d1c4991b9d1a6522557ebd92ae936b20a4569f14eed144beae3",
+      "height": "6a38d6b2daff52e72e6dee00e5bfc18e4079e01f3edb0acf9cc86d250bb926ac",
+      "emission": "f8ac335d200298a7e65bb67c6cefb0b19b8b012ba5d2cec9b061659b9f76b66a"
+    }
+  },
+  {
+    "key": "f4_0",
+    "recipe": "Recipes/f4_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925404,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.12,
+      "structural_width": 5,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "06fd8d47b323d4582851f2318fecbf45d172f981a7b11bd2f3f9c919b3d7df2f",
+      "normal": "1558e4468c229dfad860785b9a36df06af85e77dc9be62cd6511b1b5c83b3632",
+      "orm": "d079e25a6c56f91150119109c7ca0cef9500e5a182a82ee0946a15cb0c30cd74",
+      "height": "44de898e0534fa6bdd5edc0ee6e2490da9b725e1708687e7c1ab77a304ec23d2",
+      "emission": "f81458f5f456b089d96cad565aa37454f820549df55242a2232a99df4d1b1ca9"
+    }
+  },
+  {
+    "key": "f4_1",
+    "recipe": "Recipes/f4_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925421,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.3,
+      "structural_width": 5,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "61e5564fb5541f48fdbf29cfc03e1b0d6a8ce2440488f976676117938b8e189d",
+      "normal": "eb59a048f89a5bab071ea868d40629ae1da3abf0e1ed73f3b8f4b8164aea36d7",
+      "orm": "6e8d200f626ca0479016cb73d7bb25dc0af008101d518505077ca92565cc2ef1",
+      "height": "b2fbf092966a2a2ca6d4a8d2a3ce2af700a9ece1e9178674f9ae30c18dc750de",
+      "emission": "5ae8d685da3adc1d9bf41b7d1bc16c6444bbaf4f2b3ad802c562cd81fd4c287b"
+    }
+  },
+  {
+    "key": "f4_2",
+    "recipe": "Recipes/f4_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925438,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.54,
+      "structural_width": 5,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "a33464ca04c07a9b774f61304f02f7d66888ec018fb8e641fe62f5e5d7242153",
+      "normal": "ee693cc0a71c8a09cdd35f431d0d6db0172e294e3475ef9a1399a5a5fd2ad4ef",
+      "orm": "ef7e0c71f35c7686a6fed3d9526af9cc45c3cb1577be5b24bd56bf9049f215db",
+      "height": "e9cbe108ad3f2babcd97bda77787d1a1a046adabade8c62752f01bbde073021c",
+      "emission": "657f08fc3348c25b2299ba21e75f19edfa3130b92f1f50e06e8439a0b5fc0631"
+    }
+  },
+  {
+    "key": "f4_3",
+    "recipe": "Recipes/f4_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925455,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.73,
+      "structural_width": 5,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "9f752ad6c908c6cb0bf518730468f01d8a157b5a9b2465af66119dba397130a2",
+      "normal": "6845e67cf70acfc0fa0f74fd60b3794e99fc956b9bc440b0089915ebb0824407",
+      "orm": "cd8b9cd48e456589be1bff6706864a5d3915448f9c53ccc9a975c31d8d3bac0c",
+      "height": "c5f4163a44be99e2c77f7b45f06ceb19bd442aa5e5fac5dd571c9b98e2464c2a",
+      "emission": "27c1e868a6af6720db43ce348e234f59c38a299230d3b4a4525ee69b66f616e3"
+    }
+  },
+  {
+    "key": "f5_0",
+    "recipe": "Recipes/f5_0.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925505,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.12,
+      "structural_width": 14,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "3b394c4002d4d7e170983c486c5a954fbf2089d30a995fa5e5ff2ac103d7dd4b",
+      "normal": "f98196ed25cd6c155ac7930a107a2bd440857bd2195a8da156b9b97d417a4128",
+      "orm": "e3e3478f3aa391280b65b3a61d2b2bed034cb8dee495fce29092b1cd4f7ace0d",
+      "height": "e7a6d73115dfefe34e845704dc474a2b244a048e5cbdb6bb2a7f460bc566f28e",
+      "emission": "798f984a9fae5b17ab3bc4db6aa2665c3b10df34be57a9971ae82c278fc8a349"
+    }
+  },
+  {
+    "key": "f5_1",
+    "recipe": "Recipes/f5_1.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925522,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.3,
+      "structural_width": 14,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "f5021bcdde97dd284bfeb124ca6126de762e208328e0d420e7698f66477d5440",
+      "normal": "3c21cf4bd79a87830f9aa47c27e7d80ef94d4dfcb920a883fa437b45607abd39",
+      "orm": "34a07d97137a996666cda50cdd1997af6aa2210248db81e370a7eb742322aa40",
+      "height": "82dc9eb1d12f9d8e8b2781c15d2fd7e29e2177777fef1bbea28b0e87d1509139",
+      "emission": "068ca70644d6342028e86541c8e79210c4933cf363b64701d2bfc079b34b392d"
+    }
+  },
+  {
+    "key": "f5_2",
+    "recipe": "Recipes/f5_2.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925539,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.54,
+      "structural_width": 14,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "a1a49c8af37399517fe2ef9acd75c74f238cf93c961fc0400b91e8835d2695b7",
+      "normal": "dce6d0052303c89b1d11b7daf4c25401f157587f155584bc6a52ed7a731bb9e8",
+      "orm": "fa8a25d1f3f46784b895a3be1ba183f0939298ddee53a848c8fb06b2768c57ee",
+      "height": "738104cc5c91becef1cc7e474ee9c20b0ce355ab322da7a035cd992a8bace239",
+      "emission": "c2aee89723bbc3e07ba30134dc1dd607c6ed70603c55c7d68a24b3c6df6e1210"
+    }
+  },
+  {
+    "key": "f5_3",
+    "recipe": "Recipes/f5_3.facade.json",
+    "mode": "UNIQUE_FACADE",
+    "seed": 925556,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.73,
+      "structural_width": 14,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "15067efde2045bfd28b0893eb328d0f0f3ea1a1aaf31fe99de5105c2875a093d",
+      "normal": "0344d756146351df93df258cc0247fbc4ecef385da31796e263e61a8ac7878b8",
+      "orm": "842ed2d0f5d0233ab7f3fec5cabc399ea40949113f73dd378db742dc47af8e81",
+      "height": "1538166331da343a9a6ddf63a9f8a3eaafa0e4d1bc06c1b86fa1b5ee3b891220",
+      "emission": "e9adf379a0203d9b0f728946e81c641b18a8a7325a8d9d11b140659192caadeb"
+    }
+  },
+  {
+    "key": "wall_dark_concrete",
+    "recipe": "Recipes/wall_dark_concrete.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4322,
+    "preset": "WALL_DARK_CONCRETE",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "41d6e03d99b26dd0e2db70f95818b132a4cf7297aa72bba28d7d924e3156faab",
+      "normal": "9adc880dec9fcf696e9c971aa58d43824d741b57459294031c594c1c2f6b6e4f",
+      "orm": "00e883e74352a97f4f3065907a46df1a18b8fe5a95d8d1fdc538b66fd235e7bc",
+      "height": "97bfb39a25be796e5b8eb693c89008f02b37fdfebc7e3872dc3749e8a1957426",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "wall_reinforced",
+    "recipe": "Recipes/wall_reinforced.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4285,
+    "preset": "WALL_REINFORCED",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "52261d4503823b8d445a38d9f972c3d412d76f1533009dc490eff358b556faea",
+      "normal": "984407f0a758eb1eeccd25cd720e2236974b119ee11fe7899bc007227f205d92",
+      "orm": "35b28e233e64b7fc82a6a7b9d0f05b8c1d833e48e477188566dbd3e85f04c51d",
+      "height": "a3cdc29a18f28e007e2e7d3392b972719280342f56701117db1031adad4442f8",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "wall_maintenance",
+    "recipe": "Recipes/wall_maintenance.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4137,
+    "preset": "WALL_MAINTENANCE",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "c6cb7aef871a19b289701cba99ba0157656b8f7b5c17f73e66a14ba9f28a4ea9",
+      "normal": "e2e95ef19ef7d4214fef2bb13f88509d1cfab680d5cc11e1179f5980644b1ef2",
+      "orm": "c5c91babf29ae253c649ac19eae7f472a9e06979db2add514093522d212a1d07",
+      "height": "05d65706a5966a8c85b306c45df768e83112ca27f0775bc6e079801b2978a5bf",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "wall_corporate",
+    "recipe": "Recipes/wall_corporate.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4248,
+    "preset": "WALL_CORPORATE",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "ea2df7398c12fdfac31ed139355bff33435566566015272763b2bc06b34a6e63",
+      "normal": "489a8297803ee4bf330a70f590c1243511a23515fb2402ac2697a6576e58fc39",
+      "orm": "314b77d1406eadc203b5840bcafd6e6108e405ad8ac5e012f98c1a2dc089770b",
+      "height": "7850db3648c1b293f3edcf1b4a36d6d537f7470a52de6102f6b31d5e788c5d12",
+      "emission": "5d6c408b26bf0aa3fd6ad51543b30b380f03e5af63fbcc7b3cadc5dbb65c63ab"
+    }
+  },
+  {
+    "key": "wall_vent_bank",
+    "recipe": "Recipes/wall_vent_bank.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4433,
+    "preset": "WALL_VENT_BANK",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "052a52846e15078ae59ab769ee1e33ea72f6bfaff78291433ed17218e15a6b97",
+      "normal": "86094029ad53d59e3ab17ba37ae5405dc5778898f448f2b578230523fd55e8b8",
+      "orm": "169d142b50d28e6c1e7838cc78dfd4031204491d8c93248ff318f02f8fe1ba49",
+      "height": "ea588e2203041988e47cf57f450625b9cf217f3aed2a9652411b3a13f304f06a",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "wall_service_rack",
+    "recipe": "Recipes/wall_service_rack.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4174,
+    "preset": "WALL_SERVICE_RACK",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "7da5c16c112bbec1e5eecd994edd0e0d4d354dcbf7a4928a41fd692961027830",
+      "normal": "3b118e0d19decd01c1016a8a1cb51bd587717c5c4b48160da1398ecf6f05b411",
+      "orm": "8696973fc83b5cc0840e69fdfe3a8bc066bbf70918ac88dc0dcb7f7c6362a01d",
+      "height": "8188237f02ecca9d36d469c6dbc303a64eeeb3d1e1255e20f395291c5e16cdd2",
+      "emission": "8d76ce24613025bcd0c092258bdfb8b9bcc6b6772f46b146d1f1858e49d9dbd7"
+    }
+  },
+  {
+    "key": "wall_reactor_housing",
+    "recipe": "Recipes/wall_reactor_housing.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4396,
+    "preset": "WALL_REACTOR_HOUSING",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "3bbd9834863fbbf86d89d657aa88cc37f283ed946a2da443e3b330cb1ef17f70",
+      "normal": "f52437b21274e81265bc7fef89d8ec06be787c933c77ffb4ca9606b235f8e533",
+      "orm": "0d72c6b21d5724b2ce85d35c127bd4960b813392007a432f41f6f47b45b295e7",
+      "height": "a7a79a2e6da43ab4efd87060a71d3b2d07eab9b1a307b423ec38150831098abb",
+      "emission": "f35b2ade7d768b84c3900f7c2dba40c295a467882d223e0d6509ea450a735b42"
+    }
+  },
+  {
+    "key": "wall_tech_spine",
+    "recipe": "Recipes/wall_tech_spine.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4100,
+    "preset": "WALL_TECH_SPINE",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "8042ac165468133048bc9156d666cea61b7853fc049a0178dc83d97cdf788108",
+      "normal": "06c4b23bba77a3ab07a844b3fc3ac9669dcdfc517c9dcea2422fca2ec71d1cbb",
+      "orm": "1f61944843a678f1fd49bbede77705d396917cf5a5edd5b97065fa4be6fec48b",
+      "height": "ea0fd5cb663963b313cbcd2e1ab9e172665481a1ca63a412fd5519c3323ac1db",
+      "emission": "e3636c432dde84098a866001b274639f4b5615afebbef3b54aa22d08df1a448c"
+    }
+  },
+  {
+    "key": "floor_rooftop",
+    "recipe": "Recipes/floor_rooftop.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4840,
+    "preset": "FLOOR_ROOFTOP",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "4b4a33a99bd8543c5656a72f5102047eb62c3deaf6c827084829ab71fc6b1de7",
+      "normal": "02c0b2062b0a9c00c1933742f329909f654c7cd48d95ee65a62c378fac9a8077",
+      "orm": "20fbad261a47e18ea5ef0022ec1e79666ae38df9e6beddb3e1ca1fe07782ccfa",
+      "height": "0b163a0c13119aece358c90bfbcb891429316871157a13911ec2c524f014c2e0",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "floor_metal_deck",
+    "recipe": "Recipes/floor_metal_deck.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 4581,
+    "preset": "FLOOR_METAL_DECK",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "411dab28f6009124bccdcc930ce506f661faf66c0c5ae43641eb064ef254f7cd",
+      "normal": "9827da97a1018d3ca949172d5679ae0c4a998acf651f5f5257180878ca94bf3e",
+      "orm": "cac452542e3de5062cb9e9cf34601454d1b0f2733244bcbb645807ad94f6e530",
+      "height": "608fffb47b69a215735b51bd0632307bd4e955445f28903896efae187fcfe60e",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "wrap_heavy_pipe",
+    "recipe": "Recipes/wrap_heavy_pipe.facade.json",
+    "mode": "CYLINDER_WRAP",
+    "seed": 5210,
+    "preset": "WRAP_HEAVY_PIPE",
+    "parameters": {
+      "circumference_modules": 6,
+      "vertical_band_count": 3,
+      "ring_density": 0.25,
+      "vertical_seam_count": 4,
+      "service_hatch_density": 0.16,
+      "emission_band_density": 0.08,
+      "pipe_grime_flow": 0.48
+    },
+    "sha256": {
+      "albedo": "54979b4417600905e66f50008fda86cf0fa2fae27bab5c29a6ec5dd21a604fe2",
+      "normal": "ede9a0e533f1fdc401dc44b213bab037d44a0e11cf1036753defb04a96382b85",
+      "orm": "d1c9030e357a115758911c5b123e7edce1384ae10b5671469a324233f5a9986d",
+      "height": "d14ca59c3e263cf93a72b257a869a457382f9f6e6893522b9fa4d87aa45cfc3c",
+      "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+    }
+  },
+  {
+    "key": "wrap_tank_shell",
+    "recipe": "Recipes/wrap_tank_shell.facade.json",
+    "mode": "CYLINDER_WRAP",
+    "seed": 5247,
+    "preset": "WRAP_TANK_SHELL",
+    "parameters": {
+      "circumference_modules": 8,
+      "vertical_band_count": 4,
+      "ring_density": 0.25,
+      "vertical_seam_count": 4,
+      "service_hatch_density": 0.16,
+      "emission_band_density": 0.08,
+      "pipe_grime_flow": 0.48
+    },
+    "sha256": {
+      "albedo": "024c67e0b11c6dbce4465156960099c1ab4aa77cae94fa71cac0021ac07cf337",
+      "normal": "ce74833e41703ac9f745afe56e1e11cf33216323f57b1bc7795d3eef676b6ab0",
+      "orm": "e33e3bd8f3cb384884f57981b1db1ff4dcfff89c60da7cbfe9593a9b4bc4ae76",
+      "height": "b7aed55d06c74c96395b0c86b01748efc6d6d6de702f6ce380e9fd6638b41130",
+      "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+    }
+  },
+  {
+    "key": "accent_datacenter",
+    "recipe": "Recipes/accent_datacenter.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 5876,
+    "preset": "ACCENT_DATACENTER",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "e6aed2922a416d3842f609b3a03b1ec2124bd2775e65c108f0a8e0383088fd05",
+      "normal": "dcff10fca75ae73209d7f1ac8139b7810b165a6a6d55c8bba30af454ed78c310",
+      "orm": "976079c2e1eaa0067818fe6e2dd70648c4c261250fa256f60638f633e08e5d2d",
+      "height": "2db089eba3d42b1dcfc5620d299c027618249cca8f00f1aab0860f1bf3dff38a",
+      "emission": "d02484f2be3627abe398a93f1df4ccf49566e3b64f2f57ae5c28b699293d8e6d"
+    }
+  },
+  {
+    "key": "accent_emissive_panel",
+    "recipe": "Recipes/accent_emissive_panel.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 5617,
+    "preset": "ACCENT_EMISSIVE_PANEL",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "9f63e37c397e44cbaba0b7e807f3269e7215a0946d15c7005b0db65a09a90f8c",
+      "normal": "0ded51c925d74db193d79d4fca5800063dfc4b711c1f82327d3f5a611c2536c4",
+      "orm": "e8d7f73fb0659bf127c9dffd779884aa487f3b563667f022c62dc3f8c6f88f32",
+      "height": "b661e4bfe2d4a3bc8dc6946da5bfadaf2cb4056ca4268365d81988471a596354",
+      "emission": "d1d2fac0350db9ed0aae9068ca68b09e67066aca387450fe48e7006fdaa0ba93"
+    }
+  },
+  {
+    "key": "accent_hazard_skin",
+    "recipe": "Recipes/accent_hazard_skin.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 5580,
+    "preset": "ACCENT_HAZARD_SKIN",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "7e2cc245e6d0fa1909051506ce5cba1cc6c7894d5e85670b4c7afef9d9fe4404",
+      "normal": "50eec501d8f5eae8eee2757b1c397e463a44d7a67e96f0c974455dd70df6a710",
+      "orm": "3c4d129e41ab0d60d37e4fad30eece56c0a59eab1e57b60ea9d3d8454a4e53ad",
+      "height": "89b85e84f727f8f7f5b075598284affa44fa74f9e1a5efcde408cf73b7caa260",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "accent_billboard_support",
+    "recipe": "Recipes/accent_billboard_support.facade.json",
+    "mode": "TILEABLE_SURFACE",
+    "seed": 5802,
+    "preset": "ACCENT_BILLBOARD_SUPPORT",
+    "parameters": {
+      "tile_scale": 1,
+      "panel_scale": 1,
+      "grout_width": 2,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.3,
+      "floor_markings_density": 0.08,
+      "wall_module_density": 0.18
+    },
+    "sha256": {
+      "albedo": "e10ff6d519535e65deb5bb674f310668ba1a622e26f05ed20a988747af42e01b",
+      "normal": "f7e04df2823ddcaddc8de73032bcfdb4b9c89c86cf2adad87574781d70306ddb",
+      "orm": "82cb2cb415078bcc5d36c26e1eaa1da1e899ccb1b12a76af73e0c1339d071df6",
+      "height": "c54b733489157c950ef41943ccace12c4b6794bdbc9675991a318e3f0bb99c02",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+    }
+  },
+  {
+    "key": "sign_0",
+    "recipe": "Recipes/sign_0.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925700,
+    "preset": "PANEL_AD",
+    "parameters": {
+      "aspect": 0.55,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "5e62a7061541edada85c3c36b0abcbe3f3e80ae29267b6aef8a00b370706c3e4",
+      "emission": "bfecc1e3eea6ea00292a0b0d6dd570a26ae4f5d4ce4540a2921f93c23b1e2c46",
+      "orm": "d5dc065d6073904379ecebbfcdb81f33c4d861ce3f05856d0c9a4349bd9c671c",
+      "normal": "cbca27c32f3920ee96c66f8cd2236ba44ad8b2f3f917d6be9cfe52adae070507",
+      "height": "da9cd3e19e705402a32317ae1b4a0fd1fad436fd332a93185d4e1c2bfb5b4c2d"
+    }
+  },
+  {
+    "key": "sign_1",
+    "recipe": "Recipes/sign_1.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925731,
+    "preset": "CORPORATE_PANEL",
+    "parameters": {
+      "aspect": 2.7,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.03,
+      "grime": 0.02,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "e79f9cf33d1ee490258870bad57f01f819465612aaace4eca53c5f727d601a2d",
+      "emission": "32479f86a8fcad2e898e6f0d00f0dd547b85e86782d93cb7cfc1fcdd0fc5aace",
+      "orm": "dd45e8b9f0c0b9e6602c6ef7e9eefecf328d9ac7cf78baffc8e9d08361fede40",
+      "normal": "473fb141cca6cea824dd4505c0c6496b4d21e72a707384ebf6b6778db230eddf",
+      "height": "4efd5062069bab10bf774ca507a675d506424353440b71d3d3bfa0db41ce9d79"
+    }
+  },
+  {
+    "key": "sign_2",
+    "recipe": "Recipes/sign_2.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925762,
+    "preset": "DIRTY_LIGHTBOX",
+    "parameters": {
+      "aspect": 1.4,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.45,
+      "grime": 0.38,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "825ec29e9097ddc8380711d51f00667abf275acea6ef033cb5f47e1527078d2b",
+      "emission": "6dcb91c58c621d2ccbba69419b05505c45a2be8aa49d70ccfdbaecede1fba777",
+      "orm": "1fc2c0b70f5e083c9e808bdfe46eb9e377cfb1911905b7c47d721c52667a0c02",
+      "normal": "55d0146f8d60d267151b274070d5f2399b017acba6d558aa84b16507f5042a43",
+      "height": "d2f66954a414788c0e90b898c6464a799c7c76f75f75425bd486ab4b7546bba9"
+    }
+  },
+  {
+    "key": "sign_3",
+    "recipe": "Recipes/sign_3.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925793,
+    "preset": "VERTICAL_NEON",
+    "parameters": {
+      "aspect": 0.4,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "bc3cf242b04bf04e7073cdff8bcebbb3e084d84f9a5ef89095876bcb1a3ba008",
+      "emission": "a75acc30ea2ca9ef44f70a50f155d5c304fe27f74f9711dead4d8da2c1f7245f",
+      "orm": "363972fb9fb3aa29102aee47eb9969537188c07d6e690e116ac4df37ad9ba531",
+      "normal": "5380198f187489041896600d2bc95665fd6559dab5f5768bfeaf07f5b819e22c",
+      "height": "12ab30bba12ce98a197008779bcb0ec8bbe96f2d73213e24d82bf2e72506f6a3"
+    }
+  },
+  {
+    "key": "sign_4",
+    "recipe": "Recipes/sign_4.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925824,
+    "preset": "HORIZONTAL_BILLBOARD",
+    "parameters": {
+      "aspect": 3.1,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "5ed2f00f3ef64c0b32cea09bceb505c0b92eccbb8710a00bd2f31d103625fad1",
+      "emission": "c7d19e2eccf145a03ce13d393b1ddb3dcfe765d6df372080d13cb1cabe6507d3",
+      "orm": "f2af59c525741b40ede8f1bca6d87e17cfbece5e2ef9807111d56d67ed19175e",
+      "normal": "88156bb6a2fe06d29ac598ed1c2342e78d7285a272a177f6b1e6803ea124d25e",
+      "height": "18acd88b0c0f80f23f5028550ccfcc4a002b1123b6e9bfd2797cfa8ddc50b677"
+    }
+  },
+  {
+    "key": "sign_5",
+    "recipe": "Recipes/sign_5.billboard.json",
+    "mode": "UNIQUE_PANEL",
+    "seed": 925855,
+    "preset": "INACTIVE_BILLBOARD",
+    "parameters": {
+      "aspect": 2.8,
+      "density": 0.55,
+      "emission_strength": 0.0,
+      "wear": 0.32,
+      "grime": 0.25,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "1e5fa5fc7332a3e9ae58f36d2d9f01089f12732092e349ee3255f11990582997",
+      "emission": "55971582bfceaed0877527a11671baed345be273a76a2c2c98fb860ae2477b3a",
+      "orm": "5f154c3414432a72f8ee33809f354fc49d659cf18220faf867701fdfed09487c",
+      "normal": "098131d43a8585e3af498ab067181ca74e56610f6bfac50fab353e2b93a3305a",
+      "height": "866f063bade874dce6bd16b547edc58b38672feef5bf8099b3f8e040433f6e5f"
+    }
+  },
+  {
+    "key": "f0_0_uv",
+    "recipe": "Recipes/f0_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925000,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.12,
+      "structural_width": 14,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "27ccd89a26eb439a19078e19c81c9d22de7cb48ac5fb25dc816a70931a57273b",
+      "normal": "2121cdae1c4e64f5b56f22e4d1912e57aedc73a5d5768f85f904a93d3d02f98e",
+      "orm": "36ade47902e567589cdc43df5efe00d17c14abbf97b0f1316c66283909a8c64f",
+      "height": "99e1b4ad21fe37165b65444b47741d352f2057e87075987e13764cf71ea0a98d",
+      "emission": "3e7cca0bd8cf12affab8b663079311876b62020412e0ac2d76f26fe022ef0fe5"
+    },
+    "source_key": "f0_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f0_1_uv",
+    "recipe": "Recipes/f0_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925017,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.3,
+      "structural_width": 14,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "f7675401e9f895b7aa26caff8c73353d9c3831e4f8abb6bff03cf5bd0f37983d",
+      "normal": "87dfdf4d85a86a381ca1aa3f662e0fb9997f1e55cc63696292a5566cf8121eff",
+      "orm": "3c7a5c2ef62859ef42bdf65bccd541e16bee34ee35906367097abd89c1a19b84",
+      "height": "6220e1315bab86d7d5496a9a01300785626cd8b2416378ec2045916ac89ace9f",
+      "emission": "92a3249d3630cc522b16980a512a071ca89ccdd5d8ec66e24f7f3acbc2b7fefe"
+    },
+    "source_key": "f0_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f0_2_uv",
+    "recipe": "Recipes/f0_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925034,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.54,
+      "structural_width": 14,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "bb38d2aa9c0a02472330562dd1e3c7cd2e904fcafba083593b48d7ce4d1e06b3",
+      "normal": "9e730d60cea0279bd252d3c8a75eeff327771d02dd53190b904f26b830ee9aa8",
+      "orm": "8944ae7ed33926e5aa77a9499a744fda48cd2ad3ee61c8a663a96af9724fa507",
+      "height": "14274e1645d2a7badc5111da765d19a60c44cf60b82d1354c0d2ecac4e0346d3",
+      "emission": "2457f2a1fa9193c33c99c0906d95e2cf1ee4d9a933a6f385cb4682973087825a"
+    },
+    "source_key": "f0_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f0_3_uv",
+    "recipe": "Recipes/f0_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925051,
+    "preset": "CORPORATE_MONOLITH",
+    "parameters": {
+      "window_density": 0.82,
+      "emission_density": 0.73,
+      "structural_width": 14,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.16,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "cef2b989b399724ce03b881345bd7d18a1e252697d191a17a8f1b6d161a74795",
+      "normal": "9f76c0f3b1367ba5962071efb4a14d3a186bd8981ff2bd94937f33e57c720436",
+      "orm": "152def2be35ba890ee380822e140863bcd38f17bdedf51f146fe1371bac4f041",
+      "height": "c508e78388e19059236ac1602b722a8917692855b927ea8f76c7d8ac9eba3ce5",
+      "emission": "bfa329dbc2428ec2c2d2e8c6245dfa2f13cd0f40f0fa93163f50a3295ab04a5c"
+    },
+    "source_key": "f0_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f1_0_uv",
+    "recipe": "Recipes/f1_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925101,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.12,
+      "structural_width": 17,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "81d3b8cb908198237cca2803cd191b439d755fc480c5f61bd6df6fc820f79f5a",
+      "normal": "4b0e1212547354221acde164a441fad023a9b26cbbb9cd6f7871a09ca38a36d9",
+      "orm": "680d8f9740723d724f63ac843211aa8aee4657aae7df4521f695c97e70a8bce6",
+      "height": "ee36f0f0c2973637a5ed04ac20b75a5c0cd01718b88f23f8e99953826f1012b4",
+      "emission": "c787c4de9fb9236c511035c90caf9482e8b879f8c6daff32f8368471a2264641"
+    },
+    "source_key": "f1_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f1_1_uv",
+    "recipe": "Recipes/f1_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925118,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.3,
+      "structural_width": 17,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "c51386c48d29ac03f7d79e024d58613ba151ad5be155c4fb3da1ecc3ddc3ac83",
+      "normal": "9d0a1cd30e7e8f59333e5b44be11a8a37364f7d9cfe247f7f4f7d1faa3188b36",
+      "orm": "249c69137c691063fece44dc248f04290a447b2b80542afe7b865e30fcb38b53",
+      "height": "95fe794ef432aea341d5dcd375699b92090b7ca4a6d0a7ca437fff5744cf8977",
+      "emission": "4f6a3faf63b9b574929748dddbb90991e04c7f16f2e09ee2e1e169536cd57a37"
+    },
+    "source_key": "f1_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f1_2_uv",
+    "recipe": "Recipes/f1_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925135,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.54,
+      "structural_width": 17,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "0ea7f15f8d1ca09fbf1aa137a2cdf7fe676354f46d57c41128b47b5c749c96dc",
+      "normal": "d70b70b3ab33990ff1a06878fd627a71ba7d2f0b1db347d56b36116857355d54",
+      "orm": "f9d55fd94a3e76914ab659f24983b8265c262f9e184a7941822a0775edb8070f",
+      "height": "c1ba3e6fce411c2d3ec156a7f5de3c6032829d638d6841b992c16c46ec00f06c",
+      "emission": "213b2a0837a641d86ae82cb044bfc5ba3d9333e1a720a88f800b2579594992e2"
+    },
+    "source_key": "f1_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f1_3_uv",
+    "recipe": "Recipes/f1_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925152,
+    "preset": "MEGABLOCK",
+    "parameters": {
+      "window_density": 0.68,
+      "emission_density": 0.73,
+      "structural_width": 17,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.23,
+      "dark_floor_frequency": 0.13,
+      "panel_density": 0.45,
+      "signage_density": 0.34,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "ba31340067c8f73c57df97b726cc20683b6f559db0f111f45dd2c5b48c07f5d7",
+      "normal": "4cb5efb707ed3389ddcc75c269f995ec650a2b46a77af1f7b428e2d1fc3000e8",
+      "orm": "e48b855668b86f825c526cb596e28b5beba4767f7922ddf54d4da316e8383b7f",
+      "height": "65470d80a399826024b371b361f2196b733f0e2461e23d0aab0c57afe027c4af",
+      "emission": "e09a90d1d06279522eba508076c526ae6602cc6635a7a1436412a7c908be2cdb"
+    },
+    "source_key": "f1_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f2_0_uv",
+    "recipe": "Recipes/f2_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925202,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.12,
+      "structural_width": 18,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "e16be3b685473fba29da8da1e3c1f8eaf39dba73ae6f137fbdaf25a47a4bd2ba",
+      "normal": "5ba8f8adf5106088153cdffc719b675ab3065fb841d42769b7e3b974bb1cb0a8",
+      "orm": "5402ade3753eed15447635d6d8379c063a6b5282aeadeceb9843b35f4b10537f",
+      "height": "d2f85dbe327d5f5ac5af84a485e2b3cf5f7aedd463ab4c833b9908b17b99bc70",
+      "emission": "f5bbe1ff5368c679466c5ca8723bb4c2e439a547e4e13fd028ebfd3e5a25043f"
+    },
+    "source_key": "f2_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f2_1_uv",
+    "recipe": "Recipes/f2_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925219,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.3,
+      "structural_width": 18,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "b340c401975cc1d1c30b783d795167b9d7c0b3c3be50439dd7982f41b40249b3",
+      "normal": "0c6900c24674d2a111316755f0a34853eccbbbb84da0a8c2015ab3f9422b1c00",
+      "orm": "f671f6acba80819eb8c4e80b32f339b18685f1bc45c29b3a3210d7dbd7a6592b",
+      "height": "d48b21cf838a6b3e54f9bb6b46d835a9097d9a5680a39139ffc99c5236d26814",
+      "emission": "93fa1e5721c59586851ddc12adb010b3e415807324722473b489d071206064d7"
+    },
+    "source_key": "f2_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f2_2_uv",
+    "recipe": "Recipes/f2_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925236,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.54,
+      "structural_width": 18,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "570796af2ea4ffd23c4cff042ed5816740392f28fcd4309cd32cb15331001681",
+      "normal": "1834313dbc9e93c64ecaebde43d68d5eab2fcad0fd24d54a5b6b59d43d041eb7",
+      "orm": "93f934f3818c9a7ec527ca9163edf1039d2dbcb48775737a084a4ef5b86dc8dd",
+      "height": "d71a0ef91ba212d3d5cd122ac535c417da58eac78577741b115617787ddb1a08",
+      "emission": "e18b9a089837a8b236c143d6a2a781010700d5f36c4b600e700de69bf868eade"
+    },
+    "source_key": "f2_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f2_3_uv",
+    "recipe": "Recipes/f2_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925253,
+    "preset": "INDUSTRIAL_TOWER",
+    "parameters": {
+      "window_density": 0.28,
+      "emission_density": 0.73,
+      "structural_width": 18,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.32,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.88,
+      "signage_density": 0.32,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.15
+    },
+    "sha256": {
+      "albedo": "73c14ea5714a6daf97b16306664363d10ed7f770e5f86c5557e26ca53be7e90e",
+      "normal": "89cf933559660984ae71c32eb7eea96136e8665d22566e86b381fae7cfda7fef",
+      "orm": "1a808ce9d8b5eeb404718f2770e8779b33f2ae096cc21b44ddfd498dd87ad8ec",
+      "height": "a3b8136cd8ab50f75aaddd4856033204a9fd10eb1f2b47fe8630e2178f257f62",
+      "emission": "8817550c5a69526b6200ad2b63aab4e8d983f12509e1c4bfcfc2d45d9186695d"
+    },
+    "source_key": "f2_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f3_0_uv",
+    "recipe": "Recipes/f3_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925303,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.12,
+      "structural_width": 20,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "db83d98ef8373a90730aab5b9665875d8bc773517ecd9ec1dfcdcc07446024e8",
+      "normal": "e0c6622336c9779c0ee2c2b7b3f6d4bdf7007e7b6c27c495ccaf819949846d3d",
+      "orm": "4a4f2f0e885962696026d9c3173707f5ef5b2c74efc3fa146bc0c9aeb71c734f",
+      "height": "a2b254b668b9b1306b95fb47ee11eeedc7674a7bb4322856c50c9e2493e22334",
+      "emission": "44319de672ab5314bef09b89face379b3423377adad6a83a02ce66e0ec64a8ea"
+    },
+    "source_key": "f3_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f3_1_uv",
+    "recipe": "Recipes/f3_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925320,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.3,
+      "structural_width": 20,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "a5459632cf2448367e3dac39f920385f8993e818a0b3daa177a1efe41cbc373c",
+      "normal": "e6c8cdd92dd2c984be36bcac682dd9f25f933223839773ad0edafb8b61538816",
+      "orm": "22a05c17d4b8409526c7c584d73500edd3f80174c16f3594dc94a7358345f2db",
+      "height": "5f8a1baf094bf2b5ea1605a65fc72e91acb837ba77e37390c5eb69b562d12b93",
+      "emission": "5d8a279e571d3e09f7b903c379b26666669e74c848a10b18e5fdc8113ad0c074"
+    },
+    "source_key": "f3_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f3_2_uv",
+    "recipe": "Recipes/f3_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925337,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.54,
+      "structural_width": 20,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "502292ad13a0b847b3f9ee6f19f456c92574e92f464801b408ee77a5b74b3d33",
+      "normal": "85ccc85b73ea9caeb85461c41e8cd4445da4328228af3ad43802762f9db6618b",
+      "orm": "3ff7c5e8708992c9f46eb003aa7a14c83fcdbc09b54bc54c3481e9d2b5718421",
+      "height": "8ff55ff8508ced6b85528463a81e86072f59fca5e47f9fa6f8e275b910d1cf38",
+      "emission": "078cbafa2e9435f8ce8e7504093cf5f8472df270bc74b5a31c385884b5f8f588"
+    },
+    "source_key": "f3_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f3_3_uv",
+    "recipe": "Recipes/f3_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925354,
+    "preset": "EXOSKELETON_TOWER",
+    "parameters": {
+      "window_density": 0.85,
+      "emission_density": 0.73,
+      "structural_width": 20,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.24,
+      "signage_density": 0.2,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "7588e12dcf4a6b9dcf75a2320d56ebf5cd89276e0e7cb7199c6a848a94d0dfb8",
+      "normal": "5e263be2d8bf67eb8b22a1df7a2f60a58a7bd98a823085f7fc1b689605a0d73d",
+      "orm": "25ea34330070933e709cce77f5a534127ec911a125ca5dfc5671a3fa3a040ac4",
+      "height": "c876937b58c07fa567089e3e07bd7815c41d0b86afc668e7205b97ba1124acd4",
+      "emission": "c174f707c24f662f71ba5d3830742d1acd82ff24af6746c97fa921234d5d28ed"
+    },
+    "source_key": "f3_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f4_0_uv",
+    "recipe": "Recipes/f4_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925404,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.12,
+      "structural_width": 5,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "0582af9a0dcad2e6be9bedaf094496b55619a41b09d82dff4d2a9591bc27bc67",
+      "normal": "49676594b28d04c09a9c27fcfa709988c3994ed50b746efee5a8ae0bb78b3bc8",
+      "orm": "ce78b8d88d07417b1c939603485991c1e5f669f6c147098772cc048c89c05aab",
+      "height": "3a9d864456c655f8c44037e3e250766f03a53b7459324b4bb655e008172dda76",
+      "emission": "748d1d24be0894e39315c2249e13950b63e406bb05d9d48aa62c7e3b8dd1185b"
+    },
+    "source_key": "f4_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f4_1_uv",
+    "recipe": "Recipes/f4_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925421,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.3,
+      "structural_width": 5,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "23cbae657ced756eaac233bc31447e2b9fa63a37fd691afe7c80a1ee8319f31e",
+      "normal": "01ca403b8ec2a831f73b90a5b5ab45ca60f1e38b76badf8c6868633c0e107712",
+      "orm": "aebb84ba4bdf9392fc7d48f3d7fa746b2a17fce4c30a35f622411620258e2eaa",
+      "height": "38f1c5c1ae154237ce2e24b996610ac423ec3c1b541607ebf86ab1d7753bca37",
+      "emission": "e00fa02d48e0db9dddb0915dc6685f896f757b73eef365b0b2be504c63303488"
+    },
+    "source_key": "f4_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f4_2_uv",
+    "recipe": "Recipes/f4_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925438,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.54,
+      "structural_width": 5,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "511df784035a71fb5e8eee303602b0013a188a4443084689835dbdfc75c14388",
+      "normal": "bb7bed2931f9e0a18ff02cc60d89bd8060b4b340228b030157c7b9da4fc7c7cb",
+      "orm": "e2c9ec93dddac318812eebc526b202577707bcd4e83a5bf44b9ae170fdab8b94",
+      "height": "e5a92a4c0598c1a5353b34ec57759d097dd296b3da2d769316a9f6f28dc93b12",
+      "emission": "81ce72fd65dc4a7d7080c1b2e0a9ea05ea038076c54036a883d7075a72c6e518"
+    },
+    "source_key": "f4_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f4_3_uv",
+    "recipe": "Recipes/f4_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925455,
+    "preset": "OFFICE_GRID",
+    "parameters": {
+      "window_density": 0.96,
+      "emission_density": 0.73,
+      "structural_width": 5,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.13,
+      "signage_density": 0.1,
+      "macro_contrast": 0.23,
+      "emission_strength": 1.35
+    },
+    "sha256": {
+      "albedo": "2ec25c426ed7d4fd86825062ce7d7c0445d131f6968a2925624d37dea3d8baa5",
+      "normal": "720031af2eda11e9b1c5e1d30dc2a92d3d56d1f4ea158e117e2fb42dd65da4d7",
+      "orm": "aef6cb447d03e7d2568fa6c505ebd5168564d3ca2db0441061784fc733b1f6ac",
+      "height": "7428f60f0d6e2b715b1fd69dcbf1664aeb288d87a7afed8c1cb18b59cf01a465",
+      "emission": "59034a3716fdca61934e74d864acc127955847b5128c4395e2abe446d832081f"
+    },
+    "source_key": "f4_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f5_0_uv",
+    "recipe": "Recipes/f5_0_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925505,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.12,
+      "structural_width": 14,
+      "grime_amount": 0.12,
+      "retro_strength": 0.35,
+      "window_aspect": 0.55,
+      "floor_height": 22,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "e6ae2b90fc2b3d8bed2c131d54869a5e128535f6536e9c6f6edd942c1138f050",
+      "normal": "73e6342951f3df4f43e2bc47836d8d7ace2c59e9098088b8b55a872565d56483",
+      "orm": "733c55aa26e10c5421fc018d4e5adbc562d4f3641e0458f1dce490ff5e654bc9",
+      "height": "6c0897bcaffe210651a011cc17f52b38b903ab1019b68be0b163f3cf160579e7",
+      "emission": "3b84cf9e4c91465a09875520858acb2217e933590daaca7b8c000d984b011bbb"
+    },
+    "source_key": "f5_0",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 43.45454545454545,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f5_1_uv",
+    "recipe": "Recipes/f5_1_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925522,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.3,
+      "structural_width": 14,
+      "grime_amount": 0.26,
+      "retro_strength": 0.35,
+      "window_aspect": 0.85,
+      "floor_height": 28,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "6b62480ac38530dff8726efe176fd9bb381806071f4dba973b1e27cdd60b711b",
+      "normal": "e302095099ad92d24bc68e13233455af789d62356a8d8cfd148dad813d8cc299",
+      "orm": "25941f36fb95977fa1106e6da2680edcafe05e0a8108f669fcc18bb288ea63e6",
+      "height": "fd87142e3f44ee54553835a7e80896ae64802c42c20a18a17fb1255b832a9a76",
+      "emission": "bcc22ebf1eaac44f98a61933b4c0180c9a2c8c8ffa6933895fbf1b1a4bafe5ea"
+    },
+    "source_key": "f5_1",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 34.142857142857146,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f5_2_uv",
+    "recipe": "Recipes/f5_2_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925539,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.54,
+      "structural_width": 14,
+      "grime_amount": 0.43,
+      "retro_strength": 0.35,
+      "window_aspect": 1.45,
+      "floor_height": 36,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "21d3fb7a374784826fe07fa6ac807434e23daac36a8494cfcf8011bd8fef3ff2",
+      "normal": "e23b6d4725a4522973bab190f0eae9f0e37b20af3397693e60dc3b00522b2ca9",
+      "orm": "b55d4afedfe783cec13d71e2e97dd0d5d70c51c3c16cfbe88892fa5545b3595f",
+      "height": "e952ce1e3d5a9d3998fff51a4c1d04e04ab4351f75267328947f3fd8e31edf6f",
+      "emission": "d08c13cd93334aabd839aeb237408050fb29cc5340272c221163822c86cd1a30"
+    },
+    "source_key": "f5_2",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 26.555555555555557,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "f5_3_uv",
+    "recipe": "Recipes/f5_3_uv.uv.json",
+    "mode": "PERIODIC_FACADE_INTERIOR",
+    "seed": 925556,
+    "preset": "LANDMARK_TECH",
+    "parameters": {
+      "window_density": 0.58,
+      "emission_density": 0.73,
+      "structural_width": 14,
+      "grime_amount": 0.59,
+      "retro_strength": 0.35,
+      "window_aspect": 2.1,
+      "floor_height": 44,
+      "service_floor_frequency": 0.14,
+      "dark_floor_frequency": 0.08,
+      "panel_density": 0.44,
+      "signage_density": 0.16,
+      "macro_contrast": 0.28,
+      "emission_strength": 1.7
+    },
+    "sha256": {
+      "albedo": "9b461a57d413e34844dbe2469cd152d15c561a559a5f4efb6c63cf3d1074c7e2",
+      "normal": "fc0f55d1a87f7d5a4378f3dec5f9a507ebfc4e66e229f5ecf0935e4f18c39f0f",
+      "orm": "57b6130caaded4528485c97f4da9c61c048508219c067dbeff68e32da9274b5b",
+      "height": "7241571f2eb9668ed39efd3f22fe3b0f7aadc46edb9178c29917c18a435ee813",
+      "emission": "0c62ef1ed3adb915c92e0875d0fb245693a701b6507b185e59603326595934dc"
+    },
+    "source_key": "f5_3",
+    "uv_qa_version": 1,
+    "crop": [
+      0,
+      36,
+      512,
+      992
+    ],
+    "tile_width_m": 42,
+    "nominal_floor_rows": 21.727272727272727,
+    "image_size": [
+      512,
+      956
+    ]
+  },
+  {
+    "key": "sign_0_uv",
+    "recipe": "Recipes/sign_0_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925700,
+    "preset": "PANEL_AD",
+    "parameters": {
+      "aspect": 0.55,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "533b9de0f59d1115f5e121acb5df7360b06795ecb053cee404dc7c3a20d9adf0",
+      "normal": "ea8e5287c0027e9f34b90daeaa4904f2227bee37fc76c9b7434d7ccc40ac980d",
+      "orm": "a90284b493079c59f64a836c394bf6185e65a9d5365ce61794b17ad97429ddd5",
+      "height": "cfc71f1f865b30b61675c6a3967b503b57b60f8610e129d2bb3065999f7ce3b2",
+      "emission": "a5841e5fec95707bcf7c7e690f3d425ea6c64b74160d7ad687c8046d6fa1bdf1"
+    },
+    "source_key": "sign_0",
+    "uv_qa_version": 1,
+    "image_size": [
+      290,
+      520
+    ]
+  },
+  {
+    "key": "sign_1_uv",
+    "recipe": "Recipes/sign_1_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925731,
+    "preset": "CORPORATE_PANEL",
+    "parameters": {
+      "aspect": 2.7,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.03,
+      "grime": 0.02,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "202eeb25dd5e98aa7b1d255a2d8b6b3034a8429d996fe490ecbd699f925545d9",
+      "normal": "59356612f06752f8326866c8808dbd03fbc8b3bc2b79adec2ad91c59cb8081e5",
+      "orm": "8dc9391881a39f100d8cc85b28d8569b3c436b40f46b339ea49aebe3cc529b83",
+      "height": "1544bd4904d3b74687720b78a32cad2f8b595e897798f57c56f3dd0489c07a3e",
+      "emission": "feb576305df4fb7ee213339cc50cd4073fae86ee2a4476eaf76aa000af51539b"
+    },
+    "source_key": "sign_1",
+    "uv_qa_version": 1,
+    "image_size": [
+      520,
+      198
+    ]
+  },
+  {
+    "key": "sign_2_uv",
+    "recipe": "Recipes/sign_2_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925762,
+    "preset": "DIRTY_LIGHTBOX",
+    "parameters": {
+      "aspect": 1.4,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.45,
+      "grime": 0.38,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "1da2e7bc751dba4a3c26cfcd9879da10178bc6465c71df78b5ef8dfdcb3bb752",
+      "normal": "e9e56d2e1a684819071ae6ccefd1151041284433b18dc804d1ea76333eab70d7",
+      "orm": "3a42683bdb1706f7ca14f75976a70f389be41f2c0aa5a4dcbe1828cf23882b5c",
+      "height": "ab41ce9abb43139732378966fd68f951092ad8f9bd7e3fa9f0a9925e4bb54c7c",
+      "emission": "d962864297c533075c6ecd1c9b48f0d0c1ef11853e86eec670a4c8b89445d274"
+    },
+    "source_key": "sign_2",
+    "uv_qa_version": 1,
+    "image_size": [
+      520,
+      374
+    ]
+  },
+  {
+    "key": "sign_3_uv",
+    "recipe": "Recipes/sign_3_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925793,
+    "preset": "VERTICAL_NEON",
+    "parameters": {
+      "aspect": 0.4,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "f0032f0906fa71b81978160be5c7e7dc18d94034e6314b1bba12d361ce9a7176",
+      "normal": "cf5b88a4c0be80b63f7d9904c6bbfb8cceb85993aa0130ba713e3ca2632edd99",
+      "orm": "6c9787afc825652cbe4c35796089aa33035c674e3658bea04c778baf5919003b",
+      "height": "b418d8bd0366e72ad5cf3744ec32cfc03e613964915e80eab25ab237f1831946",
+      "emission": "49a4dae6c85d06bc56f09b8d78bc1a5c0da50e2e7c854600239f007ee90a4d72"
+    },
+    "source_key": "sign_3",
+    "uv_qa_version": 1,
+    "image_size": [
+      213,
+      520
+    ]
+  },
+  {
+    "key": "sign_4_uv",
+    "recipe": "Recipes/sign_4_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925824,
+    "preset": "HORIZONTAL_BILLBOARD",
+    "parameters": {
+      "aspect": 3.1,
+      "density": 0.55,
+      "emission_strength": 2.0,
+      "wear": 0.12,
+      "grime": 0.12,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "01d726900ca4f731831502c0fb004eb3c9beb07b97fd6f20a1facd123bbbca45",
+      "normal": "5d17a7be6c5566e0e07f27d208d3db15509e952412f1ddea75a48ee9fd3a0a90",
+      "orm": "7bebe0b0d27a0d890bda4d02bc365ca8241c9f9baf29abb83978469d9077103f",
+      "height": "97b22d9a5d4bd9a1d610845fa04d89a3fb7df701167a510fa17a3057ad211a83",
+      "emission": "b11b531279f7768d79656c65a11bf80ab449485c0bee14257b06ffd6193d9566"
+    },
+    "source_key": "sign_4",
+    "uv_qa_version": 1,
+    "image_size": [
+      520,
+      173
+    ]
+  },
+  {
+    "key": "sign_5_uv",
+    "recipe": "Recipes/sign_5_uv.uv.json",
+    "mode": "CLAMP_SIGN_LETTERBOX",
+    "seed": 925855,
+    "preset": "INACTIVE_BILLBOARD",
+    "parameters": {
+      "aspect": 2.8,
+      "density": 0.55,
+      "emission_strength": 0.0,
+      "wear": 0.32,
+      "grime": 0.25,
+      "border": 0.7,
+      "glyph_scale": 1.0
+    },
+    "sha256": {
+      "albedo": "0ca13197e9a1016fc3dc43d8db3377cc9e278d397351a916d02953430772080e",
+      "normal": "dd963911806b0ee059e5dbdb27ae482041fc00e5ae54017fb91bddf10cb5446f",
+      "orm": "11763c1c3146c0f6a783e60b37c0b3eabd4b60022a7e602a3b0bbb6765c10f1e",
+      "height": "8c1b3d59b8d636172f41f51bd199fdf96ce20e7949c7f6b8f8e5108d7d332ea3",
+      "emission": "5fa06f01948f75e9cb1efdeb40172ba43a6d392a9f783d79ea4f939f7bccd813"
+    },
+    "source_key": "sign_5",
+    "uv_qa_version": 1,
+    "image_size": [
+      520,
+      191
+    ]
+  }
+]

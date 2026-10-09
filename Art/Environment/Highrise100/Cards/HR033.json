@@ -1,0 +1,112 @@
+{
+  "id": "HR033",
+  "name": "Twin Mountains",
+  "category": "arcology",
+  "subtype": 2,
+  "seed": 1186427,
+  "role": "midground",
+  "collection": "HR033_Twin_Mountains",
+  "bounds_m": [
+    101.63000000000001,
+    93.79279999999999,
+    339.96400000000006
+  ],
+  "bounds_min": [
+    -50.815000000000005,
+    -46.89639999999999,
+    0.0
+  ],
+  "bounds_max": [
+    50.815000000000005,
+    46.89639999999999,
+    339.96400000000006
+  ],
+  "parameters": {
+    "width": 73.8,
+    "depth": 80.52,
+    "height": 315.35,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "middle_link",
+    "twin_stepped_mountains"
+  ],
+  "metrics": {
+    "meshes": 6,
+    "primitives": 12,
+    "triangles": 144,
+    "vertices": 160,
+    "polygons": 72
+  },
+  "geometry_sha256": "0b4d749db0fec5a0f858ad61075aca64c1dffae32ed5255e0a27b405ab17a5c8",
+  "geometry_only_sha256": "1b29f9bdd2ad283d21ebc00271a7d0af182079ef02b4d29affd6e481a324fc1f",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.335,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.25,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.437,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.65
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Mountain_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Mountain": [
+      "f1_3_uv"
+    ],
+    "Link": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 16,
+    "floor_rooftop": 9,
+    "floor_metal_deck": 11,
+    "wall_reinforced": 4,
+    "f1_3_uv": 32
+  },
+  "recipes": [
+    "Recipes/f1_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reinforced.facade.json"
+  ],
+  "material_seeds": {
+    "f1_3_uv": 925152,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reinforced": 4285
+  },
+  "previews": [
+    "Previews/HR033.png",
+    "UV_Material_QA/Views/HR033_back.png",
+    "UV_Material_QA/Views/HR033_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

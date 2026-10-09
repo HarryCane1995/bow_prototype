@@ -1,0 +1,29 @@
+{
+  "key": "sign_2_uv",
+  "recipe": "Recipes/sign_2_uv.uv.json",
+  "mode": "CLAMP_SIGN_LETTERBOX",
+  "seed": 925762,
+  "preset": "DIRTY_LIGHTBOX",
+  "parameters": {
+    "aspect": 1.4,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.45,
+    "grime": 0.38,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "sha256": {
+    "albedo": "1da2e7bc751dba4a3c26cfcd9879da10178bc6465c71df78b5ef8dfdcb3bb752",
+    "normal": "e9e56d2e1a684819071ae6ccefd1151041284433b18dc804d1ea76333eab70d7",
+    "orm": "3a42683bdb1706f7ca14f75976a70f389be41f2c0aa5a4dcbe1828cf23882b5c",
+    "height": "ab41ce9abb43139732378966fd68f951092ad8f9bd7e3fa9f0a9925e4bb54c7c",
+    "emission": "d962864297c533075c6ecd1c9b48f0d0c1ef11853e86eec670a4c8b89445d274"
+  },
+  "source_key": "sign_2",
+  "uv_qa_version": 1,
+  "image_size": [
+    520,
+    374
+  ]
+}

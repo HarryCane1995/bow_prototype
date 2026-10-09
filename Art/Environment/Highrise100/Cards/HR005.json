@@ -1,0 +1,156 @@
+{
+  "id": "HR005",
+  "name": "Offset Atrium",
+  "category": "corporate",
+  "subtype": 4,
+  "seed": 964695,
+  "role": "background",
+  "collection": "HR005_Offset_Atrium",
+  "bounds_m": [
+    42.964000000000006,
+    40.76,
+    324.4
+  ],
+  "bounds_min": [
+    -21.482000000000003,
+    -20.38,
+    0.0
+  ],
+  "bounds_max": [
+    21.482000000000003,
+    20.38,
+    324.4
+  ],
+  "parameters": {
+    "width": 37.24,
+    "depth": 34.0,
+    "height": 308.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "attached_atrium",
+    "offset_cantilever",
+    "roof_comms"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 12,
+    "triangles": 152,
+    "vertices": 128,
+    "polygons": 74
+  },
+  "geometry_sha256": "f73f503c6fe2064685f82af4c1eafe04de8f63401c242e6e7ac1e76accf7f90f",
+  "geometry_only_sha256": "529c6d57cef3f530301bd2c0b3b2c48683cc444dbb575dbf81d1995c664f3900",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.755,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.583,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.534,
+    "rooftop_complexity": 0.2,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Lower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Lower": [
+      "f0_0_uv"
+    ],
+    "Upper_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Upper": [
+      "f4_1_uv"
+    ],
+    "GlassAtrium": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "TransferBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "CommsCabinet": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_service_rack"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 15,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 25,
+    "wall_corporate": 4,
+    "f0_0_uv": 4,
+    "f4_1_uv": 4,
+    "glass": 4,
+    "wall_maintenance": 4,
+    "wall_service_rack": 4,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/f4_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_service_rack.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "f4_1_uv": 925421,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_service_rack": 4174
+  },
+  "previews": [
+    "Previews/HR005.png",
+    "UV_Material_QA/Views/HR005_back.png",
+    "UV_Material_QA/Views/HR005_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 1,
+  "generator_version": "0.1.0",
+  "generator_fingerprint": "b806a9a8c6a383229fd7acafad451af065ad352f5a616e9722139e4f39ea4f69",
+  "created_at": "2026-09-18T00:53:12+00:00",
+  "name": "industrial_tower_213796178_474bcb16",
+  "preset": "INDUSTRIAL_TOWER",
+  "seed": 213796178,
+  "palette": "industrial",
+  "parameters": {
+    "window_density": 0,
+    "emission_density": 0,
+    "structural_width": 2,
+    "grime_amount": 0,
+    "retro_strength": 0,
+    "window_aspect": 2.55,
+    "floor_height": 54,
+    "service_floor_frequency": 0.85,
+    "dark_floor_frequency": 0.74,
+    "panel_density": 0.8,
+    "signage_density": 0.8,
+    "macro_contrast": 0.48,
+    "emission_strength": 6.15
+  },
+  "style": {
+    "posterization": 131,
+    "dithering": 0.6,
+    "color_quantization": 112,
+    "micro_contrast": 0.92,
+    "compression_artifacts": 0.51,
+    "pixel_noise": 0.8,
+    "edge_exaggeration": 0.26,
+    "baked_ao_strength": 0.27
+  },
+  "resolution": [
+    256,
+    512
+  ],
+  "overrides": {
+    "window_density": 0,
+    "emission_density": 0,
+    "structural_width": 2,
+    "grime_amount": 0,
+    "retro_strength": 0,
+    "window_aspect": 2.55,
+    "floor_height": 54,
+    "service_floor_frequency": 0.85,
+    "dark_floor_frequency": 0.74,
+    "panel_density": 0.8,
+    "signage_density": 0.8,
+    "macro_contrast": 0.48,
+    "emission_strength": 6.15
+  },
+  "outputs": {},
+  "sha256": {},
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL"
+}

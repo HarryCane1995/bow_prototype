@@ -1,0 +1,29 @@
+{
+  "audit_name": "audit_current",
+  "report_name": "final_comparison",
+  "cases": [
+    {
+      "name": "A_BEFORE",
+      "filter": 2,
+      "sun": {
+        "light_angular_distance": 8,
+        "directional_shadow_split_2": 0.2,
+        "directional_shadow_blend_splits": false,
+        "directional_shadow_max_distance": 100
+      }
+    },
+    { "name": "B_AFTER" },
+    {
+      "name": "C_DEBUG_NEUTRAL_MATERIAL",
+      "neutral": true,
+      "filter": 2,
+      "sun": {
+        "light_angular_distance": 8,
+        "directional_shadow_split_2": 0.2,
+        "directional_shadow_blend_splits": false,
+        "directional_shadow_max_distance": 100
+      }
+    },
+    { "name": "C_DEBUG_NEUTRAL_AFTER", "neutral": true }
+  ]
+}

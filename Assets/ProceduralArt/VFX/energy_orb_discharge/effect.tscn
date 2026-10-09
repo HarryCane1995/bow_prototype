@@ -1,0 +1,3 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="PackedScene" path="res://Assets/ProceduralArt/VFX/energy_orb_discharge/explosion.tscn" id="1"]
+[node name="Effect" instance=ExtResource("1")]

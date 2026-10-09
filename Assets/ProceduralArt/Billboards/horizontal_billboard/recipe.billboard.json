@@ -1,0 +1,36 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "HORIZONTAL_BILLBOARD",
+  "seed": 99,
+  "palette": "COLD_SERVICE",
+  "colors": {
+    "neon": "#69e5da",
+    "accent": "#ffc36b",
+    "back": "#17272c",
+    "ink": "#b9ceca"
+  },
+  "parameters": {
+    "aspect": 3.1,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "long_edge": 512,
+  "size": [
+    512,
+    165
+  ],
+  "sha256": {
+    "albedo": "8dc3b153aead2ed5c86492c8541a68652a7c93fe86810fc33fe71e073558b969",
+    "emission": "da8570afb7b4bdf5537341cf34edb2c5200a212a56e397afabe1fe62ab6d1f00",
+    "orm": "88f1dcdc92533b071ed7930987be6ddc77ebba347f80687874e1b2d89fa47af7"
+  }
+}

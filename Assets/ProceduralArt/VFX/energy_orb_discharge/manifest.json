@@ -1,0 +1,829 @@
+{
+  "recipe": {
+    "schema": "bowprototype.mesh_vfx",
+    "schema_version": 1,
+    "generator_version": "0.2.0",
+    "effect": "ENERGY_ORB",
+    "seed": 1108,
+    "parameters": {
+      "overall_scale": 1.0,
+      "duration": 2.2,
+      "core_size": 0.75,
+      "core_brightness": 1.6,
+      "core_lifetime": 1.0,
+      "petal_count": 9,
+      "petal_length": 1.8,
+      "petal_width": 0.65,
+      "petal_curl": 0.75,
+      "petal_spread": 0.8,
+      "petal_irregularity": 0.38,
+      "petal_lifetime": 0.85,
+      "ring_radius": 3.3,
+      "ring_thickness": 0.18,
+      "ring_speed": 1.4,
+      "ring_tilt": 0,
+      "ring_vertical_offset": 0.06,
+      "shard_count": 16,
+      "shard_length": 0.65,
+      "shard_spread": 2.6,
+      "shard_speed": 1.4,
+      "smoke_count": 8,
+      "smoke_puff_size": 0.65,
+      "smoke_expansion_speed": 0.7,
+      "smoke_darkness": 0.5,
+      "smoke_linger": 1.9,
+      "smoke_delay": 0.2,
+      "dust_spread": 2.2,
+      "low_poly_amount": 0.82,
+      "vertex_wobble": 0.025,
+      "posterization": 5,
+      "palette_quantization": 0.35,
+      "alpha_dithering": 0.7,
+      "chunkiness": 0.65,
+      "silhouette_exaggeration": 0.55,
+      "effect_length": 4.0,
+      "effect_radius": 2.3,
+      "effect_width": 0.045,
+      "effect_count": 14,
+      "effect_segments": 10,
+      "effect_jitter": 0.3,
+      "effect_arc": 1.4,
+      "effect_lifetime": 1.5,
+      "effect_stagger": 0.08,
+      "effect_motion": 1.0
+    },
+    "layers": {
+      "core": {
+        "enabled": true,
+        "color": "#b1f4cf",
+        "color_b": "#3877a0",
+        "opacity": 0.95,
+        "emission": 1.2,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "petals": {
+        "enabled": false,
+        "color": "#db943f",
+        "color_b": "#9b3928",
+        "opacity": 0.9,
+        "emission": 0.9,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.0,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "ring": {
+        "enabled": true,
+        "color": "#94f1d9",
+        "color_b": "#31599e",
+        "opacity": 0.65,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": true,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "shards": {
+        "enabled": true,
+        "color": "#dbffca",
+        "color_b": "#62b9b3",
+        "opacity": 0.9,
+        "emission": 0.3,
+        "blend": "ADDITIVE",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "smoke": {
+        "enabled": false,
+        "color": "#77736a",
+        "color_b": "#3b4142",
+        "opacity": 0.6,
+        "emission": 0.0,
+        "blend": "DITHER",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": true,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      },
+      "dust": {
+        "enabled": false,
+        "color": "#716b5a",
+        "color_b": "#3a3935",
+        "opacity": 0.3,
+        "emission": 0.0,
+        "blend": "ALPHA",
+        "unshaded": false,
+        "soft_alpha": 0.15,
+        "depth_write": false,
+        "cull_back": false,
+        "fade_curve": "SMOOTH"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "Core",
+      "layer": "core",
+      "mesh": "Core",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.1875,
+        0.1875,
+        0.1875
+      ],
+      "scale1": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "start": 0.0,
+      "life": 1.5,
+      "speed": 1,
+      "spin": 0,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0,
+      "tint": 0.12727136813282836
+    },
+    {
+      "name": "OrbitalBand_00",
+      "layer": "ring",
+      "mesh": "OrbitalBand_00",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.44849999999999995,
+        0.44849999999999995,
+        0.44849999999999995
+      ],
+      "scale1": [
+        1.4949999999999999,
+        1.4949999999999999,
+        1.4949999999999999
+      ],
+      "start": 0.0,
+      "life": 1.5,
+      "speed": 1,
+      "spin": -0.5,
+      "rotation": [
+        0.33873792024529137,
+        0.0,
+        0.0,
+        0.9408807689542255
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.8957061894256072
+    },
+    {
+      "name": "OrbitalBand_01",
+      "layer": "ring",
+      "mesh": "OrbitalBand_01",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.5313,
+        0.5313,
+        0.5313
+      ],
+      "scale1": [
+        1.771,
+        1.771,
+        1.771
+      ],
+      "start": 0.0,
+      "life": 1.5,
+      "speed": 1,
+      "spin": 0.0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.600420225325884,
+        0.7996846584870906
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.9322660235887195
+    },
+    {
+      "name": "OrbitalBand_02",
+      "layer": "ring",
+      "mesh": "OrbitalBand_02",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0,
+        0,
+        0
+      ],
+      "scale0": [
+        0.6140999999999999,
+        0.6140999999999999,
+        0.6140999999999999
+      ],
+      "scale1": [
+        2.0469999999999997,
+        2.0469999999999997,
+        2.0469999999999997
+      ],
+      "start": 0.0,
+      "life": 1.5,
+      "speed": 1,
+      "spin": 0.5,
+      "rotation": [
+        0.5720614028176843,
+        0.0,
+        0.5720614028176843,
+        0.5877852522924731
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.5279552192159238
+    },
+    {
+      "name": "Satellite_00",
+      "layer": "shards",
+      "mesh": "Satellite_00",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -2.0844935895512937,
+        0.7826828639573963,
+        0.5764494857201361
+      ],
+      "scale0": [
+        0.019943345686713826,
+        0.019943345686713826,
+        0.019943345686713826
+      ],
+      "scale1": [
+        0.1329556379114255,
+        0.1329556379114255,
+        0.1329556379114255
+      ],
+      "start": 0.0,
+      "life": 1.3652595742458775,
+      "speed": 1,
+      "spin": 1.0168715148288574,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.7870297809045164
+    },
+    {
+      "name": "Satellite_01",
+      "layer": "shards",
+      "mesh": "Satellite_01",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        1.6572863683749857,
+        -1.3020052349297315,
+        0.92096919677806
+      ],
+      "scale0": [
+        0.023054176645140145,
+        0.023054176645140145,
+        0.023054176645140145
+      ],
+      "scale1": [
+        0.15369451096760098,
+        0.15369451096760098,
+        0.15369451096760098
+      ],
+      "start": 0.0,
+      "life": 1.3717259629456908,
+      "speed": 1,
+      "spin": -0.07137725421861285,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.19979755461072268
+    },
+    {
+      "name": "Satellite_02",
+      "layer": "shards",
+      "mesh": "Satellite_02",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -1.9475040171242868,
+        -0.25823514193931657,
+        1.196052973221649
+      ],
+      "scale0": [
+        0.020999204454613913,
+        0.020999204454613913,
+        0.020999204454613913
+      ],
+      "scale1": [
+        0.13999469636409276,
+        0.13999469636409276,
+        0.13999469636409276
+      ],
+      "start": 0.0,
+      "life": 1.3864681190506611,
+      "speed": 1,
+      "spin": 0.5993796878543578,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.34857735785870025
+    },
+    {
+      "name": "Satellite_03",
+      "layer": "shards",
+      "mesh": "Satellite_03",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -1.5843388624060957,
+        -0.6260763466926809,
+        -1.5452827499139776
+      ],
+      "scale0": [
+        0.014320831946412298,
+        0.014320831946412298,
+        0.014320831946412298
+      ],
+      "scale1": [
+        0.095472212976082,
+        0.095472212976082,
+        0.095472212976082
+      ],
+      "start": 0.0,
+      "life": 1.390198154725236,
+      "speed": 1,
+      "spin": -1.5134471902086681,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.6201492137833928
+    },
+    {
+      "name": "Satellite_04",
+      "layer": "shards",
+      "mesh": "Satellite_04",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -0.40504831356570686,
+        1.5964146729856519,
+        1.6054270632930323
+      ],
+      "scale0": [
+        0.022444593533245048,
+        0.022444593533245048,
+        0.022444593533245048
+      ],
+      "scale1": [
+        0.14963062355496698,
+        0.14963062355496698,
+        0.14963062355496698
+      ],
+      "start": 0.0,
+      "life": 1.2461526390274573,
+      "speed": 1,
+      "spin": 0.6097164649731694,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.5464642014839771
+    },
+    {
+      "name": "Satellite_05",
+      "layer": "shards",
+      "mesh": "Satellite_05",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        1.2613335844577553,
+        1.2160446941084158,
+        -1.490058015867073
+      ],
+      "scale0": [
+        0.020836004720930324,
+        0.020836004720930324,
+        0.020836004720930324
+      ],
+      "scale1": [
+        0.1389066981395355,
+        0.1389066981395355,
+        0.1389066981395355
+      ],
+      "start": 0.0,
+      "life": 1.1006402235042338,
+      "speed": 1,
+      "spin": 1.2523397676948864,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.09477643188245377
+    },
+    {
+      "name": "Satellite_06",
+      "layer": "shards",
+      "mesh": "Satellite_06",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -1.2617495219926136,
+        -1.2889024264185547,
+        -1.4271365312834545
+      ],
+      "scale0": [
+        0.009990816749506222,
+        0.009990816749506222,
+        0.009990816749506222
+      ],
+      "scale1": [
+        0.06660544499670815,
+        0.06660544499670815,
+        0.06660544499670815
+      ],
+      "start": 0.0,
+      "life": 1.4765592625751462,
+      "speed": 1,
+      "spin": -1.372668980286778,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.1864509152015224
+    },
+    {
+      "name": "Satellite_07",
+      "layer": "shards",
+      "mesh": "Satellite_07",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        -0.846120897295689,
+        -0.5729412463845382,
+        -2.0605382198228863
+      ],
+      "scale0": [
+        0.010697480807304259,
+        0.010697480807304259,
+        0.010697480807304259
+      ],
+      "scale1": [
+        0.07131653871536173,
+        0.07131653871536173,
+        0.07131653871536173
+      ],
+      "start": 0.0,
+      "life": 1.225158791501805,
+      "speed": 1,
+      "spin": 0.8722925842738456,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.29694074115845154
+    },
+    {
+      "name": "Satellite_08",
+      "layer": "shards",
+      "mesh": "Satellite_08",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        1.8034689482798212,
+        1.073223388094349,
+        0.9411117424821351
+      ],
+      "scale0": [
+        0.020171501493232925,
+        0.020171501493232925,
+        0.020171501493232925
+      ],
+      "scale1": [
+        0.13447667662155283,
+        0.13447667662155283,
+        0.13447667662155283
+      ],
+      "start": 0.0,
+      "life": 1.4368084256311895,
+      "speed": 1,
+      "spin": -1.614799828647032,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.6462191849979111
+    },
+    {
+      "name": "Satellite_09",
+      "layer": "shards",
+      "mesh": "Satellite_09",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        1.9059744897287576,
+        0.5358229250560467,
+        1.1705362179307326
+      ],
+      "scale0": [
+        0.020932777754294314,
+        0.020932777754294314,
+        0.020932777754294314
+      ],
+      "scale1": [
+        0.13955185169529544,
+        0.13955185169529544,
+        0.13955185169529544
+      ],
+      "start": 0.0,
+      "life": 1.0792769162360276,
+      "speed": 1,
+      "spin": -1.1914232496155654,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.7698928823654546
+    },
+    {
+      "name": "Satellite_10",
+      "layer": "shards",
+      "mesh": "Satellite_10",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0.09882106051940469,
+        2.1106103550887587,
+        -0.9086024031389762
+      ],
+      "scale0": [
+        0.014103329654342868,
+        0.014103329654342868,
+        0.014103329654342868
+      ],
+      "scale1": [
+        0.09402219769561912,
+        0.09402219769561912,
+        0.09402219769561912
+      ],
+      "start": 0.0,
+      "life": 1.1150649118672789,
+      "speed": 1,
+      "spin": 0.3600511510368136,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.5299649222691559
+    },
+    {
+      "name": "Satellite_11",
+      "layer": "shards",
+      "mesh": "Satellite_11",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0.8457580558770459,
+        2.1253908159531143,
+        -0.23959797658000653
+      ],
+      "scale0": [
+        0.012005094833972685,
+        0.012005094833972685,
+        0.012005094833972685
+      ],
+      "scale1": [
+        0.0800339655598179,
+        0.0800339655598179,
+        0.0800339655598179
+      ],
+      "start": 0.0,
+      "life": 1.348589159783983,
+      "speed": 1,
+      "spin": -1.2826545408209258,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.5297739764141636
+    },
+    {
+      "name": "Satellite_12",
+      "layer": "shards",
+      "mesh": "Satellite_12",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        1.3914827817677673,
+        1.8284423831741685,
+        -0.1028305375664357
+      ],
+      "scale0": [
+        0.018996793422972728,
+        0.018996793422972728,
+        0.018996793422972728
+      ],
+      "scale1": [
+        0.12664528948648485,
+        0.12664528948648485,
+        0.12664528948648485
+      ],
+      "start": 0.0,
+      "life": 1.2871074598822143,
+      "speed": 1,
+      "spin": 1.421944533050028,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.8347840816570455
+    },
+    {
+      "name": "Satellite_13",
+      "layer": "shards",
+      "mesh": "Satellite_13",
+      "origin": [
+        0,
+        1.35,
+        0
+      ],
+      "travel": [
+        0.15500959054963157,
+        2.2615056677760808,
+        -0.38931239571107384
+      ],
+      "scale0": [
+        0.014849729634785733,
+        0.014849729634785733,
+        0.014849729634785733
+      ],
+      "scale1": [
+        0.09899819756523823,
+        0.09899819756523823,
+        0.09899819756523823
+      ],
+      "start": 0.0,
+      "life": 1.33027754708269,
+      "speed": 1,
+      "spin": 1.7544756744233485,
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "gravity": 0,
+      "fade_start": 0.3,
+      "tint": 0.22768230828519342
+    }
+  ],
+  "duration": 2.2,
+  "stats": {
+    "mesh_count": 18,
+    "triangle_count": 1128
+  },
+  "coordinate_system": "right-handed, Y-up, metres; trail local -Z, laser incoming +Z, lightning from +Y",
+  "animation": "analytic life curves, no billboards"
+}

@@ -7,16 +7,15 @@ const MATERIAL_REPLACEMENTS := {
 	"SIM_GRID_03": preload("res://Assets/Materials/Simulation/sim_grid_03.tres"),
 	"SIM_GRID_04": preload("res://Assets/Materials/Simulation/sim_grid_04.tres"),
 	"SIM_GRID_05": preload("res://Assets/Materials/Simulation/sim_grid_05.tres"),
-	"SIM_GRID_CEILING": preload("res://Assets/Materials/Simulation/sim_grid_ceiling.tres"),
-	"SIM_CEILING_DARK": preload("res://Assets/Materials/Simulation/sim_ceiling_dark.tres"),
-	"SIM_EDGE_CEILING": preload("res://Assets/Materials/Simulation/sim_edge_ceiling.tres"),
 	"CITY_FAR_WINDOWS": preload("res://Assets/Materials/Environment/city_far_windows.tres"),
 	"CITY_FAR_ACCENT": preload("res://Assets/Materials/Environment/city_far_accent.tres"),
+	"M_Level01_Floor_TechWall_627708735": preload("res://Assets/Materials/Environment/FacadeFactory/Generated/tech_wall_627708735.tres"),
 }
 
 const FOG_VOLUME_PREFIX := "VOLUME_FOG_"
 const FOG_VOLUME_SHAPE_BOX := 3
 const CITY_FOG_MATERIAL := preload("res://Assets/Materials/Simulation/fog_volume_city.tres")
+const LEVEL01_ART_LIBRARY := preload("res://Scripts/Editor/Import/Level01ArtMaterialLibrary.gd")
 
 
 func _post_import(scene: Node) -> Object:
@@ -44,6 +43,8 @@ func _post_import(scene: Node) -> Object:
 				continue
 
 			var replacement: Material = MATERIAL_REPLACEMENTS.get(source_material.resource_name)
+			if replacement == null and get_source_file() == "res://Level_01_Blockout.blend":
+				replacement = LEVEL01_ART_LIBRARY.resolve(source_material.resource_name)
 			if replacement == null:
 				continue
 

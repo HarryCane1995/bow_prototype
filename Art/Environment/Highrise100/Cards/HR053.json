@@ -1,0 +1,150 @@
+{
+  "id": "HR053",
+  "name": "Cross Reliquary",
+  "category": "retro",
+  "subtype": 2,
+  "seed": 1344807,
+  "role": "background",
+  "collection": "HR053_Cross_Reliquary",
+  "bounds_m": [
+    50.60959999999999,
+    56.656,
+    294.62749999999994
+  ],
+  "bounds_min": [
+    -25.304799999999997,
+    -28.328,
+    0.0
+  ],
+  "bounds_max": [
+    25.304799999999997,
+    28.328,
+    294.62749999999994
+  ],
+  "parameters": {
+    "width": 42.64,
+    "depth": 48.8,
+    "height": 273.7,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Cross Reliquary",
+    "cruciform",
+    "flying_shoulders",
+    "retro",
+    "tapered_crown"
+  ],
+  "metrics": {
+    "meshes": 15,
+    "primitives": 12,
+    "triangles": 184,
+    "vertices": 184,
+    "polygons": 86
+  },
+  "geometry_sha256": "b1593a1ee31ee2f23770cf069759ebbff36e0342e85548da1f4a03b3b2df9c9e",
+  "geometry_only_sha256": "5ffc3e18839f027308846a71e0d3c7e53e30deff6a30d8da0a1f8839f2049d45",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.52,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.25,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.247,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.48
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "nave_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "nave": [
+      "f4_0_uv"
+    ],
+    "transept_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "transept": [
+      "f0_1_uv"
+    ],
+    "side_buttress": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "end_pier_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "end_pier": [
+      "f0_1_uv"
+    ],
+    "eight_sided_spire_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "eight_sided_spire": [
+      "f0_1_uv"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 23,
+    "floor_rooftop": 8,
+    "floor_metal_deck": 13,
+    "wall_corporate": 4,
+    "f4_0_uv": 4,
+    "f0_1_uv": 28,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/f0_1_uv.uv.json",
+    "Recipes/f4_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_1_uv": 925017,
+    "f4_0_uv": 925404,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR053.png",
+    "UV_Material_QA/Views/HR053_back.png",
+    "UV_Material_QA/Views/HR053_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

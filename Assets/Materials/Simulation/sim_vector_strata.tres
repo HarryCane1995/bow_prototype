@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Simulation/sim_grid.gdshader" id="1"]
+
+[resource]
+shader = ExtResource("1")
+shader_parameter/visual_system = 2
+shader_parameter/surface_color = Color(0.47, 0.39, 0.43, 1)
+shader_parameter/accent_color = Color(0.97, 0.36, 0.16, 1)
+shader_parameter/structure_scale = 7.0
+shader_parameter/structure_contrast = 0.7
+shader_parameter/accent_density = 0.24
+shader_parameter/emission_strength = 0.55
+shader_parameter/motion_speed = 0.12
+shader_parameter/distortion = 0.55

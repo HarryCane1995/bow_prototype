@@ -1,0 +1,151 @@
+{
+  "id": "HR068",
+  "name": "Hanging Cradle",
+  "category": "suspended",
+  "subtype": 2,
+  "seed": 1463592,
+  "role": "midground",
+  "collection": "HR068_Hanging_Cradle",
+  "bounds_m": [
+    46.453,
+    45.14,
+    345.1
+  ],
+  "bounds_min": [
+    -23.2265,
+    -22.57,
+    0.0
+  ],
+  "bounds_max": [
+    23.2265,
+    22.57,
+    345.1
+  ],
+  "parameters": {
+    "width": 45.1,
+    "depth": 45.14,
+    "height": 345.1,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Hanging Cradle",
+    "free_understory",
+    "long_hangers",
+    "paired_masts",
+    "roof_paired_hvac",
+    "suspended",
+    "suspended_central_pod"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 15,
+    "triangles": 244,
+    "vertices": 216,
+    "polygons": 106
+  },
+  "geometry_sha256": "5a33c15819d1435248a1d3e51ceca306faccec4c3aac9bbc6497d61c757feb95",
+  "geometry_only_sha256": "38972f61fb6b9c2472c2004ce13ecbafecfa18ea81f4eee634a04cb0e287268d",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.743,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.867,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.41,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "cradle_mast": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "top_transfer": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "hanging_pod_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "hanging_pod": [
+      "f5_1_uv"
+    ],
+    "hanger": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "pod_keel": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ground_station_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "ground_station": [
+      "f2_2_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 15,
+    "floor_metal_deck": 57,
+    "wall_tech_spine": 12,
+    "floor_rooftop": 2,
+    "f5_1_uv": 4,
+    "f2_2_uv": 4,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f2_2_uv.uv.json",
+    "Recipes/f5_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f2_2_uv": 925236,
+    "f5_1_uv": 925522,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR068.png",
+    "UV_Material_QA/Views/HR068_back.png",
+    "UV_Material_QA/Views/HR068_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

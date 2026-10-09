@@ -1,0 +1,115 @@
+[gd_scene load_steps=19 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/directional_lightning/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/directional_lightning/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/MainStrike.obj" id="Mesh_MainStrike"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_00.obj" id="Mesh_Fork_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_01.obj" id="Mesh_Fork_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_02.obj" id="Mesh_Fork_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_03.obj" id="Mesh_Fork_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_04.obj" id="Mesh_Fork_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Fork_05.obj" id="Mesh_Fork_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Restrike_00.obj" id="Mesh_Restrike_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Restrike_01.obj" id="Mesh_Restrike_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/directional_lightning/meshes/Band_00.obj" id="Mesh_Band_00"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/directional_lightning/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="MainStrike" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_MainStrike")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Restrike_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Restrike_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Restrike_01" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Restrike_01")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="Band_00" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_Band_00")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="Fork_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Fork_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Fork_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Fork_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Fork_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Fork_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Fork_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

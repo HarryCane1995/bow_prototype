@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bow Art Factory — Surface / VFX / Billboards</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=0.4.1">
+  <link rel="stylesheet" href="favorites.css?v=1">
+  <link rel="stylesheet" href="vfx.css?v=1">
+  <link rel="stylesheet" href="billboard.css?v=1">
+  <link rel="stylesheet" href="material_library.css?v=1">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+</head>
+<body>
+  <nav class="factory-tabs" aria-label="Factory workspace" role="tablist"><button id="surface-workspace-tab" role="tab" aria-selected="true" aria-controls="surface-tab">SURFACE</button><button id="vfx-workspace-tab" role="tab" aria-selected="false" aria-controls="vfx-tab">VFX <span>MESH / SPRITE</span></button><button id="billboard-workspace-tab" role="tab" aria-selected="false" aria-controls="billboard-tab">BILLBOARDS</button><span class="factory-local" id="storage-state">LOCAL ART TOOLS</span></nav>
+  <section id="surface-tab" role="tabpanel" aria-labelledby="surface-workspace-tab">
+  <header class="toolbar">
+    <div class="brand"><span class="brandmark" aria-hidden="true">S<span>F</span></span><div><strong>SURFACE FACTORY</strong><small>BOWPROTOTYPE <span>/ WEBGL LAB 0.4</span></small></div></div>
+    <label class="toolbar-field mode-field"><span>SURFACE MODE</span><select id="surface-mode" aria-label="Surface mode"><option>UNIQUE_FACADE</option><option>TILEABLE_SURFACE</option><option>CYLINDER_WRAP</option></select></label>
+    <label class="toolbar-field preset-field"><span>ARCHETYPE</span><select id="preset" aria-label="Facade preset"></select></label>
+    <div class="toolbar-field seed-field"><label for="seed">SEED</label><div class="seed-input"><button id="previous" title="Previous seed" aria-label="Previous seed">−</button><input id="seed" aria-label="Seed" type="number" min="0" max="2147483647" value="99"><button id="next" title="Next seed" aria-label="Next seed">+</button></div></div>
+    <button id="random-seed" class="accent" title="Explore a new deterministic seed">↻ <span>RANDOMIZE SEED</span></button>
+    <button id="export" class="export-button" disabled>EXPORT TO PROJECT <span>↗</span></button>
+  </header>
+  <main>
+    <section class="workspace" aria-label="3D material preview">
+      <div class="viewport-bar"><div class="live-tag"><i></i> LOCAL WORKSPACE</div><div class="map-tabs" role="group" aria-label="Map view"><button data-map="material" class="active">MATERIAL</button><button data-map="albedo">ALBEDO</button><button data-map="emission">EMISSION</button><button data-map="normal">NORMAL</button><button data-map="roughness">ROUGHNESS</button><button data-map="orm">ORM</button><button data-map="height">HEIGHT</button><button data-map="seam">SEAM ZONE</button></div></div>
+      <div id="viewport" tabindex="0" aria-label="Interactive 3D facade. Drag to orbit, scroll to zoom.">
+        <div class="scene-label"><span id="scene-index">03 / INDUSTRIAL TOWER</span><h1 id="scene-title">Service & structure.</h1><p id="scene-description">Utility bays. Continuous ducts. Controlled light.</p></div>
+        <div class="viewport-tools"><button id="frame" title="Reset camera">FRAME</button><button id="capture" disabled title="Download a screenshot of the 3D preview">↓ PREVIEW PNG</button></div>
+        <div class="view-hint"><span>DRAG TO ORBIT</span><b>·</b><span>SCROLL TO ZOOM</span><b>·</b><span id="view-mode-label">MATERIAL / PBR</span></div>
+        <div id="surface-review" class="surface-review" hidden><span>SURFACE REVIEW</span><button data-review="PLANE">PLANE 3×3</button><button data-review="WALL_CORNER">WALL CORNER</button><button data-review="CYLINDER">CYLINDER</button></div>
+        <div id="loading" class="loading" role="status">Preparing the lab…</div>
+        <section id="palette-comparison" hidden aria-label="Palette comparison"><div class="palette-compare-heading"><div><strong>PALETTE COMPARISON</strong><p id="palette-proof"></p></div><button id="close-palette-comparison">CLOSE COMPARISON</button></div><div id="palette-compare-cards"></div></section>
+      </div>
+      <div class="preview-dock">
+        <div class="thumb-strip" id="thumbs" aria-label="Generated texture maps"></div>
+        <div class="recipe-info"><span class="eyebrow">CURRENT RECIPE <b id="compare-tag">B / LIVE</b></span><strong id="recipe-title">INDUSTRIAL_TOWER · 99</strong><span id="generation-info">256 × 512 preview · waiting for Python</span><span id="hash-info" class="muted">Deterministic raster generation</span></div>
+        <div class="recipe-actions"><button id="favorite" disabled>☆ FAVORITE</button><button id="pin" disabled>PIN AS A</button><button id="compare" disabled>SHOW A</button></div>
+      </div>
+      <footer class="statusbar"><span id="status" role="status" aria-live="polite">Connecting to localhost…</span><span>PYTHON CANONICAL <b>●</b> WEBGL PREVIEW</span></footer>
+    </section>
+    <aside class="controls-panel" aria-label="Facade controls">
+      <div class="panel-title"><div><span class="eyebrow">AUTHORING</span><h2>Shape the facade</h2></div><button id="reset-all" class="text-button">RESET ALL ↺</button></div>
+      <section class="palette-section"><div class="section-heading"><h3>PALETTE</h3><label class="swatch-lock"><input id="palette-enabled" type="checkbox"><span>MIXER ON</span></label></div><div id="palette-fields"><label class="field-label" for="palette-preset">PALETTE PRESET</label><select id="palette-preset"></select><div id="palette-swatches"></div><div id="palette-influences" class="slider-group"></div><div class="palette-actions"><button id="random-palette">RANDOMIZE PALETTE</button><button id="reset-palette">RESET PALETTE</button></div></div><p id="palette-note" class="note"></p><button id="compare-palettes" class="subtle full">COMPARE A / B / C</button></section>
+      <section class="breakup-section">
+        <div class="section-heading"><h3>SURFACE BREAKUP</h3><button id="clean-base" class="text-button">CLEAN BASE</button></div>
+        <label class="field-label" for="breakup-mode">PIPELINE</label><select id="breakup-mode"><option value="LAYERED">Structure → Material → Optional detail</option><option value="LEGACY_BAKED">Legacy / original baked noise</option></select>
+        <div id="breakup-controls" class="slider-group"></div>
+        <p id="breakup-note" class="note">Main normal = structural height. Raw detail maps remain reusable with all four layers at zero.</p>
+        <div class="toggle-line"><label for="breakup-preview">SHOW OPTIONAL LAYERS</label><input id="breakup-preview" type="checkbox" role="switch" checked></div>
+        <label class="field-label" for="detail-export-mode">DETAIL EXPORT</label><select id="detail-export-mode"><option value="SEPARATE">EXPORT DETAIL SEPARATELY</option><option value="BAKED">BAKE DETAIL INTO BASE</option></select>
+        <button id="breakup-compare" class="subtle full">A BAKED ↔ B CLEAN + SEPARATE</button>
+      </section>
+      <section class="art-direction"><label class="field-label" for="art-profile">GLOBAL ART PROFILE</label><select id="art-profile"><option value="LEGACY">Legacy / original raster</option><option value="BOW_BASE">BOW_BASE / material study</option></select><div id="meta-controls" class="slider-group"></div><p class="note">Meta sliders set the global finish. Fine-tune below. Structure and seed stay fixed.</p><button id="art-compare" class="subtle full">A LEGACY ↔ B BOW_BASE</button><details class="control-section"><summary>Global material controls <span>9 controls</span></summary><div id="art-controls" class="slider-group"></div></details></section>
+      <div class="field-label"><label for="palette">PALETTE FAMILY</label><span>shared palette</span></div><select id="palette" aria-label="Palette family"></select>
+      <div id="primary-controls" class="slider-group"></div>
+      <div id="surface-controls" class="slider-group" hidden></div><div id="cylinder-controls" class="slider-group" hidden></div>
+      <button id="random-parameters" class="subtle full">↻ RANDOMIZE WITHIN PRESET</button>
+      <details class="control-section" id="facade-advanced"><summary>Advanced architecture <span>7 controls</span></summary><div id="advanced-controls" class="slider-group"></div></details>
+      <details class="control-section"><summary>Retro stylizer <span>8 controls</span></summary><div id="style-controls" class="slider-group"></div></details>
+      <section class="control-section preview-controls"><div class="section-heading"><h3>PREVIEW SETTINGS</h3><span>material / geometry</span></div>
+        <label class="field-label" for="shape">PREVIEW GEOMETRY</label><select id="shape"><option value="BOX">Box / tower</option><option value="TALL_TOWER">Tall tower</option><option value="WIDE_MEGABLOCK">Wide megablock</option><option value="TAPERED_TOWER">Tapered tower</option><option value="PLANE">Plane / 3×3 patch</option><option value="FLOOR_PATCH">Floor patch</option><option value="WALL_CORNER">Wall corner</option><option value="CYLINDER">Cylinder</option><option value="COLUMN_CLUSTER">Column cluster</option></select>
+        <div id="tile-mode-field"><label class="field-label" for="tile-mode">TILE MODE</label><select id="tile-mode"><option>FULL_2D_TILE</option><option>HORIZONTAL_WRAP_ONLY</option></select></div>
+        <p id="seam-qa" class="note"></p>
+        <div class="uv-fields"><label>UV SCALE X<input id="uv-x" type="number" min="0.25" max="32" step="0.25" value="1"></label><label>UV SCALE Y<input id="uv-y" type="number" min="0.25" max="32" step="0.25" value="1"></label></div>
+        <div class="segments"><button data-tile="1" class="active">FIT ONE SHEET</button><button data-tile="2">TILE ×2</button><button data-tile="4">TILE ×4</button></div>
+        <p class="note">Unique sheets. Tiling exposes repetition; PNGs stay unchanged.</p>
+        <div class="toggle-line"><label for="emission-toggle">EMISSION</label><input id="emission-toggle" type="checkbox" role="switch" checked></div>
+        <div id="material-controls" class="slider-group"></div>
+      </section>
+      <section class="control-section"><div class="section-heading"><h3>RECIPE LIBRARY</h3><button id="load-recipe" class="text-button">LOAD RECIPE ↑</button></div><input id="recipe-file" type="file" accept=".json,application/json" hidden><div id="favorites" class="favorites"><p class="note">Star a recipe to keep it here.</p></div></section>
+      <p class="local-note"><i></i> Local only. Nothing leaves this machine.</p>
+    </aside>
+  </main>
+  <dialog id="export-dialog"><form id="export-form"><div class="dialog-heading"><span class="eyebrow">PRODUCTION TEXTURE SET</span><button type="button" id="close-export" aria-label="Close export dialog">×</button></div><h2>Keep this facade.</h2><p class="dialog-copy">Generate full-resolution maps and a reproducible recipe in the project.</p><label for="export-name">ASSET NAME</label><input id="export-name" required pattern="[a-zA-Z][a-zA-Z0-9_-]{0,63}" maxlength="64"><label for="export-resolution">RESOLUTION</label><select id="export-resolution"><option value="512,1024">512 × 1024</option><option value="1024,2048">1024 × 2048</option></select><label for="export-detail-mode">DETAIL EXPORT</label><select id="export-detail-mode"><option value="SEPARATE">EXPORT DETAIL SEPARATELY</option><option value="BAKED">BAKE DETAIL INTO BASE</option></select><p class="note">Bake affects albedo / ORM only. Main normal stays structural. Separate detail maps are opt-in in Godot.</p><label class="check-row"><input id="export-material" type="checkbox" checked> Create Godot ORMMaterial3D</label><p class="note">Albedo · emission · normal · ORM · height · .facade.json</p><p class="export-destination" id="export-destination"></p><p class="note">Existing files are preserved. A taken name receives _r02, _r03…</p><div id="export-result" role="status"></div><button id="confirm-export" type="submit" class="export-button full">EXPORT TO PROJECT ↗</button><button type="button" id="download-recipe" class="full subtle" hidden>DOWNLOAD RECIPE JSON</button></form></dialog>
+  </section>
+  <section id="vfx-tab" role="tabpanel" aria-labelledby="vfx-workspace-tab" hidden></section>
+  <section id="billboard-tab" role="tabpanel" aria-labelledby="billboard-workspace-tab" hidden></section>
+  <script type="module" src="app.js?v=0.4.1"></script>
+  <script type="module" src="billboard_app.js?v=1"></script>
+  <script type="module" src="vfx_app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+{
+  "id": "HR063",
+  "name": "Crossbrace Monolith",
+  "category": "exoskeleton",
+  "subtype": 2,
+  "seed": 1423997,
+  "role": "midground",
+  "collection": "HR063_Crossbrace_Monolith",
+  "bounds_m": [
+    47.980000000000004,
+    57.38,
+    376.1500000000001
+  ],
+  "bounds_min": [
+    -23.990000000000002,
+    -28.69,
+    0.0
+  ],
+  "bounds_max": [
+    23.990000000000002,
+    28.69,
+    376.1500000000001
+  ],
+  "parameters": {
+    "width": 44.28,
+    "depth": 53.68,
+    "height": 374.85,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Crossbrace Monolith",
+    "exoskeleton",
+    "open_upper_frame",
+    "rear_upper_core",
+    "three_front_mega_X",
+    "three_structural_belts"
+  ],
+  "metrics": {
+    "meshes": 13,
+    "primitives": 23,
+    "triangles": 276,
+    "vertices": 200,
+    "polygons": 138
+  },
+  "geometry_sha256": "f23a5b0763c8f47ee09db36a1c89a6ffbc4f3bdda100f6cc8ab003455b89da37",
+  "geometry_only_sha256": "67717ee182d897ce1402e2b1146af900f125ae151dd443d2b877875afe3f189a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.656,
+    "mass_complexity": 0.242,
+    "industrial_density": 0.913,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.429,
+    "cantilever_overhang": 0.144,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.65
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "offset_core_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "offset_core": [
+      "f3_1_uv"
+    ],
+    "rear_upper_core_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "rear_upper_core": [
+      "f4_2_uv"
+    ],
+    "mega_columns_-1_-1": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "mega_columns_-1_1": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "mega_columns_1_-1": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "mega_columns_1_1": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "front_X_a": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "front_X_b": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "side_compression": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "roof_box": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 23,
+    "floor_rooftop": 2,
+    "f3_1_uv": 4,
+    "f4_2_uv": 4,
+    "floor_metal_deck": 101,
+    "wall_reinforced": 4
+  },
+  "recipes": [
+    "Recipes/f3_1_uv.uv.json",
+    "Recipes/f4_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reinforced.facade.json"
+  ],
+  "material_seeds": {
+    "f3_1_uv": 925320,
+    "f4_2_uv": 925438,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reinforced": 4285
+  },
+  "previews": [
+    "Previews/HR063.png",
+    "UV_Material_QA/Views/HR063_back.png",
+    "UV_Material_QA/Views/HR063_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,135 @@
+{
+  "id": "HR092",
+  "name": "Raking Fortress",
+  "category": "buttress",
+  "subtype": 1,
+  "seed": 1653648,
+  "role": "hero",
+  "collection": "HR092_Raking_Fortress",
+  "bounds_m": [
+    100.24199999999999,
+    39.8944,
+    327.3
+  ],
+  "bounds_min": [
+    -50.120999999999995,
+    -19.9472,
+    0
+  ],
+  "bounds_max": [
+    50.120999999999995,
+    19.9472,
+    327.3
+  ],
+  "parameters": {
+    "width": 66.78,
+    "depth": 35.26,
+    "height": 319.3,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Raking Fortress",
+    "buttress",
+    "raking_external_legs",
+    "rear_service_bar",
+    "roof_water_tank",
+    "shifted_faceted_body",
+    "widening_upper_mass"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 14,
+    "triangles": 224,
+    "vertices": 184,
+    "polygons": 102
+  },
+  "geometry_sha256": "c9468bec172bed600525090fbddaa9c4e056b1af510973d2abac0a53fd116073",
+  "geometry_only_sha256": "d39c6f629fbb7232b59db6cf6980c797d949cc208ae3b1f2dad81f91d8de17da",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.327,
+    "mass_complexity": 0.147,
+    "industrial_density": 0.357,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.214,
+    "cantilever_overhang": 0.561,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "raking_body_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "raking_body": [
+      "f3_1_uv"
+    ],
+    "raking_ground_strut_shoe": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "raking_ground_strut": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "rear_service_bar": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 46,
+    "floor_rooftop": 9,
+    "f3_1_uv": 16,
+    "floor_metal_deck": 13,
+    "wall_reinforced": 4,
+    "wall_maintenance": 4,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f3_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_reinforced.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f3_1_uv": 925320,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_reinforced": 4285,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR092.png",
+    "UV_Material_QA/Views/HR092_back.png",
+    "UV_Material_QA/Views/HR092_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

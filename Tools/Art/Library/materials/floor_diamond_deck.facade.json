@@ -1,0 +1,233 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 4,
+  "generator_version": "0.4.0",
+  "generator_fingerprint": "38c970db1f0695bec9006f5fd5c35d164466e620e90486f34d5d222630722a5e",
+  "created_at": "2026-09-18T17:21:05+00:00",
+  "name": "FLOOR_DIAMOND_DECK",
+  "surface_mode": "TILEABLE_SURFACE",
+  "tile_mode": "FULL_2D_TILE",
+  "preset": "FLOOR_DIAMOND_DECK",
+  "seed": 4544,
+  "palette": "industrial",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.18,
+    "overrides": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "detail_contrast": 0.25,
+      "baked_lighting_strength": 0.12,
+      "module_irregularity": 0.25
+    },
+    "controls": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "material_variation": 0.4458,
+      "macro_grime_strength": 0.2236,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.6856,
+      "baked_lighting_strength": 0.12,
+      "detail_contrast": 0.25,
+      "module_irregularity": 0.25
+    }
+  },
+  "parameters": {
+    "tile_scale": 1,
+    "panel_scale": 1,
+    "grout_width": 2,
+    "surface_wear": 0.5,
+    "macro_variation": 0.55,
+    "seam_visibility": 0.3,
+    "floor_markings_density": 0.08,
+    "wall_module_density": 0.18
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    512,
+    512
+  ],
+  "breakup": {
+    "mode": "LAYERED",
+    "export_mode": "BAKED",
+    "macro_variation": 0.18,
+    "grime": 0.22,
+    "micro_grain": 0.025,
+    "retro_artifacts": 0,
+    "version": "1.0"
+  },
+  "palette_mix": {
+    "enabled": true,
+    "preset": "INDUSTRIAL_GREEN",
+    "version": "1.0",
+    "colors": {
+      "BASE": "#626f5e",
+      "SECONDARY": "#818774",
+      "DARK": "#20291f",
+      "ACCENT": "#b0a070",
+      "GLASS": "#263d35",
+      "EMISSION_PRIMARY": "#a5c8a6",
+      "EMISSION_SECONDARY": "#d0b276",
+      "GRIME_TINT": "#4e4934"
+    },
+    "locks": {
+      "BASE": false,
+      "SECONDARY": false,
+      "DARK": false,
+      "ACCENT": false,
+      "GLASS": false,
+      "EMISSION_PRIMARY": false,
+      "EMISSION_SECONDARY": false,
+      "GRIME_TINT": false
+    },
+    "material_responses": {
+      "PAINTED_METAL": {
+        "roughness": 0.76,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      },
+      "RAW_METAL": {
+        "roughness": 0.49,
+        "metallic": 0.82,
+        "ao_response": 1.0
+      },
+      "GLASS": {
+        "roughness": 0.23,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "CONCRETE": {
+        "roughness": 0.94,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "VENT": {
+        "roughness": 0.82,
+        "metallic": 0.38,
+        "ao_response": 1.0
+      },
+      "RECESSED_VOID": {
+        "roughness": 0.98,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "ACCENT_PAINT": {
+        "roughness": 0.74,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      }
+    },
+    "albedo_influence": 0.82,
+    "emission_influence": 0.85,
+    "weather_tint_influence": 0.15,
+    "material_variation_influence": 0.4,
+    "accent_usage": 0.75,
+    "colored_balance": 0.8,
+    "structural_separation": 0.65,
+    "orm_influence": 0.65
+  },
+  "overrides": {
+    "grout_width": 2,
+    "seam_visibility": 0.3,
+    "floor_markings_density": 0.08,
+    "wall_module_density": 0.18
+  },
+  "outputs": {
+    "albedo": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/albedo.png",
+    "normal": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/normal.png",
+    "orm": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/orm.png",
+    "height": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/height.png",
+    "emission": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/emission.png"
+  },
+  "sha256": {
+    "albedo": "ac4fda5c6c3f42c79390a121f3b26b61cfd52906c7542d07194a2bb415ba0af4",
+    "normal": "7bae5db5a41391f5a6c7609d506989389a22f6eae2a4d9af9cef4f95d2943a6f",
+    "orm": "73d44e405fa78d57a527cb5197d886270b46cf1de941e1747694946e7b988904",
+    "height": "5912a1084d7ee47b8c892579b9c151f0eb40527a06f8b81f4b8c0bfb1d1aa952",
+    "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data",
+    "emission_mask": "linear data"
+  },
+  "palette_role_weights": {
+    "PAINTED_METAL": {
+      "BASE": 0.76,
+      "SECONDARY": 0.2,
+      "ACCENT": 0.04
+    },
+    "RAW_METAL": {
+      "DARK": 0.15,
+      "BASE": 0.85
+    },
+    "GLASS": {
+      "GLASS": 0.92,
+      "BASE": 0.08
+    },
+    "CONCRETE": {
+      "BASE": 0.65,
+      "SECONDARY": 0.35
+    },
+    "VENT": {
+      "DARK": 1.0
+    },
+    "RECESSED_VOID": {
+      "DARK": 1.0
+    },
+    "SIGNAGE": {
+      "ACCENT": 1.0
+    },
+    "EMISSIVE": {
+      "EMISSION_PRIMARY": 0.75,
+      "EMISSION_SECONDARY": 0.25
+    }
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "library": {
+    "id": "floor_diamond_deck",
+    "category": "floor",
+    "description": "Alternating chevron tread in bolted deck plates",
+    "palette": "industrial",
+    "references": [
+      "R01",
+      "W07"
+    ],
+    "preset": "FLOOR_DIAMOND_DECK"
+  },
+  "material": "res://Assets/ProceduralArt/Materials/floor_diamond_deck/material.tres"
+}

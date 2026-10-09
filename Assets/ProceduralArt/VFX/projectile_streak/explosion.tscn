@@ -1,0 +1,131 @@
+[gd_scene load_steps=21 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/projectile_streak/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/projectile_streak/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/TrailFilament_00.obj" id="Mesh_TrailFilament_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/TrailFilament_01.obj" id="Mesh_TrailFilament_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/TrailFilament_02.obj" id="Mesh_TrailFilament_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_00.obj" id="Mesh_WakeBead_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_01.obj" id="Mesh_WakeBead_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_02.obj" id="Mesh_WakeBead_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_03.obj" id="Mesh_WakeBead_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_04.obj" id="Mesh_WakeBead_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_05.obj" id="Mesh_WakeBead_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_06.obj" id="Mesh_WakeBead_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_07.obj" id="Mesh_WakeBead_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/projectile_streak/meshes/WakeBead_08.obj" id="Mesh_WakeBead_08"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/projectile_streak/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="TrailFilament_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_TrailFilament_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="TrailFilament_01" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_TrailFilament_01")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="TrailFilament_02" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_TrailFilament_02")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="WakeBead_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="WakeBead_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_WakeBead_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

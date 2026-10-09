@@ -1,0 +1,170 @@
+{
+  "id": "HR078",
+  "name": "Cooling Chimneys",
+  "category": "datacenter",
+  "subtype": 2,
+  "seed": 1542782,
+  "role": "background",
+  "collection": "HR078_Cooling_Chimneys",
+  "bounds_m": [
+    39.6552,
+    54.4364,
+    227.5
+  ],
+  "bounds_min": [
+    -19.8276,
+    -29.1824,
+    0.0
+  ],
+  "bounds_max": [
+    19.8276,
+    25.253999999999998,
+    227.5
+  ],
+  "parameters": {
+    "width": 42.64,
+    "depth": 56.12,
+    "height": 226.1,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "Cooling Chimneys",
+    "admin_front",
+    "datacenter",
+    "low_sealed_monolith",
+    "roof_control_tower",
+    "roof_paired_hvac",
+    "three_cooling_chimneys"
+  ],
+  "metrics": {
+    "meshes": 18,
+    "primitives": 18,
+    "triangles": 472,
+    "vertices": 480,
+    "polygons": 172
+  },
+  "geometry_sha256": "e073e765fd6155d42e9325979c0a3176a27ee19bd56e0ce126364af916f822c1",
+  "geometry_only_sha256": "59ae594367aa0de187890b913faf34d87bd2d0540a5535e7dd8aff5b795ecba7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.418,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.889,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.06,
+    "rooftop_complexity": 0.4,
+    "old_new": 0.8
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "data_block": [
+      "accent_datacenter",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "occupied_admin_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "occupied_admin": [
+      "f2_1_uv"
+    ],
+    "roof_control_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "roof_control": [
+      "f2_2_uv"
+    ],
+    "cooling_chimney_0_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "cooling_chimney_0": [
+      "floor_metal_deck"
+    ],
+    "chimney_lip_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "chimney_lip": [
+      "accent_datacenter"
+    ],
+    "cooling_chimney_1_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "cooling_chimney_1": [
+      "floor_metal_deck"
+    ],
+    "cooling_chimney_2_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "cooling_chimney_2": [
+      "floor_metal_deck"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 18,
+    "floor_metal_deck": 92,
+    "accent_datacenter": 40,
+    "floor_rooftop": 2,
+    "f2_1_uv": 4,
+    "f2_2_uv": 4,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/accent_datacenter.facade.json",
+    "Recipes/f2_1_uv.uv.json",
+    "Recipes/f2_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "accent_datacenter": 5876,
+    "f2_1_uv": 925219,
+    "f2_2_uv": 925236,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR078.png",
+    "UV_Material_QA/Views/HR078_back.png",
+    "UV_Material_QA/Views/HR078_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

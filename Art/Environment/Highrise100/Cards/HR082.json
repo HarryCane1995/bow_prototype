@@ -1,0 +1,182 @@
+{
+  "id": "HR082",
+  "name": "Court of Towers",
+  "category": "civic",
+  "subtype": 1,
+  "seed": 1574458,
+  "role": "midground",
+  "collection": "HR082_Court_of_Towers",
+  "bounds_m": [
+    94.12799999999999,
+    29.585600000000007,
+    246.9
+  ],
+  "bounds_min": [
+    -47.06399999999999,
+    -10.102400000000001,
+    0.0
+  ],
+  "bounds_max": [
+    47.06399999999999,
+    19.483200000000004,
+    246.9
+  ],
+  "parameters": {
+    "width": 84.8,
+    "depth": 36.08,
+    "height": 236.9,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Court of Towers",
+    "civic",
+    "open_forecourt",
+    "rear_civic_hall",
+    "roof_exhaust_trio",
+    "roof_paired_hvac",
+    "roof_water_tank",
+    "symmetric_wings_tall_rear",
+    "three_tower_court"
+  ],
+  "metrics": {
+    "meshes": 19,
+    "primitives": 22,
+    "triangles": 400,
+    "vertices": 408,
+    "polygons": 166
+  },
+  "geometry_sha256": "88846c75c7f7847c7de6413062cd7dd59eda0644afb53518f3a374b54e1d347c",
+  "geometry_only_sha256": "46e79e8a621e5e3f51ca129dd585e73104812b1148572ffa1fb0f00ce97ffae7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.262,
+    "mass_complexity": 0.232,
+    "industrial_density": 0.682,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.17,
+    "rooftop_complexity": 0.867,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "rear_hall": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "court_tower_0_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "court_tower_0": [
+      "f5_1_uv"
+    ],
+    "tower_lantern_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "tower_lantern": [
+      "f0_2_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "court_tower_1_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "court_tower_1": [
+      "f5_1_uv"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "court_tower_2_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "court_tower_2": [
+      "f5_1_uv"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ],
+    "court_upper_link": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 26,
+    "floor_rooftop": 7,
+    "f5_1_uv": 12,
+    "f0_2_uv": 12,
+    "floor_metal_deck": 47,
+    "wall_maintenance": 12,
+    "wall_vent_bank": 8,
+    "wrap_tank_shell": 10,
+    "wrap_heavy_pipe": 24,
+    "wall_corporate": 8
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f5_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f5_1_uv": 925522,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433,
+    "wrap_heavy_pipe": 5210,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR082.png",
+    "UV_Material_QA/Views/HR082_back.png",
+    "UV_Material_QA/Views/HR082_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,10 @@
+.mesh-variation-actions{margin:8px 0 18px}.mesh-variation-actions button{font-size:8px}
+.mesh-library{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mesh-recipe-card{padding:0;overflow:hidden;text-align:left;min-width:0;background:#0e181e}
+.mesh-recipe-card img{display:block;width:100%;height:86px;object-fit:contain;background:#0e181e}
+.mesh-recipe-card span{display:block;padding:7px;font-size:8px;line-height:1.4;letter-spacing:.02em;color:#b5c9bd}
+.mesh-recipe-card:hover{border-color:var(--accent)}
+#mesh-effect{width:210px}#mesh-control-groups [hidden]{display:none!important}
+#mesh-family-title{font-size:23px}#mesh-family-description{max-width:320px}
+@media(min-width:1100px){.vfx-toolbar:has(#mesh-effect){gap:12px}.vfx-toolbar:has(#mesh-effect) .vfx-brand{min-width:145px}.vfx-toolbar:has(#mesh-effect) #mesh-mode{width:155px}}
+@media(max-width:1150px){.vfx-toolbar:has(#mesh-effect) .vfx-frame-count{display:none}.vfx-toolbar:has(#mesh-effect){gap:9px}.vfx-toolbar:has(#mesh-effect) .vfx-brand{display:none}}

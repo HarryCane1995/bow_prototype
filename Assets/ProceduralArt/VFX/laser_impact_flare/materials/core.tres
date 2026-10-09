@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/laser_impact_flare/materials/core.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(1.0, 0.9529411764705882, 0.7803921568627451, 1)
+shader_parameter/color_b = Color(1.0, 0.9725490196078431, 0.9098039215686274, 1)
+shader_parameter/opacity = 0.95
+shader_parameter/emission_strength = 1.92
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.15
+shader_parameter/flat_unshaded = true
+shader_parameter/dither_mode = false

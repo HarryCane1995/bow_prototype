@@ -1,0 +1,153 @@
+{
+  "id": "HR045",
+  "name": "Unequal Partners",
+  "category": "twins",
+  "subtype": 4,
+  "seed": 1281455,
+  "role": "midground",
+  "collection": "HR045_Unequal_Partners",
+  "bounds_m": [
+    86.672,
+    37.339999999999996,
+    262.90999999999997
+  ],
+  "bounds_min": [
+    -43.336,
+    -18.669999999999998,
+    0.0
+  ],
+  "bounds_max": [
+    43.336,
+    18.669999999999998,
+    262.90999999999997
+  ],
+  "parameters": {
+    "width": 62.72,
+    "depth": 31.0,
+    "height": 297.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "roof_comms",
+    "separate_shafts",
+    "unequal_partners"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 21,
+    "triangles": 268,
+    "vertices": 216,
+    "polygons": 130
+  },
+  "geometry_sha256": "f570e612c9042747ef61c7d946a47a7746fa7eb122ba74eb91a91e5830d16723",
+  "geometry_only_sha256": "c006af8921da42bcd5546a75254696e1e17ce36ec76ea1078837fae1652898a7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.303,
+    "mass_complexity": 0.221,
+    "industrial_density": 0.667,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.442,
+    "rooftop_complexity": 0.4,
+    "old_new": 0.75
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Tower": [
+      "f4_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "CommsCabinet": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_service_rack"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ],
+    "Skybridge": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "BridgeHabitat": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "BridgeBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 27,
+    "floor_rooftop": 5,
+    "floor_metal_deck": 50,
+    "wall_corporate": 4,
+    "f0_2_uv": 4,
+    "wall_maintenance": 8,
+    "wall_service_rack": 8,
+    "warm": 12,
+    "f4_3_uv": 4,
+    "glass": 8
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f4_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_service_rack.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f4_3_uv": 925455,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_service_rack": 4174
+  },
+  "previews": [
+    "Previews/HR045.png",
+    "UV_Material_QA/Views/HR045_back.png",
+    "UV_Material_QA/Views/HR045_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

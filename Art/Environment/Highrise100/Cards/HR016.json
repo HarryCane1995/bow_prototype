@@ -1,0 +1,129 @@
+{
+  "id": "HR016",
+  "name": "Staggered Slabs",
+  "category": "residential",
+  "subtype": 0,
+  "seed": 1051804,
+  "role": "background",
+  "collection": "HR016_Staggered_Slabs",
+  "bounds_m": [
+    67.34,
+    37.374199999999995,
+    174.85
+  ],
+  "bounds_min": [
+    -33.67,
+    -18.687099999999997,
+    0.0
+  ],
+  "bounds_max": [
+    33.67,
+    18.687099999999997,
+    174.85
+  ],
+  "parameters": {
+    "width": 59.4,
+    "depth": 31.03,
+    "height": 158.4,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "alternating_slabs",
+    "roof_paired_hvac",
+    "staggered_edges"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 12,
+    "triangles": 208,
+    "vertices": 208,
+    "polygons": 88
+  },
+  "geometry_sha256": "832adfdd0568c5ca810d788c57feeb77bde043feb5f97ce695b6e3475e14b115",
+  "geometry_only_sha256": "5191e4ec4e89a235887eb8cab95c678d8ec157e9cbf502045606feda22e55d45",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.26,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.583,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.194,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.32
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Slab_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Slab": [
+      "f1_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 16,
+    "floor_rooftop": 5,
+    "floor_metal_deck": 35,
+    "wall_maintenance": 8,
+    "f1_0_uv": 16,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f1_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f1_0_uv": 925101,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR016.png",
+    "UV_Material_QA/Views/HR016_back.png",
+    "UV_Material_QA/Views/HR016_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

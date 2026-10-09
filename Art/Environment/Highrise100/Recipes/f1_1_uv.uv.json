@@ -1,0 +1,43 @@
+{
+  "key": "f1_1_uv",
+  "recipe": "Recipes/f1_1_uv.uv.json",
+  "mode": "PERIODIC_FACADE_INTERIOR",
+  "seed": 925118,
+  "preset": "MEGABLOCK",
+  "parameters": {
+    "window_density": 0.68,
+    "emission_density": 0.3,
+    "structural_width": 17,
+    "grime_amount": 0.26,
+    "retro_strength": 0.35,
+    "window_aspect": 0.85,
+    "floor_height": 28,
+    "service_floor_frequency": 0.23,
+    "dark_floor_frequency": 0.13,
+    "panel_density": 0.45,
+    "signage_density": 0.34,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.35
+  },
+  "sha256": {
+    "albedo": "c51386c48d29ac03f7d79e024d58613ba151ad5be155c4fb3da1ecc3ddc3ac83",
+    "normal": "9d0a1cd30e7e8f59333e5b44be11a8a37364f7d9cfe247f7f4f7d1faa3188b36",
+    "orm": "249c69137c691063fece44dc248f04290a447b2b80542afe7b865e30fcb38b53",
+    "height": "95fe794ef432aea341d5dcd375699b92090b7ca4a6d0a7ca437fff5744cf8977",
+    "emission": "4f6a3faf63b9b574929748dddbb90991e04c7f16f2e09ee2e1e169536cd57a37"
+  },
+  "source_key": "f1_1",
+  "uv_qa_version": 1,
+  "crop": [
+    0,
+    36,
+    512,
+    992
+  ],
+  "tile_width_m": 42,
+  "nominal_floor_rows": 34.142857142857146,
+  "image_size": [
+    512,
+    956
+  ]
+}

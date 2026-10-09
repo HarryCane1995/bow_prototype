@@ -1,0 +1,123 @@
+{
+  "id": "HR019",
+  "name": "Balcony Terraces",
+  "category": "residential",
+  "subtype": 3,
+  "seed": 1075561,
+  "role": "background",
+  "collection": "HR019_Balcony_Terraces",
+  "bounds_m": [
+    86.21600000000001,
+    35.1958,
+    190.39999999999998
+  ],
+  "bounds_min": [
+    -43.108000000000004,
+    -16.042299999999997,
+    0.0
+  ],
+  "bounds_max": [
+    43.108000000000004,
+    19.1535,
+    190.39999999999998
+  ],
+  "parameters": {
+    "width": 76.56,
+    "depth": 26.39,
+    "height": 171.0,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "receding_depth",
+    "roof_retrofit_shed",
+    "six_habitable_terraces"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 18,
+    "triangles": 216,
+    "vertices": 192,
+    "polygons": 108
+  },
+  "geometry_sha256": "42062f8a4716af70749be9f6db425660e9f055d24a35e59db35da0d20ade88fa",
+  "geometry_only_sha256": "7782c70975e784c90ebf157db65616662d0ac96d2e540e4621328938e9c5758a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.221,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.222,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.186,
+    "rooftop_complexity": 0.133,
+    "old_new": 0.32
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "LoadingEntry": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Step_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Step": [
+      "f1_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofShed": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "ReplacementPanel": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 50,
+    "floor_rooftop": 14,
+    "floor_metal_deck": 8,
+    "wall_maintenance": 12,
+    "f1_3_uv": 24
+  },
+  "recipes": [
+    "Recipes/f1_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json"
+  ],
+  "material_seeds": {
+    "f1_3_uv": 925152,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137
+  },
+  "previews": [
+    "Previews/HR019.png",
+    "UV_Material_QA/Views/HR019_back.png",
+    "UV_Material_QA/Views/HR019_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

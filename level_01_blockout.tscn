@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c822suyedolws"]
+
+[ext_resource type="PackedScene" uid="uid://ecws3xg03lek" path="res://Level_01_Blockout.blend" id="1_gtrbl"]
+
+[node name="Level_01_Blockout" unique_id=76986507 instance=ExtResource("1_gtrbl")]
+
+[node name="L01_Skyline_06_Megablock" parent="." index="99" unique_id=1571139372]
+transform = Transform3D(-0.005236104, 0, 0.9999863, 0, 1.1, 0, -0.9999863, 0, -0.005236104, -84.23103, -1.9847355, -6.5453415)

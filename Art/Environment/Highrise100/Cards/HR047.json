@@ -1,0 +1,109 @@
+{
+  "id": "HR047",
+  "name": "Cooling Hourglass",
+  "category": "reactor",
+  "subtype": 1,
+  "seed": 1297293,
+  "role": "midground",
+  "collection": "HR047_Cooling_Hourglass",
+  "bounds_m": [
+    66.13,
+    45.935599999999994,
+    226.6
+  ],
+  "bounds_min": [
+    -33.065,
+    -22.967799999999997,
+    0.0
+  ],
+  "bounds_max": [
+    33.065,
+    22.967799999999997,
+    226.6
+  ],
+  "parameters": {
+    "width": 58.3,
+    "depth": 38.54,
+    "height": 226.6,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "hourglass_shell",
+    "splayed_lower_ribs"
+  ],
+  "metrics": {
+    "meshes": 6,
+    "primitives": 12,
+    "triangles": 224,
+    "vertices": 184,
+    "polygons": 104
+  },
+  "geometry_sha256": "1682ec34dcfd638e7bb0b7ef9dcca0e4882f532aa1dec82f98514e571b0b2005",
+  "geometry_only_sha256": "52d409691f99ae9273c5f074b72a08e1b8dbb5cb9c0d68187be0bc237d6830eb",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.343,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.917,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.286,
+    "cantilever_overhang": 0.194,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "CoolingShell_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "CoolingShell": [
+      "wall_reactor_housing"
+    ],
+    "CoolingRib": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 16,
+    "floor_rooftop": 1,
+    "floor_metal_deck": 47,
+    "wall_reactor_housing": 40
+  },
+  "recipes": [
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR047.png",
+    "UV_Material_QA/Views/HR047_back.png",
+    "UV_Material_QA/Views/HR047_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

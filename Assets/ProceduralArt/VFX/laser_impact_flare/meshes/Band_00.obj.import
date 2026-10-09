@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clf7g0hcq67f5"
+path="res://.godot/imported/Band_00.obj-b68e1753021ae827a8e3da3def59daa2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Band_00.obj-b68e1753021ae827a8e3da3def59daa2.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/laser_impact_flare/meshes/Band_00.obj"
+dest_files=["res://.godot/imported/Band_00.obj-b68e1753021ae827a8e3da3def59daa2.mesh", "res://.godot/imported/Band_00.obj-b68e1753021ae827a8e3da3def59daa2.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

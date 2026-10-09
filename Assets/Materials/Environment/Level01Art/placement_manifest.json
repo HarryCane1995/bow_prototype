@@ -1,0 +1,2720 @@
+{
+  "owner": "level01_industrial_dressing_v1",
+  "backup": ".godot/level01-art/Level_01_before_art_20260918_210304.blend",
+  "before_sha256": "bbe52e99feac72eaedb478ac8fb8c914e5450b9f3630f64ac6c9f1b17d6f66c2",
+  "after_sha256": "02f100c97a23b3392f5fb3e7597fc1ccd3a44be25bba3e247a6cebb1a224b73c",
+  "original_objects_preserved": 324,
+  "material_assignments": [
+    "L01_Arena01_TestBuilding_02",
+    "L01_Arena01_TestBuilding_03",
+    "L01_Arena01_TestBuilding_04",
+    "L01_Arena01_TestBuilding_07",
+    "L01_Arena01_TestBuilding_05",
+    "L01_Arena01_TestBuilding_06",
+    "L01_Arena01_TestBuilding_06.001",
+    "L01_Arena01_TestBuilding_06.002",
+    "CB_StartScreen-col",
+    "CB_ReadLowCover-col",
+    "CB_ReadSideCover-col",
+    "CB_ReadStep-col",
+    "CB_ReadExitPillar-col",
+    "CB_DodgeHighCover-col",
+    "CB_DodgeLowCover-col",
+    "CB_DodgePillarA-col",
+    "CB_DodgePillarB-col",
+    "CB_CrossWindowSill-col",
+    "CB_CrossWindowLintel-col",
+    "CB_CrossWindowLeft-col",
+    "CB_CrossWindowRight-col",
+    "CB_CrossWindowSide-col",
+    "CB_HighNest-col",
+    "CB_NestSideScreen-col",
+    "CB_HighApproachCover-col",
+    "CB_Step1-col",
+    "CB_Step2-col",
+    "CB_Step3-col",
+    "CB_BypassPlatform-col",
+    "CB_WallrunSpine-col",
+    "CB_DuckRoof-col",
+    "CB_DuckRoofLeft-col",
+    "CB_DuckRoofRight-col",
+    "CB_PeekWindowSill-col",
+    "CB_PeekWindowLintel-col",
+    "CB_PeekWindowLeft-col",
+    "CB_PeekWindowRight-col",
+    "CB_PeekLowCover-col",
+    "CB_CrossBreak-col",
+    "CB_CrossNestCover-col",
+    "CB_FinalLowA-col",
+    "CB_FinalHigh-col",
+    "CB_FinalLowB-col",
+    "CB_FinalPillarA-col",
+    "CB_FinalPillarB-col",
+    "CB_FinalJumpPlatform-col",
+    "CB_RoutePad0-col",
+    "CB_RoutePad1-col",
+    "CB_RoutePad2-col",
+    "CB_RoutePad3-col",
+    "CB_RoutePad4-col"
+  ],
+  "materials": {
+    "wall_megablock": {
+      "source": "Assets/ProceduralArt/Materials/wall_megablock",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_megablock.tres",
+      "textures": {
+        "albedo": "c09deb5bacb104726ef33eab2c76af7caf3626d93044fcfeee7f8c02a001e390",
+        "normal": "3fc206bbf22f0f61e9ce555c689e9a11a3a499e6114b9926e09c9afda7056bf1",
+        "orm": "25b856791e48d5f9c67d3b78cc59f9476f09d4e5f89cc5a16ff581a805760626",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_rooftop": {
+      "source": "Assets/ProceduralArt/Materials/floor_rooftop",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_rooftop.tres",
+      "textures": {
+        "albedo": "4b4a33a99bd8543c5656a72f5102047eb62c3deaf6c827084829ab71fc6b1de7",
+        "normal": "02c0b2062b0a9c00c1933742f329909f654c7cd48d95ee65a62c378fac9a8077",
+        "orm": "20fbad261a47e18ea5ef0022ec1e79666ae38df9e6beddb3e1ca1fe07782ccfa",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "ceiling_utility": {
+      "source": "Assets/ProceduralArt/Materials/ceiling_utility",
+      "material": "res://Assets/Materials/Environment/Level01Art/ceiling_utility.tres",
+      "textures": {
+        "albedo": "19e4594f8044cd63acec4a197178445238407fbedaee63b1075684314990301b",
+        "normal": "c14f5eb27abf56d87ac5f87355af38ff0f283663521fc97039b76a3abc248dc2",
+        "orm": "1234e9e6564aba35c99e176797035ebdf5a03928a6c15203640efee75c17bd90",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_corporate": {
+      "source": "Assets/ProceduralArt/Materials/wall_corporate",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_corporate.tres",
+      "textures": {
+        "albedo": "ea2df7398c12fdfac31ed139355bff33435566566015272763b2bc06b34a6e63",
+        "normal": "489a8297803ee4bf330a70f590c1243511a23515fb2402ac2697a6576e58fc39",
+        "orm": "314b77d1406eadc203b5840bcafd6e6108e405ad8ac5e012f98c1a2dc089770b",
+        "emission": "5d6c408b26bf0aa3fd6ad51543b30b380f03e5af63fbcc7b3cadc5dbb65c63ab"
+      }
+    },
+    "wall_dark_concrete": {
+      "source": "Assets/ProceduralArt/Materials/wall_dark_concrete",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_dark_concrete.tres",
+      "textures": {
+        "albedo": "41d6e03d99b26dd0e2db70f95818b132a4cf7297aa72bba28d7d924e3156faab",
+        "normal": "9adc880dec9fcf696e9c971aa58d43824d741b57459294031c594c1c2f6b6e4f",
+        "orm": "00e883e74352a97f4f3065907a46df1a18b8fe5a95d8d1fdc538b66fd235e7bc",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_tech_spine": {
+      "source": "Assets/ProceduralArt/Materials/wall_tech_spine",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_tech_spine.tres",
+      "textures": {
+        "albedo": "8042ac165468133048bc9156d666cea61b7853fc049a0178dc83d97cdf788108",
+        "normal": "06c4b23bba77a3ab07a844b3fc3ac9669dcdfc517c9dcea2422fca2ec71d1cbb",
+        "orm": "1f61944843a678f1fd49bbede77705d396917cf5a5edd5b97065fa4be6fec48b",
+        "emission": "e3636c432dde84098a866001b274639f4b5615afebbef3b54aa22d08df1a448c"
+      }
+    },
+    "floor_grated": {
+      "source": "Assets/ProceduralArt/Materials/floor_grated",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_grated.tres",
+      "textures": {
+        "albedo": "c7deda4d8ec784d73afffd450ad38e1d9f4a50ad1d8c191a34f0c06163aea803",
+        "normal": "a3b5b768356e62565ca134d2011ee0f4c7ecfa2066ca20819fb8e5f8c5400d92",
+        "orm": "cef54dee7ae6831cda397df1db59f92247b8a5ff8c2db48a91d990520af82dd1",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_maintenance": {
+      "source": "Assets/ProceduralArt/Materials/wall_maintenance",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_maintenance.tres",
+      "textures": {
+        "albedo": "c6cb7aef871a19b289701cba99ba0157656b8f7b5c17f73e66a14ba9f28a4ea9",
+        "normal": "e2e95ef19ef7d4214fef2bb13f88509d1cfab680d5cc11e1179f5980644b1ef2",
+        "orm": "c5c91babf29ae253c649ac19eae7f472a9e06979db2add514093522d212a1d07",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_reinforced": {
+      "source": "Assets/ProceduralArt/Materials/wall_reinforced",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_reinforced.tres",
+      "textures": {
+        "albedo": "52261d4503823b8d445a38d9f972c3d412d76f1533009dc490eff358b556faea",
+        "normal": "984407f0a758eb1eeccd25cd720e2236974b119ee11fe7899bc007227f205d92",
+        "orm": "35b28e233e64b7fc82a6a7b9d0f05b8c1d833e48e477188566dbd3e85f04c51d",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_service_walkway": {
+      "source": "Assets/ProceduralArt/Materials/floor_service_walkway",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_service_walkway.tres",
+      "textures": {
+        "albedo": "e00c8b3916919f79d3511e156e6779df6937935d8f11eb166186da91f138c2da",
+        "normal": "fc302a3106efa902ace5fa284fcc9329acd68c8dee0518fe4c1324c08312b624",
+        "orm": "4a82a07e93a3b4f6778594fa0cea3c3b6d70603dbad90215e6feb7eee8734eed",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_diamond_deck": {
+      "source": "Assets/ProceduralArt/Materials/floor_diamond_deck",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_diamond_deck.tres",
+      "textures": {
+        "albedo": "ac4fda5c6c3f42c79390a121f3b26b61cfd52906c7542d07194a2bb415ba0af4",
+        "normal": "7bae5db5a41391f5a6c7609d506989389a22f6eae2a4d9af9cef4f95d2943a6f",
+        "orm": "73d44e405fa78d57a527cb5197d886270b46cf1de941e1747694946e7b988904",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "ceiling_light_baffle": {
+      "source": "Assets/ProceduralArt/Materials/ceiling_light_baffle",
+      "material": "res://Assets/Materials/Environment/Level01Art/ceiling_light_baffle.tres",
+      "textures": {
+        "albedo": "4c5178e11b875db52fd9da332d31dc291207992750152096302744370a73a491",
+        "normal": "ef796226502a35211889fe345e90c72c46a708a5e3be1c43237b80f5133c4afa",
+        "orm": "185682b6400e779a2fbe41cd15e5d6b6fbf5e52b174563c22c5b9e17bafb56d3",
+        "emission": "95ea058b5b8d43dec47015cf56c33a0c0e28efdb59c4384083376e4fb8f1f5cf"
+      }
+    },
+    "wall_painted_utility": {
+      "source": "Assets/ProceduralArt/Materials/wall_painted_utility",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_painted_utility.tres",
+      "textures": {
+        "albedo": "1b7d7386f790410fca600b15e872c4bee823a966cb6d7a367d1d084cbaaed820",
+        "normal": "a7d203bab1e710b1f0ed348be5f53bfb1371daf61163451f3b3bd7c7ef9c8c69",
+        "orm": "61cbd0cbc95f9562e332e11807644540d915660f589425d42775579b70bd6793",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_cable_riser": {
+      "source": "Assets/ProceduralArt/Materials/wall_cable_riser",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_cable_riser.tres",
+      "textures": {
+        "albedo": "89f4b52c5dc952722effeccb10def0800a94dbe3746ff06471f66b0bf0160378",
+        "normal": "bc62d95eb48a228edd3bbba9f66e181f2f97ff96c77152a7c86f4328f4418948",
+        "orm": "7143aecfd693163543ad5a2e8dfbddef546bba5398fd7c4c6887528a45efd6b8",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wall_transit_acoustic": {
+      "source": "Assets/ProceduralArt/Materials/wall_transit_acoustic",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_transit_acoustic.tres",
+      "textures": {
+        "albedo": "c79c4d20a3fef16b45d5c2c3f3ed1c09c4e78739319fec28fdc3f01e25372cc1",
+        "normal": "773b488e70d2e9412bda853ade4ccf95c805299bbd4620be9c1b3fcc859b3236",
+        "orm": "3f5d305c9362ce19440846a55f51f9cd7e3b86351d6defd7aee92865fcc51c31",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_access_tiles": {
+      "source": "Assets/ProceduralArt/Materials/floor_access_tiles",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_access_tiles.tres",
+      "textures": {
+        "albedo": "ce1fd3914825613add1403168b039028489cc1931fb8b080d931949d14d2c6a3",
+        "normal": "35ea2dbd0e30c1ca7c5b521c109b860b0e85679797682291006e59321d38af0f",
+        "orm": "b506c6ee8fb33296618e224bbbc1df8cf96865d5b7948ec63f44141fb0497ba0",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_metal_deck": {
+      "source": "Assets/ProceduralArt/Materials/floor_metal_deck",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_metal_deck.tres",
+      "textures": {
+        "albedo": "411dab28f6009124bccdcc930ce506f661faf66c0c5ae43641eb064ef254f7cd",
+        "normal": "9827da97a1018d3ca949172d5679ae0c4a998acf651f5f5257180878ca94bf3e",
+        "orm": "cac452542e3de5062cb9e9cf34601454d1b0f2733244bcbb645807ad94f6e530",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "floor_maintenance": {
+      "source": "Assets/ProceduralArt/Materials/floor_maintenance",
+      "material": "res://Assets/Materials/Environment/Level01Art/floor_maintenance.tres",
+      "textures": {
+        "albedo": "f5787a4306f98b61902aa88ec85ec866cde96ae642f7203d12967e63a1511546",
+        "normal": "8b8ec50ea890815cd47e57d66c04e83fe88d1375f5fd80972b7934973809a56a",
+        "orm": "b3e7b605d42cf124e665a27438962023c3eda4b722a182470da7117f0a7b94fa",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "accent_machine_casing": {
+      "source": "Assets/ProceduralArt/Materials/accent_machine_casing",
+      "material": "res://Assets/Materials/Environment/Level01Art/accent_machine_casing.tres",
+      "textures": {
+        "albedo": "c233ce401b9ce08a56871ebd60c5efda59a0e10902c35271b402ee5f7fa29d89",
+        "normal": "e4a13c856f3503726ce3da524a9f702307e6e7854650ed0b82c0a8ea00681791",
+        "orm": "190d48ce7d5ecbc3c8e6fe5ff1ef006195e9ea6a0b7135ec5e039d3beda7fbf4",
+        "emission": "e65129032568b724e7dcb9656f5fcfc69e7ab1dcfdc794f6f533283f9b6a629f"
+      }
+    },
+    "ceiling_ventilation": {
+      "source": "Assets/ProceduralArt/Materials/ceiling_ventilation",
+      "material": "res://Assets/Materials/Environment/Level01Art/ceiling_ventilation.tres",
+      "textures": {
+        "albedo": "a5160ccab0635260e4e30a7568697c53eafcd8288cd7bc9c22d6d745cd7734df",
+        "normal": "ea7d6f4d97fa225d55915af952a00e7814177e5e4a4144b1217b2d19078de67b",
+        "orm": "0f6df48dbea8a20db01072b59f788fa15b6b79baedb97ebae8c3ab678695d4d6",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "accent_control_console": {
+      "source": "Assets/ProceduralArt/Materials/accent_control_console",
+      "material": "res://Assets/Materials/Environment/Level01Art/accent_control_console.tres",
+      "textures": {
+        "albedo": "931dd1cf5ca6e707d15f0a8ab13116193f5595634929e1b3dd4017083adf0f0f",
+        "normal": "5e19b2c6cbcbb089df8983bd2267f34975943e9f44e2f26f8469602c06db3ce3",
+        "orm": "1f386e6941221c0be93cf83706f37e451b1dee5dfdd9b754d7eab67af5c579c7",
+        "emission": "8bdf6a62535a9a2a8d105749ee41bd2dbd91d1e9cd7f41dfd0f9f2f18aea182e"
+      }
+    },
+    "wall_vent_bank": {
+      "source": "Assets/ProceduralArt/Materials/wall_vent_bank",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_vent_bank.tres",
+      "textures": {
+        "albedo": "052a52846e15078ae59ab769ee1e33ea72f6bfaff78291433ed17218e15a6b97",
+        "normal": "86094029ad53d59e3ab17ba37ae5405dc5778898f448f2b578230523fd55e8b8",
+        "orm": "169d142b50d28e6c1e7838cc78dfd4031204491d8c93248ff318f02f8fe1ba49",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "wrap_vent_shaft": {
+      "source": "Assets/ProceduralArt/Materials/wrap_vent_shaft",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_vent_shaft.tres",
+      "textures": {
+        "albedo": "ae72bbb64cd18c85988b59eb42596e076caeecf52af85873e945616ffbd532e0",
+        "normal": "732d3e2324112723f4191de0cb03204651717c1ba9bfdc3f342f15c12ddd3e48",
+        "orm": "3d27fbbd3990751fd7cb0ea466c38b601c5eedc65da3728d9d9ddeb426fc781d",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    "accent_dark_monolith": {
+      "source": "Assets/ProceduralArt/Materials/accent_dark_monolith",
+      "material": "res://Assets/Materials/Environment/Level01Art/accent_dark_monolith.tres",
+      "textures": {
+        "albedo": "8585dcf269c2724818984eb4c9e18a3f5ed991569f610a6bb2cb1c22625c4b6d",
+        "normal": "8842de91a09befe5934fd48fdacc8196eaf00d3268eed1b58bb5af9a63a69ef1",
+        "orm": "ba5b14cd3dadad4a5faede0d048215200ce0645cc9704c7ecbae94c9294329fb",
+        "emission": "c4c8705fa15a845e5a339c41188033d6f596baa3ec63e9c3f897fa108d22e9d3"
+      }
+    },
+    "wrap_heavy_pipe": {
+      "source": "Assets/ProceduralArt/Materials/wrap_heavy_pipe",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_heavy_pipe.tres",
+      "textures": {
+        "albedo": "54979b4417600905e66f50008fda86cf0fa2fae27bab5c29a6ec5dd21a604fe2",
+        "normal": "ede9a0e533f1fdc401dc44b213bab037d44a0e11cf1036753defb04a96382b85",
+        "orm": "d1c9030e357a115758911c5b123e7edce1384ae10b5671469a324233f5a9986d",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    "accent_billboard_support": {
+      "source": "Assets/ProceduralArt/Materials/accent_billboard_support",
+      "material": "res://Assets/Materials/Environment/Level01Art/accent_billboard_support.tres",
+      "textures": {
+        "albedo": "e10ff6d519535e65deb5bb674f310668ba1a622e26f05ed20a988747af42e01b",
+        "normal": "f7e04df2823ddcaddc8de73032bcfdb4b9c89c86cf2adad87574781d70306ddb",
+        "orm": "82cb2cb415078bcc5d36c26e1eaa1da1e899ccb1b12a76af73e0c1339d071df6",
+        "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b"
+      }
+    },
+    "sign_service_strip": {
+      "source": "Assets/ProceduralArt/Billboards/service_strip",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_service_strip.tres",
+      "textures": {
+        "albedo": "6ca97540805732d5d16cc2a047f446c59f02aa72aad9c81d56beea08da2ed5b5",
+        "orm": "fc8c7b3a3ae107637c4523946af76f872a09928e527d585785f8a9f5d7b7b347",
+        "emission": "59fb06b9794a17a2e69f0c2afcc44bed895564dc520635245f973f4bce7d84e9"
+      }
+    },
+    "sign_warning_panel": {
+      "source": "Assets/ProceduralArt/Billboards/warning_panel",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_warning_panel.tres",
+      "textures": {
+        "albedo": "cc87788b3d4371c336b595c29c8f48936f1b1eba9ced0b3099ec286587e2662f",
+        "orm": "38fa906660894a690f0a9a0f7dda82a7bf082dfbe2bf381b7e329aa89e92c324",
+        "emission": "fa16bcbce3864c6932f52fce1197285c4176dca87bbec3df21ea49a902663a93"
+      }
+    },
+    "wrap_tank_shell": {
+      "source": "Assets/ProceduralArt/Materials/wrap_tank_shell",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_tank_shell.tres",
+      "textures": {
+        "albedo": "024c67e0b11c6dbce4465156960099c1ab4aa77cae94fa71cac0021ac07cf337",
+        "normal": "ce74833e41703ac9f745afe56e1e11cf33216323f57b1bc7795d3eef676b6ab0",
+        "orm": "e33e3bd8f3cb384884f57981b1db1ff4dcfff89c60da7cbfe9593a9b4bc4ae76",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    "wrap_insulated_pipe": {
+      "source": "Assets/ProceduralArt/Materials/wrap_insulated_pipe",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_insulated_pipe.tres",
+      "textures": {
+        "albedo": "51a98f0cdb8d2a6dce67ef4fb7fbc3f530dfba4c12b4a07fc655e86fac7343fe",
+        "normal": "dbb1ba5494ee4204a2927ba0a340a8b68b949fffa1120f1cf897a12c68458773",
+        "orm": "c523c456b60027f65eccb86469a50ef59a8c0bef12053db0b2d07c48f48589ff",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    "sign_horizontal_billboard": {
+      "source": "Assets/ProceduralArt/Billboards/horizontal_billboard",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_horizontal_billboard.tres",
+      "textures": {
+        "albedo": "8dc3b153aead2ed5c86492c8541a68652a7c93fe86810fc33fe71e073558b969",
+        "orm": "88f1dcdc92533b071ed7930987be6ddc77ebba347f80687874e1b2d89fa47af7",
+        "emission": "da8570afb7b4bdf5537341cf34edb2c5200a212a56e397afabe1fe62ab6d1f00"
+      }
+    },
+    "sign_numeric_code": {
+      "source": "Assets/ProceduralArt/Billboards/numeric_code",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_numeric_code.tres",
+      "textures": {
+        "albedo": "22e777ba0ae9346c90cb7d27670928a8d4cb25cd34081447fd623bac0336f914",
+        "orm": "e51dfc740309f1fb687841907c61833c8f6ca753f6a25c2c08cacb86a9195239",
+        "emission": "bc9adb4cad68cafb856e255a41d9996b62d5dba512c62f1c7ef5deed9c548634"
+      }
+    },
+    "sign_dirty_lightbox": {
+      "source": "Assets/ProceduralArt/Billboards/dirty_lightbox",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_dirty_lightbox.tres",
+      "textures": {
+        "albedo": "b5773f1678a9fca3860b8ca0e827ee60c6b50d19b70b95868bb4008ba8ead465",
+        "orm": "ea1472110206fe4f1e268a0dabeb44cb62e4a926335d5ee8c54e78ff9936fd30",
+        "emission": "3db27ce7e3e11632d03b0e5a099fc508fa656a658fcd8eb91e3bba03a03f2276"
+      }
+    },
+    "sign_inactive_billboard": {
+      "source": "Assets/ProceduralArt/Billboards/inactive_billboard",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_inactive_billboard.tres",
+      "textures": {
+        "albedo": "28293419fee528beaeb9f0061321972bd16e890f5ad4c8f9597ccd92454beaa6",
+        "orm": "d17f8fa19b1d416c56fbee3d5c7269d10f7bd2eeaacfbf4eb06dd24d636deae5",
+        "emission": "b0fdc10874ea9a392f4f41ed7b15f7bf8c791b61db91e419758256386f590582"
+      }
+    },
+    "sign_vertical_neon": {
+      "source": "Assets/ProceduralArt/Billboards/vertical_neon",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_vertical_neon.tres",
+      "textures": {
+        "albedo": "5f41dc421e0a3bb74e527e0ce6918bf83c989e7534fdd956ada497a1ab847e99",
+        "orm": "6cdfef28f002eafeffd4adf4c19510c64fa0f322ff5fdf1b1dad9759aa8b4267",
+        "emission": "5e033a12216a1ecb2259ce890627911b1b69a0164136b25eff07117c14c97c8e"
+      }
+    },
+    "sign_stacked_signage": {
+      "source": "Assets/ProceduralArt/Billboards/stacked_signage",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_stacked_signage.tres",
+      "textures": {
+        "albedo": "c66f696637b06a89882012b03e4272898ea0900137cbd7be2941fe5e92436704",
+        "orm": "fc77b43c73dec624a949abb9d9b5bbe28d7820e61c0ea71f67e3488f6c77f3b4",
+        "emission": "e87746c3a85d2beb8751b4e9a650889349ce037badb8739b340ec6f4d36b3d28"
+      }
+    },
+    "wrap_conduit_cluster": {
+      "source": "Assets/ProceduralArt/Materials/wrap_conduit_cluster",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_conduit_cluster.tres",
+      "textures": {
+        "albedo": "4dc44caf0de78f9ddc75c16565ae35b069df63d86134815d5d15fad09a9e7af8",
+        "normal": "f36e1aa0b299d60d70411ab49badf8b375448a69af2d8c602d93561be210b408",
+        "orm": "4672e7946ff585b6fc6c18883a06a3443842dc05ec93c46761331cb7e937ad4d",
+        "emission": "01ec7dd238f86c86aa1830f4d05a6358e1d43423c63c626dca27e3ea874ca1f7"
+      }
+    },
+    "wrap_coolant_chamber": {
+      "source": "Assets/ProceduralArt/Materials/wrap_coolant_chamber",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_coolant_chamber.tres",
+      "textures": {
+        "albedo": "62e2dbd27b5ff3d12738a812755c6fbd9edd2c27df71315ed4246934df6e95de",
+        "normal": "38d8db125c425051eadc9ee8d15d81644b758edbd61fb2bd70f607024086ed87",
+        "orm": "eaf86472a7a95f6c21a027a5bb42a9db0bc1b36243ea0801d95710f466f582bd",
+        "emission": "ffd01c7308f5ceefbce11bfc936db116ca7e52df00d5e56816cf07d91b455c55"
+      }
+    },
+    "wrap_pressure_column": {
+      "source": "Assets/ProceduralArt/Materials/wrap_pressure_column",
+      "material": "res://Assets/Materials/Environment/Level01Art/wrap_pressure_column.tres",
+      "textures": {
+        "albedo": "56688a242dbcc9587646d851175f25fa2239014cf8fe217398ec050f1eac52bc",
+        "normal": "fbdfd42f023c9cf7993b5878426a2f073d729d34608d97211d5dc4f22898e569",
+        "orm": "ae0ce57b389270ce62cd86368ecaefc9607a45d8fc6c4ca15ca4d2c3ea72de3f",
+        "emission": "133ebf7f964a79f4ee93d66efaf6dd98a30d2bcda1fcc1d64999c4046d4cafab"
+      }
+    },
+    "wall_reactor_housing": {
+      "source": "Assets/ProceduralArt/Materials/wall_reactor_housing",
+      "material": "res://Assets/Materials/Environment/Level01Art/wall_reactor_housing.tres",
+      "textures": {
+        "albedo": "3bbd9834863fbbf86d89d657aa88cc37f283ed946a2da443e3b330cb1ef17f70",
+        "normal": "f52437b21274e81265bc7fef89d8ec06be787c933c77ffb4ca9606b235f8e533",
+        "orm": "0d72c6b21d5724b2ce85d35c127bd4960b813392007a432f41f6f47b45b295e7",
+        "emission": "f35b2ade7d768b84c3900f7c2dba40c295a467882d223e0d6509ea450a735b42"
+      }
+    },
+    "sign_corporate_panel": {
+      "source": "Assets/ProceduralArt/Billboards/corporate_panel",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_corporate_panel.tres",
+      "textures": {
+        "albedo": "8aab5296450a904da6ff76eade9a3b1c7017cae754d30bdf28a7f181390aadb9",
+        "orm": "815b19c0d07b51af23786fb26f6a2166e700c7df25343772d741bce94dee511a",
+        "emission": "ed04257345e57a89a617ceeb0061f7490f59e3d114ccc404cdcf4c52867bd702"
+      }
+    },
+    "sign_panel_ad": {
+      "source": "Assets/ProceduralArt/Billboards/panel_ad",
+      "material": "res://Assets/Materials/Environment/Level01Art/sign_panel_ad.tres",
+      "textures": {
+        "albedo": "7e3bb85ac2c10f57eb4c619a438531919b9e7962c416f13471df26bdfac9d7b1",
+        "orm": "1f9f4d757ae420492691a21da88a6411380a6e69027f84980a43e83d02a8dff1",
+        "emission": "be297a6d12b1e086e3a8b23cb63c8462dd1eb55a15f67819a603f53be46d5513"
+      }
+    },
+    "accent_datacenter": {
+      "source": "Assets/ProceduralArt/Materials/accent_datacenter",
+      "material": "res://Assets/Materials/Environment/Level01Art/accent_datacenter.tres",
+      "textures": {
+        "albedo": "e6aed2922a416d3842f609b3a03b1ec2124bd2775e65c108f0a8e0383088fd05",
+        "normal": "dcff10fca75ae73209d7f1ac8139b7810b165a6a6d55c8bba30af454ed78c310",
+        "orm": "976079c2e1eaa0067818fe6e2dd70648c4c261250fa256f60638f633e08e5d2d",
+        "emission": "d02484f2be3627abe398a93f1df4ccf49566e3b64f2f57ae5c28b699293d8e6d"
+      }
+    },
+    "ceiling_tech": {
+      "source": "Assets/ProceduralArt/Materials/ceiling_tech",
+      "material": "res://Assets/Materials/Environment/Level01Art/ceiling_tech.tres",
+      "textures": {
+        "albedo": "12c49702350e5a85a86ea05a1ff09ad91d77f30d91d1128c603f3f030e864ca7",
+        "normal": "ba623b09f33ad6e7e929328c5729bbe6e6504786d3b5e0510b0098f4f8d888ee",
+        "orm": "368f8ec423f43a7f7dd24734f253b176ba38b7c3ea33b98546d5d3a3a5674ca3",
+        "emission": "f9841cd03642c5c9b671e6a6b034fd69e58d4ff174c127ea802458d8242207b4"
+      }
+    }
+  },
+  "placements": [
+    {
+      "name": "L01_ART_Arrival_Plinth",
+      "kind": "box",
+      "position": [
+        78,
+        0.16,
+        35
+      ],
+      "size": [
+        7,
+        0.32,
+        7
+      ],
+      "material": "floor_grated",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Arrival_Cabinet",
+      "kind": "box",
+      "position": [
+        76.5,
+        1.8,
+        34
+      ],
+      "size": [
+        2.6,
+        3,
+        2
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Arrival_Control",
+      "kind": "box",
+      "position": [
+        76.5,
+        1.9,
+        35.025
+      ],
+      "size": [
+        1.9,
+        1.15,
+        0.06
+      ],
+      "material": "accent_control_console",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Arrival_Vent",
+      "kind": "box",
+      "position": [
+        79.4,
+        1.2,
+        36.6
+      ],
+      "size": [
+        2.4,
+        1.8,
+        2
+      ],
+      "material": "wall_vent_bank",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Arrival_Riser",
+      "kind": "tube",
+      "points": [
+        [
+          79.5,
+          0.3499999940395355,
+          33.400001525878906
+        ],
+        [
+          79.5,
+          5.849999904632568,
+          33.400001525878906
+        ]
+      ],
+      "radius": 0.65,
+      "material": "wrap_vent_shaft",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Arrival_Feed",
+      "kind": "tube",
+      "points": [
+        [
+          76.5,
+          3.299999952316284,
+          34.0
+        ],
+        [
+          76.5,
+          4.400000095367432,
+          34.0
+        ],
+        [
+          79.5,
+          4.400000095367432,
+          33.400001525878906
+        ]
+      ],
+      "radius": 0.16,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Arrival_Service_Frame",
+      "kind": "box",
+      "position": [
+        76.5,
+        3.549999952316284,
+        35.0
+      ],
+      "size": [
+        2.8400000000000003,
+        0.7517187500000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Arrival_Service_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        76.5,
+        3.55,
+        35.075
+      ],
+      "width": 2.7,
+      "height": 0.6117187500000001
+    },
+    {
+      "name": "L01_ART_Arrival_Warning_Frame",
+      "kind": "box",
+      "position": [
+        79.4000015258789,
+        1.25,
+        37.564998626708984
+      ],
+      "size": [
+        1.04,
+        0.8062109375000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Arrival_Warning_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        79.4,
+        1.25,
+        37.64
+      ],
+      "width": 0.9,
+      "height": 0.6662109375
+    },
+    {
+      "name": "L01_ART_Crossing_Plinth",
+      "kind": "box",
+      "position": [
+        139,
+        0.16,
+        -12
+      ],
+      "size": [
+        7,
+        0.32,
+        7
+      ],
+      "material": "floor_grated",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Crossing_Cabinet",
+      "kind": "box",
+      "position": [
+        137.5,
+        1.8,
+        -13
+      ],
+      "size": [
+        2.6,
+        3,
+        2
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Crossing_Control",
+      "kind": "box",
+      "position": [
+        137.5,
+        1.9,
+        -11.975
+      ],
+      "size": [
+        1.9,
+        1.15,
+        0.06
+      ],
+      "material": "accent_control_console",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Vent",
+      "kind": "box",
+      "position": [
+        140.4,
+        1.2,
+        -10.4
+      ],
+      "size": [
+        2.4,
+        1.8,
+        2
+      ],
+      "material": "wall_vent_bank",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Crossing_Reservoir",
+      "kind": "tube",
+      "points": [
+        [
+          140.5,
+          0.3499999940395355,
+          -13.600000381469727
+        ],
+        [
+          140.5,
+          6.25,
+          -13.600000381469727
+        ]
+      ],
+      "radius": 1.0,
+      "material": "wrap_tank_shell",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Crossing_Band0.5",
+      "kind": "tube",
+      "points": [
+        [
+          140.5,
+          0.4099999964237213,
+          -13.600000381469727
+        ],
+        [
+          140.5,
+          0.5899999737739563,
+          -13.600000381469727
+        ]
+      ],
+      "radius": 1.065,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Band5.9",
+      "kind": "tube",
+      "points": [
+        [
+          140.5,
+          5.809999942779541,
+          -13.600000381469727
+        ],
+        [
+          140.5,
+          5.989999771118164,
+          -13.600000381469727
+        ]
+      ],
+      "radius": 1.065,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Feed",
+      "kind": "tube",
+      "points": [
+        [
+          137.5,
+          3.299999952316284,
+          -13.0
+        ],
+        [
+          137.5,
+          4.400000095367432,
+          -13.0
+        ],
+        [
+          140.5,
+          4.400000095367432,
+          -13.600000381469727
+        ]
+      ],
+      "radius": 0.16,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Service_Frame",
+      "kind": "box",
+      "position": [
+        137.5,
+        3.549999952316284,
+        -12.0
+      ],
+      "size": [
+        2.8400000000000003,
+        0.7517187500000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Service_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        137.5,
+        3.55,
+        -11.925
+      ],
+      "width": 2.7,
+      "height": 0.6117187500000001
+    },
+    {
+      "name": "L01_ART_Crossing_Warning_Frame",
+      "kind": "box",
+      "position": [
+        140.39999389648438,
+        1.25,
+        -9.434999465942383
+      ],
+      "size": [
+        1.04,
+        0.8062109375000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Warning_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        140.4,
+        1.25,
+        -9.36
+      ],
+      "width": 0.9,
+      "height": 0.6662109375
+    },
+    {
+      "name": "L01_ART_Nest_Plinth",
+      "kind": "box",
+      "position": [
+        141,
+        0.16,
+        -49
+      ],
+      "size": [
+        7,
+        0.32,
+        7
+      ],
+      "material": "floor_grated",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Nest_Cabinet",
+      "kind": "box",
+      "position": [
+        139.5,
+        1.8,
+        -50
+      ],
+      "size": [
+        2.6,
+        3,
+        2
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Nest_Control",
+      "kind": "box",
+      "position": [
+        139.5,
+        1.9,
+        -48.975
+      ],
+      "size": [
+        1.9,
+        1.15,
+        0.06
+      ],
+      "material": "accent_control_console",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Nest_Vent",
+      "kind": "box",
+      "position": [
+        142.4,
+        1.2,
+        -47.4
+      ],
+      "size": [
+        2.4,
+        1.8,
+        2
+      ],
+      "material": "wall_vent_bank",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Nest_Riser",
+      "kind": "tube",
+      "points": [
+        [
+          142.5,
+          0.3499999940395355,
+          -50.599998474121094
+        ],
+        [
+          142.5,
+          5.849999904632568,
+          -50.599998474121094
+        ]
+      ],
+      "radius": 0.65,
+      "material": "wrap_vent_shaft",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Nest_Feed",
+      "kind": "tube",
+      "points": [
+        [
+          139.5,
+          3.299999952316284,
+          -50.0
+        ],
+        [
+          139.5,
+          4.400000095367432,
+          -50.0
+        ],
+        [
+          142.5,
+          4.400000095367432,
+          -50.599998474121094
+        ]
+      ],
+      "radius": 0.16,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Nest_Service_Frame",
+      "kind": "box",
+      "position": [
+        139.5,
+        3.549999952316284,
+        -49.0
+      ],
+      "size": [
+        2.8400000000000003,
+        0.7517187500000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Nest_Service_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        139.5,
+        3.55,
+        -48.925
+      ],
+      "width": 2.7,
+      "height": 0.6117187500000001
+    },
+    {
+      "name": "L01_ART_Nest_Warning_Frame",
+      "kind": "box",
+      "position": [
+        142.39999389648438,
+        1.25,
+        -46.435001373291016
+      ],
+      "size": [
+        1.04,
+        0.8062109375000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Nest_Warning_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        142.4,
+        1.25,
+        -46.36
+      ],
+      "width": 0.9,
+      "height": 0.6662109375
+    },
+    {
+      "name": "L01_ART_Bypass_Plinth",
+      "kind": "box",
+      "position": [
+        78,
+        0.16,
+        -82
+      ],
+      "size": [
+        7,
+        0.32,
+        7
+      ],
+      "material": "floor_grated",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Bypass_Cabinet",
+      "kind": "box",
+      "position": [
+        76.5,
+        1.8,
+        -83
+      ],
+      "size": [
+        2.6,
+        3,
+        2
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Bypass_Control",
+      "kind": "box",
+      "position": [
+        76.5,
+        1.9,
+        -81.975
+      ],
+      "size": [
+        1.9,
+        1.15,
+        0.06
+      ],
+      "material": "accent_control_console",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Vent",
+      "kind": "box",
+      "position": [
+        79.4,
+        1.2,
+        -80.4
+      ],
+      "size": [
+        2.4,
+        1.8,
+        2
+      ],
+      "material": "wall_vent_bank",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Bypass_Reservoir",
+      "kind": "tube",
+      "points": [
+        [
+          79.5,
+          0.3499999940395355,
+          -83.5999984741211
+        ],
+        [
+          79.5,
+          6.25,
+          -83.5999984741211
+        ]
+      ],
+      "radius": 1.0,
+      "material": "wrap_tank_shell",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Bypass_Band0.5",
+      "kind": "tube",
+      "points": [
+        [
+          79.5,
+          0.4099999964237213,
+          -83.5999984741211
+        ],
+        [
+          79.5,
+          0.5899999737739563,
+          -83.5999984741211
+        ]
+      ],
+      "radius": 1.065,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Band5.9",
+      "kind": "tube",
+      "points": [
+        [
+          79.5,
+          5.809999942779541,
+          -83.5999984741211
+        ],
+        [
+          79.5,
+          5.989999771118164,
+          -83.5999984741211
+        ]
+      ],
+      "radius": 1.065,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Feed",
+      "kind": "tube",
+      "points": [
+        [
+          76.5,
+          3.299999952316284,
+          -83.0
+        ],
+        [
+          76.5,
+          4.400000095367432,
+          -83.0
+        ],
+        [
+          79.5,
+          4.400000095367432,
+          -83.5999984741211
+        ]
+      ],
+      "radius": 0.16,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Service_Frame",
+      "kind": "box",
+      "position": [
+        76.5,
+        3.549999952316284,
+        -82.0
+      ],
+      "size": [
+        2.8400000000000003,
+        0.7517187500000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Service_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        76.5,
+        3.55,
+        -81.925
+      ],
+      "width": 2.7,
+      "height": 0.6117187500000001
+    },
+    {
+      "name": "L01_ART_Bypass_Warning_Frame",
+      "kind": "box",
+      "position": [
+        79.4000015258789,
+        1.25,
+        -79.43499755859375
+      ],
+      "size": [
+        1.04,
+        0.8062109375000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Warning_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        79.4,
+        1.25,
+        -79.36
+      ],
+      "width": 0.9,
+      "height": 0.6662109375
+    },
+    {
+      "name": "L01_ART_Final_Plinth",
+      "kind": "box",
+      "position": [
+        139,
+        0.16,
+        -121
+      ],
+      "size": [
+        7,
+        0.32,
+        7
+      ],
+      "material": "floor_grated",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Final_Cabinet",
+      "kind": "box",
+      "position": [
+        137.5,
+        1.8,
+        -122
+      ],
+      "size": [
+        2.6,
+        3,
+        2
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Final_Control",
+      "kind": "box",
+      "position": [
+        137.5,
+        1.9,
+        -120.975
+      ],
+      "size": [
+        1.9,
+        1.15,
+        0.06
+      ],
+      "material": "accent_control_console",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Final_Vent",
+      "kind": "box",
+      "position": [
+        140.4,
+        1.2,
+        -119.4
+      ],
+      "size": [
+        2.4,
+        1.8,
+        2
+      ],
+      "material": "wall_vent_bank",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Final_Riser",
+      "kind": "tube",
+      "points": [
+        [
+          140.5,
+          0.3499999940395355,
+          -122.5999984741211
+        ],
+        [
+          140.5,
+          5.849999904632568,
+          -122.5999984741211
+        ]
+      ],
+      "radius": 0.65,
+      "material": "wrap_vent_shaft",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Final_Feed",
+      "kind": "tube",
+      "points": [
+        [
+          137.5,
+          3.299999952316284,
+          -122.0
+        ],
+        [
+          137.5,
+          4.400000095367432,
+          -122.0
+        ],
+        [
+          140.5,
+          4.400000095367432,
+          -122.5999984741211
+        ]
+      ],
+      "radius": 0.16,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Final_Service_Frame",
+      "kind": "box",
+      "position": [
+        137.5,
+        3.549999952316284,
+        -121.0
+      ],
+      "size": [
+        2.8400000000000003,
+        0.7517187500000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Final_Service_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        137.5,
+        3.55,
+        -120.925
+      ],
+      "width": 2.7,
+      "height": 0.6117187500000001
+    },
+    {
+      "name": "L01_ART_Final_Warning_Frame",
+      "kind": "box",
+      "position": [
+        140.39999389648438,
+        1.25,
+        -118.43499755859375
+      ],
+      "size": [
+        1.04,
+        0.8062109375000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Final_Warning_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        140.4,
+        1.25,
+        -118.36
+      ],
+      "width": 0.9,
+      "height": 0.6662109375
+    },
+    {
+      "name": "L01_ART_Arrival_Transit_Frame",
+      "kind": "box",
+      "position": [
+        96.0,
+        1.649999976158142,
+        44.35499954223633
+      ],
+      "size": [
+        6.4399999999999995,
+        2.1702734375,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Arrival_Transit_Sign",
+      "kind": "sign",
+      "asset": "horizontal_billboard",
+      "position": [
+        96,
+        1.65,
+        44.43
+      ],
+      "width": 6.3,
+      "height": 2.0302734375
+    },
+    {
+      "name": "L01_ART_Crossing_Code_Frame",
+      "kind": "box",
+      "position": [
+        116.0,
+        3.799999952316284,
+        -18.595001220703125
+      ],
+      "size": [
+        2.24,
+        1.1407812499999999,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Crossing_Code_Sign",
+      "kind": "sign",
+      "asset": "numeric_code",
+      "position": [
+        116,
+        3.8,
+        -18.52
+      ],
+      "width": 2.1,
+      "height": 1.00078125
+    },
+    {
+      "name": "L01_ART_Nest_Notice_Frame",
+      "kind": "box",
+      "position": [
+        126.0,
+        2.299999952316284,
+        -44.994998931884766
+      ],
+      "size": [
+        3.94,
+        1.6614843750000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Nest_Notice_Sign",
+      "kind": "sign",
+      "asset": "dirty_lightbox",
+      "position": [
+        126,
+        2.3,
+        -44.92
+      ],
+      "width": 3.8,
+      "height": 1.521484375
+    },
+    {
+      "name": "L01_ART_Bypass_Code_Frame",
+      "kind": "box",
+      "position": [
+        96.0,
+        3.799999952316284,
+        -79.5949935913086
+      ],
+      "size": [
+        2.24,
+        1.1407812499999999,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Bypass_Code_Sign",
+      "kind": "sign",
+      "asset": "numeric_code",
+      "position": [
+        96,
+        3.8,
+        -79.52
+      ],
+      "width": 2.1,
+      "height": 1.00078125
+    },
+    {
+      "name": "L01_ART_Final_Notice_Frame",
+      "kind": "box",
+      "position": [
+        104.0,
+        2.25,
+        -116.4949951171875
+      ],
+      "size": [
+        2.44,
+        0.9620703125,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Final_Notice_Sign",
+      "kind": "sign",
+      "asset": "inactive_billboard",
+      "position": [
+        104,
+        2.25,
+        -116.42
+      ],
+      "width": 2.3,
+      "height": 0.8220703125
+    },
+    {
+      "name": "L01_ART_Entry_Totem_Post",
+      "kind": "box",
+      "position": [
+        80,
+        0.9099162011173184,
+        47.82
+      ],
+      "size": [
+        0.22,
+        1.8198324022346368,
+        0.22
+      ],
+      "material": "accent_dark_monolith",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Entry_Totem_Foot",
+      "kind": "box",
+      "position": [
+        80,
+        0.13,
+        47.82
+      ],
+      "size": [
+        0.8,
+        0.26,
+        0.8
+      ],
+      "material": "accent_dark_monolith",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Entry_Totem_Frame",
+      "kind": "box",
+      "position": [
+        80.0,
+        3.25,
+        47.92499923706055
+      ],
+      "size": [
+        1.1400000000000001,
+        3.0003351955307265,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Entry_Totem_Sign",
+      "kind": "sign",
+      "asset": "vertical_neon",
+      "position": [
+        80,
+        3.25,
+        48
+      ],
+      "width": 1.0,
+      "height": 2.8603351955307263
+    },
+    {
+      "name": "L01_ART_Exit_Totem_Post",
+      "kind": "box",
+      "position": [
+        135,
+        1.1081081081081081,
+        -140.18
+      ],
+      "size": [
+        0.22,
+        2.2162162162162162,
+        0.22
+      ],
+      "material": "accent_dark_monolith",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Exit_Totem_Foot",
+      "kind": "box",
+      "position": [
+        135,
+        0.13,
+        -140.18
+      ],
+      "size": [
+        0.8,
+        0.26,
+        0.8
+      ],
+      "material": "accent_dark_monolith",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Exit_Totem_Frame",
+      "kind": "box",
+      "position": [
+        135.0,
+        3.5999999046325684,
+        -140.0749969482422
+      ],
+      "size": [
+        1.94,
+        2.907567567567568,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Exit_Totem_Sign",
+      "kind": "sign",
+      "asset": "stacked_signage",
+      "position": [
+        135,
+        3.6,
+        -140
+      ],
+      "width": 1.8,
+      "height": 2.7675675675675677
+    },
+    {
+      "name": "L01_ART_Main_Coolant_Pipe",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          1.2000000476837158,
+          42.0
+        ],
+        [
+          146.0,
+          5.199999809265137,
+          42.0
+        ],
+        [
+          146.0,
+          5.51058292388916,
+          41.959110260009766
+        ],
+        [
+          146.0,
+          5.800000190734863,
+          41.839229583740234
+        ],
+        [
+          146.0,
+          6.04852819442749,
+          41.648529052734375
+        ],
+        [
+          146.0,
+          6.239230632781982,
+          41.400001525878906
+        ],
+        [
+          146.0,
+          6.3591108322143555,
+          41.1105842590332
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          40.79999923706055
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          -131.8000030517578
+        ],
+        [
+          146.0,
+          6.3591108322143555,
+          -132.11058044433594
+        ],
+        [
+          146.0,
+          6.239230632781982,
+          -132.39999389648438
+        ],
+        [
+          146.0,
+          6.04852819442749,
+          -132.64852905273438
+        ],
+        [
+          146.0,
+          5.800000190734863,
+          -132.8392333984375
+        ],
+        [
+          146.0,
+          5.51058292388916,
+          -132.9591064453125
+        ],
+        [
+          146.0,
+          5.199999809265137,
+          -133.0
+        ],
+        [
+          146.0,
+          1.2000000476837158,
+          -133.0
+        ]
+      ],
+      "radius": 0.38,
+      "material": "wrap_heavy_pipe",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeSupport_0",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        33
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_0",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          32.77000045776367
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          33.22999954223633
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_PipeSupport_1",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        7
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_1",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          6.769999980926514
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          7.230000019073486
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_PipeSupport_2",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        -22
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_2",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -22.229999542236328
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          -21.770000457763672
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Branch_2",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -22.0
+        ],
+        [
+          140.0,
+          6.400000095367432,
+          -22.0
+        ],
+        [
+          139.0,
+          5.400000095367432,
+          -22.0
+        ],
+        [
+          139.0,
+          3.0,
+          -22.0
+        ]
+      ],
+      "radius": 0.22,
+      "material": "wrap_conduit_cluster",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeSupport_3",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        -55
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_3",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -55.22999954223633
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          -54.77000045776367
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_PipeSupport_4",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        -86
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_4",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -86.2300033569336
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          -85.7699966430664
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Branch_4",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -86.0
+        ],
+        [
+          140.0,
+          6.400000095367432,
+          -86.0
+        ],
+        [
+          139.0,
+          5.400000095367432,
+          -86.0
+        ],
+        [
+          139.0,
+          3.0,
+          -86.0
+        ]
+      ],
+      "radius": 0.22,
+      "material": "wrap_conduit_cluster",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeSupport_5",
+      "kind": "box",
+      "position": [
+        146,
+        3,
+        -118
+      ],
+      "size": [
+        0.48,
+        6,
+        0.48
+      ],
+      "material": "wall_reinforced",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_PipeCoupler_5",
+      "kind": "tube",
+      "points": [
+        [
+          146.0,
+          6.400000095367432,
+          -118.2300033569336
+        ],
+        [
+          146.0,
+          6.400000095367432,
+          -117.7699966430664
+        ]
+      ],
+      "radius": 0.46,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Power_Plinth",
+      "kind": "box",
+      "position": [
+        154,
+        0.3,
+        -65
+      ],
+      "size": [
+        12,
+        0.6,
+        12
+      ],
+      "material": "floor_access_tiles",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Chamber0",
+      "kind": "tube",
+      "points": [
+        [
+          150.5,
+          0.6000000238418579,
+          -67.0
+        ],
+        [
+          150.5,
+          7.599999904632568,
+          -67.0
+        ]
+      ],
+      "radius": 1.45,
+      "material": "wrap_coolant_chamber",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Base0",
+      "kind": "tube",
+      "points": [
+        [
+          150.5,
+          0.574999988079071,
+          -67.0
+        ],
+        [
+          150.5,
+          1.225000023841858,
+          -67.0
+        ]
+      ],
+      "radius": 1.65,
+      "material": "wrap_pressure_column",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Cap0",
+      "kind": "tube",
+      "points": [
+        [
+          150.5,
+          7.449999809265137,
+          -67.0
+        ],
+        [
+          150.5,
+          7.949999809265137,
+          -67.0
+        ]
+      ],
+      "radius": 1.6,
+      "material": "wrap_insulated_pipe",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Return0",
+      "kind": "tube",
+      "points": [
+        [
+          150.5,
+          7.5,
+          -67.0
+        ],
+        [
+          150.5,
+          8.399999618530273,
+          -67.0
+        ],
+        [
+          154.0,
+          8.399999618530273,
+          -67.0
+        ]
+      ],
+      "radius": 0.18,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Power_Chamber1",
+      "kind": "tube",
+      "points": [
+        [
+          157.5,
+          0.6000000238418579,
+          -67.0
+        ],
+        [
+          157.5,
+          7.599999904632568,
+          -67.0
+        ]
+      ],
+      "radius": 1.45,
+      "material": "wrap_coolant_chamber",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Base1",
+      "kind": "tube",
+      "points": [
+        [
+          157.5,
+          0.574999988079071,
+          -67.0
+        ],
+        [
+          157.5,
+          1.225000023841858,
+          -67.0
+        ]
+      ],
+      "radius": 1.65,
+      "material": "wrap_pressure_column",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Cap1",
+      "kind": "tube",
+      "points": [
+        [
+          157.5,
+          7.449999809265137,
+          -67.0
+        ],
+        [
+          157.5,
+          7.949999809265137,
+          -67.0
+        ]
+      ],
+      "radius": 1.6,
+      "material": "wrap_insulated_pipe",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Return1",
+      "kind": "tube",
+      "points": [
+        [
+          157.5,
+          7.5,
+          -67.0
+        ],
+        [
+          157.5,
+          8.399999618530273,
+          -67.0
+        ],
+        [
+          154.0,
+          8.399999618530273,
+          -67.0
+        ]
+      ],
+      "radius": 0.18,
+      "material": "wrap_heavy_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Power_Switchgear",
+      "kind": "box",
+      "position": [
+        154,
+        2.5,
+        -70.9
+      ],
+      "size": [
+        3.4,
+        4.4,
+        1.4
+      ],
+      "material": "wall_reactor_housing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_Console",
+      "kind": "box",
+      "position": [
+        154,
+        1.35,
+        -60.5
+      ],
+      "size": [
+        3.4,
+        2.1,
+        1.2
+      ],
+      "material": "accent_control_console",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Power_HV_Frame",
+      "kind": "box",
+      "position": [
+        154.0,
+        3.5999999046325684,
+        -70.2449951171875
+      ],
+      "size": [
+        1.7400000000000002,
+        1.3243749999999999,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Power_HV_Sign",
+      "kind": "sign",
+      "asset": "warning_panel",
+      "position": [
+        154,
+        3.6,
+        -70.17
+      ],
+      "width": 1.6,
+      "height": 1.184375
+    },
+    {
+      "name": "L01_ART_Power_Vertical_Frame",
+      "kind": "box",
+      "position": [
+        157.5,
+        4.5,
+        -65.57499694824219
+      ],
+      "size": [
+        1.2400000000000002,
+        3.2863687150837992,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Power_Vertical_Sign",
+      "kind": "sign",
+      "asset": "vertical_neon",
+      "position": [
+        157.5,
+        4.5,
+        -65.5
+      ],
+      "width": 1.1,
+      "height": 3.146368715083799
+    },
+    {
+      "name": "L01_ART_Training_Vent_0",
+      "kind": "box",
+      "position": [
+        -8,
+        3.0,
+        -8.17
+      ],
+      "size": [
+        3.4,
+        3.8,
+        0.24
+      ],
+      "material": "wall_vent_bank",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Sill_0",
+      "kind": "box",
+      "position": [
+        -8,
+        1.0,
+        -7.94
+      ],
+      "size": [
+        3.8,
+        0.18,
+        0.65
+      ],
+      "material": "accent_dark_monolith",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Vent_1",
+      "kind": "box",
+      "position": [
+        0,
+        3.0,
+        -8.17
+      ],
+      "size": [
+        3.4,
+        3.8,
+        0.24
+      ],
+      "material": "wall_vent_bank",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Sill_1",
+      "kind": "box",
+      "position": [
+        0,
+        1.0,
+        -7.94
+      ],
+      "size": [
+        3.8,
+        0.18,
+        0.65
+      ],
+      "material": "accent_dark_monolith",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Vent_2",
+      "kind": "box",
+      "position": [
+        8,
+        3.0,
+        -8.17
+      ],
+      "size": [
+        3.4,
+        3.8,
+        0.24
+      ],
+      "material": "wall_vent_bank",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Sill_2",
+      "kind": "box",
+      "position": [
+        8,
+        1.0,
+        -7.94
+      ],
+      "size": [
+        3.8,
+        0.18,
+        0.65
+      ],
+      "material": "accent_dark_monolith",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Corporate_Frame",
+      "kind": "box",
+      "position": [
+        0.0,
+        16.0,
+        -8.21500015258789
+      ],
+      "size": [
+        12.14,
+        5.1321875,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Corporate_Sign",
+      "kind": "sign",
+      "asset": "corporate_panel",
+      "position": [
+        0,
+        16,
+        -8.14
+      ],
+      "width": 12,
+      "height": 4.9921875
+    },
+    {
+      "name": "L01_ART_Training_Ad_Frame",
+      "kind": "box",
+      "position": [
+        8.0,
+        8.0,
+        -8.194999694824219
+      ],
+      "size": [
+        3.44,
+        2.3378515625,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Ad_Sign",
+      "kind": "sign",
+      "asset": "panel_ad",
+      "position": [
+        8,
+        8,
+        -8.12
+      ],
+      "width": 3.3,
+      "height": 2.1978515625
+    },
+    {
+      "name": "L01_ART_Training_Drain_0",
+      "kind": "tube",
+      "points": [
+        [
+          -12.800000190734863,
+          0.30000001192092896,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          18.0,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          19.0,
+          -21.0
+        ],
+        [
+          -12.800000190734863,
+          19.0,
+          -27.0
+        ]
+      ],
+      "radius": 0.38,
+      "material": "wrap_heavy_pipe",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Training_Collar_0_1",
+      "kind": "tube",
+      "points": [
+        [
+          -12.800000190734863,
+          0.8899999856948853,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          1.1100000143051147,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_0_7",
+      "kind": "tube",
+      "points": [
+        [
+          -12.800000190734863,
+          6.889999866485596,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          7.110000133514404,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_0_13",
+      "kind": "tube",
+      "points": [
+        [
+          -12.800000190734863,
+          12.890000343322754,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          13.109999656677246,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_0_17",
+      "kind": "tube",
+      "points": [
+        [
+          -12.800000190734863,
+          16.889999389648438,
+          -20.0
+        ],
+        [
+          -12.800000190734863,
+          17.110000610351562,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Drain_1",
+      "kind": "tube",
+      "points": [
+        [
+          -14.0,
+          0.30000001192092896,
+          -20.0
+        ],
+        [
+          -14.0,
+          18.0,
+          -20.0
+        ],
+        [
+          -14.0,
+          19.0,
+          -21.0
+        ],
+        [
+          -14.0,
+          19.0,
+          -27.0
+        ]
+      ],
+      "radius": 0.38,
+      "material": "wrap_heavy_pipe",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Training_Collar_1_1",
+      "kind": "tube",
+      "points": [
+        [
+          -14.0,
+          0.8899999856948853,
+          -20.0
+        ],
+        [
+          -14.0,
+          1.1100000143051147,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_1_7",
+      "kind": "tube",
+      "points": [
+        [
+          -14.0,
+          6.889999866485596,
+          -20.0
+        ],
+        [
+          -14.0,
+          7.110000133514404,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_1_13",
+      "kind": "tube",
+      "points": [
+        [
+          -14.0,
+          12.890000343322754,
+          -20.0
+        ],
+        [
+          -14.0,
+          13.109999656677246,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Collar_1_17",
+      "kind": "tube",
+      "points": [
+        [
+          -14.0,
+          16.889999389648438,
+          -20.0
+        ],
+        [
+          -14.0,
+          17.110000610351562,
+          -20.0
+        ]
+      ],
+      "radius": 0.45,
+      "material": "wrap_insulated_pipe",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Data",
+      "kind": "box",
+      "position": [
+        17,
+        2.2,
+        3
+      ],
+      "size": [
+        6,
+        4.4,
+        2.5
+      ],
+      "material": "accent_datacenter",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Training_Workshop",
+      "kind": "box",
+      "position": [
+        25,
+        1.4,
+        3
+      ],
+      "size": [
+        3.2,
+        2.8,
+        2.5
+      ],
+      "material": "accent_machine_casing",
+      "collision": true
+    },
+    {
+      "name": "L01_ART_Training_Service_Frame",
+      "kind": "box",
+      "position": [
+        17.0,
+        3.0999999046325684,
+        4.255000114440918
+      ],
+      "size": [
+        3.64,
+        1.5413671875000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Service_Sign",
+      "kind": "sign",
+      "asset": "dirty_lightbox",
+      "position": [
+        17,
+        3.1,
+        4.33
+      ],
+      "width": 3.5,
+      "height": 1.4013671875
+    },
+    {
+      "name": "L01_ART_Training_Door_Frame",
+      "kind": "box",
+      "position": [
+        -8.0,
+        7.0,
+        -8.095000267028809
+      ],
+      "size": [
+        3.3400000000000003,
+        0.8650000000000001,
+        0.14
+      ],
+      "material": "accent_billboard_support",
+      "collision": false
+    },
+    {
+      "name": "L01_ART_Training_Door_Sign",
+      "kind": "sign",
+      "asset": "service_strip",
+      "position": [
+        -8,
+        7,
+        -8.02
+      ],
+      "width": 3.2,
+      "height": 0.7250000000000001
+    }
+  ],
+  "geometry_objects": 174,
+  "new_colliders": 46
+}

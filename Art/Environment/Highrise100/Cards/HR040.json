@@ -1,0 +1,128 @@
+{
+  "id": "HR040",
+  "name": "Offset Pinnacle",
+  "category": "needle",
+  "subtype": 4,
+  "seed": 1241860,
+  "role": "background",
+  "collection": "HR040_Offset_Pinnacle",
+  "bounds_m": [
+    40.807199999999995,
+    27.08,
+    487.47999999999996
+  ],
+  "bounds_min": [
+    -19.404,
+    -13.54,
+    0.0
+  ],
+  "bounds_max": [
+    21.4032,
+    13.54,
+    487.47999999999996
+  ],
+  "parameters": {
+    "width": 23.52,
+    "depth": 22.0,
+    "height": 451.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "continuous_service_needle",
+    "three_large_offset_pods"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 12,
+    "triangles": 152,
+    "vertices": 136,
+    "polygons": 74
+  },
+  "geometry_sha256": "ff3ee8fe96e2dd1d0806df555589cad69eb2feb6ba325062d785a74d24fafa1c",
+  "geometry_only_sha256": "d25a29001fe3a0e3a477f3bb316454ce027c2abf21039ce674982892fca9b791",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 1,
+    "mass_complexity": 0.126,
+    "industrial_density": 0.583,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.107,
+    "cantilever_overhang": 1,
+    "rooftop_complexity": 0.067,
+    "old_new": 0.9
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ContinuousNeedle": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "OffsetPod_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "OffsetPod": [
+      "f0_1_uv"
+    ],
+    "PodBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 15,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 29,
+    "wall_corporate": 8,
+    "f0_1_uv": 12,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/f0_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_1_uv": 925017,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR040.png",
+    "UV_Material_QA/Views/HR040_back.png",
+    "UV_Material_QA/Views/HR040_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

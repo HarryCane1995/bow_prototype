@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Material" path="res://Assets/ProceduralArt/Billboards/stacked_signage/sign.tres" id="1"]
+[sub_resource type="QuadMesh" id="Panel"]
+size = Vector2(1.951171875, 3.0)
+[sub_resource type="BoxMesh" id="Backing"]
+size = Vector3(2.041171875, 3.09, 0.10)
+[sub_resource type="StandardMaterial3D" id="Support"]
+albedo_color = Color(0.065, 0.085, 0.095, 1)
+metallic = 0.7
+roughness = 0.65
+[node name="STACKED_SIGNAGE" type="Node3D"]
+[node name="Panel" type="MeshInstance3D" parent="."]
+position = Vector3(0, 0, 0.062)
+mesh = SubResource("Panel")
+material_override = ExtResource("1")
+[node name="Support" type="MeshInstance3D" parent="."]
+visible = true
+mesh = SubResource("Backing")
+material_override = SubResource("Support")

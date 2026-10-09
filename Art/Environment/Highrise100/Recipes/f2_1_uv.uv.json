@@ -1,0 +1,43 @@
+{
+  "key": "f2_1_uv",
+  "recipe": "Recipes/f2_1_uv.uv.json",
+  "mode": "PERIODIC_FACADE_INTERIOR",
+  "seed": 925219,
+  "preset": "INDUSTRIAL_TOWER",
+  "parameters": {
+    "window_density": 0.28,
+    "emission_density": 0.3,
+    "structural_width": 18,
+    "grime_amount": 0.26,
+    "retro_strength": 0.35,
+    "window_aspect": 0.85,
+    "floor_height": 28,
+    "service_floor_frequency": 0.32,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.88,
+    "signage_density": 0.32,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.15
+  },
+  "sha256": {
+    "albedo": "b340c401975cc1d1c30b783d795167b9d7c0b3c3be50439dd7982f41b40249b3",
+    "normal": "0c6900c24674d2a111316755f0a34853eccbbbb84da0a8c2015ab3f9422b1c00",
+    "orm": "f671f6acba80819eb8c4e80b32f339b18685f1bc45c29b3a3210d7dbd7a6592b",
+    "height": "d48b21cf838a6b3e54f9bb6b46d835a9097d9a5680a39139ffc99c5236d26814",
+    "emission": "93fa1e5721c59586851ddc12adb010b3e415807324722473b489d071206064d7"
+  },
+  "source_key": "f2_1",
+  "uv_qa_version": 1,
+  "crop": [
+    0,
+    36,
+    512,
+    992
+  ],
+  "tile_width_m": 42,
+  "nominal_floor_rows": 34.142857142857146,
+  "image_size": [
+    512,
+    956
+  ]
+}

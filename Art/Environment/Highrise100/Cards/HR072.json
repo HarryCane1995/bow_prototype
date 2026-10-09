@@ -1,0 +1,176 @@
+{
+  "id": "HR072",
+  "name": "Crossing Terminal",
+  "category": "transit",
+  "subtype": 1,
+  "seed": 1495268,
+  "role": "midground",
+  "collection": "HR072_Crossing_Terminal",
+  "bounds_m": [
+    148.93037164111132,
+    80.45076950457135,
+    219.15
+  ],
+  "bounds_min": [
+    -74.46518582055566,
+    -43.75138475228568,
+    0.0
+  ],
+  "bounds_max": [
+    74.46518582055566,
+    36.69938475228568,
+    219.15
+  ],
+  "parameters": {
+    "width": 100.7,
+    "depth": 35.26,
+    "height": 211.15,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "Crossing Terminal",
+    "diagonal_terminal",
+    "lower_annex",
+    "offset_tower",
+    "roof_paired_hvac",
+    "roof_water_tank",
+    "transit",
+    "transport_cantilevers"
+  ],
+  "metrics": {
+    "meshes": 18,
+    "primitives": 18,
+    "triangles": 304,
+    "vertices": 280,
+    "polygons": 130
+  },
+  "geometry_sha256": "be31136ab243fda2600800630d4cb732c075c2af914e71afef9a90a69d0c9273",
+  "geometry_only_sha256": "2eb70d585841b79e19646bca81276ed4ed86fe28377096c8b384661e724ba2d7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.147,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.667,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.107,
+    "cantilever_overhang": 0.859,
+    "rooftop_complexity": 0.6,
+    "old_new": 0.38
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_service_rack",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "terminal_tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "terminal_tower": [
+      "f2_0_uv"
+    ],
+    "terminal_annex_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "terminal_annex": [
+      "f4_1_uv"
+    ],
+    "diagonal_terminal_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "diagonal_terminal": [
+      "f4_1_uv"
+    ],
+    "terminal_support": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "track_edge_a": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 30,
+    "floor_rooftop": 6,
+    "floor_metal_deck": 52,
+    "wall_service_rack": 4,
+    "f2_0_uv": 4,
+    "f4_1_uv": 8,
+    "wall_maintenance": 8,
+    "wrap_tank_shell": 10,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f2_0_uv.uv.json",
+    "Recipes/f4_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_service_rack.facade.json",
+    "Recipes/wall_vent_bank.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f2_0_uv": 925202,
+    "f4_1_uv": 925421,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_service_rack": 4174,
+    "wall_vent_bank": 4433,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR072.png",
+    "UV_Material_QA/Views/HR072_back.png",
+    "UV_Material_QA/Views/HR072_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

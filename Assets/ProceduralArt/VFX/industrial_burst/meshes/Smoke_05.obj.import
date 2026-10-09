@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dugx4m7u4slrh"
+path="res://.godot/imported/Smoke_05.obj-68dcc1f9dbb955f7d5b601a2f6d7de97.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Smoke_05.obj-68dcc1f9dbb955f7d5b601a2f6d7de97.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/industrial_burst/meshes/Smoke_05.obj"
+dest_files=["res://.godot/imported/Smoke_05.obj-68dcc1f9dbb955f7d5b601a2f6d7de97.mesh", "res://.godot/imported/Smoke_05.obj-68dcc1f9dbb955f7d5b601a2f6d7de97.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

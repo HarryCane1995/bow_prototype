@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5uds4nm1fynw"
+path="res://.godot/imported/Satellite_13.obj-b915c2cce7686f3e9971c1d6ca265286.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Satellite_13.obj-b915c2cce7686f3e9971c1d6ca265286.mesh"]
+
+source_file="res://Assets/ProceduralArt/VFX/energy_orb_discharge/meshes/Satellite_13.obj"
+dest_files=["res://.godot/imported/Satellite_13.obj-b915c2cce7686f3e9971c1d6ca265286.mesh", "res://.godot/imported/Satellite_13.obj-b915c2cce7686f3e9971c1d6ca265286.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

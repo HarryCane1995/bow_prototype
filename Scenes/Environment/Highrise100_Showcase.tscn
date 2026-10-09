@@ -1,0 +1,766 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Environment/Highrise100/Highrise100Showcase.gd" id="1_j05fa"]
+[ext_resource type="Environment" path="res://Resources/Environment/Env_Bow_NightCity_v01.tres" id="2_oer8l"]
+[ext_resource type="Environment" path="res://Resources/Environment/Env_Highrise100_NeutralQA.tres" id="3_ybnre"]
+[ext_resource type="PackedScene" path="res://Assets/Environment/Highrise100_Runtime/Highrise100.gltf" id="4_mpa8g"]
+[ext_resource type="Script" path="res://Scripts/Environment/Highrise100/HighriseFlyCamera.gd" id="5_2wuaa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nmjg8"]
+albedo_color = Color(0.09, 0.12, 0.13, 1)
+roughness = 0.9
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g7y3m"]
+size = Vector2(2470, 2260)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghace"]
+albedo_color = Color(0.58, 0.68, 0.68, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_pyry4"]
+size = Vector3(0.6, 10, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ufnek"]
+albedo_color = Color(0.58, 0.68, 0.68, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_i88yr"]
+size = Vector3(0.6, 50, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7gww"]
+albedo_color = Color(0.58, 0.68, 0.68, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="BoxMesh_eh8gu"]
+size = Vector3(0.6, 100, 0.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o2jvb"]
+albedo_color = Color(0.84, 0.27, 0.06, 1)
+roughness = 0.9
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4si1b"]
+radius = 0.19
+height = 1.53
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_11dm2"]
+albedo_color = Color(0.84, 0.27, 0.06, 1)
+roughness = 0.9
+
+[sub_resource type="SphereMesh" id="SphereMesh_rye4m"]
+radius = 0.135
+height = 0.27
+
+[node name="Highrise100_Showcase" type="Node3D" unique_id=1575036814]
+script = ExtResource("1_j05fa")
+night_environment = ExtResource("2_oer8l")
+neutral_environment = ExtResource("3_ybnre")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1393683532]
+environment = ExtResource("2_oer8l")
+
+[node name="GlobalLighting" type="Node3D" parent="." unique_id=975931290]
+
+[node name="DirectionalKey" type="DirectionalLight3D" parent="GlobalLighting" unique_id=1589888123]
+transform = Transform3D(0.8480481, 0.32625088, -0.4175821, 0, 0.7880108, 0.6156615, 0.52991927, -0.5221106, 0.668271, 0, 0, 0)
+light_color = Color(0.57, 0.69, 0.76, 1)
+light_energy = 0.55
+light_angular_distance = 1.5
+shadow_enabled = true
+directional_shadow_split_1 = 0.08
+directional_shadow_split_2 = 0.25
+directional_shadow_split_3 = 0.55
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 850.0
+
+[node name="Buildings" type="Node3D" parent="." unique_id=322554561]
+
+[node name="CatalogGrid" parent="Buildings" unique_id=958705531 instance=ExtResource("4_mpa8g")]
+
+[node name="HR001" parent="Buildings/CatalogGrid" index="0" unique_id=1341500382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 936)
+metadata/height_m = 244.216
+metadata/category = "corporate"
+metadata/display_name = "Setback Veil"
+
+[node name="HR002" parent="Buildings/CatalogGrid" index="1" unique_id=831086073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, 936)
+metadata/height_m = 300.4
+metadata/category = "corporate"
+metadata/display_name = "Split Blades"
+
+[node name="HR003" parent="Buildings/CatalogGrid" index="2" unique_id=119324367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, 936)
+metadata/height_m = 333.2
+metadata/category = "corporate"
+metadata/display_name = "Chamfered Wedge"
+
+[node name="HR004" parent="Buildings/CatalogGrid" index="3" unique_id=279799556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, 936)
+metadata/height_m = 288.0
+metadata/category = "corporate"
+metadata/display_name = "Triad Court"
+
+[node name="HR005" parent="Buildings/CatalogGrid" index="4" unique_id=2078130013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, 936)
+metadata/height_m = 324.4
+metadata/category = "corporate"
+metadata/display_name = "Offset Atrium"
+
+[node name="HR006" parent="Buildings/CatalogGrid" index="5" unique_id=907316768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, 936)
+metadata/height_m = 183.6499938964844
+metadata/category = "megablock"
+metadata/display_name = "Terraced Cliff"
+
+[node name="HR007" parent="Buildings/CatalogGrid" index="6" unique_id=70323637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, 936)
+metadata/height_m = 203.7
+metadata/category = "megablock"
+metadata/display_name = "Inhabited Gate"
+
+[node name="HR008" parent="Buildings/CatalogGrid" index="7" unique_id=487306865]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, 936)
+metadata/height_m = 226.1000061035156
+metadata/category = "megablock"
+metadata/display_name = "Stacked Districts"
+
+[node name="HR009" parent="Buildings/CatalogGrid" index="8" unique_id=1501153749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, 936)
+metadata/height_m = 187.8999938964844
+metadata/category = "megablock"
+metadata/display_name = "Buttressed Slab"
+
+[node name="HR010" parent="Buildings/CatalogGrid" index="9" unique_id=1148945056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, 936)
+metadata/height_m = 225.3999938964844
+metadata/category = "megablock"
+metadata/display_name = "Open Courtyard"
+
+[node name="HR011" parent="Buildings/CatalogGrid" index="10" unique_id=1515673358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 728)
+metadata/height_m = 234.684
+metadata/category = "industrial"
+metadata/display_name = "Chimney Bank"
+
+[node name="HR012" parent="Buildings/CatalogGrid" index="11" unique_id=1861102868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, 728)
+metadata/height_m = 242.05
+metadata/category = "industrial"
+metadata/display_name = "Service Spine"
+
+[node name="HR013" parent="Buildings/CatalogGrid" index="12" unique_id=432138621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, 728)
+metadata/height_m = 278.25174
+metadata/category = "industrial"
+metadata/display_name = "Gantry Works"
+
+[node name="HR014" parent="Buildings/CatalogGrid" index="13" unique_id=5821675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, 728)
+metadata/height_m = 223.25
+metadata/category = "industrial"
+metadata/display_name = "Heat Exchanger"
+
+[node name="HR015" parent="Buildings/CatalogGrid" index="14" unique_id=842662356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, 728)
+metadata/height_m = 265.915
+metadata/category = "industrial"
+metadata/display_name = "Stepped Foundry"
+
+[node name="HR016" parent="Buildings/CatalogGrid" index="15" unique_id=243838966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, 728)
+metadata/height_m = 174.85
+metadata/category = "residential"
+metadata/display_name = "Staggered Slabs"
+
+[node name="HR017" parent="Buildings/CatalogGrid" index="16" unique_id=192124535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, 728)
+metadata/height_m = 193.3999938964844
+metadata/category = "residential"
+metadata/display_name = "L Court"
+
+[node name="HR018" parent="Buildings/CatalogGrid" index="17" unique_id=1875561752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, 728)
+metadata/height_m = 224.2
+metadata/category = "residential"
+metadata/display_name = "Cross Estate"
+
+[node name="HR019" parent="Buildings/CatalogGrid" index="18" unique_id=753526029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, 728)
+metadata/height_m = 190.3999938964844
+metadata/category = "residential"
+metadata/display_name = "Balcony Terraces"
+
+[node name="HR020" parent="Buildings/CatalogGrid" index="19" unique_id=1245437008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, 728)
+metadata/height_m = 204.04
+metadata/category = "residential"
+metadata/display_name = "Three Neighbours"
+
+[node name="HR021" parent="Buildings/CatalogGrid" index="20" unique_id=1198695809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 520)
+metadata/height_m = 198.0
+metadata/category = "hvac"
+metadata/display_name = "Vent Mast"
+
+[node name="HR022" parent="Buildings/CatalogGrid" index="21" unique_id=2091988924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, 520)
+metadata/height_m = 231.75
+metadata/category = "hvac"
+metadata/display_name = "Radiator Stack"
+
+[node name="HR023" parent="Buildings/CatalogGrid" index="22" unique_id=1134672275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, 520)
+metadata/height_m = 267.75
+metadata/category = "hvac"
+metadata/display_name = "Cooling Racks"
+
+[node name="HR024" parent="Buildings/CatalogGrid" index="23" unique_id=2141168287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, 520)
+metadata/height_m = 212.12758
+metadata/category = "hvac"
+metadata/display_name = "External Ducts"
+
+[node name="HR025" parent="Buildings/CatalogGrid" index="24" unique_id=1061828131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, 520)
+metadata/height_m = 241.3125
+metadata/category = "hvac"
+metadata/display_name = "Plenum Fork"
+
+[node name="HR026" parent="Buildings/CatalogGrid" index="25" unique_id=1511620681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, 520)
+metadata/height_m = 231.088
+metadata/category = "billboard"
+metadata/display_name = "Screen Sail"
+
+[node name="HR027" parent="Buildings/CatalogGrid" index="26" unique_id=538966263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, 520)
+metadata/height_m = 267.8
+metadata/category = "billboard"
+metadata/display_name = "Media Gate"
+
+[node name="HR028" parent="Buildings/CatalogGrid" index="27" unique_id=2136175340]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, 520)
+metadata/height_m = 309.4
+metadata/category = "billboard"
+metadata/display_name = "Stacked Channels"
+
+[node name="HR029" parent="Buildings/CatalogGrid" index="28" unique_id=1570642603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, 520)
+metadata/height_m = 247.0
+metadata/category = "billboard"
+metadata/display_name = "Beacon Blade"
+
+[node name="HR030" parent="Buildings/CatalogGrid" index="29" unique_id=1425907480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, 520)
+metadata/height_m = 290.29
+metadata/category = "billboard"
+metadata/display_name = "Crown Display"
+
+[node name="HR031" parent="Buildings/CatalogGrid" index="30" unique_id=1561269650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 312)
+metadata/height_m = 246.2
+metadata/category = "arcology"
+metadata/display_name = "Terrace Mountain"
+
+[node name="HR032" parent="Buildings/CatalogGrid" index="31" unique_id=832027816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, 312)
+metadata/height_m = 272.95
+metadata/category = "arcology"
+metadata/display_name = "Hanging District"
+
+[node name="HR033" parent="Buildings/CatalogGrid" index="32" unique_id=990390444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, 312)
+metadata/height_m = 339.964
+metadata/category = "arcology"
+metadata/display_name = "Twin Mountains"
+
+[node name="HR034" parent="Buildings/CatalogGrid" index="33" unique_id=100336867]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, 312)
+metadata/height_m = 242.93875
+metadata/category = "arcology"
+metadata/display_name = "Porous Tripod"
+
+[node name="HR035" parent="Buildings/CatalogGrid" index="34" unique_id=756878147]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, 312)
+metadata/height_m = 291.5
+metadata/category = "arcology"
+metadata/display_name = "Sky Courtyard"
+
+[node name="HR036" parent="Buildings/CatalogGrid" index="35" unique_id=509774573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, 312)
+metadata/height_m = 360.7999877929687
+metadata/category = "needle"
+metadata/display_name = "Tapered Lancet"
+
+[node name="HR037" parent="Buildings/CatalogGrid" index="36" unique_id=306199685]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, 312)
+metadata/height_m = 434.969
+metadata/category = "needle"
+metadata/display_name = "Bifurcated Needle"
+
+[node name="HR038" parent="Buildings/CatalogGrid" index="37" unique_id=2125766021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, 312)
+metadata/height_m = 527.332
+metadata/category = "needle"
+metadata/display_name = "Radio Spine"
+
+[node name="HR039" parent="Buildings/CatalogGrid" index="38" unique_id=169766336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, 312)
+metadata/height_m = 389.5
+metadata/category = "needle"
+metadata/display_name = "Triple Spires"
+
+[node name="HR040" parent="Buildings/CatalogGrid" index="39" unique_id=1530598467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, 312)
+metadata/height_m = 487.48
+metadata/category = "needle"
+metadata/display_name = "Offset Pinnacle"
+
+[node name="HR041" parent="Buildings/CatalogGrid" index="40" unique_id=1734377125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 104)
+metadata/height_m = 242.05
+metadata/category = "twins"
+metadata/display_name = "High Bridge"
+
+[node name="HR042" parent="Buildings/CatalogGrid" index="41" unique_id=1529100462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, 104)
+metadata/height_m = 286.1
+metadata/category = "twins"
+metadata/display_name = "Double Deck"
+
+[node name="HR043" parent="Buildings/CatalogGrid" index="42" unique_id=1603806718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, 104)
+metadata/height_m = 315.235
+metadata/category = "twins"
+metadata/display_name = "Hinge Towers"
+
+[node name="HR044" parent="Buildings/CatalogGrid" index="43" unique_id=560649416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, 104)
+metadata/height_m = 263.9
+metadata/category = "twins"
+metadata/display_name = "Suspended Transfer"
+
+[node name="HR045" parent="Buildings/CatalogGrid" index="44" unique_id=2053415631]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, 104)
+metadata/height_m = 262.91
+metadata/category = "twins"
+metadata/display_name = "Unequal Partners"
+
+[node name="HR046" parent="Buildings/CatalogGrid" index="45" unique_id=2057137783]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, 104)
+metadata/height_m = 189.728
+metadata/category = "reactor"
+metadata/display_name = "Triple Vessels"
+
+[node name="HR047" parent="Buildings/CatalogGrid" index="46" unique_id=1116904422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, 104)
+metadata/height_m = 226.6000061035156
+metadata/category = "reactor"
+metadata/display_name = "Cooling Hourglass"
+
+[node name="HR048" parent="Buildings/CatalogGrid" index="47" unique_id=1710294224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, 104)
+metadata/height_m = 272.672
+metadata/category = "reactor"
+metadata/display_name = "Armoured Vessel"
+
+[node name="HR049" parent="Buildings/CatalogGrid" index="48" unique_id=315951709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, 104)
+metadata/height_m = 192.28
+metadata/category = "reactor"
+metadata/display_name = "Split Drums"
+
+[node name="HR050" parent="Buildings/CatalogGrid" index="49" unique_id=1109605912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, 104)
+metadata/height_m = 214.7599945068359
+metadata/category = "reactor"
+metadata/display_name = "Flue Cluster"
+
+[node name="HR051" parent="Buildings/CatalogGrid" index="50" unique_id=1139060424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, -104)
+metadata/height_m = 210.3999938964844
+metadata/category = "retro"
+metadata/display_name = "Foundry Ziggurat"
+
+[node name="HR052" parent="Buildings/CatalogGrid" index="51" unique_id=1379787073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, -104)
+metadata/height_m = 252.0105
+metadata/category = "retro"
+metadata/display_name = "Twin Courtyard"
+
+[node name="HR053" parent="Buildings/CatalogGrid" index="52" unique_id=280715675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, -104)
+metadata/height_m = 294.6275
+metadata/category = "retro"
+metadata/display_name = "Cross Reliquary"
+
+[node name="HR054" parent="Buildings/CatalogGrid" index="53" unique_id=1502193326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, -104)
+metadata/height_m = 224.05
+metadata/category = "retro"
+metadata/display_name = "Sawtooth Crown"
+
+[node name="HR055" parent="Buildings/CatalogGrid" index="54" unique_id=524477119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, -104)
+metadata/height_m = 261.0
+metadata/category = "retro"
+metadata/display_name = "Octagon Regency"
+
+[node name="HR056" parent="Buildings/CatalogGrid" index="55" unique_id=1983512983]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, -104)
+metadata/height_m = 180.45
+metadata/category = "maintenance"
+metadata/display_name = "Service Cleft"
+
+[node name="HR057" parent="Buildings/CatalogGrid" index="56" unique_id=108224128]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, -104)
+metadata/height_m = 207.6000061035156
+metadata/category = "maintenance"
+metadata/display_name = "Gantry Keep"
+
+[node name="HR058" parent="Buildings/CatalogGrid" index="57" unique_id=1435694587]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, -104)
+metadata/height_m = 242.45
+metadata/category = "maintenance"
+metadata/display_name = "Repair Stack"
+
+[node name="HR059" parent="Buildings/CatalogGrid" index="58" unique_id=723372114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, -104)
+metadata/height_m = 197.05
+metadata/category = "maintenance"
+metadata/display_name = "Silo Annex"
+
+[node name="HR060" parent="Buildings/CatalogGrid" index="59" unique_id=1518621524]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, -104)
+metadata/height_m = 220.0
+metadata/category = "maintenance"
+metadata/display_name = "Plant Cathedral"
+
+[node name="HR061" parent="Buildings/CatalogGrid" index="60" unique_id=568412372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, -312)
+metadata/height_m = 285.2
+metadata/category = "exoskeleton"
+metadata/display_name = "Diamond Carapace"
+
+[node name="HR062" parent="Buildings/CatalogGrid" index="61" unique_id=444500518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, -312)
+metadata/height_m = 328.9
+metadata/category = "exoskeleton"
+metadata/display_name = "Ladder Twins"
+
+[node name="HR063" parent="Buildings/CatalogGrid" index="62" unique_id=826754446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, -312)
+metadata/height_m = 376.15
+metadata/category = "exoskeleton"
+metadata/display_name = "Crossbrace Monolith"
+
+[node name="HR064" parent="Buildings/CatalogGrid" index="63" unique_id=689575320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, -312)
+metadata/height_m = 301.5725
+metadata/category = "exoskeleton"
+metadata/display_name = "Splayed Cage"
+
+[node name="HR065" parent="Buildings/CatalogGrid" index="64" unique_id=1998898288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, -312)
+metadata/height_m = 354.5
+metadata/category = "exoskeleton"
+metadata/display_name = "Three Tube Frame"
+
+[node name="HR066" parent="Buildings/CatalogGrid" index="65" unique_id=1605338789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, -312)
+metadata/height_m = 263.2
+metadata/category = "suspended"
+metadata/display_name = "Raised Citadel"
+
+[node name="HR067" parent="Buildings/CatalogGrid" index="66" unique_id=846838318]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, -312)
+metadata/height_m = 303.15
+metadata/category = "suspended"
+metadata/display_name = "Spine Cantilevers"
+
+[node name="HR068" parent="Buildings/CatalogGrid" index="67" unique_id=1676478712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, -312)
+metadata/height_m = 345.1
+metadata/category = "suspended"
+metadata/display_name = "Hanging Cradle"
+
+[node name="HR069" parent="Buildings/CatalogGrid" index="68" unique_id=579383305]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, -312)
+metadata/height_m = 283.5
+metadata/category = "suspended"
+metadata/display_name = "Habitable Truss"
+
+[node name="HR070" parent="Buildings/CatalogGrid" index="69" unique_id=736790813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, -312)
+metadata/height_m = 329.0
+metadata/category = "suspended"
+metadata/display_name = "Tripod Lantern"
+
+[node name="HR071" parent="Buildings/CatalogGrid" index="70" unique_id=239603266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, -520)
+metadata/height_m = 184.8500061035156
+metadata/category = "transit"
+metadata/display_name = "Rail Gateway"
+
+[node name="HR072" parent="Buildings/CatalogGrid" index="71" unique_id=1856740503]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, -520)
+metadata/height_m = 219.1499938964844
+metadata/category = "transit"
+metadata/display_name = "Crossing Terminal"
+
+[node name="HR073" parent="Buildings/CatalogGrid" index="72" unique_id=1771779717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, -520)
+metadata/height_m = 253.95
+metadata/category = "transit"
+metadata/display_name = "Platform Funnel"
+
+[node name="HR074" parent="Buildings/CatalogGrid" index="73" unique_id=1737546824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, -520)
+metadata/height_m = 199.2
+metadata/category = "transit"
+metadata/display_name = "Terrace Interchange"
+
+[node name="HR075" parent="Buildings/CatalogGrid" index="74" unique_id=1039352988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, -520)
+metadata/height_m = 233.5
+metadata/category = "transit"
+metadata/display_name = "Radial Junction"
+
+[node name="HR076" parent="Buildings/CatalogGrid" index="75" unique_id=812241469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, -520)
+metadata/height_m = 177.2
+metadata/category = "datacenter"
+metadata/display_name = "Vent Stack"
+
+[node name="HR077" parent="Buildings/CatalogGrid" index="76" unique_id=275238813]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, -520)
+metadata/height_m = 205.7
+metadata/category = "datacenter"
+metadata/display_name = "Server Canyon"
+
+[node name="HR078" parent="Buildings/CatalogGrid" index="77" unique_id=695905576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, -520)
+metadata/height_m = 227.5
+metadata/category = "datacenter"
+metadata/display_name = "Cooling Chimneys"
+
+[node name="HR079" parent="Buildings/CatalogGrid" index="78" unique_id=1238447461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, -520)
+metadata/height_m = 190.5
+metadata/category = "datacenter"
+metadata/display_name = "Rack Terraces"
+
+[node name="HR080" parent="Buildings/CatalogGrid" index="79" unique_id=1871507980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, -520)
+metadata/height_m = 213.45
+metadata/category = "datacenter"
+metadata/display_name = "Armored Archive"
+
+[node name="HR081" parent="Buildings/CatalogGrid" index="80" unique_id=1251620987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, -728)
+metadata/height_m = 206.8500061035156
+metadata/category = "civic"
+metadata/display_name = "Crown Assembly"
+
+[node name="HR082" parent="Buildings/CatalogGrid" index="81" unique_id=481974064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, -728)
+metadata/height_m = 246.8999938964844
+metadata/category = "civic"
+metadata/display_name = "Court of Towers"
+
+[node name="HR083" parent="Buildings/CatalogGrid" index="82" unique_id=1213402295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, -728)
+metadata/height_m = 301.47
+metadata/category = "civic"
+metadata/display_name = "Civic Needle"
+
+[node name="HR084" parent="Buildings/CatalogGrid" index="83" unique_id=1661906542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, -728)
+metadata/height_m = 222.95
+metadata/category = "civic"
+metadata/display_name = "Sky Forum"
+
+[node name="HR085" parent="Buildings/CatalogGrid" index="84" unique_id=1748071817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, -728)
+metadata/height_m = 261.0
+metadata/category = "civic"
+metadata/display_name = "Civic Bastion"
+
+[node name="HR086" parent="Buildings/CatalogGrid" index="85" unique_id=1192018420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, -728)
+metadata/height_m = 192.8
+metadata/category = "mixed_use"
+metadata/display_name = "Market and Needles"
+
+[node name="HR087" parent="Buildings/CatalogGrid" index="86" unique_id=341298799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, -728)
+metadata/height_m = 220.75
+metadata/category = "mixed_use"
+metadata/display_name = "Terraced Quarter"
+
+[node name="HR088" parent="Buildings/CatalogGrid" index="87" unique_id=1825890771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, -728)
+metadata/height_m = 254.3500061035156
+metadata/category = "mixed_use"
+metadata/display_name = "Hotel Hinge"
+
+[node name="HR089" parent="Buildings/CatalogGrid" index="88" unique_id=1501230142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, -728)
+metadata/height_m = 209.5
+metadata/category = "mixed_use"
+metadata/display_name = "Stacked Districts"
+
+[node name="HR090" parent="Buildings/CatalogGrid" index="89" unique_id=431962773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, -728)
+metadata/height_m = 235.45
+metadata/category = "mixed_use"
+metadata/display_name = "Atrium City"
+
+[node name="HR091" parent="Buildings/CatalogGrid" index="90" unique_id=950629292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, -936)
+metadata/height_m = 277.25
+metadata/category = "buttress"
+metadata/display_name = "Flying Piers"
+
+[node name="HR092" parent="Buildings/CatalogGrid" index="91" unique_id=2072710081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -801.5, 0, -936)
+metadata/height_m = 327.3
+metadata/category = "buttress"
+metadata/display_name = "Raking Fortress"
+
+[node name="HR093" parent="Buildings/CatalogGrid" index="92" unique_id=923723144]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -572.5, 0, -936)
+metadata/height_m = 373.35
+metadata/category = "buttress"
+metadata/display_name = "Stepped Abutments"
+
+[node name="HR094" parent="Buildings/CatalogGrid" index="93" unique_id=959558769]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -343.5, 0, -936)
+metadata/height_m = 302.5
+metadata/category = "buttress"
+metadata/display_name = "Split Cathedral"
+
+[node name="HR095" parent="Buildings/CatalogGrid" index="94" unique_id=734541884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -114.5, 0, -936)
+metadata/height_m = 351.0
+metadata/category = "buttress"
+metadata/display_name = "Four Petal Keep"
+
+[node name="HR096" parent="Buildings/CatalogGrid" index="95" unique_id=916616368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, 0, -936)
+metadata/height_m = 338.85
+metadata/category = "hero"
+metadata/display_name = "Broken Halo"
+
+[node name="HR097" parent="Buildings/CatalogGrid" index="96" unique_id=1802609011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 343.5, 0, -936)
+metadata/height_m = 401.4
+metadata/category = "hero"
+metadata/display_name = "Giant Keyhole"
+
+[node name="HR098" parent="Buildings/CatalogGrid" index="97" unique_id=2140236059]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 572.5, 0, -936)
+metadata/height_m = 479.332
+metadata/category = "hero"
+metadata/display_name = "Sky Cathedral"
+
+[node name="HR099" parent="Buildings/CatalogGrid" index="98" unique_id=1530590774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 801.5, 0, -936)
+metadata/height_m = 365.4500122070313
+metadata/category = "hero"
+metadata/display_name = "Helix Citadel"
+
+[node name="HR100" parent="Buildings/CatalogGrid" index="99" unique_id=742878837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1030.5, 0, -936)
+metadata/height_m = 426.0
+metadata/category = "hero"
+metadata/display_name = "Crown of Bridges"
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=391066115]
+transform = Transform3D(0.7445896, -0.34952036, 0.5687019, 0, 0.8519591, 0.5236083, -0.66752255, -0.38987333, 0.6343599, 1305.3, 1361.8, 1456)
+script = ExtResource("5_2wuaa")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=2136236955]
+current = true
+fov = 65.0
+near = 0.2
+far = 8000.0
+
+[node name="Debug" type="Node3D" parent="." unique_id=199857189]
+
+[node name="Ground" type="MeshInstance3D" parent="Debug" unique_id=2011021696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+material_override = SubResource("StandardMaterial3D_nmjg8")
+mesh = SubResource("PlaneMesh_g7y3m")
+
+[node name="Helpers" type="Node3D" parent="Debug" unique_id=1325275638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1030.5, 0, 1029.5339)
+
+[node name="Scale_10m" type="MeshInstance3D" parent="Debug/Helpers" unique_id=667890222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 5, 0)
+material_override = SubResource("StandardMaterial3D_ghace")
+mesh = SubResource("BoxMesh_pyry4")
+
+[node name="Label_10m" type="Label3D" parent="Debug/Helpers" unique_id=1780011750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 13, 0)
+pixel_size = 0.022
+billboard = 1
+text = "10 m"
+font_size = 48
+
+[node name="Scale_50m" type="MeshInstance3D" parent="Debug/Helpers" unique_id=2119548641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 25, 0)
+material_override = SubResource("StandardMaterial3D_ufnek")
+mesh = SubResource("BoxMesh_i88yr")
+
+[node name="Label_50m" type="Label3D" parent="Debug/Helpers" unique_id=164087171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 53, 0)
+pixel_size = 0.022
+billboard = 1
+text = "50 m"
+font_size = 48
+
+[node name="Scale_100m" type="MeshInstance3D" parent="Debug/Helpers" unique_id=1271984032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 50, 0)
+material_override = SubResource("StandardMaterial3D_r7gww")
+mesh = SubResource("BoxMesh_eh8gu")
+
+[node name="Label_100m" type="Label3D" parent="Debug/Helpers" unique_id=1489521412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 103, 0)
+pixel_size = 0.022
+billboard = 1
+text = "100 m"
+font_size = 48
+
+[node name="HumanBody" type="MeshInstance3D" parent="Debug/Helpers" unique_id=159123142]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.765, 0)
+material_override = SubResource("StandardMaterial3D_o2jvb")
+mesh = SubResource("CapsuleMesh_4si1b")
+
+[node name="HumanHead" type="MeshInstance3D" parent="Debug/Helpers" unique_id=696510239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.665, 0)
+material_override = SubResource("StandardMaterial3D_11dm2")
+mesh = SubResource("SphereMesh_rye4m")
+
+[node name="HumanLabel" type="Label3D" parent="Debug/Helpers" unique_id=608389915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+pixel_size = 0.022
+billboard = 1
+text = "1.8 m"
+font_size = 48
+
+[node name="HUD" type="CanvasLayer" parent="Debug" unique_id=1465221548]
+
+[node name="Panel" type="PanelContainer" parent="Debug/HUD" unique_id=732130879]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+
+[node name="Status" type="Label" parent="Debug/HUD/Panel" unique_id=2078047808]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Highrise100 — loading"
+
+[editable path="Buildings/CatalogGrid"]

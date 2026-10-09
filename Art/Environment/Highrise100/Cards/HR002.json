@@ -1,0 +1,123 @@
+{
+  "id": "HR002",
+  "name": "Split Blades",
+  "category": "corporate",
+  "subtype": 1,
+  "seed": 940938,
+  "role": "background",
+  "collection": "HR002_Split_Blades",
+  "bounds_m": [
+    46.30800000000001,
+    33.783199999999994,
+    300.4
+  ],
+  "bounds_min": [
+    -23.154000000000003,
+    -16.891599999999997,
+    0.0
+  ],
+  "bounds_max": [
+    23.154000000000003,
+    16.891599999999997,
+    300.4
+  ],
+  "parameters": {
+    "width": 40.28,
+    "depth": 27.88,
+    "height": 288.4,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "sky_slot",
+    "split_blade",
+    "unequal_heights"
+  ],
+  "metrics": {
+    "meshes": 8,
+    "primitives": 8,
+    "triangles": 96,
+    "vertices": 88,
+    "polygons": 48
+  },
+  "geometry_sha256": "4c55a04cd986e822358fd26852bca448d222c6b2b840e74def6f16eba50d9727",
+  "geometry_only_sha256": "b5b7a9b6bbebc267de4555b010aa47eecd20013d8ea9cd906db568a66d68e0f9",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.649,
+    "mass_complexity": 0.084,
+    "industrial_density": 0.5,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.21,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Blade_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Blade": [
+      "f0_1_uv"
+    ],
+    "Fin": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Transfer_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Transfer": [
+      "f4_2_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 12,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 16,
+    "wall_corporate": 4,
+    "f0_1_uv": 8,
+    "f4_2_uv": 4
+  },
+  "recipes": [
+    "Recipes/f0_1_uv.uv.json",
+    "Recipes/f4_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_1_uv": 925017,
+    "f4_2_uv": 925438,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR002.png",
+    "UV_Material_QA/Views/HR002_back.png",
+    "UV_Material_QA/Views/HR002_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

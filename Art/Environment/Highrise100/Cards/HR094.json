@@ -1,0 +1,137 @@
+{
+  "id": "HR094",
+  "name": "Split Cathedral",
+  "category": "buttress",
+  "subtype": 3,
+  "seed": 1669486,
+  "role": "hero",
+  "collection": "HR094_Split_Cathedral",
+  "bounds_m": [
+    93.1344,
+    48.3778,
+    302.5
+  ],
+  "bounds_min": [
+    -46.5672,
+    -24.1889,
+    0.0
+  ],
+  "bounds_max": [
+    46.5672,
+    24.1889,
+    302.5
+  ],
+  "parameters": {
+    "width": 73.08,
+    "depth": 39.13,
+    "height": 294.5,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Split Cathedral",
+    "buttress",
+    "four_raking_haunches",
+    "high_rear_link",
+    "roof_water_tank",
+    "split_cathedral",
+    "unequal_towers"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 19,
+    "triangles": 276,
+    "vertices": 240,
+    "polygons": 126
+  },
+  "geometry_sha256": "87d529aabc1b391217de89128a19973c0b0d546e567e3c2abefb221961bc9802",
+  "geometry_only_sha256": "6be37821170fd9ce1b65100f1f4f1bcc5ff3f12c3c823b0a9ffd27ce6fdfc81e",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.325,
+    "mass_complexity": 0.2,
+    "industrial_density": 0.421,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.286,
+    "cantilever_overhang": 0.334,
+    "rooftop_complexity": 0.533,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "cathedral_flank_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_flank": [
+      "f3_3_uv"
+    ],
+    "cathedral_haunch_shoe": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "cathedral_haunch": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "cathedral_rear_link_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "cathedral_rear_link": [
+      "f3_0_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 51,
+    "floor_rooftop": 11,
+    "f3_3_uv": 8,
+    "floor_metal_deck": 24,
+    "wall_maintenance": 8,
+    "wrap_tank_shell": 20,
+    "f3_0_uv": 4
+  },
+  "recipes": [
+    "Recipes/f3_0_uv.uv.json",
+    "Recipes/f3_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f3_0_uv": 925303,
+    "f3_3_uv": 925354,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR094.png",
+    "UV_Material_QA/Views/HR094_back.png",
+    "UV_Material_QA/Views/HR094_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

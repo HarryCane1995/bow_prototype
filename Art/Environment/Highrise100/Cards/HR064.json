@@ -1,0 +1,144 @@
+{
+  "id": "HR064",
+  "name": "Splayed Cage",
+  "category": "exoskeleton",
+  "subtype": 3,
+  "seed": 1431916,
+  "role": "midground",
+  "collection": "HR064_Splayed_Cage",
+  "bounds_m": [
+    64.88776397705078,
+    38.73118209838867,
+    301.5725
+  ],
+  "bounds_min": [
+    -32.44388198852539,
+    -19.365591049194336,
+    0.0
+  ],
+  "bounds_max": [
+    32.44388198852539,
+    19.365591049194336,
+    301.5725
+  ],
+  "parameters": {
+    "width": 62.64,
+    "depth": 40.04,
+    "height": 299.25,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Splayed Cage",
+    "exoskeleton",
+    "flared_body",
+    "four_structural_belts",
+    "narrow_feet",
+    "open_frame_crown",
+    "roof_exhaust_trio"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 23,
+    "triangles": 356,
+    "vertices": 296,
+    "polygons": 162
+  },
+  "geometry_sha256": "3fac0e1f161961c97d45a2dd5c70c79d4d728a74e9886b373c3c1fb4461f8216",
+  "geometry_only_sha256": "1d1fb528b290b0704aab528b90c6d53a9e64c65ffa87faa62b9a8fe0a1ab0f76",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.465,
+    "mass_complexity": 0.242,
+    "industrial_density": 0.957,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.286,
+    "cantilever_overhang": 0.096,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.65
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "flaring_body_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "flaring_body": [
+      "f3_2_uv"
+    ],
+    "ground_service": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "splayed_leg_shoe": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "splayed_leg": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "crown_leg": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "rear_roof_access": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 23,
+    "floor_rooftop": 1,
+    "f3_2_uv": 16,
+    "floor_metal_deck": 86,
+    "wall_reinforced": 8,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f3_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_reinforced.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f3_2_uv": 925337,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_reinforced": 4285,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR064.png",
+    "UV_Material_QA/Views/HR064_back.png",
+    "UV_Material_QA/Views/HR064_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

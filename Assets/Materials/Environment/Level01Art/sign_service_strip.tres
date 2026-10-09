@@ -1,0 +1,18 @@
+[gd_resource type="ORMMaterial3D" load_steps=4 format=3]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Levels/Level_01/ArtPass/sign_service_strip/albedo.png" id="1"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Levels/Level_01/ArtPass/sign_service_strip/emission.png" id="2"]
+[ext_resource type="Texture2D" path="res://Assets/Textures/Levels/Level_01/ArtPass/sign_service_strip/orm.png" id="3"]
+[resource]
+resource_name = "M_Level01_Art_sign_service_strip"
+transparency = 0
+cull_mode = 2
+albedo_texture = ExtResource("1")
+orm_texture = ExtResource("3")
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_energy_multiplier = 1.4
+emission_texture = ExtResource("2")
+texture_filter = 5
+
+texture_repeat = false

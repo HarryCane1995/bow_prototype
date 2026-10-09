@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+[ext_resource type="Shader" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/shards.gdshader" id="1"]
+[resource]
+shader = ExtResource("1")
+shader_parameter/color_a = Color(0.7450980392156863, 0.9372549019607843, 0.8509803921568627, 1)
+shader_parameter/color_b = Color(0.23137254901960785, 0.592156862745098, 0.5647058823529412, 1)
+shader_parameter/opacity = 0.9
+shader_parameter/emission_strength = 0.3
+shader_parameter/wobble = 0.025
+shader_parameter/shade_levels = 5.0
+shader_parameter/quantization = 0.35
+shader_parameter/dither_strength = 0.7
+shader_parameter/soft_alpha = 0.15
+shader_parameter/flat_unshaded = false
+shader_parameter/dither_mode = false

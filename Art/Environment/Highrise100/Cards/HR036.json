@@ -1,0 +1,108 @@
+{
+  "id": "HR036",
+  "name": "Tapered Lancet",
+  "category": "needle",
+  "subtype": 0,
+  "seed": 1210184,
+  "role": "background",
+  "collection": "HR036_Tapered_Lancet",
+  "bounds_m": [
+    25.760000000000005,
+    28.835599999999996,
+    360.8
+  ],
+  "bounds_min": [
+    -12.880000000000003,
+    -14.417799999999998,
+    0.0
+  ],
+  "bounds_max": [
+    12.880000000000003,
+    14.417799999999998,
+    360.8
+  ],
+  "parameters": {
+    "width": 21.6,
+    "depth": 23.54,
+    "height": 360.8,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "octagonal_lancet",
+    "sharp_tip"
+  ],
+  "metrics": {
+    "meshes": 5,
+    "primitives": 4,
+    "triangles": 80,
+    "vertices": 72,
+    "polygons": 36
+  },
+  "geometry_sha256": "eff7567eaa5c43301ff84920f945e089a291d17b77e3e112e2df3ed375ad2f02",
+  "geometry_only_sha256": "01c14bef16564dbb9bb04615bc641e32ce76e7c62bf93c569097f910ce7c9b3a",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 1,
+    "mass_complexity": 0.042,
+    "industrial_density": 0.5,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.253,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.9
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Lancet_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Lancet": [
+      "f0_1_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 8,
+    "floor_rooftop": 2,
+    "floor_metal_deck": 6,
+    "wall_corporate": 4,
+    "f0_1_uv": 16
+  },
+  "recipes": [
+    "Recipes/f0_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_1_uv": 925017,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR036.png",
+    "UV_Material_QA/Views/HR036_back.png",
+    "UV_Material_QA/Views/HR036_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

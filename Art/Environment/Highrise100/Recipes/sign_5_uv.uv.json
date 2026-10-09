@@ -1,0 +1,29 @@
+{
+  "key": "sign_5_uv",
+  "recipe": "Recipes/sign_5_uv.uv.json",
+  "mode": "CLAMP_SIGN_LETTERBOX",
+  "seed": 925855,
+  "preset": "INACTIVE_BILLBOARD",
+  "parameters": {
+    "aspect": 2.8,
+    "density": 0.55,
+    "emission_strength": 0.0,
+    "wear": 0.32,
+    "grime": 0.25,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "sha256": {
+    "albedo": "0ca13197e9a1016fc3dc43d8db3377cc9e278d397351a916d02953430772080e",
+    "normal": "dd963911806b0ee059e5dbdb27ae482041fc00e5ae54017fb91bddf10cb5446f",
+    "orm": "11763c1c3146c0f6a783e60b37c0b3eabd4b60022a7e602a3b0bbb6765c10f1e",
+    "height": "8c1b3d59b8d636172f41f51bd199fdf96ce20e7949c7f6b8f8e5108d7d332ea3",
+    "emission": "5fa06f01948f75e9cb1efdeb40172ba43a6d392a9f783d79ea4f939f7bccd813"
+  },
+  "source_key": "sign_5",
+  "uv_qa_version": 1,
+  "image_size": [
+    520,
+    191
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "HR070",
+  "name": "Tripod Lantern",
+  "category": "suspended",
+  "subtype": 4,
+  "seed": 1479430,
+  "role": "hero",
+  "collection": "HR070_Tripod_Lantern",
+  "bounds_m": [
+    64.54167388733674,
+    43.67544220551716,
+    329.0
+  ],
+  "bounds_min": [
+    -32.270836943668364,
+    -25.9,
+    0.0
+  ],
+  "bounds_max": [
+    32.27083694366837,
+    17.77544220551716,
+    329.0
+  ],
+  "parameters": {
+    "width": 53.9,
+    "depth": 37.0,
+    "height": 319.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Tripod Lantern",
+    "faceted_lantern",
+    "flared_shoulders",
+    "pointed_crown",
+    "roof_exhaust_trio",
+    "suspended",
+    "tripod_base"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 15,
+    "triangles": 276,
+    "vertices": 248,
+    "polygons": 122
+  },
+  "geometry_sha256": "f77d1673466857976b253fa8fdfc7deb5a36d56cb9eabdea4c41eb0d6e0d181d",
+  "geometry_only_sha256": "3073c9b1ac624d5f2c4953bf9ef56b47fab74a23426e39524e04edc643a3aa65",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.51,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.533,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.214,
+    "cantilever_overhang": 0.577,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "lantern_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "lantern": [
+      "f5_3_uv"
+    ],
+    "tripod_leg_shoe": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "tripod_leg": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "tripod_rib": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "central_lift": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 39,
+    "floor_rooftop": 7,
+    "f5_3_uv": 24,
+    "floor_metal_deck": 20,
+    "wall_tech_spine": 4,
+    "wall_maintenance": 4,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f5_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f5_3_uv": 925556,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR070.png",
+    "UV_Material_QA/Views/HR070_back.png",
+    "UV_Material_QA/Views/HR070_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

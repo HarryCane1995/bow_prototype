@@ -1,0 +1,40 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "VERTICAL_NEON",
+  "seed": 925793,
+  "palette": "NIGHT_MARKET",
+  "colors": {
+    "neon": "#ff7c91",
+    "accent": "#79d9ef",
+    "back": "#281e2e",
+    "ink": "#e0c6cd"
+  },
+  "parameters": {
+    "aspect": 0.4,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "outputs": {
+    "albedo": "Textures/sign_3/albedo.png",
+    "emission": "Textures/sign_3/emission.png",
+    "orm": "Textures/sign_3/orm.png",
+    "normal": "Textures/sign_3/normal.png",
+    "height": "Textures/sign_3/height.png"
+  },
+  "sha256": {
+    "albedo": "bc3cf242b04bf04e7073cdff8bcebbb3e084d84f9a5ef89095876bcb1a3ba008",
+    "emission": "a75acc30ea2ca9ef44f70a50f155d5c304fe27f74f9711dead4d8da2c1f7245f",
+    "orm": "363972fb9fb3aa29102aee47eb9969537188c07d6e690e116ac4df37ad9ba531",
+    "normal": "5380198f187489041896600d2bc95665fd6559dab5f5768bfeaf07f5b819e22c",
+    "height": "12ab30bba12ce98a197008779bcb0ec8bbe96f2d73213e24d82bf2e72506f6a3"
+  }
+}

@@ -1,0 +1,315 @@
+[gd_scene load_steps=44 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_00.obj" id="Mesh_Spark_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_00.obj" id="Mesh_SparkTail_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_01.obj" id="Mesh_Spark_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_02.obj" id="Mesh_Spark_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_03.obj" id="Mesh_Spark_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_04.obj" id="Mesh_Spark_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_04.obj" id="Mesh_SparkTail_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_05.obj" id="Mesh_Spark_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_06.obj" id="Mesh_Spark_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_07.obj" id="Mesh_Spark_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_08.obj" id="Mesh_Spark_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_08.obj" id="Mesh_SparkTail_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_09.obj" id="Mesh_Spark_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_10.obj" id="Mesh_Spark_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_11.obj" id="Mesh_Spark_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_12.obj" id="Mesh_Spark_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_12.obj" id="Mesh_SparkTail_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_13.obj" id="Mesh_Spark_13"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_14.obj" id="Mesh_Spark_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_15.obj" id="Mesh_Spark_15"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_16.obj" id="Mesh_Spark_16"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_16.obj" id="Mesh_SparkTail_16"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_17.obj" id="Mesh_Spark_17"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_18.obj" id="Mesh_Spark_18"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_19.obj" id="Mesh_Spark_19"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_20.obj" id="Mesh_Spark_20"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_20.obj" id="Mesh_SparkTail_20"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_21.obj" id="Mesh_Spark_21"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_22.obj" id="Mesh_Spark_22"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_23.obj" id="Mesh_Spark_23"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_24.obj" id="Mesh_Spark_24"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/SparkTail_24.obj" id="Mesh_SparkTail_24"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_25.obj" id="Mesh_Spark_25"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_26.obj" id="Mesh_Spark_26"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/electric_spark_burst/meshes/Spark_27.obj" id="Mesh_Spark_27"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/electric_spark_burst/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="SparkTail_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_04" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_04")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_08" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_08")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_12" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_12")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_16" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_16")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_20" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_20")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="SparkTail_24" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_SparkTail_24")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="Spark_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_09" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_09")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_10" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_10")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_11" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_11")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_12" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_12")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_13" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_13")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_14" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_14")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_15" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_15")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_16" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_16")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_17" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_17")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_18" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_18")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_19" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_19")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_20" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_20")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_21" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_21")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_22" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_22")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_23" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_23")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_24" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_24")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_25" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_25")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_26" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_26")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Spark_27" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Spark_27")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

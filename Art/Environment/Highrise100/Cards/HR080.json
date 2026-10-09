@@ -1,0 +1,145 @@
+{
+  "id": "HR080",
+  "name": "Armored Archive",
+  "category": "datacenter",
+  "subtype": 4,
+  "seed": 1558620,
+  "role": "background",
+  "collection": "HR080_Armored_Archive",
+  "bounds_m": [
+    61.57520000000001,
+    55.1,
+    213.45
+  ],
+  "bounds_min": [
+    -30.787600000000005,
+    -27.55,
+    0
+  ],
+  "bounds_max": [
+    30.787600000000005,
+    27.55,
+    213.45
+  ],
+  "parameters": {
+    "width": 50.96,
+    "depth": 46.0,
+    "height": 209.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "Armored Archive",
+    "armored_octagon",
+    "datacenter",
+    "inward_sloping_shell",
+    "observation_spire",
+    "radial_armor_ribs",
+    "roof_paired_hvac"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 25,
+    "triangles": 396,
+    "vertices": 344,
+    "polygons": 178
+  },
+  "geometry_sha256": "ad44aa8b98739dc1cf2abafd35ff75934885eafdf8006ed62cd47869b340f82f",
+  "geometry_only_sha256": "c7bc3426fb49f3317b07efbe402efd54837ae0bc65847ce3b3090fbdfcb863c7",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.347,
+    "mass_complexity": 0.263,
+    "industrial_density": 0.88,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.286,
+    "cantilever_overhang": 0.268,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.8
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "armored_archive_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "armored_archive": [
+      "accent_datacenter"
+    ],
+    "observation_spire_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "observation_spire": [
+      "f2_0_uv"
+    ],
+    "archive_armor_rib_shoe": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "archive_armor_rib": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "low_service_gallery_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "low_service_gallery": [
+      "f2_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 25,
+    "floor_metal_deck": 110,
+    "accent_datacenter": 16,
+    "floor_rooftop": 3,
+    "f2_0_uv": 12,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/accent_datacenter.facade.json",
+    "Recipes/f2_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "accent_datacenter": 5876,
+    "f2_0_uv": 925202,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR080.png",
+    "UV_Material_QA/Views/HR080_back.png",
+    "UV_Material_QA/Views/HR080_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

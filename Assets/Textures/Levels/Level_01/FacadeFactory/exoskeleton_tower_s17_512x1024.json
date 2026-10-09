@@ -1,0 +1,228 @@
+{
+  "version": "0.1.0",
+  "preset": "EXOSKELETON_TOWER",
+  "seed": 17,
+  "resolution": [
+    512,
+    1024
+  ],
+  "config": {
+    "name": "EXOSKELETON_TOWER",
+    "grammar": "exoskeleton",
+    "palette": "cold",
+    "window_density": 0.85,
+    "window_aspect": 0.9,
+    "floor_height": 26,
+    "structural_width": 20,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "emission_density": 0.32,
+    "emission_strength": 1.35,
+    "grime_amount": 0.19,
+    "panel_density": 0.24,
+    "signage_density": 0.2,
+    "macro_contrast": 0.23,
+    "retro_strength": 0.72,
+    "style": {
+      "posterization": 40,
+      "dithering": 0.22,
+      "color_quantization": 112,
+      "micro_contrast": 0.12,
+      "compression_artifacts": 0.08,
+      "pixel_noise": 0.65,
+      "edge_exaggeration": 0.2,
+      "baked_ao_strength": 0.32
+    }
+  },
+  "floor_groups": [
+    {
+      "index": 0,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.535,
+      "zones": [
+        0.583,
+        0.473,
+        0.406
+      ]
+    },
+    {
+      "index": 1,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.544,
+      "zones": [
+        0.697,
+        0.518,
+        0.644
+      ]
+    },
+    {
+      "index": 2,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.175,
+      "zones": [
+        0.188,
+        0.251,
+        0.166
+      ]
+    },
+    {
+      "index": 3,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.498,
+      "zones": [
+        0.603,
+        0.569,
+        0.527
+      ]
+    },
+    {
+      "index": 4,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.173,
+      "zones": [
+        0.013,
+        0.123,
+        0.07
+      ]
+    },
+    {
+      "index": 5,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.313,
+      "zones": [
+        0.26,
+        0.332,
+        0.394
+      ]
+    },
+    {
+      "index": 6,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.201,
+      "zones": [
+        0.237,
+        0.273,
+        0.359
+      ]
+    },
+    {
+      "index": 7,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.289,
+      "zones": [
+        0.34,
+        0.354,
+        0.362
+      ]
+    },
+    {
+      "index": 8,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.223,
+      "zones": [
+        0.185,
+        0.21,
+        0.189
+      ]
+    },
+    {
+      "index": 9,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.168,
+      "zones": [
+        0.063,
+        0.099,
+        0.325
+      ]
+    },
+    {
+      "index": 10,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.509,
+      "zones": [
+        0.641,
+        0.377,
+        0.404
+      ]
+    },
+    {
+      "index": 11,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.311,
+      "zones": [
+        0.441,
+        0.432,
+        0.27
+      ]
+    },
+    {
+      "index": 12,
+      "dark": false,
+      "service": true,
+      "occupancy": 0.311,
+      "zones": [
+        0.28,
+        0.439,
+        0.16
+      ]
+    },
+    {
+      "index": 13,
+      "dark": false,
+      "service": false,
+      "occupancy": 0.107,
+      "zones": [
+        0.127,
+        0.225,
+        0.154
+      ]
+    },
+    {
+      "index": 14,
+      "dark": true,
+      "service": true,
+      "occupancy": 0.436,
+      "zones": [
+        0.511,
+        0.331,
+        0.469
+      ]
+    }
+  ],
+  "window_states": {
+    "OFF": 105,
+    "DIM": 72,
+    "ON": 77,
+    "BRIGHT": 12,
+    "BLOCKED": 10,
+    "SERVICE": 7,
+    "BROKEN/DARK": 14
+  },
+  "signage_count": 5,
+  "tiling": "unique sheet / clamp",
+  "normal": "OpenGL +X +Y +Z",
+  "orm": {
+    "R": "ambient occlusion",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "sha256": {
+    "albedo": "73e063de01a3b5db67f948055619d551f70609f6dec5ebad64178401141dd4ca",
+    "emission": "c6d3182f1f04e1e3909bd56e70d8fd0fe0a8ea214fbe4be7f00d40fb8b8f2277",
+    "height": "34f2c89d4f1e32edc4e72288a1a83cec9649d0f5bc0052e3994274af699b38b0",
+    "orm": "57a13c44e48a0183b993b3bbbe860300052ab031f53265e8c8626637ec6c34f1",
+    "normal": "e4d190050d02779bfa3e79e626f18e908fe1bbcbb1648ad6a52cd97d6b2bdbc1"
+  }
+}

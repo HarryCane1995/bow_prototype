@@ -1,0 +1,29 @@
+{
+  "key": "sign_4_uv",
+  "recipe": "Recipes/sign_4_uv.uv.json",
+  "mode": "CLAMP_SIGN_LETTERBOX",
+  "seed": 925824,
+  "preset": "HORIZONTAL_BILLBOARD",
+  "parameters": {
+    "aspect": 3.1,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.12,
+    "grime": 0.12,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "sha256": {
+    "albedo": "01d726900ca4f731831502c0fb004eb3c9beb07b97fd6f20a1facd123bbbca45",
+    "normal": "5d17a7be6c5566e0e07f27d208d3db15509e952412f1ddea75a48ee9fd3a0a90",
+    "orm": "7bebe0b0d27a0d890bda4d02bc365ca8241c9f9baf29abb83978469d9077103f",
+    "height": "97b22d9a5d4bd9a1d610845fa04d89a3fb7df701167a510fa17a3057ad211a83",
+    "emission": "b11b531279f7768d79656c65a11bf80ab449485c0bee14257b06ffd6193d9566"
+  },
+  "source_key": "sign_4",
+  "uv_qa_version": 1,
+  "image_size": [
+    520,
+    173
+  ]
+}

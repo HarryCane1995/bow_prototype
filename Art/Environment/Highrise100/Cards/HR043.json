@@ -1,0 +1,149 @@
+{
+  "id": "HR043",
+  "name": "Hinge Towers",
+  "category": "twins",
+  "subtype": 2,
+  "seed": 1265617,
+  "role": "midground",
+  "collection": "HR043_Hinge_Towers",
+  "bounds_m": [
+    72.848,
+    45.114799999999995,
+    315.235
+  ],
+  "bounds_min": [
+    -36.424,
+    -22.557399999999998,
+    0.0
+  ],
+  "bounds_max": [
+    36.424,
+    22.557399999999998,
+    315.235
+  ],
+  "parameters": {
+    "width": 52.48,
+    "depth": 37.82,
+    "height": 321.3,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "hinged_core",
+    "roof_exhaust_trio",
+    "separate_shafts"
+  ],
+  "metrics": {
+    "meshes": 13,
+    "primitives": 18,
+    "triangles": 312,
+    "vertices": 304,
+    "polygons": 132
+  },
+  "geometry_sha256": "60f4efa6c1c854f2f6c079c492766b4e13c89d9fa1ce860fb98d66c1ab92e4b4",
+  "geometry_only_sha256": "4e8f0b1c000b8e05936b5b0d070870b1d4ec2f80fc2421d3c83b75a54094bb30",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.433,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.778,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.448,
+    "rooftop_complexity": 0.533,
+    "old_new": 0.75
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Tower_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Tower": [
+      "f4_1_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ],
+    "Skybridge": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "BridgeHabitat": [
+      "glass",
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "BridgeBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HingeCore": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 24,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 28,
+    "wall_corporate": 8,
+    "f0_0_uv": 4,
+    "wall_maintenance": 8,
+    "wrap_heavy_pipe": 48,
+    "f4_1_uv": 4,
+    "glass": 4
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/f4_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "f4_1_uv": 925421,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_heavy_pipe": 5210
+  },
+  "previews": [
+    "Previews/HR043.png",
+    "UV_Material_QA/Views/HR043_back.png",
+    "UV_Material_QA/Views/HR043_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,234 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 4,
+  "generator_version": "0.4.0",
+  "generator_fingerprint": "38c970db1f0695bec9006f5fd5c35d164466e620e90486f34d5d222630722a5e",
+  "created_at": "2026-09-18T17:20:55+00:00",
+  "name": "WALL_TECH_SPINE",
+  "surface_mode": "TILEABLE_SURFACE",
+  "tile_mode": "FULL_2D_TILE",
+  "preset": "WALL_TECH_SPINE",
+  "seed": 4100,
+  "palette": "cold",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 1,
+    "weathering": 0.18,
+    "overrides": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "detail_contrast": 0.25,
+      "baked_lighting_strength": 0.12,
+      "module_irregularity": 0.25
+    },
+    "controls": {
+      "panel_outline_strength": 0.1,
+      "seam_contrast": 0.28,
+      "material_variation": 0.4458,
+      "macro_grime_strength": 0.2236,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.6856,
+      "baked_lighting_strength": 0.12,
+      "detail_contrast": 0.25,
+      "module_irregularity": 0.25
+    }
+  },
+  "parameters": {
+    "tile_scale": 1,
+    "panel_scale": 1,
+    "grout_width": 2,
+    "surface_wear": 0.5,
+    "macro_variation": 0.55,
+    "seam_visibility": 0.3,
+    "floor_markings_density": 0.08,
+    "wall_module_density": 0.18
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    512,
+    512
+  ],
+  "breakup": {
+    "mode": "LAYERED",
+    "export_mode": "BAKED",
+    "macro_variation": 0.18,
+    "grime": 0.14,
+    "micro_grain": 0.025,
+    "retro_artifacts": 0,
+    "version": "1.0"
+  },
+  "palette_mix": {
+    "enabled": true,
+    "preset": "NEUTRAL_COLD",
+    "version": "1.0",
+    "colors": {
+      "BASE": "#657780",
+      "SECONDARY": "#889496",
+      "DARK": "#19262e",
+      "ACCENT": "#839e9f",
+      "GLASS": "#283e4c",
+      "EMISSION_PRIMARY": "#93c8d2",
+      "EMISSION_SECONDARY": "#b9b38a",
+      "GRIME_TINT": "#4b4840"
+    },
+    "locks": {
+      "BASE": false,
+      "SECONDARY": false,
+      "DARK": false,
+      "ACCENT": false,
+      "GLASS": false,
+      "EMISSION_PRIMARY": false,
+      "EMISSION_SECONDARY": false,
+      "GRIME_TINT": false
+    },
+    "material_responses": {
+      "PAINTED_METAL": {
+        "roughness": 0.76,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      },
+      "RAW_METAL": {
+        "roughness": 0.49,
+        "metallic": 0.82,
+        "ao_response": 1.0
+      },
+      "GLASS": {
+        "roughness": 0.23,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "CONCRETE": {
+        "roughness": 0.94,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "VENT": {
+        "roughness": 0.82,
+        "metallic": 0.38,
+        "ao_response": 1.0
+      },
+      "RECESSED_VOID": {
+        "roughness": 0.98,
+        "metallic": 0.0,
+        "ao_response": 1.0
+      },
+      "ACCENT_PAINT": {
+        "roughness": 0.74,
+        "metallic": 0.035,
+        "ao_response": 1.0
+      }
+    },
+    "albedo_influence": 0.82,
+    "emission_influence": 0.85,
+    "weather_tint_influence": 0.15,
+    "material_variation_influence": 0.4,
+    "accent_usage": 0.75,
+    "colored_balance": 0.8,
+    "structural_separation": 0.65,
+    "orm_influence": 0.65
+  },
+  "overrides": {
+    "grout_width": 2,
+    "seam_visibility": 0.3,
+    "floor_markings_density": 0.08,
+    "wall_module_density": 0.18
+  },
+  "outputs": {
+    "albedo": "Textures/wall_tech_spine/albedo.png",
+    "normal": "Textures/wall_tech_spine/normal.png",
+    "orm": "Textures/wall_tech_spine/orm.png",
+    "height": "Textures/wall_tech_spine/height.png",
+    "emission": "Textures/wall_tech_spine/emission.png"
+  },
+  "sha256": {
+    "albedo": "8042ac165468133048bc9156d666cea61b7853fc049a0178dc83d97cdf788108",
+    "normal": "06c4b23bba77a3ab07a844b3fc3ac9669dcdfc517c9dcea2422fca2ec71d1cbb",
+    "orm": "1f61944843a678f1fd49bbede77705d396917cf5a5edd5b97065fa4be6fec48b",
+    "height": "ea0fd5cb663963b313cbcd2e1ab9e172665481a1ca63a412fd5519c3323ac1db",
+    "emission": "e3636c432dde84098a866001b274639f4b5615afebbef3b54aa22d08df1a448c"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data",
+    "emission_mask": "linear data"
+  },
+  "palette_role_weights": {
+    "PAINTED_METAL": {
+      "BASE": 0.76,
+      "SECONDARY": 0.2,
+      "ACCENT": 0.04
+    },
+    "RAW_METAL": {
+      "DARK": 0.15,
+      "BASE": 0.85
+    },
+    "GLASS": {
+      "GLASS": 0.92,
+      "BASE": 0.08
+    },
+    "CONCRETE": {
+      "BASE": 0.65,
+      "SECONDARY": 0.35
+    },
+    "VENT": {
+      "DARK": 1.0
+    },
+    "RECESSED_VOID": {
+      "DARK": 1.0
+    },
+    "SIGNAGE": {
+      "ACCENT": 1.0
+    },
+    "EMISSIVE": {
+      "EMISSION_PRIMARY": 0.75,
+      "EMISSION_SECONDARY": 0.25
+    }
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "library": {
+    "id": "wall_tech_spine",
+    "category": "wall",
+    "description": "Offset plates with a central service spine",
+    "palette": "cold",
+    "references": [
+      "W02",
+      "T05"
+    ],
+    "preset": "WALL_TECH_SPINE"
+  },
+  "material": "res://Assets/ProceduralArt/Materials/wall_tech_spine/material.tres",
+  "source_recipe": "Tools/Art/Library/materials/wall_tech_spine.facade.json"
+}

@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://b5kiuo06378am" path="res://Scripts/UI/CrosshairUI.cs" id="9_crosshair"]
 [ext_resource type="Script" uid="uid://b08d4h32ogwgp" path="res://Scripts/Debug/SpeedometerHud.cs" id="10_speedometer_hud"]
 [ext_resource type="PackedScene" path="res://Scenes/Rendering/StylizedContactDarkening.tscn" id="11_contact_darkening"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/Level_01/CombatDraft.tscn" id="12_combat_draft"]
+[ext_resource type="PackedScene" path="res://Scenes/Levels/Level_01/ArtAtmosphere.tscn" id="13_art_atmosphere"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
 panorama = ExtResource("6_skybox")
@@ -22,9 +24,9 @@ sky_material = SubResource("PanoramaSkyMaterial_level_01")
 background_mode = 2
 background_energy_multiplier = 0.07
 sky = SubResource("Sky_level_01")
-ambient_light_source = 3
+ambient_light_source = 2
 ambient_light_color = Color(0.74, 0.78, 0.82, 1)
-ambient_light_energy = 1.75
+ambient_light_energy = 0.85
 reflected_light_source = 2
 ssao_enabled = true
 ssao_radius = 1.4
@@ -39,6 +41,12 @@ size = Vector3(30, 0.5, 30)
 script = ExtResource("5_startup_window_mode")
 
 [node name="ImportedLevel" parent="." unique_id=1325503189 instance=ExtResource("2_imported_level")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53069067, -0.7474613, -0.05218792)
+
+[node name="CombatDraft" parent="." unique_id=41058626 instance=ExtResource("12_combat_draft")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53069067, -0.7474613, -0.05218792)
+
+[node name="ArtAtmosphere" parent="." unique_id=1608387447 instance=ExtResource("13_art_atmosphere")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53069067, -0.7474613, -0.05218792)
 
 [node name="PlayerSpawn" type="Marker3D" parent="." unique_id=248952348]
@@ -65,8 +73,10 @@ transform = Transform3D(0.86602527, 0.32139382, -0.38302252, 0, 0.76604444, 0.64
 light_energy = 0.85
 light_indirect_energy = 0.6
 light_volumetric_fog_energy = 0.0
-light_angular_distance = 8.0
 shadow_enabled = true
+directional_shadow_split_2 = 0.25
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 80.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="World" unique_id=619635705]
 environment = SubResource("Environment_level_01")
@@ -84,7 +94,7 @@ disabled = true
 
 [node name="RuntimeTuningPanel" parent="Debug" unique_id=1950765612 instance=ExtResource("8_runtime_tuning_panel")]
 
-[node name="StylizedContactDarkening" parent="." instance=ExtResource("11_contact_darkening")]
+[node name="StylizedContactDarkening" parent="." unique_id=110442627 instance=ExtResource("11_contact_darkening")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1713791246]
 layer = 2

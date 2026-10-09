@@ -1,0 +1,363 @@
+[gd_scene load_steps=50 format=3]
+
+[ext_resource type="Script" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_00.obj" id="Mesh_Petal_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_01.obj" id="Mesh_Petal_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_02.obj" id="Mesh_Petal_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_03.obj" id="Mesh_Petal_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_04.obj" id="Mesh_Petal_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_05.obj" id="Mesh_Petal_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_06.obj" id="Mesh_Petal_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_07.obj" id="Mesh_Petal_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Petal_08.obj" id="Mesh_Petal_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/ShockRing.obj" id="Mesh_ShockRing"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_00.obj" id="Mesh_Shard_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_01.obj" id="Mesh_Shard_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_02.obj" id="Mesh_Shard_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_03.obj" id="Mesh_Shard_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_04.obj" id="Mesh_Shard_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_05.obj" id="Mesh_Shard_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_06.obj" id="Mesh_Shard_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_07.obj" id="Mesh_Shard_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_08.obj" id="Mesh_Shard_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_09.obj" id="Mesh_Shard_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_10.obj" id="Mesh_Shard_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_11.obj" id="Mesh_Shard_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_12.obj" id="Mesh_Shard_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_13.obj" id="Mesh_Shard_13"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_14.obj" id="Mesh_Shard_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Shard_15.obj" id="Mesh_Shard_15"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_00.obj" id="Mesh_Smoke_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_01.obj" id="Mesh_Smoke_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_02.obj" id="Mesh_Smoke_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_03.obj" id="Mesh_Smoke_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_04.obj" id="Mesh_Smoke_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_05.obj" id="Mesh_Smoke_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_06.obj" id="Mesh_Smoke_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_07.obj" id="Mesh_Smoke_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_00.obj" id="Mesh_Dust_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_01.obj" id="Mesh_Dust_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_02.obj" id="Mesh_Dust_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_03.obj" id="Mesh_Dust_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_04.obj" id="Mesh_Dust_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_05.obj" id="Mesh_Dust_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_06.obj" id="Mesh_Dust_06"]
+
+[node name="MeshExplosion3D" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="Petal_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_01" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_01")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_02" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_02")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_03" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_03")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_04" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_04")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_05" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_05")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_06" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_06")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_07" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_07")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Petal_08" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Petal_08")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="ShockRing" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_ShockRing")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="Shard_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_09" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_09")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_10" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_10")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_11" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_11")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_12" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_12")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_13" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_13")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_14" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_14")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Shard_15" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Shard_15")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="Smoke_00" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_00")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_01" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_01")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_02" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_02")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_03" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_03")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_04" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_04")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_05" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_05")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_06" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_06")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Smoke_07" type="MeshInstance3D" parent="Layers/smoke"]
+mesh = ExtResource("Mesh_Smoke_07")
+material_override = ExtResource("Mat_smoke")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="dust" type="Node3D" parent="Layers"]
+
+[node name="Dust_00" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_00")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_01" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_01")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_02" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_02")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_03" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_03")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_04" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_04")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_05" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_05")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Dust_06" type="MeshInstance3D" parent="Layers/dust"]
+mesh = ExtResource("Mesh_Dust_06")
+material_override = ExtResource("Mat_dust")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5

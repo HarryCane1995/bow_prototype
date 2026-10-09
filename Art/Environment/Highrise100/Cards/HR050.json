@@ -1,0 +1,121 @@
+{
+  "id": "HR050",
+  "name": "Flue Cluster",
+  "category": "reactor",
+  "subtype": 4,
+  "seed": 1321050,
+  "role": "midground",
+  "collection": "HR050_Flue_Cluster",
+  "bounds_m": [
+    62.48355949476577,
+    55.58,
+    214.76000000000002
+  ],
+  "bounds_min": [
+    -30.682559494765776,
+    -27.79,
+    0.0
+  ],
+  "bounds_max": [
+    31.801,
+    27.79,
+    214.76000000000002
+  ],
+  "parameters": {
+    "width": 53.9,
+    "depth": 47.0,
+    "height": 242.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "hollow_industrial_court",
+    "segmented_shell",
+    "short_flues"
+  ],
+  "metrics": {
+    "meshes": 8,
+    "primitives": 18,
+    "triangles": 328,
+    "vertices": 320,
+    "polygons": 136
+  },
+  "geometry_sha256": "77242d4a2d6080c4e99ebbddc7b80899bfaa4bd54558ca2ce0ec501cec409d8d",
+  "geometry_only_sha256": "71b1e80f43f1561b4d1c6cd4482f04fb646c7960b2d9b29b88dacdd70d747f38",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.344,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.889,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.219,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HollowShell": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "ShortFlue_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "ShortFlue": [
+      "floor_metal_deck"
+    ],
+    "AttachedControl_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "AttachedControl": [
+      "f2_2_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 22,
+    "floor_rooftop": 2,
+    "floor_metal_deck": 76,
+    "wall_reactor_housing": 32,
+    "f2_2_uv": 4
+  },
+  "recipes": [
+    "Recipes/f2_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "f2_2_uv": 925236,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR050.png",
+    "UV_Material_QA/Views/HR050_back.png",
+    "UV_Material_QA/Views/HR050_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

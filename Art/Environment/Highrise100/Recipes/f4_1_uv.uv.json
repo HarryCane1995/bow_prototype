@@ -1,0 +1,43 @@
+{
+  "key": "f4_1_uv",
+  "recipe": "Recipes/f4_1_uv.uv.json",
+  "mode": "PERIODIC_FACADE_INTERIOR",
+  "seed": 925421,
+  "preset": "OFFICE_GRID",
+  "parameters": {
+    "window_density": 0.96,
+    "emission_density": 0.3,
+    "structural_width": 5,
+    "grime_amount": 0.26,
+    "retro_strength": 0.35,
+    "window_aspect": 0.85,
+    "floor_height": 28,
+    "service_floor_frequency": 0.14,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.13,
+    "signage_density": 0.1,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.35
+  },
+  "sha256": {
+    "albedo": "23cbae657ced756eaac233bc31447e2b9fa63a37fd691afe7c80a1ee8319f31e",
+    "normal": "01ca403b8ec2a831f73b90a5b5ab45ca60f1e38b76badf8c6868633c0e107712",
+    "orm": "aebb84ba4bdf9392fc7d48f3d7fa746b2a17fce4c30a35f622411620258e2eaa",
+    "height": "38f1c5c1ae154237ce2e24b996610ac423ec3c1b541607ebf86ab1d7753bca37",
+    "emission": "e00fa02d48e0db9dddb0915dc6685f896f757b73eef365b0b2be504c63303488"
+  },
+  "source_key": "f4_1",
+  "uv_qa_version": 1,
+  "crop": [
+    0,
+    36,
+    512,
+    992
+  ],
+  "tile_width_m": 42,
+  "nominal_floor_rows": 34.142857142857146,
+  "image_size": [
+    512,
+    956
+  ]
+}

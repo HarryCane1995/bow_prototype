@@ -1,0 +1,132 @@
+{
+  "id": "HR006",
+  "name": "Terraced Cliff",
+  "category": "megablock",
+  "subtype": 0,
+  "seed": 972614,
+  "role": "midground",
+  "collection": "HR006_Terraced_Cliff",
+  "bounds_m": [
+    79.22000000000001,
+    61.770199999999996,
+    183.64999999999998
+  ],
+  "bounds_min": [
+    -39.61000000000001,
+    -30.885099999999998,
+    0.0
+  ],
+  "bounds_max": [
+    39.61000000000001,
+    30.885099999999998,
+    183.64999999999998
+  ],
+  "parameters": {
+    "width": 70.2,
+    "depth": 52.43,
+    "height": 167.2,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "five_terraces",
+    "roof_paired_hvac",
+    "wide_footprint"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 18,
+    "triangles": 280,
+    "vertices": 264,
+    "polygons": 124
+  },
+  "geometry_sha256": "84d198fe0fc5a035665ff2e0dd249ddd886f138fb71b8dbd35ca8f3adb410c08",
+  "geometry_only_sha256": "12fd78790baec2b8359dfe78776e73bb5563573393ab37b23ed0111926fa6f44",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.232,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.389,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.188,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.38
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "LoadingEntry": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Terraces_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Terraces": [
+      "f1_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 42,
+    "floor_rooftop": 11,
+    "floor_metal_deck": 35,
+    "wall_reinforced": 4,
+    "f1_0_uv": 20,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f1_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_reinforced.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f1_0_uv": 925101,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_reinforced": 4285,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR006.png",
+    "UV_Material_QA/Views/HR006_back.png",
+    "UV_Material_QA/Views/HR006_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

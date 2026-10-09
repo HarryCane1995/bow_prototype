@@ -1,0 +1,203 @@
+[gd_scene load_steps=30 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/Band_00.obj" id="Mesh_Band_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/Band_01.obj" id="Mesh_Band_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/Band_02.obj" id="Mesh_Band_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_00.obj" id="Mesh_PressureTooth_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_01.obj" id="Mesh_PressureTooth_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_02.obj" id="Mesh_PressureTooth_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_03.obj" id="Mesh_PressureTooth_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_04.obj" id="Mesh_PressureTooth_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_05.obj" id="Mesh_PressureTooth_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_06.obj" id="Mesh_PressureTooth_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_07.obj" id="Mesh_PressureTooth_07"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_08.obj" id="Mesh_PressureTooth_08"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_09.obj" id="Mesh_PressureTooth_09"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_10.obj" id="Mesh_PressureTooth_10"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_11.obj" id="Mesh_PressureTooth_11"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_12.obj" id="Mesh_PressureTooth_12"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_13.obj" id="Mesh_PressureTooth_13"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_14.obj" id="Mesh_PressureTooth_14"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_15.obj" id="Mesh_PressureTooth_15"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_16.obj" id="Mesh_PressureTooth_16"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/pressure_shock_rings/meshes/PressureTooth_17.obj" id="Mesh_PressureTooth_17"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/pressure_shock_rings/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="Band_00" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_Band_00")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Band_01" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_Band_01")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Band_02" type="MeshInstance3D" parent="Layers/ring"]
+mesh = ExtResource("Mesh_Band_02")
+material_override = ExtResource("Mat_ring")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="PressureTooth_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_07" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_07")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_08" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_08")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_09" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_09")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_10" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_10")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_11" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_11")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_12" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_12")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_13" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_13")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_14" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_14")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_15" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_15")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_16" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_16")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="PressureTooth_17" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_PressureTooth_17")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

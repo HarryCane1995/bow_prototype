@@ -1,0 +1,111 @@
+{
+  "id": "HR031",
+  "name": "Terrace Mountain",
+  "category": "arcology",
+  "subtype": 0,
+  "seed": 1170589,
+  "role": "midground",
+  "collection": "HR031_Terrace_Mountain",
+  "bounds_m": [
+    111.35000000000001,
+    82.5068,
+    246.2
+  ],
+  "bounds_min": [
+    -55.675000000000004,
+    -41.2534,
+    0.0
+  ],
+  "bounds_max": [
+    55.675000000000004,
+    41.2534,
+    246.2
+  ],
+  "parameters": {
+    "width": 81.0,
+    "depth": 70.62,
+    "height": 233.2,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "district_belts",
+    "seven_terrace_pyramid"
+  ],
+  "metrics": {
+    "meshes": 7,
+    "primitives": 17,
+    "triangles": 204,
+    "vertices": 192,
+    "polygons": 102
+  },
+  "geometry_sha256": "830aad18d6383a57eedb4ed551e8bb7c524addca0de8c3d01dcca29af0f6e00c",
+  "geometry_only_sha256": "bc8f0dfb63f9b66d1f079e280d57d1954fccf95804220180ed91610d8500f8b1",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.221,
+    "mass_complexity": 0.179,
+    "industrial_density": 0.118,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.435,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.65
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "LoadingEntry": [
+      "wall_reinforced",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "District_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "District": [
+      "f0_2_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 49,
+    "floor_rooftop": 15,
+    "floor_metal_deck": 6,
+    "wall_reinforced": 4,
+    "f1_1_uv": 16,
+    "f0_2_uv": 12
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/f1_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reinforced.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "f1_1_uv": 925118,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reinforced": 4285
+  },
+  "previews": [
+    "Previews/HR031.png",
+    "UV_Material_QA/Views/HR031_back.png",
+    "UV_Material_QA/Views/HR031_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

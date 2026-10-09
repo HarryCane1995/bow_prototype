@@ -1,0 +1,281 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 3,
+  "generator_version": "0.3.0",
+  "generator_fingerprint": "56cbda157ee9299d7705eced7dada5f94595b64ba3f3028c7e8dd49aa7734242",
+  "created_at": "2026-09-18T01:56:58+00:00",
+  "name": "tech_wall_627708735",
+  "surface_mode": "TILEABLE_SURFACE",
+  "tile_mode": "FULL_2D_TILE",
+  "preset": "TECH_WALL",
+  "seed": 627708735,
+  "palette": "cold",
+  "art": {
+    "profile": "BOW_BASE",
+    "version": "1.0",
+    "material_mix": 0.93,
+    "weathering": 0.87,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.1618,
+      "seam_contrast": 0.5094,
+      "material_variation": 0.638,
+      "macro_grime_strength": 0.5754,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.6514,
+      "baked_lighting_strength": 0.2269,
+      "detail_contrast": 0.3736,
+      "module_irregularity": 0.7361
+    }
+  },
+  "parameters": {
+    "tile_scale": 1.5,
+    "panel_scale": 0.75,
+    "grout_width": 3.5,
+    "surface_wear": 0.5,
+    "macro_variation": 0.55,
+    "seam_visibility": 0.91,
+    "floor_markings_density": 0.32,
+    "wall_module_density": 0.01
+  },
+  "style": {
+    "posterization": 109,
+    "dithering": 0.4,
+    "color_quantization": 141,
+    "micro_contrast": 0.4,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    512,
+    512
+  ],
+  "breakup": {
+    "mode": "LAYERED",
+    "export_mode": "SEPARATE",
+    "macro_variation": 0.92,
+    "grime": 0.33,
+    "micro_grain": 0.08,
+    "retro_artifacts": 0.49,
+    "version": "1.0"
+  },
+  "overrides": {
+    "tile_scale": 1.5,
+    "panel_scale": 0.75,
+    "grout_width": 3.5,
+    "seam_visibility": 0.91,
+    "floor_markings_density": 0.32,
+    "wall_module_density": 0.01
+  },
+  "outputs": {
+    "albedo": "tech_wall_627708735_albedo.png",
+    "emission": "tech_wall_627708735_emission.png",
+    "normal": "tech_wall_627708735_normal.png",
+    "orm": "tech_wall_627708735_orm.png",
+    "height": "tech_wall_627708735_height.png",
+    "detail_albedo": "tech_wall_627708735_detail_albedo.png",
+    "detail_normal": "tech_wall_627708735_detail_normal.png",
+    "weather_mask": "tech_wall_627708735_weather_mask.png",
+    "preview": "tech_wall_627708735_preview.png",
+    "tiled_preview": "tech_wall_627708735_tiled_preview.png",
+    "seam_debug": "tech_wall_627708735_seam_debug.png"
+  },
+  "sha256": {
+    "albedo": "515aae28043b483c727927e67dc562ee6582cd9f7e2ada75c409419dea2d13be",
+    "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b",
+    "normal": "35b0dfd02ca736855139b184d1ee002f83333b76359952528fb8777fb93440df",
+    "orm": "1f76e00194becd569c43c630cc3897e95f3f2477aaa176039151cc6864f2e949",
+    "height": "da6dd433afd24344aca98bcc81a36a51038a3fbd01cedf96e46c0903ba755861",
+    "detail_albedo": "b3206968a79ae3d99b6b923ed02b4da6b513403a46a0696c34a3c228e1842215",
+    "detail_normal": "2e1980cbf9bf3b0de19698cfffdd110472a0be0a5688bb5c735e6586f43054b5",
+    "weather_mask": "a296518a0c0488c377e9d35eee120c4896cf7bc77cadd85ce24fe2272321fe47"
+  },
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data",
+    "detail_albedo": "linear multiplier / neutral 128",
+    "detail_normal": "linear data",
+    "weather_mask": "linear data"
+  },
+  "detail_contract": {
+    "source_strength": "Raw reusable layers; recipe weights are applied in preview, not encoded in detail assets",
+    "albedo": "micro multiplier = 1 + (RGB - 128) / 128 * micro_grain",
+    "weather_mask": {
+      "R": "macro tone/dirt (0.5 neutral)",
+      "G": "directional grime",
+      "B": "micro variation"
+    },
+    "base_normal": "Structural height only in both export modes",
+    "retro": "Optional final treatment; baked only with BAKED export",
+    "material": "Generated ORMMaterial3D uses base maps; separate detail is opt-in"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL",
+  "material": "Assets/Materials/Environment/FacadeFactory/Generated/tech_wall_627708735.tres",
+  "canonical_metadata": {
+    "version": "0.3.0",
+    "surface_mode": "TILEABLE_SURFACE",
+    "preset": "TECH_WALL",
+    "seed": 627708735,
+    "resolution": [
+      512,
+      512
+    ],
+    "parameters": {
+      "tile_scale": 1.5,
+      "panel_scale": 0.75,
+      "grout_width": 3.5,
+      "surface_wear": 0.5,
+      "macro_variation": 0.55,
+      "seam_visibility": 0.91,
+      "floor_markings_density": 0.32,
+      "wall_module_density": 0.01
+    },
+    "breakup": {
+      "mode": "LAYERED",
+      "export_mode": "SEPARATE",
+      "macro_variation": 0.92,
+      "grime": 0.33,
+      "micro_grain": 0.08,
+      "retro_artifacts": 0.49,
+      "version": "1.0"
+    },
+    "tile_mode": "FULL_2D_TILE",
+    "periodic_axes": [
+      "X",
+      "Y"
+    ],
+    "art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 0.93,
+      "weathering": 0.87,
+      "overrides": {},
+      "controls": {
+        "panel_outline_strength": 0.1618,
+        "seam_contrast": 0.5094,
+        "material_variation": 0.638,
+        "macro_grime_strength": 0.5754,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.6514,
+        "baked_lighting_strength": 0.2269,
+        "detail_contrast": 0.3736,
+        "module_irregularity": 0.7361
+      }
+    },
+    "applied_art": {
+      "profile": "BOW_BASE",
+      "version": "1.0",
+      "material_mix": 0.93,
+      "weathering": 0.87,
+      "overrides": {
+        "material_variation": 0.45138500000000004,
+        "seam_contrast": 0.76979
+      },
+      "controls": {
+        "panel_outline_strength": 0.1618,
+        "seam_contrast": 0.7698,
+        "material_variation": 0.4514,
+        "macro_grime_strength": 0.5754,
+        "macro_grime_scale": 3.0,
+        "saturation": 0.6514,
+        "baked_lighting_strength": 0.2269,
+        "detail_contrast": 0.3736,
+        "module_irregularity": 0.7361
+      }
+    },
+    "art_statistics": {
+      "material_classes": {
+        "PAINTED_METAL": 232462,
+        "RAW_METAL": 5462,
+        "GLASS": 0,
+        "CONCRETE": 0,
+        "VENT": 0,
+        "RECESSED_VOID": 24220
+      },
+      "seam_classes": {
+        "DEEP_RECESS": 7971,
+        "NORMAL_SEAM": 8441,
+        "SUBTLE_JOIN": 8150
+      },
+      "structural_modules": 12,
+      "pipeline": "STRUCTURE > MATERIAL > OPTIONAL BREAKUP"
+    },
+    "seam_qa": {
+      "axes": [
+        "X",
+        "Y"
+      ],
+      "channels": {
+        "albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "emission": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "height": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "orm": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "normal": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "preview_albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "preview_orm": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "preview_normal": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "detail_albedo": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "detail_normal": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        },
+        "weather_mask": {
+          "x_max_delta": 0,
+          "y_max_delta": 0
+        }
+      },
+      "passed": true
+    },
+    "structure_hash": "eeaf3beaf16e3a5998ac572969a99a79674c702024ec792d74a9d9392a52ea3c",
+    "sha256": {
+      "albedo": "515aae28043b483c727927e67dc562ee6582cd9f7e2ada75c409419dea2d13be",
+      "emission": "1707efe457307d0a5e2f5a1ec1cff55b2a44286f3c4d8dda32bf394be8963b8b",
+      "height": "da6dd433afd24344aca98bcc81a36a51038a3fbd01cedf96e46c0903ba755861",
+      "orm": "1f76e00194becd569c43c630cc3897e95f3f2477aaa176039151cc6864f2e949",
+      "normal": "35b0dfd02ca736855139b184d1ee002f83333b76359952528fb8777fb93440df",
+      "preview_albedo": "8364eff9743d4b35fcf102bc92434dff14f6a8b823218a540c52e35cdcf4829a",
+      "preview_orm": "259bf804986e31a7bd63d7b5503f2d79994d5fb5ee33053aec2424b2e94c413e",
+      "preview_normal": "f7852ef08f756e97b55b77497cffe9ed67224d830fdf087f1094e0231c8da6b1",
+      "detail_albedo": "b3206968a79ae3d99b6b923ed02b4da6b513403a46a0696c34a3c228e1842215",
+      "detail_normal": "2e1980cbf9bf3b0de19698cfffdd110472a0be0a5688bb5c735e6586f43054b5",
+      "weather_mask": "a296518a0c0488c377e9d35eee120c4896cf7bc77cadd85ce24fe2272321fe47"
+    }
+  }
+}

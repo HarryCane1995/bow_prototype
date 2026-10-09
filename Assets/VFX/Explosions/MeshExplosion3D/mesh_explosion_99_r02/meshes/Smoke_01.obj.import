@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://26yexh8v5b8d"
+path="res://.godot/imported/Smoke_01.obj-dc01e1c5e9f3253b736723fa0b59c4d7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Smoke_01.obj-dc01e1c5e9f3253b736723fa0b59c4d7.mesh"]
+
+source_file="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Smoke_01.obj"
+dest_files=["res://.godot/imported/Smoke_01.obj-dc01e1c5e9f3253b736723fa0b59c4d7.mesh", "res://.godot/imported/Smoke_01.obj-dc01e1c5e9f3253b736723fa0b59c4d7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,142 @@
+{
+  "id": "HR028",
+  "name": "Stacked Channels",
+  "category": "billboard",
+  "subtype": 2,
+  "seed": 1146832,
+  "role": "midground",
+  "collection": "HR028_Stacked_Channels",
+  "bounds_m": [
+    42.016799999999996,
+    47.89639999999999,
+    309.4
+  ],
+  "bounds_min": [
+    -21.008399999999998,
+    -23.948199999999996,
+    0.0
+  ],
+  "bounds_max": [
+    21.008399999999998,
+    23.948199999999996,
+    309.4
+  ],
+  "parameters": {
+    "width": 34.44,
+    "depth": 40.26,
+    "height": 309.4,
+    "floor_pitch": 4.8
+  },
+  "features": [
+    "alternating_overhangs",
+    "stacked_media_blocks"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 28,
+    "triangles": 336,
+    "vertices": 256,
+    "polygons": 168
+  },
+  "geometry_sha256": "c7e6f8c8b46ed362c96a4a5f28b49e993df4546e20430b36aa912898fd633159",
+  "geometry_only_sha256": "51151c814fa3f1f559619f97c3e684b0cbcd682693d8bc8b7bb7e98a81e2de49",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.646,
+    "mass_complexity": 0.295,
+    "industrial_density": 0.536,
+    "window_emission_density": 0.73,
+    "signage_density": 0.267,
+    "weathering": 0.59,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.28,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "accent_billboard_support",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Core": [
+      "accent_billboard_support",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "MediaFloor_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "MediaFloor": [
+      "f5_3_uv"
+    ],
+    "BillboardFrame": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Display": [
+      "floor_metal_deck",
+      "sign_3_uv"
+    ],
+    "DisplayRail": [
+      "warm"
+    ],
+    "ScreenMount": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 24,
+    "floor_rooftop": 5,
+    "floor_metal_deck": 87,
+    "accent_billboard_support": 8,
+    "f5_3_uv": 16,
+    "sign_0_uv": 1,
+    "signal": 12,
+    "sign_1_uv": 1,
+    "warm": 12,
+    "sign_2_uv": 1,
+    "sign_3_uv": 1
+  },
+  "recipes": [
+    "Recipes/accent_billboard_support.facade.json",
+    "Recipes/f5_3_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/sign_0_uv.uv.json",
+    "Recipes/sign_1_uv.uv.json",
+    "Recipes/sign_2_uv.uv.json",
+    "Recipes/sign_3_uv.uv.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "accent_billboard_support": 5802,
+    "f5_3_uv": 925556,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "sign_0_uv": 925700,
+    "sign_1_uv": 925731,
+    "sign_2_uv": 925762,
+    "sign_3_uv": 925793,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR028.png",
+    "UV_Material_QA/Views/HR028_back.png",
+    "UV_Material_QA/Views/HR028_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

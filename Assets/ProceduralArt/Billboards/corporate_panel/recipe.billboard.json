@@ -1,0 +1,36 @@
+{
+  "schema": "bow.billboard",
+  "version": 1,
+  "generator_version": "1.0",
+  "archetype": "CORPORATE_PANEL",
+  "seed": 99,
+  "palette": "CORPORATE_ICE",
+  "colors": {
+    "neon": "#b0dbea",
+    "accent": "#71b4ce",
+    "back": "#18232e",
+    "ink": "#c6ced4"
+  },
+  "parameters": {
+    "aspect": 2.4,
+    "density": 0.55,
+    "emission_strength": 2.0,
+    "wear": 0.03,
+    "grime": 0.02,
+    "border": 0.7,
+    "glyph_scale": 1.0
+  },
+  "support_frame": true,
+  "hazard": false,
+  "generator_fingerprint": "48b3ba5657cc779f111e374e927b7785c68ae4d8a810da230a99cd905645ff35",
+  "long_edge": 512,
+  "size": [
+    512,
+    213
+  ],
+  "sha256": {
+    "albedo": "8aab5296450a904da6ff76eade9a3b1c7017cae754d30bdf28a7f181390aadb9",
+    "emission": "ed04257345e57a89a617ceeb0061f7490f59e3d114ccc404cdcf4c52867bd702",
+    "orm": "815b19c0d07b51af23786fb26f6a2166e700c7df25343772d741bce94dee511a"
+  }
+}

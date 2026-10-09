@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dicul6ojld3d2"
+path="res://.godot/imported/Dust_04.obj-899cdda7e1106deca6c9f6f9066624f7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Dust_04.obj-899cdda7e1106deca6c9f6f9066624f7.mesh"]
+
+source_file="res://Assets/VFX/Explosions/MeshExplosion3D/mesh_explosion_99_r02/meshes/Dust_04.obj"
+dest_files=["res://.godot/imported/Dust_04.obj-899cdda7e1106deca6c9f6f9066624f7.mesh", "res://.godot/imported/Dust_04.obj-899cdda7e1106deca6c9f6f9066624f7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,76 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 2,
+  "generator_version": "0.2.0",
+  "generator_fingerprint": "998af938452dcc1c428ffbb73e861a1d17bd40a00885edd128c8779ae490fc23",
+  "created_at": "2026-09-18T01:17:50+00:00",
+  "name": "megablock_1286580749_4d612818",
+  "surface_mode": "UNIQUE_FACADE",
+  "tile_mode": "UNIQUE_SHEET",
+  "preset": "MEGABLOCK",
+  "seed": 1286580749,
+  "palette": "concrete",
+  "art": {
+    "profile": "LEGACY",
+    "version": "1.0",
+    "material_mix": 1.0,
+    "weathering": 0.6,
+    "overrides": {},
+    "controls": {
+      "panel_outline_strength": 0.11,
+      "seam_contrast": 0.48,
+      "material_variation": 0.576,
+      "macro_grime_strength": 0.442,
+      "macro_grime_scale": 3.0,
+      "saturation": 0.652,
+      "baked_lighting_strength": 0.18,
+      "detail_contrast": 0.34,
+      "module_irregularity": 0.62
+    }
+  },
+  "parameters": {
+    "window_density": 0.68,
+    "emission_density": 0.42,
+    "structural_width": 17,
+    "grime_amount": 0.4,
+    "retro_strength": 0.72,
+    "window_aspect": 1.4,
+    "floor_height": 25,
+    "service_floor_frequency": 0.23,
+    "dark_floor_frequency": 0.13,
+    "panel_density": 0.45,
+    "signage_density": 0.34,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.35
+  },
+  "style": {
+    "posterization": 40,
+    "dithering": 0.22,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    256,
+    512
+  ],
+  "overrides": {},
+  "outputs": {},
+  "sha256": {},
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL"
+}

@@ -1,0 +1,155 @@
+{
+  "id": "HR020",
+  "name": "Three Neighbours",
+  "category": "residential",
+  "subtype": 4,
+  "seed": 1083480,
+  "role": "background",
+  "collection": "HR020_Three_Neighbours",
+  "bounds_m": [
+    75.0288,
+    35.059999999999995,
+    204.04
+  ],
+  "bounds_min": [
+    -37.5144,
+    -17.529999999999998,
+    0.0
+  ],
+  "bounds_max": [
+    37.5144,
+    17.529999999999998,
+    204.04
+  ],
+  "parameters": {
+    "width": 64.68,
+    "depth": 29.0,
+    "height": 198.0,
+    "floor_pitch": 5.4
+  },
+  "features": [
+    "roof_exhaust_trio",
+    "roof_paired_hvac",
+    "roof_water_tank",
+    "three_detached_slabs",
+    "varied_slab_heights"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 19,
+    "triangles": 364,
+    "vertices": 360,
+    "polygons": 148
+  },
+  "geometry_sha256": "b489cfde531fc8c42117edaf7e36ab3c94eba13053f83d91e0204b8dbffd93bd",
+  "geometry_only_sha256": "cb412054af83b0ba7b9f1f87800a6e40e49f3127e90bc40a72fe18078ab35c66",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.272,
+    "mass_complexity": 0.2,
+    "industrial_density": 0.789,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.22,
+    "rooftop_complexity": 0.867,
+    "old_new": 0.32
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Neighbour_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Neighbour": [
+      "f1_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Exhaust": [
+      "wrap_heavy_pipe"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 23,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 51,
+    "wall_maintenance": 16,
+    "f1_0_uv": 12,
+    "wall_vent_bank": 8,
+    "wrap_tank_shell": 10,
+    "wrap_heavy_pipe": 24
+  },
+  "recipes": [
+    "Recipes/f1_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json",
+    "Recipes/wrap_heavy_pipe.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f1_0_uv": 925101,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433,
+    "wrap_heavy_pipe": 5210,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR020.png",
+    "UV_Material_QA/Views/HR020_back.png",
+    "UV_Material_QA/Views/HR020_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

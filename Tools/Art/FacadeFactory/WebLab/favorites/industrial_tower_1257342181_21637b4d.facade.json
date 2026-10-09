@@ -1,0 +1,60 @@
+{
+  "schema": "bowprototype.facade",
+  "schema_version": 1,
+  "generator_version": "0.1.0",
+  "generator_fingerprint": "b806a9a8c6a383229fd7acafad451af065ad352f5a616e9722139e4f39ea4f69",
+  "created_at": "2026-09-18T00:46:25+00:00",
+  "name": "industrial_tower_1257342181_21637b4d",
+  "preset": "INDUSTRIAL_TOWER",
+  "seed": 1257342181,
+  "palette": "industrial",
+  "parameters": {
+    "window_density": 0.28,
+    "emission_density": 0.24,
+    "structural_width": 18,
+    "grime_amount": 0.48,
+    "retro_strength": 0.72,
+    "window_aspect": 2.15,
+    "floor_height": 39,
+    "service_floor_frequency": 0.37,
+    "dark_floor_frequency": 0.08,
+    "panel_density": 0.88,
+    "signage_density": 0.32,
+    "macro_contrast": 0.23,
+    "emission_strength": 1.15
+  },
+  "style": {
+    "posterization": 245,
+    "dithering": 0.6,
+    "color_quantization": 112,
+    "micro_contrast": 0.12,
+    "compression_artifacts": 0.08,
+    "pixel_noise": 0.65,
+    "edge_exaggeration": 0.2,
+    "baked_ao_strength": 0.32
+  },
+  "resolution": [
+    256,
+    512
+  ],
+  "overrides": {
+    "window_aspect": 2.15,
+    "floor_height": 39,
+    "service_floor_frequency": 0.37
+  },
+  "outputs": {},
+  "sha256": {},
+  "color_spaces": {
+    "albedo": "sRGB",
+    "emission": "sRGB",
+    "normal": "linear data",
+    "orm": "linear data",
+    "height": "linear data"
+  },
+  "orm_channels": {
+    "R": "AO",
+    "G": "roughness",
+    "B": "metallic"
+  },
+  "normal_convention": "OpenGL"
+}

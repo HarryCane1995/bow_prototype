@@ -1,0 +1,157 @@
+{
+  "id": "HR086",
+  "name": "Market and Needles",
+  "category": "mixed_use",
+  "subtype": 0,
+  "seed": 1606134,
+  "role": "midground",
+  "collection": "HR086_Market_and_Needles",
+  "bounds_m": [
+    92.33999999999999,
+    71.2085,
+    192.8
+  ],
+  "bounds_min": [
+    -46.169999999999995,
+    -38.2525,
+    0.0
+  ],
+  "bounds_max": [
+    46.169999999999995,
+    32.956,
+    192.8
+  ],
+  "parameters": {
+    "width": 81.0,
+    "depth": 58.85,
+    "height": 184.8,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Market and Needles",
+    "market_podium",
+    "mixed_use",
+    "roof_water_tank",
+    "short_skywalk",
+    "street_arcade",
+    "unequal_offset_needles"
+  ],
+  "metrics": {
+    "meshes": 14,
+    "primitives": 18,
+    "triangles": 264,
+    "vertices": 232,
+    "polygons": 120
+  },
+  "geometry_sha256": "de8f885363afc70bb5308d6c7adf88103c3b24aec306cde429a857d290847297",
+  "geometry_only_sha256": "774b1e382a852128a80bb881083e5147317b17abd9b98b6a44c69f775251597e",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.209,
+    "mass_complexity": 0.189,
+    "industrial_density": 0.667,
+    "window_emission_density": 0.12,
+    "signage_density": 0.067,
+    "weathering": 0.12,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.52,
+    "rooftop_complexity": 0.533,
+    "old_new": 0.46
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "market_block_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "market_block": [
+      "f1_1_uv"
+    ],
+    "market_arcade": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "market_needle_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "market_needle": [
+      "f4_0_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "market_skywalk": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "BillboardFrame": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Display": [
+      "floor_metal_deck",
+      "sign_1_uv"
+    ],
+    "DisplayRail": [
+      "warm"
+    ],
+    "ScreenMount": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 20,
+    "floor_rooftop": 4,
+    "f1_1_uv": 4,
+    "f4_0_uv": 8,
+    "floor_metal_deck": 45,
+    "wall_maintenance": 12,
+    "wrap_tank_shell": 20,
+    "sign_1_uv": 1,
+    "warm": 6
+  },
+  "recipes": [
+    "Recipes/f1_1_uv.uv.json",
+    "Recipes/f4_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/sign_1_uv.uv.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f1_1_uv": 925118,
+    "f4_0_uv": 925404,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "sign_1_uv": 925731,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR086.png",
+    "UV_Material_QA/Views/HR086_back.png",
+    "UV_Material_QA/Views/HR086_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

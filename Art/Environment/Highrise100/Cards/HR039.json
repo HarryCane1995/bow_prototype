@@ -1,0 +1,108 @@
+{
+  "id": "HR039",
+  "name": "Triple Spires",
+  "category": "needle",
+  "subtype": 3,
+  "seed": 1233941,
+  "role": "background",
+  "collection": "HR039_Triple_Spires",
+  "bounds_m": [
+    32.624,
+    24.822799999999997,
+    389.5
+  ],
+  "bounds_min": [
+    -16.312,
+    -12.411399999999999,
+    0.0
+  ],
+  "bounds_max": [
+    16.312,
+    12.411399999999999,
+    389.5
+  ],
+  "parameters": {
+    "width": 27.84,
+    "depth": 20.02,
+    "height": 389.5,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "triangular_plan",
+    "triple_tapered_spires"
+  ],
+  "metrics": {
+    "meshes": 5,
+    "primitives": 6,
+    "triangles": 96,
+    "vertices": 96,
+    "polygons": 42
+  },
+  "geometry_sha256": "0342351ab7199270a2420c1ae0b658314b479ab83b9fcc1d245db060feed322c",
+  "geometry_only_sha256": "d10264f467aaf7a774b56bcb730538b087125e679f90430fb44f6f0889dbfe05",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 1,
+    "mass_complexity": 0.063,
+    "industrial_density": 0.333,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.232,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.9
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Spire_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Spire": [
+      "f0_0_uv"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 10,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 6,
+    "wall_corporate": 4,
+    "f0_0_uv": 18
+  },
+  "recipes": [
+    "Recipes/f0_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_0_uv": 925000,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR039.png",
+    "UV_Material_QA/Views/HR039_back.png",
+    "UV_Material_QA/Views/HR039_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,123 @@
+{
+  "id": "HR037",
+  "name": "Bifurcated Needle",
+  "category": "needle",
+  "subtype": 1,
+  "seed": 1218103,
+  "role": "background",
+  "collection": "HR037_Bifurcated_Needle",
+  "bounds_m": [
+    42.785950117228325,
+    22.565599999999996,
+    434.96900000000005
+  ],
+  "bounds_min": [
+    -21.392975058614162,
+    -11.282799999999998,
+    0.0
+  ],
+  "bounds_max": [
+    21.392975058614162,
+    11.282799999999998,
+    434.96900000000005
+  ],
+  "parameters": {
+    "width": 25.44,
+    "depth": 18.04,
+    "height": 422.3,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "bifurcated_tip",
+    "six_sided_base"
+  ],
+  "metrics": {
+    "meshes": 9,
+    "primitives": 9,
+    "triangles": 116,
+    "vertices": 104,
+    "polygons": 56
+  },
+  "geometry_sha256": "827cf1b7bdd68870d0a134e726f6d28a85de761eae88d395177fe87ddceac60a",
+  "geometry_only_sha256": "77476d4f1547781ece6fbb72f58771d724f6c0a244d3a54a18ddf54bfff72ccc",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 1,
+    "mass_complexity": 0.095,
+    "industrial_density": 0.556,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.742,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.9
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_corporate",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Base_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Base": [
+      "f0_2_uv"
+    ],
+    "ForkTransfer": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Fork_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "Fork": [
+      "f0_2_uv"
+    ],
+    "ForkBrace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 13,
+    "floor_rooftop": 4,
+    "floor_metal_deck": 21,
+    "wall_corporate": 4,
+    "f0_2_uv": 14
+  },
+  "recipes": [
+    "Recipes/f0_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_corporate.facade.json",
+    "Recipes/wall_dark_concrete.facade.json"
+  ],
+  "material_seeds": {
+    "f0_2_uv": 925034,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_corporate": 4248,
+    "wall_dark_concrete": 4322
+  },
+  "previews": [
+    "Previews/HR037.png",
+    "UV_Material_QA/Views/HR037_back.png",
+    "UV_Material_QA/Views/HR037_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

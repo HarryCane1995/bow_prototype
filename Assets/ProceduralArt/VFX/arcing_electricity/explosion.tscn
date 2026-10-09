@@ -1,0 +1,147 @@
+[gd_scene load_steps=23 format=3]
+
+[ext_resource type="Script" path="res://Assets/ProceduralArt/VFX/arcing_electricity/player.gd" id="Player"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/core.tres" id="Mat_core"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/petals.tres" id="Mat_petals"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/ring.tres" id="Mat_ring"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/shards.tres" id="Mat_shards"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/smoke.tres" id="Mat_smoke"]
+[ext_resource type="ShaderMaterial" path="res://Assets/ProceduralArt/VFX/arcing_electricity/materials/dust.tres" id="Mat_dust"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Core.obj" id="Mesh_Core"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_00.obj" id="Mesh_Arc_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_00.obj" id="Mesh_Terminal_00"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_01.obj" id="Mesh_Arc_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_01.obj" id="Mesh_Terminal_01"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_02.obj" id="Mesh_Arc_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_02.obj" id="Mesh_Terminal_02"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_03.obj" id="Mesh_Arc_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_03.obj" id="Mesh_Terminal_03"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_04.obj" id="Mesh_Arc_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_04.obj" id="Mesh_Terminal_04"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_05.obj" id="Mesh_Arc_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_05.obj" id="Mesh_Terminal_05"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Arc_06.obj" id="Mesh_Arc_06"]
+[ext_resource type="ArrayMesh" path="res://Assets/ProceduralArt/VFX/arcing_electricity/meshes/Terminal_06.obj" id="Mesh_Terminal_06"]
+
+[node name="ProceduralMeshEffect" type="Node3D"]
+script = ExtResource("Player")
+manifest_path = "res://Assets/ProceduralArt/VFX/arcing_electricity/manifest.json"
+
+[node name="Layers" type="Node3D" parent="."]
+
+[node name="core" type="Node3D" parent="Layers"]
+
+[node name="Core" type="MeshInstance3D" parent="Layers/core"]
+mesh = ExtResource("Mesh_Core")
+material_override = ExtResource("Mat_core")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="petals" type="Node3D" parent="Layers"]
+
+[node name="Arc_00" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_00")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_01" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_01")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_02" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_02")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_03" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_03")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_04" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_04")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_05" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_05")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Arc_06" type="MeshInstance3D" parent="Layers/petals"]
+mesh = ExtResource("Mesh_Arc_06")
+material_override = ExtResource("Mat_petals")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="ring" type="Node3D" parent="Layers"]
+
+[node name="shards" type="Node3D" parent="Layers"]
+
+[node name="Terminal_00" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_00")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_01" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_01")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_02" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_02")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_03" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_03")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_04" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_04")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_05" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_05")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="Terminal_06" type="MeshInstance3D" parent="Layers/shards"]
+mesh = ExtResource("Mesh_Terminal_06")
+material_override = ExtResource("Mat_shards")
+cast_shadow = 0
+visible = false
+extra_cull_margin = 0.5
+
+[node name="smoke" type="Node3D" parent="Layers"]
+
+[node name="dust" type="Node3D" parent="Layers"]

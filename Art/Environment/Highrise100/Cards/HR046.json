@@ -1,0 +1,112 @@
+{
+  "id": "HR046",
+  "name": "Triple Vessels",
+  "category": "reactor",
+  "subtype": 0,
+  "seed": 1289374,
+  "role": "midground",
+  "collection": "HR046_Triple_Vessels",
+  "bounds_m": [
+    56.45,
+    59.3306,
+    189.72799999999998
+  ],
+  "bounds_min": [
+    -28.225,
+    -29.6653,
+    0.0
+  ],
+  "bounds_max": [
+    28.225,
+    29.6653,
+    189.72799999999998
+  ],
+  "parameters": {
+    "width": 49.5,
+    "depth": 50.29,
+    "height": 193.6,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "three_pressure_vessels",
+    "unequal_cylinders"
+  ],
+  "metrics": {
+    "meshes": 7,
+    "primitives": 15,
+    "triangles": 564,
+    "vertices": 600,
+    "polygons": 186
+  },
+  "geometry_sha256": "a4f6caee6344a6d23c0f8a90c5aba3b30fc57f2e819bb44d269b15d9da8d66ec",
+  "geometry_only_sha256": "ac318c0bb39342bf2faecba4482d0343395074764c5489d145432e0a00ab745d",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.32,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.933,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.0,
+    "cantilever_overhang": 0.2,
+    "rooftop_complexity": 0.0,
+    "old_new": 0.28
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "LoadingEntry": [
+      "wall_reactor_housing",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Vessel_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "Vessel": [
+      "wall_reactor_housing"
+    ],
+    "Collar_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Collar": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 19,
+    "floor_rooftop": 1,
+    "floor_metal_deck": 126,
+    "wall_reactor_housing": 40
+  },
+  "recipes": [
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_reactor_housing.facade.json"
+  ],
+  "material_seeds": {
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_reactor_housing": 4396
+  },
+  "previews": [
+    "Previews/HR046.png",
+    "UV_Material_QA/Views/HR046_back.png",
+    "UV_Material_QA/Views/HR046_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" format=3]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Simulation/sim_grid_reference.gdshader" id="1_shader"]
+
+[resource]
+resource_name = "A0_LEGACY_GRID"
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/base_color = Color(0, 0, 0, 1)
+shader_parameter/grid_color = Color(0.12325788, 0.36399, 0.23282236, 1)
+shader_parameter/cell_size = 1.60000002384192
+shader_parameter/line_width = 0.00499999988824
+shader_parameter/emission_strength = 3.85000005736962
+shader_parameter/scan_speed = 1.95000008866214
+shader_parameter/scan_strength = 1.999999955296
+shader_parameter/noise_strength = 0.2249999949708

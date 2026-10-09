@@ -1,0 +1,145 @@
+{
+  "id": "HR069",
+  "name": "Habitable Truss",
+  "category": "suspended",
+  "subtype": 3,
+  "seed": 1471511,
+  "role": "midground",
+  "collection": "HR069_Habitable_Truss",
+  "bounds_m": [
+    71.456,
+    37.14339828491211,
+    283.5
+  ],
+  "bounds_min": [
+    -35.728,
+    -18.571699142456055,
+    0.0
+  ],
+  "bounds_max": [
+    35.728,
+    18.571699142456055,
+    283.5
+  ],
+  "parameters": {
+    "width": 63.8,
+    "depth": 33.67,
+    "height": 275.5,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Habitable Truss",
+    "double_height_void",
+    "exposed_bridge_truss",
+    "occupied_mega_bridge",
+    "roof_water_tank",
+    "suspended",
+    "unequal_end_cores"
+  ],
+  "metrics": {
+    "meshes": 11,
+    "primitives": 24,
+    "triangles": 336,
+    "vertices": 280,
+    "polygons": 156
+  },
+  "geometry_sha256": "d085243cbc6ddcb4da1c3d19a5d9363b2e7ad3a66dcd20517a45ba4948287251",
+  "geometry_only_sha256": "4affa7bda1577eb7ca95f5db1e355f3aaf6554032795eb1b854d5868217183b3",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.397,
+    "mass_complexity": 0.253,
+    "industrial_density": 0.875,
+    "window_emission_density": 0.54,
+    "signage_density": 0.0,
+    "weathering": 0.43,
+    "structural_exposure": 0.571,
+    "cantilever_overhang": 0.5,
+    "rooftop_complexity": 0.533,
+    "old_new": 0.72
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "bridge_core_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "bridge_core": [
+      "f2_3_uv"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "habitable_bridge_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "habitable_bridge": [
+      "f5_2_uv"
+    ],
+    "habitable_truss_a": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "habitable_truss_b": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "low_link": [
+      "wall_tech_spine",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 24,
+    "floor_rooftop": 3,
+    "f2_3_uv": 8,
+    "floor_metal_deck": 85,
+    "wall_maintenance": 8,
+    "wrap_tank_shell": 20,
+    "f5_2_uv": 4,
+    "wall_tech_spine": 4
+  },
+  "recipes": [
+    "Recipes/f2_3_uv.uv.json",
+    "Recipes/f5_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_tech_spine.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f2_3_uv": 925253,
+    "f5_2_uv": 925539,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_tech_spine": 4100,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR069.png",
+    "UV_Material_QA/Views/HR069_back.png",
+    "UV_Material_QA/Views/HR069_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

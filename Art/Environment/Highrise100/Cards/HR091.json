@@ -1,0 +1,138 @@
+{
+  "id": "HR091",
+  "name": "Flying Piers",
+  "category": "buttress",
+  "subtype": 0,
+  "seed": 1645729,
+  "role": "hero",
+  "collection": "HR091_Flying_Piers",
+  "bounds_m": [
+    67.07000000000001,
+    33.2262,
+    277.25
+  ],
+  "bounds_min": [
+    -33.535000000000004,
+    -16.6131,
+    0.0
+  ],
+  "bounds_max": [
+    33.535000000000004,
+    16.6131,
+    277.25
+  ],
+  "parameters": {
+    "width": 56.7,
+    "depth": 46.01,
+    "height": 272.8,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Flying Piers",
+    "buttress",
+    "four_flying_buttresses",
+    "narrow_central_keep",
+    "outer_piers",
+    "roof_paired_hvac",
+    "small_lantern"
+  ],
+  "metrics": {
+    "meshes": 10,
+    "primitives": 15,
+    "triangles": 244,
+    "vertices": 216,
+    "polygons": 106
+  },
+  "geometry_sha256": "ee9581a1bb7a7007595badfd1164da01a97967ada16dc00c17a5fad3246bcae8",
+  "geometry_only_sha256": "25b35c7a67b08608031f8f8ba81cba8af2f49f8eb30829ea7676d5c0a38e04c0",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.413,
+    "mass_complexity": 0.158,
+    "industrial_density": 0.333,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.243,
+    "rooftop_complexity": 0.333,
+    "old_new": 0.7
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "central_keep_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "central_keep": [
+      "f3_0_uv"
+    ],
+    "central_lantern_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "central_lantern": [
+      "f3_1_uv"
+    ],
+    "flying_pier": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "flying_buttress": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 47,
+    "floor_rooftop": 10,
+    "f3_0_uv": 4,
+    "f3_1_uv": 4,
+    "floor_metal_deck": 29,
+    "wall_maintenance": 4,
+    "wall_vent_bank": 8
+  },
+  "recipes": [
+    "Recipes/f3_0_uv.uv.json",
+    "Recipes/f3_1_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json"
+  ],
+  "material_seeds": {
+    "f3_0_uv": 925303,
+    "f3_1_uv": 925320,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433
+  },
+  "previews": [
+    "Previews/HR091.png",
+    "UV_Material_QA/Views/HR091_back.png",
+    "UV_Material_QA/Views/HR091_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

@@ -1,0 +1,163 @@
+{
+  "id": "HR096",
+  "name": "Broken Halo",
+  "category": "hero",
+  "subtype": 0,
+  "seed": 1685324,
+  "role": "hero",
+  "collection": "HR096_Broken_Halo",
+  "bounds_m": [
+    63.7875,
+    43.656,
+    338.84999999999997
+  ],
+  "bounds_min": [
+    -30.051000000000002,
+    -21.828,
+    0.0
+  ],
+  "bounds_max": [
+    33.7365,
+    21.828,
+    338.84999999999997
+  ],
+  "parameters": {
+    "width": 56.7,
+    "depth": 51.36,
+    "height": 334.4,
+    "floor_pitch": 3.3
+  },
+  "features": [
+    "Broken Halo",
+    "broken_halo",
+    "giant_open_void",
+    "hero",
+    "interrupted_right_crown",
+    "low_crossing",
+    "roof_paired_hvac",
+    "roof_water_tank"
+  ],
+  "metrics": {
+    "meshes": 16,
+    "primitives": 16,
+    "triangles": 280,
+    "vertices": 280,
+    "polygons": 118
+  },
+  "geometry_sha256": "d2a20e6c7d5f428db2c0bf38e1d6b47cf03a04050a3a2551dfb8befb98572678",
+  "geometry_only_sha256": "d703ef90d30ce8699753e0543d464f7e796f575fc15b79413aff842275f3e8ec",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.531,
+    "mass_complexity": 0.168,
+    "industrial_density": 0.688,
+    "window_emission_density": 0.12,
+    "signage_density": 0.0,
+    "weathering": 0.12,
+    "structural_exposure": 0.143,
+    "cantilever_overhang": 0.185,
+    "rooftop_complexity": 0.6,
+    "old_new": 0.82
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "halo_side_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "halo_side": [
+      "f5_0_uv"
+    ],
+    "halo_top_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "halo_top": [
+      "f0_1_uv"
+    ],
+    "halo_low_crossing_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "halo_low_crossing": [
+      "f0_1_uv"
+    ],
+    "halo_break_extension_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "halo_break_extension": [
+      "f5_0_uv"
+    ],
+    "halo_corner_brace": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "RoofAccess": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_maintenance"
+    ],
+    "HVAC": [
+      "wall_dark_concrete",
+      "floor_metal_deck",
+      "wall_vent_bank"
+    ],
+    "HVACFan_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "HVACFan": [
+      "floor_metal_deck"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 16,
+    "floor_rooftop": 5,
+    "f5_0_uv": 12,
+    "f0_1_uv": 8,
+    "floor_metal_deck": 51,
+    "wall_maintenance": 8,
+    "wall_vent_bank": 8,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f0_1_uv.uv.json",
+    "Recipes/f5_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wall_vent_bank.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f0_1_uv": 925017,
+    "f5_0_uv": 925505,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wall_vent_bank": 4433,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR096.png",
+    "UV_Material_QA/Views/HR096_back.png",
+    "UV_Material_QA/Views/HR096_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

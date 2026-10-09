@@ -1,0 +1,138 @@
+{
+  "id": "HR017",
+  "name": "L Court",
+  "category": "residential",
+  "subtype": 1,
+  "seed": 1059723,
+  "role": "background",
+  "collection": "HR017_L_Court",
+  "bounds_m": [
+    78.956,
+    29.109199999999998,
+    193.4
+  ],
+  "bounds_min": [
+    -39.478,
+    -14.554599999999999,
+    0.0
+  ],
+  "bounds_max": [
+    39.478,
+    14.554599999999999,
+    193.4
+  ],
+  "parameters": {
+    "width": 69.96,
+    "depth": 23.78,
+    "height": 185.4,
+    "floor_pitch": 4.1
+  },
+  "features": [
+    "L_plan",
+    "roof_water_tank",
+    "two_roof_levels"
+  ],
+  "metrics": {
+    "meshes": 12,
+    "primitives": 31,
+    "triangles": 396,
+    "vertices": 296,
+    "polygons": 192
+  },
+  "geometry_sha256": "7115508d89d560a3ec1d5c2600b3a8ecc1223c6fbcce567f3d2e0ba655ce0dee",
+  "geometry_only_sha256": "e33b65866ec85099111cd36dd51a618c34a3832f14b601cc00fe0573b2a3c0f4",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.245,
+    "mass_complexity": 0.326,
+    "industrial_density": 0.194,
+    "window_emission_density": 0.3,
+    "signage_density": 0.0,
+    "weathering": 0.26,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.189,
+    "rooftop_complexity": 0.267,
+    "old_new": 0.32
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "Podium": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "LoadingEntry": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "LongWing_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "LongWing": [
+      "f1_1_uv"
+    ],
+    "ShortWing_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "ShortWing": [
+      "f4_2_uv"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 123,
+    "floor_rooftop": 25,
+    "floor_metal_deck": 18,
+    "wall_maintenance": 8,
+    "f1_1_uv": 4,
+    "f4_2_uv": 4,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f1_1_uv.uv.json",
+    "Recipes/f4_2_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f1_1_uv": 925118,
+    "f4_2_uv": 925438,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR017.png",
+    "UV_Material_QA/Views/HR017_back.png",
+    "UV_Material_QA/Views/HR017_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}

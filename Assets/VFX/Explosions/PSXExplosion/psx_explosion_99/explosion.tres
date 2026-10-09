@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3]
+
+[ext_resource type="Shader" path="res://Assets/VFX/Explosions/PSXExplosion/psx_explosion_99/flipbook.gdshader" id="1"]
+[ext_resource type="Texture2D" path="res://Assets/VFX/Explosions/PSXExplosion/psx_explosion_99/color_sheet.png" id="2"]
+[ext_resource type="Texture2D" path="res://Assets/VFX/Explosions/PSXExplosion/psx_explosion_99/emission_sheet.png" id="3"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1")
+shader_parameter/color_sheet = ExtResource("2")
+shader_parameter/emission_sheet = ExtResource("3")
+shader_parameter/atlas_grid = Vector2(6, 6)
+shader_parameter/frame_size = 128.0
+shader_parameter/gutter = 2.0
+shader_parameter/use_emission = true
+shader_parameter/emission_strength = 1.0

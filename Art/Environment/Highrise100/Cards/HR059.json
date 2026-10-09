@@ -1,0 +1,214 @@
+{
+  "id": "HR059",
+  "name": "Silo Annex",
+  "category": "maintenance",
+  "subtype": 3,
+  "seed": 1392321,
+  "role": "background",
+  "collection": "HR059_Silo_Annex",
+  "bounds_m": [
+    62.35920646373059,
+    31.014800000000005,
+    197.05
+  ],
+  "bounds_min": [
+    -36.2356,
+    -16.232400000000002,
+    0.0
+  ],
+  "bounds_max": [
+    26.12360646373059,
+    14.782400000000003,
+    197.05
+  ],
+  "parameters": {
+    "width": 68.44,
+    "depth": 30.94,
+    "height": 190.0,
+    "floor_pitch": 3.6
+  },
+  "features": [
+    "Silo Annex",
+    "circular_rectangular_mix",
+    "concrete_majority_old_shell",
+    "isolated_window_strips",
+    "maintenance",
+    "narrow_skywalks",
+    "new_steel_secondary_layer",
+    "new_steel_supported_cassette",
+    "offset_annex",
+    "old_new_retrofit",
+    "old_regular_window_grid",
+    "process_silos",
+    "roof_water_tank"
+  ],
+  "metrics": {
+    "meshes": 29,
+    "primitives": 45,
+    "triangles": 900,
+    "vertices": 880,
+    "polygons": 360
+  },
+  "geometry_sha256": "0be7258ff59b8146be67d8bc872ad833b9856799c839a95a5992eee44097cfb7",
+  "geometry_only_sha256": "1af2946559566e358e1eaedbcb30ac02cfeb251912180bfded59b3297760abad",
+  "geometry_method": "authored deterministic subtype and explicit dimensions; seed is recipe identity, not random geometry sampling",
+  "axes": {
+    "verticality": 0.316,
+    "mass_complexity": 0.474,
+    "industrial_density": 0.556,
+    "window_emission_density": 0.73,
+    "signage_density": 0.0,
+    "weathering": 0.59,
+    "structural_exposure": 0.071,
+    "cantilever_overhang": 0.38,
+    "rooftop_complexity": 0.4,
+    "old_new": 0.16
+  },
+  "axes_method": "diagnostic proxies from geometry/material settings; old_new is authored intention, not a perceptual measurement",
+  "material_slots": {
+    "old_concrete_annex": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "annex_old_window_strip_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "annex_old_window_strip": [
+      "f1_3_uv"
+    ],
+    "annex_rear_window_strip_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "annex_rear_window_strip": [
+      "f1_3_uv"
+    ],
+    "annex_side_window_strip_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "annex_side_window_strip": [
+      "f1_3_uv"
+    ],
+    "annex_new_front_cassette_Caps": [
+      "floor_rooftop",
+      "wall_dark_concrete"
+    ],
+    "annex_new_front_cassette": [
+      "f4_0_uv"
+    ],
+    "annex_cassette_steel_sill": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "old_concrete_pier": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "Belts": [
+      "wall_dark_concrete",
+      "floor_rooftop"
+    ],
+    "silo_0_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "silo_0": [
+      "wall_maintenance"
+    ],
+    "silo_collar_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "silo_collar": [
+      "floor_metal_deck"
+    ],
+    "Antenna_Caps": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "Antenna": [
+      "floor_metal_deck"
+    ],
+    "Beacon": [
+      "warm"
+    ],
+    "annex_skywalk": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "silo_1_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "silo_1": [
+      "wall_maintenance"
+    ],
+    "RoofAccess": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank_Caps": [
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "WaterTank": [
+      "wrap_tank_shell"
+    ],
+    "TankFeet": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "new_external_lift": [
+      "wall_maintenance",
+      "wall_dark_concrete",
+      "floor_metal_deck"
+    ],
+    "new_lift_rail": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ],
+    "new_lift_machine": [
+      "floor_metal_deck",
+      "wall_dark_concrete"
+    ]
+  },
+  "material_face_counts": {
+    "wall_dark_concrete": 87,
+    "floor_rooftop": 18,
+    "f1_3_uv": 24,
+    "f4_0_uv": 4,
+    "floor_metal_deck": 173,
+    "wall_maintenance": 32,
+    "warm": 12,
+    "wrap_tank_shell": 10
+  },
+  "recipes": [
+    "Recipes/f1_3_uv.uv.json",
+    "Recipes/f4_0_uv.uv.json",
+    "Recipes/floor_metal_deck.facade.json",
+    "Recipes/floor_rooftop.facade.json",
+    "Recipes/wall_dark_concrete.facade.json",
+    "Recipes/wall_maintenance.facade.json",
+    "Recipes/wrap_tank_shell.facade.json"
+  ],
+  "material_seeds": {
+    "f1_3_uv": 925152,
+    "f4_0_uv": 925404,
+    "floor_metal_deck": 4581,
+    "floor_rooftop": 4840,
+    "wall_dark_concrete": 4322,
+    "wall_maintenance": 4137,
+    "wrap_tank_shell": 5247
+  },
+  "previews": [
+    "Previews/HR059.png",
+    "UV_Material_QA/Views/HR059_back.png",
+    "UV_Material_QA/Views/HR059_roof.png"
+  ],
+  "source": "Highrise100.blend",
+  "material_assignment_schema": "per-mesh list; per-face indices in source",
+  "uv_material_qa_version": 1
+}
