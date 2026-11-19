@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/WeatherGallery.gd" id="gallery"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Light_Rain.res" id="27"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Heavy_Rain.res" id="28"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Rain_Surface_Splashes.res" id="29"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Ground_Mist.res" id="30"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Dense_Fog_Bank.res" id="31"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Gentle_Snowfall.res" id="32"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Blizzard.res" id="33"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Hailstorm.res" id="34"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Dust_Storm.res" id="35"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Weather/Thunderstorm.res" id="36"]
+
+[node name="WeatherGallery" type="Node3D"]
+script = ExtResource("gallery")
+effects = Array[EffekseerEffect]([ExtResource("27"), ExtResource("28"), ExtResource("29"), ExtResource("30"), ExtResource("31"), ExtResource("32"), ExtResource("33"), ExtResource("34"), ExtResource("35"), ExtResource("36")])
+
+[node name="Overview" type="Marker3D" parent="."]
+position = Vector3(9, 0.14, 21.4)

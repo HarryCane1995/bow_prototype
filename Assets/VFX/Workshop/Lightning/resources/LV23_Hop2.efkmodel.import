@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://ctnswlrolnwtj"
+path="res://.godot/imported/LV23_Hop2.efkmodel-853ddacf54a421946bc34b18256f9cf2.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV23_Hop2.efkmodel"
+dest_files=["res://.godot/imported/LV23_Hop2.efkmodel-853ddacf54a421946bc34b18256f9cf2.res"]
+
+[params]
+
+compress=true

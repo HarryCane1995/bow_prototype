@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://wpmsx057wsup"
+path="res://.godot/imported/LV22_ReturnBridge.efkmodel-562ef71dcc579068940a83bc32621235.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV22_ReturnBridge.efkmodel"
+dest_files=["res://.godot/imported/LV22_ReturnBridge.efkmodel-562ef71dcc579068940a83bc32621235.res"]
+
+[params]
+
+compress=true

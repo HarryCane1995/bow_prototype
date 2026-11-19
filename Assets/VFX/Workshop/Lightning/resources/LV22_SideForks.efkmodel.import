@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://bnconii04dxl2"
+path="res://.godot/imported/LV22_SideForks.efkmodel-4c790b11acb12a1bdffeef004a573c48.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV22_SideForks.efkmodel"
+dest_files=["res://.godot/imported/LV22_SideForks.efkmodel-4c790b11acb12a1bdffeef004a573c48.res"]
+
+[params]
+
+compress=true

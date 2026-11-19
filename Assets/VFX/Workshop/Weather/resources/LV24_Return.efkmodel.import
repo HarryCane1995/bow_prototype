@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://dyej1pes07hqy"
+path="res://.godot/imported/LV24_Return.efkmodel-82429306f0eac784fe6a72499a5618d3.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Weather/resources/LV24_Return.efkmodel"
+dest_files=["res://.godot/imported/LV24_Return.efkmodel-82429306f0eac784fe6a72499a5618d3.res"]
+
+[params]
+
+compress=true

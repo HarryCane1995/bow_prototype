@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/SmokeGallery.gd" id="gallery"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/SmokeCollection/Explosion_Smoke.res" id="7"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/SmokeCollection/Industrial_Smoke.res" id="8"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/SmokeCollection/Smoldering_Smoke.res" id="9"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/SmokeCollection/Steam_Burst.res" id="10"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/SmokeCollection/Smoke_Grenade.res" id="11"]
+
+[node name="SmokeGallery" type="Node3D"]
+script = ExtResource("gallery")
+
+[node name="Overview" type="Marker3D" parent="."]
+position = Vector3(9, 0.14, 21.4)
+rotation = Vector3(0, 0, 0)
+
+[node name="Stations" type="Node3D" parent="."]
+
+[node name="Explosion Smoke" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(-2.0, 0.025, 9.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1.23, 1.23, 1.23)
+effect = ExtResource("7")
+autoplay = false
+autofree = false
+
+[node name="Industrial Smoke" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(3.7, 0.025, 6.8)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1.2, 1.2, 1.2)
+effect = ExtResource("8")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Smoldering Smoke" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(9, 0.025, 10.0)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1.43, 1.43, 1.43)
+effect = ExtResource("9")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Steam Burst" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(14.7, 0.025, 6.8)
+rotation = Vector3(0, 0.28, 0)
+scale = Vector3(1.22, 1.22, 1.22)
+effect = ExtResource("10")
+autoplay = false
+autofree = false
+
+[node name="Smoke Grenade" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(20.0, 0.025, 9.4)
+rotation = Vector3(0, 0, 0)
+scale = Vector3(1.21, 1.21, 1.21)
+effect = ExtResource("11")
+autoplay = false
+autofree = false

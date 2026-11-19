@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/SmokeGallery.gd" id="gallery"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Explosion_Compact.res" id="12"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Explosion_Heavy.res" id="13"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Explosion_Dirty.res" id="14"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Explosion_Fuel.res" id="15"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Explosion_Metal_Spark.res" id="16"]
+
+[node name="ExplosionGallery" type="Node3D"]
+script = ExtResource("gallery")
+first_number = 12
+
+[node name="Overview" type="Marker3D" parent="."]
+position = Vector3(9, 0.14, 21.4)
+
+[node name="Stations" type="Node3D" parent="."]
+
+[node name="Explosion Compact" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(-2, 0.025, 9.4)
+effect = ExtResource("12")
+autoplay = false
+autofree = false
+
+[node name="Explosion Heavy" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(3.7, 0.025, 6.8)
+effect = ExtResource("13")
+autoplay = false
+autofree = false
+
+[node name="Explosion Dirty" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(9, 0.025, 10)
+effect = ExtResource("14")
+autoplay = false
+autofree = false
+
+[node name="Explosion Fuel" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(14.7, 0.025, 6.8)
+effect = ExtResource("15")
+autoplay = false
+autofree = false
+
+[node name="Explosion Metal Spark" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(20, 0.025, 9.4)
+effect = ExtResource("16")
+autoplay = false
+autofree = false

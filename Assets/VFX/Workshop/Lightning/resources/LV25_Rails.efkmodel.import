@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://bqp5skrbu6jo0"
+path="res://.godot/imported/LV25_Rails.efkmodel-720fcb052261d67c56cd2172536d21a8.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV25_Rails.efkmodel"
+dest_files=["res://.godot/imported/LV25_Rails.efkmodel-720fcb052261d67c56cd2172536d21a8.res"]
+
+[params]
+
+compress=true

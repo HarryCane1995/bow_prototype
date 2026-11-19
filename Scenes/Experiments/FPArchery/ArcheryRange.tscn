@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://Scenes/Experiments/FPArchery/archery_range.gd" id="1_controller"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/RangeEnvironment.tscn" id="2_range"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/RangeHUD.tscn" id="3_hud"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/ArcheryPresentation.tscn" id="4_presentation"]
+[ext_resource type="Script" path="res://Scenes/Experiments/FPArchery/bow_audio.gd" id="6_audio"]
+
+[sub_resource type="CapsuleShape3D" id="PlayerCapsule"]
+radius = 0.29
+height = 1.72
+
+[node name="ArcheryRange" type="Node3D"]
+script = ExtResource("1_controller")
+
+[node name="Environment" parent="." instance=ExtResource("2_range")]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+unique_name_in_owner = true
+position = Vector3(0, 0.015, 0)
+collision_layer = 2
+collision_mask = 1
+floor_snap_length = 0.16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+position = Vector3(0, 0.86, 0)
+shape = SubResource("PlayerCapsule")
+
+[node name="WorldCamera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+physics_interpolation_mode = 2
+position = Vector3(0, 1.665, 0)
+current = true
+fov = 98.0
+near = 0.035
+far = 200.0
+
+[node name="Arrows" type="Node3D" parent="."]
+
+[node name="Presentation" parent="." instance=ExtResource("4_presentation")]
+
+[node name="BowAudio" type="Node" parent="."]
+script = ExtResource("6_audio")
+
+[node name="RangeHUD" parent="." instance=ExtResource("3_hud")]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://dtwocriv2ohv8"
+path="res://.godot/imported/LV23_Echo3.efkmodel-946d2daf4802d48d1f721fe372eca877.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV23_Echo3.efkmodel"
+dest_files=["res://.godot/imported/LV23_Echo3.efkmodel-946d2daf4802d48d1f721fe372eca877.res"]
+
+[params]
+
+compress=true

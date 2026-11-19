@@ -9,6 +9,7 @@ public partial class MainCharacterV4 : Node
     [Export] public bool StartSplit { get; set; } = true;
     [Export] public Key ToggleSplitKey { get; set; } = Key.F12;
     [Export] public Key ExternalViewKey { get; set; } = Key.F10;
+    [Export] public TrainingArcheryPresentation FirstPersonOverride { get; set; }
     [Export(PropertyHint.File,"*.json")] public string FpCalibration { get; set; } = "res://Assets/Characters/BaseHumanoid/Exports/BH01_1POV.presentation.json";
     [Export(PropertyHint.Range,"0.1,2,0.01")] public float FpBowScale { get; set; } = .62f;
     [Export] public Vector3 ExternalCameraOffset { get; set; } = new(2.2f,1.6f,3.2f);
@@ -17,6 +18,7 @@ public partial class MainCharacterV4 : Node
     public bool FpVisible => Active && !ExternalView;
     public string StateName => _observer.State.ToString();
     public string LocomotionName => _observer.Locomotion.ToString();
+    public PresentationState Locomotion => _observer.Locomotion;
     public SplitBodyVisual FirstPerson { get; private set; }
     public SplitBodyVisual ThirdPerson { get; private set; }
     public Camera3D FpCamera { get; private set; }
@@ -59,16 +61,25 @@ public partial class MainCharacterV4 : Node
         _cameraLayer=GetNode<SplitGameplayCamera>("GameplayCameraLayer");_cameraLayer.Player=_player;
         _legacyCanvas=_player.GetNode<CanvasLayer>("CanvasLayer_ViewModel");
         _readout=GetNode<Label>("Readout/Label");
-        using var json=JsonDocument.Parse(FileAccess.GetFileAsString(FpCalibration));
-        var m=json.RootElement.GetProperty("fp_model_rows");
-        Vector3 Col(int c)=>new(m[0][c].GetSingle(),m[1][c].GetSingle(),m[2][c].GetSingle());
-        FirstPerson.Transform=new Transform3D(new Basis(Col(0),Col(1),Col(2)),Col(3));
-        FpCamera.Fov=json.RootElement.GetProperty("fov").GetSingle();
-        _ready=true;SetSplitEnabled(StartSplit);
+        if (FirstPersonOverride == null)
+        {
+            using var json=JsonDocument.Parse(FileAccess.GetFileAsString(FpCalibration));
+            var m=json.RootElement.GetProperty("fp_model_rows");
+            Vector3 Col(int c)=>new(m[0][c].GetSingle(),m[1][c].GetSingle(),m[2][c].GetSingle());
+            FirstPerson.Transform=new Transform3D(new Basis(Col(0),Col(1),Col(2)),Col(3));
+            FpCamera.Fov=json.RootElement.GetProperty("fov").GetSingle();
+        }
+        else
+        {
+            _canvas.ProcessMode = ProcessModeEnum.Disabled;
+            _cameraLayer.UseGameplayFov = true;
+            FirstPersonOverride.Bind(_player);
+        }
+        _ready=true;SetSplitEnabled(StartSplit || FirstPersonOverride != null);
     }
     public void SetSplitEnabled(bool enabled)
     {
-        if (!_ready || Active==enabled) return;
+        if (!_ready || Active==enabled || (!enabled && FirstPersonOverride != null)) return;
         if (enabled)
         {
             // Restore the existing bow to its gameplay visual source before
@@ -78,7 +89,10 @@ public partial class MainCharacterV4 : Node
             _player.BowVisualModule.ArrowPresentationOwnedByHands=false;
             _processes.Clear();_canvases.Clear();
             foreach (Node n in new Node[]{_v2,_v3,_player.ViewModelSwayModule,_player.CameraFovModule})
-            { _processes[n]=n.ProcessMode;n.ProcessMode=ProcessModeEnum.Disabled; }
+            {
+                if (FirstPersonOverride != null && n == _player.CameraFovModule) continue;
+                _processes[n]=n.ProcessMode;n.ProcessMode=ProcessModeEnum.Disabled;
+            }
             string root="CanvasLayer_ViewModel/ViewModelSubViewportContainer/ViewModelSubViewport/ViewModelRoot";
             foreach (string path in new[]{root+"/ViewModelSwayRoot/FirstPersonHands",root+"/FirstPersonSlideLegs"})
             { var n=_player.GetNode(path);_processes[n]=n.ProcessMode;n.ProcessMode=ProcessModeEnum.Disabled; }
@@ -92,7 +106,10 @@ public partial class MainCharacterV4 : Node
             camera.CullMask=_savedMask&~(WorldMask|(1u<<17)|FpMask|LegacyMask);
             _savedLookPriority=_player.LookModule.ProcessPriority;_savedWallPriority=_player.WallRunModule.ProcessPriority;
             _player.LookModule.ProcessPriority=-12;_player.WallRunModule.ProcessPriority=-11;
-            FirstPerson.BindBow(_v2.PresentationWeapon,_v2.BowMeshInHand,FpBowScale);
+            if (FirstPersonOverride == null)
+                FirstPerson.BindBow(_v2.PresentationWeapon,_v2.BowMeshInHand,FpBowScale);
+            else
+                _legacyCanvas.GetNode<SubViewport>("ViewModelSubViewportContainer/ViewModelSubViewport").RenderTargetUpdateMode = SubViewport.UpdateMode.Disabled;
             ThirdPerson.BindBow(_v2.PresentationWeapon,_v2.BowMeshInHand,1);
             _observer=new();Active=true;_cameraLayer.Active=true;_cameraLayer._Process(0);
             _observer.Observe(_player,_combat,0);SetExternalView(false);ResetFpDrift();
@@ -108,24 +125,26 @@ public partial class MainCharacterV4 : Node
             _player.BowVisualModule.ArrowPresentationOwnedByHands=_savedArrowOwner;
             _v3.SetHybridSelected(true);
         }
-        ThirdPerson.Visible=Active;_canvas.Visible=FpVisible;
-        _readout.Visible=Active;_viewport.RenderTargetUpdateMode=FpVisible ? SubViewport.UpdateMode.Always : SubViewport.UpdateMode.Disabled;
-        GD.Print("PRESENTATION: "+(Active ? "V4 SPLIT" : "V3 REFERENCE"));
+        ThirdPerson.Visible=Active;
+        _readout.Visible=Active && FirstPersonOverride == null;
+        GD.Print("PRESENTATION: "+(FirstPersonOverride != null ? "FP ARCHERY" : Active ? "V4 SPLIT" : "V3 REFERENCE"));
     }
     public void SetExternalView(bool external)
     {
         ExternalView=Active&&external;
         if (ExternalView) _external.MakeCurrent();else _player.Camera.MakeCurrent();
-        _canvas.Visible=FpVisible;
-        _viewport.RenderTargetUpdateMode=FpVisible ? SubViewport.UpdateMode.Always : SubViewport.UpdateMode.Disabled;
+        bool showBuiltIn = FpVisible && FirstPersonOverride == null;
+        _canvas.Visible = showBuiltIn;
+        _viewport.RenderTargetUpdateMode = showBuiltIn ? SubViewport.UpdateMode.Always : SubViewport.UpdateMode.Disabled;
+        FirstPersonOverride?.SetFirstPersonVisible(FpVisible);
     }
     public override void _Input(InputEvent input)
     {
         if (!_ready || input is not InputEventKey {Pressed:true,Echo:false} key) return;
         bool Is(Key k)=>key.Keycode==k||key.PhysicalKeycode==k;
-        if (Is(ToggleSplitKey)) SetSplitEnabled(!Active);
+        if (FirstPersonOverride == null && Is(ToggleSplitKey)) SetSplitEnabled(!Active);
         else if (Active&&Is(ExternalViewKey)) SetExternalView(!ExternalView);
-        else if (Active&&Is(FPDriftToggleKey)) { FPDriftEnabled=!FPDriftEnabled;ResetFpDrift(); }
+        else if (Active && FirstPersonOverride == null && Is(FPDriftToggleKey)) { FPDriftEnabled=!FPDriftEnabled;ResetFpDrift(); }
         else return;
         GetViewport().SetInputAsHandled();
     }
@@ -139,12 +158,18 @@ public partial class MainCharacterV4 : Node
         float yaw=_player.CrouchSlideModule.IsSliding&&!dir.IsZeroApprox() ? Mathf.Atan2(-dir.X,-dir.Z) : _player.GlobalRotation.Y;
         ThirdPerson.GlobalTransform=new Transform3D(new Basis(Vector3.Up,yaw),_player.GetGlobalTransformInterpolated().Origin);
         ThirdPerson.Present(_observer.State,delta,_player.Camera.GlobalBasis,_player.CrouchSlideModule.IsSliding);
-        FPDriftRoot.Transform=Transform3D.Identity;
-        FirstPerson.Present(_observer.State,delta,FpCamera.GlobalBasis,false);
-        UpdateFpDrift(delta);
+        if (FirstPersonOverride == null)
+        {
+            FPDriftRoot.Transform=Transform3D.Identity;
+            FirstPerson.Present(_observer.State,delta,FpCamera.GlobalBasis,false);
+            UpdateFpDrift(delta);
+        }
+        else
+            ThirdPerson.Bow.Visible = _player.BowShootModule.IsEquipped;
         Vector3 target=_player.GlobalPosition+Vector3.Up*.85f;
         Basis orbit=new Basis(Vector3.Up,_player.GlobalRotation.Y)*new Basis(Vector3.Right,Mathf.Clamp(_player.CameraPivot.Rotation.X,-1,1));
         _external.GlobalPosition=target+orbit*ExternalCameraOffset;_external.LookAt(target,Vector3.Up);
+        if (FirstPersonOverride != null) return;
         _readout.Text=$"V4 SPLIT | {(ExternalView ? "3POV" : "1POV ARMS + BOW")} | {_observer.State}\n"
             +$"FP: {FirstPerson.Clip}\nWORLD: {ThirdPerson.Clip}\nF10: external | F12: V3 reference (then F11: V2 / F9: legacy) | F4: drift {(FPDriftEnabled ? "ON" : "OFF")}";
     }

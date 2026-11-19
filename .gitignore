@@ -4,6 +4,7 @@
 
 # C# build output
 bin/
+!/addons/effekseer/bin/
 obj/
 .vs/
 

@@ -1,0 +1,112 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Experiments/FPArchery/range_target.gd" id="script"]
+[ext_resource type="Shader" path="res://Scenes/Experiments/FPArchery/range_target.gdshader" id="face_shader"]
+
+[sub_resource type="StandardMaterial3D" id="alloy"]
+albedo_color = Color(0.36, 0.42, 0.43, 1)
+metallic = 0.52
+roughness = 0.47
+
+[sub_resource type="StandardMaterial3D" id="case"]
+albedo_color = Color(0.14, 0.20, 0.23, 1)
+metallic = 0.50
+roughness = 0.55
+
+[sub_resource type="StandardMaterial3D" id="polymer"]
+albedo_color = Color(0.065, 0.09, 0.10, 1)
+roughness = 0.91
+
+[sub_resource type="ShaderMaterial" id="screen"]
+resource_local_to_scene = true
+shader = ExtResource("face_shader")
+
+[sub_resource type="BoxMesh" id="block"]
+size = Vector3(1, 1, 1)
+
+[sub_resource type="CylinderMesh" id="case_mesh"]
+material = SubResource("case")
+top_radius = 0.86
+bottom_radius = 0.85
+height = 0.20
+radial_segments = 16
+rings = 1
+
+[sub_resource type="CylinderMesh" id="inset_mesh"]
+material = SubResource("polymer")
+top_radius = 0.806
+bottom_radius = 0.827
+height = 0.058
+radial_segments = 48
+rings = 1
+
+[sub_resource type="TorusMesh" id="bezel_mesh"]
+material = SubResource("alloy")
+inner_radius = 0.770
+outer_radius = 0.803
+rings = 56
+ring_segments = 8
+
+[sub_resource type="QuadMesh" id="screen_mesh"]
+size = Vector2(1.535, 1.535)
+
+[sub_resource type="CylinderShape3D" id="plate_shape"]
+radius = 0.842
+height = 0.23
+
+[node name="RangeTarget" type="StaticBody3D" groups=["fp_archery_target"]]
+script = ExtResource("script")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+position = Vector3(0, 0, 0.016)
+rotation = Vector3(1.5707963, 0, 0)
+shape = SubResource("plate_shape")
+
+[node name="Foot" type="MeshInstance3D" parent="."]
+position = Vector3(0, -1.555, -0.24)
+scale = Vector3(0.94, 0.19, 0.77)
+material_override = SubResource("case")
+mesh = SubResource("block")
+
+[node name="Shaft" type="MeshInstance3D" parent="."]
+position = Vector3(0, -0.825, -0.25)
+scale = Vector3(0.24, 1.65, 0.24)
+material_override = SubResource("alloy")
+mesh = SubResource("block")
+
+[node name="ReadoutBacking" type="MeshInstance3D" parent="."]
+position = Vector3(0, -1.055, -0.070)
+scale = Vector3(0.78, 0.255, 0.085)
+material_override = SubResource("polymer")
+mesh = SubResource("block")
+
+[node name="Readout" type="Label3D" parent="."]
+position = Vector3(0, -1.050, -0.021)
+pixel_size = 0.0043
+font_size = 46
+outline_size = 0
+modulate = Color(0.74, 0.84, 0.85, 1)
+text = "9 м"
+
+[node name="Carriage" type="Node3D" parent="."]
+
+[node name="Housing" type="MeshInstance3D" parent="Carriage"]
+position = Vector3(0, 0, -0.012)
+rotation = Vector3(1.5707963, 0, 0)
+mesh = SubResource("case_mesh")
+
+[node name="Insulator" type="MeshInstance3D" parent="Carriage"]
+position = Vector3(0, 0, 0.096)
+rotation = Vector3(1.5707963, 0, 0)
+mesh = SubResource("inset_mesh")
+
+[node name="Bezel" type="MeshInstance3D" parent="Carriage"]
+position = Vector3(0, 0, 0.118)
+rotation = Vector3(1.5707963, 0, 0)
+mesh = SubResource("bezel_mesh")
+
+[node name="Plate" type="MeshInstance3D" parent="Carriage"]
+position = Vector3(0, 0, 0.129)
+cast_shadow = 0
+material_override = SubResource("screen")
+mesh = SubResource("screen_mesh")

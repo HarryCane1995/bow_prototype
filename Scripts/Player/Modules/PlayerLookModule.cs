@@ -152,7 +152,8 @@ public partial class PlayerLookModule : Node
         }
 
         if (Input.MouseMode != Input.MouseModeEnum.Captured
-            && @event is InputEventMouseButton { ButtonIndex: MouseButton.Left, Pressed: true })
+            && @event is InputEventMouseButton { ButtonIndex: MouseButton.Left, Pressed: true }
+            && GetViewport().GuiGetHoveredControl() is not BaseButton)
         {
             CaptureMouse();
             return true;

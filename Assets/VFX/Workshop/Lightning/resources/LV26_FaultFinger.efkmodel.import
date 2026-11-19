@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://cstpsssxjdkd5"
+path="res://.godot/imported/LV26_FaultFinger.efkmodel-be6abd603857bfd08ba2e9cf637faaf7.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV26_FaultFinger.efkmodel"
+dest_files=["res://.godot/imported/LV26_FaultFinger.efkmodel-be6abd603857bfd08ba2e9cf637faaf7.res"]
+
+[params]
+
+compress=true

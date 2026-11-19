@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/TrainingArcheryPresentation.tscn" id="2_presentation"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/TrainingArrow.tscn" id="3_arrow"]
+
+[node name="Player" instance=ExtResource("1_player")]
+
+[node name="PlayerBowShootModule" parent="." index="13"]
+PresentedArrowScene = ExtResource("3_arrow")
+ManageBowKey = 81
+
+[node name="PlayerViewModelSwayModule" parent="." index="16"]
+process_mode = 4
+
+[node name="CanvasLayer_ViewModel" parent="." index="17"]
+visible = false
+
+[node name="MainCharacterV4" parent="." index="21" node_paths=PackedStringArray("FirstPersonOverride")]
+FirstPersonOverride = NodePath("../TrainingArcheryPresentation")
+
+[node name="TrainingArcheryPresentation" parent="." instance=ExtResource("2_presentation")]
+visible = false

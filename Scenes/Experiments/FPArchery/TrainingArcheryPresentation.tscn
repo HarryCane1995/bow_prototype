@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/ArcheryPresentation.tscn" id="1_presentation"]
+[ext_resource type="Script" path="res://Scripts/Player/Presentation/TrainingArcheryPresentation.cs" id="2_adapter"]
+
+[node name="TrainingArcheryPresentation" instance=ExtResource("1_presentation")]
+script = ExtResource("2_adapter")

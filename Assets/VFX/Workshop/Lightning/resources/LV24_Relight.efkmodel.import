@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://b7mwt58omdxac"
+path="res://.godot/imported/LV24_Relight.efkmodel-1fc5d55c1dbb8edc350e40d5304ec9c5.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV24_Relight.efkmodel"
+dest_files=["res://.godot/imported/LV24_Relight.efkmodel-1fc5d55c1dbb8edc350e40d5304ec9c5.res"]
+
+[params]
+
+compress=true

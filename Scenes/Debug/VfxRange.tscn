@@ -1,0 +1,236 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/VfxRange.gd" id="1"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/TrainingTarget.tscn" id="2"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Bow_Charge.res" id="charge"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Arrow_Trail.res" id="trail"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Arrow_Impact.res" id="impact"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Explosion_01.res" id="explosion"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Explosion_PS1.res" id="explosion_ps1"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Explosion_Hybrid_PS1.res" id="explosion_hybrid"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Debug/SmokeGallery.tscn" id="smoke_gallery"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Debug/ExplosionGallery.tscn" id="ExplosionGallery"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/FireGallery.tscn" id="FireGallery"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Debug/WeatherGallery.tscn" id="weather_gallery"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/LightningGallery.tscn" id="LightningGallery"]
+
+[sub_resource type="StyleBoxFlat" id="Panel"]
+content_margin_left = 13.0
+content_margin_top = 9.0
+content_margin_right = 13.0
+content_margin_bottom = 9.0
+bg_color = Color(0.035, 0.067, 0.09, 0.94)
+border_width_left = 2
+border_color = Color(0.25, 0.84, 0.82, 1)
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+
+[node name="VfxRange" type="Node3D"]
+script = ExtResource("1")
+charge_effect = ExtResource("charge")
+trail_effect = ExtResource("trail")
+impact_effect = ExtResource("impact")
+explosion_effect = ExtResource("explosion")
+explosion_ps1_effect = ExtResource("explosion_ps1")
+explosion_hybrid_effect = ExtResource("explosion_hybrid")
+
+[node name="ViewPoint" type="Marker3D" parent="."]
+position = Vector3(0, 0.14, 4.3)
+rotation = Vector3(0, -0.16, 0)
+
+[node name="Launch" type="Marker3D" parent="."]
+position = Vector3(-3, 1.55, 0.8)
+
+[node name="BlastOrigin" type="Marker3D" parent="."]
+position = Vector3(2.15, 0, -1.65)
+
+[node name="BlastFlash" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.58, 0.25, 1)
+light_energy = 0.0
+omni_range = 4.8
+
+[node name="Target" parent="." instance=ExtResource("2")]
+position = Vector3(1.7, 0, -5.8)
+
+[node name="Effects" type="Node3D" parent="."]
+
+[node name="SmokeGallery" parent="." instance=ExtResource("smoke_gallery")]
+
+[node name="ExplosionGallery" parent="." instance=ExtResource("ExplosionGallery")]
+
+[node name="FireGallery" parent="." instance=ExtResource("FireGallery")]
+
+[node name="WeatherGallery" parent="." instance=ExtResource("weather_gallery")]
+
+[node name="LightningGallery" parent="." instance=ExtResource("LightningGallery")]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 5
+
+[node name="Hint" type="Label" parent="HUD"]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -340.0
+offset_right = -16.0
+offset_top = 14.0
+mouse_filter = 2
+theme_override_constants/outline_size = 4
+horizontal_alignment = 2
+text = "V   Тренировочный двор · VFX"
+
+[node name="Panel" type="PanelContainer" parent="HUD"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -365.0
+offset_right = -14.0
+offset_top = 14.0
+theme_override_styles/panel = SubResource("Panel")
+
+[node name="Rows" type="VBoxContainer" parent="HUD/Panel"]
+theme_override_constants/separation = 5
+
+[node name="Header" type="HBoxContainer" parent="HUD/Panel/Rows"]
+
+[node name="Title" type="Label" parent="HUD/Panel/Rows/Header"]
+text = "VFX  /"
+theme_override_colors/font_color = Color(0.42, 0.90, 0.89, 1)
+
+[node name="Status" type="Label" parent="HUD/Panel/Rows/Header"]
+unique_name_in_owner = true
+text = "Bow Charge"
+
+[node name="Pick" type="HBoxContainer" parent="HUD/Panel/Rows"]
+
+[node name="One" type="Button" parent="HUD/Panel/Rows/Pick"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "1  Заряд"
+
+[node name="Two" type="Button" parent="HUD/Panel/Rows/Pick"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "2  Шлейф"
+
+[node name="Three" type="Button" parent="HUD/Panel/Rows/Pick"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "3  Удар"
+
+[node name="Blasts" type="HBoxContainer" parent="HUD/Panel/Rows"]
+
+[node name="Four" type="Button" parent="HUD/Panel/Rows/Blasts"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "4  Взрыв"
+
+[node name="Five" type="Button" parent="HUD/Panel/Rows/Blasts"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "5  Взрыв PS1"
+
+[node name="Six" type="Button" parent="HUD/Panel/Rows/Blasts"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+focus_mode = 0
+text = "6  Гибрид"
+
+[node name="Actions" type="HBoxContainer" parent="HUD/Panel/Rows"]
+
+[node name="Replay" type="Button" parent="HUD/Panel/Rows/Actions"]
+unique_name_in_owner = true
+focus_mode = 0
+text = "T  Ещё раз"
+
+[node name="Series" type="Button" parent="HUD/Panel/Rows/Actions"]
+unique_name_in_owner = true
+focus_mode = 0
+text = "G  Серия лука"
+
+[node name="Loop" type="CheckButton" parent="HUD/Panel/Rows/Actions"]
+unique_name_in_owner = true
+focus_mode = 0
+text = "L  Цикл"
+
+[node name="GalleryTabs" type="HBoxContainer" parent="HUD/Panel/Rows"]
+
+[node name="GallerySwitch" type="Button" parent="HUD/Panel/Rows/GalleryTabs"]
+unique_name_in_owner = true
+focus_mode = 0
+size_flags_horizontal = 3
+text = "7  Дым"
+tooltip_text = "Smoke Gallery"
+
+[node name="BlastGallerySwitch" type="Button" parent="HUD/Panel/Rows/GalleryTabs"]
+unique_name_in_owner = true
+focus_mode = 0
+size_flags_horizontal = 3
+text = "8  Взрывы"
+tooltip_text = "Explosion Gallery"
+
+[node name="FireGallerySwitch" type="Button" parent="HUD/Panel/Rows/GalleryTabs"]
+unique_name_in_owner = true
+focus_mode = 0
+size_flags_horizontal = 3
+text = "9  Огонь"
+tooltip_text = "Fire Gallery"
+
+[node name="LightningGallerySwitch" type="Button" parent="HUD/Panel/Rows/GalleryTabs"]
+unique_name_in_owner = true
+focus_mode = 0
+size_flags_horizontal = 3
+text = "0  Молнии"
+tooltip_text = "Lightning Gallery"
+
+[node name="WeatherGallerySwitch" type="Button" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+focus_mode = 0
+text = "P  Погода"
+tooltip_text = "Weather & Atmosphere"
+
+[node name="WeatherControls" type="VBoxContainer" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+visible = false
+
+[node name="LightningControls" type="VBoxContainer" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+visible = false
+
+[node name="SmokeControls" type="VBoxContainer" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+visible = false
+
+[node name="BlastControls" type="VBoxContainer" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+visible = false
+
+[node name="FireControls" type="VBoxContainer" parent="HUD/Panel/Rows"]
+unique_name_in_owner = true
+visible = false
+
+[node name="SmokeActions" type="HBoxContainer" parent="HUD/Panel/Rows"]
+visible = false
+
+[node name="ReplaySmoke" type="Button" parent="HUD/Panel/Rows/SmokeActions"]
+unique_name_in_owner = true
+focus_mode = 0
+text = "T  Повтор разовых"
+
+[node name="CycleSmoke" type="CheckButton" parent="HUD/Panel/Rows/SmokeActions"]
+unique_name_in_owner = true
+focus_mode = 0
+button_pressed = true
+text = "L  Цикл"
+
+[node name="Help" type="Label" parent="HUD/Panel/Rows"]
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.76, 0.83, 0.86, 1)
+text = "Esc — курсор · ЛКМ вне панели — обзор"

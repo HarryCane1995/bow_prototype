@@ -1,0 +1,72 @@
+{
+  "clips": {
+    "FPV_CANCEL_DRAW": {
+      "duration_seconds": 0.43333333333333335,
+      "loop": false
+    },
+    "FPV_DRAW_CHARGE": {
+      "duration_seconds": 0.6666666666666666,
+      "loop": false
+    },
+    "FPV_DRAW_START": {
+      "duration_seconds": 0.16666666666666666,
+      "loop": false
+    },
+    "FPV_EQUIP": {
+      "duration_seconds": 0.43333333333333335,
+      "loop": false
+    },
+    "FPV_FULL_DRAW_HOLD": {
+      "duration_seconds": 1.5,
+      "loop": true
+    },
+    "FPV_IDLE": {
+      "duration_seconds": 2.2,
+      "loop": true
+    },
+    "FPV_JUMP": {
+      "duration_seconds": 0.48333333333333334,
+      "loop": false
+    },
+    "FPV_LAND": {
+      "duration_seconds": 0.3,
+      "loop": false
+    },
+    "FPV_PRECISION_CANCEL_DRAW": {
+      "duration_seconds": 0.43333333333333335,
+      "loop": false
+    },
+    "FPV_PRECISION_DRAW_CHARGE": {
+      "duration_seconds": 0.6666666666666666,
+      "loop": false
+    },
+    "FPV_PRECISION_DRAW_START": {
+      "duration_seconds": 0.16666666666666666,
+      "loop": false
+    },
+    "FPV_PRECISION_FULL_DRAW_HOLD": {
+      "duration_seconds": 1.5,
+      "loop": true
+    },
+    "FPV_PRECISION_RELEASE": {
+      "duration_seconds": 0.45,
+      "loop": false
+    },
+    "FPV_READY": {
+      "duration_seconds": 1.4,
+      "loop": true
+    },
+    "FPV_RELEASE": {
+      "duration_seconds": 0.45,
+      "loop": false
+    },
+    "FPV_RUN_SWAY": {
+      "duration_seconds": 0.6666666666666666,
+      "loop": true
+    },
+    "FPV_UNEQUIP": {
+      "duration_seconds": 0.36666666666666664,
+      "loop": false
+    }
+  }
+}

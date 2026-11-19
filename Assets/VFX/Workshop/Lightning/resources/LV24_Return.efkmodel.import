@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://oo4wsqn37vji"
+path="res://.godot/imported/LV24_Return.efkmodel-0c02b1473d39ff9fddd4d75f72cadc10.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV24_Return.efkmodel"
+dest_files=["res://.godot/imported/LV24_Return.efkmodel-0c02b1473d39ff9fddd4d75f72cadc10.res"]
+
+[params]
+
+compress=true

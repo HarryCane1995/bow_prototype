@@ -34,6 +34,9 @@ public partial class ArrowProjectile : Area3D
     /// </summary>
     [Export] public Vector3 RotationOffsetDegrees { get; set; } = Vector3.Zero;
 
+    // A tip-origin mesh, with its nock on +Z. Only the presented launch uses it.
+    [Export] public NodePath PresentedShaftPath { get; set; }
+
     /// <summary>
     /// Удалять стрелу сразу при попадании. Если выключить, стрела остановится и проживёт HitStickTime перед удалением.
     /// </summary>
@@ -66,6 +69,11 @@ public partial class ArrowProjectile : Area3D
     private float _lifetimeRemaining;
     private float _stickTimeRemaining;
     private bool _wasInitialized;
+    private bool _usePresentedRoll;
+    private bool _pendingSpawnSweep;
+    private Rid _shooter;
+    private Vector3 _launchEye;
+    private Vector3 _launchNock;
 
     public override void _Ready()
     {
@@ -92,6 +100,13 @@ public partial class ArrowProjectile : Area3D
             }
 
             return;
+        }
+
+        if (_pendingSpawnSweep)
+        {
+            _pendingSpawnSweep = false;
+            if (TrySweepHit(_launchEye, _launchNock) || TrySweepHit(_launchNock, GlobalPosition))
+                return;
         }
 
         if (FlightMode == ArrowFlightMode.Ballistic)
@@ -125,6 +140,19 @@ public partial class ArrowProjectile : Area3D
         Initialize(direction, speed, damage, lifetime, FlightMode, ArmorPiercing);
     }
 
+    internal void SetPresentedLaunch(Transform3D nock, Vector3 eye, Rid shooter)
+    {
+        var shaft = GetNode<MeshInstance3D>(PresentedShaftPath);
+        float length = shaft.GetAabb().Size.Z;
+        Basis orientation = nock.Basis.Orthonormalized();
+        GlobalTransform = new Transform3D(orientation, nock.Origin - orientation.Z * length);
+        _launchEye = eye;
+        _launchNock = nock.Origin;
+        _shooter = shooter;
+        _pendingSpawnSweep = _usePresentedRoll = true;
+        ResetPhysicsInterpolation();
+    }
+
     public void Initialize(Vector3 direction, float speed, float damage, float lifetime, ArrowFlightMode flightMode, bool armorPiercing)
     {
         Speed = speed;
@@ -146,12 +174,15 @@ public partial class ArrowProjectile : Area3D
 
     private void OnBodyEntered(Node3D body)
     {
+        if (_pendingSpawnSweep || (_usePresentedRoll && body is CollisionObject3D other && other.GetRid() == _shooter))
+            return;
         HandleHit(body);
     }
 
     private void OnAreaEntered(Area3D area)
     {
-        HandleHit(area);
+        if (!_pendingSpawnSweep)
+            HandleHit(area);
     }
 
     private bool TrySweepHit(Vector3 from, Vector3 to)
@@ -160,7 +191,13 @@ public partial class ArrowProjectile : Area3D
         query.CollideWithAreas = true;
         query.CollideWithBodies = true;
         query.CollisionMask = CollisionMask;
-        query.Exclude = new Godot.Collections.Array<Rid> { GetRid() };
+        var excluded = new Godot.Collections.Array<Rid> { GetRid() };
+        if (_usePresentedRoll)
+        {
+            excluded.Add(_shooter);
+            query.HitFromInside = true;
+        }
+        query.Exclude = excluded;
 
         Godot.Collections.Dictionary hit = GetWorld3D().DirectSpaceState.IntersectRay(query);
         if (hit.Count == 0)
@@ -181,7 +218,7 @@ public partial class ArrowProjectile : Area3D
 
     private void HandleHit(Node hitNode)
     {
-        if (_isStopped)
+        if (_isStopped || IsQueuedForDeletion())
         {
             return;
         }
@@ -245,6 +282,14 @@ public partial class ArrowProjectile : Area3D
     {
         if (_velocity.LengthSquared() <= 0.0001f)
         {
+            return;
+        }
+
+        if (_usePresentedRoll)
+        {
+            // Transport the existing fletching around the turn made by gravity.
+            var turn = new Quaternion(-GlobalBasis.Z.Normalized(), _velocity.Normalized());
+            GlobalBasis = (new Basis(turn) * GlobalBasis).Orthonormalized();
             return;
         }
 

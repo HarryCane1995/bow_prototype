@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/ArrowProjectile.tscn" id="1_arrow"]
+[ext_resource type="PackedScene" path="res://Assets/Experiments/FPArchery/FlightArrow.glb" id="2_flight_art"]
+
+[sub_resource type="SphereShape3D" id="Tip"]
+radius = 0.015
+
+[node name="TrainingArrow" instance=ExtResource("1_arrow")]
+PresentedShaftPath = NodePath("FlightArt/FlightArrow")
+
+[node name="CollisionShape3D" parent="." index="0"]
+position = Vector3(0, 0, 0.015)
+shape = SubResource("Tip")
+
+[node name="ArrowVisual" parent="." index="1"]
+visible = false
+
+[node name="FlightArt" parent="." instance=ExtResource("2_flight_art")]

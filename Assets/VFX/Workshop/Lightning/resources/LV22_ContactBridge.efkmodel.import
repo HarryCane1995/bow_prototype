@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://ciufj2dc72itp"
+path="res://.godot/imported/LV22_ContactBridge.efkmodel-488d9017cb09c4aaf86a15f684ff7b0c.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV22_ContactBridge.efkmodel"
+dest_files=["res://.godot/imported/LV22_ContactBridge.efkmodel-488d9017cb09c4aaf86a15f684ff7b0c.res"]
+
+[params]
+
+compress=true

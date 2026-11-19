@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://caikpysid7jex"
+path="res://.godot/imported/LV24_Relight.efkmodel-f582e4f58e56c2140d429644ce7840e3.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Weather/resources/LV24_Relight.efkmodel"
+dest_files=["res://.godot/imported/LV24_Relight.efkmodel-f582e4f58e56c2140d429644ce7840e3.res"]
+
+[params]
+
+compress=true

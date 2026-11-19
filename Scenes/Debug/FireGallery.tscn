@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/Levels/SmokeGallery.gd" id="gallery"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Fire_Loop_Small.res" id="17"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Fire_Loop_Medium.res" id="18"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Fire_Pillar.res" id="19"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Ground_Fire_Patch.res" id="20"]
+[ext_resource type="EffekseerEffect" path="res://Assets/VFX/Workshop/Combustion/Burning_Wreck_Fire.res" id="21"]
+
+[node name="FireGallery" type="Node3D"]
+script = ExtResource("gallery")
+first_number = 17
+
+[node name="Overview" type="Marker3D" parent="."]
+position = Vector3(9, 0.14, 21.4)
+
+[node name="Stations" type="Node3D" parent="."]
+
+[node name="Fire Loop Small" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(-2, 0.025, 9.4)
+effect = ExtResource("17")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Fire Loop Medium" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(3.7, 0.025, 6.8)
+effect = ExtResource("18")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Fire Pillar" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(9, 0.025, 10)
+effect = ExtResource("19")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Ground Fire Patch" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(14.7, 0.025, 6.8)
+effect = ExtResource("20")
+autoplay = false
+autofree = false
+metadata/continuous = true
+
+[node name="Burning Wreck Fire" type="EffekseerEmitter3D" parent="Stations"]
+position = Vector3(20, 0.025, 9.4)
+effect = ExtResource("21")
+autoplay = false
+autofree = false
+metadata/continuous = true

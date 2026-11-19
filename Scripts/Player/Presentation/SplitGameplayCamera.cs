@@ -7,6 +7,7 @@ public partial class SplitGameplayCamera : Node
     [Export(PropertyHint.Range,"30,120,0.5,suffix:deg")] public float FieldOfView { get; set; } = 98;
     public PlayerController Player { get; set; }
     public bool Active { get; set; }
+    public bool UseGameplayFov { get; set; }
     public override void _Ready() => ProcessPriority=-10;
     public override void _Process(double delta)
     {
@@ -15,6 +16,6 @@ public partial class SplitGameplayCamera : Node
         Vector3 origin=Player.GetGlobalTransformInterpolated().Origin
             + Player.GlobalBasis*(Player.CameraPivot.Position+EyeOffsetFromPivot);
         Player.Camera.GlobalTransform=new Transform3D(effects.GlobalBasis.Orthonormalized(),origin);
-        Player.Camera.Fov=FieldOfView;
+        if (!UseGameplayFov) Player.Camera.Fov=FieldOfView;
     }
 }

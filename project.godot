@@ -23,6 +23,10 @@ PlayerAudio="*res://Scripts/Audio/PlayerAudioController.cs"
 
 project/assembly_name="Bow_prototype"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/effekseer/plugin.cfg")
+
 [input]
 
 rmb_combat={

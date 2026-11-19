@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://bqnjq1a5x06ad"
+path="res://.godot/imported/LV22_Catch.efkmodel-b007d027f64b739e5f2df420cd3479b4.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV22_Catch.efkmodel"
+dest_files=["res://.godot/imported/LV22_Catch.efkmodel-b007d027f64b739e5f2df420cd3479b4.res"]
+
+[params]
+
+compress=true

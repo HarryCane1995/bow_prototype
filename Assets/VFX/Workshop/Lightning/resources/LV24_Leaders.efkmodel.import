@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://boara17tuxti3"
+path="res://.godot/imported/LV24_Leaders.efkmodel-6f10563d35ffa682faf8956df8a83f44.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV24_Leaders.efkmodel"
+dest_files=["res://.godot/imported/LV24_Leaders.efkmodel-6f10563d35ffa682faf8956df8a83f44.res"]
+
+[params]
+
+compress=true

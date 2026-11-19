@@ -135,7 +135,7 @@ public partial class PlayerViewModelSwayModule : Node
         _previousVelocity = _player.Velocity;
         _previousIsOnFloor = _player.IsGrounded;
 
-        if (_viewModelCamera == null || _arrowTipMarker == null)
+        if (CanProcess() && (_viewModelCamera == null || _arrowTipMarker == null))
         {
             WarnMissingAimStabilizationReferences();
         }

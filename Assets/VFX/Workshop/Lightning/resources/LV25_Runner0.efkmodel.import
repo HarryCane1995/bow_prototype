@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://blpgyso3gimhs"
+path="res://.godot/imported/LV25_Runner0.efkmodel-7444b5d99b086e29df8a96e0d5da9566.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV25_Runner0.efkmodel"
+dest_files=["res://.godot/imported/LV25_Runner0.efkmodel-7444b5d99b086e29df8a96e0d5da9566.res"]
+
+[params]
+
+compress=true

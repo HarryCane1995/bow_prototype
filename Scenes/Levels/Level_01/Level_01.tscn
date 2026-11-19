@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bst7plxmvwfkx" path="res://Scripts/Levels/ImportedLevelMarkerBinder.cs" id="1_marker_binder"]
 [ext_resource type="PackedScene" uid="uid://ecws3xg03lek" path="res://Level_01_Blockout.blend" id="2_imported_level"]
-[ext_resource type="PackedScene" uid="uid://cgvixhtobap65" path="res://Scenes/Player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/TrainingPlayer.tscn" id="3_player"]
 [ext_resource type="PackedScene" path="res://Scenes/GrappleAnchor.tscn" id="4_grapple_anchor"]
 [ext_resource type="Script" uid="uid://cb6a5eskkopeh" path="res://Scripts/System/StartupWindowModeController.cs" id="5_startup_window_mode"]
 [ext_resource type="Texture2D" uid="uid://cbgrraldhdcfq" path="res://Art/Skyboxes/ferndale_studio_10_4k.exr" id="6_skybox"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" path="res://Scenes/Rendering/StylizedContactDarkening.tscn" id="11_contact_darkening"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/Level_01/CombatDraft.tscn" id="12_combat_draft"]
 [ext_resource type="PackedScene" path="res://Scenes/Levels/Level_01/ArtAtmosphere.tscn" id="13_art_atmosphere"]
+[ext_resource type="PackedScene" path="res://Scenes/Debug/VfxRange.tscn" id="14_vfx_range"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/TrainingArrow.tscn" id="15_training_arrow"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_level_01"]
 panorama = ExtResource("6_skybox")
@@ -125,3 +127,8 @@ text = "0.0 m/s"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("10_speedometer_hud")
+
+[node name="VfxRange" parent="." node_paths=PackedStringArray("bow_presentation") instance=ExtResource("14_vfx_range")]
+position = Vector3(5.53069, -0.747461, 0.947812)
+bow_presentation = NodePath("../Player/TrainingArcheryPresentation")
+demo_arrow_scene = ExtResource("15_training_arrow")

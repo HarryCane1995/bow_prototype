@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://dwqygt64mlucs"
+path="res://.godot/imported/LV24_Leaders.efkmodel-7e5bc71a785690ad4fb52ec8be666d42.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Weather/resources/LV24_Leaders.efkmodel"
+dest_files=["res://.godot/imported/LV24_Leaders.efkmodel-7e5bc71a785690ad4fb52ec8be666d42.res"]
+
+[params]
+
+compress=true

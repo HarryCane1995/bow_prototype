@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 public partial class PlayerBowShootModule : Node
 {
@@ -18,6 +19,7 @@ public partial class PlayerBowShootModule : Node
     /// </summary>
     [ExportGroup("Ссылки")]
     [Export] public PackedScene ArrowProjectileScene { get; set; }
+    [Export] public PackedScene PresentedArrowScene { get; set; }
 
     /// <summary>
     /// Путь к камере, задающей направление выстрела. Смена пути меняет источник направления; неверный путь заставит модуль использовать камеру игрока как fallback.
@@ -28,6 +30,9 @@ public partial class PlayerBowShootModule : Node
     /// Путь к точке появления projectile-стрелы. Смена пути меняет место спавна; неверный путь заставит модуль использовать камеру.
     /// </summary>
     [Export] public NodePath ShootPointPath { get; set; } = new("../CameraPivot/Camera3D/ShootPoint");
+
+    [ExportGroup("Управление луком")]
+    [Export] public Key ManageBowKey { get; set; } = Key.None;
 
     /// <summary>
     /// Скорость лёгкого выстрела без полного натяжения. Увеличение делает быструю стрелу быстрее и прямее; уменьшение делает её медленнее.
@@ -110,6 +115,30 @@ public partial class PlayerBowShootModule : Node
     private bool _isPrecisionReady;
     private float _holdTime;
     private float _cooldownRemaining;
+    private bool _ignoreHeldPress;
+    private bool _canceledRelease;
+    private PresentedPose? _pressPose;
+    private PresentedPose? _releasePose;
+    private Func<Transform3D?> _presentedArrowFrame;
+
+    // The optional first-person presenter supplies the last displayed nock pose.
+    // It observes these edges and never creates a projectile itself.
+    public Func<Transform3D?> PresentedArrowFrame
+    {
+        get => _presentedArrowFrame;
+        set
+        {
+            _presentedArrowFrame = value;
+            ClearInputPoses();
+        }
+    }
+    public event Action DrawBegan;
+    public event Action DrawCanceled;
+    public event Action<float, bool> ShotReleased;
+    public event Action<bool> EquippedChanged;
+    public bool IsEquipped { get; private set; } = true;
+    public bool IsDrawing => _isHoldingFire;
+    public float DrawAmount => _isHoldingFire ? Mathf.Clamp(_holdTime / Mathf.Max(0.001f, ChargeTime), 0f, 1f) : 0f;
 
     /// <summary>
     /// Активна ли precision-стойка от зажатого Alt. Когда true, визуал лука и FOV переходят в precision-ready состояние, но сам выстрел всё равно требует нового нажатия ЛКМ.
@@ -125,14 +154,80 @@ public partial class PlayerBowShootModule : Node
         _shootPoint = GetNodeOrNull<Node3D>(ShootPointPath) ?? _camera?.GetNodeOrNull<Node3D>("ShootPoint") ?? _camera;
         _bowVisualModule = _player.BowVisualModule;
         _cameraFovModule = _player.CameraFovModule;
+        SetProcessInput(ManageBowKey != Key.None || PresentedArrowScene != null);
+    }
+
+    public override void _Input(InputEvent input)
+        => HandlePresentationInput(input, Input.MouseMode == Input.MouseModeEnum.Captured);
+
+    private void HandlePresentationInput(InputEvent input, bool hasControl)
+    {
+        if (_ignoreHeldPress && input.IsActionReleased(FireAction))
+        {
+            // The canceled up-edge and a fresh down-edge can share one poll.
+            _canceledRelease = true;
+            return;
+        }
+        if (_ignoreHeldPress && input.IsActionPressed(FireAction))
+            _ignoreHeldPress = false;
+
+        if (!hasControl)
+            return;
+        if (IsEquipped && !_ignoreHeldPress && PresentedArrowScene != null && PresentedArrowFrame != null)
+        {
+            // Polling still owns acceptance. Keep press and release separately
+            // because a quick click can put both edges in a single render tick.
+            if (input.IsActionPressed(FireAction))
+                _pressPose = ReadPresentedPose();
+            else if (input.IsActionReleased(FireAction))
+            {
+                _canceledRelease = false;
+                _releasePose = ReadPresentedPose();
+            }
+        }
+        if (ManageBowKey == Key.None || input is not InputEventKey key || !key.Pressed || key.Echo)
+            return;
+        Key code = key.PhysicalKeycode != Key.None ? key.PhysicalKeycode : key.Keycode;
+        if (code != ManageBowKey)
+            return;
+
+        ClearInputPoses();
+        bool held = Input.IsActionPressed(FireAction);
+        _ignoreHeldPress = held;
+        if (IsEquipped && (_isHoldingFire || held))
+        {
+            if (_isHoldingFire)
+                CancelShot();
+        }
+        else
+        {
+            IsEquipped = !IsEquipped;
+            UpdatePrecisionReadyState(CanUsePrecisionReady(), true);
+            EquippedChanged?.Invoke(IsEquipped);
+        }
+        GetViewport().SetInputAsHandled();
+    }
+
+    public override void _Notification(int what)
+    {
+        if ((what != NotificationWMWindowFocusOut && what != NotificationPaused) ||
+            (ManageBowKey == Key.None && PresentedArrowScene == null))
+            return;
+        ClearInputPoses();
+        if (_isHoldingFire)
+            CancelShot();
     }
 
     public override void _Process(double delta)
     {
-        float deltaTime = (float)delta;
+        AdvanceInput((float)delta, Input.MouseMode == Input.MouseModeEnum.Captured);
+        ClearInputPoses();
+    }
+
+    private void AdvanceInput(float deltaTime, bool canUseGameplayInput)
+    {
         _cooldownRemaining = Mathf.Max(0.0f, _cooldownRemaining - deltaTime);
-        bool canUseGameplayInput = Input.MouseMode == Input.MouseModeEnum.Captured;
-        UpdatePrecisionReadyState(canUseGameplayInput && CurrentEnablePrecisionShot && Input.IsActionPressed(PrecisionModifierAction));
+        UpdatePrecisionReadyState(IsEquipped && canUseGameplayInput && CurrentEnablePrecisionShot && Input.IsActionPressed(PrecisionModifierAction));
 
         if (_isHoldingFire && !canUseGameplayInput)
         {
@@ -140,7 +235,7 @@ public partial class PlayerBowShootModule : Node
             return;
         }
 
-        if (!canUseGameplayInput)
+        if (!canUseGameplayInput || !IsEquipped)
         {
             return;
         }
@@ -155,7 +250,23 @@ public partial class PlayerBowShootModule : Node
             return;
         }
 
-        if (Input.IsActionJustPressed(FireAction))
+        if (_ignoreHeldPress)
+        {
+            if (!Input.IsActionPressed(FireAction))
+                _ignoreHeldPress = false;
+            return;
+        }
+
+        bool pressed = Input.IsActionJustPressed(FireAction);
+        bool held = Input.IsActionPressed(FireAction);
+        bool released = Input.IsActionJustReleased(FireAction) && !_canceledRelease;
+        // The previous draw can finish and a new native press arrive between
+        // consecutive render ticks. Finish the old charge before resetting it.
+        bool releasedBeforePress = _isHoldingFire && pressed && held && released &&
+            _releasePose.HasValue && _pressPose.HasValue;
+        if (releasedBeforePress)
+            ReleaseShot();
+        if (pressed)
         {
             if (_isPrecisionReady)
             {
@@ -167,12 +278,12 @@ public partial class PlayerBowShootModule : Node
             }
         }
 
-        if (_isHoldingFire && Input.IsActionPressed(FireAction))
+        if (_isHoldingFire && held)
         {
             UpdateDraw(deltaTime);
         }
 
-        if (_isHoldingFire && Input.IsActionJustReleased(FireAction))
+        if (_isHoldingFire && released && !releasedBeforePress)
         {
             ReleaseShot();
         }
@@ -184,14 +295,13 @@ public partial class PlayerBowShootModule : Node
         _holdTime = 0.0f;
         _shotState = BowShotState.Drawing;
         UpdatePrecisionReadyState(CanUsePrecisionReady(), true);
+        DrawBegan?.Invoke();
     }
 
     private void UpdateDraw(float deltaTime)
     {
         _holdTime += deltaTime;
-        float chargeDuration = Mathf.Max(0.001f, ChargeTime);
-        float drawAmount = Mathf.Clamp(_holdTime / chargeDuration, 0.0f, 1.0f);
-        _bowVisualModule?.SetDrawAmount(drawAmount);
+        _bowVisualModule?.SetDrawAmount(DrawAmount);
 
         if (_holdTime >= ChargeTime && _shotState == BowShotState.Drawing)
         {
@@ -203,19 +313,17 @@ public partial class PlayerBowShootModule : Node
     {
         _shotState = BowShotState.Released;
 
+        float amount = DrawAmount;
         bool chargedShot = _holdTime >= ChargeTime;
-        bool shotFired = Fire(GetShotConfig(chargedShot));
-
-        if (shotFired)
+        if (!Fire(GetShotConfig(chargedShot)))
         {
-            _bowVisualModule?.HandleShotVisual();
-        }
-        else
-        {
-            _bowVisualModule?.ResetDraw();
+            CancelShot();
+            return;
         }
 
+        _bowVisualModule?.HandleShotVisual();
         ResetShotState();
+        ShotReleased?.Invoke(amount, false);
     }
 
     private void FireInstantPrecisionShot()
@@ -236,12 +344,16 @@ public partial class PlayerBowShootModule : Node
         }
 
         ResetShotState();
+        if (shotFired)
+            ShotReleased?.Invoke(1f, true);
     }
 
     private void CancelShot()
     {
+        ClearInputPoses();
         _bowVisualModule?.ResetDraw();
         ResetShotState();
+        DrawCanceled?.Invoke();
     }
 
     private ShotConfig GetShotConfig(bool chargedShot)
@@ -266,18 +378,34 @@ public partial class PlayerBowShootModule : Node
             return false;
         }
 
-        if (_cooldownRemaining > 0.0f || ArrowProjectileScene == null || _camera == null)
+        if (_cooldownRemaining > 0.0f || _camera == null || !IsEquipped)
         {
             return false;
         }
 
-        ArrowProjectile projectile = ArrowProjectileScene.Instantiate<ArrowProjectile>();
-        Vector3 shootDirection = -_camera.GlobalTransform.Basis.Z.Normalized();
-        Vector3 origin = (_shootPoint ?? _camera).GlobalPosition + shootDirection * SpawnForwardOffset;
+        // Missing native events (e.g. programmatic Input.ActionPress) sample
+        // on acceptance. A native event captured in external view stays there.
+        PresentedPose? pose = shotConfig.FlightMode == ArrowFlightMode.Straight ? _pressPose : _releasePose;
+        pose ??= ReadPresentedPose();
+        Transform3D? displayed = pose?.Nock;
+        PackedScene scene = displayed.HasValue ? PresentedArrowScene : ArrowProjectileScene;
+        if (scene == null)
+            return false;
+        ArrowProjectile projectile = scene.Instantiate<ArrowProjectile>();
         projectile.ProjectileGravity = CurrentProjectileGravity;
-
         GetTree().CurrentScene.AddChild(projectile);
-        projectile.GlobalPosition = origin;
+
+        Vector3 shootDirection;
+        if (displayed is Transform3D nock)
+        {
+            shootDirection = -nock.Basis.Z.Normalized();
+            projectile.SetPresentedLaunch(nock, pose.Value.Eye, _player.GetRid());
+        }
+        else
+        {
+            shootDirection = -_camera.GlobalTransform.Basis.Z.Normalized();
+            projectile.GlobalPosition = (_shootPoint ?? _camera).GlobalPosition + shootDirection * SpawnForwardOffset;
+        }
 
         // Gameplay rule: arrows use only aim direction and shot speed, never player velocity.
         projectile.Initialize(
@@ -292,6 +420,22 @@ public partial class PlayerBowShootModule : Node
         _cooldownRemaining = FireCooldown;
         return true;
     }
+
+    private PresentedPose? ReadPresentedPose()
+    {
+        if (PresentedArrowScene == null || PresentedArrowFrame == null || _camera == null)
+            return null;
+        return new PresentedPose(PresentedArrowFrame(), _camera.GetCameraTransform().Origin);
+    }
+
+    private void ClearInputPoses()
+    {
+        _pressPose = null;
+        _releasePose = null;
+        _canceledRelease = false;
+    }
+
+    private readonly record struct PresentedPose(Transform3D? Nock, Vector3 Eye);
 
     private void ResetShotState()
     {
@@ -312,7 +456,7 @@ public partial class PlayerBowShootModule : Node
 
     private bool CanUsePrecisionReady()
     {
-        return Input.MouseMode == Input.MouseModeEnum.Captured && CurrentEnablePrecisionShot && Input.IsActionPressed(PrecisionModifierAction);
+        return IsEquipped && Input.MouseMode == Input.MouseModeEnum.Captured && CurrentEnablePrecisionShot && Input.IsActionPressed(PrecisionModifierAction);
     }
 
     private void UpdatePrecisionReadyState(bool isPrecisionReady, bool forceApply = false)

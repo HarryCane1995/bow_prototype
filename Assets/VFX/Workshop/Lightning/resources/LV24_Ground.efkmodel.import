@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://d0pdny6wdieir"
+path="res://.godot/imported/LV24_Ground.efkmodel-f578abc719bacb6a86c1e822791f497e.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV24_Ground.efkmodel"
+dest_files=["res://.godot/imported/LV24_Ground.efkmodel-f578abc719bacb6a86c1e822791f497e.res"]
+
+[params]
+
+compress=true

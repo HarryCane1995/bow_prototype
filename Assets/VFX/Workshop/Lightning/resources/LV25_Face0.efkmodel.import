@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://fs80jpp7ifjg"
+path="res://.godot/imported/LV25_Face0.efkmodel-8cd34ffee5dcaa5726e97cc637b90f53.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV25_Face0.efkmodel"
+dest_files=["res://.godot/imported/LV25_Face0.efkmodel-8cd34ffee5dcaa5726e97cc637b90f53.res"]
+
+[params]
+
+compress=true

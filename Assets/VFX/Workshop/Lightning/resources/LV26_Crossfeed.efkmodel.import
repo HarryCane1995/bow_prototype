@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://t3f3ur48ohg4"
+path="res://.godot/imported/LV26_Crossfeed.efkmodel-4733e94861c2cc1f17c013fc3820b0d2.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV26_Crossfeed.efkmodel"
+dest_files=["res://.godot/imported/LV26_Crossfeed.efkmodel-4733e94861c2cc1f17c013fc3820b0d2.res"]
+
+[params]
+
+compress=true

@@ -1,0 +1,191 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scenes/Experiments/FPArchery/range_environment.gd" id="environment_script"]
+[ext_resource type="PackedScene" path="res://Scenes/Experiments/FPArchery/RangeTarget.tscn" id="target"]
+
+[sub_resource type="Environment" id="environment"]
+background_mode = 1
+background_color = Color(0.24, 0.32, 0.38, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.75, 0.81, 0.87, 1)
+ambient_light_energy = 0.72
+tonemap_mode = 2
+tonemap_white = 5.0
+ssao_enabled = true
+ssao_radius = 0.72
+ssao_intensity = 1.25
+
+[sub_resource type="StandardMaterial3D" id="steel"]
+albedo_color = Color(0.20, 0.26, 0.29, 1)
+metallic = 0.42
+roughness = 0.60
+
+[sub_resource type="StandardMaterial3D" id="painted"]
+albedo_color = Color(0.42, 0.49, 0.52, 1)
+metallic = 0.23
+roughness = 0.63
+
+[sub_resource type="StandardMaterial3D" id="concrete"]
+albedo_color = Color(0.64, 0.68, 0.69, 1)
+roughness = 0.91
+
+[sub_resource type="StandardMaterial3D" id="ceiling_matte"]
+albedo_color = Color(0.31, 0.38, 0.41, 1)
+roughness = 0.87
+
+[sub_resource type="StandardMaterial3D" id="pavement_line"]
+albedo_color = Color(0.58, 0.64, 0.64, 1)
+roughness = 0.80
+
+[sub_resource type="StandardMaterial3D" id="lamp"]
+albedo_color = Color(0.83, 0.94, 0.96, 1)
+emission_enabled = true
+emission = Color(0.65, 0.87, 0.96, 1)
+emission_energy_multiplier = 1.45
+
+[sub_resource type="StandardMaterial3D" id="ochre"]
+albedo_color = Color(0.85, 0.52, 0.23, 1)
+roughness = 0.72
+
+[sub_resource type="BoxMesh" id="unit_box"]
+
+[sub_resource type="BoxShape3D" id="floor_shape"]
+size = Vector3(18.8, 0.3, 26.1)
+
+[sub_resource type="BoxShape3D" id="side_shape"]
+size = Vector3(0.3, 6.9, 26.1)
+
+[sub_resource type="BoxShape3D" id="end_shape"]
+size = Vector3(18.8, 6.9, 0.3)
+
+[node name="RangeEnvironment" type="Node3D"]
+script = ExtResource("environment_script")
+structural_metal = SubResource("steel")
+painted_metal = SubResource("painted")
+floor_paint = SubResource("pavement_line")
+strip_light = SubResource("lamp")
+amber_paint = SubResource("ochre")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("environment")
+
+[node name="Softbox" type="DirectionalLight3D" parent="."]
+rotation = Vector3(-0.925, -0.52, 0)
+light_color = Color(1, 0.928, 0.84, 1)
+light_energy = 1.08
+shadow_enabled = true
+shadow_opacity = 0.27
+directional_shadow_max_distance = 45.0
+shadow_bias = 0.095
+
+[node name="LeftWash" type="OmniLight3D" parent="."]
+position = Vector3(-5.7, 4.6, -5.2)
+light_color = Color(0.75, 0.90, 1, 1)
+light_energy = 6.2
+omni_range = 11.0
+omni_attenuation = 1.2
+
+[node name="BackWash" type="OmniLight3D" parent="."]
+position = Vector3(3.3, 4.0, -17)
+light_color = Color(0.84, 0.93, 1, 1)
+light_energy = 6.5
+omni_range = 11.0
+omni_attenuation = 1.15
+
+[node name="BackstopGrazingLight" type="OmniLight3D" parent="."]
+position = Vector3(-4.8, 4.5, -18.8)
+light_color = Color(1.0, 0.80, 0.61, 1)
+light_energy = 5.0
+omni_range = 8.0
+omni_attenuation = 1.2
+
+[node name="Shell" type="StaticBody3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Shell"]
+position = Vector3(0, -0.15, -9.08)
+scale = Vector3(18.8, 0.3, 26.1)
+cast_shadow = 0
+mesh = SubResource("unit_box")
+
+[node name="FloorCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(0, -0.15, -9.08)
+shape = SubResource("floor_shape")
+
+[node name="Ceiling" type="MeshInstance3D" parent="Shell"]
+position = Vector3(0, 6.87, -9.08)
+scale = Vector3(18.8, 0.3, 26.1)
+cast_shadow = 0
+material_override = SubResource("ceiling_matte")
+mesh = SubResource("unit_box")
+
+[node name="CeilingCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(0, 6.87, -9.08)
+shape = SubResource("floor_shape")
+
+[node name="LeftWall" type="MeshInstance3D" parent="Shell"]
+position = Vector3(-9.10, 3.45, -9.08)
+scale = Vector3(0.3, 6.9, 26.1)
+cast_shadow = 0
+material_override = SubResource("concrete")
+mesh = SubResource("unit_box")
+
+[node name="LeftCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(-9.10, 3.45, -9.08)
+shape = SubResource("side_shape")
+
+[node name="RightWall" type="MeshInstance3D" parent="Shell"]
+position = Vector3(9.10, 3.45, -9.08)
+scale = Vector3(0.3, 6.9, 26.1)
+cast_shadow = 0
+material_override = SubResource("concrete")
+mesh = SubResource("unit_box")
+
+[node name="RightCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(9.10, 3.45, -9.08)
+shape = SubResource("side_shape")
+
+[node name="FrontWall" type="MeshInstance3D" parent="Shell"]
+position = Vector3(0, 3.45, -22.07)
+scale = Vector3(18.8, 6.9, 0.3)
+cast_shadow = 0
+material_override = SubResource("concrete")
+mesh = SubResource("unit_box")
+
+[node name="FrontCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(0, 3.45, -22.07)
+shape = SubResource("end_shape")
+
+[node name="RearWall" type="MeshInstance3D" parent="Shell"]
+position = Vector3(0, 3.45, 3.9)
+scale = Vector3(18.8, 6.9, 0.3)
+cast_shadow = 0
+material_override = SubResource("painted")
+mesh = SubResource("unit_box")
+
+[node name="RearCollision" type="CollisionShape3D" parent="Shell"]
+position = Vector3(0, 3.45, 3.9)
+shape = SubResource("end_shape")
+
+[node name="RangeSign" type="Label3D" parent="."]
+position = Vector3(-7.62, 4.98, -21.83)
+horizontal_alignment = 0
+pixel_size = 0.012
+font_size = 100
+outline_size = 0
+double_sided = false
+modulate = Color(0.25, 0.33, 0.37, 1)
+text = "СТРЕЛЬБИЩЕ"
+
+[node name="NearTarget" parent="." instance=ExtResource("target")]
+position = Vector3(-4.25, 1.75, -6.8)
+rotation = Vector3(0, 0.38, 0)
+distance_mark = 8
+
+[node name="CenterTarget" parent="." instance=ExtResource("target")]
+position = Vector3(0, 1.65, -9)
+distance_mark = 9
+
+[node name="FarTarget" parent="." instance=ExtResource("target")]
+position = Vector3(5.3, 2.10, -14.5)
+rotation = Vector3(0, -0.27, 0)
+distance_mark = 15

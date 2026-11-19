@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://cfcey7sadhw5y"
+path="res://.godot/imported/LV25_BackDiagonal.efkmodel-e029408342d63f31870b84f5a723d168.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV25_BackDiagonal.efkmodel"
+dest_files=["res://.godot/imported/LV25_BackDiagonal.efkmodel-e029408342d63f31870b84f5a723d168.res"]
+
+[params]
+
+compress=true

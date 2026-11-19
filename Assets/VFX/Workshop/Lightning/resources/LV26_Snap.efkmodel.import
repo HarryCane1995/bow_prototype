@@ -1,0 +1,15 @@
+[remap]
+
+importer="effekseer.resource"
+type="Resource"
+uid="uid://iurlaq8n4x77"
+path="res://.godot/imported/LV26_Snap.efkmodel-177347fa9f1ceda4cafd8250dd3da702.res"
+
+[deps]
+
+source_file="res://Assets/VFX/Workshop/Lightning/resources/LV26_Snap.efkmodel"
+dest_files=["res://.godot/imported/LV26_Snap.efkmodel-177347fa9f1ceda4cafd8250dd3da702.res"]
+
+[params]
+
+compress=true
